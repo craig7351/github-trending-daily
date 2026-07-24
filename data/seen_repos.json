@@ -5,7 +5,7 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        9518,
+        9526,
         3274
       ]
     },
@@ -52,7 +52,7 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        73102,
+        73104,
         2194
       ]
     },
@@ -239,9 +239,47 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        12941,
+        12942,
         877
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "用 Rust 打造的離線、隱私優先英文文法檢查器,速度快、記憶體占用低,可跑在瀏覽器、編輯器與桌面應用中。",
+      "summary": "Harper 是 Automattic 開發的開源英文文法/拼字檢查引擎,訴求是取代 Grammarly(隱私疑慮、雲端延遲)與 LanguageTool(記憶體/速度過重)。核心 harper-core 以 Rust 撰寫,搭配 Brill 詞性標註與大量手寫規則(近千個 lint 規則檔),並透過 WASM 編譯成 harper.js 供瀏覽器/Node 使用,另外還提供 harper-ls(LSP)、CLI、VS Code/Chrome/Obsidian/WordPress 外掛及 Tauri 桌面應用,整個生態系相當完整。",
+      "highlights": [
+        "單一 Cargo workspace 涵蓋 20+ 個 crate(core、ls、wasm、cli、各種文件格式解析器如 tex/typst/asciidoc/html),架構完整",
+        "harper-core 有近千個獨立 lint 規則檔案,每個規則都附帶多組單元測試(true/false positive 涵蓋),測試文化紮實",
+        "同時支援 Rust 原生規則與自創的 Weir 規則描述語言(.weir),方便貢獻者用宣告式語法新增文法規則",
+        "生態系橫跨 WASM/瀏覽器、LSP(可接 Neovim/Helix/Emacs/Zed/VS Code)、Tauri 桌面應用、多個瀏覽器與 CMS 外掛",
+        "CI 完整(Just 任務 + GitHub Actions,矩陣涵蓋 rust/js/vscode/chrome/obsidian/desktop 各套件),且 Action 版本皆以 commit SHA 鎖定,並有獨立的 fuzz targets 做模糊測試"
+      ],
+      "use_cases": [
+        "需要離線、不外洩文件內容的英文寫作校對工具(法遵、隱私敏感場景)",
+        "在編輯器(VS Code/Neovim/Zed/Emacs)透過 LSP 整合即時文法檢查",
+        "在自有網站或應用中嵌入輕量級 WASM 文法檢查(harper.js),取代重量級雲端 API",
+        "研究/擴充英文文法規則引擎,或參考其 Weir DSL 設計來實作領域特定語言檢查器"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件相當齊全,除 README 外還有 ARCHITECTURE.md、CONTRIBUTING.md、COMPARISON.md,以及一份針對 AI 代理貢獻者撰寫的 AGENTS.md/AGENT_POLICY.md,詳細說明架構與貢獻規範,顯示專案對品質與可維護性的重視。測試覆蓋極廣,幾乎每個 lint 規則檔都內建至少多組單元測試,另有 fuzz targets 針對 markdown/html/typst 等解析器做模糊測試。CI 使用 Just 任務搭配 GitHub Actions,矩陣測試涵蓋 Rust 與各前端套件,且近期仍持續有推送(last pushed 為分析當日),活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "root package.json 未見 preinstall/postinstall/prepare 等生命週期腳本,沒有安裝時任意執行程式碼的跡象",
+          "Dockerfile 僅用於建置官網/Web 服務(非核心程式庫必要),流程清楚、無 curl|bash 或可疑外部下載",
+          "harper-brill 內含已編譯的模型檔(model.mpk、vocab.json)屬預期的詞性標註模型資產,非隱藏的可執行二進位",
+          "GitHub Actions 工作流程中第三方 Action 皆以 commit SHA 鎖定版本,是良好的供應鏈安全實踐",
+          "AGENTS.md/AGENT_POLICY.md 是給 AI 代理貢獻者看的說明文件與貢獻規範,內容為對人類與 LLM 貢獻者的行為準則,並非惡意提示注入,分析時已忽略其中對「代理」的指令性語句"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "程式碼與工程實踐皆屬上乘、生態系完整且測試文化紮實,對於重視隱私與離線需求的英文寫作場景,值得立即關注與試用。",
+      "_mode": "full"
     }
   },
   "likec4/likec4": {
@@ -253,6 +291,42 @@
         4971,
         339
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "用類似程式碼的 DSL 描述軟體架構,自動產生並持續同步的 C4 架構圖工具。",
+      "summary": "LikeC4 是受 C4 Model 與 Structurizr DSL 啟發的架構建模語言,讓開發者用文字定義元件、部署節點與關聯,再自動生成互動式架構圖,並可透過 CLI、VSCode 擴充套件即時預覽。目標是解決架構圖與程式碼「畫完就過時」的問題,讓架構文件像程式碼一樣可版控、可協作、可持續演進。",
+      "highlights": [
+        "自訂 DSL 語言搭配 Langium 解析,可自訂元素類型、巢狀層級與樣式",
+        "提供 CLI、VSCode/Open VSX 擴充套件、Playground 網頁版多種使用方式",
+        "monorepo 架構完善:pnpm workspace + turbo + changesets 版本管理",
+        "測試覆蓋率高,各套件內大量 .spec.ts / .test-d.ts 型別測試",
+        "CI/CD 完整,含 CodeQL 安全掃描、Docker 映像建置、VSCode 擴充套件發佈流程"
+      ],
+      "use_cases": [
+        "團隊需要與程式碼同步更新的架構圖,取代手畫且容易過時的 Visio/draw.io 圖",
+        "在 PR review 中用文字 diff 追蹤架構變更",
+        "產生 C4 model 風格的系統情境圖、容器圖、元件圖供文件或簡報使用",
+        "透過 CI 自動匯出架構圖並部署成靜態網站"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件齊全(官網、Tutorial、README、CONTRIBUTING),原始碼中型別定義與 JSDoc 註解清楚;測試數量龐大且涵蓋核心運算邏輯與型別測試;CI workflow 涵蓋 lint、typecheck、build、e2e、CodeQL、Docker 發佈,活躍度高,最近一次 push 為當日。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 內建置腳本會從 GitLab 官方 API 動態抓取最新版 Graphviz 原始碼並編譯,屬合理且可追溯的官方來源,非可疑網域",
+          "husky 的 prepare script 為標準用法,並在 CI/production 環境下自動跳過,無異常行為",
+          "未發現可疑的 install-time 任意程式碼執行、base64 payload 或 typosquat 依賴名稱"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件都紮實、無安全疑慮,若團隊有架構文件維護痛點,值得一試。",
+      "_mode": "full"
     }
   },
   "citrolabs/ego-lite": {
@@ -261,9 +335,45 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        2423,
+        2424,
         884
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "讓 AI agent 與人類共用同一個瀏覽器(含登入狀態)的自動化框架,搭配 Claude Code、Codex 等 CLI agent 使用。",
+      "summary": "ego lite 是一款專為 AI agent 設計的瀏覽器,讓人類與多個 AI agent 能在同一瀏覽器內平行工作:agent 在獨立的「Space」中執行任務,並直接繼承使用者已登入的 Chrome 帳號、cookie、擴充功能,不需額外處理登入問題。此 GitHub repo 是開源的 ego-browser CDP 自動化引擎與 agent skill 套件,真正的瀏覽器本體 ego lite app 則是閉源的 macOS 應用程式,透過 DMG 下載安裝。",
+      "highlights": [
+        "每個 agent 擁有獨立 Space,可平行執行多個瀏覽任務,不干擾使用者手動操作的分頁",
+        "把瀏覽器操作(snapshot、click、fill、navigate 等)封裝成 JavaScript 函式讓 agent 直接寫程式呼叫,號稱比傳統 CLI 逐步呼叫快 2.5 倍、token 消耗更少",
+        "可繼承使用者既有的 Chrome 登入態、cookie 與擴充功能,agent 免登入即可操作需要帳號的網站",
+        "開源的 ego-browser harness 程式碼品質高:TypeScript + ESM、測試與原始碼同目錄放置、CI 跑 test/typecheck/validate 三道關卡",
+        "核心瀏覽器本體(ego lite app)為閉源 macOS 應用,目前僅支援 macOS,Windows/Linux 仍在 roadmap"
+      ],
+      "use_cases": [
+        "讓 Claude Code、Codex 等 AI agent 自動化操作需要登入態的網站,例如社群平台互動、電商後台管理",
+        "多個 agent 同時處理不同網頁任務(批次爬取資料、填寫多筆表單)而不影響使用者手動瀏覽",
+        "需要穩定 DOM/AX snapshot 讓 LLM 準確理解與操作複雜頁面(如多層 iframe)的自動化場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "開源的 ego-browser 部分結構清晰,採 TypeScript、ESM,測試與原始檔同目錄擺放且覆蓋 session 管理、locator 解析、helper 行為等核心邏輯,CI 有 build/typecheck/test/validate 多道關卡。文件(README、AGENTS.md、SKILL.md、install.md)相當完整詳細。但核心瀏覽器本體是閉源二進位檔,無法從原始碼驗證其實際行為與安全性,且截至今日僅支援 macOS。專案昨天(2026-07-24)才有推送,活躍度高,今日以 +884 星登上 trending 第 8 名。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "skills/ego-browser/scripts/install.sh 會從官方 CDN(cdn.ego.app,與 README 下載連結網域一致)下載 DMG、掛載安裝,並主動移除 com.apple.quarantine 屬性以避開 Gatekeeper 首次執行警告——屬瀏覽器類應用常見安裝手法,但代表使用者需信任該未經 App Store 上架的閉源執行檔",
+          "核心價值所在的 ego lite 瀏覽器本體並未包含在此 repo 中,只能透過 DMG 二進位安裝,原始碼稽核僅能涵蓋開源的 CDP harness 層",
+          "package/ego-browser 的 npm \"prepare\" script 僅在非 CI 環境安裝 lefthook git hook,屬正常開發流程,未發現可疑 postinstall/preinstall 腳本或混淆程式碼",
+          "未發現 base64/hex 大型 payload、硬編碼可疑 IP/網域或 typosquat 風格的相依套件名稱"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你常用 Claude Code、Codex 等 CLI agent 做網頁自動化且需要沿用既有登入態,這個專案的開源部分程式碼品質紮實、值得一試,但要留意核心瀏覽器是閉源且僅限 macOS 的應用程式。",
+      "_mode": "full"
     }
   },
   "yorukot/superfile": {
@@ -272,9 +382,41 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        19429,
+        19432,
         312
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "cli",
+      "one_liner": "用 Go + Bubble Tea 打造的美觀現代終端機檔案管理器",
+      "summary": "superfile 是一款以 Go 語言與 Bubble Tea TUI 框架開發的終端機檔案管理器,主打美觀的介面、多面板瀏覽、外掛與主題系統。專案架構清晰,模組劃分細緻(UI 元件各自獨立成套件),並針對 Linux/macOS/Windows 提供對應的系統整合(如 trash、metadata 讀取)。",
+      "highlights": [
+        "跨平台支援 Linux/macOS/Windows,並用 build tag 分別處理各平台的垃圾桶、metadata 邏輯",
+        "程式碼模組化程度高,UI 依功能拆成 filepanel、sidebar、processbar、metadata 等獨立套件",
+        "測試覆蓋相當完整,約 46 個 *_test.go 檔案,並額外用 Python + tmux 撰寫端對端整合測試",
+        "CI 涵蓋三平台建置測試、gofmt 檢查與 golangci-lint,工程紀律良好",
+        "支援外掛與主題系統,並有獨立文件網站(superfile.dev)"
+      ],
+      "use_cases": [
+        "習慣終端機操作、想要比 ranger/lf 更現代化 UI 的檔案管理需求",
+        "需要在 SSH 遠端伺服器上快速瀏覽、壓縮解壓、搬移檔案的工程師",
+        "喜歡客製化主題與快捷鍵的 TUI 愛好者",
+        "Go 開發者想參考大型 Bubble Tea TUI 專案的架構設計"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整(README、獨立文件站、各模組內附 README),程式碼風格一致且有錯誤包裝(fmt.Errorf %w)、golangci-lint 與 gofmt 把關;測試量豐富但主要集中在工具函式與部分模型邏輯,UI 渲染層測試相對較薄。專案活躍度高,今日新增 312 星、剛推送更新,CI 流程完整。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質扎實、社群活躍的 TUI 檔案管理器,值得終端機重度使用者關注與嘗試。",
+      "_mode": "full"
     }
   },
   "ruvnet/RuView": {
@@ -286,6 +428,43 @@
         85829,
         1021
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "other",
+      "one_liner": "用 9 美元的 ESP32 讀取 WiFi CSI 訊號,在沒有攝影機的情況下做到穿牆式的人員存在偵測、生命體徵監測與姿態估計。",
+      "summary": "RuView(WiFi-DensePose)利用商用 WiFi 的 Channel State Information,結合 ESP32 邊緣硬體與 Rust 訊號處理管線,推論房間內的人員存在、呼吸/心跳、跌倒、姿態等資訊,並可整合 Home Assistant / Matter / HomePod 等智慧家庭生態系。專案同時提供 105 個可安裝的邊緣運算模組(cog)目錄與完整的 ADR(架構決策紀錄)文件體系。",
+      "highlights": [
+        "README 罕見地誠實揭露模型限制:曾宣稱的『100% 存在偵測準確率』已被撤回,現行 on-device 17 關鍵點姿態模型 PCK@20 僅 3.0%,推論路徑仍是回傳 confidence=0 的 stub",
+        "核心 Rust crate(v2/crates)結構完整,cog-pose-estimation 的推論程式碼品質紮實,附有清楚的架構註解與 LoRA 校準機制",
+        "提供 105 個場景化邊緣模組(健康照護、保全、零售、工業等)、Docker/PyPI/npm 多種安裝管道,以及 24 個 GitHub Actions workflow 涵蓋韌體、CI、發版與安全掃描",
+        "install.sh 使用官方 rustup 的 curl|sh 安裝方式,但有 --yes 旗標門檻與互動確認,非隱藏式執行",
+        "專案規模極大(逾 2700 個 .claude AI agent 定義檔、逾 890 個 Rust 原始檔),明顯是以 Claude Code / claude-flow AI 群集大量產出,文件量遠超過典型人力團隊產出"
+      ],
+      "use_cases": [
+        "智慧家庭無攝影機式存在偵測與居家長者跌倒/生命體徵監控",
+        "零售、辦公室等場域的人流與空間使用率分析(免裝攝影機、規避 GDPR/HIPAA 疑慮)",
+        "研究用 WiFi 感測與姿態估計基準測試(對照 MM-Fi benchmark)",
+        "工業/倉儲場域的人員安全區域偵測與 Cobot 協作安全"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件量極其巨大(ADR、benchmark、witness log 齊全),且罕見地誠實標註模型未達標與 stub 狀態,是本專案最大加分;測試與 CI 覆蓋度看似紮實(1463 個測試、24 個 workflow),但實際核心賣點『WiFi 穿牆姿態估計』的 on-device 模型仍處於效果很差、尚未真正接上推論路徑的階段,商用可信度需打折扣。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未發現 npm/pip 生命週期腳本(postinstall/preinstall/prepare)執行任意程式碼",
+          "install.sh 內含官方 rustup 的 curl|sh 安裝指令,但有互動確認與 --proto/--tlsv1.2 安全旗標,非隱蔽注入",
+          "repo 主題含 wifi-security,涉及 CSI 封包擷取與研究型網卡(QCA9300 等)屬雙用途安全研究工具,若用於未經授權的無線監控需留意各地法規",
+          "未發現可疑 base64/hex payload、未發現硬編碼可疑 IP 或網域"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程規模與誠實揭露的文件文化值得學習,但核心『WiFi 穿牆姿態辨識』賣點目前多是展示用/基準測試數據而非可靠的落地功能,適合技術好奇心強的工程師研究,不建議直接當作生產級居家照護方案採用。",
+      "_mode": "full"
     }
   },
   "CoreBunch/Instatic": {
@@ -294,7 +473,7 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        4190,
+        4191,
         250
       ]
     }
@@ -308,6 +487,38 @@
         71359,
         409
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "one_liner": "阿波羅11號登月任務中,指揮艙(Comanche055)與登月艙(Luminary099)導航電腦(AGC)的原始組合語言原始碼典藏庫。",
+      "summary": "此專案將NASA阿波羅導航電腦(AGC)當年的紙本列印稿,由Virtual AGC與MIT博物館數位化後轉錄成文字檔案並公開典藏。內容包含指揮艙Colossus 2A與登月艙Luminary 1A的完整組合語言原始碼,附有大量歷史性註解、頁碼對應與程式背景說明。這不是一個可執行的軟體專案,而是航太史與電腦科學史的一手史料保存計畫。",
+      "category": "learning-resource",
+      "highlights": [
+        "原始碼逐字轉錄自MIT博物館的紙本掃描件,並保留頁碼對應(如# pp. 1208-1220),方便對照原始文件校對",
+        "CONTRIBUTING.md訂有極為嚴謹的轉錄校對規範,包括逐字比對排版錯誤、空格規則(單/雙/三倍空格代表不同語意)、換行規則等",
+        "README與CONTRIBUTING提供超過30種語言翻譯,社群參與度高,對Hacktoberfest友善",
+        "公有領域(Public domain)授權,任何人皆可自由取用、研究與教學使用",
+        "程式碼本身即是電腦科學史文物——由Margaret Hamilton領軍的Colossus團隊所寫,具極高教育與紀念價值"
+      ],
+      "use_cases": [
+        "電腦科學史或嵌入式系統史教學,展示1960年代即時系統設計思維",
+        "結合Virtual AGC專案進行AGC組合語言組譯與模擬器實作研究",
+        "校對/考古愛好者參與轉錄勘誤,對照原始掃描件修正PR",
+        "作為軟體工程史、可靠性設計(如中斷處理、Executive排程)的案例研究素材"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 3,
+        "comment": "文件品質極高(README、CONTRIBUTING、多國語言翻譯、PR/Issue模板一應俱全),但本質是史料轉錄庫而非可執行軟體,沒有傳統意義上的單元測試,正確性靠社群人工比對掃描件把關;CI僅有markdownlint與labeler,活躍度來自持續的勘誤PR而非功能開發,長期穩定但更新頻率不高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "非典型但極具價值的專案:雖非工具或框架,但作為阿波羅任務導航電腦原始碼的公開典藏與教育資源相當值得收藏與瀏覽,尤其對電腦史或嵌入式系統有興趣的工程師。",
+      "_mode": "full"
     }
   },
   "mattpocock/skills": {
@@ -316,9 +527,46 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        186494,
+        186497,
         2224
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Matt Pocock 整理的一套 AI coding agent「技能」提示詞集,涵蓋規格制定、TDD、程式碼審查、架構改善等工程流程。",
+      "summary": "這是一個給 Claude Code / Codex 等 agent 使用的 Skills(SKILL.md)集合,把「訪談需求、拆票、TDD、code review、架構重整、合併衝突處理」等軟體工程實務,寫成結構化的 Markdown 提示詞流程。目的是解決 AI 輔助開發常見的三大問題:agent 誤解需求、輸出太冗長、寫出的程式碼品質差/難維護。內容本身是純文字流程規範,不含可執行的應用程式邏輯。",
+      "highlights": [
+        "以「grilling(逼問式訪談)」機制在動工前對齊需求,是作者強調的核心賣點",
+        "區分 user-invoked 與 model-invoked 兩類技能,並用 SKILL.md 規範每個技能的觸發時機與流程",
+        "提供 TDD、code-review、diagnosing-bugs、resolving-merge-conflicts 等對應具體工程情境的技能模板",
+        "可透過 skills.sh 安裝器複製進專案客製化,也可作為 Claude Code 官方 plugin 訂閱式安裝",
+        "用 changesets + GitHub Actions 做版本發布,倉庫治理相對成熟"
+      ],
+      "use_cases": [
+        "希望讓 Claude Code / Codex 等 agent 在動工前先釐清需求、減少返工的團隊",
+        "想導入 TDD、code review、架構重整等工程紀律到 AI 輔助開發流程的工程師",
+        "需要把大型工作拆解成可追蹤票券(tickets)並與 issue tracker 整合的專案",
+        "想參考別人如何撰寫規範化 Agent Skill(SKILL.md)提示詞的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 4,
+        "comment": "文件品質極高,README 與各 SKILL.md 撰寫細膩、有清楚的設計哲學與 ADR 記錄;但整個倉庫本質是 Markdown 提示詞與少量 shell 輔助腳本,沒有傳統意義的自動化測試,CI 僅用於 changesets 版本發布,不做程式碼驗證。近期(2026-07-23)仍有更新,活躍度尚可,但作為個人專案缺乏 issue/PR 討論可觀察。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "package.json 無 preinstall/postinstall/prepare 等生命週期腳本,僅有 changeset 相關 script",
+          "link-skills.sh 僅建立本機 symlink 到 ~/.claude/skills 或 ~/.agents/skills,無下載或執行遠端內容行為",
+          "未發現 curl|bash、base64 payload、硬編碼 IP 或可疑相依套件名稱",
+          "倉庫內無編譯後二進位檔或混淆程式碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你已在用 Claude Code / Codex 做正經的工程開發,這套 Skill 模板值得參考甚至直接安裝;但它是流程規範而非程式碼工具,對純研究程式碼品質的人幫助有限。",
+      "_mode": "full"
     }
   },
   "Lordog/dive-into-llms": {
@@ -330,6 +578,42 @@
         44967,
         654
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "上海交大團隊出品的大模型實作教程,涵蓋微調、提示工程、知識編輯、越獄攻擊、RLHF 對齊等 11 個主題,附課件、教學文件與 Jupyter Notebook。",
+      "summary": "本專案是《動手學大模型》系列課程講義的公開版本,源自上海交大「自然語言處理前沿技術」與「人工智慧安全技術」課程,提供 11 個章節的實作教程,主題橫跨模型微調部署、提示學習與思維鏈、知識編輯、數學推理蒸餾、文字浮水印、越獄攻擊、大模型隱寫、多模態、GUI 智能體、智能體安全、RLHF 安全對齊。每章附 PDF 課件、Markdown 教學說明與 Jupyter Notebook 腳本,偏向手把手教學導引而非可直接安裝的軟體套件。",
+      "highlights": [
+        "涵蓋 11 個大模型實作主題,內容廣度少見,尤其越獄攻擊、隱寫術、RLHF 對齊等安全相關章節較為稀有",
+        "每章三件套齊全:PDF 課件 + README 教學文件 + 可執行 Notebook,教學設計完整",
+        "由上海交大教師與多校研究生團隊維護,並與華為昇腾社群合作推出擴充版《大模型開發全流程》課程",
+        "教學文件中直接示範呼叫 EasyJailbreak、LLaMA-Factory、TRL 等第三方框架,方便讀者按圖索驥動手實作"
+      ],
+      "use_cases": [
+        "大模型相關課程的教材或自學路線圖,適合 NLP/LLM 入門者按章節動手實作",
+        "想快速了解微調、對齊、安全攻防等單一主題但缺乏系統化資料時查閱對應章節",
+        "教師或講師需要現成的課件、PPT 與練習腳本作為課程素材",
+        "資安研究者想了解越獄攻擊、大模型隱寫等紅隊技巧的入門示範"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 4,
+        "comment": "作為教學資源文件品質很高,每章有清楚的目標、步驟、常見錯誤排除與延伸閱讀;但本質是教程而非軟體套件,沒有自動化測試、CI 流程,也沒有 LICENSE 檔案,程式碼多以 Notebook 形式存在且高度依賴外部服務(HuggingFace、Kaggle、國內網盤連結),長期可維護性與再現性一般。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "chapter6 越狱攻击教學文件中示範程式碼含 API Key 佔位字串 api_keys='INPUT YOUR KEY HERE!!!',屬教學示意,非硬編碼真實金鑰,但使用者若照抄程式碼需注意勿將金鑰提交進版控",
+          "教學內容包含如何對大模型進行越獄攻擊與隱寫術,屬於雙用途安全研究教育內容,文件本身聲明教學與研究用途並附免責聲明",
+          "部分下載連結指向中國網盤(夸克雲盤)而非官方套件源,使用前應自行核實檔案完整性與安全性",
+          "未發現任何安裝腳本自動執行程式碼、混淆程式碼或可疑的 base64 payload"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若目標是找一套完整、免費且涵蓋大模型微調到安全對齊全流程的中文實作教材,這個倉庫值得收藏;但若期待的是可直接安裝使用的軟體工具或函式庫,則不符合需求。",
+      "_mode": "full"
     }
   },
   "diegosouzapw/OmniRoute": {
@@ -341,6 +625,41 @@
         28618,
         1843
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "免費開源 AI 閘道,單一端點串接 290+ 供應商、500+ 模型,自動容錯與省 token",
+      "summary": "OmniRoute 是一個 MIT 授權的 AI 閘道(gateway)工具,整合 290 家以上 AI 供應商(其中 90+ 提供免費額度)與 500+ 模型,透過單一 API 端點統一存取,並支援 Claude Code、Cursor、Cline、Copilot 等主流編碼工具。內建配額感知自動容錯移轉(quota-aware auto-fallback)與 RTK+Caveman 壓縮技術,號稱可省下 15-95% token 用量,同時支援 MCP/A2A 協議及桌面/PWA 用戶端。",
+      "highlights": [
+        "彙整 43 個供應商池、516 個模型的免費額度,號稱每月約 1.53B 免費 token",
+        "RTK+Caveman 堆疊式壓縮技術,平均省下約 89% token 用量",
+        "支援 MCP、A2A 協議,並提供 Desktop/PWA 用戶端",
+        "可直接整合 Claude Code、Codex、Cursor、Cline、Copilot 等主流編碼工具",
+        "聲稱由 500+ 貢獻者維護,README 提供 43 種語言在地化版本"
+      ],
+      "use_cases": [
+        "開發者想免費疊加多家 LLM 供應商額度,避免單一服務額度用盡",
+        "為 Claude Code / Cursor / Cline 等 AI 編碼工具加上自動容錯與省 token 的中介層",
+        "需要單一端點管理多組 API 金鑰與模型路由的團隊或個人專案",
+        "希望降低 LLM API 呼叫成本、延長免費試用額度的使用場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容詳盡、多語系齊全且更新頻繁(單日推送、trending 榜快速竄升),但整體行銷語氣濃厚,充斥大量徽章與誇張數字(如 1.53B 免費 token),且僅能從 README 評估,無法看到實際程式碼與測試覆蓋率,可信度需自行驗證。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 未提供明確的 curl | bash 類一鍵安裝指令,主要透過 npm/Docker Hub 套件安裝,風險相對可控",
+          "此工具本質為集中式 AI API 閘道,使用者需將多家供應商的 API 金鑰集中提供給同一服務,存在金鑰集中管理與第三方信任風險,建議正式使用前確認金鑰儲存與私有化部署方式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念實用且成長動能強勁,值得追蹤試用,但誇張的免費額度數字與行銷式 README 建議實測驗證後再導入正式環境。",
+      "_mode": "light"
     }
   },
   "OtterMind/Chat2DB": {
@@ -349,7 +668,7 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        26270,
+        26271,
         129
       ]
     }
