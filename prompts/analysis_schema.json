@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "one_liner": {
+      "type": "string",
+      "description": "一句話介紹這個專案(繁體中文)"
+    },
+    "summary": {
+      "type": "string",
+      "description": "2-3 句說明這是什麼、解決什麼問題(繁體中文)"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["ai-ml", "devtool", "web", "cli", "library", "framework", "security", "data", "infra", "learning-resource", "app", "other"]
+    },
+    "highlights": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "3-5 個亮點(繁體中文)"
+    },
+    "use_cases": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "2-4 個適用場景(繁體中文)"
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "docs": {"type": "integer", "minimum": 1, "maximum": 5},
+        "tests": {"type": "integer", "minimum": 1, "maximum": 5},
+        "activity": {"type": "integer", "minimum": 1, "maximum": 5},
+        "comment": {"type": "string", "description": "品質總評(繁體中文)"}
+      },
+      "required": ["docs", "tests", "activity", "comment"]
+    },
+    "security": {
+      "type": "object",
+      "properties": {
+        "risk_level": {"type": "string", "enum": ["none", "low", "medium", "high"]},
+        "findings": {"type": "array", "items": {"type": "string"}, "description": "具體發現,無則空陣列(繁體中文)"}
+      },
+      "required": ["risk_level", "findings"]
+    },
+    "star_rating": {"type": "integer", "minimum": 1, "maximum": 5},
+    "verdict": {"type": "string", "description": "值不值得關注的一句結論(繁體中文)"}
+  },
+  "required": ["one_liner", "summary", "category", "highlights", "use_cases", "quality", "security", "star_rating", "verdict"]
+}

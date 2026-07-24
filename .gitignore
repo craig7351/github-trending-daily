@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+workspace/
+logs/
+data/*.tmp
+data/*.corrupt-*.json

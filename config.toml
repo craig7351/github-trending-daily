@@ -1,0 +1,40 @@
+# GitHub Trending 每日掃描機器人設定
+# 修改後下次執行生效,不需重新註冊排程
+
+[scan]
+max_repos = 10                     # 每日完整分析的 repo 上限
+trending_since = "daily"           # daily | weekly | monthly
+extra_language_pages = []          # 額外語言頁,例如 ["python", "typescript"]
+user_agent = "github-star-bot/1.0"
+
+[clone]
+depth = 1
+blob_limit = "200k"                # git clone --filter=blob:limit=200k
+timeout_sec = 180
+max_repo_mb = 300                  # API size 超過此值改走輕量分析(不 clone)
+workspace_dir = "workspace"
+
+[analysis]
+model = "sonnet"                   # claude CLI 的 --model
+timeout_sec = 420                  # 單一 repo 分析的硬性逾時(秒)
+max_budget_usd = 1.5               # 單一 repo 的 --max-budget-usd(名目成本,訂閱制下僅作為失控保險)
+consecutive_failure_stop = 3       # 連續失敗 N 次即停用 claude(視為額度耗盡)
+readme_max_chars = 12000           # 輕量分析時 README 截斷長度
+claude_path = ""                   # 留空 = 自動用 PATH 尋找;可填絕對路徑覆寫
+light_patterns = ["awesome", "roadmap", "interview", "tutorial", "cheatsheet", "book", "course", "curated", "list"]
+
+[dedup]
+reanalyze_after_days = 14          # 已分析過的 repo 超過 N 天才重新分析
+store_path = "data/seen_repos.json"
+
+[github]
+use_gh_token = true                # 嘗試用 `gh auth token`,失敗改匿名(60 req/hr)
+
+[report]
+dir = "reports"
+git_commit = false                 # true = 每次跑完自動 git commit 報告與資料
+
+[logging]
+dir = "logs"
+level = "INFO"
+keep_days = 30

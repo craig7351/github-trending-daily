@@ -1,0 +1,357 @@
+{
+  "block/buzz": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        9518,
+        3274
+      ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "one_liner": "由 Block 出品的自架式人機協作工作台，以 Nostr 協議將人類與 AI 代理人統一在同一個簽名事件流中。",
+      "summary": "Buzz 是一個以 Rust 建構的自架工作空間，讓人類成員與 AI 代理人共用同一套頻道、文件、工作流程與 Git 事件，底層全部基於 Nostr 的簽名事件日誌。它的核心主張是「一個社群、一套身份模型、一條事件日誌」，讓 AI 代理人不再是旁觀的 bot，而是擁有獨立密鑰與完整審計軌跡的正式成員。目前已支援桌面應用程式（Tauri + React）、buzz-cli、ACP/MCP 整合（Goose、Codex、Claude Code），並提供 YAML 工作流程與 NIP-34 Git 事件。",
+      "category": "devtool",
+      "highlights": [
+        "以 Nostr 協議為基礎，每筆訊息、審查核准、Git 事件皆為密碼學簽名的不可竄改事件，原生支援審計追蹤",
+        "AI 代理人被視為一等成員：擁有自己的密鑰、頻道成員資格與審計軌跡，可開 PR、觸發工作流程、調度其他代理人",
+        "架構清晰的 Rust crate 工作區（buzz-relay、buzz-acp、buzz-cli 等），並已整合 Goose、Codex、Claude Code 等 LLM 工具鏈",
+        "支援「分支即房間」模式：功能分支自動產生頻道，Patch、CI、Code Review 與合併決策全在同一事件流",
+        "自架優先（Docker + Postgres + Redis + MinIO），同時也可多租戶部署，社群邊界透過 community-scoped 事件日誌嚴格隔離"
+      ],
+      "use_cases": [
+        "希望將 AI 代理人深度整合進開發流程的工程團隊（代理人可直接審 code、寫 release notes、觸發 CI）",
+        "重視資料主權、不願將溝通與工作流程交給第三方 SaaS 的組織（完全自架，Apache-2.0）",
+        "研究 Nostr 協議在企業協作場景落地的開發者或 AI R&D 工程師",
+        "想要以單一事件日誌取代 Slack + GitHub + CI Dashboard + 多個 bot glue code 的平台工程師"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 品質極高：架構圖、crate 地圖、功能進度表（✅/🚧/💭）、三個具體使用情境故事、快速上手步驟一應俱全，是近期少見的優質開源文件。測試情況僅能從 README 判斷，無法評估覆蓋率，存在 buzz-test-client（E2E）的 crate 暗示有 E2E 測試框架。專案昨日才推送、今日登上趨勢榜首位，活躍度極高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "`. ./bin/activate-hermit` 會執行從 clone 下來的 repo 內部腳本，建議審查 activate-hermit 內容再執行",
+          "`just setup` 會自動下載工具鏈並執行 Docker 服務與資料庫遷移，建議在沙盒環境初次驗證",
+          "代理人透過 BUZZ_PRIVATE_KEY 環境變數持有私鑰，需注意密鑰洩漏與權限範圍管理"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "Block 出品、架構紮實、文件頂級，是目前少數真正把 AI 代理人當成一等成員而非 bot 的開源協作平台，對 AI R&D 工程師而言極具參考與採用價值，強烈建議關注。",
+      "_mode": "light"
+    }
+  },
+  "koala73/worldmonitor": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        73102,
+        2194
+      ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "one_liner": "整合地緣政治、軍事、金融、氣候、新聞等多維情報的 AI 驅動即時全球態勢感知儀表板",
+      "summary": "WorldMonitor 是以 TypeScript 撰寫的開源全球情報儀表板，匯聚 500+ 精選新聞來源與 65+ 外部數據提供商（ACLED、GDELT、Finnhub 等），透過 3D 地球儀（globe.gl）與 WebGL 平面地圖（deck.gl）呈現跨領域的即時態勢。內建 MCP 伺服器讓 AI Agent 可直接查詢結構化的地緣政治、軍事、金融與氣候數據，並提供 Python/Ruby/Go SDK 及 CLI 工具。單一程式碼庫同時支援 Vercel 部署、Docker 自架，以及基於 Tauri 2 的跨平台原生桌面應用。",
+      "category": "app",
+      "highlights": [
+        "內建 MCP 伺服器（Streamable HTTP），支援 Claude/GPT 等 AI Agent 直接呼叫 25 種地緣政治工具",
+        "Country Instability Index（CII v8）為 31 個一級國家提供多訊號壓力評分，具備服務端權威計算",
+        "56 種地圖圖層類型，含航班即時追蹤、AIS 船舶、核電廠、火災衛星偵測等 OSINT 資料",
+        "六個主題變體（world/tech/finance/commodity/happy/energy）由單一程式碼庫生成，支援 25 種語言及 RTL",
+        "安全工程扎實：SSRF 防護（含 DNS rebinding 分析）、timing-safe API key 比對、完整 GitHub Actions 安全稽核流水線"
+      ],
+      "use_cases": [
+        "AI/LLM Agent 整合地緣政治與市場情報的外部工具呼叫（MCP 協定）",
+        "OSINT 研究人員進行即時多源跨域態勢感知與事件關聯分析",
+        "金融與商品市場監控：整合 29 個交易所、加密貨幣、7 訊號市場合成指標",
+        "企業或政府機構的客製化情報儀表板自架部署（AGPL-3.0）"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質極高，README、ARCHITECTURE.md、SECURITY.md、SELF_HOSTING.md 皆完整且維持最新。CI 涵蓋型別檢查、Biome lint、Playwright e2e、Vitest 單元測試、依賴安全稽核等 15+ 條 workflow，每次 PR 自動觸發。核心原始碼（API 鑑權、SSRF 防護）展現出成熟的防禦性設計思維，程式碼簡潔且有適量的關鍵性注解。測試以 e2e 和整合測試為主，純單元測試覆蓋率不易量化，故給 4 分而非滿分。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "postinstall 腳本執行 `cd blog-site && npm ci --prefer-offline`，屬正常子套件安裝，無惡意行為",
+          "SECURITY.md 公開承認 Pro-gated MCP Proxy 存在 DNS rebinding 殘餘風險窗口（已追蹤為 issue #5061，為 Vercel Edge 平台限制，非程式碼缺陷）",
+          "已有安全研究員揭露三項 IPC 命令暴露與 fetch patch 憑證注入架構議題並已納入 SECURITY.md 誌謝，顯示問題受到重視"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程品質、文件完整度與 MCP Agent 整合能力均屬頂尖，對需要即時全球情報工具鏈或 LLM 工具呼叫範例的 AI R&D 工程師而言，值得立即收藏並深入研究。",
+      "_mode": "full"
+    }
+  },
+  "ComposioHQ/awesome-claude-skills": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        69963,
+        662
+      ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "one_liner": "匯集 1000+ 個生產就緒 Claude Skills 的精選清單，讓 AI 代理能跨平台自動化工作流程",
+      "summary": "Awesome Claude Skills 是由 Composio 維護的精選資源清單，收錄超過 1000 個可直接用於生產環境的 Claude Skills 與插件。Claude Skills 是可重複使用的指令包，定義 AI 代理處理特定任務的行為模式，支援 Claude Code、Cursor、Gemini CLI、OpenAI Codex 等多個平台。此清單涵蓋文件處理、程式開發、資料分析、業務行銷等十大類別，並整合 Composio MCP Gateway 以串接外部服務，解決 AI 代理在生產環境中缺乏現成可用行為模組的問題。",
+      "category": "ai-ml",
+      "highlights": [
+        "收錄 1000+ 個涵蓋十大類別的 Claude Skills，從文件處理到資安系統一應俱全，可直接部署於生產環境",
+        "Skills 採漸進式載入機制，每個 skill 僅佔約 100 tokens，允許單一代理托管數百個 skills 而不撐爆 context window",
+        "跨平台支援：Claude Code、Claude.ai、OpenAI Codex、Cursor、Gemini CLI、Antigravity、Windsurf 均相容",
+        "內建 Composio MCP Gateway，單一端點串接 1000+ 第三方服務（含身份驗證管理、團隊存取控管與稽核日誌）",
+        "採 Anthropic 於 2025 年 12 月發布的開放標準格式（SKILL.md + YAML frontmatter），生態系持續擴張"
+      ],
+      "use_cases": [
+        "AI 代理開發者需要快速找到現成 Skills 擴充 Claude 能力時的一站式參考索引",
+        "企業工作流程自動化：透過 Skills 串接 Gmail、Slack、GitHub、Notion 等 1000+ SaaS 服務執行真實操作",
+        "開發工具強化：程式碼審查、LangSmith 追蹤分析、iOS 模擬器測試、FFUF Web Fuzzing 等開發輔助情境",
+        "多代理編排：利用 great_cto 等 skill 實現架構設計、TDD、QA、資安審計的完整 SDLC 多代理協作流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "資源彙整類，測試不適用。README 結構清晰、分類完整，附有快速入門指南與清晰的架構層次說明（Skills vs MCP vs Tools 的職責劃分），品質屬 awesome list 中的佼佼者。需注意此清單本質上也是 Composio 平台的行銷導流工具，部分連結指向 Composio 付費服務，使用時應有所區別。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "快速入門需安裝外部插件目錄（`claude --plugin-dir ./connect-apps-plugin`）並貼入 Composio API 金鑰，需留意金鑰來源與儲存安全",
+          "Chrome Relay skill 需同時安裝 Chrome Web Store 擴充功能與本機 CLI 橋接程式，賦予代理存取使用者已登入 Cookie 與 SSO 工作階段的能力，應謹慎評估使用情境"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對於積極使用 Claude Code 或構建多代理系統的 AI 工程師而言，這是目前覆蓋最廣的 Claude Skills 生態系索引，值得加入書籤作為長期參考，但應留意其背後的 Composio 商業訴求。",
+      "_mode": "light"
+    }
+  },
+  "Pumpkin-MC/Pumpkin": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        9274,
+        472
+      ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "one_liner": "以 Rust 打造的高效能 Minecraft 伺服器，同時支援 Java 版與 Bedrock 版協議",
+      "summary": "Pumpkin 是一個用 Rust 從零開始撰寫的 Minecraft 伺服器實作，核心目標是利用 Rust 的多執行緒與記憶體安全特性提供遠優於原版 Java 實作的效能。它以 Cargo workspace 架構切分為協議、世界生成、設定、插件 API 等多個獨立 crate，目前已支援 Java Edition 完整連線流程及 Bedrock Edition (WIP)，並透過 WebAssembly (wasmtime) 提供沙箱化插件系統。專案仍在積極開發中，距離 1.0.0 尚有若干里程碑待完成，但功能覆蓋率已相當可觀。",
+      "category": "infra",
+      "highlights": [
+        "全 Rust 實作搭配嚴格 Clippy 設定（deny all/nursery/pedantic），程式碼品質要求遠高於一般開源專案",
+        "同時支援 Minecraft Java Edition 與 Bedrock Edition，涵蓋加密、封包壓縮、代理轉接（BungeeCord/Velocity）",
+        "插件系統採用 wasmtime 執行 WebAssembly，提供真正沙箱隔離，避免原生動態函式庫的安全風險",
+        "CI 流程完整：格式檢查 → 無用依賴偵測(cargo-machete) → Clippy debug/release → 跨平台建置測試（Linux/Windows/macOS/ARM）→ SignPath 簽署 Windows 二進制",
+        "Dockerfile 採多段建置、非 root 使用者（2613:2613）、Alpine 最小基底映像，容器化安全實踐良好"
+      ],
+      "use_cases": [
+        "想以低資源用量架設 Minecraft 伺服器的個人或社群管理者",
+        "研究 Minecraft 協議實作（Java/Bedrock）或希望學習 Rust 非同步網路程式設計的開發者",
+        "需要同時對接 Java 版與 Bedrock 版玩家的跨平台伺服器場景",
+        "想開發 Minecraft 伺服器插件但希望以 WebAssembly 安全沙箱隔離執行的插件作者"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件主要存放在外部網站（pumpkinmc.org），README 本身偏精簡；但測試覆蓋達 106 個含測試的原始碼檔案，涵蓋世界生成、協議編解碼、NBT、指令解析等關鍵路徑，品質不低。活躍度極高，最後一次推送在昨日（2026-07-24），CI 流程完善，每次 push 都觸發全套驗證與多平台建置。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "query.rs 中 127.0.0.1 為 Minecraft Query 協議測試用途，非惡意硬編碼",
+          "插件系統使用 libloading（動態函式庫）作為原生插件路徑，潛在風險由 wasmtime 沙箱路徑緩解，但原生插件模式仍需信任來源",
+          "無 curl|bash 安裝腳本、無可疑混淆代碼、無非預期二進制檔案、依賴清單均為知名 crates.io 套件"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "用 Rust 重寫 Minecraft 伺服器且同時支援 Java/Bedrock 雙協議，工程品質嚴謹、CI 完整、容器化做法正確，是 Rust 系統程式設計與遊戲伺服器領域值得密切追蹤的指標性專案。",
+      "_mode": "full"
+    }
+  },
+  "shiyu-coder/Kronos": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        33438,
+        506
+      ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "one_liner": "Kronos 是首個專為金融 K 線序列設計的開源基礎模型，以創新的層級離散 token 化與自回歸 Transformer 預測 OHLCV 數據。",
+      "summary": "Kronos 採用二元球面量化（Binary Spherical Quantization, BSQ）將連續的 OHLCV K 線數據轉換為層級式離散 token，再以大型自回歸 Transformer 進行預訓練，涵蓋逾 45 個全球交易所的數據。模型提供 4.1M 至 499.2M 參數的多種規格，可透過 Hugging Face Hub 直接取用，並附完整的微調與 Qlib 回測流程，論文已被 AAAI 2026 接受。",
+      "category": "ai-ml",
+      "highlights": [
+        "首個開源金融 K 線基礎模型，預訓練自逾 45 個全球交易所的歷史數據",
+        "創新的二元球面量化（BSQ）技術，將 OHLCV 連續數據轉為層級離散 token，支援 Nucleus Sampling 機率預測",
+        "提供 4.1M 到 499.2M 四種參數規模的模型家族，全數開放於 Hugging Face Hub",
+        "附完整的兩階段微調流程（Tokenizer + Predictor），含中國 A 股 Qlib 回測範例",
+        "具備批次推論（predict_batch）能力，支援多資產並行預測與 GPU 加速"
+      ],
+      "use_cases": [
+        "加密貨幣與股票短期走勢的概率預測與視覺化",
+        "量化交易策略的 alpha 訊號生成與回測評估",
+        "自訂市場（如港股、A 股）數據上的遷移學習研究",
+        "金融時間序列生成式基礎模型的學術研究基準"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 2,
+        "comment": "README 文檔詳盡，提供完整的安裝、推論、微調與回測說明，並附可執行範例；核心模型程式碼結構清晰，docstring 完整。回歸測試具有預存期望輸出，設計嚴謹，但測試需從 HuggingFace 下載模型，缺少 CI/CD 配置。專案無 GitHub Actions 工作流程，最後更新距今逾三個月，活躍度偏低。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "webui/run.py 啟動時以 subprocess 執行 pip install -r requirements.txt，存在第三方套件供應鏈風險",
+          "examples/get_date_new.py 與 get_akshare_date_2024-2025_x.py 中有自動執行 pip install 的 subprocess 呼叫，應注意執行前確認來源",
+          "finetune/config.py 中 Comet ML API Key 為明文佔位符 YOUR_COMET_API_KEY，使用者需自行替換並避免洩漏至版本控制"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對量化金融與時間序列研究者而言，這是具備學術創新性（AAAI 2026）的開源基礎模型，值得關注並作為金融預測的研究起點，但需 GPU 資源且活躍維護不足，一般工程師短期內實際部署難度較高。",
+      "_mode": "full"
+    }
+  },
+  "Automattic/harper": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        12941,
+        877
+      ]
+    }
+  },
+  "likec4/likec4": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        4971,
+        339
+      ]
+    }
+  },
+  "citrolabs/ego-lite": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        2423,
+        884
+      ]
+    }
+  },
+  "yorukot/superfile": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        19429,
+        312
+      ]
+    }
+  },
+  "ruvnet/RuView": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        85829,
+        1021
+      ]
+    }
+  },
+  "CoreBunch/Instatic": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        4190,
+        250
+      ]
+    }
+  },
+  "chrislgarry/Apollo-11": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        71359,
+        409
+      ]
+    }
+  },
+  "mattpocock/skills": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        186494,
+        2224
+      ]
+    }
+  },
+  "Lordog/dive-into-llms": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        44967,
+        654
+      ]
+    }
+  },
+  "diegosouzapw/OmniRoute": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        28618,
+        1843
+      ]
+    }
+  },
+  "OtterMind/Chat2DB": {
+    "first_seen": "2026-07-25",
+    "last_seen": "2026-07-25",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-25": [
+        26270,
+        129
+      ]
+    }
+  }
+}
