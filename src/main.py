@@ -11,7 +11,7 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
-from .analyzer import build_prompt, resolve_claude, run_claude_analysis
+from .analyzer import build_prompt, is_systemic_error, resolve_claude, run_claude_analysis
 from .cloner import cleanup_workspace, clone_dir_for, remove_clone, shallow_clone
 from .config import Config, load_config
 from .github_meta import fetch_metadata, fetch_readme, get_github_token
@@ -176,8 +176,10 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
 
     fresh: list[RepoResult] = []
     total_cost = 0.0
-    consecutive_failures = 0
+    consecutive_systemic = 0    # 認證/額度類:整輪都會失敗,提早停止
+    consecutive_any = 0         # 任何失敗:高門檻安全網,避免未知故障空轉整輪
     claude_dead = claude_exe is None
+    any_stop = max(cfg.analysis.consecutive_failure_stop * 2, 6)
 
     # --- 逐一分析(單 repo 隔離) ---
     for r in selected:
@@ -257,25 +259,34 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                 res.cost_usd = cost
                 store.record_analysis(r.full_name, run_date, analysis)
                 store.save()   # 增量存檔:中途被殺(排程 2 小時上限等)也不丟已花錢的結果
-                consecutive_failures = 0
+                consecutive_systemic = 0
+                consecutive_any = 0
                 log.info("  ✓ %s ★%s($%.3f)", r.full_name, analysis.get("star_rating", "?"), cost)
             else:
-                consecutive_failures += 1
                 res.status = "metadata_only"
                 res.error_msg = err
-                log.warning("  ✗ %s 分析失敗:%s(連續失敗 %d)", r.full_name, err, consecutive_failures)
-                if consecutive_failures >= cfg.analysis.consecutive_failure_stop:
+                consecutive_any += 1
+                systemic = is_systemic_error(err)
+                consecutive_systemic = consecutive_systemic + 1 if systemic else 0
+                log.warning("  ✗ %s 分析失敗:%s(%s,連續 %d)", r.full_name, err,
+                            "系統性" if systemic else "單一 repo", consecutive_any)
+                # 只有認證/額度這類整輪性錯誤才提早停止;內容類失敗是 repo 個案,
+                # 讓後面的 repo 繼續嘗試(高門檻安全網另外擋未知的全面故障)
+                if consecutive_systemic >= cfg.analysis.consecutive_failure_stop:
                     claude_dead = True
-                    log.error("連續失敗 %d 次,判定額度耗盡或 CLI 異常,本輪停用 AI 分析", consecutive_failures)
+                    log.error("連續 %d 次系統性失敗(額度或認證),本輪停用 AI 分析", consecutive_systemic)
+                elif consecutive_any >= any_stop:
+                    claude_dead = True
+                    log.error("連續 %d 次失敗,判定 CLI 異常,本輪停用 AI 分析", consecutive_any)
         except Exception:
             res.status = "error"
             res.error_msg = traceback.format_exc(limit=3)
             log.error("%s 未預期錯誤:\n%s", r.full_name, res.error_msg)
             if not claude_dead:
-                consecutive_failures += 1
-                if consecutive_failures >= cfg.analysis.consecutive_failure_stop:
+                consecutive_any += 1
+                if consecutive_any >= any_stop:
                     claude_dead = True
-                    log.error("連續失敗 %d 次(含未預期錯誤),本輪停用 AI 分析", consecutive_failures)
+                    log.error("連續 %d 次失敗(含未預期錯誤),本輪停用 AI 分析", consecutive_any)
         finally:
             res.duration_sec = time.monotonic() - t0
             if res not in fresh:

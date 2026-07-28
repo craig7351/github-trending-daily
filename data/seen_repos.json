@@ -1,12 +1,20 @@
 {
   "block/buzz": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-27",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
-        9526,
-        3274
+        9994,
+        3270
+      ],
+      "2026-07-26": [
+        11933,
+        2491
+      ],
+      "2026-07-27": [
+        13316,
+        1710
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -52,8 +60,8 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        73104,
-        2194
+        73276,
+        2184
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -95,12 +103,16 @@
   },
   "ComposioHQ/awesome-claude-skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-26",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
-        69963,
-        662
+        70055,
+        663
+      ],
+      "2026-07-26": [
+        70586,
+        577
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -141,12 +153,20 @@
   },
   "Pumpkin-MC/Pumpkin": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-27",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
-        9274,
-        472
+        9339,
+        473
+      ],
+      "2026-07-26": [
+        9713,
+        358
+      ],
+      "2026-07-27": [
+        10015,
+        338
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -188,12 +208,24 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-28",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-25": [
-        33438,
-        506
+        33496,
+        499
+      ],
+      "2026-07-26": [
+        33792,
+        319
+      ],
+      "2026-07-27": [
+        34176,
+        321
+      ],
+      "2026-07-28": [
+        34611,
+        441
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -235,12 +267,16 @@
   },
   "Automattic/harper": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-26",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
-        12942,
-        877
+        13042,
+        876
+      ],
+      "2026-07-26": [
+        13420,
+        503
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -288,8 +324,8 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        4971,
-        339
+        5022,
+        337
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -331,12 +367,20 @@
   },
   "citrolabs/ego-lite": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-27",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
-        2424,
-        884
+        2575,
+        880
+      ],
+      "2026-07-26": [
+        3589,
+        986
+      ],
+      "2026-07-27": [
+        4550,
+        900
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -378,12 +422,20 @@
   },
   "yorukot/superfile": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-28",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
-        19432,
-        312
+        19576,
+        338
+      ],
+      "2026-07-27": [
+        20244,
+        131
+      ],
+      "2026-07-28": [
+        20966,
+        600
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -425,8 +477,8 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        85829,
-        1021
+        85942,
+        1022
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -469,13 +521,58 @@
   },
   "CoreBunch/Instatic": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-27",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
-        4191,
-        250
+        4288,
+        201
+      ],
+      "2026-07-26": [
+        5082,
+        426
+      ],
+      "2026-07-27": [
+        5681,
+        888
       ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "app",
+      "one_liner": "一套用 Bun + TypeScript 打造的自架式視覺化 CMS,主打「所見即所得編輯、輸出乾淨靜態頁面」,對標 Webflow/Framer/WordPress。",
+      "summary": "Instatic 把視覺化畫布編輯器、內容引擎、使用者權限、外掛系統與靜態頁面發佈器全部整合進單一 Bun 伺服器,搭配 SQLite 或 Postgres 即可自架。它的賣點是編輯器產出的頁面不含任何框架殘留,純語意化 HTML 加精簡 CSS,發佈時直接寫死成靜態檔案,同時提供內建設計代幣系統(Core Framework)、可程式化元件、表單/迴圈/範本,以及一個能直接在畫布上編輯節點的 AI Agent。</summary>\n<parameter name=\"category\">app",
+      "highlights": [
+        "發佈頁面為純語意 HTML + 精簡 CSS,無框架執行期,標榜『像讀原始檔一樣乾淨』",
+        "外掛後端程式碼跑在 QuickJS-WASM 沙箱內,預設無檔案系統/環境變數/網路存取,權限需站主明確授權",
+        "內建 38 種能力(capability)組成角色的存取控制、TOTP 雙因素、帳號鎖定退避、危險操作前的 step-up 驗證",
+        "架構規則(如『不可在 admin 直接呼叫 XX』)寫成 src/__tests__/architecture/ 下的真實測試,防止結構腐化,測試檔案數量高達 2000+",
+        "AI Agent 採 provider-agnostic 設計,不綁定特定 SDK,可接 Claude/OpenAI/OpenRouter/本地 Ollama,金鑰與帳單完全由使用者自己掌控"
+      ],
+      "use_cases": [
+        "取代 WordPress/Webflow 的自架式官網或部落格建站(尤其重視輸出頁面乾淨、可攜性高的場景)",
+        "需要自訂資料模型(如產品目錄、輕量 CRM、見證清單)並用同一套視覺化迴圈渲染成頁面的專案",
+        "想要 AI 代理直接在畫布上編輯頁面節點,而非僅產生程式碼片段的建站流程",
+        "多作者團隊需要角色權限、審核工作流程與稽核紀錄的內容管理場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 與 docs/ 目錄非常完整(架構、部署、外掛系統皆有專章),CI 涵蓋 build/lint/test 三個 job(E2E 因耗時暫未接入 CI,但文件有誠實說明原因)。原始碼樣本(server/index.ts、securityHeaders.ts)註解清楚交代『為什麼』而非『做什麼』,對 CORS、CSP、逾時等安全細節有詳盡設計說明。src/__tests__ 底下測試檔案數量龐大(單一 glob 就超過 2000 筆),還包含專門的架構守門測試,工程紀律相當高。專案仍是 0.0.13 版,官方也坦承 API 可能在 1.0 前變動。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 未發現 preinstall/postinstall 等生命週期腳本執行任意程式碼,Dockerfile 亦無 curl|bash 之類的可疑安裝流程",
+          "vendor/pixel-art-icons 為 file: 相依套件,內容為個別小型圖示 JS 檔,並非可疑的大型混淆/二進位檔案,且 README 有明確歸功說明",
+          "server 端主動處理安全性標頭(CSP、HSTS、X-Frame-Options)、CORS 白名單與錯誤訊息遮蔽(避免洩漏 SQL/路徑等內部細節),顯示團隊有安全意識",
+          "外掛系統採 QuickJS-WASM 沙箱隔離,權限需明確授權,設計上降低了外掛供應鏈風險,但因專案仍屬早期版本(0.0.x),沙箱與權限機制的實戰驗證程度有限"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與安全設計在同類自架 CMS 專案中相當突出,測試與文件紀律罕見紮實,但仍是 0.0.x 早期版本,API 可能生變,建議關注但正式導入生產環境前先觀察其穩定性演進。",
+      "_mode": "full"
     }
   },
   "chrislgarry/Apollo-11": {
@@ -484,7 +581,7 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        71359,
+        71406,
         409
       ]
     },
@@ -523,12 +620,16 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-26",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
-        186497,
-        2224
+        186743,
+        2251
+      ],
+      "2026-07-26": [
+        188263,
+        1740
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -571,12 +672,16 @@
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-26",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
-        44967,
-        654
+        44997,
+        328
+      ],
+      "2026-07-26": [
+        45347,
+        408
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -622,8 +727,8 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
-        28618,
-        1843
+        28841,
+        1841
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -664,12 +769,750 @@
   },
   "OtterMind/Chat2DB": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-27",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
-        26271,
-        129
+        26326,
+        82
+      ],
+      "2026-07-26": [
+        26672,
+        360
+      ],
+      "2026-07-27": [
+        27123,
+        398
+      ]
+    },
+    "last_analyzed": "2026-07-25",
+    "analysis": {
+      "category": "app",
+      "one_liner": "支援 30+ 資料庫的跨平台 AI 資料庫用戶端,結合 SQL 工作區與可自帶模型的 AI 助手。",
+      "summary": "Chat2DB Community 是一款本機優先、單人使用的資料庫管理工具,提供 SQL 編輯、補全、執行歷史、資料匯入匯出、儀表板圖表與 ER 圖等完整 DBA/開發功能,並整合可自訂串接的 AI 助手來生成、解釋、優化 SQL。此次分析的 OtterMind/Chat2DB 是原 chat2db 專案改組後的版本(組織由 chat2db 遷至 OtterMind),核心程式碼與工程實踐維持高水準。",
+      "highlights": [
+        "前後端分離架構:Java/Spring 後端(多模組 Maven)+ Umi/React 前端,支援 30+ 資料庫類型並可透過外掛擴充",
+        "資料來源密碼與 AI API Key 採 AES-256-GCM 加密,並附有專門的金鑰檔案初始化腳本,含符號連結防護、原子檔案寫入、權限鎖定等安全細節",
+        "CI/CD 完善:CodeQL 掃描、CycloneDX SBOM 產出、dependency-review、前端授權條款檢查,且所有 GitHub Action 都以 commit SHA 而非標籤釘選,防範供應鏈攻擊",
+        "撰寫詳盡的 SECURITY.md,清楚定義信任邊界(單使用者本機優先、自訂 JDBC 驅動屬於可信範圍等),並提供私密漏洞回報流程",
+        "測試覆蓋涵蓋加密金鑰儲存、SQL 解析、補全邏輯等關鍵模組,非僅裝飾性測試"
+      ],
+      "use_cases": [
+        "開發者或 DBA 需要一個支援多種資料庫的免費視覺化 SQL 用戶端(取代 Navicat/DataGrip 等商業工具)",
+        "希望在本機用自己的 LLM API Key 做 Text2SQL、SQL 優化與解釋的場景",
+        "需要資料視覺化儀表板、ER 圖或資料匯入匯出功能的資料分析工作",
+        "以 Docker 方式在內部單機部署,搭配團隊自管的資料庫連線"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質相當出色,README 涵蓋加密金鑰管理、部署模式、信任邊界說明,SECURITY.md 更是同類專案中少見的詳盡程度。原始碼分層清晰(domain/spi/web 多模組),加密與檔案處理程式碼展現扎實的安全工程素養(防符號連結、原子寫入、記憶體清零)。測試涵蓋核心安全與 SQL 解析邏輯,CI 內建 CodeQL、SBOM、依賴審查,顯示成熟的維運流程。26000+ star、每日仍有新增,且最後推送就在分析當天,活躍度很高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未發現安裝腳本濫用、curl|bash 型態指令、混淆程式碼或異常編碼負載",
+          "專案明確將自訂 JDBC 驅動列為可執行程式碼並要求使用者自行把關來源,屬合理且透明的風險揭露而非隱藏風險",
+          "文件強調預設僅綁定 127.0.0.1,若使用者自行改為對外網路暴露(無使用者驗證機制)則需自行承擔風險,屬單使用者設計的既有限制而非程式缺陷"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與安全意識在同類開源資料庫工具中名列前茅,適合想要免費、可自帶 AI 模型的 SQL 用戶端的開發者立即嘗試。",
+      "_mode": "full"
+    }
+  },
+  "alibaba/open-code-review": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 3,
+    "stars_history": {
+      "2026-07-26": [
+        12965,
+        431
+      ],
+      "2026-07-27": [
+        13839,
+        832
+      ],
+      "2026-07-28": [
+        14989,
+        979
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "阿里巴巴內部驗證兩年、服務數萬工程師的 AI Code Review CLI,開源後結合確定性引擎與 LLM Agent 做精準行級評論。",
+      "summary": "Open Code Review 是一套 Go 撰寫的 CLI 工具,讀取 Git diff 後交給可設定的 LLM(OpenAI/Anthropic 相容)進行代碼審查,產生行級精準的評論,並內建 NPE、執行緒安全、XSS、SQL injection 等調校過的規則集。核心設計是「確定性工程 + Agent」混合架構:檔案篩選、分組、規則比對用工程邏輯保證穩定,只把動態決策交給 LLM Agent,藉此解決一般通用 Agent(如 Claude Code)review 時覆蓋不全、行號漂移、品質不穩定的問題。",
+      "category": "devtool",
+      "highlights": [
+        "阿里巴巴內部大規模驗證(兩年、數萬開發者、數百萬缺陷)後開源的實戰工具,並附真實 PR benchmark(50 repo/200 PR/1505 條人工標註缺陷)證明 precision/F1 優於通用 Agent 且 token 用量僅約 1/9",
+        "確定性引擎(檔案篩選、智慧分組、規則比對)搭配 Agent 動態決策的混合架構,設計思路清晰且有明確論述",
+        "支援多種審查模式:workspace diff、branch range、單一 commit、全檔案 scan、以及 delegate 模式讓使用者自己的 Agent(Claude Code/Codex/Cursor)執行審查",
+        "CI 嚴謹:gofmt 檢查、go vet、govulncheck、race detector、80% 測試覆蓋率門檻、五平台 cross-compile 全部跑在自架 runner 上",
+        "有正式 SECURITY.md 揭露流程,且原始碼中可見已修過的實際安全問題(如 ref-option injection,issue #112),顯示團隊有意識地在做威脅建模"
+      ],
+      "use_cases": [
+        "在 CI/CD(GitHub Actions/GitLab CI/Gerrit 等)自動化 PR 審查,抓 NPE、執行緒安全、XSS、SQL injection 等常見缺陷",
+        "作為 Claude Code / Codex / Cursor 的 skill 或 plugin,用 delegate 模式讓現有 Agent 執行結構化審查而不需另外設定 LLM key",
+        "審查沒有 git 歷史的整包程式碼(ocr scan),適合快速盤點不熟悉的舊專案或第三方 repo",
+        "團隊想要比通用 Agent 更省 token、更穩定行號定位的專屬 code review 工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(多語言 README、官網文件、CONTRIBUTING 多語版、ROADMAP、ASSURANCE_CASE);測試覆蓋率在 CI 強制 80% 門檻,內部各模組都有對應 _test.go;活躍度極高,今日仍有 push,CI/release/翻譯同步等 workflow 齊備,工程成熟度明顯高於一般開源專案初期水準。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "npm 套件的 postinstall 會從 GitHub Releases 下載對應平台的原生二進位檔,但有做 HTTPS 強制與 SHA256 checksum 驗證,流程設計合理",
+          "bin/ocr.js 每次執行 CLI 都會在背景默默檢查更新,若偵測到新版會自動執行 `npm i -g @alibaba-group/open-code-review@latest` 靜默安裝(可用 OCR_NO_UPDATE 環境變數關閉),此自動全域升裝行為未經使用者每次確認,雖然是透過官方 npm registry 走正常安裝流程,仍屬於背景動側寫且會修改全域環境,使用時建議留意或直接設定 OCR_NO_UPDATE=1",
+          "未發現 curl|bash、混淆程式碼、base64 payload、可疑網域或典型供應鏈攻擊手法"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "這是少見有真實大規模生產驗證、benchmark 數據、嚴謹 CI 與資安意識的開源 code review 工具,值得立即關注並可考慮導入 CI 流程,但建議留意其背景自動更新機制。",
+      "_mode": "full"
+    }
+  },
+  "anthropics/claude-cookbooks": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-27",
+    "days_on_trending": 2,
+    "stars_history": {
+      "2026-07-26": [
+        49889,
+        132
+      ],
+      "2026-07-27": [
+        50233,
+        379
+      ]
+    }
+  },
+  "obra/superpowers": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-26",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-26": [
+        261097,
+        479
+      ]
+    }
+  },
+  "permissionlesstech/bitchat": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 3,
+    "stars_history": {
+      "2026-07-26": [
+        28722,
+        1720
+      ],
+      "2026-07-27": [
+        30383,
+        1166
+      ],
+      "2026-07-28": [
+        32431,
+        2346
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "app",
+      "one_liner": "用藍牙網狀網路 + Nostr 協議打造、無需帳號和伺服器的去中心化 P2P 聊天 App(iOS/macOS)。",
+      "summary": "bitchat 是一款雙傳輸架構的加密聊天應用:近距離用藍牙 LE 多跳網狀網路離線通訊,離線範圍外則透過 Nostr 中繼網路(以地理雜湊定位頻道)接力傳送,全程無帳號、無電話號碼、無中心伺服器。核心訊息使用 Noise Protocol 加密(BLE)與自製私密信封格式(Nostr),並內建 Tor(Arti)路由選項與一鍵清除資料的緊急擦除功能。",
+      "highlights": [
+        "雙傳輸智慧路由:藍牙優先、Nostr 備援、離線時自動排隊等待傳輸恢復",
+        "測試覆蓋極廣:200+ 測試檔涵蓋 Noise 協議向量、端對端加密、模糊測試式的大型拓撲整合測試、效能基準門檻(perf-floors)",
+        "極其罕見的供應鏈完整性設計:針對 vendored 的 Rust Tor(Arti)二進位檔有專門 CI 驗證雜湊與來源變更配對,並提供簽章過的 SOURCE-MANIFEST 供使用者逐檔核對原始碼",
+        "SECURITY.md 明確定義漏洞回報範圍、修復時效與私密回報管道,顯示對『高風險使用情境』(如爭議地區使用者)的認真態度",
+        "架構清晰的分層設計(App/Services/BLE/Noise/Nostr/Protocols),大量小型 Policy/Coordinator 型別方便單元測試"
+      ],
+      "use_cases": [
+        "需要離線或網路審查環境下仍可通訊的抗審查通訊應用參考",
+        "研究 Noise Protocol 或 Nostr 私密信封等 E2E 加密實作的範例程式碼",
+        "學習如何在開源專案中落實供應鏈完整性(vendored binary 雜湊驗證、簽章原始碼清單)",
+        "iOS/macOS Swift 專案中大量單元測試、效能守門與 CI 流程設計的參考範本"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件、測試與 CI 成熟度在 GitHub 專案中屬頂尖水準:README/WHITEPAPER/SECURITY/VERIFYING-A-BUILD 分工清楚,CI 涵蓋 SwiftPM 測試、iOS 模擬器測試、效能回歸門檻、SwiftLint、Arti 二進位雜湊驗證等五條獨立 workflow,近期仍在持續高頻推送(last pushed 2026-07-26)。核心程式碼(如 NoiseProtocol.swift)有詳盡的協議文件與安全性註記,顯示作者對密碼學實作的謹慎態度。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "localPackages/Arti 目錄內含已編譯的 Rust 靜態庫(libarti_bitchat.a,提供 Tor 路由),屬於原始碼庫中委存(vendored)二進位檔案 — 但專案有專屬 CI(arti-provenance.yml)強制二進位雜湊必須對應 docs/ARTI-BINARY-PROVENANCE.md 內的清單,且任何二進位變更都必須同時附上原始碼/建置腳本變更,大幅降低被植入後門的風險,屬於揭露且受控的例外",
+          "未發現安裝腳本執行遠端程式碼、curl|bash 模式、可疑 base64/hex payload 或 typosquat 依賴等問題;README 對『從非官方管道取得編譯版本無法驗證』有明確警告,顯示專案本身高度重視供應鏈攻擊面"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "無論是作為抗審查通訊應用來使用,或是學習 Swift 密碼學實作、供應鏈安全與大型測試架構的範例,都非常值得花時間深入研究。",
+      "_mode": "full"
+    }
+  },
+  "palmier-io/palmier-pro": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-26",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-26": [
+        12221,
+        412
+      ]
+    }
+  },
+  "RyanCodrai/turbovec": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-26",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-26": [
+        14287,
+        86
+      ]
+    }
+  },
+  "andrewyng/aisuite": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-27",
+    "days_on_trending": 2,
+    "stars_history": {
+      "2026-07-26": [
+        15220,
+        77
+      ],
+      "2026-07-27": [
+        15403,
+        187
+      ]
+    }
+  },
+  "affaan-m/ECC": {
+    "first_seen": "2026-07-26",
+    "last_seen": "2026-07-26",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-26": [
+        233308,
+        377
+      ]
+    }
+  },
+  "pingdotgg/t3code": {
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-27",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-27": [
+        15052,
+        149
+      ]
+    }
+  },
+  "nodejs/node": {
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-27",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-27": [
+        118470,
+        36
+      ]
+    }
+  },
+  "pbakaus/impeccable": {
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 2,
+    "stars_history": {
+      "2026-07-27": [
+        50687,
+        413
+      ],
+      "2026-07-28": [
+        51667,
+        847
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "一套讓 AI coding agent(Claude Code、Cursor、Codex 等)產出更精緻前端設計的技能包,內建 23 個設計指令與 60 條可判定規則。",
+      "summary": "Impeccable 是針對 AI 生成前端設計「千篇一律」問題(Inter 字體、紫藍漸層、卡片疊卡片等)所設計的指引系統,透過 /impeccable init 建立專案設計語境(PRODUCT.md/DESIGN.md),再用 audit、critique、polish、harden 等 23 個指令搭配 60 條無需 LLM 的確定性規則來檢測與修正設計問題。支援 Claude Code、Cursor、Gemini CLI、Codex、Grok Build 等幾乎所有主流 AI coding 工具,並可透過 CLI、Git submodule、外掛市集或直接複製檔案等多種方式安裝。",
+      "category": "devtool",
+      "highlights": [
+        "23 個指令涵蓋設計流程全階段:從 shape(規劃)、craft(建構)到 polish(收尾)、harden(邊界情境)一應俱全",
+        "60 條確定性檢測規則可在無 LLM、無 API key 的情況下由 CLI 或瀏覽器擴充執行,降低成本與不確定性",
+        "明確列出反樣式清單(過度使用的字體、卡片疊卡片、彈跳緩動等),直接對症 AI 生成設計的常見毛病",
+        "跨工具支援廣,Claude Code、Cursor、Codex、Grok Build、Gemini CLI 等主流 AI 開發工具幾乎都涵蓋",
+        "提供 live 瀏覽器即時迭代模式與 before/after 案例研究,展示實際效果而非空談"
+      ],
+      "use_cases": [
+        "團隊使用 AI coding agent 開發前端產品時,統一設計語彙與品質標準",
+        "個人開發者想避免 AI 生成介面「SaaS 樣板臉」,快速提升視覺質感",
+        "在 CI 或本地流程中加入無 LLM 的確定性設計規則檢測,做基本 a11y/一致性把關",
+        "已使用 Claude Code、Cursor 等工具的專案,想擴充設計技能與指令集"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 撰寫非常完整,涵蓋動機、指令表、安裝方式與各工具差異,文件品質優秀;但僅能從 README 判斷,無法檢視實際程式碼與測試涵蓋範圍,故測試面向評分僅供參考。專案活躍度高,今日剛推送更新且為 GitHub trending 第 7 名、單日增長近 850 星。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝方式包含 npx impeccable install 執行遠端 npm 套件程式碼,屬常見 npm 生態風險,建議安裝前確認套件來源可信",
+          "會在各 AI 工具(Codex、Grok Build 等)寫入自動執行的 hook 腳本,並要求使用者手動核准信任,提醒需留意 hook 內容再授權",
+          "未見 curl | bash 之類的高風險安裝手法,整體安裝流程透明且有版本更新機制"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你的團隊大量仰賴 AI coding agent 產出前端介面,這是目前少見針對「AI 設計同質化」問題提出系統性解法的工具,值得一試;但仍需留意其安裝的 hook 腳本執行權限。",
+      "_mode": "light"
+    }
+  },
+  "permissionlesstech/bitchat-android": {
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-27",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-27": [
+        6716,
+        260
+      ]
+    }
+  },
+  "jenkinsci/jenkins": {
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 2,
+    "stars_history": {
+      "2026-07-27": [
+        25706,
+        18
+      ],
+      "2026-07-28": [
+        25907,
+        180
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Jenkins,業界最主流的開源自動化伺服器,用來打造 CI/CD 流水線。",
+      "summary": "Jenkins 是以 Java 開發的老牌自動化伺服器,透過 2000+ 個外掛支援建置、測試、靜態分析與部署等各種自動化流程。此為核心倉庫(hudson/jenkins 套件結構),提供 WAR 檔、Docker 映像檔及各平台安裝包兩種發布線(Weekly / LTS)。",
+      "highlights": [
+        "專案規模龐大且結構清晰,core/cli/test/bom 等模組分工明確,採用 Maven 多模組建置",
+        "程式碼有完整 MIT 授權標頭與 Javadoc,並用 Checkstyle、SpotBugs、ESLint、Stylelint 做靜態分析品質把關",
+        "測試涵蓋率高,core 模組光是 hudson.model 套件下就有數十個對應的單元測試檔案,另有獨立 test 模組做整合測試與 acceptance test harness(ath.sh)",
+        "CI/CD 採用自舉(dogfooding)方式,用 Jenkinsfile 在 ci.jenkins.io 上跑多平台(Linux/Windows)、多 JDK 版本(21/25)的建置與測試",
+        "有度量遙測 launchable 測試子集加速機制與 JaCoCo 覆蓋率報告整合"
+      ],
+      "use_cases": [
+        "企業內部建置 CI/CD 流水線,自動化編譯、測試、靜態分析與部署流程",
+        "需要高度可擴充自動化平台的團隊,透過 2000+ 外掛整合各種工具鏈(Git、Docker、Kubernetes 等)",
+        "研究大型 Java 開源專案的模組化架構、Maven 多模組建置與品質治理實踐"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(README、CONTRIBUTING、MAINTAINERS 指南俱全),程式碼有規範的授權頭與 Javadoc;測試量龐大且分層(單元測試、整合測試 test 模組、acceptance test harness);專案持續高頻更新(昨日剛 push),CI 流程嚴謹且用自家產品跑自己的建置,是治理成熟度極高的旗艦級開源專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "CI/CD 領域的常青樹,治理與工程品質皆為業界標竿,對想深入了解大型 Java 專案架構或導入自動化流水線的工程師都非常值得關注。",
+      "_mode": "full"
+    }
+  },
+  "amnezia-vpn/amnezia-client": {
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 2,
+    "stars_history": {
+      "2026-07-27": [
+        13323,
+        35
+      ],
+      "2026-07-28": [
+        13910,
+        515
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "開源自架 VPN 客戶端,支援多種混淆協定以突破網路審查,涵蓋桌面與行動裝置全平台。",
+      "summary": "Amnezia VPN 是一款開源 VPN 客戶端,核心特色是讓使用者能在自己的伺服器上一鍵部署 VPN(透過 Docker 容器自動安裝)。除了標準的 OpenVPN、WireGuard、IKEv2 協定外,還支援 Cloak、Shadowsocks、AmneziaWG、XRay 等流量混淆協定,主打對抗 GFW 等網路審查環境,並提供 Windows/macOS/Linux/Android/iOS 全平台支援。",
+      "category": "security",
+      "highlights": [
+        "自架 VPN 一鍵部署,只需輸入伺服器 IP、SSH 帳密即可自動安裝",
+        "支援多種流量混淆協定(Cloak、Shadowsocks、AmneziaWG、XRay)對抗深度封包檢測與審查",
+        "全平台覆蓋:Windows、macOS、Linux、Android、iOS",
+        "支援分流(Split tunneling),可依網站或應用程式決定是否走 VPN",
+        "GPL-3.0 開源授權,建置流程使用 CMake + Conan + Qt 6.10+,標準化程度高"
+      ],
+      "use_cases": [
+        "在受網路審查地區需要穩定翻牆或匿名上網的個人使用者",
+        "希望自行架設 VPN 伺服器而非依賴第三方 VPN 供應商的隱私敏感使用者",
+        "需要對抗深度封包檢測(DPI)、GFW 封鎖的場景",
+        "研究流量混淆協定(Cloak/Shadowsocks/XRay)實作的資安研究者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容完整,涵蓋功能說明、建置指南、多平台開發環境設定與翻譯貢獻流程,文件品質不錯;但本次僅能依 README 判讀,未實際檢視程式碼與測試覆蓋率,tests 分數僅供參考。專案本身活躍度高,今日 trending 第 2 名、單日新增 515 星,最後 push 時間為 2026-07-27,屬於高頻更新的活躍專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對關注隱私與翻牆技術的開發者來說值得追蹤,但屬於終端使用者應用而非開發框架/函式庫,對一般軟體工程師的日常開發參考價值有限。",
+      "_mode": "light"
+    }
+  },
+  "moeru-ai/airi": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        44155,
+        572
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "開源自架的 AI 虛擬伴侶/VTuber 專案,目標重現 Neuro-sama 的即時互動能力。",
+      "summary": "AIRI 是一個讓使用者可以自行架設、擁有的「數位生命/賽博生物」專案,目標是重現知名 AI VTuber Neuro-sama 的能力,支援即時語音對話、玩 Minecraft、Factorio 等遊戲互動。專案支援 Web、macOS、Windows 多平台,並整合 Live2D/VRM 角色顯示與大型語言模型驅動的角色扮演。",
+      "highlights": [
+        "目標明確對標知名但未開源的 Neuro-sama,強調『你自己擁有』的數位伴侶概念",
+        "支援即時語音對話,並可實際操作 Minecraft、Factorio 等遊戲(透過 Factorio Learning Environment 等研究專案)",
+        "跨平台支援 Web / macOS / Windows,並提供 winget、Scoop、Homebrew Cask 等多種安裝管道",
+        "有活躍的獨立組織 @proj-airi 拆分出 RAG、記憶系統、嵌入式資料庫、Live2D 工具等子專案",
+        "多國語言 README 與 Crowdin 翻譯專案,社群經營度高(Discord、Telegram、QQ、微信等多管道)"
+      ],
+      "use_cases": [
+        "想打造個人 AI 虛擬伴侶或桌面寵物的開發者",
+        "研究 LLM 驅動角色如何結合語音、Live2D/VRM 動畫與遊戲代理操作的技術愛好者",
+        "對 AI VTuber/直播技術棧(語音辨識、TTS、角色渲染)感興趣的工程師做技術選型參考",
+        "希望觀察 Neuro-sama 類型應用開源實作進度的研究者或創作者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 只能看到專案介紹與安裝方式,程式碼品質與測試覆蓋無法從此文件判斷,故活動度依 pushed_at(2026-07-28)與 trending 熱度(+572 星/日)評為高分,測試與程式碼相關評分僅供參考,實際情況需查看原始碼。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "提供官方 winget / Scoop / Homebrew Cask 安裝指令,屬正規套件管理器安裝方式,風險較低",
+          "README 明確警告專案未發行任何加密貨幣或代幣,提醒使用者留意詐騙,顯示專案方有意識防範冒名詐騙",
+          "未見 curl | bash 一類的高風險安裝腳本"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若對 AI VTuber / 虛擬伴侶技術有興趣,這是目前開源社群中最具企圖心且持續活躍的實作,值得追蹤與嘗試,但距離真正取代 Neuro-sama 的完整體驗仍有落差。",
+      "_mode": "light"
+    }
+  },
+  "opengeos/GeoLibre": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        2801,
+        420
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "跨瀏覽器、桌面、行動裝置與 Jupyter 都能跑的輕量雲原生 GIS 平台,基於 Tauri v2 + MapLibre GL JS + DuckDB-WASM Spatial。",
+      "summary": "GeoLibre 是一套開源、免安裝即可在瀏覽器使用的 GIS 工具,同一份程式碼可打包成桌面版(Windows/macOS/Linux)、Android App,並支援嵌入 Jupyter Notebook。它整合了 3D Tiles、行星底圖、SQL 工作區、700+ 種地理處理工具等功能,資料全部在本地/瀏覽器端處理以保護隱私。",
+      "category": "app",
+      "highlights": [
+        "技術棧扎實:Tauri v2 + React + TypeScript + MapLibre GL JS + DuckDB-WASM Spatial + deck.gl,一套程式碼多端部署(Web/桌面/Android/Jupyter)",
+        "測試涵蓋非常廣:tests/ 目錄下有 252+ 支前端單元測試,另外還有 Playwright E2E、Rust cargo check、Python pytest(含覆蓋率門檻)",
+        "CI/CD 極為成熟:npm audit 依賴稽核、E2E 煙霧測試、CITATION.cff 版本一致性檢查、lockfile 同步檢查,並附有詳細註解說明每個安全考量(如 Docker CSP 對外服務的風險提醒)",
+        "支援多發布通道:PyPI、conda-forge、Microsoft Store、AUR、Flatpak、Zenodo DOI 引用,生態系整合度高",
+        "功能豐富:3D Tiles、行星(月球/火星等)底圖、SQL 工作區、時間軸動畫、外掛系統(Plugin API)"
+      ],
+      "use_cases": [
+        "不想安裝重量級 GIS 軟體(如 QGIS)、只想在瀏覽器快速視覺化/分析地理空間資料的場景",
+        "需要在 Jupyter Notebook 中結合互動式地圖與空間 SQL 分析的資料科學工作流",
+        "想要跨平台(桌面+行動+Web)部署同一套地圖應用的團隊,參考其 Tauri + React monorepo 架構",
+        "對 MapLibre GL JS / DuckDB-WASM Spatial 整合實作有興趣的前端或地理資訊工程師"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整度極高(README、docs/ 內有架構、外掛 API、i18n、貢獻指南等多份專文),程式碼中的註解多在解釋「為什麼」而非「做什麼」,展現資深工程判斷。測試與 CI 規格屬業界少見的完整程度(前端/後端/Rust/E2E 全覆蓋且有覆蓋率門檻)。今日剛推送、活躍度高,屬 opengeos(giswqs)團隊維護,該作者過往有 leafmap、geemap 等知名地理空間專案的紀錄。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 使用 allowScripts/trustedDependencies 白名單機制限制哪些套件可執行安裝腳本(@google/genai、core-js、esbuild、protobufjs、sharp、workerd),屬正向的供應鏈風險控管做法,非疑慮",
+          "Dockerfile 註解明確警告:內建 nginx CSP 預設允許 localhost/127.0.0.1 的 connect-src(供本機開發資料來源使用),若要公開部署需自行移除,屬已揭露且有文件說明的設定風險而非漏洞",
+          "掃描原始碼未發現 curl|bash、base64 大型 payload、寫死 IP 或可疑域名等惡意樣式"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "技術架構扎實、測試與 CI 完整度在同類專案中名列前茅,且無安全疑慮,值得立即關注與嘗試。",
+      "_mode": "full"
+    }
+  },
+  "NanmiCoder/MediaCrawler": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        58387,
+        362
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "cli",
+      "one_liner": "一套支援小紅書、抖音、快手、B站、微博、貼吧、知乎七大平台的多媒體資料爬蟲工具",
+      "summary": "MediaCrawler 利用 Playwright 瀏覽器自動化保存登入態，透過 JS 表達式取得簽名參數,免去逆向各平台加密演算法的麻煩,支援關鍵字搜尋、指定帖子/創作者主頁爬取、二級評論、IP 代理池與多種資料落地方式(CSV/JSON/Excel/SQLite/MySQL/MongoDB)。專案另有 WebUI(React + FastAPI)可視化操作介面,並提供付費 Pro 版本主打斷點續爬、多帳號代理池與去除 Playwright 依賴等企業級功能。",
+      "highlights": [
+        "核心技術用瀏覽器登入態代替 JS 逆向簽名,大幅降低各平台反爬蟲門檻",
+        "七大主流中國社群/內容平台(小紅書、抖音、快手、B站、微博、貼吧、知乎)功能齊全,含二級評論與詞雲圖生成",
+        "同時提供 CLI 與 WebUI(FastAPI + React/Vite + Radix UI)兩種操作方式",
+        "tests/ 與 test/ 兩個目錄下有 18 支測試檔涵蓋各平台與儲存邏輯,工程紀律優於一般爬蟲專案",
+        "採用「非商業學習使用許可證」而非常見開源授權,商用與大規模爬取被明確禁止"
+      ],
+      "use_cases": [
+        "學術研究或市場輿情分析需要蒐集中國社群平台公開貼文與評論資料",
+        "學習 Playwright 瀏覽器自動化、反爬蟲繞過與多平台爬蟲架構設計的教材",
+        "個人/研究用途的小規模資料採集與詞雲、情感等下游分析前處理",
+        "評估是否訂閱其 MediaCrawlerPro 商業版以取得斷點續爬、多帳號代理池等進階能力"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 詳盡但夾雜大量贊助商廣告,可讀性打折;文件另有獨立 VitePress 站點與多篇操作指南(CDP 模式、資料儲存、Excel 匯出)。測試覆蓋七平台的登入/解析/儲存邏輯,但 GitHub Actions 目前只有文件部署流程,並無自動跑測試的 CI,持續整合這塊仍有加強空間。專案更新頻繁(最後推送在分析當日),issue/PR 數量顯示社群活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未發現 install-time 惡意腳本、curl|bash 模式或混淆/base64 payload,程式碼中的 base64 使用僅限二維碼登入圖片編碼,屬正常用途",
+          "browser_launcher.py 使用 subprocess 啟動本機 Chrome 並以 taskkill 強制結束程序,屬 CDP 模式必要操作,非遠端可控指令注入",
+          "pyproject.toml 預設將清華大學 PyPI 鏡像設為套件來源(國內常見加速鏡像),若對供應鏈來源有疑慮建議手動改回官方 PyPI index",
+          "專案授權為「非商業學習使用許可證」,明確禁止商用與大規模爬取,並附中國網路安全法相關免責聲明,使用前須留意合規與法律風險而非程式碼安全風險"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "程式碼與安全面都算乾淨,功能齊全且維護活躍,若目的是學習爬蟲架構或做學術/研究用途的中國社群平台資料採集,值得關注;但商用或大規模爬取在授權與法律上都不被允許,務必先評估合規風險。",
+      "_mode": "full"
+    }
+  },
+  "bradautomates/claude-video": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        11220,
+        434
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "讓 Claude 看懂影片的技能套件",
+      "summary": "此專案讓 Claude 下載影片 擷取影格與逐字稿後進行分析",
+      "category": "ai-ml",
+      "highlights": [
+        "多段式細節模式取得速度與成本平衡",
+        "內建影格去重演算法",
+        "文件包含安全性說明",
+        "版本紀錄記載已修補的安全問題",
+        "支援多種平台"
+      ],
+      "use_cases": [
+        "分析他人影片內容",
+        "定位螢幕錄影中的問題畫面",
+        "影片轉重點筆記"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 3,
+        "comment": "文件完整 測試覆蓋良好 活躍度中等"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "子行程呼叫使用陣列參數避免注入",
+          "金鑰儲存權限嚴格"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "值得一試的實用工具",
+      "_mode": "full"
+    }
+  },
+  "vudovn/ag-kit": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        7996,
+        14
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "給 Google Antigravity(以及其他 AI 編碼助手)用的一套「代理工程套件」,提供規則、技能、專家角色與安全防護鉤子。",
+      "summary": "AG Kit 是一組以 Markdown 撰寫的 AI agent 設定範本,透過 CLI(`npx @vudovn/ag-kit init`)把 `.agents/` 工作區(規則、20 個專家角色、47 個技能、13 個工作流程、持久化記憶)安裝進專案,主要鎖定 Google Antigravity 執行環境,同時也附帶一支原生安全鉤子攔截高風險的刪除/格式化指令。專案解決的問題是讓 AI coding agent 有一致、可版本控管、可安全更新/回滾的行為規範與知識庫。",
+      "highlights": [
+        "提供 20 個專家角色、47 個技能、13 個 slash command 工作流程,涵蓋規劃、除錯、部署等場景",
+        "內建 PreToolUse 安全鉤子,用正則規則攔截 rm -rf /、mkfs、dd of=/dev/sd*、Windows 磁碟機格式化等破壞性指令",
+        "CLI 更新機制具備 merge-aware 更新、自動備份與 rollback,並用 SHA-256 manifest 偵測管理檔案是否被使用者修改",
+        "內附一支純本地、無依賴的安全掃描腳本(偵測硬編碼密鑰、eval/exec、SQL 注入模式等),本身不含惡意程式碼",
+        "CI 使用 pinned commit SHA 的 GitHub Actions,並涵蓋 toolkit 驗證、CLI 測試、web lint/typecheck/build 與 Dependency Review"
+      ],
+      "use_cases": [
+        "在使用 Google Antigravity 的專案中,快速建立一致的 AI agent 規則/技能/角色工作區",
+        "需要團隊共享、可版本控管的 AI 協作規範(coding rules、design rules、routing)時作為起點",
+        "想參考其 CLI merge-aware 更新、備份與回滾機制設計,應用在自己的模板/腳手架工具",
+        "作為輕量本地安全掃描腳本(硬編碼密鑰、危險函式呼叫偵測)的參考實作"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整(README、MIGRATION、PRODUCTION_CHECKLIST、SECURITY、ARCHITECTURE 皆齊備),CLI 與 hooks 皆有單元測試且路徑安全性處理仔細(拒絕 .. 、絕對路徑、null byte),CI 使用 pinned action SHA 屬於良好實踐。今天(2026-07-26)才剛推送,版本號用日期格式(2026.7.27)顯示更新頻繁,活躍度高;但因高度綁定 Antigravity 特定執行環境,通用性與其他工具的相容性未知,長期維護负担需觀察。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未發現任何 npm lifecycle scripts(無 preinstall/postinstall/prepare),CLI 安裝流程乾淨",
+          "程式碼中出現的 eval/exec/base64 等關鍵字皆位於「弱點掃描技能」的偵測規則清單中,用於掃描別的程式碼,而非套件本身的惡意行為",
+          "CLI 下載工具鏈時使用受信任的 giget 從 GitHub 官方 repo 拉取,搭配互動式確認與備份機制,無 curl|bash 或隱藏下載網址",
+          "未發現硬編碼 IP、可疑網域、內嵌 base64/hex payload 或非 dist 目錄下的混淆程式碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、文件與測試齊全,若你的團隊已在用 Google Antigravity,這套 agent 工程套件值得直接導入;若不是 Antigravity 使用者,通用性有限,可當作設計參考。",
+      "_mode": "full"
+    }
+  },
+  "apache/cassandra": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        9984,
+        11
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "Apache Cassandra:業界知名的高可擴展分散式資料庫,主打線性擴展與容錯能力",
+      "summary": "Apache Cassandra 是一套分散式的分區列儲存(partitioned row store)資料庫,支援跨多台機器自動分區與資料複製,並提供類 SQL 的 CQL 查詢語言。專案已有多年歷史,是分散式資料庫領域的標竿專案,適合需要處理大規模、高可用寫入場景的系統採用。",
+      "category": "data",
+      "highlights": [
+        "Apache 頂級專案,治理成熟,社群管道完整(Slack、郵件清單、JIRA)",
+        "支援自動分區與容錯,適合大規模叢集部署,不犧牲效能",
+        "CQL 查詢語言接近 SQL,學習曲線相對平緩",
+        "README 提供完整的單節點快速上手教學(從解壓縮到 CQL 操作)"
+      ],
+      "use_cases": [
+        "需要高寫入吞吐量與水平擴展的大規模應用資料儲存",
+        "跨地域多資料中心部署,要求高可用與容錯的系統",
+        "取代傳統關聯式資料庫在超大資料量場景下的瓶頸"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 4,
+        "comment": "README 說明清楚且提供可操作的快速上手範例,並連結到完整官方文件;但本次僅能依 README 評估,無法檢視實際測試覆蓋率,故給予保守分數。近期有持續 push(2026-07-27),且今日進入 trending 榜單,顯示活躍度良好。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "成熟穩健的分散式資料庫標竿專案,即使非新技術,仍值得資料庫/後端工程師收藏參考。",
+      "_mode": "light"
+    }
+  },
+  "mvanhorn/last30days-skill": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        54252,
+        240
+      ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "一個讓 AI agent(Claude Code、Codex 等)跨 Reddit、X、YouTube、HN、Polymarket 等平台做「近 30 天」深度研究並自動生成摘要簡報的技能套件。",
+      "summary": "last30days 是一套 Agent Skill,輸入任一主題(人物、公司、產品、話題)後,會平行搜尋 Reddit、X/Twitter、YouTube、TikTok、Hacker News、Polymarket、GitHub、arXiv、Techmeme 等近 20 個來源,依真實互動熱度(讚數、上讚、下注金額)排序去重合併,再由 AI 判斷綜合寫成一份有引用出處的近 30 天情報簡報。核心賣點是「用真人參與度取代 SEO/編輯排序」,解決一般搜尋引擎看不到社群第一手討論的問題。",
+      "highlights": [
+        "純 Python 3.12+ stdlib 實作,pyproject.toml 宣告 runtime dependencies = [],大幅降低供應鏈風險",
+        "CI/CD 相當成熟:pinned SHA actions、TruffleHog 密鑑掃描、Semgrep SAST、OSV/uv audit 依賴稽核、OpenSSF Scorecard、Release 附 provenance attestation",
+        "測試覆蓋率門檻鎖在 84%(社群持續拉高),tests/ 目錄超過 200 個測試檔案,涵蓋各來源模組與邊界情境",
+        "支援 50+ agent host(Claude Code/Desktop、Codex、Cursor、Gemini CLI、OpenClaw 等),安裝方式多樣但文件清楚說明差異",
+        "瀏覽器 Cookie 擷取功能(Firefox/Chrome/Safari)有明確的安全處理,例如複製出的暫存 cookie 檔會 chmod 0o600 限制權限"
+      ],
+      "use_cases": [
+        "會議前快速掌握對象(人物/公司)近期在社群上的最新動態與輿論風向",
+        "產品/市場調研:比較多個工具或話題在社群熱度與觀點差異(如 A vs B)",
+        "內容創作前的素材收集,取代人工逐一翻 Reddit/X 的耗時流程",
+        "topic 趨勢監控與定期簡報(watchlist + briefing 排程,支援 Slack/webhook 通知)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為完整(README、CONFIGURATION、CONCEPTS、AGENTS.md 等多份專門文件),程式碼有型別註記與清楚的 docstring,平台相容性處理細緻(WSL、macOS Keychain、Windows 編碼)。CI 流程專業度高於一般個人專案等級,含 SAST、密鑑掃描、依賴稽核與 provenance attestation。近期(2026-07-26)仍持續有 push,changelog.d 顯示採用 towncrier 做版本管理,活躍度很高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未發現 curl|bash 或 iwr|iex 之類的一鍵執行遠端腳本模式,安裝流程走官方 plugin marketplace 或 npx skills,無 preinstall/postinstall 任意程式碼",
+          "瀏覽器 Cookie 擷取(cookie_extract.py)屬於敏感能力,會讀取本機 Firefox/Chrome/Safari 的登入 Cookie 以模擬瀏覽器身份存取 X 等平台,雖是使用者主動選用且有明確文件與權限限制(0o600),使用前仍應留意這類憑證存取行為",
+          "需要使用者自行提供多個第三方服務的 API 金鑑(ScrapeCreators、Perplexity、XAI 等),存在憑證管理面的信任邊界,但作者提供 macOS Keychain 整合與 .env 隔離,設計上偏保守"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程成熟度與文件品質在 GitHub Trending 專案中屬上乘,零外部 runtime 依賴加上扎實的 CI 安全稽核,值得研究其架構,若有跨平台社群輿情彙整需求也值得實際安裝試用。",
+      "_mode": "full"
+    }
+  },
+  "ocornut/imgui": {
+    "first_seen": "2026-07-28",
+    "last_seen": "2026-07-28",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-28": [
+        75235,
+        51
       ]
     }
   }
