@@ -890,6 +890,38 @@
         50233,
         379
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Anthropic 官方維護的 Claude API 實戰範例庫,涵蓋從基礎工具呼叫到 Agent SDK 部署的完整教學。",
+      "summary": "這是 Anthropic 官方的 Claude Cookbooks,收錄大量 Jupyter Notebook 與 Python 範例,示範如何用 Claude 做分類、RAG、多模態、工具串接、知識圖譜、text-to-SQL 等應用。內容從簡單的 API 呼叫範例,擴展到 Claude Agent SDK 的完整代理程式(研究代理、SRE 代理、Chief of Staff 代理)與 Kubernetes/Modal 部署範本,是學習與落地 Claude 應用的權威參考資源。",
+      "highlights": [
+        "官方維護,內容涵蓋分類、RAG、摘要、多模態視覺、知識圖譜、text-to-SQL 等十多種能力主題",
+        "新增 claude_agent_sdk 目錄,展示完整可部署的 Agent(研究代理、SRE 代理、觀測代理)含 FastAPI/K8s/Modal 部署範本",
+        "工程化程度高:有 pytest 測試套件、tox 隔離環境、ruff lint/format、pre-commit hook 與多個 GitHub Actions CI 工作流程",
+        "hosting/server.py 等程式碼附有清楚的安全警語,明確說明預設無驗證、部署時需搭配 gateway,展現負責任的工程態度",
+        "包含 Claude Skills 範例(財務分析、品牌規範套用等)與 evaluation 腳本(BLEU/ROUGE/LLM-eval),兼具教學與可重用性"
+      ],
+      "use_cases": [
+        "想快速上手 Claude API 各種能力(工具呼叫、視覺辨識、RAG)的開發者參考範例",
+        "評估如何用 Claude Agent SDK 建構可部署的生產級 Agent 服務(含容器化與 K8s/Modal 範本)",
+        "尋找 prompt caching、JSON mode、evals 等進階技巧的實作範例",
+        "作為教學或內部訓練教材,搭配官方 API Fundamentals 課程使用"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質極高,README 分類清楚且每個子目錄都有獨立說明;測試涵蓋 notebook 結構與執行兩層,並有 tox/CI 全面把關;活動度高,7/23 剛推送更新且今日新增 132 星、CI workflow 齊全(lint、notebook quality、authors 驗證等),明顯是持續積極維護的官方倉庫。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "Anthropic 官方權威範例庫,工程品質與文件都在水準之上,想學 Claude API 或 Agent SDK 落地實作的人值得直接加入書籤追蹤。",
+      "_mode": "full"
     }
   },
   "obra/superpowers": {
@@ -901,6 +933,42 @@
         261097,
         479
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "給 Claude Code 等 AI 編碼代理裝上一套「開發方法論」技能包,強制走過腦力激盪、寫計畫、TDD、code review 的完整 SDLC 流程。",
+      "summary": "Superpowers 是一組可組合的 Skills(brainstorming、writing-plans、subagent-driven-development、test-driven-development、systematic-debugging 等),搭配一個近乎強制性的「using-superpowers」啟動指令,讓 AI 編碼代理在動手寫程式前先確認需求、產出設計文件與計畫,再以紅綠燈 TDD 與雙階段 code review 的方式一步步執行任務。目標是解決「AI 一收到需求就衝去寫程式、跳過設計與測試」的常見問題,同時支援 Claude Code、Codex、Gemini CLI、Cursor、OpenCode、Pi 等多種代理平台。",
+      "category": "devtool",
+      "highlights": [
+        "核心是 Markdown 撰寫的 SKILL.md 技能檔案,而非傳統程式庫,透過強烈祈使語氣(如「YOU MUST」「not negotiable」)引導 LLM 行為,是一種值得留意的 prompt engineering 手法",
+        "brainstorming 技能內建一個本地 WebSocket「visual companion」伺服器(server.cjs),自行實作 RFC6455 協定、per-session token 驗證、安全 headers(CSP、X-Frame-Options 等),並有對應 auth.test.js 專門測試防護機制",
+        "同時支援 9+ 種編碼代理(Claude Code、Codex App/CLI、Cursor、Antigravity、Gemini CLI、Kimi、OpenCode、Pi、Copilot CLI),各自有獨立的 plugin manifest 與相容層",
+        "tests/ 目錄涵蓋各平台安裝測試、shell script lint、伺服器單元測試,測試量頗大且貼近真實使用情境(非僅 happy path)",
+        "README 明確揭露 brainstorming 視覺元件會回傳版本號到官方網站做遙測,並提供 SUPERPOWERS_DISABLE_TELEMETRY 環境變數關閉,透明度高"
+      ],
+      "use_cases": [
+        "希望讓 Claude Code / Codex 等 AI 代理在開發前強制做需求釐清與設計文件,避免代理「憑感覺硬寫」",
+        "團隊想導入 subagent 分工的開發流程(規劃 → 派工 → 雙階段審查)來處理較大型、多任務的工程工作",
+        "想學習如何用 Markdown Skill 檔案 + 強語氣指令來控制 LLM 代理行為的 prompt engineering 案例",
+        "需要一個可攜式、跨多種 AI 編碼工具共用的 TDD/debugging/code review 方法論範本"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 與各 SKILL.md 文件寫得非常詳盡,docs/ 下還有大量設計文件與規格記錄(specs/plans),文件品質優異。tests/ 目錄涵蓋多平台整合測試與伺服器單元測試,對 shell script 也有 lint 測試,測試面向廣,但這次檢出的分支中沒看到 .github/workflows CI 設定,無法確認自動化程度。commit 記錄與最近推送時間(2026-07-24)顯示活躍維護中,但本身是純文字/腳本專案,程式碼量不大,主要複雜度在 skills 文件與少量 Node.js 伺服器程式碼,程式碼品質尚可(有安全考量如帧大小限制、強制 masking)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "brainstorming 技能的 visual companion 功能會從官方網站載入含版本號的 logo(遙測),官方已在 README 中揭露且提供環境變數關閉,屬透明揭露而非隱藏行為",
+          "未在此次檢出中發現 curl|bash、iwr|iex 或 postinstall/preinstall 等安裝時執行任意程式碼的手法",
+          "本地 WebSocket 伺服器(server.cjs)預設綁定 127.0.0.1 並要求 per-session token 驗證,若使用者主動改為 --host 0.0.0.0 對外開放則需自行評估風險,但預設設定安全"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "屬於「流程/prompt 框架」而非傳統程式庫,文件與測試都做得紮實,對於想讓 AI 代理更守紀律地走完整個 SDLC 的團隊值得一試,但效果高度依賴底層 LLM 是否真的服從強語氣指令。",
+      "_mode": "full"
     }
   },
   "permissionlesstech/bitchat": {
@@ -966,6 +1034,38 @@
         12221,
         412
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "用 Swift 打造、原生整合 AI 代理與 MCP 的 macOS 影片剪輯器",
+      "summary": "Palmier Pro 是一款針對 macOS 26 (Apple Silicon) 打造的開源影片剪輯軟體,核心剪輯功能(時間軸、特效、匯出)完全開源,並內建 MCP Server 讓 Claude Code、Cursor、Codex 等 AI 代理可直接操控剪輯專案。生成式 AI 功能(Seedance、Kling、Nano Banana Pro 等模型)則需要登入訂閱,屬於閉源加值服務。",
+      "category": "app",
+      "highlights": [
+        "MCP Server 綁定在 127.0.0.1 loopback,並有 Origin/Content-Type/Session 驗證管線,對外部網路不可達,安全設計謹慎",
+        "140 支 Swift 測試檔涵蓋 Agent 工具、渲染核心(Metal kernel)、匯出、專案讀寫等,測試覆蓋面相當廣",
+        "AGENTS.md 是少見的高規格工程規範文件,詳細規定並發模型、Main Actor 使用、Undo 一致性、Agent 工具設計原則",
+        "用 Package.swift traits 分離 BundledSpeech(MLX 語音)與 ProductionTelemetry(Sentry/PostHog)等可選功能,依賴管理乾淨",
+        "CI 使用 macOS 26 runner 執行 swift test,是最新 macOS 版本專屬,對一般 clone 者較難自行驗證建置"
+      ],
+      "use_cases": [
+        "需要在 macOS 上用 AI 代理(Claude Code/Cursor)直接操作時間軸做影片剪輯自動化",
+        "研究如何在原生 Swift/SwiftUI 應用中設計 MCP Server 與工具(Tool)協定",
+        "想參考大型 Swift 專案的並發、Undo、檔案 I/O 工程規範寫法",
+        "尋找開源、非訂閱制的基礎影片剪輯器(不需生成式 AI 功能時完全免費)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 4,
+        "comment": "文件與工程規範完整度極高(README 多語言版本、CONTRIBUTING、AGENTS.md 工程準則),測試數量與涵蓋範圍(140+ 檔)在同類專案中少見。CI 僅跑在 macOS 26 專屬 runner 上,一般外部貢獻者難以本地驗證;README 中的星星歷史圖表 URL 帶有 sealed_token 參數屬正常第三方服務用法。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與安全設計都在水準之上,但僅支援 macOS 26 + Apple Silicon,且核心賣點的生成式 AI 功能需訂閱,適合特定平台的重度 AI 剪輯使用者關注,而非泛用工具。",
+      "_mode": "full"
     }
   },
   "RyanCodrai/turbovec": {
@@ -977,6 +1077,38 @@
         14287,
         86
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "library",
+      "one_liner": "用 Rust 寫的向量索引函式庫,基於 Google Research 的 TurboQuant 演算法,提供 2-4 bit 量化壓縮與 SIMD 加速搜尋,附 Python 綁定。",
+      "summary": "turbovec 實作 TurboQuant 這種無需訓練階段的資料無關量化器,將向量壓縮至原本 float32 大小的 1/8~1/16(例如 1000 萬筆文件從 31GB 壓到 4GB),並用手寫的 NEON/AVX-512 SIMD kernel 加速搜尋,號稱在多數設定下贏過 FAISS IndexPQFastScan。同時支援線上增量插入(無需重新訓練/重建索引)與搜尋時 allowlist 過濾,鎖定 RAG/向量檢索場景的記憶體與延遲痛點。",
+      "highlights": [
+        "核心演算法基於 ICLR 2026 論文 TurboQuant,並額外實作 TQ+ 逐座標校準與長度重正規化來修正量化偏差,原理說明寫得非常清楚",
+        "Rust 核心 + Python (PyO3/maturin) 綁定,x86 目標基線設為 x86-64-v2 並在執行期動態偵測 AVX-512/AVX2,相容性與效能兼顧",
+        "測試涵蓋非常全面:Rust 端有 kernel 正確性、IO 版本相容、並發搜尋、rotation 決定性等測試;Python 端額外測了 fork 安全性、GIL 釋放、pickle/copy 等邊角案例",
+        "CI/CD 成熟:cargo-deny + pip-audit 做供應鏈掃描、多平台(Linux/macOS/Windows)矩陣測試、GitHub Actions 全部以 commit SHA pin 版本,並有獨立的 downstream smoke test 驗證真實依賴情境",
+        "文件完整度高:README 詳細解釋演算法原理與 benchmark 方法論,另有 CHANGELOG、SECURITY.md、CONTRIBUTING.md 及 LangChain/LlamaIndex/Haystack/Agno 整合文件"
+      ],
+      "use_cases": [
+        "本地/離線 RAG 系統中取代記憶體吃緊的 float32 向量索引,大幅降低記憶體成本",
+        "需要邊插入邊檢索(無訓練/重建步驟)的線上向量檢索場景",
+        "多租戶或需要 SQL/ACL 過濾後再做向量重排的混合檢索(hybrid retrieval)架構",
+        "作為 LangChain/LlamaIndex/Haystack/Agno 既有記憶體向量庫的直接替換品"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件、測試與 CI 的成熟度遠超一般個人專案等級,程式碼(含底層 SIMD unsafe 區塊)註解清楚且解釋了每個決策的取捨,CHANGELOG 對重大變更(如 rotation 演算法從 QR 換成 block-Hadamard 以求跨平台位元一致)交代得非常詳細,顯示團隊工程紀律很高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件成熟度都在同類專案中名列前茅,對做本地/隱私優先 RAG 或想擺脫 FAISS 記憶體負擔的團隊,非常值得列入評估清單。",
+      "_mode": "full"
     }
   },
   "andrewyng/aisuite": {
@@ -992,6 +1124,38 @@
         15403,
         187
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "用一致的 API 串接 OpenAI、Anthropic、Google 等多家 LLM 供應商,並內建 Agent、工具呼叫與 MCP 支援。",
+      "summary": "aisuite 是輕量級 Python 函式庫,提供統一的 Chat Completions 介面(OpenAI 風格),讓開發者只要換一個字串就能切換超過十家 LLM 供應商。在此之上還有 Agents API,可將一般 Python 函式包裝成工具、搭配 Runner 執行多輪對話迴圈,並提供工具政策(Tool Policy)、狀態儲存(含 Postgres)、追蹤與 MCP 整合等生產級功能。專案由 Andrew Ng 團隊維護,也是桌面 AI 助理 OpenWorker 的底層引擎。",
+      "category": "library",
+      "highlights": [
+        "統一多供應商 Chat Completions API,支援 OpenAI、Anthropic、Google、Mistral、AWS、Cohere、Ollama 等十餘家,串流與同步/非同步呼叫皆備",
+        "Agents API 提供 max_turns 自動工具執行迴圈、Tool Policy(如 RequireApprovalPolicy)、狀態持久化與追蹤(tracing)功能,設計偏向生產環境使用",
+        "原生支援 MCP(Model Context Protocol),可直接把任意 MCP server 的工具餵給模型",
+        "內建 files/git/shell 三種現成 toolkit,shell toolkit 預設採白名單、禁用 shell 語法與管線,並標記 high risk 需人工核准,安全設計嚴謹",
+        "測試覆蓋非常完整,每個 provider、agent 功能都有對應測試檔,CI 使用 poetry + pytest 跑多版本 Python(3.10~3.12)"
+      ],
+      "use_cases": [
+        "需要同時支援多家 LLM 供應商、且希望用一套程式碼快速切換模型的應用開發",
+        "建構具備工具呼叫、多輪迴圈與審核機制的 Agent 系統(例如程式碼助理、自動化任務執行器)",
+        "串接 MCP 生態系工具(檔案系統、Git、外部服務)給 LLM 使用",
+        "需要串流輸出、追蹤紀錄與狀態持久化(含 Postgres)的正式環境 LLM 應用"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 結構清楚、範例豐富,並有獨立的 quickstart 文件;測試目錄非常完整,涵蓋每個 provider、agent、MCP、toolkit 功能且有 CI 自動跑 pytest;近期仍持續大量開發(Agents API、MCP、Tool Policy 等新功能陸續加入),活躍度高。扣分點是核心程式碼混雜了 OpenWorker 桌面應用的殘留(platform/ 目錄)與 JS 版本(aisuite-js/),讓倉庫結構稍顯龐雜。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "由 Andrew Ng 團隊維護、程式碼品質與測試都紮實,適合正在評估多供應商 LLM 抽象層或 Agent 框架的工程師關注,但需留意倉庫已混入 OpenWorker 相關內容,結構稍顯發散。",
+      "_mode": "full"
     }
   },
   "affaan-m/ECC": {
@@ -1003,6 +1167,43 @@
         233308,
         377
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "一套讓 Claude Code、Codex 等 AI 編碼 agent 具備標準化「規劃-測試-實作-審查-記憶」工作流程的巨型 Skill/Agent/Hook 配置系統。",
+      "summary": "ECC(affaan-m/ECC)不是一般意義上的應用程式碼庫,而是給 Claude Code、Codex、Cursor、OpenCode 等 7 種 agent harness 使用的配置與工作流程包,內含 67 個 subagent、281 個 skill、94 個相容 command shim,以及 hooks、rules、記憶系統、跨 harness 的 Memory Vault,目的是把「先規劃、TDD、fresh-context 審查、驗證、記憶沉澱」變成可重複執行的流程而非提示詞裡的期望。專案同時內建 AgentShield 安全掃描與供應鏈 IoC 偵測腳本,顯示作者對 agent 設定檔本身的攻擊面有明確意識。",
+      "category": "ai-ml",
+      "highlights": [
+        "67 agents + 281 skills + 94 command shim,涵蓋規劃、TDD、程式碼審查、build 修復、安全掃描等完整開發流程",
+        "支援 Claude Code、Codex、Cursor、OpenCode、Gemini、Zed、Kimi 等 7+ 種 harness,採 adapter 模式而非各自維護副本",
+        "內建 AgentShield 安全掃描與 scripts/ci/scan-supply-chain-iocs.js,主動比對已知惡意 npm 套件版本黑名單",
+        "跨 harness 的 Memory Vault(ecc memory)讓不同 agent 工具間可共享、可追溯的 Markdown 記憶格式,且預設 fail-closed .gitignore",
+        "單一維護者每週在 7 個 harness 上同步發版,test 套件超過 200 個檔案,CI 涵蓋 supply-chain-watch、no-personal-paths 等專屬安全性測試"
+      ],
+      "use_cases": [
+        "希望讓 Claude Code / Codex 具備一致的 TDD、code review、安全掃描 SOP,而不用每次在 prompt 裡重新描述流程",
+        "多 agent harness 併用(例如同時用 Claude Code 規劃、Codex 執行)時,想要共享的記憶與規則系統",
+        "團隊要導入 agent 開發流程治理,需要現成的 security-review、build-error-resolver、TDD 等專業 subagent",
+        "想稽核自己 AI coding agent 設定檔(hooks、MCP、權限)本身是否有安全風險"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 極度詳盡(2000+ 行),多語言文件齊全;測試涵蓋 hooks、agents、skills、install manifest 等 200+ 檔案並有專屬 supply-chain 安全測試,但核心價值物是 Markdown/YAML 配置而非傳統應用邏輯,程式碼覆蓋率意義與一般函式庫不同;近日仍持續發版(最後 push 為分析當日前一天),活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 未使用 preinstall/postinstall 生命週期腳本執行任意程式碼,prepack 僅呼叫本地 build:opencode 建置腳本,風險可控",
+          "README 明確警告只從官方來源(GitHub repo、npm ecc-universal/ecc-agentshield、GitHub App、plugin slug ecc@ecc)安裝,提醒第三方轉載可能含惡意內容",
+          "repo 內含大量 curl/iwr 指令字串,但主要出現在安全指南文件與測試(如 scan-supply-chain-iocs.js、secret-curl-flags.test.js)中,屬於被偵測/教學對象而非實際被執行的惡意程式",
+          "MCP 預設只啟用單一 connector(chrome-devtools),其餘皆為選配,降低預設攻擊面;但 3000+ 檔案規模導致無法逐一審閱所有 skill/hook 內容,存在人工審查覆蓋不到的角落風險"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你重度使用 Claude Code / Codex 進行工程開發,這套系統值得花時間試裝一兩個 profile(先裝 minimal 別全裝),但要有心理準備:這是配置框架而非傳統函式庫,學習與維護成本不低。",
+      "_mode": "full"
     }
   },
   "pingdotgg/t3code": {
@@ -1014,6 +1215,41 @@
         15052,
         149
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "T3 Code 是一款整合 Codex、Claude Code、Cursor、OpenCode 等多種 AI 編碼代理的桌面/網頁 GUI 殼層。",
+      "summary": "由 pingdotgg(T3 團隊)開發,提供統一的圖形介面來操作多種 CLI 型 AI 編碼代理,底層是以 Effect-TS 打造的伺服器/桌面/行動端 monorepo,涵蓋認證、Git 工作流程、checkpoint、MCP 整合等模組。目標是讓開發者不必在終端機分別操作各家 agent CLI,而是透過一個桌面 App 統一管理多個 coding agent 的會話與工作區。",
+      "highlights": [
+        "同時支援 Codex、Claude Code、Cursor、OpenCode 四種 AI 編碼代理,可透過 npx t3@latest 或原生桌面安裝包(winget/brew/AUR)使用",
+        "採用 Effect-TS 架構打造伺服器端(認證、Git 管理、checkpoint、MCP HTTP server 等),搭配 Electron 桌面殼層與 Expo 行動端",
+        "CI 涵蓋 typecheck、build、test、mobile native 靜態分析與 release smoke test,workflow 相當完整",
+        "幾乎每個原始碼檔案都有對應的 *.test.ts 單元測試,測試覆蓋率高",
+        "專案仍在極早期(README 明言『expect bugs』且暫不接受外部貢獻)"
+      ],
+      "use_cases": [
+        "想用同一個 GUI 同時管理多個 AI coding agent(Codex/Claude/Cursor/OpenCode)工作階段的開發者",
+        "需要遠端存取/同步 coding agent 工作區(desktop + relay + mobile)的團隊",
+        "想參考 Effect-TS 在真實大型 monorepo(認證、Git、MCP、checkpoint)中的實務用法"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 本身簡短,但另有 docs/ 目錄涵蓋快速開始、架構、provider 指南與維運說明;程式碼品質高,採嚴謹的 Effect-TS 型別化架構,幾乎每支原始檔都配有對應單元測試,CI 涵蓋 typecheck/build/test/mobile 靜態分析與 release smoke test,今日剛有新 push,開發活躍度極高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 中『若真的想貢獻』章節要求先安裝建置工具 vp,方式為 curl -fsSL https://vite.plus | bash(或 Windows 的 irm ... | iex),屬於未經雜湊驗證的 curl|bash 安裝模式,僅影響想從原始碼建置的貢獻者,不影響一般使用者透過 npx/安裝包使用",
+          "package.json 的 prepare 腳本會執行 effect-tsgo patch 與 vp config --no-agent,屬於內部建置工具設定,未發現對外部網路的可疑呼叫",
+          "未發現 preinstall/postinstall 生命週期腳本、base64/hex 大型內嵌 payload、可疑硬編碼 IP 或 typosquat 依賴名稱"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "出自 T3 團隊、工程品質扎實(高測試覆蓋率+完整 CI)的多代理 AI 編碼 GUI,雖仍處早期且暫不開放貢獻,但值得追蹤與試用。",
+      "_mode": "full"
     }
   },
   "nodejs/node": {
@@ -1025,6 +1261,38 @@
         118470,
         36
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "Node.js 官方原始碼庫,跨平台的 JavaScript 執行環境核心專案。",
+      "summary": "Node.js 是建構在 V8 引擎上的開源跨平台 JavaScript 執行環境,支援 Linux、macOS、Windows,是現今伺服器端 JavaScript 開發的基石。此 README 主要說明專案治理、版本發布策略(Current/LTS/Nightly)、二進位驗證與貢獻方式,而非教學文件。",
+      "category": "infra",
+      "highlights": [
+        "118K+ 星數、持續 20 多年活躍開發的重量級基礎設施專案,今日以 +36 星再度登上 trending",
+        "明確的 LTS/Current/Nightly 三軌發布模式,附語意化版本與 GPG 簽章驗證機制,適合企業導入評估",
+        "採開放治理模型(OpenJS Foundation 支持),TSC 與 Collaborator 名單公開透明,治理成熟度高",
+        "README 偏重專案治理與發布資訊,實際 API 使用教學需另外查閱 nodejs.org 官方文件"
+      ],
+      "use_cases": [
+        "作為伺服器端/CLI 工具/前端建置鏈的 JavaScript 執行環境基礎",
+        "評估是否採用特定 LTS 版本作為公司內部標準 runtime",
+        "研究大型開源專案的治理模式與發布流程作為參考範本"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "README 對治理、版本發布與二進位驗證說明完整清晰,但屬專案總覽性質,缺乏 API 使用範例;測試品質無法從 README 判斷,此為資源彙整類條目,測試不適用。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl 下載 keyring 並以 gpgv/shasum 驗證官方發布檔案的正規流程,屬安全良好實務,非可疑的 curl | bash 直接執行模式"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "Node.js 是 JavaScript 生態圈不可或缺的基礎設施,雖然今日上榜多為既有知名度延續,仍值得持續關注其版本發布節奏與治理動態。",
+      "_mode": "light"
     }
   },
   "pbakaus/impeccable": {
@@ -1087,6 +1355,37 @@
         6716,
         260
       ]
+    },
+    "last_analyzed": "2026-07-28",
+    "analysis": {
+      "one_liner": "跨平台(與 iOS 版互通)去中心化藍牙 Mesh + Nostr 雙傳輸聊天 App,無帳號無伺服器。",
+      "summary": "bitchat-android 是 permissionlesstech/bitchat 的 Android 實作,透過藍牙 LE Mesh 網路實現離線多跳訊息中繼,並在有網路時透過 Nostr relay 提供全球連線,兩者可自動切換與重試。核心賣點是完全去中心化(無帳號、無電話號碼、無中央伺服器),並以 Noise Protocol(X25519+ChaCha20-Poly1305)與 Argon2id/AES-256-GCM 提供端對端加密與頻道密碼保護。",
+      "category": "app",
+      "highlights": [
+        "雙傳輸架構:藍牙 LE Mesh(離線、最多 7 跳)+ Nostr relay(線上),並具備依 geohash 的地理頻道",
+        "加密紮實:Noise Protocol XX handshake 搭配 Ed25519 簽章身分、EncryptedSharedPreferences 存放私鑰,並支援 rekey 與緊急抹除(triple-tap wipe)",
+        "內建 Tor(Arti Rust bridge)提供匿名連網選項,並有 Wi-Fi Aware 高頻寬本地傳輸",
+        "測試覆蓋面廣,超過 60 個單元測試檔涵蓋協定、加密、mesh 路由與 UI 邏輯",
+        "App 內建自動更新機制會驗證 GitHub Release 的 SHA-256 檔案雜湊,而非盲目安裝下載的 APK"
+      ],
+      "use_cases": [
+        "無網路/救災或活動現場等場景下的離線群組通訊",
+        "對隱私與抗審查有需求、不想留下帳號紀錄的匿名通訊",
+        "研究藍牙 Mesh 路由、Noise Protocol 實作或 Nostr 協定整合的參考專案"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件方面 README 清楚說明架構與建置/測試指令,另外還有專為 AI agent 撰寫的 AGENTS.md 說明目錄與慣例,實屬少見的用心。測試方面涵蓋協定、加密、mesh 路由到 UI 工具函式,CI(GitHub Actions)會跑單元測試、lint 與 Debug/Release 雙變體組建,流程完整。專案在 2026-07-27 仍有 push,版本號穩定遞增(versionCode 36),且今日剛登上 trending 並持續攀升星數,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與測試覆蓋度在同類 Android 開源專案中屬上乘,加密與更新機制設計嚴謹,值得關注與學習其 Mesh/Noise Protocol 實作。",
+      "_mode": "full"
     }
   },
   "jenkinsci/jenkins": {

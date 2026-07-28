@@ -91,6 +91,25 @@ class SeenStore:
             return True
         return elapsed >= reanalyze_after_days
 
+    def trending_on(self, run_date: str) -> list[tuple[str, int, int]]:
+        """回傳指定日期在榜的 [(full_name, stars_total, stars_today)],供補跑歷史報告用。
+        依當日新增 star 數排序,近似當天的榜單順序。"""
+        rows = []
+        for full_name, entry in self._data.items():
+            hist = (entry.get("stars_history") or {}).get(run_date)
+            if isinstance(hist, list) and len(hist) == 2:
+                rows.append((full_name, int(hist[0]), int(hist[1])))
+        rows.sort(key=lambda x: -x[2])
+        return rows
+
+    def days_on_trending_at(self, full_name: str, run_date: str) -> int:
+        """該 repo 截至 run_date 為止的累計上榜天數(由歷史推算,不受今日狀態影響)。"""
+        entry = self._data.get(full_name)
+        if entry is None:
+            return 1
+        hist = entry.get("stars_history") or {}
+        return max(1, sum(1 for d in hist if d <= run_date))
+
     def analyzed_on(self, full_name: str) -> str:
         """回傳該 repo 最後一次成功分析的日期字串;沒分析過回傳空字串。"""
         entry = self._data.get(full_name)

@@ -90,6 +90,8 @@ def fetch_metadata(full_name: str, token: str | None, user_agent: str,
                     open_issues=data.get("open_issues_count") or 0,
                     default_branch=data.get("default_branch") or "main",
                     archived=bool(data.get("archived")),
+                    description=data.get("description") or "",
+                    language=data.get("language") or "",
                     fetched=True,
                 )
                 log.debug("metadata 取得成功:%s(stars=%d)", full_name, meta.stars)

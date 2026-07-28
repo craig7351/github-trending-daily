@@ -29,6 +29,8 @@ class RepoMeta:
     open_issues: int = 0
     default_branch: str = "main"
     archived: bool = False
+    description: str = ""
+    language: str = ""
     fetched: bool = False
 
 

@@ -159,8 +159,9 @@ def render_report(
     report_dir: Path,
     log: logging.Logger,
     total_scanned: int | None = None,
+    backfilled_on: str = "",
 ) -> Path:
-    """渲染完整每日報告,回傳報告檔路徑。"""
+    """渲染完整每日報告,回傳報告檔路徑。backfilled_on 非空時標注為事後補跑。"""
     report_dir.mkdir(parents=True, exist_ok=True)
     path = report_dir / f"{run_date}.md"
 
@@ -170,6 +171,12 @@ def render_report(
     light_n = len(success) - analyzed_n
 
     lines: list[str] = [f"# 📈 GitHub Trending 每日報告 — {run_date}", ""]
+    if backfilled_on:
+        lines += [
+            f"> ⏪ **事後補跑**(產生於 {backfilled_on})。榜單與 star 數為 {run_date} 當日紀錄,"
+            "但 AI 分析讀取的是專案在補跑當下的內容,可能與當日狀態略有出入。",
+            "",
+        ]
 
     lines += ["## 📊 總覽", ""]
     scanned = total_scanned if total_scanned is not None else len(results) + len(cached)
@@ -282,21 +289,15 @@ def update_index(
 
     marker = f"| [{run_date}]("
     replaced = any(line.startswith(marker) for line in lines)
-    lines = [line for line in lines if not line.startswith(marker)]
 
-    sep_idx = next(
-        (i for i, line in enumerate(lines) if line.strip().startswith("|---")), None
-    )
-    if sep_idx is None:
-        # 表頭遺失/格式異常:保留看起來像資料列的部分,整檔重建
-        rows = [line for line in lines if line.startswith("| [")]
-        content = _INDEX_HEADER + row + "\n"
-        if rows:
-            content += "\n".join(rows) + "\n"
+    # 依日期新到舊重排:補跑舊日期時才不會插在錯的位置
+    rows = [ln for ln in lines if ln.startswith("| [") and not ln.startswith(marker)]
+    rows.append(row)
+    rows.sort(key=lambda ln: ln[3:13], reverse=True)   # "| [YYYY-MM-DD](" 的日期段
+    content = _INDEX_HEADER + "\n".join(rows) + "\n"
+
+    if not any(ln.strip().startswith("|---") for ln in lines):
         log.warning("index.md 缺少表頭分隔線,已重建")
-    else:
-        lines.insert(sep_idx + 1, row)
-        content = "\n".join(lines) + "\n"
 
     with open(index, "w", encoding="utf-8", newline="\n") as f:
         f.write(content)

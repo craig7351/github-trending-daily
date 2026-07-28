@@ -33,6 +33,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--skip-claude", action="store_true", help="跳過 AI 分析(驗證 clone 與清理用)")
     p.add_argument("--date-override", default="", metavar="YYYY-MM-DD", help="覆寫執行日期(測試去重用)")
     p.add_argument("--force", default="", metavar="OWNER/REPO", help="強制重新分析指定 repo(須在今日榜上,不受數量上限限制)")
+    p.add_argument("--backfill", default="", metavar="YYYY-MM-DD",
+                   help="補跑歷史報告:榜單改由去重檔的 stars_history 重建,不抓 trending、不更新上榜天數")
     return p.parse_args(argv)
 
 
@@ -68,7 +70,7 @@ def run(argv: list[str] | None = None) -> int:
     if args.limit > 0:
         cfg.scan.max_repos = args.limit
 
-    run_date = args.date_override or datetime.now().strftime("%Y-%m-%d")
+    run_date = args.backfill or args.date_override or datetime.now().strftime("%Y-%m-%d")
     log = setup_logging(cfg.log_path, run_date, cfg.logging.level)
     prune_old_logs(cfg.log_path, cfg.logging.keep_days, log)
 
@@ -104,49 +106,79 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
     claude_exe = None if (args.skip_claude or args.dry_run) else resolve_claude(cfg, log)
     log.info("preflight:git=%s claude=%s", git_exe or "(找不到)", claude_exe or "(不使用)")
 
-    # --- 抓 trending(致命路徑;不覆寫同日既有的正常報告) ---
-    try:
-        repos = scrape_trending(cfg, log)
-    except TrendingFetchError as e:
-        log.critical("trending 抓取失敗:%s", e)
-        if not args.dry_run:
-            report_file = cfg.report_path / f"{run_date}.md"
-            if report_file.exists():
-                log.warning("今日報告已存在,保留不覆寫:%s", report_file)
-            else:
-                render_stub_report(run_date, str(e), cfg.report_path, log)
-                update_index(run_date, 0, 0, "—", cfg.report_path, log)
-        return EXIT_FATAL
-    log.info("抓到 %d 個上榜專案", len(repos))
-
-    # --- 去重與選擇 ---
     store = SeenStore(cfg.store_path, log)
     store.load()
     state["store"] = store
-    store.touch_all(repos, run_date)
+
+    if args.backfill:
+        # --- 補跑:榜單由歷史重建,不抓 trending、不 touch(否則會污染上榜天數) ---
+        rows = store.trending_on(run_date)
+        if not rows:
+            log.critical("去重檔中沒有 %s 的榜單記錄,無法補跑", run_date)
+            return EXIT_FATAL
+        repos = [
+            TrendingRepo(full_name=name, url=f"https://github.com/{name}",
+                         description="", language="",
+                         stars_total=total, stars_today=today, rank=i)
+            for i, (name, total, today) in enumerate(rows, start=1)
+        ]
+        log.info("補跑 %s:由歷史重建 %d 個上榜專案", run_date, len(repos))
+    else:
+        # --- 抓 trending(致命路徑;不覆寫同日既有的正常報告) ---
+        try:
+            repos = scrape_trending(cfg, log)
+        except TrendingFetchError as e:
+            log.critical("trending 抓取失敗:%s", e)
+            if not args.dry_run:
+                report_file = cfg.report_path / f"{run_date}.md"
+                if report_file.exists():
+                    log.warning("今日報告已存在,保留不覆寫:%s", report_file)
+                else:
+                    render_stub_report(run_date, str(e), cfg.report_path, log)
+                    update_index(run_date, 0, 0, "—", cfg.report_path, log)
+            return EXIT_FATAL
+        log.info("抓到 %d 個上榜專案", len(repos))
+        store.touch_all(repos, run_date)
+
+    def days_of(name: str) -> int:
+        return (store.days_on_trending_at(name, run_date) if args.backfill
+                else store.days_on_trending(name))
 
     selected: list[TrendingRepo] = []
     cached: list[CachedEntry] = []
     replayed: list[RepoResult] = []
     for r in repos:
+        prev = store.cached_analysis(r.full_name)
+        if args.backfill:
+            # 補跑:有快取就完整重現,沒有的才分析(上限內)
+            if prev:
+                replayed.append(RepoResult(
+                    repo=r,
+                    status="light" if prev.get("_mode") == "light" else "analyzed",
+                    analysis=prev,
+                    days_on_trending=days_of(r.full_name),
+                ))
+            elif len(selected) < cfg.scan.max_repos:
+                selected.append(r)
+            continue
+
         force_this = bool(args.force) and r.full_name.lower() == args.force.lower()
         needs = store.needs_analysis(r.full_name, run_date, cfg.dedup.reanalyze_after_days)
         if force_this or (needs and len(selected) < cfg.scan.max_repos):
             selected.append(r)
             continue
-        prev = store.cached_analysis(r.full_name)
         if prev and store.analyzed_on(r.full_name) == run_date:
             # 同日重跑:以快取完整重現分析區塊,報告內容不因重跑而降級
             replayed.append(RepoResult(
                 repo=r,
                 status="light" if prev.get("_mode") == "light" else "analyzed",
                 analysis=prev,
-                days_on_trending=store.days_on_trending(r.full_name),
+                days_on_trending=days_of(r.full_name),
             ))
         elif prev:
             cached.append(CachedEntry(
                 full_name=r.full_name, url=r.url,
-                days_on_trending=store.days_on_trending(r.full_name),
+                days_on_trending=days_of(r.full_name),
                 stars_today=r.stars_today,
                 one_liner=str(prev.get("one_liner", "")),
             ))
@@ -176,6 +208,7 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
 
     fresh: list[RepoResult] = []
     total_cost = 0.0
+    record_date = datetime.now().strftime("%Y-%m-%d") if args.backfill else run_date
     consecutive_systemic = 0    # 認證/額度類:整輪都會失敗,提早停止
     consecutive_any = 0         # 任何失敗:高門檻安全網,避免未知故障空轉整輪
     claude_dead = claude_exe is None
@@ -187,7 +220,11 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
         res = RepoResult(repo=r)
         try:
             res.meta = fetch_metadata(r.full_name, token, cfg.scan.user_agent, log)
-            res.days_on_trending = store.days_on_trending(r.full_name)
+            res.days_on_trending = days_of(r.full_name)
+            if not r.description:
+                r.description = res.meta.description   # 補跑時爬蟲資料不存在,用 API 的
+            if not r.language:
+                r.language = res.meta.language
             light, light_reason = classify_light(r, res.meta, cfg)
             log.info("[%d/%d] %s(%s)", len(fresh) + 1, len(selected), r.full_name,
                      f"輕量:{light_reason}" if light else "完整分析")
@@ -257,7 +294,8 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                 analysis["_mode"] = "light" if light else "full"
                 res.analysis = analysis
                 res.cost_usd = cost
-                store.record_analysis(r.full_name, run_date, analysis)
+                # 補跑時分析的是 repo 的「現況」,last_analyzed 記今天才誠實
+                store.record_analysis(r.full_name, record_date, analysis)
                 store.save()   # 增量存檔:中途被殺(排程 2 小時上限等)也不丟已花錢的結果
                 consecutive_systemic = 0
                 consecutive_any = 0
@@ -295,7 +333,8 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
     # --- 報告與收尾 ---
     results = fresh + replayed
     report_file = render_report(run_date, results, cached, total_cost,
-                                cfg.report_path, log, total_scanned=len(repos))
+                                cfg.report_path, log, total_scanned=len(repos),
+                                backfilled_on=record_date if args.backfill else "")
     ok_results = [x for x in results if x.status in ("analyzed", "light") and x.analysis]
     top = max(ok_results, key=lambda x: _safe_int(x.analysis.get("star_rating")), default=None)
     top_pick = (f"[{top.repo.full_name}]({top.repo.url})(★{_safe_int(top.analysis.get('star_rating'))})"
