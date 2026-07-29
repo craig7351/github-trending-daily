@@ -13,6 +13,7 @@ title: GitHub Trending 每日觀察
 
 | 日期 | 分析數 | 持續上榜 | 本日之星 |
 |---|---|---|---|
+| [2026-07-30](reports/2026-07-30.html) | 1 | 10 | [1jehuang/jcode](https://github.com/1jehuang/jcode)(★4) |
 | [2026-07-29](reports/2026-07-29.html) | 5 | 7 | [pascalorg/editor](https://github.com/pascalorg/editor)(★5) |
 | [2026-07-28](reports/2026-07-28.html) | 12 | 2 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review)(★5) |
 | [2026-07-27](reports/2026-07-27.html) | 17 | 0 | [permissionlesstech/bitchat-android](https://github.com/permissionlesstech/bitchat-android)(★5) |
