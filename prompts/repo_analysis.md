@@ -16,6 +16,18 @@ Analysis steps:
 4. Read install/build entry points if present: `setup.py`, `pyproject.toml`, `package.json` (pay special attention to `preinstall` / `postinstall` / `prepare` lifecycle scripts), `Makefile`, `install.sh`, `Dockerfile`.
 5. Sample 2-3 core source files to judge real code quality (not just the README).
 
+Security observations — this section is PUBLISHED on a public website, so wording matters:
+- Describe only what you actually observed in the code, factually and neutrally.
+  Good: 「安裝腳本 install.sh 會從外部網址下載並執行內容」。
+  Bad: 「這個專案可能是惡意軟體」/「作者意圖不明」。
+- NEVER assert or imply malicious intent, and never speculate about the maintainer's motives.
+  Common patterns (postinstall scripts, curl|bash installers) are widespread in legitimate
+  projects — report them as things a user should be aware of, not as accusations.
+- If you find nothing noteworthy, set `risk_level` to "none" and return an empty `findings`
+  array. Do not invent concerns to fill space.
+- `risk_level` reflects how much caution a user should exercise, NOT a verdict on the
+  project's trustworthiness. Reserve "high" for concrete, verifiable evidence of harm.
+
 Security checklist — actively look for:
 - install-time script execution (npm lifecycle scripts, arbitrary code in setup.py)
 - `curl | bash` / `iwr | iex` patterns in docs or scripts

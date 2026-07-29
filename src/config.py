@@ -52,6 +52,7 @@ class GithubCfg:
 class ReportCfg:
     dir: str = "reports"
     git_commit: bool = False
+    git_push: bool = False
 
 
 @dataclass

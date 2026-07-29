@@ -4,3 +4,8 @@ workspace/
 logs/
 data/*.tmp
 data/*.corrupt-*.json
+
+# Jekyll 本地建置產物
+_site/
+.jekyll-cache/
+Gemfile.lock

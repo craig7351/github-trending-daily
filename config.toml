@@ -32,7 +32,8 @@ use_gh_token = true                # 嘗試用 `gh auth token`,失敗改匿名(6
 
 [report]
 dir = "reports"
-git_commit = false                 # true = 每次跑完自動 git commit 報告與資料
+git_commit = true                  # 每次跑完自動 commit 報告、索引與去重資料
+git_push = true                    # commit 後自動 push,觸發 GitHub Pages 重新發布
 
 [logging]
 dir = "logs"

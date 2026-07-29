@@ -135,7 +135,7 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                     log.warning("今日報告已存在,保留不覆寫:%s", report_file)
                 else:
                     render_stub_report(run_date, str(e), cfg.report_path, log)
-                    update_index(run_date, 0, 0, "—", cfg.report_path, log)
+                    update_index(run_date, 0, 0, "—", cfg.root, log, cfg.report.dir)
             return EXIT_FATAL
         log.info("抓到 %d 個上榜專案", len(repos))
         store.touch_all(repos, run_date)
@@ -339,29 +339,59 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
     top = max(ok_results, key=lambda x: _safe_int(x.analysis.get("star_rating")), default=None)
     top_pick = (f"[{top.repo.full_name}]({top.repo.url})(★{_safe_int(top.analysis.get('star_rating'))})"
                 if top else "—")
-    update_index(run_date, len(ok_results), len(cached), top_pick, cfg.report_path, log)
+    update_index(run_date, len(ok_results), len(cached), top_pick, cfg.root, log, cfg.report.dir)
     store.save()
     cleanup_workspace(cfg.workspace_path, log)
 
     root = cfg.root
     if cfg.report.git_commit and (root / ".git").exists() and git_exe:
-        subprocess.run([git_exe, "add", "reports", "data"], cwd=root, capture_output=True,
-                       text=True, encoding="utf-8", errors="replace", timeout=60, check=False)
-        commit = subprocess.run([git_exe, "commit", "-m", f"report: {run_date}", "--no-gpg-sign"],
-                                cwd=root, capture_output=True, text=True,
-                                encoding="utf-8", errors="replace", timeout=60, check=False)
-        out = ((commit.stdout or "") + (commit.stderr or "")).strip()
-        if commit.returncode == 0:
-            log.info("報告已 git commit")
-        elif "nothing to commit" in out or "nothing added" in out:
-            log.info("git commit:沒有新變更")
-        else:
-            log.warning("git commit 失敗(exit %d):%s", commit.returncode, out[-300:])
+        _publish(root, run_date, git_exe, cfg, log)
 
     degraded = [x for x in fresh if x.status in ("metadata_only", "clone_failed", "error")]
     log.info("=== 完成:報告 %s|成功 %d、降級 %d、快取 %d|成本 $%.3f ===",
              report_file.name, len(ok_results), len(degraded), len(cached), total_cost)
     return EXIT_DEGRADED if degraded else EXIT_OK
+
+
+def _git(args: list[str], root: Path, git_exe: str, timeout: int = 60):
+    return subprocess.run([git_exe, *args], cwd=root, capture_output=True, text=True,
+                           encoding="utf-8", errors="replace", timeout=timeout, check=False)
+
+
+def _publish(root: Path, run_date: str, git_exe: str, cfg: Config, log) -> None:
+    """commit 當日產出,並(若設定且有 remote)push 上去讓 GitHub Pages 更新。
+
+    發布失敗只記警告 — 報告已寫入本機,不該讓推送問題影響整輪的結束狀態。"""
+    try:
+        _git(["add", cfg.report.dir, "data", "index.md"], root, git_exe)
+        commit = _git(["commit", "-m", f"report: {run_date}", "--no-gpg-sign"], root, git_exe)
+        out = ((commit.stdout or "") + (commit.stderr or "")).strip()
+        if commit.returncode == 0:
+            log.info("報告已 git commit")
+        elif "nothing to commit" in out or "nothing added" in out:
+            log.info("git commit:沒有新變更,略過 push")
+            return
+        else:
+            log.warning("git commit 失敗(exit %d):%s", commit.returncode, out[-300:])
+            return
+
+        if not cfg.report.git_push:
+            log.info("git_push 未開啟,僅本機 commit")
+            return
+        if not (_git(["remote"], root, git_exe).stdout or "").strip():
+            log.warning("尚未設定 git remote,略過 push")
+            return
+
+        push = _git(["push"], root, git_exe, timeout=180)
+        if push.returncode == 0:
+            log.info("已 push 到 remote,GitHub Pages 將自動更新")
+        else:
+            tail = ((push.stdout or "") + (push.stderr or "")).strip()[-300:]
+            log.warning("git push 失敗(exit %d):%s", push.returncode, tail)
+    except subprocess.TimeoutExpired as e:
+        log.warning("git 操作逾時:%s", e)
+    except Exception as e:
+        log.warning("發布流程發生錯誤(報告已存於本機):%s", e)
 
 
 def main() -> None:

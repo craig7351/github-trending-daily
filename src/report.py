@@ -25,10 +25,25 @@ _STATUS_REASONS = {
 }
 
 _INDEX_HEADER = (
-    "# GitHub Trending 報告索引\n\n"
+    "---\n"
+    "layout: default\n"
+    "title: GitHub Trending 每日觀察\n"
+    "---\n\n"
+    "# 📈 GitHub Trending 每日觀察\n\n"
+    "每天自動掃描 GitHub Trending,對新上榜的專案做 AI 靜態分析(只讀原始碼,不執行),"
+    "產出繁體中文摘要:這是什麼、亮點、適用場景、品質與安全觀察。\n\n"
+    "> ⚠️ **請注意**:所有分析內容皆由 AI 自動產生,**未經人工審閱或驗證**,"
+    "可能有誤解、過時或不完整之處。安全觀察僅為靜態閱讀後的提醒,"
+    "**不構成安全稽核結論**,也不代表專案存在惡意。請以各專案的官方文件與原始碼為準。\n\n"
+    "## 報告索引\n\n"
     "| 日期 | 分析數 | 持續上榜 | 本日之星 |\n"
     "|---|---|---|---|\n"
 )
+
+
+def _front_matter(title: str) -> list[str]:
+    """Jekyll 需要 front matter 才會把 .md 轉成 HTML。"""
+    return ["---", "layout: default", f'title: "{title}"', "---", ""]
 
 
 def _as_int(value, default: int = 0) -> int:
@@ -42,12 +57,37 @@ def _as_str(value, default: str = "") -> str:
     return value if isinstance(value, str) else default
 
 
-def _as_str_list(value) -> list[str]:
+# 報告會公開發布,而 AI 產生的文字與 GitHub 描述都源自不可信的第三方 repo。
+# 惡意 README 可能誘使模型輸出 HTML 或 Markdown 連結/圖片,渲染在站台上。
+# 以下把構成連結與標籤的字元換成 HTML 實體:視覺上一致,但失去語法作用。
+_UNSAFE_CHARS = {
+    "<": "&lt;",     # HTML 標籤、<script>
+    ">": "&gt;",     # 同上;行首的 > 也會變引言區塊
+    "[": "&#91;",    # Markdown 連結/圖片語法
+    "]": "&#93;",
+}
+
+
+def _safe(value, one_line: bool = True) -> str:
+    """淨化不可信來源的文字,供寫入公開 Markdown 用。"""
+    s = _as_str(value)
+    if one_line:
+        s = " ".join(s.split())      # 收掉換行,避免破壞區塊結構
+    for bad, good in _UNSAFE_CHARS.items():
+        s = s.replace(bad, good)
+    return s.strip()
+
+
+def _safe_list(value) -> list[str]:
+    """淨化字串陣列;空字串會被濾掉。"""
     if isinstance(value, str):
-        return [value.strip()] if value.strip() else []
-    if isinstance(value, (list, tuple)):
-        return [str(x).strip() for x in value if str(x).strip()]
-    return []
+        items = [value]
+    elif isinstance(value, (list, tuple)):
+        items = [str(x) for x in value]
+    else:
+        return []
+    out = [_safe(x) for x in items]
+    return [x for x in out if x]
 
 
 def _rating(r: RepoResult) -> int:
@@ -62,8 +102,8 @@ def _star_bar(rating: int) -> str:
 
 
 def _table_cell(text: str) -> str:
-    # 表格儲存格不能含管線與換行,否則整列會爛掉
-    return " ".join(_as_str(text).split()).replace("|", "\\|")
+    # 表格儲存格不能含管線,否則整列會爛掉(換行已由 _safe 收掉)
+    return _safe(text).replace("|", "\\|")
 
 
 def _short_reason(r: RepoResult) -> str:
@@ -74,7 +114,7 @@ def _short_reason(r: RepoResult) -> str:
 
 
 def _meta_line(r: RepoResult, category: str) -> str:
-    lang = r.repo.language or "—"
+    lang = _safe(r.repo.language) or "—"
     line = (
         f"🗣 {lang} | ⭐ {r.repo.stars_total:,}(今日 +{r.repo.stars_today:,})"
         f"| 分類:{category} | 上榜第 {r.days_on_trending} 天"
@@ -89,21 +129,22 @@ def _success_block(r: RepoResult) -> list[str]:
     if not isinstance(a, dict):
         raise ValueError("analysis 不是 dict")
 
-    lines = [f"### [{r.repo.full_name}]({r.repo.url}) {_star_bar(_rating(r))}", ""]
-    category = _as_str(a.get("category")).strip() or "未分類"
+    # repo 全名只允許 GitHub 的合法字元,才可安全放進 Markdown 連結
+    lines = [f"### [{_safe(r.repo.full_name)}]({r.repo.url}) {_star_bar(_rating(r))}", ""]
+    category = _safe(a.get("category")) or "未分類"
     lines += [_meta_line(r, category), ""]
 
-    summary = _as_str(a.get("summary")).strip()
+    summary = _safe(a.get("summary"))
     if summary:
         lines += [f"**這是什麼:** {summary}", ""]
 
-    highlights = _as_str_list(a.get("highlights"))
+    highlights = _safe_list(a.get("highlights"))
     if highlights:
         lines.append("**亮點:**")
         lines += [f"- {h}" for h in highlights]
         lines.append("")
 
-    use_cases = _as_str_list(a.get("use_cases"))
+    use_cases = _safe_list(a.get("use_cases"))
     if use_cases:
         lines.append("**適用場景:**")
         lines += [f"- {u}" for u in use_cases]
@@ -116,19 +157,19 @@ def _success_block(r: RepoResult) -> list[str]:
             f"測試 {_as_int(quality.get('tests'))}/5 · "
             f"活躍度 {_as_int(quality.get('activity'))}/5"
         )
-        comment = _as_str(quality.get("comment")).strip()
+        comment = _safe(quality.get("comment"))
         if comment:
             q_line += f" — {comment}"
         lines += [q_line, ""]
 
     security = a.get("security")
     if isinstance(security, dict):
-        level = _as_str(security.get("risk_level")).strip().lower()
-        lines.append(f"**安全:** {_RISK_LABELS.get(level, '❓ 未知')}")
-        lines += [f"- {f}" for f in _as_str_list(security.get("findings"))]
+        level = _safe(security.get("risk_level")).lower()
+        lines.append(f"**安全觀察:** {_RISK_LABELS.get(level, '❓ 未知')}")
+        lines += [f"- {f}" for f in _safe_list(security.get("findings"))]
         lines.append("")
 
-    verdict = _as_str(a.get("verdict")).strip()
+    verdict = _safe(a.get("verdict"))
     if verdict:
         lines += [f"**結論:** {verdict}", ""]
     return lines
@@ -136,18 +177,18 @@ def _success_block(r: RepoResult) -> list[str]:
 
 def _failure_block(r: RepoResult, reason: str | None = None) -> list[str]:
     stars = r.meta.stars if (r.meta.fetched and r.meta.stars) else r.repo.stars_total
-    lang = r.repo.language or "—"
+    lang = _safe(r.repo.language) or "—"
     lines = [
-        f"### [{r.repo.full_name}]({r.repo.url})",
+        f"### [{_safe(r.repo.full_name)}]({r.repo.url})",
         "",
         f"🗣 {lang} | ⭐ {stars:,}(今日 +{r.repo.stars_today:,})"
         f"| 上榜第 {r.days_on_trending} 天",
         "",
     ]
-    desc = (r.repo.description or "").strip()
+    desc = _safe(r.repo.description)   # GitHub 描述同樣是不可信輸入
     if desc:
         lines += [desc, ""]
-    lines += [f"_AI 分析未完成({reason or _short_reason(r)}),僅列基本資訊。_", ""]
+    lines += [f"_AI 分析未完成({_safe(reason or _short_reason(r))}),僅列基本資訊。_", ""]
     return lines
 
 
@@ -170,7 +211,9 @@ def render_report(
     analyzed_n = sum(1 for r in success if r.status == "analyzed")
     light_n = len(success) - analyzed_n
 
-    lines: list[str] = [f"# 📈 GitHub Trending 每日報告 — {run_date}", ""]
+    lines: list[str] = _front_matter(f"GitHub Trending 報告 — {run_date}")
+    lines += [f"# 📈 GitHub Trending 每日報告 — {run_date}", "",
+              "[← 回到報告索引](../)", ""]
     if backfilled_on:
         lines += [
             f"> ⏪ **事後補跑**(產生於 {backfilled_on})。榜單與 star 數為 {run_date} 當日紀錄,"
@@ -189,7 +232,7 @@ def render_report(
     cats: Counter[str] = Counter()
     for r in success:
         if isinstance(r.analysis, dict):
-            c = _as_str(r.analysis.get("category")).strip()
+            c = _safe(r.analysis.get("category"))
             if c:
                 cats[c] += 1
     if cats:
@@ -199,7 +242,7 @@ def render_report(
     top = [r for r in ranked if _rating(r) > 0][:3]
     if top:
         picks = "、".join(
-            f"[{r.repo.full_name}]({r.repo.url})(★{_rating(r)})" for r in top
+            f"[{_safe(r.repo.full_name)}]({r.repo.url})(★{_rating(r)})" for r in top
         )
         lines.append(f"- 推薦榜:{picks}")
     lines.append("")
@@ -229,15 +272,27 @@ def render_report(
         for c in cached:
             one = _table_cell(c.one_liner) or "—"
             lines.append(
-                f"| [{c.full_name}]({c.url}) | {c.days_on_trending} "
+                f"| [{_safe(c.full_name)}]({c.url}) | {c.days_on_trending} "
                 f"| +{c.stars_today:,} | {one} |"
             )
         lines.append("")
 
-    footer = "本報告由 AI 自動產生,分析對象為未經驗證的第三方程式碼,內容僅供參考"
+    lines += [
+        "---", "",
+        "### 免責聲明", "",
+        "本報告的所有分析內容由 AI 自動產生,**未經人工審閱或驗證**。分析方式為靜態閱讀"
+        "專案的 README 與原始碼(不執行任何程式碼),因此可能有誤解、過時或不完整之處。",
+        "",
+        "「安全觀察」一節僅記錄靜態閱讀時值得留意的地方(例如安裝腳本會執行外部指令),"
+        "**不構成安全稽核結論,亦不表示該專案存在惡意或缺陷**。評分與結論屬主觀判斷,"
+        "僅供快速篩選參考,實際評估請以各專案的官方文件與原始碼為準。",
+        "",
+        "報告內容擷取自第三方公開 repo,其著作權歸原作者所有。若您是專案維護者且認為"
+        "本頁描述有誤,歡迎開 issue 指正。",
+        "",
+    ]
     if total_cost_usd > 0:
-        footer += f";本次 API 成本約 ${total_cost_usd:.2f}"
-    lines += ["---", "", f"_{footer}。_", ""]
+        lines += [f"_本次分析 API 名目成本約 ${total_cost_usd:.2f}。_", ""]
 
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines))
@@ -254,9 +309,11 @@ def render_stub_report(
     path = report_dir / f"{run_date}.md"
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     content = (
+        "\n".join(_front_matter(f"GitHub Trending 報告 — {run_date}")) + "\n"
         f"# 📈 GitHub Trending 每日報告 — {run_date}\n\n"
+        "[← 回到報告索引](../)\n\n"
         "## ⚠️ 本日掃描失敗\n\n"
-        f"{reason}\n\n"
+        f"{_safe(reason)}\n\n"
         f"_產生時間:{ts};詳情請查看當日 log。_\n"
     )
     with open(path, "w", encoding="utf-8", newline="\n") as f:
@@ -270,13 +327,17 @@ def update_index(
     analyzed_count: int,
     cached_count: int,
     top_pick: str,
-    report_dir: Path,
+    index_dir: Path,
     log: logging.Logger,
+    report_subdir: str = "reports",
 ) -> None:
-    """在 index.md 表頭分隔線後插入(或取代)當日列,最新在最上面。"""
-    report_dir.mkdir(parents=True, exist_ok=True)
-    index = report_dir / "index.md"
-    row = f"| [{run_date}]({run_date}.md) | {analyzed_count} | {cached_count} | {top_pick} |"
+    """更新站台首頁 index.md 的報告索引表,依日期新到舊排序。
+
+    index_dir 為 repo 根目錄(GitHub Pages 的站台根),連結指向 Jekyll 轉出的 .html。"""
+    index_dir.mkdir(parents=True, exist_ok=True)
+    index = index_dir / "index.md"
+    link = f"{report_subdir}/{run_date}.html"
+    row = f"| [{run_date}]({link}) | {analyzed_count} | {cached_count} | {top_pick} |"
 
     if not index.exists():
         with open(index, "w", encoding="utf-8", newline="\n") as f:

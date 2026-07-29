@@ -1,0 +1,28 @@
+# GitHub Pages(Jekyll)設定
+title: GitHub Trending 每日觀察
+description: 每天自動掃描 GitHub Trending,以 AI 靜態分析產出繁體中文摘要報告
+lang: zh-TW
+
+theme: jekyll-theme-primer
+
+# 只發布站台需要的檔案,程式碼與資料不進 Jekyll 輸出
+include:
+  - index.md
+  - reports
+
+exclude:
+  - src
+  - prompts
+  - data
+  - logs
+  - workspace
+  - scripts
+  - "*.ps1"
+  - requirements.txt
+  - config.toml
+  - README.md
+  - CLAUDE.md
+  - __pycache__
+
+# 相對連結在 Pages 上正確解析
+relative_permalinks: false
