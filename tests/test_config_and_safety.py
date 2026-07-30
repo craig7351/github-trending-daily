@@ -61,3 +61,15 @@ def test_single_instance_lock_rejects_second_holder(tmp_path: Path) -> None:
         with pytest.raises(RunAlreadyActiveError):
             with single_instance_lock(lock_path):
                 pass
+
+
+def test_lock_file_pid_is_overwritten_not_appended(tmp_path: Path) -> None:
+    """鎖檔必須只留當前 PID。append 模式會讓每輪的 PID 一直累加。"""
+    import os
+
+    lock_path = tmp_path / "run.lock"
+    for _ in range(3):
+        with single_instance_lock(lock_path):
+            pass
+
+    assert lock_path.read_bytes() == str(os.getpid()).encode("ascii")

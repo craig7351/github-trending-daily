@@ -36,13 +36,18 @@ _BACK_LINK = '<a class="text-link" href="../">所有報告</a>'
 INDEX_DATA_REL = "data/report_index.json"
 
 
-def _front_matter(title: str, page_class: str = "") -> list[str]:
+def _yaml_quoted(value: str) -> str:
+    """Escape a value for a YAML double-quoted scalar.
+
+    HTML escaping is the wrong tool here: front matter is parsed as YAML, where
+    a bare ``"`` or ``\\`` would break the scalar (and ``&lt;`` needs no escaping).
+    """
+    return _as_str(value).replace("\\", "\\\\").replace('"', '\\"')
+
+
+def _front_matter(title: str) -> list[str]:
     """Return the Jekyll front matter required to render a Markdown file."""
-    lines = ["---", "layout: default", f'title: "{_safe(title)}"']
-    if page_class:
-        lines.append(f'page_class: "{_safe(page_class)}"')
-    lines += ["---", ""]
-    return lines
+    return ["---", "layout: default", f'title: "{_yaml_quoted(title)}"', "---", ""]
 
 
 def _as_int(value, default: int = 0) -> int:
@@ -320,7 +325,7 @@ def render_report(
     ranked = sorted(success, key=lambda item: (-_rating(item), -item.repo.stars_today))
     featured = ranked[0] if ranked and _rating(ranked[0]) > 0 else None
 
-    lines = _front_matter(f"GitHub Trending 報告 — {run_date}", "report-page")
+    lines = _front_matter(f"GitHub Trending 報告 — {run_date}")
     lines += [
         '<div class="report-shell">',
         '<nav class="breadcrumb" aria-label="麵包屑">',
@@ -514,7 +519,7 @@ def render_stub_report(
     report_dir.mkdir(parents=True, exist_ok=True)
     path = report_dir / f"{run_date}.md"
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    lines = _front_matter(f"GitHub Trending 報告 — {run_date}", "report-page")
+    lines = _front_matter(f"GitHub Trending 報告 — {run_date}")
     lines += [
         '<div class="report-shell">',
         '<nav class="breadcrumb" aria-label="麵包屑">',
@@ -561,7 +566,7 @@ def _top_text(row: dict) -> str:
 def _render_index(rows: list[dict], report_subdir: str) -> str:
     """Render the homepage from newest to oldest report index rows."""
     report_root = _html(report_subdir.strip("/")) or "reports"
-    out = _front_matter("GitHub Trending 每日觀察", "home-page")
+    out = _front_matter("GitHub Trending 每日觀察")
     out += [
         '<section class="home-intro">',
         '<div class="home-intro__copy">',

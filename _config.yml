@@ -3,7 +3,8 @@ title: GitHub Trending 每日觀察
 description: 每天自動掃描 GitHub Trending,以 AI 靜態分析產出繁體中文摘要報告
 lang: zh-TW
 
-theme: jekyll-theme-primer
+# 不設 theme:版面完全由本地 _layouts/default.html 與 assets/css/site.css 提供。
+# 原本掛的 jekyll-theme-primer 已被本地 layout 完全遮蓋、CSS 也沒載入,屬死相依。
 
 # 只發布站台需要的檔案,程式碼與資料不進 Jekyll 輸出
 include:

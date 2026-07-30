@@ -80,50 +80,58 @@ def single_instance_lock(path: Path) -> Iterator[None]:
     無法判斷真假的 stale PID file。
     """
     path.parent.mkdir(parents=True, exist_ok=True)
-    handle = open(path, "a+b")
+    # 一律用原生 fd 操作,不包 buffered IO:msvcrt.locking 鎖的是「當前檔案位置」
+    # 的那一個位元組,而緩衝物件的 seek 不保證同步底層 fd 的位置 —— 那會讓上鎖與
+    # 解鎖落在不同位元組,解鎖時拋 PermissionError。os.lseek 沒有這個歧義。
+    fd = os.open(path, os.O_RDWR | os.O_CREAT, 0o644)
+
+    def _rewind() -> None:
+        os.lseek(fd, 0, os.SEEK_SET)
+
+    def _busy(exc: OSError) -> RunAlreadyActiveError:
+        return RunAlreadyActiveError(f"已有另一個掃描程序正在執行（鎖檔：{path}）")
+
     try:
-        handle.seek(0)
-        if handle.read(1) == b"":
-            handle.seek(0)
-            handle.write(b"0")
-            handle.flush()
-        handle.seek(0)
+        if os.fstat(fd).st_size == 0:
+            os.write(fd, b"0")   # 鎖定第 0 個位元組,先確保它存在
+        _rewind()
     except OSError as e:
-        handle.close()
-        raise RunAlreadyActiveError(f"已有另一個掃描程序正在執行（鎖檔：{path}）") from e
+        os.close(fd)
+        raise _busy(e) from e
 
     try:
         if os.name == "nt":
             import msvcrt
 
-            msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            msvcrt.locking(fd, msvcrt.LK_NBLCK, 1)
         else:
             import fcntl
 
-            fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except OSError as e:
-        handle.close()
-        raise RunAlreadyActiveError(f"已有另一個掃描程序正在執行（鎖檔：{path}）") from e
+        os.close(fd)
+        raise _busy(e) from e
 
     try:
-        handle.seek(0)
-        handle.write(str(os.getpid()).encode("ascii"))
-        handle.truncate()
-        handle.flush()
+        # 只留當前 PID 作為診斷資訊(覆寫而非累加)
+        pid = str(os.getpid()).encode("ascii")
+        _rewind()
+        os.write(fd, pid)
+        os.truncate(fd, len(pid))
         yield
     finally:
         try:
-            handle.seek(0)
+            _rewind()
             if os.name == "nt":
                 import msvcrt
 
-                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+                msvcrt.locking(fd, msvcrt.LK_UNLCK, 1)
             else:
                 import fcntl
 
-                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+                fcntl.flock(fd, fcntl.LOCK_UN)
         finally:
-            handle.close()
+            os.close(fd)
 
 
 def _chmod_retry(func, path, _excinfo) -> None:

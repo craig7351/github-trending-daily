@@ -715,17 +715,46 @@ code {
   font-size: 0.76rem;
 }
 
-.risk-label--medium,
-.risk-label--high,
-.risk-label--unknown {
+/* Four distinct risk levels. Colour alone never carries the meaning: each
+   level also has its own glyph, and the text label sits beside the badge. */
+
+/* none — inherits the base green ✓ above. */
+
+.risk-label--low {
+  color: var(--muted-strong);
+}
+
+.risk-label--low::before {
+  content: "i";
+  background: var(--muted-strong);
+  font-style: italic;
+}
+
+.risk-label--medium {
   color: var(--amber);
 }
 
-.risk-label--medium::before,
-.risk-label--high::before,
-.risk-label--unknown::before {
+.risk-label--medium::before {
   content: "!";
   background: var(--amber);
+}
+
+.risk-label--high {
+  color: var(--red);
+}
+
+.risk-label--high::before {
+  content: "!";
+  background: var(--red);
+}
+
+.risk-label--unknown {
+  color: var(--muted);
+}
+
+.risk-label--unknown::before {
+  content: "?";
+  background: var(--muted);
 }
 
 .risk-findings {
@@ -1058,5 +1087,23 @@ code {
   .cached-row__name,
   .cached-row__summary {
     grid-column: 1 / -1;
+  }
+}
+
+/* Respect the OS "reduce motion" setting: drop the smooth anchor scrolling and
+   the hover transforms, but keep colour/border transitions, which do not move. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .text-link::after,
+  .report-row__arrow {
+    transition: none;
+  }
+
+  .text-link:hover::after,
+  .report-row:hover .report-row__arrow {
+    transform: none;
   }
 }

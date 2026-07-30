@@ -7,7 +7,7 @@ import pytest
 
 from scripts.build_index_data import rows_from_reports
 from src.models import CachedEntry, RepoResult, TrendingRepo
-from src.report import _render_index, _safe, render_report
+from src.report import _front_matter, _render_index, _safe, _yaml_quoted, render_report
 
 
 def _repo(name: str) -> TrendingRepo:
@@ -131,6 +131,30 @@ def test_untrusted_html_is_escaped_inside_report(tmp_path: Path) -> None:
     text = path.read_text(encoding="utf-8")
     assert '<img src=x onerror="alert(1)">' not in text
     assert "&lt;img src=x onerror=&quot;alert(1)&quot;&gt;" in text
+
+
+def test_front_matter_uses_yaml_escaping_not_html() -> None:
+    """front matter 是 YAML,雙引號與反斜線才是危險字元,< > 不需要跳脫。"""
+    assert _yaml_quoted('說 "你好" \\ 結束') == '說 \\"你好\\" \\\\ 結束'
+
+    lines = _front_matter('標題 "含引號"')
+    assert 'title: "標題 \\"含引號\\""' in lines
+    # page_class 沒有任何讀取端(layout 用自己的 body class),不應再寫入
+    assert not any("page_class" in line for line in lines)
+
+
+def test_risk_levels_each_have_distinct_styling() -> None:
+    """四個風險等級必須各有可辨識的樣式,否則「高度留意」會跟「中度留意」長得一樣。"""
+    css = (Path(__file__).resolve().parents[1] / "assets" / "css" / "site.css").read_text(
+        encoding="utf-8"
+    )
+    for level in ("low", "medium", "high", "unknown"):
+        assert f".risk-label--{level} {{" in css, f"缺少 .risk-label--{level} 的樣式"
+        assert f".risk-label--{level}::before {{" in css, f"缺少 --{level} 的圖示"
+    # high 應該用紅色而非與 medium 共用琥珀色
+    assert "var(--red)" in css
+    # 尊重系統的減少動態設定
+    assert "@media (prefers-reduced-motion: reduce)" in css
 
 
 def test_homepage_uses_new_design_and_escapes_index_data() -> None:
