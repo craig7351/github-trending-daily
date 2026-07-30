@@ -12,7 +12,7 @@ depth = 1
 blob_limit = "200k"                # git clone --filter=blob:limit=200k
 timeout_sec = 180
 max_repo_mb = 300                  # API size 超過此值改走輕量分析(不 clone)
-workspace_dir = "workspace"
+workspace_dir = "workspace"              # 必須是專案根目錄下的子目錄
 
 [analysis]
 model = "sonnet"                   # claude CLI 的 --model

@@ -4,6 +4,7 @@ workspace/
 logs/
 data/*.tmp
 data/*.corrupt-*.json
+.github-star.lock
 
 # Jekyll 本地建置產物
 _site/

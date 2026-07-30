@@ -24,6 +24,7 @@ _STATUS_REASONS = {
     "metadata_only": "分析未執行或失敗",
     "clone_failed": "clone 失敗",
     "error": "發生未預期錯誤",
+    "deferred": "超過本次分析數量上限",
 }
 
 # 首頁樣式。訪客最想要的是「最新那份報告」,所以最上方放一張整塊可點的大卡片;
@@ -176,7 +177,8 @@ def _meta_line(r: RepoResult, category: str) -> str:
     lang = _safe(r.repo.language) or "—"
     line = (
         f"🗣 {lang} | ⭐ {r.repo.stars_total:,}(今日 +{r.repo.stars_today:,})"
-        f"| 分類:{category} | 上榜第 {r.days_on_trending} 天"
+        f"| 分類:{category} | 連續 {r.days_on_trending} 天"
+        f" · 累計 {r.total_days_on_trending} 天"
     )
     if r.status == "light":
         line += " |(輕量分析)"
@@ -241,7 +243,7 @@ def _failure_block(r: RepoResult, reason: str | None = None) -> list[str]:
         f"### [{_safe(r.repo.full_name)}]({r.repo.url})",
         "",
         f"🗣 {lang} | ⭐ {stars:,}(今日 +{r.repo.stars_today:,})"
-        f"| 上榜第 {r.days_on_trending} 天",
+        f"| 連續 {r.days_on_trending} 天 · 累計 {r.total_days_on_trending} 天",
         "",
     ]
     desc = _safe(r.repo.description)   # GitHub 描述同樣是不可信輸入
@@ -266,7 +268,13 @@ def render_report(
     path = report_dir / f"{run_date}.md"
 
     success = [r for r in results if r.status in _SUCCESS_STATUSES]
-    failed = [r for r in results if r.status not in _SUCCESS_STATUSES]
+    deferred = [r for r in results if r.status == "deferred"]
+    failed = [
+        r for r in results
+        if r.status not in _SUCCESS_STATUSES and r.status != "deferred"
+    ]
+    fresh_success = [r for r in success if not r.from_cache]
+    replayed_success = [r for r in success if r.from_cache]
     analyzed_n = sum(1 for r in success if r.status == "analyzed")
     light_n = len(success) - analyzed_n
 
@@ -282,10 +290,18 @@ def render_report(
 
     lines += ["## 📊 總覽", ""]
     scanned = total_scanned if total_scanned is not None else len(results) + len(cached)
+    represented = len(results) + len(cached)
+    if scanned != represented:
+        raise ValueError(
+            f"報告數量不守恆:掃描 {scanned}，但分類後只有 {represented}"
+        )
     lines.append(f"- 掃描到 {scanned} 個上榜專案")
     lines.append(f"- 本日完整分析 {analyzed_n} 個")
     lines.append(f"- 輕量分析 {light_n} 個")
+    lines.append(f"- 本次新完成 {len(fresh_success)} 個")
+    lines.append(f"- 同日分析保留 {len(replayed_success)} 個")
     lines.append(f"- 持續上榜 {len(cached)} 個")
+    lines.append(f"- 待分析 {len(deferred)} 個")
     lines.append(f"- 降級/失敗 {len(failed)} 個")
 
     cats: Counter[str] = Counter()
@@ -306,10 +322,10 @@ def render_report(
         lines.append(f"- 推薦榜:{picks}")
     lines.append("")
 
-    lines += ["## 🆕 今日新進榜", ""]
-    if not results:
-        lines += ["本日無新進榜專案。", ""]
-    for r in success:
+    lines += ["## 🆕 本次完成分析", ""]
+    if not fresh_success:
+        lines += ["本次沒有新完成的分析。", ""]
+    for r in fresh_success:
         try:
             lines += _success_block(r)
         except Exception as e:
@@ -318,21 +334,43 @@ def render_report(
                 lines += _failure_block(r, reason="分析結果格式異常")
             except Exception as e2:
                 log.error("渲染 %s 基本資訊也失敗,略過:%s", r.repo.full_name, e2)
+
+    if replayed_success:
+        cache_heading = "## ♻️ 快取分析結果" if backfilled_on else "## ♻️ 今日稍早已分析"
+        lines += [cache_heading, ""]
+        for r in replayed_success:
+            try:
+                lines += _success_block(r)
+            except Exception as e:
+                log.warning("渲染 %s 快取分析失敗,降級為基本資訊:%s", r.repo.full_name, e)
+                lines += _failure_block(r, reason="快取分析格式異常")
+
+    if failed:
+        lines += ["## ⚠️ 降級或失敗", ""]
     for r in failed:
         try:
             lines += _failure_block(r)
         except Exception as e:
             log.error("渲染 %s 基本資訊失敗,略過:%s", r.repo.full_name, e)
 
+    if deferred:
+        lines += ["## ⏳ 尚待分析", "",
+                  "以下專案超過本次分析數量上限，已保留基本資訊；若後續仍在榜會再嘗試。", ""]
+        for r in deferred:
+            try:
+                lines += _failure_block(r)
+            except Exception as e:
+                log.error("渲染 %s 待分析資訊失敗,略過:%s", r.repo.full_name, e)
+
     if cached:
         lines += ["## 🔁 持續上榜", ""]
-        lines.append("| 專案 | 連續天數 | 今日新增 | 一句話 |")
-        lines.append("|---|---|---|---|")
+        lines.append("| 專案 | 連續天數 | 累計天數 | 今日新增 | 一句話 |")
+        lines.append("|---|---:|---:|---:|---|")
         for c in cached:
             one = _table_cell(c.one_liner) or "—"
             lines.append(
                 f"| [{_safe(c.full_name)}]({c.url}) | {c.days_on_trending} "
-                f"| +{c.stars_today:,} | {one} |"
+                f"| {c.total_days_on_trending} | +{c.stars_today:,} | {one} |"
             )
         lines.append("")
 
@@ -355,8 +393,8 @@ def render_report(
 
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines))
-    log.info("報告已寫入:%s(成功 %d、失敗 %d、持續上榜 %d)",
-             path, len(success), len(failed), len(cached))
+    log.info("報告已寫入:%s(成功 %d、失敗 %d、持續上榜 %d、待分析 %d)",
+             path, len(success), len(failed), len(cached), len(deferred))
     return path
 
 
@@ -418,6 +456,8 @@ def _render_index(rows: list[dict], report_subdir: str) -> str:
         meta_parts = [f"分析 {_as_int(latest.get('analyzed'))} 個新專案"]
         if _as_int(latest.get("cached")):
             meta_parts.append(f"{_as_int(latest.get('cached'))} 個持續上榜")
+        if _as_int(latest.get("deferred")):
+            meta_parts.append(f"{_as_int(latest.get('deferred'))} 個待分析")
         top = _top_text(latest)
         if top:
             meta_parts.append(top)
@@ -447,6 +487,10 @@ def _render_index(rows: list[dict], report_subdir: str) -> str:
                 f'<li><a class="gt-card" href="{report_subdir}/{date}.html">',
                 f'  <span class="gt-date">{date}</span>',
                 f'  <span class="gt-count">分析 {_as_int(row.get("analyzed"))} 個</span>',
+                (
+                    f'  <span class="gt-count">待分析 {_as_int(row.get("deferred"))} 個</span>'
+                    if _as_int(row.get("deferred")) else ""
+                ),
                 f'  <span class="gt-top">{top}</span>',
                 '  <span class="gt-arrow">閱讀 →</span>',
                 "</a></li>",
@@ -465,6 +509,7 @@ def update_index(
     index_dir: Path,
     log: logging.Logger,
     report_subdir: str = "reports",
+    deferred_count: int = 0,
 ) -> None:
     """更新站台首頁 index.md。以 data/report_index.json 為資料來源,每次完整重繪。
 
@@ -479,6 +524,7 @@ def update_index(
         "date": run_date,
         "analyzed": analyzed_count,
         "cached": cached_count,
+        "deferred": deferred_count,
         "top_name": top[0] if top else "",
         "top_rating": top[1] if top else 0,
     })

@@ -8,8 +8,19 @@ import shutil
 import stat
 import subprocess
 import sys
+from contextlib import contextmanager
 from datetime import datetime, timedelta
 from pathlib import Path
+from typing import Iterator
+
+
+def configure_utf8_stdio() -> None:
+    """讓 Windows 直接執行 CLI（包含 --help）時也固定輸出 UTF-8。"""
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
 
 
 def setup_logging(log_dir: Path, run_date: str, level: str = "INFO") -> logging.Logger:
@@ -17,11 +28,7 @@ def setup_logging(log_dir: Path, run_date: str, level: str = "INFO") -> logging.
     log_dir.mkdir(parents=True, exist_ok=True)
 
     # 排程環境下 stdout 可能是 cp950;能 reconfigure 就強制 UTF-8
-    for stream in (sys.stdout, sys.stderr):
-        try:
-            stream.reconfigure(encoding="utf-8", errors="replace")
-        except (AttributeError, ValueError):
-            pass
+    configure_utf8_stdio()
 
     log = logging.getLogger("bot")
     log.setLevel(logging.DEBUG)
@@ -59,6 +66,64 @@ def atomic_write_json(path: Path, obj) -> None:
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
     os.replace(tmp, path)
+
+
+class RunAlreadyActiveError(RuntimeError):
+    """同一份專案已有另一個掃描程序持有執行鎖。"""
+
+
+@contextmanager
+def single_instance_lock(path: Path) -> Iterator[None]:
+    """取得跨平台非阻塞檔案鎖；行程結束時由 OS 自動釋放。
+
+    鎖檔本身會保留，只有鎖定狀態代表是否正在執行，避免 crash 後留下
+    無法判斷真假的 stale PID file。
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    handle = open(path, "a+b")
+    try:
+        handle.seek(0)
+        if handle.read(1) == b"":
+            handle.seek(0)
+            handle.write(b"0")
+            handle.flush()
+        handle.seek(0)
+    except OSError as e:
+        handle.close()
+        raise RunAlreadyActiveError(f"已有另一個掃描程序正在執行（鎖檔：{path}）") from e
+
+    try:
+        if os.name == "nt":
+            import msvcrt
+
+            msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError as e:
+        handle.close()
+        raise RunAlreadyActiveError(f"已有另一個掃描程序正在執行（鎖檔：{path}）") from e
+
+    try:
+        handle.seek(0)
+        handle.write(str(os.getpid()).encode("ascii"))
+        handle.truncate()
+        handle.flush()
+        yield
+    finally:
+        try:
+            handle.seek(0)
+            if os.name == "nt":
+                import msvcrt
+
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                import fcntl
+
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+        finally:
+            handle.close()
 
 
 def _chmod_retry(func, path, _excinfo) -> None:

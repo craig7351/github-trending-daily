@@ -8,7 +8,7 @@ import subprocess
 import sys
 import time
 import traceback
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 from .analyzer import build_prompt, is_systemic_error, resolve_claude, run_claude_analysis
@@ -16,25 +16,52 @@ from .cloner import cleanup_workspace, clone_dir_for, remove_clone, shallow_clon
 from .config import Config, load_config
 from .github_meta import fetch_metadata, fetch_readme, get_github_token
 from .models import CachedEntry, RepoMeta, RepoResult, TrendingRepo
-from .report import render_report, render_stub_report, update_index
+from .report import INDEX_DATA_REL, render_report, render_stub_report, update_index
 from .store import SeenStore
 from .trending import TrendingFetchError, scrape_trending
-from .util import prune_old_logs, setup_logging
+from .util import (
+    RunAlreadyActiveError,
+    configure_utf8_stdio,
+    prune_old_logs,
+    setup_logging,
+    single_instance_lock,
+)
 
 EXIT_OK = 0
 EXIT_DEGRADED = 1
 EXIT_FATAL = 2
 
 
+def _iso_date(value: str) -> str:
+    try:
+        return date.fromisoformat(value).isoformat()
+    except ValueError as e:
+        raise argparse.ArgumentTypeError("日期必須是有效的 YYYY-MM-DD") from e
+
+
+def _positive_limit(value: str) -> int:
+    try:
+        parsed = int(value)
+    except ValueError as e:
+        raise argparse.ArgumentTypeError("數量上限必須是正整數") from e
+    if parsed <= 0:
+        raise argparse.ArgumentTypeError("數量上限必須是正整數")
+    return parsed
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(prog="github-star", description="GitHub Trending 每日掃描機器人")
-    p.add_argument("--limit", type=int, default=0, help="覆寫 config 的 max_repos")
+    p.add_argument("--limit", type=_positive_limit, default=0, help="覆寫 config 的 max_repos")
     p.add_argument("--dry-run", action="store_true", help="只抓 trending 並印出選擇結果,不 clone、不分析、不寫檔")
     p.add_argument("--skip-claude", action="store_true", help="跳過 AI 分析(驗證 clone 與清理用)")
-    p.add_argument("--date-override", default="", metavar="YYYY-MM-DD", help="覆寫執行日期(測試去重用)")
+    p.add_argument("--no-publish", action="store_true",
+                   help="仍產生本機報告，但不 git commit/push")
     p.add_argument("--force", default="", metavar="OWNER/REPO", help="強制重新分析指定 repo(須在今日榜上,不受數量上限限制)")
-    p.add_argument("--backfill", default="", metavar="YYYY-MM-DD",
-                   help="補跑歷史報告:榜單改由去重檔的 stars_history 重建,不抓 trending、不更新上榜天數")
+    dates = p.add_mutually_exclusive_group()
+    dates.add_argument("--date-override", default=None, type=_iso_date, metavar="YYYY-MM-DD",
+                       help="覆寫執行日期(測試去重用)")
+    dates.add_argument("--backfill", default=None, type=_iso_date, metavar="YYYY-MM-DD",
+                       help="補跑歷史報告:榜單改由去重檔的 stars_history 重建,不抓 trending、不更新上榜天數")
     return p.parse_args(argv)
 
 
@@ -60,6 +87,7 @@ def classify_light(repo: TrendingRepo, meta: RepoMeta, cfg: Config) -> tuple[boo
 
 
 def run(argv: list[str] | None = None) -> int:
+    configure_utf8_stdio()
     args = parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     try:
@@ -77,7 +105,11 @@ def run(argv: list[str] | None = None) -> int:
     # 頂層防護:任何未預期錯誤 → 搶救 store、補 stub 報告、exit 2(與「降級」的 exit 1 區分)
     state: dict = {}
     try:
-        return _run(args, cfg, run_date, log, state)
+        with single_instance_lock(root / ".github-star.lock"):
+            return _run(args, cfg, run_date, log, state)
+    except RunAlreadyActiveError as e:
+        log.error("%s", e)
+        return EXIT_FATAL
     except Exception:
         log.critical("未預期的致命錯誤:\n%s", traceback.format_exc())
         store = state.get("store")
@@ -99,7 +131,8 @@ def run(argv: list[str] | None = None) -> int:
 def _run(args: argparse.Namespace, cfg: Config, run_date: str,
          log, state: dict) -> int:
     log.info("=== GitHub Trending 掃描開始(%s)===", run_date)
-    log.info("設定:max_repos=%d dry_run=%s skip_claude=%s", cfg.scan.max_repos, args.dry_run, args.skip_claude)
+    log.info("設定:max_repos=%d dry_run=%s skip_claude=%s no_publish=%s",
+             cfg.scan.max_repos, args.dry_run, args.skip_claude, args.no_publish)
 
     # --- preflight:工具解析(失敗走降級,不中斷) ---
     git_exe = shutil.which("git")
@@ -139,14 +172,32 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
             return EXIT_FATAL
         log.info("抓到 %d 個上榜專案", len(repos))
         store.touch_all(repos, run_date)
+        # 同日重跑採聯集語意：保留今天稍早看過、但此刻已掉出榜單的項目，
+        # 避免小範圍測試或榜單變動把既有日報縮水。
+        current_names = {r.full_name for r in repos}
+        restored = 0
+        for prior in store.repos_on(run_date):
+            if prior.full_name in current_names:
+                continue
+            prior.rank = len(repos) + 1
+            repos.append(prior)
+            current_names.add(prior.full_name)
+            restored += 1
+        if restored:
+            log.info("同日重跑:從當日快照補回 %d 個先前上榜專案", restored)
 
     def days_of(name: str) -> int:
         return (store.days_on_trending_at(name, run_date) if args.backfill
                 else store.days_on_trending(name))
 
+    def total_days_of(name: str) -> int:
+        return (store.total_days_on_trending_at(name, run_date) if args.backfill
+                else store.total_days_on_trending(name))
+
     selected: list[TrendingRepo] = []
     cached: list[CachedEntry] = []
     replayed: list[RepoResult] = []
+    deferred: list[RepoResult] = []
     for r in repos:
         prev = store.cached_analysis(r.full_name)
         if args.backfill:
@@ -157,9 +208,19 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                     status="light" if prev.get("_mode") == "light" else "analyzed",
                     analysis=prev,
                     days_on_trending=days_of(r.full_name),
+                    total_days_on_trending=total_days_of(r.full_name),
+                    from_cache=True,
                 ))
             elif len(selected) < cfg.scan.max_repos:
                 selected.append(r)
+            else:
+                deferred.append(RepoResult(
+                    repo=r,
+                    status="deferred",
+                    error_msg="超過本次分析數量上限",
+                    days_on_trending=days_of(r.full_name),
+                    total_days_on_trending=total_days_of(r.full_name),
+                ))
             continue
 
         force_this = bool(args.force) and r.full_name.lower() == args.force.lower()
@@ -174,18 +235,29 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                 status="light" if prev.get("_mode") == "light" else "analyzed",
                 analysis=prev,
                 days_on_trending=days_of(r.full_name),
+                total_days_on_trending=total_days_of(r.full_name),
+                from_cache=True,
+            ))
+        elif needs:
+            deferred.append(RepoResult(
+                repo=r,
+                status="deferred",
+                error_msg="超過本次分析數量上限",
+                days_on_trending=days_of(r.full_name),
+                total_days_on_trending=total_days_of(r.full_name),
             ))
         elif prev:
             cached.append(CachedEntry(
                 full_name=r.full_name, url=r.url,
                 days_on_trending=days_of(r.full_name),
+                total_days_on_trending=total_days_of(r.full_name),
                 stars_today=r.stars_today,
                 one_liner=str(prev.get("one_liner", "")),
             ))
     if args.force and not any(x.full_name.lower() == args.force.lower() for x in repos):
         log.warning("--force 指定的 %s 不在今日榜上,已忽略", args.force)
-    log.info("本日分析 %d 個、同日快取重現 %d 個、持續上榜 %d 個",
-             len(selected), len(replayed), len(cached))
+    log.info("本日分析 %d 個、同日快取重現 %d 個、持續上榜 %d 個、待分析 %d 個",
+             len(selected), len(replayed), len(cached), len(deferred))
 
     if args.dry_run:
         log.info("--dry-run 選擇結果:")
@@ -195,6 +267,8 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
             log.info("  [同日重現] %-43s ★%s", x.repo.full_name, _safe_int((x.analysis or {}).get("star_rating")))
         for c in cached:
             log.info("  [快取] %-48s 第 %d 天", c.full_name, c.days_on_trending)
+        for r in deferred:
+            log.info("  [待分析] %-44s 超過本次上限", r.repo.full_name)
         return EXIT_OK
 
     # --- 分析資源準備 ---
@@ -202,7 +276,7 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
     schema_str = (cfg.prompts_path / "analysis_schema.json").read_text(encoding="utf-8")
     full_template = (cfg.prompts_path / "repo_analysis.md").read_text(encoding="utf-8")
     light_template = (cfg.prompts_path / "repo_analysis_light.md").read_text(encoding="utf-8")
-    cleanup_workspace(cfg.workspace_path, log)
+    cleanup_workspace(cfg.workspace_path, cfg.root, log)
     empty_dir = cfg.workspace_path / "_empty"   # 輕量分析的工作目錄(空,避免存取專案檔案)
     empty_dir.mkdir(parents=True, exist_ok=True)
 
@@ -221,6 +295,7 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
         try:
             res.meta = fetch_metadata(r.full_name, token, cfg.scan.user_agent, log)
             res.days_on_trending = days_of(r.full_name)
+            res.total_days_on_trending = total_days_of(r.full_name)
             if not r.description:
                 r.description = res.meta.description   # 補跑時爬蟲資料不存在,用 API 的
             if not r.language:
@@ -331,7 +406,7 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                 fresh.append(res)
 
     # --- 報告與收尾 ---
-    results = fresh + replayed
+    results = fresh + replayed + deferred
     report_file = render_report(run_date, results, cached, total_cost,
                                 cfg.report_path, log, total_scanned=len(repos),
                                 backfilled_on=record_date if args.backfill else "")
@@ -339,12 +414,17 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
     best = max(ok_results, key=lambda x: _safe_int(x.analysis.get("star_rating")), default=None)
     top = ((best.repo.full_name, _safe_int(best.analysis.get("star_rating")))
            if best else None)
-    update_index(run_date, len(ok_results), len(cached), top, cfg.root, log, cfg.report.dir)
+    update_index(
+        run_date, len(ok_results), len(cached),
+        top, cfg.root, log, cfg.report.dir, deferred_count=len(deferred),
+    )
     store.save()
-    cleanup_workspace(cfg.workspace_path, log)
+    cleanup_workspace(cfg.workspace_path, cfg.root, log)
 
     root = cfg.root
-    if cfg.report.git_commit and (root / ".git").exists() and git_exe:
+    if args.no_publish:
+        log.info("--no-publish:略過 git commit/push")
+    elif cfg.report.git_commit and (root / ".git").exists() and git_exe:
         _publish(root, run_date, git_exe, cfg, log)
 
     degraded = [x for x in fresh if x.status in ("metadata_only", "clone_failed", "error")]
@@ -363,8 +443,25 @@ def _publish(root: Path, run_date: str, git_exe: str, cfg: Config, log) -> None:
 
     發布失敗只記警告 — 報告已寫入本機,不該讓推送問題影響整輪的結束狀態。"""
     try:
-        _git(["add", cfg.report.dir, "data", "index.md"], root, git_exe)
-        commit = _git(["commit", "-m", f"report: {run_date}", "--no-gpg-sign"], root, git_exe)
+        generated_paths = [
+            str(Path(cfg.report.dir) / f"{run_date}.md"),
+            cfg.dedup.store_path,
+            INDEX_DATA_REL,
+            "index.md",
+        ]
+        add = _git(["add", "--", *generated_paths], root, git_exe)
+        if add.returncode != 0:
+            out = ((add.stdout or "") + (add.stderr or "")).strip()
+            log.warning("git add 失敗(exit %d):%s", add.returncode, out[-300:])
+            return
+        # --only 限定這次自動產物，避免把使用者原本 staged 的其他變更一起提交。
+        commit = _git(
+            [
+                "commit", "--only", "-m", f"report: {run_date}", "--no-gpg-sign",
+                "--", *generated_paths,
+            ],
+            root, git_exe,
+        )
         out = ((commit.stdout or "") + (commit.stderr or "")).strip()
         if commit.returncode == 0:
             log.info("報告已 git commit")

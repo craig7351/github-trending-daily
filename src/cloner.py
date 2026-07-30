@@ -75,8 +75,15 @@ def remove_clone(dest: Path, log: logging.Logger) -> None:
     log.debug("移除 clone %s:%s", dest, "成功" if ok else "失敗")
 
 
-def cleanup_workspace(workspace: Path, log: logging.Logger) -> None:
-    """確保 workspace 存在並清空其內容(保留 workspace 本身)。"""
+def cleanup_workspace(workspace: Path, root: Path, log: logging.Logger) -> None:
+    """安全清空專案內的 workspace 內容（保留 workspace 本身）。"""
+    resolved_root = root.resolve()
+    resolved_workspace = workspace.resolve()
+    if resolved_workspace == resolved_root or not resolved_workspace.is_relative_to(resolved_root):
+        raise ValueError(
+            f"拒絕清理不安全的 workspace：{resolved_workspace}（root={resolved_root}）"
+        )
+    workspace = resolved_workspace
     workspace.mkdir(parents=True, exist_ok=True)
     try:
         children = list(workspace.iterdir())

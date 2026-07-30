@@ -123,4 +123,43 @@ def load_config(root: Path) -> Config:
         for key, value in data.items():
             if hasattr(obj, key):
                 setattr(obj, key, value)
+    _validate_config(cfg)
     return cfg
+
+
+def _validate_config(cfg: Config) -> None:
+    """提早拒絕危險路徑與明顯錯誤的設定，避免進入執行期才失敗。"""
+    if cfg.scan.trending_since not in {"daily", "weekly", "monthly"}:
+        raise ValueError("scan.trending_since 必須是 daily、weekly 或 monthly")
+
+    positive_ints = {
+        "scan.max_repos": cfg.scan.max_repos,
+        "clone.depth": cfg.clone.depth,
+        "clone.timeout_sec": cfg.clone.timeout_sec,
+        "clone.max_repo_mb": cfg.clone.max_repo_mb,
+        "analysis.timeout_sec": cfg.analysis.timeout_sec,
+        "analysis.consecutive_failure_stop": cfg.analysis.consecutive_failure_stop,
+        "analysis.readme_max_chars": cfg.analysis.readme_max_chars,
+    }
+    for name, value in positive_ints.items():
+        if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
+            raise ValueError(f"{name} 必須是正整數")
+    if not isinstance(cfg.dedup.reanalyze_after_days, int) or cfg.dedup.reanalyze_after_days < 0:
+        raise ValueError("dedup.reanalyze_after_days 必須是非負整數")
+    if not isinstance(cfg.logging.keep_days, int) or cfg.logging.keep_days < 0:
+        raise ValueError("logging.keep_days 必須是非負整數")
+    if not isinstance(cfg.analysis.max_budget_usd, (int, float)) or cfg.analysis.max_budget_usd <= 0:
+        raise ValueError("analysis.max_budget_usd 必須大於 0")
+    if not isinstance(cfg.analysis.light_patterns, list) or not all(
+        isinstance(x, str) and x for x in cfg.analysis.light_patterns
+    ):
+        raise ValueError("analysis.light_patterns 必須是非空字串陣列")
+
+    if not isinstance(cfg.clone.workspace_dir, str) or not cfg.clone.workspace_dir.strip():
+        raise ValueError("clone.workspace_dir 不可為空")
+    root = cfg.root.resolve()
+    workspace = cfg.workspace_path.resolve()
+    if workspace == root or not workspace.is_relative_to(root):
+        raise ValueError(
+            f"clone.workspace_dir 必須是專案根目錄下的子目錄，收到：{workspace}"
+        )

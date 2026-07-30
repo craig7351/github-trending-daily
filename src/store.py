@@ -32,6 +32,7 @@ class SeenStore:
             if not isinstance(data, dict):
                 raise json.JSONDecodeError("頂層不是 dict", "", 0)
             self._data = data
+            self._migrate_trending_counters()
             self.log.info("已載入去重檔:%d 筆記錄", len(self._data))
         except (json.JSONDecodeError, UnicodeDecodeError) as e:
             self._data = {}
@@ -46,25 +47,109 @@ class SeenStore:
             self._data = {}
             self.log.error("無法讀取去重檔 %s:%s,以空白狀態重新開始", self.path, e)
 
+    @staticmethod
+    def _consecutive_days(history: dict, through_date: str | None = None) -> int:
+        """計算截至指定日期、以最後一筆為終點的連續日數。"""
+        cutoff: date | None = None
+        if through_date:
+            try:
+                cutoff = date.fromisoformat(through_date)
+            except ValueError:
+                return 1
+
+        dates: list[date] = []
+        for raw in history:
+            try:
+                parsed = date.fromisoformat(raw)
+            except (TypeError, ValueError):
+                continue
+            if cutoff is None or parsed <= cutoff:
+                dates.append(parsed)
+        if not dates:
+            return 1
+
+        dates = sorted(set(dates))
+        streak = 1
+        for i in range(len(dates) - 1, 0, -1):
+            if (dates[i] - dates[i - 1]).days != 1:
+                break
+            streak += 1
+        return streak
+
+    def _migrate_trending_counters(self) -> None:
+        """將舊版累計欄位遷移成「連續」與「累計」兩個計數。"""
+        for entry in self._data.values():
+            if not isinstance(entry, dict):
+                continue
+            history = entry.get("stars_history") or {}
+            old_total = entry.get("total_days_on_trending", entry.get("days_on_trending", 1))
+            try:
+                old_total = max(1, int(old_total))
+            except (TypeError, ValueError):
+                old_total = max(1, len(history))
+            consecutive = self._consecutive_days(history)
+            entry["total_days_on_trending"] = old_total
+            entry["consecutive_days_on_trending"] = consecutive
+            # 保留舊欄位，避免既有資料消費者中斷；語意改為真正的連續天數。
+            entry["days_on_trending"] = consecutive
+
     def touch_all(self, repos: list[TrendingRepo], run_date: str) -> None:
         for repo in repos:
             entry = self._data.get(repo.full_name)
-            if entry is None:
+            is_new = entry is None
+            if is_new:
                 entry = {
                     "first_seen": run_date,
                     "last_seen": run_date,
                     "days_on_trending": 1,
+                    "consecutive_days_on_trending": 1,
+                    "total_days_on_trending": 1,
                     "stars_history": {},
                 }
                 self._data[repo.full_name] = entry
                 self.log.debug("新上榜:%s", repo.full_name)
-            elif entry.get("last_seen") != run_date:
-                entry["days_on_trending"] = entry.get("days_on_trending", 1) + 1
-                entry["last_seen"] = run_date
-                self.log.debug("持續上榜:%s(第 %d 天)", repo.full_name, entry["days_on_trending"])
 
             history = entry.setdefault("stars_history", {})
-            history[run_date] = [repo.stars_total, repo.stars_today]
+            already_recorded = run_date in history
+            try:
+                delta = (
+                    date.fromisoformat(run_date) - date.fromisoformat(entry.get("last_seen"))
+                ).days
+            except (TypeError, ValueError):
+                delta = 1
+
+            if not is_new and not already_recorded:
+                try:
+                    total = int(entry.get(
+                        "total_days_on_trending", entry.get("days_on_trending", 1)
+                    )) + 1
+                except (TypeError, ValueError):
+                    total = max(1, len(history) + 1)
+                entry["total_days_on_trending"] = total
+            if not is_new and delta > 0:
+                try:
+                    previous_streak = int(entry.get("consecutive_days_on_trending", 1))
+                except (TypeError, ValueError):
+                    previous_streak = 1
+                consecutive = previous_streak + 1 if delta == 1 else 1
+                entry["consecutive_days_on_trending"] = consecutive
+                entry["days_on_trending"] = consecutive
+                entry["last_seen"] = run_date
+                self.log.debug(
+                    "持續上榜:%s(連續 %d 天、累計 %d 天)",
+                    repo.full_name,
+                    consecutive,
+                    entry["total_days_on_trending"],
+                )
+
+            # 前兩格維持舊格式；後三格保存同日重跑合併所需的榜單快照。
+            history[run_date] = [
+                repo.stars_total,
+                repo.stars_today,
+                repo.rank,
+                repo.description,
+                repo.language,
+            ]
             if len(history) > _STARS_HISTORY_MAX:
                 # ISO 日期字串的字典序即時間序,砍掉最舊的
                 for old in sorted(history)[: len(history) - _STARS_HISTORY_MAX]:
@@ -75,7 +160,13 @@ class SeenStore:
         entry = self._data.get(full_name)
         if entry is None:
             return 1
-        return entry.get("days_on_trending", 1)
+        return int(entry.get("consecutive_days_on_trending", entry.get("days_on_trending", 1)))
+
+    def total_days_on_trending(self, full_name: str) -> int:
+        entry = self._data.get(full_name)
+        if entry is None:
+            return 1
+        return int(entry.get("total_days_on_trending", entry.get("days_on_trending", 1)))
 
     def needs_analysis(self, full_name: str, run_date: str, reanalyze_after_days: int) -> bool:
         entry = self._data.get(full_name)
@@ -97,13 +188,43 @@ class SeenStore:
         rows = []
         for full_name, entry in self._data.items():
             hist = (entry.get("stars_history") or {}).get(run_date)
-            if isinstance(hist, list) and len(hist) == 2:
+            if isinstance(hist, list) and len(hist) >= 2:
                 rows.append((full_name, int(hist[0]), int(hist[1])))
         rows.sort(key=lambda x: -x[2])
         return rows
 
+    def repos_on(self, run_date: str) -> list[TrendingRepo]:
+        """以當日快照重建 repo，供同日重跑合併先前看過的榜單項目。"""
+        repos: list[TrendingRepo] = []
+        for full_name, entry in self._data.items():
+            hist = (entry.get("stars_history") or {}).get(run_date)
+            if not isinstance(hist, list) or len(hist) < 2:
+                continue
+            try:
+                rank = int(hist[2]) if len(hist) > 2 else 0
+            except (TypeError, ValueError):
+                rank = 0
+            repos.append(TrendingRepo(
+                full_name=full_name,
+                url=f"https://github.com/{full_name}",
+                description=str(hist[3]) if len(hist) > 3 else "",
+                language=str(hist[4]) if len(hist) > 4 else "",
+                stars_total=int(hist[0]),
+                stars_today=int(hist[1]),
+                rank=rank,
+            ))
+        repos.sort(key=lambda r: (r.rank <= 0, r.rank if r.rank > 0 else -r.stars_today))
+        return repos
+
     def days_on_trending_at(self, full_name: str, run_date: str) -> int:
-        """該 repo 截至 run_date 為止的累計上榜天數(由歷史推算,不受今日狀態影響)。"""
+        """該 repo 截至 run_date 的連續上榜天數。"""
+        entry = self._data.get(full_name)
+        if entry is None:
+            return 1
+        hist = entry.get("stars_history") or {}
+        return self._consecutive_days(hist, through_date=run_date)
+
+    def total_days_on_trending_at(self, full_name: str, run_date: str) -> int:
         entry = self._data.get(full_name)
         if entry is None:
             return 1
@@ -131,6 +252,8 @@ class SeenStore:
                 "first_seen": run_date,
                 "last_seen": run_date,
                 "days_on_trending": 1,
+                "consecutive_days_on_trending": 1,
+                "total_days_on_trending": 1,
                 "stars_history": {},
             }
             self._data[full_name] = entry

@@ -44,6 +44,7 @@ class RepoResult:
       metadata_only — claude 失敗或被跳過,只有 metadata
       clone_failed  — clone 失敗(且無法降級成 light)
       error         — 未預期例外
+      deferred      — 超過本次分析數量上限,留待後續分析
     """
     repo: TrendingRepo
     meta: RepoMeta = field(default_factory=RepoMeta)
@@ -53,6 +54,8 @@ class RepoResult:
     cost_usd: float = 0.0
     duration_sec: float = 0.0
     days_on_trending: int = 1
+    total_days_on_trending: int = 1
+    from_cache: bool = False
 
 
 @dataclass
@@ -61,5 +64,6 @@ class CachedEntry:
     full_name: str
     url: str
     days_on_trending: int
+    total_days_on_trending: int
     stars_today: int
     one_liner: str          # 取自快取分析的 one_liner,可能為空字串
