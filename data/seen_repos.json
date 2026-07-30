@@ -1188,7 +1188,7 @@
         636
       ],
       "2026-07-30": [
-        235576,
+        235987,
         857
       ]
     },
@@ -1414,8 +1414,8 @@
   },
   "jenkinsci/jenkins": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-07-29",
-    "days_on_trending": 3,
+    "last_seen": "2026-07-30",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-27": [
         25706,
@@ -1427,6 +1427,10 @@
       ],
       "2026-07-29": [
         26069,
+        180
+      ],
+      "2026-07-30": [
+        26207,
         180
       ]
     },
@@ -1811,12 +1815,16 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-07-28",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-30",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-28": [
         54252,
         240
+      ],
+      "2026-07-30": [
+        55228,
+        377
       ]
     },
     "last_analyzed": "2026-07-28",
@@ -1877,7 +1885,7 @@
         341
       ],
       "2026-07-30": [
-        19570,
+        19872,
         1022
       ]
     },
@@ -1928,7 +1936,7 @@
         227
       ],
       "2026-07-30": [
-        7862,
+        8225,
         827
       ]
     },
@@ -2022,7 +2030,7 @@
         309
       ],
       "2026-07-30": [
-        10391,
+        10712,
         945
       ]
     },
@@ -2290,7 +2298,7 @@
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
-        17911,
+        18340,
         97
       ]
     },
@@ -2413,6 +2421,115 @@
       "star_rating": 4,
       "verdict": "技術上罕見且紮實的逆向工程研究,誠實揭露限制而非誇大宣傳,值得對 Apple Silicon 底層硬體有興趣的工程師關注,但別期待它是可直接用於生產的訓練框架。",
       "_mode": "full"
+    }
+  },
+  "microsoft/AI-For-Beginners": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-30": [
+        53305,
+        115
+      ]
+    },
+    "last_analyzed": "2026-07-30",
+    "analysis": {
+      "one_liner": "微軟出品的12週、24課AI入門課程,涵蓋符號式AI到深度學習",
+      "summary": "AI-For-Beginners是微軟釋出的教育性課程,以Jupyter Notebook形式教授AI基礎概念,涵蓋知識表示、神經網路、CNN、RNN、GAN、NLP與電腦視覺等主題,搭配TensorFlow與PyTorch實作範例。內容以課程、測驗、實作Lab呈現,並提供超過50種語言的自動翻譯版本,適合零基礎到入門程度的學習者系統性建立AI知識框架。",
+      "category": "learning-resource",
+      "highlights": [
+        "微軟官方維護,MIT授權,12週24課完整課程架構",
+        "涵蓋符號式AI、神經網路、CNN、RNN、GAN、NLP等廣泛主題",
+        "支援TensorFlow與PyTorch雙框架教學",
+        "提供50種以上語言自動翻譯,含繁體中文台灣版",
+        "整合Binder、Gitter與Discord社群資源,方便線上互動與提問"
+      ],
+      "use_cases": [
+        "AI與ML初學者建立系統性知識框架的自學教材",
+        "大學課程或企業內訓的教學大綱參考",
+        "作為awesome list或學習路線圖中的入門推薦資源",
+        "配合Microsoft Learn學習路徑做延伸學習"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README結構完整、課程大綱清晰,且最近仍有更新,目前在GitHub trending上升中,顯示社群關注度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "微軟官方且內容扎實的AI入門教材,適合收錄進學習資源清單,但屬於教育性質而非生產工具,實務工程師可視需求選讀。",
+      "_mode": "light"
+    }
+  },
+  "WhiskeySockets/Baileys": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-30": [
+        10328,
+        12
+      ]
+    }
+  },
+  "dotnet/aspnetcore": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-30": [
+        38248,
+        5
+      ]
+    }
+  },
+  "microsoft/PowerToys": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-30": [
+        136932,
+        68
+      ]
+    }
+  },
+  "ansible/ansible": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-30": [
+        69755,
+        20
+      ]
+    }
+  },
+  "ChromeDevTools/chrome-devtools-mcp": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-30": [
+        47885,
+        73
+      ]
+    }
+  },
+  "agavra/tuicr": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "days_on_trending": 1,
+    "stars_history": {
+      "2026-07-30": [
+        1687,
+        338
+      ]
     }
   }
 }

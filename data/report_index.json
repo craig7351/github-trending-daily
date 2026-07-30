@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-07-30",
+    "analyzed": 2,
+    "cached": 6,
+    "top_name": "microsoft/AI-For-Beginners",
+    "top_rating": 4
+  },
+  {
+    "date": "2026-07-29",
+    "analyzed": 5,
+    "cached": 7,
+    "top_name": "pascalorg/editor",
+    "top_rating": 5
+  },
+  {
+    "date": "2026-07-28",
+    "analyzed": 12,
+    "cached": 2,
+    "top_name": "alibaba/open-code-review",
+    "top_rating": 5
+  },
+  {
+    "date": "2026-07-27",
+    "analyzed": 17,
+    "cached": 0,
+    "top_name": "permissionlesstech/bitchat-android",
+    "top_rating": 5
+  },
+  {
+    "date": "2026-07-26",
+    "analyzed": 18,
+    "cached": 0,
+    "top_name": "anthropics/claude-cookbooks",
+    "top_rating": 5
+  },
+  {
+    "date": "2026-07-25",
+    "analyzed": 16,
+    "cached": 0,
+    "top_name": "block/buzz",
+    "top_rating": 5
+  }
+]
