@@ -1,12 +1,13 @@
-"""從既有的 index.md 表格(或報告檔)建立 data/report_index.json,並重繪首頁。
+"""Build data/report_index.json and index.md from existing report files.
 
-首頁改為以 JSON 當資料來源後,需要一次性把舊的 Markdown 表格資料轉過去。
-可重複執行:已有 JSON 時只重繪首頁,不動資料。
+The parser supports both the current semantic HTML reports and legacy Markdown
+reports so redesigning the site does not invalidate its history.
 
-用法:python scripts/build_index_data.py
+Usage: python scripts/build_index_data.py
 """
 from __future__ import annotations
 
+import html
 import logging
 import re
 import sys
@@ -18,64 +19,100 @@ sys.path.insert(0, str(ROOT))
 from src.report import INDEX_DATA_REL, _load_index_rows, _render_index  # noqa: E402
 from src.util import atomic_write_json  # noqa: E402
 
-# | [2026-07-30](reports/2026-07-30.html) | 7 | 10 | [owner/repo](https://...)(★4) |
 DATE_CELL_RE = re.compile(r"\[(\d{4}-\d{2}-\d{2})\]")
 LINK_TEXT_RE = re.compile(r"\[([^\]]+)\]")
 STARS_RE = re.compile(r"★(\d)")
 
+HTML_STATS_RE = re.compile(r'<section class="report-stats"[^>]*>')
+DATA_ATTR_RE = re.compile(r'data-([a-z-]+)="(\d+)"')
+HTML_REPO_RE = re.compile(
+    r'<article class="[^"]*\brepo-article\b[^"]*"[^>]*'
+    r'data-repo="([^"]+)"[^>]*data-rating="(\d+)"',
+)
+LEGACY_REPO_RE = re.compile(
+    r"(?m)^### \[([^\]]+)\]\(https://github\.com/[^)]+\)\s*([★☆]*)"
+)
+LEGACY_FULL_RE = re.compile(r"(?m)^- 本日完整分析 (\d+) 個")
+LEGACY_LIGHT_RE = re.compile(r"(?m)^- 輕量分析 (\d+) 個")
+LEGACY_CACHED_RE = re.compile(r"(?m)^- 持續上榜 (\d+) 個")
+LEGACY_DEFERRED_RE = re.compile(r"(?m)^- 待分析 (\d+) 個")
+
 
 def rows_from_index_md(index: Path) -> list[dict]:
-    """逐欄解析表格列;整條 regex 容易被可選群組與全角括號絆倒,切欄位穩定得多。"""
+    """Read the old Markdown-table homepage format during migration."""
     rows: list[dict] = []
     for line in index.read_text(encoding="utf-8").splitlines():
         if not line.startswith("| ["):
             continue
-        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
         if len(cells) < 4:
             continue
-        date_m = DATE_CELL_RE.search(cells[0])
-        if not date_m:
+        date_match = DATE_CELL_RE.search(cells[0])
+        if not date_match:
             continue
-        name_m = LINK_TEXT_RE.search(cells[3])
-        stars_m = STARS_RE.search(cells[3])
+        name_match = LINK_TEXT_RE.search(cells[3])
+        stars_match = STARS_RE.search(cells[3])
         rows.append({
-            "date": date_m.group(1),
+            "date": date_match.group(1),
             "analyzed": int(cells[1]) if cells[1].isdigit() else 0,
             "cached": int(cells[2]) if cells[2].isdigit() else 0,
             "deferred": 0,
-            "top_name": name_m.group(1) if name_m else "",
-            "top_rating": int(stars_m.group(1)) if stars_m else 0,
+            "top_name": name_match.group(1) if name_match else "",
+            "top_rating": int(stars_match.group(1)) if stars_match else 0,
         })
     return rows
 
 
+def _row_from_html(path: Path, text: str) -> dict | None:
+    stats_match = HTML_STATS_RE.search(text)
+    if not stats_match:
+        return None
+    stats = {
+        key: int(value)
+        for key, value in DATA_ATTR_RE.findall(stats_match.group(0))
+    }
+    repos = [
+        (html.unescape(name), int(rating))
+        for name, rating in HTML_REPO_RE.findall(text)
+    ]
+    best = max(repos, key=lambda item: item[1], default=None)
+    return {
+        "date": path.stem,
+        "analyzed": stats.get("analyzed", 0),
+        "cached": stats.get("cached", 0),
+        "deferred": stats.get("deferred", 0),
+        "top_name": best[0] if best and best[1] else "",
+        "top_rating": best[1] if best else 0,
+    }
+
+
+def _row_from_legacy_markdown(path: Path, text: str) -> dict:
+    repos = LEGACY_REPO_RE.findall(text)
+    best = max(repos, key=lambda item: item[1].count("★"), default=None)
+    full_match = LEGACY_FULL_RE.search(text)
+    light_match = LEGACY_LIGHT_RE.search(text)
+    cached_match = LEGACY_CACHED_RE.search(text)
+    deferred_match = LEGACY_DEFERRED_RE.search(text)
+    return {
+        "date": path.stem,
+        "analyzed": (
+            (int(full_match.group(1)) if full_match else 0)
+            + (int(light_match.group(1)) if light_match else 0)
+        ),
+        "cached": int(cached_match.group(1)) if cached_match else 0,
+        "deferred": int(deferred_match.group(1)) if deferred_match else 0,
+        "top_name": best[0] if best and "★" in best[1] else "",
+        "top_rating": best[1].count("★") if best else 0,
+    }
+
+
 def rows_from_reports(reports: Path) -> list[dict]:
-    """退路:index.md 不可用時,由報告檔本身推導。"""
-    block = re.compile(r"(?m)^### \[([^\]]+)\]\(https://github\.com/[^)]+\)\s*(★*)")
-    full_count = re.compile(r"(?m)^- 本日完整分析 (\d+) 個$")
-    light_count = re.compile(r"(?m)^- 輕量分析 (\d+) 個$")
-    cached_count = re.compile(r"(?m)^- 持續上榜 (\d+) 個$")
-    deferred_count = re.compile(r"(?m)^- 待分析 (\d+) 個$")
-    rows = []
-    for path in sorted(reports.glob("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].md")):
+    """Reconstruct homepage rows from current or historical report pages."""
+    rows: list[dict] = []
+    pattern = "[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].md"
+    for path in sorted(reports.glob(pattern)):
         text = path.read_text(encoding="utf-8")
-        blocks = block.findall(text)
-        best = max(blocks, key=lambda b: len(b[1]), default=None)
-        full_m = full_count.search(text)
-        light_m = light_count.search(text)
-        cached_m = cached_count.search(text)
-        deferred_m = deferred_count.search(text)
-        rows.append({
-            "date": path.stem,
-            "analyzed": (
-                (int(full_m.group(1)) if full_m else 0)
-                + (int(light_m.group(1)) if light_m else 0)
-            ),
-            "cached": int(cached_m.group(1)) if cached_m else 0,
-            "deferred": int(deferred_m.group(1)) if deferred_m else 0,
-            "top_name": best[0] if best and best[1] else "",
-            "top_rating": len(best[1]) if best else 0,
-        })
+        rows.append(_row_from_html(path, text) or _row_from_legacy_markdown(path, text))
     return rows
 
 
@@ -85,32 +122,35 @@ def main() -> int:
 
     data_file = ROOT / INDEX_DATA_REL
     rows = _load_index_rows(data_file, log)
-    source = "既有 JSON"
+    source = "現有 JSON"
 
     if not rows:
         index = ROOT / "index.md"
         if index.exists():
             rows = rows_from_index_md(index)
-            source = "index.md 表格"
+            source = "舊版 index.md"
         if not rows:
             rows = rows_from_reports(ROOT / "reports")
-            source = "報告檔推導"
+            source = "歷史報告"
 
     if not rows:
-        print("找不到任何報告資料", file=sys.stderr)
+        print("找不到可建立索引的報告資料。", file=sys.stderr)
         return 1
 
-    rows.sort(key=lambda r: str(r.get("date", "")), reverse=True)
+    rows.sort(key=lambda row: str(row.get("date", "")), reverse=True)
     atomic_write_json(data_file, rows)
-    (ROOT / "index.md").write_text(_render_index(rows, "reports"),
-                                   encoding="utf-8", newline="\n")
+    (ROOT / "index.md").write_text(
+        _render_index(rows, "reports"), encoding="utf-8", newline="\n"
+    )
 
-    print(f"資料來源:{source}")
-    for r in rows:
-        print(f"  {r['date']}  分析 {r['analyzed']:>2}  持續 {r['cached']:>2}  "
-              f"待分析 {r.get('deferred', 0):>2}  "
-              f"之星 {r['top_name'] or '—'} ★{r['top_rating']}")
-    print(f"\n已寫入 {INDEX_DATA_REL} 與 index.md(共 {len(rows)} 份)")
+    print(f"資料來源：{source}")
+    for row in rows:
+        print(
+            f"  {row['date']}  分析 {row['analyzed']:>2}  "
+            f"持續 {row['cached']:>2}  待分析 {row.get('deferred', 0):>2}  "
+            f"精選 {row['top_name'] or '—'} ★{row['top_rating']}"
+        )
+    print(f"\n已更新 {INDEX_DATA_REL} 與 index.md（共 {len(rows)} 份）")
     return 0
 
 

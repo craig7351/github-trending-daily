@@ -26,12 +26,12 @@ def _repo(name: str, rank: int) -> TrendingRepo:
 
 def _analysis() -> dict:
     return {
-        "one_liner": "一句話",
-        "summary": "摘要",
+        "one_liner": "一句話摘要",
+        "summary": "專案摘要",
         "category": "devtool",
-        "highlights": ["亮點"],
-        "use_cases": ["用途"],
-        "quality": {"docs": 4, "tests": 4, "activity": 4, "comment": "品質良好"},
+        "highlights": ["主要亮點"],
+        "use_cases": ["適用場景"],
+        "quality": {"docs": 4, "tests": 4, "activity": 4, "comment": "品質穩定"},
         "security": {"risk_level": "none", "findings": []},
         "star_rating": 4,
         "verdict": "值得關注",
@@ -63,7 +63,8 @@ def test_limit_keeps_deferred_and_same_day_replayed_repos(
     monkeypatch.setattr(main_module, "scrape_trending", lambda _cfg, _log: current)
     monkeypatch.setattr(main_module.shutil, "which", lambda _name: None)
     monkeypatch.setattr(
-        main_module, "fetch_metadata",
+        main_module,
+        "fetch_metadata",
         lambda *_args, **_kwargs: RepoMeta(fetched=False),
     )
     monkeypatch.setattr(main_module, "get_github_token", lambda *_args: None)
@@ -85,9 +86,11 @@ def test_limit_keeps_deferred_and_same_day_replayed_repos(
     text = (cfg.report_path / "2026-07-30.md").read_text(encoding="utf-8")
     for name in ("owner/new-one", "owner/new-two", "owner/old"):
         assert name in text
-    assert "- 掃描到 3 個上榜專案" in text
-    assert "- 同日分析保留 1 個" in text
-    assert "- 待分析 1 個" in text
+    assert 'data-scanned="3"' in text
+    assert 'data-replayed="1"' in text
+    assert 'data-deferred="1"' in text
+    assert "今日稍早已分析" in text
+    assert "尚待分析" in text
 
 
 def test_publish_commits_only_generated_paths(tmp_path: Path, monkeypatch) -> None:

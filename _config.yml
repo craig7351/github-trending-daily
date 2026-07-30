@@ -19,6 +19,8 @@ exclude:
   - scripts
   - "*.ps1"
   - requirements.txt
+  - requirements-dev.txt
+  - tests
   - config.toml
   - README.md
   - CLAUDE.md

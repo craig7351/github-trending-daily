@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-TW' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f8f9fb">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body class="{% if page.url contains '/reports/' %}report-route{% else %}home-route{% endif %}">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="GitHub Trending 每日觀察首頁">
+          <span class="site-brand__mark" aria-hidden="true">↗</span>
+          <span>GitHub Trending 每日觀察</span>
+        </a>
+        <nav class="site-nav" aria-label="主要導覽">
+          <a href="{{ '/' | relative_url }}#reports">每日報告</a>
+          <a href="{{ '/' | relative_url }}#about">關於</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span>GitHub Trending 每日觀察</span>
+        <span>AI 產生內容，僅供快速篩選參考</span>
+      </div>
+    </footer>
+  </body>
+</html>
