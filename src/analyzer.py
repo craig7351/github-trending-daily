@@ -254,11 +254,31 @@ def _invoke(
     return (payload, cost, "")
 
 
+# 模型偶爾會把結構化輸出的外框標記寫進字串欄位裡(實測見過 summary 結尾
+# 吞進 "</summary>\n<parameter name=\"category\">app")。那是解析殘渣不是內容,
+# 會一路帶進報告與快取,所以在取用時就切掉。
+_SCAFFOLD_RE = re.compile(
+    r"\s*</?(?:summary|parameter|invoke|function_calls|antml:[\w-]+)\b[^>]*>.*",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def strip_scaffolding(value):
+    """遞迴切掉字串欄位尾端的結構化輸出殘渣。"""
+    if isinstance(value, str):
+        return _SCAFFOLD_RE.sub("", value).strip()
+    if isinstance(value, list):
+        return [strip_scaffolding(item) for item in value]
+    if isinstance(value, dict):
+        return {key: strip_scaffolding(item) for key, item in value.items()}
+    return value
+
+
 def _extract_payload(envelope: dict) -> dict | None:
     """依優先序取出結構化結果:structured_output > result 整段 JSON > result 內嵌 JSON。"""
     structured = envelope.get("structured_output")
     if isinstance(structured, dict):
-        return structured
+        return strip_scaffolding(structured)
 
     result = envelope.get("result")
     if not isinstance(result, str):
@@ -267,7 +287,7 @@ def _extract_payload(envelope: dict) -> dict | None:
     try:
         parsed = json.loads(result)
         if isinstance(parsed, dict):
-            return parsed
+            return strip_scaffolding(parsed)
     except json.JSONDecodeError:
         pass
 
@@ -276,7 +296,7 @@ def _extract_payload(envelope: dict) -> dict | None:
         try:
             parsed = json.loads(m.group(0))
             if isinstance(parsed, dict):
-                return parsed
+                return strip_scaffolding(parsed)
         except json.JSONDecodeError:
             pass
     return None

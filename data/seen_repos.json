@@ -545,7 +545,7 @@
     "analysis": {
       "category": "app",
       "one_liner": "一套用 Bun + TypeScript 打造的自架式視覺化 CMS,主打「所見即所得編輯、輸出乾淨靜態頁面」,對標 Webflow/Framer/WordPress。",
-      "summary": "Instatic 把視覺化畫布編輯器、內容引擎、使用者權限、外掛系統與靜態頁面發佈器全部整合進單一 Bun 伺服器,搭配 SQLite 或 Postgres 即可自架。它的賣點是編輯器產出的頁面不含任何框架殘留,純語意化 HTML 加精簡 CSS,發佈時直接寫死成靜態檔案,同時提供內建設計代幣系統(Core Framework)、可程式化元件、表單/迴圈/範本,以及一個能直接在畫布上編輯節點的 AI Agent。</summary>\n<parameter name=\"category\">app",
+      "summary": "Instatic 把視覺化畫布編輯器、內容引擎、使用者權限、外掛系統與靜態頁面發佈器全部整合進單一 Bun 伺服器,搭配 SQLite 或 Postgres 即可自架。它的賣點是編輯器產出的頁面不含任何框架殘留,純語意化 HTML 加精簡 CSS,發佈時直接寫死成靜態檔案,同時提供內建設計代幣系統(Core Framework)、可程式化元件、表單/迴圈/範本,以及一個能直接在畫布上編輯節點的 AI Agent。",
       "highlights": [
         "發佈頁面為純語意 HTML + 精簡 CSS,無框架執行期,標榜『像讀原始檔一樣乾淨』",
         "外掛後端程式碼跑在 QuickJS-WASM 沙箱內,預設無檔案系統/環境變數/網路存取,權限需站主明確授權",

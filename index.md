@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "GitHub Trending 每日觀察"
-page_class: "home-page"
 ---
 
 <section class="home-intro">
