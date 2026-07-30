@@ -14,8 +14,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from src.report import _BACK_LINK as BACK_LINK  # noqa: E402
+
 REPORTS = ROOT / "reports"
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}\.md$")
+OLD_BACK_LINK = "[← 回到報告索引](../)"
 
 # 舊版一行式聲明,可能帶成本尾綴
 OLD_FOOTER_RE = re.compile(
@@ -59,7 +64,7 @@ def migrate(path: Path) -> str:
         for line in text.splitlines():
             out.append(line)
             if not inserted and line.startswith("# "):
-                out += ["", "[← 回到報告索引](../)"]
+                out += ["", BACK_LINK]
                 inserted = True
         text = front + "\n".join(out)
         if not text.endswith("\n"):
@@ -71,6 +76,10 @@ def migrate(path: Path) -> str:
     text, upgraded = _upgrade_footer(text)
     if upgraded:
         done.append("強化免責聲明")
+
+    if OLD_BACK_LINK in text:
+        text = text.replace(OLD_BACK_LINK, BACK_LINK)
+        done.append("返回按鈕樣式")
 
     if not done:
         return "已是最新格式,跳過"

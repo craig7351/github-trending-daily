@@ -2,12 +2,14 @@
 所有檔案以 UTF-8、LF 換行寫出;單一 repo 渲染失敗只降級、不中斷整份報告。"""
 from __future__ import annotations
 
+import json
 import logging
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
 from .models import CachedEntry, RepoResult
+from .util import atomic_write_json
 
 _SUCCESS_STATUSES = ("analyzed", "light")
 
@@ -24,15 +26,46 @@ _STATUS_REASONS = {
     "error": "發生未預期錯誤",
 }
 
-_INDEX_HEADER = (
-    "---\n"
-    "layout: default\n"
-    "title: GitHub Trending 每日觀察\n"
-    "---\n\n"
+# 首頁樣式。訪客最想要的是「最新那份報告」,所以最上方放一張整塊可點的大卡片;
+# 列表也做成整列可點,並把 repo 名稱降為純文字 —— 一列只有一個點擊目標,
+# 不讓「連到 GitHub」跟「讀報告」互相搶注意力。
+_INDEX_STYLE = """<style>
+.gt-hero{display:block;border:1px solid #d0d7de;border-left:4px solid #0969da;border-radius:12px;
+  padding:20px 24px;margin:28px 0 20px;text-decoration:none;background:#f6f8fa;
+  transition:background .15s,border-color .15s}
+.gt-hero:hover{background:#eaf2fd;border-color:#0969da}
+.gt-hero span{display:block}
+.gt-hero-label{font-size:.75rem;font-weight:600;letter-spacing:.08em;color:#57606a}
+.gt-hero-date{font-size:1.75rem;font-weight:700;color:#1f2328;margin:2px 0 10px;
+  font-variant-numeric:tabular-nums}
+.gt-hero-meta{color:#57606a;font-size:.95rem;line-height:1.6;margin-bottom:16px}
+.gt-hero-cta{font-size:1.05rem;font-weight:600;color:#0969da}
+.gt-list{list-style:none;padding:0;margin:16px 0 0}
+.gt-list li{margin:0 0 8px}
+.gt-card{display:flex;align-items:center;gap:8px 16px;flex-wrap:wrap;
+  border:1px solid #d0d7de;border-radius:8px;padding:14px 18px;
+  text-decoration:none;color:#1f2328;transition:background .15s,border-color .15s}
+.gt-card:hover{background:#f6f8fa;border-color:#0969da}
+.gt-card:hover .gt-arrow{transform:translateX(3px)}
+.gt-date{font-weight:600;font-size:1.05rem;color:#0969da;font-variant-numeric:tabular-nums}
+.gt-count{color:#57606a;font-size:.9rem}
+.gt-top{color:#57606a;font-size:.9rem;flex:1 1 auto}
+.gt-arrow{color:#0969da;font-weight:600;transition:transform .15s}
+@media (max-width:600px){
+  .gt-top{flex-basis:100%;order:3}
+  .gt-arrow{order:2;margin-left:auto}
+}
+</style>
+"""
+
+_INDEX_INTRO = (
     "# 📈 GitHub Trending 每日觀察\n\n"
     "每天自動掃描 [GitHub Trending](https://github.com/trending),對新上榜的專案做 "
     "AI 靜態分析(只讀原始碼,不執行),產出繁體中文摘要:這是什麼、亮點、適用場景、"
-    "品質與安全觀察。\n\n"
+    "品質與安全觀察。\n"
+)
+
+_INDEX_ABOUT = (
     "## 什麼是 GitHub Trending?\n\n"
     "[GitHub Trending](https://github.com/trending) 是 GitHub 官方的熱門專案榜,"
     "依**最近新增的 star 數**排序,而不是看累積總數 —— 所以榜上常會出現剛發布幾天、"
@@ -45,13 +78,25 @@ _INDEX_HEADER = (
     "本站掃描的是**每日榜**,每天約 15–25 個專案。\n\n"
     "榜單反映的是「關注度的變化」,不等於品質或成熟度 —— 話題性強的專案、行銷推廣、"
     "或短期被大量轉發的內容都可能上榜。這也是本站做 AI 分析的原因:"
-    "讓你在點進去之前,先知道那是什麼、值不值得花時間。\n\n"
-    "> ⚠️ **請注意**:所有分析內容皆由 AI 自動產生,**未經人工審閱或驗證**,"
-    "可能有誤解、過時或不完整之處。安全觀察僅為靜態閱讀後的提醒,"
-    "**不構成安全稽核結論**,也不代表專案存在惡意。請以各專案的官方文件與原始碼為準。\n\n"
-    "## 報告索引\n\n"
-    "| 日期 | 分析數 | 持續上榜 | 本日之星 |\n"
-    "|---|---|---|---|\n"
+    "讓你在點進去之前,先知道那是什麼、值不值得花時間。\n"
+)
+
+_INDEX_DISCLAIMER = (
+    "## 免責聲明\n\n"
+    "本站所有分析內容由 AI 自動產生,**未經人工審閱或驗證**。分析方式為靜態閱讀專案的 "
+    "README 與原始碼(不執行任何程式碼),因此可能有誤解、過時或不完整之處。\n\n"
+    "「安全觀察」一節僅記錄靜態閱讀時值得留意的地方(例如安裝腳本會執行外部指令),"
+    "**不構成安全稽核結論,亦不表示該專案存在惡意或缺陷**。評分與結論屬主觀判斷,"
+    "僅供快速篩選參考,實際評估請以各專案的官方文件與原始碼為準。\n\n"
+    "報告內容擷取自第三方公開 repo,其著作權歸原作者所有。若您是專案維護者且認為"
+    "本站描述有誤,歡迎開 issue 指正。\n"
+)
+
+
+_BACK_LINK = (
+    '<a href="../" style="display:inline-block;padding:6px 14px;border:1px solid #d0d7de;'
+    'border-radius:6px;text-decoration:none;color:#0969da;font-weight:600;font-size:.9rem">'
+    "← 所有報告</a>"
 )
 
 
@@ -227,7 +272,7 @@ def render_report(
 
     lines: list[str] = _front_matter(f"GitHub Trending 報告 — {run_date}")
     lines += [f"# 📈 GitHub Trending 每日報告 — {run_date}", "",
-              "[← 回到報告索引](../)", ""]
+              _BACK_LINK, ""]
     if backfilled_on:
         lines += [
             f"> ⏪ **事後補跑**(產生於 {backfilled_on})。榜單與 star 數為 {run_date} 當日紀錄,"
@@ -325,7 +370,7 @@ def render_stub_report(
     content = (
         "\n".join(_front_matter(f"GitHub Trending 報告 — {run_date}")) + "\n"
         f"# 📈 GitHub Trending 每日報告 — {run_date}\n\n"
-        "[← 回到報告索引](../)\n\n"
+        f"{_BACK_LINK}\n\n"
         "## ⚠️ 本日掃描失敗\n\n"
         f"{_safe(reason)}\n\n"
         f"_產生時間:{ts};詳情請查看當日 log。_\n"
@@ -336,44 +381,110 @@ def render_stub_report(
     return path
 
 
+INDEX_DATA_REL = "data/report_index.json"
+
+
+def _load_index_rows(data_file: Path, log: logging.Logger) -> list[dict]:
+    if not data_file.exists():
+        return []
+    try:
+        rows = json.loads(data_file.read_text(encoding="utf-8-sig"))
+        return rows if isinstance(rows, list) else []
+    except (json.JSONDecodeError, OSError) as e:
+        log.warning("索引資料讀取失敗(%s),以空白重建", e)
+        return []
+
+
+def _top_text(row: dict) -> str:
+    """本日之星的純文字描述。卡片整塊是連結,內層不能再放連結。"""
+    name = _safe(row.get("top_name"))
+    if not name:
+        return ""
+    rating = _as_int(row.get("top_rating"))
+    return f"本日之星 {name}" + (f" ★{rating}" if rating else "")
+
+
+def _render_index(rows: list[dict], report_subdir: str) -> str:
+    """由索引資料完整重繪首頁。rows 已依日期新到舊排序。"""
+    out = [
+        "---", "layout: default", "title: GitHub Trending 每日觀察", "---", "",
+        _INDEX_STYLE,
+        _INDEX_INTRO,
+    ]
+
+    if rows:
+        latest = rows[0]
+        date = _safe(latest.get("date"))
+        meta_parts = [f"分析 {_as_int(latest.get('analyzed'))} 個新專案"]
+        if _as_int(latest.get("cached")):
+            meta_parts.append(f"{_as_int(latest.get('cached'))} 個持續上榜")
+        top = _top_text(latest)
+        if top:
+            meta_parts.append(top)
+        out += [
+            f'<a class="gt-hero" href="{report_subdir}/{date}.html">',
+            '  <span class="gt-hero-label">最新報告</span>',
+            f'  <span class="gt-hero-date">{date}</span>',
+            f'  <span class="gt-hero-meta">{" · ".join(meta_parts)}</span>',
+            '  <span class="gt-hero-cta">閱讀完整報告 →</span>',
+            "</a>", "",
+        ]
+
+    out += [
+        "> ⚠️ 分析內容由 AI 自動產生,**未經人工審閱或驗證**,僅供快速篩選參考。"
+        "詳見頁尾[免責聲明](#免責聲明)。", "",
+        f"## 📅 每日報告(共 {len(rows)} 份)", "",
+    ]
+
+    if not rows:
+        out += ["目前還沒有報告。", ""]
+    else:
+        out.append('<ul class="gt-list">')
+        for row in rows:
+            date = _safe(row.get("date"))
+            top = _top_text(row)
+            out += [
+                f'<li><a class="gt-card" href="{report_subdir}/{date}.html">',
+                f'  <span class="gt-date">{date}</span>',
+                f'  <span class="gt-count">分析 {_as_int(row.get("analyzed"))} 個</span>',
+                f'  <span class="gt-top">{top}</span>',
+                '  <span class="gt-arrow">閱讀 →</span>',
+                "</a></li>",
+            ]
+        out += ["</ul>", ""]
+
+    out += [_INDEX_ABOUT, _INDEX_DISCLAIMER]
+    return "\n".join(out)
+
+
 def update_index(
     run_date: str,
     analyzed_count: int,
     cached_count: int,
-    top_pick: str,
+    top: tuple[str, int] | None,
     index_dir: Path,
     log: logging.Logger,
     report_subdir: str = "reports",
 ) -> None:
-    """更新站台首頁 index.md 的報告索引表,依日期新到舊排序。
+    """更新站台首頁 index.md。以 data/report_index.json 為資料來源,每次完整重繪。
 
-    index_dir 為 repo 根目錄(GitHub Pages 的站台根),連結指向 Jekyll 轉出的 .html。"""
+    index_dir 為 repo 根目錄(GitHub Pages 的站台根);top 為 (repo 全名, 星等) 或 None。"""
     index_dir.mkdir(parents=True, exist_ok=True)
-    index = index_dir / "index.md"
-    link = f"{report_subdir}/{run_date}.html"
-    row = f"| [{run_date}]({link}) | {analyzed_count} | {cached_count} | {top_pick} |"
+    data_file = index_dir / INDEX_DATA_REL
 
-    if not index.exists():
-        with open(index, "w", encoding="utf-8", newline="\n") as f:
-            f.write(_INDEX_HEADER + row + "\n")
-        log.info("建立報告索引並加入 %s", run_date)
-        return
+    rows = [r for r in _load_index_rows(data_file, log)
+            if isinstance(r, dict) and r.get("date") != run_date]
+    existed = len(rows) != len(_load_index_rows(data_file, log))
+    rows.append({
+        "date": run_date,
+        "analyzed": analyzed_count,
+        "cached": cached_count,
+        "top_name": top[0] if top else "",
+        "top_rating": top[1] if top else 0,
+    })
+    rows.sort(key=lambda r: str(r.get("date", "")), reverse=True)
 
-    with open(index, "r", encoding="utf-8") as f:
-        lines = f.read().splitlines()
-
-    marker = f"| [{run_date}]("
-    replaced = any(line.startswith(marker) for line in lines)
-
-    # 依日期新到舊重排:補跑舊日期時才不會插在錯的位置
-    rows = [ln for ln in lines if ln.startswith("| [") and not ln.startswith(marker)]
-    rows.append(row)
-    rows.sort(key=lambda ln: ln[3:13], reverse=True)   # "| [YYYY-MM-DD](" 的日期段
-    content = _INDEX_HEADER + "\n".join(rows) + "\n"
-
-    if not any(ln.strip().startswith("|---") for ln in lines):
-        log.warning("index.md 缺少表頭分隔線,已重建")
-
-    with open(index, "w", encoding="utf-8", newline="\n") as f:
-        f.write(content)
-    log.info("索引已%s %s 的列", "更新" if replaced else "加入", run_date)
+    atomic_write_json(data_file, rows)
+    (index_dir / "index.md").write_text(
+        _render_index(rows, report_subdir), encoding="utf-8", newline="\n")
+    log.info("首頁索引已%s %s(共 %d 份報告)", "更新" if existed else "加入", run_date, len(rows))

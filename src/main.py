@@ -135,7 +135,7 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                     log.warning("今日報告已存在,保留不覆寫:%s", report_file)
                 else:
                     render_stub_report(run_date, str(e), cfg.report_path, log)
-                    update_index(run_date, 0, 0, "—", cfg.root, log, cfg.report.dir)
+                    update_index(run_date, 0, 0, None, cfg.root, log, cfg.report.dir)
             return EXIT_FATAL
         log.info("抓到 %d 個上榜專案", len(repos))
         store.touch_all(repos, run_date)
@@ -336,10 +336,10 @@ def _run(args: argparse.Namespace, cfg: Config, run_date: str,
                                 cfg.report_path, log, total_scanned=len(repos),
                                 backfilled_on=record_date if args.backfill else "")
     ok_results = [x for x in results if x.status in ("analyzed", "light") and x.analysis]
-    top = max(ok_results, key=lambda x: _safe_int(x.analysis.get("star_rating")), default=None)
-    top_pick = (f"[{top.repo.full_name}]({top.repo.url})(★{_safe_int(top.analysis.get('star_rating'))})"
-                if top else "—")
-    update_index(run_date, len(ok_results), len(cached), top_pick, cfg.root, log, cfg.report.dir)
+    best = max(ok_results, key=lambda x: _safe_int(x.analysis.get("star_rating")), default=None)
+    top = ((best.repo.full_name, _safe_int(best.analysis.get("star_rating")))
+           if best else None)
+    update_index(run_date, len(ok_results), len(cached), top, cfg.root, log, cfg.report.dir)
     store.save()
     cleanup_workspace(cfg.workspace_path, log)
 
