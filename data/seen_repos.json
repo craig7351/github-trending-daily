@@ -52,7 +52,9 @@
       "star_rating": 5,
       "verdict": "Block 出品、架構紮實、文件頂級，是目前少數真正把 AI 代理人當成一等成員而非 bot 的開源協作平台，對 AI R&D 工程師而言極具參考與採用價值，強烈建議關注。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "koala73/worldmonitor": {
     "first_seen": "2026-07-25",
@@ -99,7 +101,9 @@
       "star_rating": 5,
       "verdict": "工程品質、文件完整度與 MCP Agent 整合能力均屬頂尖，對需要即時全球情報工具鏈或 LLM 工具呼叫範例的 AI R&D 工程師而言，值得立即收藏並深入研究。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "ComposioHQ/awesome-claude-skills": {
     "first_seen": "2026-07-25",
@@ -149,7 +153,9 @@
       "star_rating": 4,
       "verdict": "對於積極使用 Claude Code 或構建多代理系統的 AI 工程師而言，這是目前覆蓋最廣的 Claude Skills 生態系索引，值得加入書籤作為長期參考，但應留意其背後的 Composio 商業訴求。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "Pumpkin-MC/Pumpkin": {
     "first_seen": "2026-07-25",
@@ -204,7 +210,9 @@
       "star_rating": 5,
       "verdict": "用 Rust 重寫 Minecraft 伺服器且同時支援 Java/Bedrock 雙協議，工程品質嚴謹、CI 完整、容器化做法正確，是 Rust 系統程式設計與遊戲伺服器領域值得密切追蹤的指標性專案。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
@@ -263,7 +271,9 @@
       "star_rating": 4,
       "verdict": "對量化金融與時間序列研究者而言，這是具備學術創新性（AAAI 2026）的開源基礎模型，值得關注並作為金融預測的研究起點，但需 GPU 資源且活躍維護不足，一般工程師短期內實際部署難度較高。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 4
   },
   "Automattic/harper": {
     "first_seen": "2026-07-25",
@@ -316,7 +326,9 @@
       "star_rating": 5,
       "verdict": "程式碼與工程實踐皆屬上乘、生態系完整且測試文化紮實,對於重視隱私與離線需求的英文寫作場景,值得立即關注與試用。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "likec4/likec4": {
     "first_seen": "2026-07-25",
@@ -363,7 +375,9 @@
       "star_rating": 4,
       "verdict": "工程品質與文件都紮實、無安全疑慮,若團隊有架構文件維護痛點,值得一試。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "citrolabs/ego-lite": {
     "first_seen": "2026-07-25",
@@ -418,12 +432,14 @@
       "star_rating": 4,
       "verdict": "若你常用 Claude Code、Codex 等 CLI agent 做網頁自動化且需要沿用既有登入態,這個專案的開源部分程式碼品質紮實、值得一試,但要留意核心瀏覽器是閉源且僅限 macOS 的應用程式。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "yorukot/superfile": {
     "first_seen": "2026-07-25",
     "last_seen": "2026-07-29",
-    "days_on_trending": 4,
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
         19576,
@@ -473,7 +489,9 @@
       "star_rating": 4,
       "verdict": "工程品質扎實、社群活躍的 TUI 檔案管理器,值得終端機重度使用者關注與嘗試。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 3
   },
   "ruvnet/RuView": {
     "first_seen": "2026-07-25",
@@ -521,7 +539,9 @@
       "star_rating": 4,
       "verdict": "工程規模與誠實揭露的文件文化值得學習,但核心『WiFi 穿牆姿態辨識』賣點目前多是展示用/基準測試數據而非可靠的落地功能,適合技術好奇心強的工程師研究,不建議直接當作生產級居家照護方案採用。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "CoreBunch/Instatic": {
     "first_seen": "2026-07-25",
@@ -577,7 +597,9 @@
       "star_rating": 4,
       "verdict": "工程品質與安全設計在同類自架 CMS 專案中相當突出,測試與文件紀律罕見紮實,但仍是 0.0.x 早期版本,API 可能生變,建議關注但正式導入生產環境前先觀察其穩定性演進。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "chrislgarry/Apollo-11": {
     "first_seen": "2026-07-25",
@@ -620,7 +642,9 @@
       "star_rating": 4,
       "verdict": "非典型但極具價值的專案:雖非工具或框架,但作為阿波羅任務導航電腦原始碼的公開典藏與教育資源相當值得收藏與瀏覽,尤其對電腦史或嵌入式系統有興趣的工程師。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
@@ -672,7 +696,9 @@
       "star_rating": 4,
       "verdict": "若你已在用 Claude Code / Codex 做正經的工程開發,這套 Skill 模板值得參考甚至直接安裝;但它是流程規範而非程式碼工具,對純研究程式碼品質的人幫助有限。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -723,7 +749,9 @@
       "star_rating": 4,
       "verdict": "若目標是找一套完整、免費且涵蓋大模型微調到安全對齊全流程的中文實作教材,這個倉庫值得收藏;但若期待的是可直接安裝使用的軟體工具或函式庫,則不符合需求。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "diegosouzapw/OmniRoute": {
     "first_seen": "2026-07-25",
@@ -769,7 +797,9 @@
       "star_rating": 4,
       "verdict": "概念實用且成長動能強勁,值得追蹤試用,但誇張的免費額度數字與行銷式 README 建議實測驗證後再導入正式環境。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "OtterMind/Chat2DB": {
     "first_seen": "2026-07-25",
@@ -824,12 +854,14 @@
       "star_rating": 4,
       "verdict": "工程品質與安全意識在同類開源資料庫工具中名列前茅,適合想要免費、可自帶 AI 模型的 SQL 用戶端的開發者立即嘗試。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
     "last_seen": "2026-07-30",
-    "days_on_trending": 4,
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -883,7 +915,9 @@
       "star_rating": 5,
       "verdict": "這是少見有真實大規模生產驗證、benchmark 數據、嚴謹 CI 與資安意識的開源 code review 工具,值得立即關注並可考慮導入 CI 流程,但建議留意其背景自動更新機制。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 1
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -930,12 +964,14 @@
       "star_rating": 5,
       "verdict": "Anthropic 官方權威範例庫,工程品質與文件都在水準之上,想學 Claude API 或 Agent SDK 落地實作的人值得直接加入書籤追蹤。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
     "last_seen": "2026-07-30",
-    "days_on_trending": 2,
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -981,7 +1017,9 @@
       "star_rating": 4,
       "verdict": "屬於「流程/prompt 框架」而非傳統程式庫,文件與測試都做得紮實,對於想讓 AI 代理更守紀律地走完整個 SDLC 的團隊值得一試,但效果高度依賴底層 LLM 是否真的服從強語氣指令。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1035,7 +1073,9 @@
       "star_rating": 5,
       "verdict": "無論是作為抗審查通訊應用來使用,或是學習 Swift 密碼學實作、供應鏈安全與大型測試架構的範例,都非常值得花時間深入研究。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "palmier-io/palmier-pro": {
     "first_seen": "2026-07-26",
@@ -1078,7 +1118,9 @@
       "star_rating": 4,
       "verdict": "工程品質與安全設計都在水準之上,但僅支援 macOS 26 + Apple Silicon,且核心賣點的生成式 AI 功能需訂閱,適合特定平台的重度 AI 剪輯使用者關注,而非泛用工具。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "RyanCodrai/turbovec": {
     "first_seen": "2026-07-26",
@@ -1121,12 +1163,14 @@
       "star_rating": 5,
       "verdict": "工程品質與文件成熟度都在同類專案中名列前茅,對做本地/隱私優先 RAG 或想擺脫 FAISS 記憶體負擔的團隊,非常值得列入評估清單。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "andrewyng/aisuite": {
     "first_seen": "2026-07-26",
     "last_seen": "2026-07-29",
-    "days_on_trending": 3,
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         15220,
@@ -1172,11 +1216,13 @@
       "star_rating": 4,
       "verdict": "由 Andrew Ng 團隊維護、程式碼品質與測試都紮實,適合正在評估多供應商 LLM 抽象層或 Agent 框架的工程師關注,但需留意倉庫已混入 OpenWorker 相關內容,結構稍顯發散。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 1
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-07-31",
     "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
@@ -1190,6 +1236,13 @@
       "2026-07-30": [
         235987,
         857
+      ],
+      "2026-07-31": [
+        236221,
+        804,
+        14,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-07-28",
@@ -1228,7 +1281,9 @@
       "star_rating": 4,
       "verdict": "若你重度使用 Claude Code / Codex 進行工程開發,這套系統值得花時間試裝一兩個 profile(先裝 minimal 別全裝),但要有心理準備:這是配置框架而非傳統函式庫,學習與維護成本不低。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 3
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -1274,7 +1329,9 @@
       "star_rating": 4,
       "verdict": "出自 T3 團隊、工程品質扎實(高測試覆蓋率+完整 CI)的多代理 AI 編碼 GUI,雖仍處早期且暫不開放貢獻,但值得追蹤與試用。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
@@ -1317,7 +1374,9 @@
       "star_rating": 5,
       "verdict": "Node.js 是 JavaScript 生態圈不可或缺的基礎設施,雖然今日上榜多為既有知名度延續,仍值得持續關注其版本發布節奏與治理動態。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
@@ -1368,7 +1427,9 @@
       "star_rating": 4,
       "verdict": "若你的團隊大量仰賴 AI coding agent 產出前端介面,這是目前少見針對「AI 設計同質化」問題提出系統性解法的工具,值得一試;但仍需留意其安裝的 hook 腳本執行權限。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -1410,12 +1471,14 @@
       "star_rating": 5,
       "verdict": "工程品質與測試覆蓋度在同類 Android 開源專案中屬上乘,加密與更新機制設計嚴謹,值得關注與學習其 Mesh/Noise Protocol 實作。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "jenkinsci/jenkins": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 4,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-27": [
         25706,
@@ -1432,6 +1495,13 @@
       "2026-07-30": [
         26207,
         180
+      ],
+      "2026-07-31": [
+        26296,
+        25,
+        12,
+        "Jenkins automation server",
+        "Java"
       ]
     },
     "last_analyzed": "2026-07-28",
@@ -1464,7 +1534,9 @@
       "star_rating": 5,
       "verdict": "CI/CD 領域的常青樹,治理與工程品質皆為業界標竿,對想深入了解大型 Java 專案架構或導入自動化流水線的工程師都非常值得關注。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 5,
+    "consecutive_days_on_trending": 5
   },
   "amnezia-vpn/amnezia-client": {
     "first_seen": "2026-07-27",
@@ -1511,7 +1583,9 @@
       "star_rating": 4,
       "verdict": "對關注隱私與翻牆技術的開發者來說值得追蹤,但屬於終端使用者應用而非開發框架/函式庫,對一般軟體工程師的日常開發參考價值有限。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "moeru-ai/airi": {
     "first_seen": "2026-07-28",
@@ -1566,7 +1640,9 @@
       "star_rating": 4,
       "verdict": "若對 AI VTuber / 虛擬伴侶技術有興趣,這是目前開源社群中最具企圖心且持續活躍的實作,值得追蹤與嘗試,但距離真正取代 Neuro-sama 的完整體驗仍有落差。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "opengeos/GeoLibre": {
     "first_seen": "2026-07-28",
@@ -1621,12 +1697,14 @@
       "star_rating": 5,
       "verdict": "技術架構扎實、測試與 CI 完整度在同類專案中名列前茅,且無安全疑慮,值得立即關注與嘗試。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "NanmiCoder/MediaCrawler": {
     "first_seen": "2026-07-28",
     "last_seen": "2026-07-30",
-    "days_on_trending": 2,
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-28": [
         58387,
@@ -1673,7 +1751,9 @@
       "star_rating": 4,
       "verdict": "程式碼與安全面都算乾淨,功能齊全且維護活躍,若目的是學習爬蟲架構或做學術/研究用途的中國社群平台資料採集,值得關注;但商用或大規模爬取在授權與法律上都不被允許,務必先評估合規風險。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 1
   },
   "bradautomates/claude-video": {
     "first_seen": "2026-07-28",
@@ -1722,7 +1802,9 @@
       "star_rating": 4,
       "verdict": "值得一試的實用工具",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "vudovn/ag-kit": {
     "first_seen": "2026-07-28",
@@ -1770,7 +1852,9 @@
       "star_rating": 4,
       "verdict": "工程品質紮實、文件與測試齊全,若你的團隊已在用 Google Antigravity,這套 agent 工程套件值得直接導入;若不是 Antigravity 使用者,通用性有限,可當作設計參考。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "apache/cassandra": {
     "first_seen": "2026-07-28",
@@ -1811,11 +1895,13 @@
       "star_rating": 4,
       "verdict": "成熟穩健的分散式資料庫標竿專案,即使非新技術,仍值得資料庫/後端工程師收藏參考。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-07-31",
     "days_on_trending": 2,
     "stars_history": {
       "2026-07-28": [
@@ -1825,6 +1911,13 @@
       "2026-07-30": [
         55228,
         377
+      ],
+      "2026-07-31": [
+        55554,
+        378,
+        7,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
       ]
     },
     "last_analyzed": "2026-07-28",
@@ -1862,7 +1955,9 @@
       "star_rating": 5,
       "verdict": "工程成熟度與文件品質在 GitHub Trending 專案中屬上乘,零外部 runtime 依賴加上扎實的 CI 安全稽核,值得研究其架構,若有跨平台社群輿情彙整需求也值得實際安裝試用。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 2
   },
   "ocornut/imgui": {
     "first_seen": "2026-07-28",
@@ -1873,12 +1968,14 @@
         75235,
         51
       ]
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "pascalorg/editor": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 2,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-29": [
         18705,
@@ -1887,6 +1984,13 @@
       "2026-07-30": [
         19872,
         1022
+      ],
+      "2026-07-31": [
+        20117,
+        625,
+        6,
+        "Create and share 3D architectural projects.",
+        "TypeScript"
       ]
     },
     "last_analyzed": "2026-07-29",
@@ -1924,12 +2028,14 @@
       "star_rating": 5,
       "verdict": "架構清晰、文件與測試俱佳、安全性設計到位,是少見兼具工程品質與熱度的 3D 編輯器專案,值得立即關注與深入研讀其 monorepo 架構設計。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "huggingface/speech-to-speech": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 2,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-29": [
         7237,
@@ -1938,6 +2044,13 @@
       "2026-07-30": [
         8225,
         827
+      ],
+      "2026-07-31": [
+        8817,
+        628,
+        1,
+        "Build local voice agents with open-source models",
+        "Python"
       ]
     },
     "last_analyzed": "2026-07-29",
@@ -1971,7 +2084,9 @@
       "star_rating": 5,
       "verdict": "工程品質與文件完整度都是頂尖水準,對想做本地語音代理的 AI 工程師來說非常值得立即關注與嘗試。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "virgiliojr94/book-to-skill": {
     "first_seen": "2026-07-29",
@@ -2018,12 +2133,14 @@
       "star_rating": 4,
       "verdict": "對重度使用 Claude Code/Copilot CLI 的 AI 工程師來說是實用又有趣的生產力工具,值得一試,但屬於個人工作流輔助工具而非核心基礎設施。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "paperswithbacktest/awesome-systematic-trading": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 2,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-29": [
         9600,
@@ -2032,6 +2149,13 @@
       "2026-07-30": [
         10712,
         945
+      ],
+      "2026-07-31": [
+        11053,
+        621,
+        3,
+        "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+        "Python"
       ]
     },
     "last_analyzed": "2026-07-29",
@@ -2065,7 +2189,9 @@
       "star_rating": 3,
       "verdict": "內容豐富實用,適合收藏當量化交易資源索引,但屬於彙整型清單而非工具本身,非急需立即深入研究的專案。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "microsoft/agent-governance-toolkit": {
     "first_seen": "2026-07-29",
@@ -2112,7 +2238,9 @@
       "star_rating": 5,
       "verdict": "微軟官方出品、工程與治理成熟度都是業界頂尖水準,對任何要把 AI Agent 推上生產環境的團隊都值得立即研究並考慮導入。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "1jehuang/jcode": {
     "first_seen": "2026-07-30",
@@ -2157,7 +2285,9 @@
       "star_rating": 4,
       "verdict": "效能訴求鮮明且數據詳實,若在意多 session 資源消耗或想嘗試代理人記憶機制,值得一試,但競品眾多、長期穩定性仍待觀察。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "grokability/snipe-it": {
     "first_seen": "2026-07-30",
@@ -2200,7 +2330,9 @@
       "star_rating": 4,
       "verdict": "生態成熟、文件完整的老牌開源資產管理系統,適合企業自架 IT 資產管理需求,值得列入資源清單。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "deepfakes/faceswap": {
     "first_seen": "2026-07-30",
@@ -2247,7 +2379,9 @@
       "star_rating": 4,
       "verdict": "工程品質扎實、維護活躍的老牌深度偽造工具,若你在做生成模型或影像合成研究,值得花時間了解其架構;但務必留意其技術的倫理與法律使用邊界。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "microsoft/VibeVoice": {
     "first_seen": "2026-07-30",
@@ -2290,16 +2424,25 @@
       "star_rating": 4,
       "verdict": "微軟官方出品、技術報告扎實且持續更新,語音 ASR/TTS 研究者或想做長音訊應用的工程師值得關注,但正式落地前建議自行補強測試與評估。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "different-ai/openwork": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         18340,
         97
+      ],
+      "2026-07-31": [
+        18735,
+        915,
+        4,
+        "The open-source alternative to Claude Cowork (powered by opencode)",
+        "TypeScript"
       ]
     },
     "last_analyzed": "2026-07-30",
@@ -2333,7 +2476,9 @@
       "star_rating": 4,
       "verdict": "工程紮實、CI/測試完備的開源 AI 工作流平台,若你在多個 AI agent 間需要共用技能與連線,值得關注;但屬開源核心 + 企業版雙授權模式,商業功能(/ee)並非完全開源,選用前要留意授權條款。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "MoonshotAI/FlashKDA": {
     "first_seen": "2026-07-30",
@@ -2375,7 +2520,9 @@
       "star_rating": 4,
       "verdict": "由 Kimi 團隊官方釋出、程式碼品質扎實的高效能注意力核心,對做 LLM 推論優化或研究線性注意力的工程師值得關注,但目前僅支援新款 NVIDIA GPU(SM90+),一般使用者需評估硬體門檻。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "maderix/ANE": {
     "first_seen": "2026-07-30",
@@ -2421,16 +2568,25 @@
       "star_rating": 4,
       "verdict": "技術上罕見且紮實的逆向工程研究,誠實揭露限制而非誇大宣傳,值得對 Apple Silicon 底層硬體有興趣的工程師關注,但別期待它是可直接用於生產的訓練框架。",
       "_mode": "full"
-    }
+    },
+    "total_days_on_trending": 1,
+    "consecutive_days_on_trending": 1
   },
   "microsoft/AI-For-Beginners": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         53305,
         115
+      ],
+      "2026-07-31": [
+        53934,
+        155,
+        2,
+        "12 Weeks, 24 Lessons, AI for All!",
+        "Jupyter Notebook"
       ]
     },
     "last_analyzed": "2026-07-30",
@@ -2464,72 +2620,331 @@
       "star_rating": 4,
       "verdict": "微軟官方且內容扎實的AI入門教材,適合收錄進學習資源清單,但屬於教育性質而非生產工具,實務工程師可視需求選讀。",
       "_mode": "light"
-    }
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2
   },
   "WhiskeySockets/Baileys": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         10328,
         12
+      ],
+      "2026-07-31": [
+        10437,
+        19,
+        5,
+        "Socket-based TS/JavaScript API for WhatsApp Web",
+        "JavaScript"
       ]
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "last_analyzed": "2026-07-31",
+    "analysis": {
+      "category": "library",
+      "one_liner": "不依賴瀏覽器、純 WebSocket 實作的 TypeScript 函式庫,可直接以程式碼操作 WhatsApp Web 多裝置協定。",
+      "summary": "Baileys 透過逆向工程 WhatsApp Web 的 Noise/Signal 協定,讓開發者能以 Node.js 直接建立 WebSocket 連線收發訊息、管理群組、同步歷史紀錄等,無需啟動 Selenium 或 Chromium,大幅節省資源。此專案為原作者移除原倉庫後由社群接手延續開發的官方繼承版本。",
+      "highlights": [
+        "純 WebSocket 直連,不需瀏覽器引擎,省下大量記憶體",
+        "支援多裝置協定完整功能:訊息、群組、隱私設定、廣播/限時動態、投票等",
+        "程式碼以 TypeScript 撰寫,型別定義完整,模組拆分清晰(Socket/Signal/WABinary/WAUSync 等)",
+        "測試覆蓋範圍廣,含 28 個單元測試檔與獨立 e2e 測試流程",
+        "CI 涵蓋 lint、build、test、e2e 多個 workflow,版本發布自動化(release-it)"
+      ],
+      "use_cases": [
+        "建置 WhatsApp 聊天機器人或客服自動回覆系統",
+        "企業內部工具整合 WhatsApp 通知/訊息推送",
+        "開發者研究 WhatsApp Web 多裝置協定與 Signal/Noise 加密機制",
+        "串接資料儲存(Store)實作訊息、聯絡人、群組的持久化"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件豐富但 README 本身標註為暫時版本(正式文件已遷移到外部 baileys.wiki),程式碼組織良好、型別完整;測試涵蓋 Signal 加密、事件緩衝、訊息解碼等核心邏輯,且有獨立 e2e workflow;近期仍持續高頻更新(最後推送 2026-07-29),CI 流程健全。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "preinstall 腳本 engine-requirements.js 僅檢查 Node.js 版本(需 ≥20),未執行任何外部下載或遠端程式碼",
+          "src/Utils/messages-media.ts 使用 Node.js child_process 呼叫外部工具(如 ffmpeg)處理媒體轉檔,屬多媒體處理常見作法,非任意程式碼執行",
+          "README 本身已載明免責聲明:專案與 WhatsApp 官方無關,且明確要求使用者不得用於群發騷擾等違反 WhatsApp 服務條款的行為,這是此類逆向工程專案常見的法律/政策風險提醒,非程式碼安全問題"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "程式碼品質與維護活躍度都在水準之上,適合需要輕量化 WhatsApp 自動化整合的開發者關注,但使用前務必了解其逆向工程性質可能帶來的服務條款風險。",
+      "_mode": "full"
     }
   },
   "dotnet/aspnetcore": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         38248,
         5
+      ],
+      "2026-07-31": [
+        38290,
+        7,
+        8,
+        "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+        "C#"
       ]
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "last_analyzed": "2026-07-31",
+    "analysis": {
+      "category": "framework",
+      "one_liner": "微軟官方推出的跨平台 .NET Web 開發框架,用於建構雲端與內部部署的現代化網頁應用程式。",
+      "summary": "ASP.NET Core 是開源且跨平台的框架,可在 Windows、Mac、Linux 上開發並執行雲端連網應用程式,如網頁應用、IoT 應用與行動後端。其模組化元件設計讓開發者能以最小的額外負擔靈活組合解決方案,是 .NET 生態系中最核心的 Web 開發框架之一。",
+      "highlights": [
+        "微軟與 .NET Foundation 官方維護,生態成熟且長期活躍",
+        "跨平台支援 Windows/Mac/Linux,並提供 x64、arm、musl 等多種每日建置版本",
+        "與 Entity Framework Core、Runtime、Razor 等官方專案緊密整合",
+        "有完整的社群參與管道,包含每週 Community Standup 直播、Discord 與 Roadmap",
+        "標示 hacktoberfest、help-wanted 等標籤,對外部貢獻者相對友善"
+      ],
+      "use_cases": [
+        "建構企業級或雲端原生的 Web API 與後端服務",
+        "開發跨平台部署的網頁應用程式(容器化、Linux 伺服器等)",
+        "作為 IoT 或行動應用後端服務的基礎框架",
+        "學習微軟官方 Web 框架架構與貢獻開源專案的實務案例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容偏重專案介紹、貢獻管道與每日建置下載連結,深入的 API 文件需連到外部 learn.microsoft.com,屬於索引型文件而非教學型文件;僅能依 README 評估,無法看到程式碼與測試涵蓋率,推送時間顯示於今日,加上長期穩定的每週社群活動與每日建置節奏,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": ".NET 生態系的核心 Web 框架,官方維護、生態成熟,值得所有 .NET 開發者關注與收錄於資源清單。",
+      "_mode": "light"
     }
   },
   "microsoft/PowerToys": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         136932,
         68
+      ],
+      "2026-07-31": [
+        137124,
+        70,
+        9,
+        "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+        "C"
       ]
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "last_analyzed": "2026-07-31",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "微軟官方出品的 Windows 生產力工具箱,內含 30 多種實用小工具。",
+      "summary": "PowerToys 是微軟官方維護的 Windows 系統增強工具集合,提供視窗排列(FancyZones)、快速啟動器(PowerToys Run)、批次重新命名(PowerRename)、色彩選取、鍵盤重新對應等 30 多項功能,目的是補足 Windows 原生體驗中缺乏的效率工具。專案採 MIT 授權,由微軟官方團隊搭配活躍社群共同開發維護。",
+      "highlights": [
+        "官方微軟出品,並非第三方山寨工具,長期維護且更新頻繁",
+        "涵蓋 30+ 種獨立小工具,涉及視窗管理、檔案處理、輸入輔助等多面向",
+        "支援 GitHub Release、Microsoft Store、WinGet 等多種安裝管道",
+        "MIT 授權,對企業與個人使用都友善",
+        "今日 GitHub Trending 第 9 名,137K+ star,顯示持續高關注度"
+      ],
+      "use_cases": [
+        "Windows 重度使用者想強化多視窗管理與工作區配置效率",
+        "開發者/IT 人員需要批次檔案改名、色彩取樣、Hosts 編輯等日常工具",
+        "尋找 Windows 上類似 macOS Spotlight 的快速啟動器(PowerToys Run)",
+        "企業 IT 想透過 WinGet 大量部署標準化生產力工具"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚、圖示豐富、安裝方式列舉完整,對使用者相當友善;但僅憑 README 無法評估程式碼測試覆蓋率,此處評分僅基於文件呈現。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 明確揭露會蒐集基本診斷遙測資料(telemetry),並提供隱私權說明文件連結",
+          "安裝方式包含官方 GitHub Release .exe、Microsoft Store、WinGet 等正規管道,未見可疑的 curl/bash 一鍵安裝腳本"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "微軟官方長期維護、功能實用且安裝管道正規,值得 Windows 使用者立即安裝嘗試。",
+      "_mode": "light"
     }
   },
   "ansible/ansible": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         69755,
         20
+      ],
+      "2026-07-31": [
+        69881,
+        29,
+        10,
+        "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems.https://docs.ansible.com.",
+        "Python"
       ]
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "last_analyzed": "2026-07-31",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "Ansible 是無代理、以 SSH 為基礎的 IT 自動化平台,用 YAML playbook 描述設定管理、應用部署與編排流程。",
+      "summary": "Ansible(ansible-core)是業界標準的自動化引擎,透過 SSH 對遠端主機執行任務,無需在受管節點安裝任何 agent。這次抓取的是 devel 分支原始碼,採 Python 3.13+ 開發,涵蓋 CLI 工具(ansible、ansible-playbook、ansible-vault 等)、核心執行引擎、模組系統與巨大的整合/單元測試套件。",
+      "highlights": [
+        "由 Red Hat 贊助、超過 5000 位貢獻者參與,是 IT 自動化領域事實標準",
+        "Agentless 架構,僅靠 SSH 即可管理遠端主機,安裝門檻低",
+        "採用 Azure Pipelines(而非 GitHub Actions)進行 CI,涵蓋 sanity/units/integration 多層測試",
+        "核心程式碼近期仍在積極重構(如新增 _internal 命名空間、datatag、templating engine 等模組),顯示持續現代化",
+        "官方文件、Coding Guidelines、Contributor's Guide 齊全,新手貢獻門檻明確"
+      ],
+      "use_cases": [
+        "大規模伺服器設定管理與應用程式部署自動化",
+        "雲端資源佈建與網路設備自動化(network automation)",
+        "CI/CD pipeline 中的基礎設施編排與零停機滾動更新",
+        "以 Python 開發自訂模組或外掛擴充 Ansible 功能"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整度極高(README、Developer Guide、Coding Guidelines、CONTRIBUTING 皆齊備),test/units 與 test/integration 目錄規模巨大且分類清晰,涵蓋 CLI、模組、collection loader 等各層面。原始碼(如 task_executor.py)結構清楚、型別註解完整、模組化良好。專案每日仍有新 commit,採 Azure Pipelines 做多平台 CI,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "成熟穩定的自動化基礎設施標竿專案,程式碼與測試品質俱佳,值得長期關注與學習其架構設計。",
+      "_mode": "full"
     }
   },
   "ChromeDevTools/chrome-devtools-mcp": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         47885,
         73
+      ],
+      "2026-07-31": [
+        48053,
+        80,
+        11,
+        "Chrome DevTools for coding agents",
+        "TypeScript"
       ]
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "last_analyzed": "2026-07-31",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "讓 AI coding agent 直接操控並檢查真實 Chrome 瀏覽器的官方 MCP 伺服器。",
+      "summary": "chrome-devtools-mcp 是 Google Chrome DevTools 團隊維護的 Model Context Protocol 伺服器,透過 Puppeteer 讓 Claude、Cursor、Copilot 等程式碼代理人能自動化瀏覽器操作、擷取效能追蹤、分析網路請求與 Console 訊息、進行記憶體快照比對等工作。目標是把 DevTools 的除錯與效能分析能力開放給 AI agent,用於可靠的網頁自動化與深度除錯。",
+      "highlights": [
+        "涵蓋輸入自動化、導覽、效能追蹤、網路、記憶體快照、擴充功能除錯等 40+ 種工具,並支援 slim 模式精簡為 3 個核心工具",
+        "官方由 Google LLC 開發維護,底層整合 Puppeteer 與 chrome-devtools-frontend、Lighthouse",
+        "支援連線既有 Chrome 實例(remote debugging / autoConnect)與多代理並行的 pageId 路由",
+        "測試涵蓋非常完整,含 60+ 單元測試檔與獨立 e2e 測試,CI 在 Ubuntu/Windows/macOS 與多個 Node 版本上跑測試",
+        "文件齊全,提供近 20 種 MCP 客戶端(Claude Code、Cursor、VS Code、Gemini CLI 等)的安裝說明與疑難排解指南"
+      ],
+      "use_cases": [
+        "讓 AI coding agent 在開發流程中自動開啟網頁、操作元件並驗證修改結果",
+        "擷取效能追蹤(trace)並分析 Core Web Vitals 相關的效能瓶頸",
+        "透過 Console 訊息與網路請求列表協助除錯前端問題",
+        "以記憶體快照比較工具排查瀏覽器端記憶體洩漏"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼組織清晰,依 tools/formatters/telemetry/daemon 等模組分層,並用 zod 做輸入驗證、ESLint 自訂規則強制型別安全。測試覆蓋單元測試與跨平台 e2e,CI matrix 涵蓋三種作業系統與三個 Node 版本,近期仍持續有版本釋出與功能更新(如 WebMCP、screencast 等實驗性工具),屬於維護活躍度很高的官方專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "evaluate_script 工具會在使用者指定頁面中執行任意 JavaScript,屬於工具本身設計用途(供 agent 除錯與自動化使用),README 已明確揭露此風險並提醒不要在有敏感資料的網頁使用",
+          "預設會收集使用情況統計並回傳給 Google(可用 --no-usage-statistics 關閉),以及效能追蹤時可能把 trace URL 送往 Google CrUX API(可用 --no-performance-crux 關閉),兩者皆在文件中清楚說明並提供關閉選項",
+          "npm prepare 腳本(scripts/prepare.ts)僅在本地 node_modules 內清理/修補 chrome-devtools-frontend 相依套件檔案,未發現對外部網址的下載或執行行為"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "Google 官方維護、文件與測試都相當扎實的 Chrome 自動化/除錯 MCP 伺服器,是目前 AI coding agent 串接瀏覽器能力的首選之一,值得關注與採用。",
+      "_mode": "full"
     }
   },
   "agavra/tuicr": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "days_on_trending": 1,
+    "last_seen": "2026-07-31",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         1687,
         338
+      ],
+      "2026-07-31": [
+        1862,
+        190,
+        13,
+        "a code review TUI with vim keybindings",
+        "Rust"
       ]
+    },
+    "total_days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "last_analyzed": "2026-07-31",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "用 vim 鍵位在終端機裡做 code review 的 TUI 工具,可直接把審查結果推回 GitHub/GitLab 或匯出給 AI coding agent。",
+      "summary": "tuicr 是用 Rust 寫的終端機 code review 工具,提供類似 GitHub PR 的連續 diff 檢視、行/範圍/檔案層級留言、審查進度持久化,並支援 git、jj、mercurial 三種版控系統。審查完成後可直接推送成 GitHub PR review 或 GitLab MR discussion,也能匯出結構化 markdown 給 Claude/Codex/Cursor 等 coding agent 接續處理,鎖定「審查 AI 生成程式碼」的使用情境。",
+      "highlights": [
+        "vim 風格模態編輯(含 visual mode 範圍留言、j/k/Ctrl-d/Ctrl-u 等完整鍵位),而非僅有膚淺的上下瀏覽",
+        "三種輸出管道:直接推送 inline review 到 GitHub(透過 gh)/GitLab(透過 glab)、複製結構化 markdown 到剪貼簿供 AI agent 使用、或 pipe 到 stdout",
+        "內建 `tuicr update` 更新機制,對下載的執行檔做 SHA-256 校驗、符號連結檢查、以及「僅能替換自己執行中的執行檔」等防護,並有對應 CI 矩陣測試(含 rollback 驗證)",
+        "提供 Rust library API(ReviewStore)讓其他工具可直接讀寫其持久化的 review session",
+        "同時支援 git、jj(Jujutsu)、Mercurial 三種版控後端,及 GitHub PR / GitLab MR 的遠端審查"
+      ],
+      "use_cases": [
+        "在終端機內快速審查大量 AI 產生的程式碼變更,並用 vim 鍵位加速瀏覽與留言",
+        "審查完成後直接把 inline comment 推送成正式的 GitHub PR review 或 GitLab MR discussion,不必切到瀏覽器",
+        "把審查意見匯出成結構化 markdown,貼回 Claude/Codex/Cursor 等 AI agent 要求其修正",
+        "搭配 tmux/Zellij/Herdr 讓 coding agent 自動開出分割視窗執行 tuicr,建立審查回饋迴圈"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 詳盡且誠實(附競品比較表、設定範例、鍵位對照),docs/ 下另有 CONFIG、GITLAB、KEYBINDINGS、REVIEW_CLI 等專章文件。程式碼模組化清晰(app/forge/vcs/ui/persistence 分層),src/app/tests 下有十餘支測試檔涵蓋捲動、留言、PR 選擇等行為,CI 涵蓋 check/fmt/clippy(-D warnings)/test/跨平台 update 測試,且對更新機制特別做了完整的升級/回滾整合測試,工程紀律相當高。最近一次推送在 2026-07-30,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、文件與測試齊全,對「AI 生成程式碼審查」這個新興情境切得很準,值得終端機重度使用者關注,但屬於利基型工具而非通用突破。",
+      "_mode": "full"
     }
   }
 }

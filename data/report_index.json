@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-07-31",
+    "analyzed": 6,
+    "cached": 8,
+    "deferred": 0,
+    "top_name": "dotnet/aspnetcore",
+    "top_rating": 5
+  },
+  {
     "date": "2026-07-30",
     "analyzed": 2,
     "cached": 6,
