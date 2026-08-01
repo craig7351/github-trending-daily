@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-01",
+    "analyzed": 5,
+    "cached": 7,
+    "deferred": 0,
+    "top_name": "github/copilot-sdk",
+    "top_rating": 5
+  },
+  {
     "date": "2026-07-31",
     "analyzed": 6,
     "cached": 8,

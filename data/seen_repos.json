@@ -1901,8 +1901,8 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 2,
+    "last_seen": "2026-08-01",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-28": [
         54252,
@@ -1916,6 +1916,13 @@
         55554,
         378,
         7,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
+      ],
+      "2026-08-01": [
+        56232,
+        658,
+        3,
         "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "Python"
       ]
@@ -1956,8 +1963,8 @@
       "verdict": "工程成熟度與文件品質在 GitHub Trending 專案中屬上乘,零外部 runtime 依賴加上扎實的 CI 安全稽核,值得研究其架構,若有跨平台社群輿情彙整需求也值得實際安裝試用。",
       "_mode": "full"
     },
-    "total_days_on_trending": 3,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 3
   },
   "ocornut/imgui": {
     "first_seen": "2026-07-28",
@@ -2139,8 +2146,8 @@
   },
   "paperswithbacktest/awesome-systematic-trading": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 3,
+    "last_seen": "2026-08-01",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-29": [
         9600,
@@ -2154,6 +2161,13 @@
         11053,
         621,
         3,
+        "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+        "Python"
+      ],
+      "2026-08-01": [
+        11758,
+        763,
+        4,
         "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
         "Python"
       ]
@@ -2190,8 +2204,8 @@
       "verdict": "內容豐富實用,適合收藏當量化交易資源索引,但屬於彙整型清單而非工具本身,非急需立即深入研究的專案。",
       "_mode": "light"
     },
-    "total_days_on_trending": 3,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 4
   },
   "microsoft/agent-governance-toolkit": {
     "first_seen": "2026-07-29",
@@ -2244,12 +2258,19 @@
   },
   "1jehuang/jcode": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-08-01",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
         13456,
         640
+      ],
+      "2026-08-01": [
+        14615,
+        527,
+        12,
+        "The most RAM efficient harness",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-07-30",
@@ -2286,7 +2307,7 @@
       "verdict": "效能訴求鮮明且數據詳實,若在意多 session 資源消耗或想嘗試代理人記憶機制,值得一試,但競品眾多、長期穩定性仍待觀察。",
       "_mode": "light"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "grokability/snipe-it": {
@@ -2336,12 +2357,19 @@
   },
   "deepfakes/faceswap": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-08-01",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
         56266,
         166
+      ],
+      "2026-08-01": [
+        56991,
+        93,
+        11,
+        "Deepfakes Software For All",
+        "Python"
       ]
     },
     "last_analyzed": "2026-07-30",
@@ -2380,7 +2408,7 @@
       "verdict": "工程品質扎實、維護活躍的老牌深度偽造工具,若你在做生成模型或影像合成研究,值得花時間了解其架構;但務必留意其技術的倫理與法律使用邊界。",
       "_mode": "full"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "microsoft/VibeVoice": {
@@ -2430,8 +2458,8 @@
   },
   "different-ai/openwork": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 2,
+    "last_seen": "2026-08-01",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-30": [
         18340,
@@ -2441,6 +2469,13 @@
         18735,
         915,
         4,
+        "The open-source alternative to Claude Cowork (powered by opencode)",
+        "TypeScript"
+      ],
+      "2026-08-01": [
+        19507,
+        806,
+        2,
         "The open-source alternative to Claude Cowork (powered by opencode)",
         "TypeScript"
       ]
@@ -2477,8 +2512,8 @@
       "verdict": "工程紮實、CI/測試完備的開源 AI 工作流平台,若你在多個 AI agent 間需要共用技能與連線,值得關注;但屬開源核心 + 企業版雙授權模式,商業功能(/ee)並非完全開源,選用前要留意授權條款。",
       "_mode": "full"
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "MoonshotAI/FlashKDA": {
     "first_seen": "2026-07-30",
@@ -2574,8 +2609,8 @@
   },
   "microsoft/AI-For-Beginners": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 2,
+    "last_seen": "2026-08-01",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-30": [
         53305,
@@ -2585,6 +2620,13 @@
         53934,
         155,
         2,
+        "12 Weeks, 24 Lessons, AI for All!",
+        "Jupyter Notebook"
+      ],
+      "2026-08-01": [
+        55324,
+        1592,
+        5,
         "12 Weeks, 24 Lessons, AI for All!",
         "Jupyter Notebook"
       ]
@@ -2621,8 +2663,8 @@
       "verdict": "微軟官方且內容扎實的AI入門教材,適合收錄進學習資源清單,但屬於教育性質而非生產工具,實務工程師可視需求選讀。",
       "_mode": "light"
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3
   },
   "WhiskeySockets/Baileys": {
     "first_seen": "2026-07-30",
@@ -2897,8 +2939,8 @@
   },
   "agavra/tuicr": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 2,
+    "last_seen": "2026-08-01",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-30": [
         1687,
@@ -2910,10 +2952,17 @@
         13,
         "a code review TUI with vim keybindings",
         "Rust"
+      ],
+      "2026-08-01": [
+        2157,
+        335,
+        8,
+        "a code review TUI with vim keybindings",
+        "Rust"
       ]
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
     "last_analyzed": "2026-07-31",
     "analysis": {
       "category": "devtool",
@@ -2944,6 +2993,255 @@
       },
       "star_rating": 4,
       "verdict": "工程品質紮實、文件與測試齊全,對「AI 生成程式碼審查」這個新興情境切得很準,值得終端機重度使用者關注,但屬於利基型工具而非通用突破。",
+      "_mode": "full"
+    }
+  },
+  "zhaoxuya520/reverse-skill": {
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-01": [
+        10725,
+        335,
+        1,
+        "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "PowerShell"
+      ]
+    },
+    "last_analyzed": "2026-08-01",
+    "analysis": {
+      "category": "security",
+      "one_liner": "給 AI 程式助理用的「逆向工程 / 滲透測試」任務路由包,依情境自動導向對應技能文件與工具鏈。",
+      "summary": "reverse-skill 是一套給 Claude Code、Cursor、Cline 等程式 AI 客戶端使用的技能路由系統,把 APK 逆向、二進位分析、JS 逆向、滲透測試、CTF 等 40 多種情境各自整理成 SKILL.md + 工具索引 + 腳本,讓 AI 讀取後自動判斷該用 jadx/IDA/Frida/nmap 等哪個工具鏈。核心賣點是「按需自舉工具鏈」與「經驗自動進化」(field-journal),搭配 PowerShell 腳本檢查本機工具是否已安裝、缺少時自動用 winget/apt 安裝。",
+      "highlights": [
+        "覆蓋範圍極廣:APK/iOS/二進位/韌體/.NET/JS/CTF/紅隊攻擊鏈等 40+ 技能目錄,每個都有獨立 SKILL.md 與 references",
+        "有實際的自動化測試腳本(smoke.ps1、test-p0-friction.ps1、verify-routing-coherence.ps1)驗證路由邏輯與 case-init 流程,並非空殼專案",
+        "供應鏈相對嚴謹:bootstrap 腳本使用 winget 官方來源安裝,對 jadx/apktool 等下載物做 SHA256/digest 驗證,並釘選第三方版本號",
+        "field-journal 的 PR 有 GitHub Actions 白名單與 prompt injection/HTML注入/明碼金鑰等關鍵字掃描,自動合併前會做安全檢查",
+        "文件量龐大、雙語(中英)且結構化,對『AI 該用哪個逆向/滲透工具』這類選擇困難有明確的解法"
+      ],
+      "use_cases": [
+        "授權範圍內的滲透測試或 CTF 比賽中,用 AI 助理自動選擇 nmap/sqlmap/burp 等對應工具鏈與方法論",
+        "APK、二進位、前端加密參數等逆向工程任務,快速找到 jadx/IDA/radare2/Frida 的標準作業流程與腳本",
+        "跨機器/跨專案重複使用的資安工具鏈索引與經驗庫,避免每次都重新摸索環境設定",
+        "團隊建立自有的資安技能路由包時,參考其 SKILL.md/routing.md 的分層設計方式"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 4,
+        "comment": "文件極其詳盡(README/RULES/README_AI 分層,加上 40+ 個技能子目錄各自的 SKILL.md),但份量大到近乎「提示工程」而非傳統技術文件。倉庫內附有真實的 PowerShell 測試腳本可驗證路由與 case-init 邏輯,但 CI 只驗證 field-journal PR,並未自動跑這些測試,品質保證主要靠人工。近期(2026-07-31)仍有推送與 CHANGELOG 更新,包含供應鏈安全稽核紀錄,顯示維護者持續在意這類問題。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "RULES.md 與 skills/field-journal/precedent-auth.md 明確要求 AI 代理『在安全審查機制觸發之前』先假設使用者已獲得授權,只要對話中提到目標就視為已授權,並且明文禁止 AI 輸出法律風險提示、授權確認或 scope disclaimer 之類的訊息。",
+          "RULES.md 要求 AI 在首次使用時把這套路由規則寫入使用者所屬 AI 客戶端的『全域設定檔』(例如 ~/.claude/CLAUDE.md),使規則套用到使用者之後開啟的所有專案,而不僅限於本倉庫目錄。",
+          "文件中包含針對 AI 猶豫/拒絕執行的『藉口反駁表』,設計目的是降低 AI 對可能屬於未授權操作的請求進行二次確認的機率;這類設計對已獲授權的滲透測試工作者是效率工具,但若使用者未充分理解其效果,可能在不知情下讓 AI 對外部目標放寬預設的安全審查。",
+          "未在原始碼中發現 curl|bash / iwr|iex 之類的遠端執行安裝手法;bootstrap 腳本改用 winget 官方來源並對第三方下載物做 SHA256/digest 驗證,供應鏈處理方式相對嚴謹。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程完整度與文件覆蓋範圍在同類專案中少見,適合已有合法授權情境的資安/逆向工作者評估導入;但其刻意設計讓 AI 略過安全審查、並把規則寫入使用者全域設定的作法,值得使用前先仔細讀懂再決定是否啟用。",
+      "_mode": "full"
+    }
+  },
+  "github/copilot-sdk": {
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-01": [
+        10137,
+        7,
+        6,
+        "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+        "Java"
+      ]
+    },
+    "last_analyzed": "2026-08-01",
+    "analysis": {
+      "one_liner": "GitHub 官方推出的 Copilot Agent SDK,讓開發者用 Python、TypeScript、Go、.NET、Java、Rust 六種語言把 Copilot CLI 的代理引擎嵌入自己的應用程式。",
+      "summary": "此專案透過 JSON-RPC 與 Copilot CLI(伺服器模式)溝通,讓開發者不必自建 Agent orchestration,就能在應用程式中呼叫 Copilot 的規劃、工具呼叫、檔案編輯等能力。支援 GitHub OAuth、環境變數 token 與 BYOK(自帶金鑰)等多種驗證方式,並提供自訂 agent、skill、tool 的擴充機制。",
+      "category": "ai-ml",
+      "highlights": [
+        "六種語言(Python/TS/Go/.NET/Java/Rust)官方 SDK 共用同一套 JSON-RPC 協定與程式碼產生器,維持跨語言一致性",
+        "支援 BYOK,可用 OpenAI、Azure Foundry、Anthropic 等自有金鑰,不一定要 GitHub Copilot 訂閱",
+        "測試覆蓋非常完整,Java/Python 皆有數十個單元測試與上百個 e2e 測試,涵蓋 hooks、MCP、權限、串流等情境",
+        "CLI 執行檔採「首次使用時下載」策略,並以 SHA-256 checksum 與 npm SRI 完整性驗證後才載入,原生函式庫驗證失敗會直接拒絕載入(fail-closed)",
+        "CI 相當完整,含 CodeQL 掃描、每語言獨立測試 workflow、Maven/PyPI/NuGet/crates.io 多平台發佈流程"
+      ],
+      "use_cases": [
+        "在既有後端服務或 CLI 工具中嵌入 Copilot 代理式工作流程(規劃、工具呼叫、檔案編輯)",
+        "需要多語言團隊(如 Java 後端 + Python 資料團隊)共用同一套 Agent 能力時",
+        "想用自有 LLM API Key(BYOK)而非 GitHub Copilot 訂閱來跑代理任務"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件相當齊全,除主 README 外還有 Getting Started、Auth、Features、Troubleshooting 等專屬文件與各語言 ADR;測試量體龐大且分層清楚(unit + e2e);CI workflow 數量多且涵蓋各語言測試、CodeQL 資安掃描與自動發佈,活躍度高(前一天才有 push)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Python SDK 的 _cli_download.py 會在首次使用時自動從 GitHub Releases 下載 Copilot CLI 執行檔(以及選用的原生 runtime 函式庫),下載後以 SHA-256 checksum 或 npm Subresource Integrity 驗證,驗證失敗會拒絕使用,可透過 COPILOT_SKIP_CLI_DOWNLOAD 停用此行為"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "官方出品、工程品質與測試覆蓋度都在水準之上,對想把 Copilot Agent 能力整合進自家應用的開發者值得立即關注。",
+      "_mode": "full"
+    }
+  },
+  "chatwoot/chatwoot": {
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-01": [
+        35125,
+        35,
+        7,
+        "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. 🔥💬",
+        "Ruby"
+      ]
+    },
+    "last_analyzed": "2026-08-01",
+    "analysis": {
+      "one_liner": "開源全通路客服系統,提供即時聊天、信箱與多渠道整合的 Intercom/Zendesk 替代方案。",
+      "summary": "Chatwoot 是以 Ruby on Rails 與 Vue.js 打造的自架客服平台,整合網站即時聊天、Email、社群媒體(Facebook、Instagram、WhatsApp、Telegram 等)訊息於單一收件匣,並提供內部協作、知識庫、報表與 AI Agent(Captain)等功能,主打取代 Intercom、Zendesk、Salesforce Service Cloud 等商用 SaaS。專案支援 Heroku、DigitalOcean Kubernetes 及 Docker 部署,並有完整多語系翻譯流程。",
+      "category": "app",
+      "highlights": [
+        "全通路整合收件匣:網站聊天、Email、社群平台、WhatsApp、SMS 等訊息集中管理",
+        "內建 Captain AI Agent 可自動回覆常見問題,減輕客服負擔",
+        "支援團隊協作(內部備註、@mentions、自動指派)、知識庫入口與客戶滿意度(CSAT)報表",
+        "一鍵部署選項豐富(Heroku、DigitalOcean K8s、Docker),並有完整的第三方整合(Slack、Shopify、Dialogflow、Linear)",
+        "社群活躍,具備 CircleCI、Crowdin 多語系翻譯與 Discord 社群支援"
+      ],
+      "use_cases": [
+        "中小企業或新創想自架客服系統,取代付費 SaaS 以掌控客戶資料",
+        "需要整合多個客服管道(官網、社群、Email、WhatsApp)於單一介面的團隊",
+        "想導入 AI 自動回覆(Captain)降低第一線人力成本的客服部門",
+        "需要客製化整合(如 Shopify 訂單查詢、Linear 工單建立)的技術團隊"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容豐富、功能說明清楚、部署選項與文件連結完整,屬於 README-only 評估,未檢視原始碼測試覆蓋情況;專案持續更新(最後推送為今日),且正在 GitHub Trending 上升,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "功能完整、活躍度高且有實際商業替代價值,值得加入自架客服系統的候選清單。",
+      "_mode": "light"
+    }
+  },
+  "usekaneo/kaneo": {
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-01": [
+        5092,
+        194,
+        9,
+        "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-01",
+    "analysis": {
+      "one_liner": "開源、自架式的專案管理工具,主打「乾淨介面 + 只有你需要的功能」,對標 Jira/Linear。",
+      "summary": "Kaneo 是一套自架式(self-hosted)的看板/專案管理系統,採 pnpm monorepo 架構,後端以 Hono + Drizzle ORM + PostgreSQL 打造 REST/WebSocket API,前端為 React SPA,並整合 GitHub/Gitea/Slack/Discord/Telegram 等第三方通知與 Webhook。目標是取代 Jira、Linear 等重量級工具,強調簡潔、快速與資料自主權。",
+      "category": "app",
+      "highlights": [
+        "Hono + drizzle-orm + better-auth 打造的 TypeScript 全端 monorepo,搭配 turbo 管理建置/測試",
+        "支援 MCP(Model Context Protocol)路由與 OpenAPI 自動產生文件,對接 AI 工具鏈",
+        "整合多種第三方通知/Webhook(GitHub、Gitea、Slack、Discord、Telegram)",
+        "提供 Docker Compose 一鍵部署與正式的 Helm Chart,方便 Kubernetes 落地",
+        "CI 涵蓋 lint(Biome)、單元測試、整合測試(含 PostgreSQL 服務)與 Docker build smoke test"
+      ],
+      "use_cases": [
+        "想要自架、資料自主的專案管理/看板工具,取代 Jira 或 Linear",
+        "需要與 GitHub/Gitea/Slack/Discord 等既有工作流整合的團隊協作看板",
+        "想在 Kubernetes 環境用 Helm Chart 部署專案管理系統",
+        "想研究 Hono + Drizzle + better-auth 這套現代 TypeScript 後端架構的實作範例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整(README、獨立環境設定指南、Helm Chart 文件、CONTRIBUTING),CI 涵蓋 lint/單元/整合測試與 Docker build,後端程式碼有清楚的權限驗證邏輯(workspace access、API key 驗證)與錯誤處理,型別覆蓋度高。前端與後端皆有對應測試檔案,整合測試會啟動真實 PostgreSQL 服務而非全部 mock,顯示測試品質不錯。近期仍持續高頻更新(最後 push 為分析當日),issue/PR 活動熱絡。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "架構扎實、文件與測試完整的自架專案管理工具,值得想要脫離 Jira/Linear 或研究 Hono/Drizzle 現代全端架構的人關注。",
+      "_mode": "full"
+    }
+  },
+  "geo-tp/ESP32-Bit-Pirate": {
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-01": [
+        5005,
+        83,
+        10,
+        "A Hardware Hacking Tool with Web-Based CLI That Speaks Every Protocol",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-08-01",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "將 ESP32-S3 開發板變成多協定硬體駭客工具的開源韌體,靈感來自經典的 Bus Pirate。",
+      "summary": "ESP32 Bit Pirate 是一套執行於 ESP32-S3 系列開發板的韌體,提供序列或 Web CLI,可對 I2C、SPI、UART、1-Wire、CAN、JTAG、藍牙、Wi-Fi、SubGHz、RFID、紅外線等數十種數位/無線協定進行掃描、嗅探、讀寫與腳本化操作。專案採 Controller/Service/Adapter 分層架構,支援十餘款硬體裝置,並提供 Python 腳本與 Web Serial 工具生態系。",
+      "highlights": [
+        "支援 20+ 種協定模式(I2C/SPI/UART/CAN/JTAG/BLE/WiFi/SubGHz/RFID/紅外線等),對應原版 Bus Pirate 的多協定精神",
+        "程式碼採乾淨的 Controller→Service→Adapter 分層架構,以介面(ITerminalView、IInput 等)做依賴注入,方便測試與擴充",
+        "擁有 117 個原生單元測試檔案(PlatformIO native-tests),搭配大量 Fake Service/Shell 做隔離測試,CI 於每次 push/PR 執行",
+        "支援 10+ 款實體開發板(M5Stack Cardputer、T-Embed、S3 DevKit 等),並提供 custom board 設定範本方便自製硬體移植",
+        "CD 流程自動建置各板 firmware 並發布,搭配官方 Web Flasher/Web Serial Tools 免安裝即可燒錄與操作"
+      ],
+      "use_cases": [
+        "嵌入式/硬體安全研究人員用來嗅探與分析 I2C、SPI、UART、CAN 等匯流排通訊",
+        "資安教育或 CTF 場景中作為授權範圍內的硬體滲透測試工具(如 RFID 複製、BLE/WiFi 掃描)",
+        "電子愛好者用作 USB-UART 轉接器、SPI 程式燒錄器、邏輯分析儀等多功能工具",
+        "學習韌體工程分層架構設計(依賴注入、介面隔離、native 單元測試)的參考專案"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 詳盡且連結完整 Wiki、CONTRIBUTING 說明新增指令的簡易流程;測試涵蓋 Controllers/Services/Transformers/Analyzers 等各層並以 Fake 物件隔離,CI 於每次提交執行原生測試;CD 流程自動化建置多板韌體並發布,專案於 2026-07-27 仍持續更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "專案本質為雙用途(dual-use)硬體駭客工具,內建 WiFi deauth、BLE 掃描/欺騙、SubGHz 訊號重放、RFID 複製等具攻擊性功能特性,platformio.ini 中可見刻意加入 `-Wl,-zmuldefs` 連結旗標以覆寫 ESP32 SDK 的 `ieee80211_raw_frame_sanity_check`,使其能送出未經檢查的原始 802.11 封包以支援 deauth 功能",
+          "README 已明確標示「僅供教育、診斷與相容性測試用途」的使用警告,並提醒使用者須遵守當地法規、取得授權後再使用,未發現任何安裝腳本外連下載執行、混淆程式碼或內嵌可疑網域/IP 等惡意跡象"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "架構嚴謹、測試完整、文件齊全,是少見兼具工程品質與功能廣度的開源硬體駭客韌體,值得硬體安全與嵌入式開發者關注,但需留意其內建的 RF/BLE 攻擊性功能僅限授權情境使用。",
       "_mode": "full"
     }
   }
