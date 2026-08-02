@@ -2041,8 +2041,8 @@
   },
   "huggingface/speech-to-speech": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 3,
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-29": [
         7237,
@@ -2056,6 +2056,13 @@
         8817,
         628,
         1,
+        "Build local voice agents with open-source models",
+        "Python"
+      ],
+      "2026-08-02": [
+        10250,
+        442,
+        8,
         "Build local voice agents with open-source models",
         "Python"
       ]
@@ -2092,8 +2099,8 @@
       "verdict": "工程品質與文件完整度都是頂尖水準,對想做本地語音代理的 AI 工程師來說非常值得立即關注與嘗試。",
       "_mode": "full"
     },
-    "total_days_on_trending": 3,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 1
   },
   "virgiliojr94/book-to-skill": {
     "first_seen": "2026-07-29",
@@ -2146,8 +2153,8 @@
   },
   "paperswithbacktest/awesome-systematic-trading": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-08-01",
-    "days_on_trending": 4,
+    "last_seen": "2026-08-02",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-29": [
         9600,
@@ -2168,6 +2175,13 @@
         11758,
         763,
         4,
+        "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+        "Python"
+      ],
+      "2026-08-02": [
+        12304,
+        523,
+        2,
         "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
         "Python"
       ]
@@ -2204,8 +2218,8 @@
       "verdict": "內容豐富實用,適合收藏當量化交易資源索引,但屬於彙整型清單而非工具本身,非急需立即深入研究的專案。",
       "_mode": "light"
     },
-    "total_days_on_trending": 4,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 5,
+    "consecutive_days_on_trending": 5
   },
   "microsoft/agent-governance-toolkit": {
     "first_seen": "2026-07-29",
@@ -2609,8 +2623,8 @@
   },
   "microsoft/AI-For-Beginners": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-08-01",
-    "days_on_trending": 3,
+    "last_seen": "2026-08-02",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-30": [
         53305,
@@ -2627,6 +2641,13 @@
         55324,
         1592,
         5,
+        "12 Weeks, 24 Lessons, AI for All!",
+        "Jupyter Notebook"
+      ],
+      "2026-08-02": [
+        57505,
+        949,
+        1,
         "12 Weeks, 24 Lessons, AI for All!",
         "Jupyter Notebook"
       ]
@@ -2663,8 +2684,8 @@
       "verdict": "微軟官方且內容扎實的AI入門教材,適合收錄進學習資源清單,但屬於教育性質而非生產工具,實務工程師可視需求選讀。",
       "_mode": "light"
     },
-    "total_days_on_trending": 3,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 4
   },
   "WhiskeySockets/Baileys": {
     "first_seen": "2026-07-30",
@@ -2831,8 +2852,8 @@
   },
   "ansible/ansible": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 2,
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
         69755,
@@ -2844,10 +2865,17 @@
         10,
         "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems.https://docs.ansible.com.",
         "Python"
+      ],
+      "2026-08-02": [
+        70122,
+        30,
+        11,
+        "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems.https://docs.ansible.com.",
+        "Python"
       ]
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 1,
     "last_analyzed": "2026-07-31",
     "analysis": {
       "category": "infra",
@@ -2998,15 +3026,22 @@
   },
   "zhaoxuya520/reverse-skill": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-01": [
         10725,
         335,
         1,
+        "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "PowerShell"
+      ],
+      "2026-08-02": [
+        12017,
+        1320,
+        4,
         "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "PowerShell"
       ]
@@ -3051,14 +3086,21 @@
   },
   "github/copilot-sdk": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-01": [
         10137,
         7,
+        6,
+        "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+        "Java"
+      ],
+      "2026-08-02": [
+        10292,
+        142,
         6,
         "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
         "Java"
@@ -3148,15 +3190,22 @@
   },
   "usekaneo/kaneo": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-01": [
         5092,
         194,
         9,
+        "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "TypeScript"
+      ],
+      "2026-08-02": [
+        5736,
+        760,
+        3,
         "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
         "TypeScript"
       ]
@@ -3242,6 +3291,405 @@
       },
       "star_rating": 5,
       "verdict": "架構嚴謹、測試完整、文件齊全,是少見兼具工程品質與功能廣度的開源硬體駭客韌體,值得硬體安全與嵌入式開發者關注,但需留意其內建的 RF/BLE 攻擊性功能僅限授權情境使用。",
+      "_mode": "full"
+    }
+  },
+  "microsoft/generative-ai-for-beginners": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        114285,
+        108,
+        5,
+        "21 Lessons, Get Started Building with Generative AI",
+        "Jupyter Notebook"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "one_liner": "微軟出品的 21 堂生成式 AI 入門課程,涵蓋 Python 與 TypeScript 實作範例",
+      "summary": "這是微軟雲端技術布道師團隊打造的生成式 AI 入門教材,以 21 堂課循序漸進教授 LLM 概念、提示工程、負責任 AI 等主題,並提供 Azure OpenAI、OpenAI API、GitHub Models 與 Foundry Local 等多種執行環境選項。每堂課包含影片、書面說明與程式範例,支援超過 50 種語言翻譯,適合完全沒有生成式 AI 背景的開發者自學。",
+      "category": "learning-resource",
+      "highlights": [
+        "21 堂課完整涵蓋 LLM 基礎、提示工程、負責任 AI 使用等主題,結構清楚",
+        "每堂課同時提供 Python 與 TypeScript 程式範例,並附影片教學",
+        "支援 50+ 種語言自動翻譯,對非英語使用者相當友善",
+        "彈性支援多種執行後端(Azure OpenAI、OpenAI API、GitHub Models、Foundry Local),包含可離線執行的選項",
+        "MIT 授權且由微軟官方持續維護,近期仍在更新(如提醒 GitHub Models 即將於 2026 年 7 月底退役)"
+      ],
+      "use_cases": [
+        "想從零開始系統性學習生成式 AI 與 LLM 概念的開發者自學教材",
+        "企業內部或學校課程作為生成式 AI 導論教學大綱",
+        "需要 Python/TypeScript 雙語範例來快速上手 Azure OpenAI 或 OpenAI API 的工程師",
+        "建立 awesome list 或學習路徑時作為生成式 AI 入門推薦資源"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 5,
+        "comment": "資源彙整類,測試不適用。README 結構完整、課程大綱清楚、多語言支援齊全,文件品質屬業界頂尖水準;近期(2026-08-01)仍持續推送更新,活躍度高,且今日登上 trending 榜第 5 名並持續增星。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "微軟官方出品、內容扎實且持續維護的生成式 AI 入門課程,無論自學或作為推薦教材都非常值得收藏關注。",
+      "_mode": "light"
+    }
+  },
+  "github/gh-stack": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        840,
+        46,
+        7,
+        "GitHub Stacked PRs",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "GitHub 官方推出的 gh CLI 擴充套件,用來管理堆疊式 Pull Request(Stacked PRs)。",
+      "summary": "gh-stack 是 GitHub 官方維護的 gh CLI 擴充套件,協助開發者將一個大改動拆成多個彼此依賴、逐層 rebase 的小型 PR(即「Stacked PRs」)。它自動處理建立分支、維持 rebase 同步、設定正確的 PR base 分支,並在 GitHub 上把這些 PR 串連成一個可視化的 Stack,大幅降低手動管理堆疊分支的心智負擔。",
+      "highlights": [
+        "由 GitHub 官方帳號(github/gh-stack)發布並維護,搭配 CODEOWNERS、SECURITY.md、Safe Harbor 政策等完整治理文件",
+        "指令涵蓋完整工作流:init/add/submit/sync/rebase/modify/merge/checkout,並提供互動式 TUI(用 bubbletea 打造)編輯 PR 標題與描述",
+        "modify 指令支援 drop/fold/insert/rename/reorder 等堆疊重構操作,並有清楚的前置條件與復原(undo/abort)機制",
+        "README 對每個指令、flag、exit code 都有詳盡說明,文件品質在 CLI 專案中屬上乘",
+        "可選安裝 AI agent skill(gh skill install github/gh-stack),讓 Copilot 等工具理解 stacked PR 工作流"
+      ],
+      "use_cases": [
+        "大型功能改動需要拆成多個循序漸進、易於審查的小型 PR",
+        "團隊採用 trunk-based development,需要頻繁 rebase 並保持多個相依分支同步",
+        "需要在 GitHub 介面上把多個 PR 視覺化串連成一個 review 鏈,方便 reviewer 逐層檢視差異"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "幾乎每支 cmd 與 internal 套件都有對應的 _test.go(含 mock client/git ops、TUI model 測試、rebase 與 lock 的平台相依測試),CI 在 ubuntu/windows/macos 三平台跑 go vet + go test -race,發布流程使用官方 gh-extension-precompile 並產生 attestations,治理文件齊全,活躍度與工程成熟度都很高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "官方出品、文件與測試齊全、無安全疑慮,對重度使用 PR 流程的團隊或個人是立即值得安裝的實用工具。",
+      "_mode": "full"
+    }
+  },
+  "abus-aikorea/voice-pro": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        11810,
+        58,
+        9,
+        "Gradio WebUI for creators and developers, featuring key TTS (Edge-TTS, kokoro) and zero-shot Voice Cloning (E2 & F5-TTS, CosyVoice), with Whisper audio processing, YouTube download, Demucs vocal isolation, and multilingual translation.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "整合 YouTube 下載、語音辨識、翻譯與零樣本語音克隆的 Gradio 一站式配音工作室。",
+      "summary": "Voice-Pro 是一套基於 Gradio 的 WebUI,把 yt-dlp 下載、Demucs 人聲分離、Whisper/Faster-Whisper 語音辨識、100+ 語言翻譯,以及 Edge-TTS、kokoro、F5-TTS、CosyVoice 等零樣本語音克隆整合成單一「Dubbing Studio」流程,目標是取代 ElevenLabs 等付費 SaaS 配音服務。v4.0 將安裝流程改用 uv + 鎖檔案,強調免系統管理員權限、免裝 CUDA Toolkit 即可在 Windows/NVIDIA 環境跑起來。",
+      "highlights": [
+        "單一 WebUI 涵蓋下載、去噪、字幕、翻譯、TTS 全流程,對創作者相對友善",
+        "v4.0 改用 uv 搭配 committed uv.lock,安裝可重現且不需要 CUDA Toolkit / VS Build Tools",
+        "支援多種零樣本語音克隆引擎(F5-TTS、E2-TTS、CosyVoice、Fun-CosyVoice3 含韓語等 9 種語言)",
+        "start.bat/start.sh 會自動偵測 GPU 並下載可攜式 ffmpeg,適合公司受限電腦免系統管理員安裝"
+      ],
+      "use_cases": [
+        "Podcaster / YouTuber 想快速產生多語言字幕與配音",
+        "研究者需要零樣本語音克隆或多語 TTS 的實驗平台",
+        "個人開發者想在本機(而非雲端 SaaS)完成影片翻譯配音,節省訂閱費用"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 完整且多語系,版本紀錄詳細,pyproject.toml 對每個相依套件版本鎖定的原因都有註解說明,顯示維護者對相依地獄有實務經驗。但倉庫內找不到 tests/ 目錄或任何自動化測試,也沒有 .github/workflows CI,代碼品質僅能靠人工抽查;抽查的 app/abus_downloader.py、abus_config.py 屬中規中矩的腳本風格,函式短小但缺乏型別驗證與單元測試保護。README 中提及作者因另一個商業專案(WeConnect)而暫停維護,需留意後續是否會停止更新。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "start.bat/start.sh 會從 GitHub Releases 以 curl 下載 uv 執行檔與可攜式 ffmpeg 並解壓執行,屬常見的自舉安裝手法而非該專案獨有行為,但使用者應注意腳本會下載並執行二進位檔案",
+          "configure.bat 會在偵測不到 choco 時,透過 PowerShell 執行官方 Chocolatey 安裝腳本(iex 下載自 chocolatey.org 的安裝程式),此為 Chocolatey 官方建議的標準安裝方式",
+          "configure.bat 需要系統管理員權限並會修改機碼(啟用 LongPathsEnabled)及提示重開機,屬於預期中的本機安裝行為且有明確提示"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、安裝流程用心打磨(uv 鎖檔、免 CUDA Toolkit、免系管權限),值得語音/字幕/配音需求的創作者一試,但缺乏測試與 CI、且作者已言明暫緩維護,長期穩定性需持續觀察。",
+      "_mode": "full"
+    }
+  },
+  "iv-org/invidious": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        21653,
+        435,
+        10,
+        "Invidious is an alternative front-end to YouTube",
+        "Crystal"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "category": "app",
+      "one_liner": "開源、不依賴官方 API 的 YouTube 替代前端,強調隱私與無廣告觀看體驗。",
+      "summary": "Invidious 是以 Crystal 語言開發的 YouTube 替代前端,讓使用者在不被 Google 追蹤、不看廣告、不需 JavaScript 的情況下觀看 YouTube 影片,並提供獨立的訂閱系統、通知、匯入/匯出功能與開發者 API。專案已發展多年,擁有龐大的公開實例網絡與活躍社群。",
+      "highlights": [
+        "不使用 YouTube 官方 API,自行解析影片資料以避免追蹤與廣告",
+        "支援從 YouTube、NewPipe、FreeTube 匯入/匯出訂閱與觀看紀錄",
+        "CI 涵蓋多個 Crystal 版本(1.14~1.21 及 nightly)並包含 Docker build/run 測試",
+        "使用 Ameba 做程式碼風格檢查,並要求 crystal tool format 通過",
+        "提供官方 Docker Compose 部署方式,亦有公開實例清單可直接使用"
+      ],
+      "use_cases": [
+        "想在觀看 YouTube 影片時避免廣告與追蹤的一般使用者",
+        "希望自架輕量、無 JavaScript 需求前端服務的自架愛好者",
+        "需要透過開發者 API 存取 YouTube 資料而不受官方配額限制的開發者",
+        "研究影片串流代理、反爬蟲對抗機制的工程師"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "文件完整(README + 獨立 documentation repo),CI 設定嚴謹,涵蓋多版本編譯測試、Docker build 驗證與 lint(Ameba + crystal format);spec/ 目錄有一定測試覆蓋但多集中在 helpers 與 parser 邏輯,對路由層與資料庫層測試較少。抽查的核心程式碼(utils.cr、video_playback.cr)風格清晰,關鍵處(如影片轉發代理)有針對安全性的網域格式檢查,顯示維護者對安全問題有意識。專案活躍度高,今日新增 435 星、持續每日 push。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "長期活躍、文件與 CI 完善的成熟專案,對隱私導向的 YouTube 前端或自架服務有興趣者值得關注。",
+      "_mode": "full"
+    }
+  },
+  "microsoft/TRELLIS.2": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        9963,
+        107,
+        12,
+        "Native and Compact Structured Latents for 3D Generation",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "微軟推出的 4B 參數大型 3D 生成模型,採用「O-Voxel」結構化潛在表示法,從單張圖片生成高品質含 PBR 材質的 3D 資產。",
+      "summary": "TRELLIS.2 是微軟研究團隊開發的 image-to-3D 生成模型,核心創新是「field-free」的稀疏體素表示法 O-Voxel,能處理任意拓樸結構(開放曲面、非流形幾何、內部封閉結構),並支援完整 PBR 材質(Base Color、Roughness、Metallic、Opacity)。專案提供推論程式碼、預訓練權重、Hugging Face Demo 以及完整訓練程式碼。",
+      "highlights": [
+        "4B 參數模型,H100 上 512³ 解析度僅需約 3 秒生成",
+        "O-Voxel 表示法可處理開放曲面、非流形幾何等傳統 iso-surface 方法難以處理的拓樸結構",
+        "支援完整 PBR 材質建模(色彩、粗糙度、金屬度、透明度),適合真實感渲染",
+        "資料前處理免渲染、免優化,單 CPU 10 秒內完成 mesh 轉 O-Voxel",
+        "Roadmap 已全部完成打勾,論文、推論碼、權重、Demo、訓練碼皆已釋出"
+      ],
+      "use_cases": [
+        "從單張圖片快速生成含 PBR 材質的高品質 3D 資產,用於遊戲或動畫資產製作",
+        "研究人員在 Objaverse-XL 等資料集上訓練或微調自訂 3D 生成模型",
+        "需要處理複雜拓樸(如服裝、樹葉等開放曲面)的 3D 重建應用",
+        "透過 Hugging Face Spaces Demo 快速評估 image-to-3D 生成效果而不需本地部署"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 4,
+        "comment": "README 結構完整,涵蓋安裝、推論範例、訓練流程與資料前處理說明,對研究/工程使用者相當友善;僅能依 README 評估,未實際檢視原始碼與測試涵蓋率,7/10 剛推上 trending 且 7 月中有推送,活躍度佳。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "微軟出品且技術新穎(O-Voxel 表示法解決傳統 3D 生成拓樸限制),搭配完整推論與訓練程式碼釋出,值得 3D 生成/圖形學領域工程師關注,但需 24GB+ GPU 且僅支援 Linux,部署門檻較高。",
+      "_mode": "light"
+    }
+  },
+  "TencentCloud/TencentDB-Agent-Memory": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        10350,
+        227,
+        13,
+        "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "把 Agent 團隊的對話、文件、程式碼自動沉澱成可治理、可共享的四種記憶資產(Chat Memory / Skill / Wiki / CodeGraph)的團隊級記憶中樞。",
+      "summary": "TencentDB Agent Memory 是 Tencent 推出的團隊級 AI Agent 記憶系統,把對話依 L0~L3 分層萃取成長期記憶,並將技能、文件、程式碼分別轉成 Skill、Wiki、CodeGraph 資產,透過 Memory Hub 面板做 Owner/版本/可見性(private/team/restricted/agent)的統一管理與跨 Agent 裝配。目標是解決多 Agent 團隊重複解釋專案背景、重新學習文件與程式碼的「冷啟動」問題。",
+      "highlights": [
+        "四層記憶模型(L0 對話→L1 事實→L2 場景→L3 人格)搭配 BM25+向量檢索+RRF 混合召回",
+        "Memory Hub 提供團隊/Agent/ACL 三層權限模型,私有記憶預設不外洩,分享需明確動作",
+        "CodeGraph 整合自 colbymchenry/codegraph、Skill 機制沿用 Nous Research Hermes Agent,並註明來源與致謝",
+        "monorepo 拆成 MemoryCore(插件/Gateway)、MemoryHub(Panel+Knowledge)、MemoryProxy 三件套,支援一鍵 Docker 部署",
+        "官方公布 PersonaMem 基準測試顯示開啟記憶後準確率由 48% 提升至 76%"
+      ],
+      "use_cases": [
+        "多 Agent 團隊(如一人公司搭配多個角色 Agent)需要共享專案經驗、避免重複解釋上下文",
+        "需要把既有程式碼庫、文件、歷史對話一次性匯入,快速讓新 Agent/新成員「讀檔上手」",
+        "需要對 Agent 記憶做權限治理(私有/團隊/ACL)與版本管理的企業場景",
+        "希望在 OpenClaw / Hermes 等 Agent 框架上加裝長期記憶與知識庫能力的開發者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "文件相當完整,README 中英雙語且附架構圖、INSTALL.md/CONTRIBUTING.md/CHANGELOG(遵循 SemVer)一應俱全,原始碼結構清晰(僅 MemoryCore/src 就有 250+ 個 TS 檔,分 core/adapters/report/skill 等模組)。但這份原始碼快照中完全找不到任何 *.test.ts / __tests__ 目錄或 describe() 測試案例,儘管 package.json 定義了大量 vitest/e2e/smoke 測試腳本,PR CI(pr-ci.yml)實際上也只做 npm install、npm pack、manifest 驗證、體積門檻與『skill queue isolation』檢查,並未執行 `npm test`,因此測試覆蓋率在此快照中無法驗證。專案剛於 2026-07-21 首次公開發布,活躍度高但尚無長期歷史可供評估穩定性。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "MemoryCore/scripts/install_hermes_memory_tencentdb.sh 在偵測不到 OpenClaw CLI 時,會執行 `curl -fsSL https://get.openclaw.dev | bash` 從外部網址下載並直接執行安裝腳本(curl|bash 安裝模式),這是常見但需要使用者留意的安裝方式",
+          "MemoryCore/package.json 的 postinstall 生命週期腳本會嘗試執行 scripts/openclaw-after-tool-call-messages.patch.sh(帶 `2>/dev/null || true` 靜默容錯)",
+          "多個安裝腳本(install-openclaw-plugin-v2.sh、install_hermes_memory_tencentdb.sh)會以 root 執行時自動 su 切換到目標使用者、寫入 /etc/profile.d 環境變數檔與使用者設定檔(內含 API Key 欄位,預設值為 'local'),屬於一般部署腳本行為,但涉及系統層級寫入,建議在授權環境中執行"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "架構完整、定位明確且有實測基準佐證,是目前 Agent 記憶系統中少見的「治理型」設計,值得關注與試用;但目前是首次公開發布的 beta 版,測試檔案在此快照中完全缺席、CI 也未跑測試,生產環境導入前建議自行補強驗證。",
+      "_mode": "full"
+    }
+  },
+  "NomaDamas/k-skill": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        6759,
+        53,
+        14,
+        "한국인을 위한 스킬 모음집 - 에이전트를 한국인으로",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "one_liner": "한국 생활·업무 전반(교통, 행정, 쇼핑, 금융, 부동산 등)을 다루는 130개 이상의 AI 에이전트용 Skill 모음집",
+      "summary": "Claude Code, Codex, OpenCode 등 코딩 에이전트가 SRT/KTX 예매, 로또 확인, 국세청·법원·공공데이터포털 조회, 당근·쿠팡·마켓컬리 검색, HWP 문서 처리 등 한국인 일상·행정 업무를 대신 처리하도록 만든 Skill(문서+스크립트) 번들이다. 각 Skill은 npm/Python 패키지, 문서, 테스트를 갖추고 있으며 npx 설치나 Claude Code 플러그인 마켓플레이스로 배포된다.",
+      "category": "ai-ml",
+      "highlights": [
+        "130개 이상의 독립 Skill이 skill.json/instruction.md/SKILL.md/scripts 구조로 통일되어 있어 일관성이 높음",
+        "각 Skill마다 fixture 기반 unit test(Node --test, Python unittest)가 있고 CI에서 lint+typecheck+test+pack dry-run까지 자동 검증",
+        "결제·메시지 전송·최종 제출 등 비가역 액션 직전 사용자 승인을 강제하고, 로그인 자동화·CAPTCHA 우회를 금지하는 정책이 문서와 각 Skill 규칙에 명시됨",
+        "credential은 환경변수/로컬 dotenv(0600 권한)로만 다루고 hosted proxy를 통해 공개 API 키를 사용자에게 노출하지 않는 구조",
+        "AGPL 프록시 서버, npm/PyPI 릴리스 자동화(Changesets, release-please), Manus 번들링까지 갖춘 성숙한 릴리스 파이프라인"
+      ],
+      "use_cases": [
+        "Claude Code 등 코딩 에이전트에 한국 특화 기능(기차 예매, 행정 서류, 배송조회 등)을 플러그인 형태로 추가하고 싶을 때",
+        "여러 공공데이터포털/정부 API를 개별로 조사하지 않고 표준화된 wrapper로 빠르게 프로토타이핑하고 싶을 때",
+        "등기부등본·법인등기·지급명령 등 반복적인 한국 행정 서류 작업을 에이전트에게 위임하고 싶을 때",
+        "특정 Skill(예: bok-ecos-stats, korean-law-search)의 API 연동 코드를 참고용으로 가져다 쓰고 싶을 때"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README, 기능별 문서(docs/features/*), 보안/시크릿 정책, 기여 가이드까지 문서화 수준이 매우 높다. 다수 Skill에 fixture 기반 테스트가 있으나 스킬 수가 워낙 많아 전부 동일한 커버리지는 아니다. 최근 푸시(2026-08-01)와 CI 워크플로, 활발한 릴리스 자동화로 미루어 활동성은 최상급이다."
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install 스크립트나 package.json에 postinstall/preinstall 등 설치 시 자동 실행되는 스크립트는 발견되지 않음",
+          "curl|bash 방식의 설치 패턴이나 난독화/장문 base64 페이로드는 발견되지 않았고, base64 사용은 열차 예약 ID 인코딩 등 정상적인 용도로 한정됨",
+          "credential은 환경변수·로컬 dotenv로만 다루며 하드코딩된 비밀값은 발견되지 않음",
+          "일부 Skill(SRT/KTX 예매, catchtable-sniper, jobkorea/saramin 인재검색 등)은 사용자의 실제 로그인 세션이나 예매·조회 권한을 활용해 예약·조회를 자동화하므로, 대상 사이트 이용약관과 계정 보안 측면에서 사용자가 스스로 위험 범위를 인지하고 승인 절차를 거쳐야 함",
+          "corporate-registration-consulting 등 일부 디렉터리에 .hwp 바이너리 템플릿이 커밋되어 있으나 출처 URL·sha256·수집일이 source-manifest.json에 문서화되어 있어 추적 가능함"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "코드 품질과 거버넌스가 뛰어난 대규모 한국 특화 에이전트 Skill 모음집으로, 한국 사용자나 에이전트 개발자라면 설치해 둘 가치가 충분하다.",
+      "_mode": "full"
+    }
+  },
+  "bytedance/deer-flow": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-02": [
+        78769,
+        209,
+        15,
+        "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-02",
+    "analysis": {
+      "one_liner": "ByteDance 打造的開源「超級智能體」執行框架,結合 LangGraph/LangChain,提供沙箱、記憶、技能與子智能體來完成長時程任務。",
+      "summary": "DeerFlow 2.0 是從原本的 Deep Research 框架重寫而成的通用 Agent Harness,內建檔案系統、長期記憶、可擴充技能(Skills)、沙箱執行環境與子智能體派工機制,讓 LLM 能規劃並執行從研究、寫程式到產生簡報、影片等分鐘到數小時等級的複雜任務。專案同時提供 Web UI、Gateway API、多種 IM 頻道整合(Slack、Telegram、Feishu、企業微信等)與完整的正式環境部署方案(Docker Compose、Postgres/Redis、多 worker)。",
+      "category": "ai-ml",
+      "highlights": [
+        "採用「漸進式技能載入」機制,SKILL.md 只在任務需要時才載入,兼顧上下文長度與可擴充性,並內建 SkillScan 靜態安全掃描器審核技能安裝與編輯",
+        "子智能體(Sub-agent)派工具備明確的成本效益判斷邏輯,避免濫用平行化,且有獨立的 context 隔離與 token 用量歸戶",
+        "正式環境部署方案完整:支援多 Gateway worker、Redis stream bridge、run ownership lease/心跳機制、SSE 斷線續傳與孤兒任務復原,顯示對分散式系統邊界情況的高度重視",
+        "backend 有 500+ 個測試檔案,並用 Blockbuster 強制檢查阻塞式 I/O(tests/blocking_io),CI 包含後端/前端單元測試、E2E、lint、nightly 等 10+ 個 workflow",
+        "bash 執行沙箱內建 SandboxAuditMiddleware,以正則表達式分類辨識高風險指令(如指令替換執行下載內容、fork bomb、覆寫系統檔案等),程式碼註解詳盡且引用實際 issue 修正紀錄"
+      ],
+      "use_cases": [
+        "需要一個可自架、可擴充的通用 Agent 執行環境,用來做深度研究、報告/簡報自動生成或資料分析工作流",
+        "想要串接多種 IM(Slack、Telegram、飛書、企業微信等)作為 AI 助理入口的團隊",
+        "需要在 Kubernetes/Docker 沙箱中安全執行 LLM 產生程式碼,並要求審計與風險攔截機制的場景",
+        "研究 LangGraph/LangChain 之上如何設計 Memory、Skill、Sub-agent、Checkpoint 等大型 Agent 系統架構的工程師"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為詳盡(README 超過千行、多語系版本、獨立的 CONTRIBUTING/AGENTS.md/SECURITY.md),測試覆蓋涵蓋單元、阻塞式 I/O、E2E、追蹤系統等面向,CI workflow 齊全。今日剛推送新 commit,活躍度非常高,程式碼風格嚴謹、註解交代設計取捨與已知邊界案例,屬於工程成熟度很高的專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供「One-Line Agent Setup」與 Install.md,設計上是要讓 Claude Code / Codex 等編碼代理人讀取後自動執行安裝步驟(clone、make setup/install 等),屬於「餵給 AI 代理人的操作說明文件」形式,使用前建議先自行檢視該文件內容再授權代理人執行",
+          "Lark/Feishu 技能安裝時會在安裝階段從 GitHub 下載官方 CLI 執行檔並以 SHA-256 驗證後掛載到沙箱中執行,屬於安裝期下載可執行內容的行為,文件中已明確揭露此行為與離線替代方案",
+          "未發現 npm/pip 生命週期腳本(preinstall/postinstall)、curl|bash 型態的隱藏安裝腳本,或混淆/長 base64 payload 等可疑內容"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件完整度都屬頂尖水準,是值得研究 Agent Harness 架構設計的重量級專案,強烈建議關注。",
       "_mode": "full"
     }
   }
