@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-03",
+    "analyzed": 6,
+    "cached": 9,
+    "deferred": 0,
+    "top_name": "esengine/DeepSeek-Reasonix",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-02",
     "analyzed": 8,
     "cached": 7,
