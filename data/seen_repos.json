@@ -216,8 +216,8 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-28",
-    "days_on_trending": 4,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         33496,
@@ -234,6 +234,13 @@
       "2026-07-28": [
         34611,
         441
+      ],
+      "2026-08-04": [
+        35824,
+        200,
+        10,
+        "Kronos: A Foundation Model for the Language of Financial Markets",
+        "Python"
       ]
     },
     "last_analyzed": "2026-07-25",
@@ -272,8 +279,8 @@
       "verdict": "對量化金融與時間序列研究者而言，這是具備學術創新性（AAAI 2026）的開源基礎模型，值得關注並作為金融預測的研究起點，但需 GPU 資源且活躍維護不足，一般工程師短期內實際部署難度較高。",
       "_mode": "full"
     },
-    "total_days_on_trending": 4,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 5,
+    "consecutive_days_on_trending": 1
   },
   "Automattic/harper": {
     "first_seen": "2026-07-25",
@@ -2637,8 +2644,8 @@
   },
   "microsoft/AI-For-Beginners": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 5,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 6,
     "stars_history": {
       "2026-07-30": [
         53305,
@@ -2669,6 +2676,13 @@
         59027,
         2629,
         1,
+        "12 Weeks, 24 Lessons, AI for All!",
+        "Jupyter Notebook"
+      ],
+      "2026-08-04": [
+        60742,
+        1902,
+        6,
         "12 Weeks, 24 Lessons, AI for All!",
         "Jupyter Notebook"
       ]
@@ -2705,8 +2719,8 @@
       "verdict": "微軟官方且內容扎實的AI入門教材,適合收錄進學習資源清單,但屬於教育性質而非生產工具,實務工程師可視需求選讀。",
       "_mode": "light"
     },
-    "total_days_on_trending": 5,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 6,
+    "consecutive_days_on_trending": 6
   },
   "WhiskeySockets/Baileys": {
     "first_seen": "2026-07-30",
@@ -3047,10 +3061,10 @@
   },
   "zhaoxuya520/reverse-skill": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-01": [
         10725,
@@ -3070,6 +3084,13 @@
         13452,
         1141,
         6,
+        "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "PowerShell"
+      ],
+      "2026-08-04": [
+        15788,
+        2446,
+        2,
         "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "PowerShell"
       ]
@@ -3218,10 +3239,10 @@
   },
   "usekaneo/kaneo": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-01": [
         5092,
@@ -3241,6 +3262,13 @@
         6150,
         496,
         2,
+        "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "TypeScript"
+      ],
+      "2026-08-04": [
+        6862,
+        665,
+        15,
         "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
         "TypeScript"
       ]
@@ -3331,10 +3359,10 @@
   },
   "microsoft/generative-ai-for-beginners": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-02": [
         114285,
@@ -3347,6 +3375,13 @@
         114776,
         588,
         8,
+        "21 Lessons, Get Started Building with Generative AI",
+        "Jupyter Notebook"
+      ],
+      "2026-08-04": [
+        115551,
+        775,
+        7,
         "21 Lessons, Get Started Building with Generative AI",
         "Jupyter Notebook"
       ]
@@ -3483,10 +3518,10 @@
   },
   "iv-org/invidious": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-02": [
         21653,
@@ -3499,6 +3534,13 @@
         21977,
         305,
         4,
+        "Invidious is an alternative front-end to YouTube",
+        "Crystal"
+      ],
+      "2026-08-04": [
+        22272,
+        402,
+        13,
         "Invidious is an alternative front-end to YouTube",
         "Crystal"
       ]
@@ -3586,10 +3628,10 @@
   },
   "TencentCloud/TencentDB-Agent-Memory": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-02": [
         10350,
@@ -3602,6 +3644,13 @@
         11045,
         602,
         10,
+        "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "TypeScript"
+      ],
+      "2026-08-04": [
+        12088,
+        1090,
+        5,
         "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
         "TypeScript"
       ]
@@ -3758,15 +3807,22 @@
   },
   "lyogavin/airllm": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-03": [
         25661,
         819,
         3,
+        "AirLLM 70B inference with single 4GB GPU",
+        "Jupyter Notebook"
+      ],
+      "2026-08-04": [
+        27107,
+        1085,
+        1,
         "AirLLM 70B inference with single 4GB GPU",
         "Jupyter Notebook"
       ]
@@ -3853,15 +3909,22 @@
   },
   "Panniantong/Agent-Reach": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-03": [
         64702,
         659,
         9,
+        "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "Python"
+      ],
+      "2026-08-04": [
+        65714,
+        1057,
+        11,
         "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "Python"
       ]
@@ -3943,15 +4006,22 @@
   },
   "antirez/ds4": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-03": [
         19998,
         139,
         14,
+        "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+        "C"
+      ],
+      "2026-08-04": [
+        20362,
+        384,
+        9,
         "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
         "C"
       ]
@@ -3991,15 +4061,22 @@
   },
   "esengine/DeepSeek-Reasonix": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-03": [
         29064,
         333,
         15,
+        "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "Go"
+      ],
+      "2026-08-04": [
+        29932,
+        883,
+        4,
         "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
         "Go"
       ]
@@ -4037,6 +4114,252 @@
       },
       "star_rating": 5,
       "verdict": "工程成熟度與測試/CI 規範在同類專案中屬上乘,對 DeepSeek 使用者或想壓低 agent token 成本的開發者,值得立即關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "firecrawl/pdf-inspector": {
+    "first_seen": "2026-08-04",
+    "last_seen": "2026-08-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-04": [
+        8241,
+        1699,
+        3,
+        "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-04",
+    "analysis": {
+      "one_liner": "Firecrawl 出品的純 Rust PDF 檢測與文字擷取函式庫,免 OCR 即可判斷 PDF 是否為掃描檔並轉成乾淨的 Markdown。",
+      "summary": "pdf-inspector 能在毫秒等級判斷 PDF 是文字型、掃描型還是混合型,並提供逐頁 OCR 路由建議,對文字型 PDF 則直接擷取具座標資訊的內容並轉換成結構化 Markdown(標題、清單、表格、程式碼區塊等)。目標是讓 PDF 處理管線省去多數場景下昂貴且較慢的 OCR 步驟,官方基準測試顯示其在閱讀順序、表格辨識與速度上都優於同類工具。",
+      "category": "library",
+      "highlights": [
+        "核心邏輯純 Rust 實作,唯一相依 lopdf,無 ML 模型、無外部服務依賴,官方基準測試 200 份文件僅需 0.47 秒且整體分數贏過 liteparse、pymupdf4llm、markitdown 等對手",
+        "偵測邏輯設計細膩,detector.rs 對向量描邊文字、Identity-H 無 ToUnicode、Type3 字型、報紙式多欄版面等邊角案例都有專門啟發式與詳細註解說明校準依據",
+        "一次載入文件、偵測與擷取共用同一份解析結果,避免重複 I/O,並提供 EarlyExit/Full/Sample/Pages 多種掃描策略因應不同精度與速度取捨",
+        "同時提供 Rust crate、Python(PyO3)、Node.js(napi-rs)與瀏覽器 WebAssembly 四種介面,案例覆蓋主流語言與執行環境",
+        "CI 涵蓋 cargo test、rustfmt、clippy(含 WASM 目標)與多作業系統建置,測試包含手造 PDF 樣本與多份真實文件的 Markdown 快照比對"
+      ],
+      "use_cases": [
+        "RAG / LLM 文件前處理管線中,快速篩選哪些 PDF 可本地免 OCR 擷取、哪些需送往 OCR 服務",
+        "財報、法律文件、發票等結構化表格較多的文字型 PDF 轉 Markdown 供後續解析或索引",
+        "瀏覽器端(WebAssembly)本地判斷與擷取 PDF 內容,避免將檔案上傳伺服器",
+        "大量 PDF 批次分類任務,需要逐頁 OCR 路由而非整份文件二選一的場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 與 docs/ 下的多語言文件(rust-api、python、debugging、benchmarking)完整且附有基準測試方法論;測試涵蓋手造 PDF edge case 與真實文件快照比對,CI 有 test/fmt/clippy/build/wasm 五條 pipeline;版本號與發布 workflow(crates.io、PyPI、npm、wasm)顯示專案持續且規律地維護與發版。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "程式碼品質與文件都在水準之上,是專為 PDF/OCR 路由管線設計的實用工具,值得對 LLM 文件前處理有需求的工程師關注與評估導入。",
+      "_mode": "full"
+    }
+  },
+  "donnemartin/system-design-primer": {
+    "first_seen": "2026-08-04",
+    "last_seen": "2026-08-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-04": [
+        360525,
+        237,
+        8,
+        "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-04",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "一份組織完善的系統設計學習指南,專門用於準備技術面試中的系統設計題目。",
+      "summary": "這個專案彙整了大規模系統設計的核心知識,涵蓋 CAP 理論、快取策略、資料庫複寫、負載平衡等主題,並提供大量面試常見題目與範例解法。同時附上 Anki 記憶卡牌,方便利用間隔重複法複習關鍵概念,是準備系統設計面試的熱門參考資料。",
+      "highlights": [
+        "涵蓋從效能/擴展性、CAP 定理到快取、非同步、通訊協定等完整系統設計主題索引",
+        "提供 Anki 閃卡牌組(系統設計、系統設計練習題、物件導向設計)輔助記憶",
+        "包含實際面試常見的系統設計題目與範例解法討論、程式碼、圖表",
+        "支援多國語言翻譯(含繁體中文版 README-zh-TW.md),社群貢獻活躍",
+        "提供依準備時程(短/中/長期)分級的讀書計畫建議"
+      ],
+      "use_cases": [
+        "準備大型科技公司技術面試中的系統設計環節",
+        "軟體工程師想系統性補強分散式系統與架構設計基礎知識",
+        "作為教學或讀書會的系統設計主題大綱與延伸閱讀索引",
+        "搭配 Anki 卡牌做長期間隔複習,鞏固系統設計術語與概念"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README 結構清晰、索引完整、附圖表與多語言翻譯,文件品質極高;最近一次推送在 2026-03-20,加上今日登上 trending 且星數持續大幅成長,顯示長期維護與高討論度。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "系統設計面試準備的經典彙整資源,內容扎實且持續更新,非常值得加入書籤或學習清單。",
+      "_mode": "light"
+    }
+  },
+  "Alishahryar1/free-claude-code": {
+    "first_seen": "2026-08-04",
+    "last_seen": "2026-08-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-04": [
+        44046,
+        278,
+        12,
+        "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-04",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "本地代理伺服器,讓 Claude Code、Codex、Pi 等編碼代理程式可以透過任意 OpenAI 相容供應商(含免費/本地模型)運作,不需要 Anthropic 官方訂閱。",
+      "summary": "Free Claude Code 是一個以 FastAPI 打造的本地代理,攔截 Claude Code(Anthropic Messages協定)與 Codex(OpenAI Responses協定)的請求,轉發給使用者自選的 30 多種雲端或本地模型供應商,並保留原始串流、工具呼叫、推理等能力。專案提供本地 Admin UI 做供應商設定與驗證,也支援 Discord/Telegram 語音訊息橋接,讓使用者不必依賴官方訂閱即可用喜歡的模型驅動編碼代理。",
+      "highlights": [
+        "嚴格分層架構:application/api/cli/config/core/messaging/providers/runtime 各層有明確且以測試強制檢查的依賴邊界,禁止越級 import",
+        "CI 除了 ruff format/check、ty 型別檢查、pytest,還有一個專門 job 禁止 `# type: ignore`、`# ty: ignore` 與 `from __future__ import annotations` 等『抑制/舊式』寫法",
+        "對使用者可控的 web_fetch URL 實作了 SSRF 防護(egress.py):封鎖 localhost/.local/私網 IP,並將 DNS 解析結果與實際連線位址綁定,避免 DNS rebinding 攻擊",
+        "測試量體龐大(174+ 測試檔涵蓋 api/application/cli/config/core/messaging 等),另有 smoke 測試分 prereq/product 兩層做真實環境驗證",
+        "安裝腳本具備完整防重複執行、乾跑(--dry-run)、程序存活檢查與清楚的解除安裝流程"
+      ],
+      "use_cases": [
+        "想用 Claude Code/Codex/Pi 但沒有對應官方訂閱,改接免費或自架模型(如 Ollama、LM Studio、OpenRouter free tier)的開發者",
+        "需要在團隊內部集中管理多供應商 API Key 並讓不同模型分別對應 Fable/Opus/Sonnet/Haiku 等分級路由的場景",
+        "想在 Discord/Telegram 上以聊天或語音方式驅動編碼代理進行遠端協作",
+        "研究 Anthropic Messages 與 OpenAI Responses 協定互轉、SSE 串流重建等實作細節的工程參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件(README/ARCHITECTURE/CONTRIBUTING)完整且對安裝、供應商設定、還原步驟描述得非常清楚;測試覆蓋範圍與架構邊界測試少見地嚴謹;CI 落地了型別檢查、格式化、供應商契約測試,且啟用 uv 的 malware-check;版本號已迭代到 4.16.6,提交與 issue 模板等基礎設施齊全,顯示為持續維護中的專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝腳本 install.sh / install.ps1 會以 curl|sh 或 PowerShell iwr|iex 的模式從 GitHub raw 與官方網域(claude.ai、chatgpt.com、pi.dev、astral.sh)下載並執行安裝內容,使用者應在執行前自行確認腳本內容(README 中也提供了原始碼連結供檢視)",
+          "Admin UI 的預設驗證權杖(如文件範例中的 'freecc')與本地代理埠若曝露在非 localhost 網路介面,可能被同網段其他使用者存取,需使用者自行確認 Admin UI 綁定範圍與是否啟用權杖驗證"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質遠超一般週榜專案,架構分層、SSRF 防護與測試紀律都值得學習,若你有免費/本地模型串接編碼代理的需求,這個專案值得一試,但如所有 curl|sh 安裝方式一樣,建議先檢視腳本內容再執行。",
+      "_mode": "full"
+    }
+  },
+  "livekit/agents": {
+    "first_seen": "2026-08-04",
+    "last_seen": "2026-08-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-04": [
+        11984,
+        148,
+        14,
+        "A framework for building realtime voice AI agents 🤖🎙️📹",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-04",
+    "analysis": {
+      "category": "framework",
+      "one_liner": "LiveKit 官方推出的即時語音/多模態 AI Agent 開發框架,整合 STT、LLM、TTS 與 WebRTC。",
+      "summary": "livekit/agents 是一套用於建構即時、可程式化語音 AI 代理人的 Python 框架,讓開發者能快速組裝 STT、LLM、TTS 或 Realtime API,並透過 LiveKit 的 WebRTC 基礎設施與電話系統串接使用者。框架內建工作排程、多代理人交接(handoff)、語意斷句偵測、MCP 工具支援與專屬測試框架,目標是解決打造生產級語音助理時的即時串流與可靠性問題。",
+      "highlights": [
+        "支援近 60 種 STT/TTS/LLM/影像分身廠商外掛(OpenAI、Deepgram、Cartesia、ElevenLabs、Google、AWS 等),生態系相當完整",
+        "內建 AgentSession、多代理人 handoff、語意斷句偵測(transformer turn detector)等語音專屬抽象層",
+        "提供原生測試框架(judge/expect API)可對非決定性 LLM 對話流程寫斷言測試,並有豐富 CI(tests/realtime/stt/evals/release-gate 等 workflow)",
+        "原生支援 MCP(Model Context Protocol),可一行程式碼整合外部工具伺服器",
+        "官方隨附 AGENTS.md/CLAUDE.md 與 livekit/agent-skills,對 AI coding agent 開發流程有特別最佳化"
+      ],
+      "use_cases": [
+        "建構具語音對話能力的客服、訂餐、櫃台預約等應用(repo 內含 drive-thru、frontdesk 等完整範例)",
+        "需要低延遲、可中斷、支援多輪交接的語音代理人系統",
+        "將 LLM 代理人接上電話/SIP 系統做語音客服或外撥",
+        "需要為 LLM 對話流程撰寫自動化測試與行為評估(evals)的團隊"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(README、docs 網站、CONTRIBUTING、逐一範例),但主要文件在外部 docs.livekit.io,repo 內說明偏概覽;測試涵蓋率極高,168+ 測試檔案涵蓋各家外掛與核心邏輯,並有多組專屬 CI workflow(單元測試、即時模型、STT、評估、發版閘門);活躍度非常高,當日仍有 push,workflow 齊全,屬於持續高頻迭代的商業維運專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "生態系成熟、測試扎實、由 LiveKit 官方積極維護,若要做語音/多模態 AI Agent 產品,值得列入評估清單。",
+      "_mode": "full"
+    }
+  },
+  "jamiepine/voicebox": {
+    "first_seen": "2026-08-04",
+    "last_seen": "2026-08-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-04": [
+        48677,
+        412,
+        16,
+        "The open-source AI voice studio. Clone, dictate, create.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-04",
+    "analysis": {
+      "one_liner": "開源本地優先 AI 語音工作室,整合語音克隆、TTS、STT 與 AI Agent 語音輸出/輸入於一體",
+      "summary": "Voicebox 是一套以 Tauri (Rust) + React 打造的桌面應用,內建 7 種 TTS 引擎(含 Qwen3-TTS、Chatterbox、Kokoro 等)與 Whisper STT,主打完全本地運算、語音克隆、全域聽寫熱鍵、以及透過 MCP 讓 Claude Code / Cursor 等 AI Agent 用你克隆的聲音說話。目標是取代 ElevenLabs(語音輸出)與 WisprFlow(語音輸入)兩類雲端服務,一次補齊語音 I/O 的兩端。",
+      "category": "app",
+      "highlights": [
+        "7 種 TTS 引擎可切換,支援零樣本語音克隆與 23 種語言",
+        "內建 MCP Server,讓 Claude Code、Cursor 等 Agent 能用 voicebox.speak 直接開口說話",
+        "全域聽寫熱鍵,含 macOS 無障礙權限驗證的自動貼上機制",
+        "後端 FastAPI 與前端 Tauri/React 分層清楚,28+ 個後端測試檔涵蓋各引擎、GPU 後端與離線防護",
+        "支援 macOS MLX、Windows CUDA、AMD ROCm、Intel Arc 多平台 GPU 加速"
+      ],
+      "use_cases": [
+        "需要完全離線、隱私優先的語音克隆與文字轉語音工具",
+        "開發者想讓 AI coding agent(如 Claude Code)用自訂聲音回報任務進度",
+        "podcast 或有聲書等多軌語音敘事製作",
+        "為視障或語言障礙者提供語音輸入輸出輔助工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與文件非常詳盡(含 API、MCP 整合、Roadmap、疑難排解文件),CHANGELOG 詳細記錄每版變更。backend/tests 下有 28 個以上測試檔涵蓋各 TTS 引擎、GPU 偵測、離線防護等關鍵路徑,但 CI(ci.yml)目前只跑前端 typecheck 與 build,並未見到後端 pytest 或 Rust cargo test 的 CI 步驟,測試覆蓋與 CI 執行有落差。專案有明確版本規劃、Roadmap 文件與 agent skill 自動化流程,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 建置階段會直接安裝 git+https://github.com/QwenLM/Qwen3-TTS.git,屬第三方原始碼相依而非套件註冊表釘選版本,更新時需留意上游變動",
+          "MCP 工具 voicebox.transcribe 提供 audio_path 模式可讀取本機任意檔案,程式碼中已限制僅限 loopback(本機)呼叫端使用,屬合理防護但仍是需留意的功能設計"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件完整度俱佳,且巧妙串接了 AI Agent 語音輸出的新興需求,值得關注;但留意 CI 尚未涵蓋後端測試執行。",
       "_mode": "full"
     }
   }
