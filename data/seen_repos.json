@@ -977,7 +977,7 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-08-05",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
@@ -987,6 +987,13 @@
       "2026-07-30": [
         263280,
         616
+      ],
+      "2026-08-05": [
+        266482,
+        653,
+        5,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-07-28",
@@ -1025,7 +1032,7 @@
       "verdict": "屬於「流程/prompt 框架」而非傳統程式庫,文件與測試都做得紮實,對於想讓 AI 代理更守紀律地走完整個 SDLC 的團隊值得一試,但效果高度依賴底層 LLM 是否真的服從強語氣指令。",
       "_mode": "full"
     },
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
@@ -3061,10 +3068,10 @@
   },
   "zhaoxuya520/reverse-skill": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-01": [
         10725,
@@ -3090,6 +3097,13 @@
       "2026-08-04": [
         15788,
         2446,
+        2,
+        "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "PowerShell"
+      ],
+      "2026-08-05": [
+        17882,
+        2297,
         2,
         "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "PowerShell"
@@ -3239,10 +3253,10 @@
   },
   "usekaneo/kaneo": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-01": [
         5092,
@@ -3269,6 +3283,13 @@
         6862,
         665,
         15,
+        "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "TypeScript"
+      ],
+      "2026-08-05": [
+        7292,
+        559,
+        12,
         "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
         "TypeScript"
       ]
@@ -3359,10 +3380,10 @@
   },
   "microsoft/generative-ai-for-beginners": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-02": [
         114285,
@@ -3382,6 +3403,13 @@
         115551,
         775,
         7,
+        "21 Lessons, Get Started Building with Generative AI",
+        "Jupyter Notebook"
+      ],
+      "2026-08-05": [
+        116256,
+        783,
+        6,
         "21 Lessons, Get Started Building with Generative AI",
         "Jupyter Notebook"
       ]
@@ -3628,10 +3656,10 @@
   },
   "TencentCloud/TencentDB-Agent-Memory": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-02": [
         10350,
@@ -3651,6 +3679,13 @@
         12088,
         1090,
         5,
+        "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "TypeScript"
+      ],
+      "2026-08-05": [
+        13598,
+        1111,
+        1,
         "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
         "TypeScript"
       ]
@@ -3807,10 +3842,10 @@
   },
   "lyogavin/airllm": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-03": [
         25661,
@@ -3823,6 +3858,13 @@
         27107,
         1085,
         1,
+        "AirLLM 70B inference with single 4GB GPU",
+        "Jupyter Notebook"
+      ],
+      "2026-08-05": [
+        28379,
+        1711,
+        8,
         "AirLLM 70B inference with single 4GB GPU",
         "Jupyter Notebook"
       ]
@@ -4061,10 +4103,10 @@
   },
   "esengine/DeepSeek-Reasonix": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-03": [
         29064,
@@ -4077,6 +4119,13 @@
         29932,
         883,
         4,
+        "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "Go"
+      ],
+      "2026-08-05": [
+        30779,
+        922,
+        17,
         "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
         "Go"
       ]
@@ -4119,14 +4168,21 @@
   },
   "firecrawl/pdf-inspector": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-04": [
         8241,
         1699,
+        3,
+        "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "Rust"
+      ],
+      "2026-08-05": [
+        10021,
+        2540,
         3,
         "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "Rust"
@@ -4266,15 +4322,22 @@
   },
   "livekit/agents": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-05",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-04": [
         11984,
         148,
         14,
+        "A framework for building realtime voice AI agents 🤖🎙️📹",
+        "Python"
+      ],
+      "2026-08-05": [
+        12412,
+        432,
+        13,
         "A framework for building realtime voice AI agents 🤖🎙️📹",
         "Python"
       ]
@@ -4360,6 +4423,441 @@
       },
       "star_rating": 4,
       "verdict": "工程品質與文件完整度俱佳,且巧妙串接了 AI Agent 語音輸出的新興需求,值得關注;但留意 CI 尚未涵蓋後端測試執行。",
+      "_mode": "full"
+    }
+  },
+  "uber/ADR": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        680,
+        148,
+        4,
+        "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "one_liner": "Uber 開源的企業級 AI Agent 安全偵測系統,涵蓋遙測蒐集、攻擊基準測試與威脅偵測三大模組。",
+      "summary": "ADR(Agentic AI Detection and Response)是 Uber 在生產環境中實際部署、並發表於 MLSys 2026 論文的 AI Agent 安全系統。此開源版本包含三個核心組件:ADR Sensor(從 Claude Code、Cursor、Codex 等 7+ 種 AI 編碼工具蒐集並正規化遙測資料)、ADR-Bench(303 個任務、133 個 MCP 伺服器組成的攻防基準測試集)、以及 ADR Detection(結合高召回率初篩與深度推理的雙代理偵測器)。防護攔截(Prevention)模組尚未開源。",
+      "category": "security",
+      "highlights": [
+        "Uber 生產環境實戰驗證,並有 MLSys 2026 論文與投影片佐證研究嚴謹度",
+        "ADR Sensor 支援 Claude Code、Cursor、Cline、Codex、Warp、Claude Desktop 六種 Agent 的日誌解析,並正規化為統一 AgentEvent schema",
+        "ADR-Bench 提供 303 個任務(261 良性 + 42 惡意)、133 個 MCP 伺服器,涵蓋 17 種 Agent 攻擊技術,並整合公開的 AgentDojo prompt injection 基準",
+        "論文結果顯示雙代理偵測器在 ADR-Bench 上達到 100% 精確率、67% 召回率、0 誤報,優於 LlamaFirewall 等基準方法",
+        "對研究用的合成憑證、有意設計成有漏洞的 MCP 伺服器等敏感內容,在文件中皆有清楚揭露與風險說明"
+      ],
+      "use_cases": [
+        "企業導入 AI 編碼助理(Claude Code、Cursor、Codex 等)時,建置遙測蒐集與安全可觀測性管線",
+        "研究人員評估或比較不同 AI Agent 威脅偵測器(如 prompt injection、資料外洩偵測)的效能",
+        "安全團隊在隔離環境中用 ADR-Bench 進行紅隊演練,測試自家 MCP 伺服器與 Agent 流程的防禦能力"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 4,
+        "comment": "文件品質極高,README 結構清晰、附有架構圖、輸出 schema 範例及完整的可重現性文件;Sensor 與 Detection 兩子專案皆有獨立測試套件與 GitHub Actions CI。Sensor 模組代碼簡潔、型別標註齊全、錯誤處理穩健(如 observer.py 的容錯設計)。活躍度方面倉庫剛開源(day 1 trending),commit 歷史尚短,但有 Uber 團隊背書與論文支援,後續維護值得觀察。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Detection/ 模組的部分相依套件因基準測試可重現性需求而釘選舊版本(如 torch、transformers 等透過 llamafirewall 引入的套件),文件明確標示這些版本存在已知 CVE,僅適用於隔離環境的研究基準,不建議用於正式環境",
+          "Detection/ 內含刻意設計的「惡意」MCP 伺服器與含有合成憑證的測試資料,用於訓練與測試威脅偵測能力;專案文件(docs/OPEN_SOURCE_REVIEW.md)已清楚聲明這些為研究用合成資料,並非真實憑證或機密"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "由 Uber 實戰部署並經 MLSys 論文驗證的 AI Agent 安全框架,文件與測試品質俱佳,對關注 AI Agent 安全與 MCP 威脅偵測的工程師相當值得研究參考。",
+      "_mode": "full"
+    }
+  },
+  "cypress-io/cypress": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        50789,
+        11,
+        7,
+        "Fast, easy and reliable testing for anything that runs in a browser.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Cypress 是專為現代瀏覽器應用打造的端對端與元件測試框架,強調快速、易用與可靠。",
+      "summary": "Cypress 提供一站式的前端測試解決方案,涵蓋端對端測試(E2E)與元件測試,支援 React、Vue、Angular、Svelte 等主流框架的 testing-library 整合。透過 npm/yarn/pnpm 安裝即可使用,並可搭配 Cypress Cloud 提供測試回放(test replay)與雲端執行報告。",
+      "highlights": [
+        "支援端對端測試與元件測試(component-testing)兩種模式",
+        "原生整合 React、Vue、Angular、Svelte 的 testing-library",
+        "提供 Cypress Cloud 雲端服務與 Test Replay 除錯回放功能",
+        "MIT 授權,生態成熟,npm 下載量高",
+        "今日登上 GitHub trending 第 7 名,累積 50789 顆星"
+      ],
+      "use_cases": [
+        "前端專案的端對端(E2E)自動化測試",
+        "React/Vue/Angular/Svelte 元件層級的單元式測試",
+        "CI/CD 流程中整合瀏覽器測試並產出雲端測試報告"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 僅提供安裝與貢獻指引等基本資訊,詳細文件需連至官方 on.cypress.io,故文件完整度普通;測試品質僅能依 README 判斷,無法檢視原始碼與測試覆蓋率;專案於 2026-08-04 仍有推送紀錄且登上 trending,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "Cypress 是業界成熟且持續活躍的前端測試框架,對開發前端測試策略的工程師來說值得關注與導入。",
+      "_mode": "light"
+    }
+  },
+  "webpack/webpack": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        65930,
+        10,
+        9,
+        "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through \"loaders\", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "one_liner": "webpack 是最主流的 JavaScript 模組打包工具,支援程式碼分割、多種模組格式與豐富的 loader/plugin 生態系。",
+      "summary": "webpack 是一個將 JavaScript 及其相關資源(CSS、圖片、TypeScript 等)打包成瀏覽器可用檔案的模組打包器,支援 ES Modules、CommonJS、AMD 混用,並透過程式碼分割與快取機制優化載入效能。此次上榜是因為長期活躍維護、單日新增 10 顆星登上 trending 榜第 9 名,而非全新專案爆紅。",
+      "category": "devtool",
+      "highlights": [
+        "核心程式碼具備完整 JSDoc 型別註記,搭配 TypeScript 做型別檢查,程式碼品質工程化程度高",
+        "測試覆蓋非常完整,test/ 目錄下有 175+ 支測試檔,涵蓋 unittest、整合測試、benchmark、test262 規格測試等多種層級",
+        "CI/CD 齊備,包含 test、codeql 資安掃描、dependency-review、benchmark 等多個 GitHub Actions workflow",
+        "採用 changeset 管理版本與變更紀錄,治理結構(TSC、Core Working Group)透明",
+        "外部 loader/plugin 生態系龐大,幾乎所有前端資源類型都能整合"
+      ],
+      "use_cases": [
+        "前端專案建置與打包,支援程式碼分割以降低首屏載入時間",
+        "透過 loader 將 TypeScript、Sass/Less、圖片等非 JS 資源整合進打包流程",
+        "作為其他上層工具(如 create-react-app 類工具、框架 CLI)底層的建置引擎",
+        "客製化 plugin 開發以擴充建置流程(如壓縮、快取雜湊、模組替換)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件方面 README 偏向生態系導覽與贊助商列表,實際使用教學導向官網 webpack.js.org,原始碼內則有完整 JSDoc 型別註解彌補;測試覆蓋非常齊全,從單元測試到 test262 規格測試都有;專案活躍度極高,package.json 版本為 5.109.2,最後 push 時間為今日,CI workflow 齊全,是一個工程化成熟、長期活躍的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "webpack 是前端建置工具鏈的基石級專案,長期維護品質穩定,雖已是老牌工具、無需追新,但對任何前端/建置工具開發者都仍是必懂的參考實作。",
+      "_mode": "full"
+    }
+  },
+  "gabime/spdlog": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        29374,
+        10,
+        10,
+        "Fast C++ logging library.",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "category": "library",
+      "one_liner": "spdlog 是一個高效能、header-only 的 C++ 日誌函式庫,底層使用 fmt 格式化引擎。",
+      "summary": "spdlog 提供同步/非同步兩種模式的日誌記錄,支援多種輸出目標(檔案輪替、每日檔案、主控台、syslog、Windows event log、Qt widget 等),並可透過自訂 sink 擴充。專案已相當成熟(29k+ stars),被廣泛作為 C++ 專案的標準日誌方案,各大套件管理器(apt、brew、vcpkg、conan 等)均已收錄。",
+      "highlights": [
+        "Header-only 或編譯式雙模式,C++11 相容,亦支援到 C++20",
+        "採用 fmt 函式庫做格式化,效能實測可達每秒數百萬筆訊息",
+        "支援非同步日誌、backtrace 環形緩衝、MDC(Mapped Diagnostic Context)等進階功能",
+        "CI 涵蓋 Linux/macOS/Windows 多編譯器版本矩陣,並包含 ASan/TSan 執行",
+        "命名空間可自訂(namespace override),方便在大型專案中避免符號衝突"
+      ],
+      "use_cases": [
+        "需要高效能日誌記錄的 C++ 後端服務或系統軟體",
+        "嵌入式/跨平台專案(Linux、BSD、macOS、Windows、Android)需要一致的日誌介面",
+        "需要非同步、不阻塞主執行緒的日誌方案",
+        "希望透過 sink 機制整合自訂告警(如 email、監控系統)的專案"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 範例豐富、涵蓋各種使用情境,搭配 wiki 提供進一步文件。tests/ 目錄有近 30 個測試檔案涵蓋 async、pattern formatter、file 輪替、mpmc queue 等核心模組。CI 設定嚴謹,對多個編譯器版本、C++ 標準版本及 sanitizer 進行測試,並有獨立的 namespace override 迴歸測試。核心程式碼(如 registry.h、os.h)介面清晰、註解得當、執行緒安全性有明確說明,屬於工程品質很高的成熟專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "成熟穩定、被廣泛採用的 C++ 日誌標準方案,若專案需要日誌函式庫,值得直接採用而非重新造輪子。",
+      "_mode": "full"
+    }
+  },
+  "denoland/deno": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        108061,
+        31,
+        11,
+        "A modern runtime for JavaScript and TypeScript.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Deno 是以 Rust、V8 和 Tokio 打造的現代 JavaScript/TypeScript/WebAssembly 執行環境,強調安全預設值與開箱即用的開發體驗。",
+      "summary": "Deno 是 Node.js 原作者 Ryan Dahl 主導的新一代 JS/TS runtime,內建權限沙盒、TypeScript 支援、格式化/測試/lint 工具鏈,並持續強化與 npm 生態系及 Node.js API 的相容性。此為官方主倉庫,包含 CLI、runtime、V8 ops 綁定等核心 Rust 程式碼。",
+      "highlights": [
+        "預設安全沙盒:檔案、網路、環境變數等存取需明確授權(--allow-net 等旗標)",
+        "原生支援 TypeScript、ESM、Web 標準 API(fetch、Deno.serve 等),無需額外設定",
+        "持續投入 Node.js/npm 相容層(ext/node、libs/npm_installer 等大量模組)",
+        "官方 CI/CD 高度自動化,workflows 以 TypeScript 撰寫再產生對應 .generated.yml",
+        "測試覆蓋範圍廣,含 node_compat、ecosystem_compat、bench 等多層次測試"
+      ],
+      "use_cases": [
+        "需要內建安全模型(權限最小化)的伺服器端 JS/TS 執行環境",
+        "全端 TypeScript 專案,不想額外設定 tsconfig/babel 轉譯流程",
+        "評估從 Node.js 遷移、想兼顧 npm 套件相容性與現代 API 的團隊",
+        "研究 Rust 撰寫大型 runtime/V8 綁定架構的參考範例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(README、doc/architecture.md、多個子模組各自 README),CI 涵蓋建置、npm/node 相容性、生態系相容性等多層次測試,workflows 以程式碼產生確保一致性。commit 頻率高、最近一次 push 在同一天內,活躍度極高。原始碼風格一致(統一版權標頭、模組化良好),屬成熟大型專案水準。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "Deno 是成熟且持續高速迭代的官方旗艦專案,無論是要當工具用還是研究大型 Rust runtime 架構,都非常值得關注。",
+      "_mode": "full"
+    }
+  },
+  "angular/angular": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        100827,
+        13,
+        14,
+        "Deliver web apps with confidence 🚀",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "one_liner": "Google 官方維護的現代化前端開發平台,用 TypeScript 打造可擴展的 Web/行動應用",
+      "summary": "Angular 是一套完整的前端開發平台,涵蓋元件化架構、表單、路由、SSR、動畫等企業級功能,並搭配 CLI 與 Angular Material 生態系。此次登上 Trending 屬於長青專案的日常熱度波動,而非新專案爆紅。",
+      "category": "framework",
+      "highlights": [
+        "官方文件完善,提供 Quickstart、Architecture、Forms、API 等分類清晰的教學連結",
+        "生態系成熟,涵蓋 CLI、Angular Material、Schematics、SSR、Lazy Loading 等進階功能",
+        "10 萬+ star 的長青專案,由 Google 團隊持續維護,最近一次 push 在今天",
+        "支援 Angular Elements、動畫、伺服器端渲染等企業級開發需求"
+      ],
+      "use_cases": [
+        "建立大型企業級 SPA 或 PWA 應用",
+        "需要官方長期支援與完整生態系(表單、路由、SSR)的專案",
+        "團隊已有 TypeScript 基礎,想要有明確架構規範的前端框架",
+        "透過 Angular CLI 快速建立可擴展的專案骨架"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 文件結構清晰,連結導向官方 angular.dev 完整文件,但本身 README 內容較精簡,未展示測試涵蓋率等資訊;僅依 README 評估,無法看到原始碼品質。作為超過 10 萬星、持續每日更新的專案,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "Angular 是業界標準的前端框架之一,文件與生態系成熟,若尚未熟悉可列入學習清單,但對已知曉此框架的工程師來說並非需要立即關注的新資訊。",
+      "_mode": "light"
+    }
+  },
+  "tailwindlabs/tailwindcss": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        96475,
+        52,
+        15,
+        "A utility-first CSS framework for rapid UI development.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "one_liner": "Tailwind CSS — 業界主流的 utility-first CSS 框架,搭配 Rust 引擎(Oxide)提供高速類別掃描與編譯。",
+      "summary": "Tailwind CSS 讓開發者直接在 HTML 標籤上組合預設的工具類別(utility classes)來建構介面樣式,取代手寫自訂 CSS。v4 版本以 Rust 撰寫核心掃描/編譯引擎(crates/oxide),並提供 PostCSS、Vite、Webpack、Turbopack 等多種建置整合套件。專案由 Tailwind Labs 維護,是目前前端生態系中最主流的 CSS 框架之一。",
+      "category": "framework",
+      "highlights": [
+        "核心引擎以 Rust 重寫(crates/oxide),大幅提升類別掃描與建置效能",
+        "monorepo 內含 tailwindcss 核心與 cli/postcss/vite/webpack/turbopack/upgrade 等九個官方整合套件",
+        "CI 涵蓋 Windows、Linux、macOS 三平台,包含 Rust 測試、Vitest 單元測試與 Playwright UI 測試",
+        "CHANGELOG 更新頻率高且記錄詳盡,每筆修正都附對應 PR 連結,顯示活躍且嚴謹的維護流程",
+        "TypeScript 原始碼型別定義完整、模組化清楚,可讀性高"
+      ],
+      "use_cases": [
+        "需要快速建構響應式 UI 而不想手寫大量自訂 CSS 的前端專案",
+        "搭配 React/Vue/Next.js 等框架搭建設計系統或元件庫",
+        "從 Tailwind v3 舊版設定遷移至 v4 的專案(可用 @tailwindcss/upgrade 工具)",
+        "需要高效能建置流程(Vite/Webpack/Turbopack)的大型前端專案"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "測試覆蓋非常完整(TypeScript 端 70+ 測試檔涵蓋 utilities、variants、compat 等,加上 Playwright UI 測試與 Rust 端 cargo test),CI 三平台皆跑;README 精簡但完整文件在官網,CHANGELOG 詳細且更新頻繁(最近一次推送為今日),屬於維護活躍度極高的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "前端生態系的標竿專案,程式碼品質、測試覆蓋與維護活躍度都達到頂尖水準,絕對值得持續關注。",
+      "_mode": "full"
+    }
+  },
+  "browser-use/video-use": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        19331,
+        320,
+        16,
+        "Edit videos with coding agents",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "讓 Claude Code 等編碼型 AI Agent 透過對話直接剪輯影片的開源「skill」套件。",
+      "summary": "video-use 不是傳統影片剪輯軟體,而是一組給 Claude Code / Codex 等 agent 使用的 SKILL.md 指令 + Python 輔助腳本。使用者把素材丟進資料夾,用自然語言跟 agent 對話(\"剪成一支發表影片\"),agent 會呼叫 ElevenLabs Scribe 做逐字稿轉錄、用 ffmpeg 做剪接/調色/字幕燒錄,並透過 timeline_view 產生的縮圖+波形圖在關鍵決策點\"看\"畫面,而非逐幀餵給 LLM。核心理念與 browser-use 給 LLM 結構化 DOM 而非截圖類似,這裡是給 LLM 結構化逐字稿而非影格。",
+      "highlights": [
+        "音訊轉錄為主軸:靠 ElevenLabs Scribe 的字詞級時間戳做剪點判斷,只在必要時才產生視覺縮圖,大幅降低 token 消耗(README 宣稱比逐幀餵圖省下 45M tokens)",
+        "12 條「硬規則」寫在 SKILL.md 中,規範字幕必須最後疊加、音訊需 30ms 淡入淡出、剪點需對齊字詞邊界等,避免 agent 產生無聲失敗的輸出",
+        "render.py 內建 HDR 轉 SDR tonemap、直式影片偵測、雙軌響度正規化(-14 LUFS)等貼近實務的影片後製細節",
+        "支援多種動畫引擎(HyperFrames、Remotion、Manim、PIL)並可平行派送多個 sub-agent 各自產生一段動畫",
+        "自我校驗迴圈:render 完會用 timeline_view 檢查每個剪點有無跳幀、音訊爆音、字幕被遮擋等問題,最多重試 3 次才呈現給使用者"
+      ],
+      "use_cases": [
+        "個人 vlogger / YouTuber 想用聊天方式快速把多顆素材剪成一支影片,不想學剪輯軟體",
+        "產品發表影片、教學影片等需要字幕燒錄+動畫疊圖+調色的內容,交給 agent 全自動處理",
+        "需要在 CI 或無人值守環境(如透過 Telegram/VPS)持續產出剪輯內容的自動化流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 3,
+        "comment": "README、install.md、SKILL.md 文件寫得非常詳盡且具體(含理由、範例、反例),對 agent 使用情境的說明品質很高。helpers/ 下的 Python 腳本(render.py、transcribe.py 等)結構清晰、有函式層級註解說明「為什麼」而非只說「做什麼」,subprocess 呼叫皆用參數陣列而非 shell 字串拼接,未見明顯注入風險。但本專案性質是「agent skill」而非傳統函式庫,沒有自動化測試、也沒有 CI workflow,程式正確性目前仰賴人工/agent 驗證而非測試覆蓋。最後一次推送為 2026-07-01,近期無新提交。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install.md 引導 agent 執行 git clone、brew/apt/pacman 安裝套件、以及建立符號連結到 ~/.claude/skills 等操作,屬於一般開發工具安裝流程,但因為是設計給 AI agent 自動執行的指令文件,使用者應留意 agent 是否真的依照文件描述行事,而非盲目授權任意指令。",
+          "ElevenLabs API 金鑰會寫入本地 .env 檔(並設定 chmod 600),transcribe.py 會讀取此金鑰並以 HTTPS 呼叫 api.elevenlabs.io 上傳音訊做轉錄,屬預期功能,但代表使用者的影片音訊內容會被傳送到第三方(ElevenLabs)服務。",
+          "SKILL.md 建議動畫引擎可用 npx --yes 直接執行套件(如 hyperframes、create-video),npx --yes 會自動下載並執行對應 npm 套件,使用者應了解這會從 npm registry 取得並執行未經額外審查的第三方套件碼。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念新穎且文件品質極高,對想用 AI agent 自動化剪片的人值得一試,但屬新專案且無自動化測試,實際穩定度仍待觀察。",
+      "_mode": "full"
+    }
+  },
+  "EveryInc/compound-engineering-plugin": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-05": [
+        23870,
+        40,
+        18,
+        "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-05",
+    "analysis": {
+      "one_liner": "一套讓 Claude Code、Codex、Cursor 等多種 AI 編碼代理都能用的「複合工程」技能插件,把腦力激盪、規劃、執行、審查、知識沉澱串成可重複的開發迴圈。",
+      "summary": "Compound Engineering Plugin 提供 32 個技能(skills),涵蓋 brainstorm、plan、work、code-review、compound 等步驟,目標是讓每次工程工作都能為下一次工作降低成本,而非累積技術債。專案本身以 TypeScript 撰寫轉換器,把同一套 Claude 相容技能定義轉譯成 Codex、Cursor、OpenCode、Pi、Devin、Grok 等十多種代理平台可用的格式,並附完整的 CLI、CI 與測試。",
+      "category": "devtool",
+      "highlights": [
+        "32 個可組合的 CE 技能(ce-brainstorm/ce-plan/ce-work/ce-code-review/ce-compound 等)構成一個完整的規劃導向開發迴圈,並支援 /lfg 全自動流水線",
+        "同一套技能定義透過 TypeScript 轉換器自動轉換給 Claude Code、Codex、Cursor、OpenCode、Devin、Grok、Kimi、Qwen 等十餘種 AI 編碼代理使用",
+        "測試覆蓋非常扎實,152+ 個 bun test 檔案,CI 額外開了 windows-native job 專門驗證跨平台腳本的邊界案例",
+        "文件體系完整,除 README 外還有 docs/skills 技能目錄、docs/brainstorms 需求文件、docs/solutions 知識庫,體現專案自身宣稱的『知識複利』理念",
+        "採用 release-please 自動化版本與 CHANGELOG,commit 訊息與 PR 規範嚴謹,維護者身分公開透明"
+      ],
+      "use_cases": [
+        "希望在 Claude Code / Codex / Cursor 中導入結構化的『規劃先於實作』開發流程的團隊",
+        "想要一套可跨多種 AI 編碼工具共用、不用重寫的技能/提示詞資產",
+        "需要自動化 PR 審查、程式碼簡化、bug 除錯到知識沉澱的完整代理工作流",
+        "研究如何設計大型多技能 AI Agent 插件架構與跨平台轉換器的工程師"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件、測試與 CI 的完整度在同類專案中屬上乘:README 詳盡到近乎手冊等級,程式碼內附有大量解釋『為什麼』的註解,release-please 自動化版本管理搭配 CI 嚴格 schema 驗證,近期 push 就在今天,版本已迭代到 3.21.1,活躍度很高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對已在用 Claude Code / Codex 等 AI 編碼代理、想把開發流程系統化的工程師來說值得一試;純粹找程式碼函式庫或框架的人可以跳過,這本質上是一套工作流技能包而非通用程式庫。",
       "_mode": "full"
     }
   }

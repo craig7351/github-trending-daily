@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-05",
+    "analyzed": 9,
+    "cached": 9,
+    "deferred": 0,
+    "top_name": "denoland/deno",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-04",
     "analyzed": 5,
     "cached": 11,
