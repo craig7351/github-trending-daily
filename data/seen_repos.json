@@ -977,8 +977,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 1,
+    "last_seen": "2026-08-06",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -992,6 +992,13 @@
         266482,
         653,
         5,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
+      ],
+      "2026-08-06": [
+        267312,
+        931,
+        8,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
       ]
@@ -1032,8 +1039,8 @@
       "verdict": "屬於「流程/prompt 框架」而非傳統程式庫,文件與測試都做得紮實,對於想讓 AI 代理更守紀律地走完整個 SDLC 的團隊值得一試,但效果高度依賴底層 LLM 是否真的服從強語氣指令。",
       "_mode": "full"
     },
-    "total_days_on_trending": 3,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -3656,10 +3663,10 @@
   },
   "TencentCloud/TencentDB-Agent-Memory": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-06",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-02": [
         10350,
@@ -3686,6 +3693,13 @@
         13598,
         1111,
         1,
+        "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "TypeScript"
+      ],
+      "2026-08-06": [
+        15069,
+        1892,
+        3,
         "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
         "TypeScript"
       ]
@@ -3842,10 +3856,10 @@
   },
   "lyogavin/airllm": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-03": [
         25661,
@@ -3865,6 +3879,13 @@
         28379,
         1711,
         8,
+        "AirLLM 70B inference with single 4GB GPU",
+        "Jupyter Notebook"
+      ],
+      "2026-08-06": [
+        29092,
+        833,
+        13,
         "AirLLM 70B inference with single 4GB GPU",
         "Jupyter Notebook"
       ]
@@ -4103,10 +4124,10 @@
   },
   "esengine/DeepSeek-Reasonix": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-03": [
         29064,
@@ -4126,6 +4147,13 @@
         30779,
         922,
         17,
+        "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "Go"
+      ],
+      "2026-08-06": [
+        31619,
+        747,
+        6,
         "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
         "Go"
       ]
@@ -4168,10 +4196,10 @@
   },
   "firecrawl/pdf-inspector": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-06",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-04": [
         8241,
@@ -4184,6 +4212,13 @@
         10021,
         2540,
         3,
+        "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "Rust"
+      ],
+      "2026-08-06": [
+        11458,
+        1582,
+        5,
         "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "Rust"
       ]
@@ -4223,15 +4258,22 @@
   },
   "donnemartin/system-design-primer": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-04",
+    "last_seen": "2026-08-06",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-04": [
         360525,
         237,
         8,
+        "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+        "Python"
+      ],
+      "2026-08-06": [
+        361538,
+        303,
+        4,
         "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
         "Python"
       ]
@@ -4428,15 +4470,22 @@
   },
   "uber/ADR": {
     "first_seen": "2026-08-05",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-05": [
         680,
         148,
         4,
+        "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
+        "Python"
+      ],
+      "2026-08-06": [
+        1044,
+        354,
+        12,
         "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
         "Python"
       ]
@@ -4716,15 +4765,22 @@
   },
   "tailwindlabs/tailwindcss": {
     "first_seen": "2026-08-05",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-05": [
         96475,
         52,
         15,
+        "A utility-first CSS framework for rapid UI development.",
+        "TypeScript"
+      ],
+      "2026-08-06": [
+        96857,
+        408,
+        11,
         "A utility-first CSS framework for rapid UI development.",
         "TypeScript"
       ]
@@ -4859,6 +4915,248 @@
       "star_rating": 4,
       "verdict": "對已在用 Claude Code / Codex 等 AI 編碼代理、想把開發流程系統化的工程師來說值得一試;純粹找程式碼函式庫或框架的人可以跳過,這本質上是一套工作流技能包而非通用程式庫。",
       "_mode": "full"
+    }
+  },
+  "cloudflare/computer": {
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-06": [
+        2952,
+        891,
+        1,
+        "Give your agent a computer 👾",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-06",
+    "analysis": {
+      "one_liner": "Cloudflare 官方發布的「給 AI Agent 用的虛擬電腦」——把 Durable Object + SQLite 包裝成可插拔執行環境(容器 / Worker Shell / Worker JS)的檔案系統與執行層。",
+      "summary": "Cloudflare Computer 是一個活在 Durable Object 裡的虛擬檔案系統,狀態統一存放於 SQLite,並透過 `workspace.runtime` 對外暴露三種可插拔的執行後端:真實 FUSE 掛載的容器、跑 just-bash 的 Dynamic Worker,以及跑 ECMAScript 模組的 Dynamic Worker。目的是讓 AI Agent(如程式碼助手、自動化工作流)能在 Cloudflare 平台上取得一個具備真實檔案系統與執行能力的「電腦」,同時保有 Workers 的低成本與快速啟動特性。專案明確標示為 PREVIEW ONLY,API 尚不穩定,不建議用於生產環境。",
+      "category": "infra",
+      "highlights": [
+        "三種執行後端可插拔切換(真實 FUSE 容器 / Worker Shell / Worker JavaScript),且共用同一份 SQLite 權威狀態",
+        "採用 capnweb RPC 讓 Durable Object 與 sandbox 內的 computerd daemon 同步檔案狀態",
+        "工程規範完整:每個原始檔幾乎都有對應的 .test.ts、CI 依套件切成獨立 job、用 changesets 管理發版",
+        "附有給 AI coding agent 看的 AGENTS.md 與 .agents/skills/,連開發流程本身都是為 agent 協作設計的",
+        "docs/ 下有 19 份編號規格文件,含效能基準測試(FUSE 掛載對比原生磁碟)"
+      ],
+      "use_cases": [
+        "需要讓 LLM Agent 在雲端取得一個有真實檔案系統與 shell/程式碼執行能力的沙箱環境",
+        "在 Cloudflare Workers/Durable Object 架構上建置 AI coding agent 或自動化工作流的後端基礎設施",
+        "研究或實驗 Serverless 環境下的 VFS 同步協定(SQLite ↔ 容器 FUSE 掛載)設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與測試品質在同類專案中相當突出:README 分層清楚、docs/ 有 19 份規格文件並註明「forward-looking」、AGENTS.md 詳列環境陷阱(如 fuse-native 原生編譯、arm64 相容性),抽樣的原始碼(workspace.ts、filesystem.ts)註解精簡但都在解釋非顯而易見的設計決策。測試幾乎與原始檔案一一對應,CI 依套件切成獨立 job 並涵蓋 lint/typecheck/test。專案剛上 trending 第一天且 last push 為前一天,活躍度高,但作者也明確聲明這是 preview 階段、API 會變動。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "Cloudflare 官方出品、工程紀律極高的 AI Agent 沙箱基礎設施,值得追蹤與學習其架構設計,但目前仍是 preview 階段、API 不穩定,尚不適合直接用於生產專案。",
+      "_mode": "full"
+    }
+  },
+  "huangruiteng/loopx": {
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-06": [
+        2125,
+        326,
+        2,
+        "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-06",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "LoopX 是一個給長時間運行 AI Agent 用的本地控制平面,負責維護目標、待辦、證據與配額,讓 Codex/Claude Code/Cursor 等 agent 的多輪工作可被追蹤與交接。",
+      "summary": "LoopX 是一套與 agent runtime 無關的輕量狀態核心(state kernel),用來管理長時間執行的 AI agent 工作:保存目標(goal)、可執行 todo、使用者關卡(gate)、證據記錄與配額(quota),讓工作在多個 turn、多個工具、甚至多個 peer agent 之間可以被恢復、審查與交接。它本身不是 agent runtime,而是掛在 Codex、Claude Code、Cursor 等執行環境外層的控制層,核心 Python 套件無執行期依賴。",
+      "highlights": [
+        "純標準庫實作,無 runtime 依賴,核心概念是『目標+關卡+待辦+證據+配額』五問控制面",
+        "支援多種 agent host(Codex App/CLI、Claude Code、OpenCode、Cursor)透過統一的 CLI tick 對接",
+        "官方展示 200+ 小時跨多輪的真實 issue-fix 與 ML 實驗軌跡作為長時間運作證據",
+        "專案規模龐大且模組化極細(loopx/control_plane 下按 domain 拆分,examples/control_plane 下有 400+ 個 smoke 腳本)",
+        "CI 含 ruff lint、mypy 型別檢查與 pytest,但整體程式碼覆蓋率門檻僅設在 19.6%"
+      ],
+      "use_cases": [
+        "管理跨多天的工程/研究/實驗類長任務,需要保留目標範圍與證據不遺失",
+        "多個 AI agent(peer)協作同一專案時,需要明確的認領、租約與交接機制",
+        "需要在自動化 agent 執行前設置人工核准關卡(如發布、正式環境寫入等敏感操作)",
+        "想要在 Codex、Claude Code、Cursor 等不同 agent 工具間切換,但保留同一套任務狀態與歷史紀錄"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "文件非常詳盡(README、架構文件、多份中文開發課程、事件記錄與 showcase 都齊全),但這也讓專案顯得相當複雜、學習曲線高。測試檔案數量多(tests/ 內約 50 個檔案,examples/control_plane 下另有 400+ 個 smoke 腳本),CI 有 lint、mypy、pytest 三道關卡,顯示工程紀律不錯;不過 pytest 的覆蓋率門檻僅要求 19.6%,顯示測試對整體程式碼的覆蓋仍偏低,更像是針對特定關鍵路徑的契約測試而非全面覆蓋。專案活躍度高,commit/push 頻繁(最後推送即為今天),issue/incident 文件持續更新。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝腳本 scripts/install-from-github.sh 採用 curl 下載後 bash 執行的常見安裝模式(README 中也提供此指令),但腳本內有做 tarball SHA256 雜湊記錄與透過 GitHub commit API 解析成完整 40 碼 commit SHA 再下載對應 codeload 封存檔,流程相對嚴謹,未發現另外的可疑外部網域",
+          "loopx/claude_goal_mode 提供選擇性(opt-in、預設關閉)的 Claude Code adapter 安裝腳本,需使用者主動設定 LOOPX_INSTALL_CLAUDE=1 才會安裝 MCP/hook,預設不會靜默安裝"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念明確且文件與工程紀律扎實,是值得長時間跑 agent 任務的開發者評估的控制層工具,但專案複雜度偏高、仍屬 v0.4 早期階段,建議先小範圍試用再決定是否深度整合。",
+      "_mode": "full"
+    }
+  },
+  "addyosmani/agent-skills": {
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-06": [
+        81987,
+        226,
+        7,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-06",
+    "analysis": {
+      "one_liner": "一套針對 AI coding agent 設計的工程技能包,把資深工程師的開發流程(規格、規劃、TDD、審查、部署)包裝成結構化 Markdown 技能,讓 Claude Code、Cursor、Codex 等多種 agent 都能一致遵循。",
+      "summary": "agent-skills 由 Addy Osmani 主導,提供 24 個技能(定義、規劃、實作、驗證、審查、上線六階段)與 8 個對應的 slash 指令,將 Google 工程文化中的實務準則(Hyrum's Law、trunk-based development、Chesterton's Fence 等)寫成 agent 可遵循的工作流程文件。專案支援 Claude Code、Cursor、Codex、Gemini CLI 等 70 多種 agent 整合方式。核心產出是純 Markdown/JSON 內容,搭配少量 Node.js 驗證腳本與 shell hook,不涉及執行期依賴或建置流程。",
+      "category": "devtool",
+      "highlights": [
+        "24個技能涵蓋完整開發生命週期,每個技能都有一致的骨架:概觀、觸發條件、流程、反合理化表、紅旗、驗證要求",
+        "提供4個專家人格(code-reviewer、test-engineer、security-auditor、web-performance-auditor)可作為子代理人審查角色",
+        "CI使用validate-skills.js、validate-commands.js與run-evals.js做內容一致性檢查與路由評測,顯示維護者重視品質把關而非只是堆文件",
+        "支援透過官方skills CLI一鍵安裝到70多種agent工具,也提供Claude Code marketplace/plugin原生整合",
+        "session-start.sh會在會話開始時注入meta-skill,邏輯簡單透明,沒有對外連線行為"
+      ],
+      "use_cases": [
+        "團隊想讓多個AI coding agent在專案中遵循一致的工程規範與審查標準",
+        "個人開發者想用結構化slash指令取代零散的prompt,建立可重複的開發節奏",
+        "希望在AI輔助開發中導入TDD、安全檢查清單、效能量測等最佳實務",
+        "研究如何設計可驗證、可組合的agent skill/prompt工程方法論"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件是這個專案的核心產出,品質非常完整。雖然主體是Markdown而非傳統應用程式碼,但仍有scripts下的Node.js驗證器與對應的單元測試,CI會跑三層檢查並用claude plugin validate驗證外掛結構,顯示有實質的自動化品質把關。專案剛登上trending、一天內新增226星,活躍度高,但也代表尚缺長期社群驗證。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若已在用Claude Code、Cursor等agent工具做正式專案開發,這套經過內容驗證與評測把關的技能包值得安裝試用;若只是好奇AI coding agent的prompt工程手法,讀README和幾個SKILL.md也很有參考價值。",
+      "_mode": "full"
+    }
+  },
+  "roboflow/supervision": {
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-06": [
+        48925,
+        146,
+        9,
+        "We write your reusable computer vision tools. 💜",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-06",
+    "analysis": {
+      "one_liner": "與模型無關的電腦視覺工具箱,提供偵測、標註、資料集處理的即插即用元件",
+      "summary": "supervision 是 Roboflow 推出的開源 Python 套件,整合各種電腦視覺模型(YOLO、Ultralytics、Transformers、MMDetection、Inference 等)輸出的偵測結果,並提供統一的 Detections 物件、豐富的標註工具(annotators)以及 COCO/YOLO/Pascal VOC 資料集載入與轉換工具。目標是讓開發者專注在應用邏輯,而不必重複造輪子處理視覺化與資料格式轉換。",
+      "category": "library",
+      "highlights": [
+        "模型無關設計,可搭配 Ultralytics、Transformers、MMDetection、Inference、rfdetr 等多種偵測/分割模型",
+        "提供高度可自訂的 annotators(框、遮罩、標籤等)組合出各種視覺化效果",
+        "內建資料集工具,支援 COCO、YOLO、Pascal VOC 格式的載入、切分、合併與轉換",
+        "文件完整,含 Colab、Hugging Face Spaces 展示與教學影片,對新手友善",
+        "PyPI 套件成熟(有版本徽章、codecov、Snyk 安全掃描),MIT 授權"
+      ],
+      "use_cases": [
+        "快速將任意偵測/分割模型的輸出視覺化(畫框、標籤、遮罩)",
+        "在零售、交通等場景做即時區域計數、停留時間分析、車輛測速等應用原型",
+        "資料集格式轉換與切分(COCO/YOLO/Pascal VOC 互轉)",
+        "教學或 PoC 專案中作為電腦視覺應用的通用工具層"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整、範例豐富且有教學影片與文件連結,品質很高;codecov 徽章顯示有測試涵蓋,但因僅檢視 README 未實際檢視程式碼,測試評分僅能保守評估。專案持續有推送更新,今日登上 trending 榜且單日新增星數多,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "成熟且維護良好的電腦視覺工具庫,對需要快速整合偵測模型與視覺化/資料集處理的開發者很值得加入工具箱。",
+      "_mode": "light"
+    }
+  },
+  "vercel/next.js": {
+    "first_seen": "2026-08-06",
+    "last_seen": "2026-08-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-06": [
+        141550,
+        68,
+        10,
+        "The React Framework",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-06",
+    "analysis": {
+      "one_liner": "Vercel 打造的 React 全端框架,提供 SSR/SSG 與現代化開發體驗。",
+      "summary": "Next.js 是業界最主流的 React 框架之一,結合伺服器渲染、靜態網站生成與 Rust 工具鏈以達到最快建置速度。被眾多大型企業採用於正式產品環境,生態系與社群資源相當成熟。",
+      "category": "framework",
+      "highlights": [
+        "延伸 React 最新特性,支援 SSR、SSG 等多種渲染模式",
+        "整合 Rust-based JavaScript 工具鏈,建置速度快",
+        "官方文件、Learn 課程與 Showcase 資源完整",
+        "已被眾多大型企業於正式產品中採用,生態系成熟",
+        "設有 Bug Bounty 資安揭露計畫"
+      ],
+      "use_cases": [
+        "建立全端 React 應用,需要 SSR/SSG 混合渲染",
+        "打造 SEO 友善的內容型網站或部落格",
+        "企業級產品前端框架選型",
+        "學習現代 React 生態系與最佳實踐"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 本身資訊精簡但連結導向完整官方文件與課程,說明清楚;僅憑 README 無法評估程式碼測試涵蓋率,此處僅依 README 內容評估;專案更新頻繁(最後推送即為今日),且正處於 trending 榜,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "身為 React 全端框架的業界標竿,值得持續關注與學習。",
+      "_mode": "light"
     }
   }
 }
