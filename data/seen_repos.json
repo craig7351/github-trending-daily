@@ -655,7 +655,7 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-07",
+    "last_seen": "2026-08-09",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -672,46 +672,47 @@
         4,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-08-09": [
+        210462,
+        1359,
+        5,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-07-25",
+    "last_analyzed": "2026-08-09",
     "analysis": {
       "category": "devtool",
-      "one_liner": "Matt Pocock 整理的一套 AI coding agent「技能」提示詞集,涵蓋規格制定、TDD、程式碼審查、架構改善等工程流程。",
-      "summary": "這是一個給 Claude Code / Codex 等 agent 使用的 Skills(SKILL.md)集合,把「訪談需求、拆票、TDD、code review、架構重整、合併衝突處理」等軟體工程實務,寫成結構化的 Markdown 提示詞流程。目的是解決 AI 輔助開發常見的三大問題:agent 誤解需求、輸出太冗長、寫出的程式碼品質差/難維護。內容本身是純文字流程規範,不含可執行的應用程式邏輯。",
+      "one_liner": "一套給 Claude Code / Codex 等 AI 編碼代理使用的「技能」(Skills)集合,把作者 Matt Pocock 的實戰工程紀律封裝成可重複調用的流程文件。",
+      "summary": "這個репо本質上是一組結構化的 Markdown「Skill」定義檔(含 SKILL.md、agents/openai.yaml 等),涵蓋需求釐清(grilling)、TDD、程式碼審查、領域建模、bug 診斷、票券拆分等工程流程,設計給 AI 編碼代理在協作開發時遵循,藉此解決「代理誤解需求」「代理話太多」「代理寫出的程式碼不能用」「代理把程式碼越改越亂」四大常見痛點。專案本身幾乎不含傳統原始碼,而是以文件驅動代理行為的框架,可透過 Claude Code 官方外掛市集安裝,或用 `npx skills@latest add` 複製成可編輯檔案。",
       "highlights": [
-        "以「grilling(逼問式訪談)」機制在動工前對齊需求,是作者強調的核心賣點",
-        "區分 user-invoked 與 model-invoked 兩類技能,並用 SKILL.md 規範每個技能的觸發時機與流程",
-        "提供 TDD、code-review、diagnosing-bugs、resolving-merge-conflicts 等對應具體工程情境的技能模板",
-        "可透過 skills.sh 安裝器複製進專案客製化,也可作為 Claude Code 官方 plugin 訂閱式安裝",
-        "用 changesets + GitHub Actions 做版本發布,倉庫治理相對成熟"
+        "以 Markdown/YAML 定義的「Skill」取代傳統程式碼,涵蓋 grilling(需求訪談)、TDD、code-review、domain-modeling、diagnosing-bugs 等完整工程流程",
+        "同時支援 Claude Code plugin(唯讀訂閱、自動更新)與 skills.sh(複製成可編輯檔案)兩種安裝哲學,並在文件中清楚說明兩者互斥、擇一使用",
+        "使用 changesets 做版本管理,CHANGELOG 記錄詳實,PR 編號已到 #783,顯示頻繁且有紀律的維護節奏",
+        "repo 內部有一套自我約束的治理文件(.agents/adr、CLAUDE.md、writing-docs.md)規範每個 skill 必須同步 README、plugin.json、docs 頁面,展現高度的文件一致性要求",
+        "diagnosing-bugs skill 近期新增「Redact」機制,要求代理呈現指令輸出時先遮蔽機密資訊,顯示作者對代理操作安全性有主動考量"
       ],
       "use_cases": [
-        "希望讓 Claude Code / Codex 等 agent 在動工前先釐清需求、減少返工的團隊",
-        "想導入 TDD、code review、架構重整等工程紀律到 AI 輔助開發流程的工程師",
-        "需要把大型工作拆解成可追蹤票券(tickets)並與 issue tracker 整合的專案",
-        "想參考別人如何撰寫規範化 Agent Skill(SKILL.md)提示詞的開發者"
+        "在使用 Claude Code 或 Codex 等 AI 編碼代理進行日常開發時,套用結構化流程(需求訪談、TDD、code review)以降低代理誤解需求或程式碼品質不穩定的風險",
+        "團隊想建立一致的「與 AI 代理協作」規範,可直接安裝或參考此 repo 的 skill 設計模式與治理文件結構",
+        "想學習如何撰寫給 AI 代理讀的高品質 Prompt/流程文件(SKILL.md、AGENTS.md)的工程師,可作為範例參考"
       ],
       "quality": {
         "docs": 5,
         "tests": 1,
-        "activity": 4,
-        "comment": "文件品質極高,README 與各 SKILL.md 撰寫細膩、有清楚的設計哲學與 ADR 記錄;但整個倉庫本質是 Markdown 提示詞與少量 shell 輔助腳本,沒有傳統意義的自動化測試,CI 僅用於 changesets 版本發布,不做程式碼驗證。近期(2026-07-23)仍有更新,活躍度尚可,但作為個人專案缺乏 issue/PR 討論可觀察。"
+        "activity": 5,
+        "comment": "文件品質極高,repo 本身就是以文件為產品,對每個 skill 的一致性、命名、路由關係都有明確治理規則(.agents/、writing-docs.md、ADR)。因為內容以 Markdown/Shell 為主,不存在傳統意義的單元測試,但有 release.yml 搭配 changesets 做自動化版本發布,PR 節奏顯示活躍且持續維護。"
       },
       "security": {
         "risk_level": "none",
-        "findings": [
-          "package.json 無 preinstall/postinstall/prepare 等生命週期腳本,僅有 changeset 相關 script",
-          "link-skills.sh 僅建立本機 symlink 到 ~/.claude/skills 或 ~/.agents/skills,無下載或執行遠端內容行為",
-          "未發現 curl|bash、base64 payload、硬編碼 IP 或可疑相依套件名稱",
-          "倉庫內無編譯後二進位檔或混淆程式碼"
-        ]
+        "findings": []
       },
       "star_rating": 4,
-      "verdict": "若你已在用 Claude Code / Codex 做正經的工程開發,這套 Skill 模板值得參考甚至直接安裝;但它是流程規範而非程式碼工具,對純研究程式碼品質的人幫助有限。",
+      "verdict": "不是程式碼庫而是「AI 協作流程」設計範本,對每天用 Claude Code / Codex 開發的工程師來說相當值得一試,尤其是 grilling 與 code-review 流程設計思路。",
       "_mode": "full"
     },
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "consecutive_days_on_trending": 1
   },
   "Lordog/dive-into-llms": {
@@ -5066,10 +5067,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-08-07",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5081,6 +5082,13 @@
       "2026-08-07": [
         82935,
         593,
+        2,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-08-09": [
+        84793,
+        779,
         2,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
@@ -5217,15 +5225,22 @@
   },
   "goauthentik/authentik": {
     "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
+    "last_seen": "2026-08-09",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-07": [
         23116,
         138,
         5,
+        "The authentication glue you need.",
+        "Python"
+      ],
+      "2026-08-09": [
+        24087,
+        467,
+        6,
         "The authentication glue you need.",
         "Python"
       ]
@@ -5269,15 +5284,22 @@
   },
   "google/guava": {
     "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
+    "last_seen": "2026-08-09",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-07": [
         51635,
         13,
         7,
+        "Google core libraries for Java",
+        "Java"
+      ],
+      "2026-08-09": [
+        51881,
+        93,
+        8,
         "Google core libraries for Java",
         "Java"
       ]
@@ -5317,15 +5339,22 @@
   },
   "TapXWorld/ChinaTextbook": {
     "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
+    "last_seen": "2026-08-09",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-07": [
         77070,
         134,
         8,
+        "所有小初高、大学PDF教材。",
+        "Roff"
+      ],
+      "2026-08-09": [
+        78103,
+        118,
+        3,
         "所有小初高、大学PDF教材。",
         "Roff"
       ]
@@ -5461,6 +5490,347 @@
       "star_rating": 5,
       "verdict": "工程品質與文件誠實度都相當突出,對於用 AI 編碼工具做大型程式庫審查/導覽的開發者非常值得一試。",
       "_mode": "full"
+    }
+  },
+  "PrimeIntellect-ai/prime-agent": {
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-09": [
+        9660,
+        2483,
+        1,
+        "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-09",
+    "analysis": {
+      "one_liner": "Prime Intellect 推出的開源終端機編碼代理,以「遞迴語言模型」(RLM)與可自我演化的 Continual Harness 為核心,支援長時間自主執行與多代理協作。",
+      "summary": "Prime Agent 是一個以持久化 IPython REPL 為底層執行環境的編碼/研究代理,將上下文視為變數、工具與子代理呼叫視為程式碼函式呼叫,取代傳統固定工具集的代理設計。它額外提供 daemon 常駐、任務排程、跨終端重新連接與可回溯的『持續改進』機制,鎖定需要長時間、可中斷續跑的自動化編碼與研究工作流。",
+      "category": "ai-ml",
+      "highlights": [
+        "採用 RLM 架構,把上下文當變數、工具/子代理當函式呼叫,在持久化 IPython REPL 中執行,而非傳統固定工具清單設計",
+        "Continual Harness:/refine 可依實際執行證據小幅修正輔助提示、記憶與技能,不覆寫基礎系統提示,並保留可回溯快照",
+        "daemon 常駐架構,支援任務中斷後重新連接、heartbeat/排程與跨終端機的長任務續跑",
+        "內建子代理(subagent)機制,代理之間可直接通訊協作,適合平行或背景研究/編碼任務",
+        "安裝腳本具備 SHA-256 校驗與跨平台 Node.js 偵測安裝,CI 對四個 workspace 套件(agent/ai/tui/coding-agent)分別建置與分片測試"
+      ],
+      "use_cases": [
+        "需要長時間執行、可中斷續跑的自動化編碼、重構或研究評測任務",
+        "需要多個子代理協同分工的複雜工作流(平行探索、背景任務)",
+        "想客製化技能(skills)、擴充套件(extensions)、MCP 整合的進階開發者工作台",
+        "作為程式化 SDK(TypeScript)嵌入自有系統,打造可程式操控的編碼代理"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整,根目錄與各 package README 都有詳盡使用說明及獨立 docs/ 目錄涵蓋架構、RPC/JSON 模式等。CI 針對 agent、ai、tui、coding-agent 四個套件分別建置並分片(shard)測試,另有 build-binaries 與 nightly-process-stress workflow。CHANGELOG 顯示幾乎每隔一兩天就有版本釋出,對於剛登上 trending 的專案而言成熟度相當高(源自 pi-mono fork 但已大幅擴充自有架構)。",
+        "comment_note": ""
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install.sh 以 curl | sh 方式從外部網址下載並執行安裝腳本,但腳本本身會對下載的 tarball 做 SHA-256 checksum 驗證,原始碼可完整稽核,非黑箱二進位",
+          "packages/coding-agent 有 npm postinstall 腳本(node postinstall.cjs),但預設不執行任何動作;只有使用者明確設定 PRIME_AGENT_BOOTSTRAP_TOOLS_ON_INSTALL / PRIME_AGENT_BOOTSTRAP_KERNEL_ON_INSTALL 環境變數時,才會抓取 fd、ripgrep 與 Python/uv 等開發工具,且下載來源均為對應專案的官方 GitHub Releases",
+          "README 中明確揭露此工具會以使用者本機權限執行模型產生的 Python 與專案指令,並非沙箱環境,建議在不受信任的程式碼/指示上改用外部沙箱執行——此為作者主動聲明的設計風險而非隱藏行為"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "架構完整、文件與測試扎實、迭代速度快,是值得立即關注與試用的新一代編碼代理,但因設計上會以本機權限執行模型生成的程式碼,建議先在隔離或可拋棄的環境中評估。",
+      "_mode": "full"
+    }
+  },
+  "google/skills": {
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-09": [
+        16924,
+        481,
+        4,
+        "Agent Skills for Google products and technologies",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-09",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Google 官方釋出的「Agent Skills」技能庫,讓 Claude Code、Gemini CLI 等 AI Coding Agent 具備操作 Google Cloud / Ads / Analytics 各項產品的專業知識與腳本。",
+      "summary": "此專案以 Markdown 格式的 SKILL.md 搭配輔助 Python/Shell 腳本,將 GKE、BigQuery、Vertex AI Agent Platform、Google Ads API 等上百項 Google 產品的最佳實踐、故障排除流程與範例整理成可安裝的「技能包」。使用者可透過 `npx skills add google/skills` 或 Claude Code / Codex 的 plugin marketplace 安裝,讓 AI Agent 在執行雲端維運、廣告投放、資料分析等任務時有標準化的操作指南可循。同時也透過 git submodule 整合多個 gemini-cli-extensions 的資料庫連接外掛(AlloyDB、Spanner、BigQuery 等)。",
+      "highlights": [
+        "涵蓋 Cloud(GKE、BigQuery、Vertex AI Agent Platform)、Ads、Analytics 三大類、超過 100 個技能模組",
+        "多數技能附帶可執行的 Python 腳本與對應 *_test.py 單元測試(如 config_utils.py / config_utils_test.py),而非純文件",
+        "透過 .claude-plugin/marketplace.json 與 git submodule 串接多個官方 gemini-cli-extensions 資料庫外掛(AlloyDB、Spanner、Cloud SQL 等)",
+        "SKILL.md 內建「安全分級」設計,將唯讀操作與會產生費用/資源異動的操作分開,要求後者需使用者明確確認才執行",
+        "支援 Claude Code、Codex、Antigravity CLI 等多種 Agent Harness 的安裝方式"
+      ],
+      "use_cases": [
+        "在 Claude Code / Gemini CLI 中安裝技能包,讓 AI Agent 依循官方最佳實踐操作 GKE、BigQuery、Vertex AI 等 Google Cloud 服務",
+        "廣告工程師需要 AI Agent 協助串接 Google Ads API、Data Manager API 或 Mobile Ads SDK 時作為知識庫",
+        "維運團隊建立告警規則、成本分析、資安稽核等自動化腳本(如 audit_cluster.sh、analyze_traffic.py)的參考範本",
+        "學習 Google Cloud 各項服務(GKE、AlloyDB、Bigtable 等)標準操作流程與常見陷阱"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "文件品質極高,每個技能都有結構化的 SKILL.md 與多語言 references;部分核心腳本(如 alert-configuration、chart-generation)備有對應單元測試,但整體上仍有相當比例的 scripts 目錄缺乏測試,且沒有發現 .github/workflows CI 設定來自動執行這些測試。專案本身無版本號、屬於 Google 官方主動維護中的活躍專案(當日剛推送更新)。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若你正在用 Claude Code / Gemini CLI 操作 Google Cloud 或 Google Ads 相關工作,這是官方維護、內容扎實的技能庫,值得安裝試用;若與 Google 生態系無關則參考價值有限。",
+      "_mode": "full"
+    }
+  },
+  "TauricResearch/TradingAgents": {
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-09": [
+        96733,
+        153,
+        7,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-09",
+    "analysis": {
+      "one_liner": "用多個 LLM Agent 分工模擬真實交易團隊(分析師、研究員、交易員、風控)的開源金融交易研究框架。",
+      "summary": "TradingAgents 用 LangGraph 建構多代理人架構,將基本面、情緒、新聞、技術分析師與看多/看空研究員、交易員、風險管理團隊串成一個決策流程,模擬真實投資機構的協作方式來產生交易建議。專案支援多家 LLM 供應商(OpenAI、Anthropic、Google、Bedrock、Ollama 等)及多個市場(美股、港股、A股、加密貨幣等),並提供 CLI 與 Python API 兩種使用方式。作者明確聲明此為研究用途,並非投資建議。",
+      "category": "ai-ml",
+      "highlights": [
+        "多代理人角色分工(分析師、研究員、交易員、風控、投資組合經理)並以結構化辯論產生決策",
+        "支援近十家 LLM 供應商(OpenAI、Anthropic、Google、xAI、DeepSeek、Qwen、GLM、MiniMax、Bedrock、Ollama、OpenAI-compatible 端點)",
+        "具決策日誌(decision log)與 checkpoint resume 機制,能記錄歷史報酬並反思、也能從中斷處恢復執行",
+        "CHANGELOG 詳細記錄每個修正對應的 GitHub Issue/PR 與貢獻者,顯示為社群驅動、持續維護的專案",
+        "CI 涵蓋 Python 3.10-3.13 測試矩陣、乾淨安裝驗證與全庫 ruff lint,工程紀律良好"
+      ],
+      "use_cases": [
+        "量化/AI 研究人員想研究多代理人 LLM 在金融決策上的協作與辯論機制",
+        "開發者想要一個可插拔多種 LLM 供應商與資料源(Yahoo Finance、Alpha Vantage、FRED、Polymarket)的交易分析 pipeline 範本",
+        "教學或論文重現(對應 arXiv 2412.20138)用於展示 LLM-based 多代理人系統設計",
+        "本地或雲端(Docker/Bedrock/Ollama)部署一個可設定的股票/加密貨幣分析 CLI 工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 詳盡且持續更新(含安裝、CLI、可重現性說明、限制聲明),CHANGELOG 精細到每個 issue/PR 與貢獻者;tests/ 目錄有 60 餘個測試檔涵蓋 provider、資料源、CLI、邊界情況,CI 有多版本 Python 測試、乾淨安裝驗證與全庫 lint;pushed_at 顯示近期(2026-07)仍有活躍修正,是一個維護良好、工程紀律高的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件成熟度在同類 LLM Agent 專案中少見的紮實,值得研究多代理人金融決策架構的人關注,但務必記住它是研究工具而非可直接用於實盤的交易系統。",
+      "_mode": "full"
+    }
+  },
+  "LadybirdBrowser/ladybird": {
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-09": [
+        65082,
+        48,
+        9,
+        "Truly independent web browser",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-08-09",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "從零打造、不依賴 Chromium/WebKit/Gecko 的獨立網頁瀏覽器引擎。",
+      "summary": "Ladybird 是一個從零開始實作的網頁瀏覽器,採用多程序架構(UI 主程序、多個 WebContent 渲染程序、獨立的 ImageDecoder 與 RequestServer 程序),目標是打造完整、可用的現代瀏覽器。專案繼承自 SerenityOS 的多項核心函式庫,包括 LibWeb、LibJS、LibWasm 等,目前處於 pre-alpha 階段,僅適合開發者使用。",
+      "highlights": [
+        "採用多程序沙箱架構,圖片解碼與網路連線皆獨立於渲染程序之外以提升安全性",
+        "自研核心元件齊全,包含 LibJS(JS 引擎)、LibWasm(WebAssembly)、LibCrypto/LibTLS 等,不依賴現有瀏覽器引擎",
+        "支援 Linux、macOS、Windows(WSL2)等多平台建置",
+        "社群活躍,有 Discord 討論群組與明確的貢獻/議題回報規範",
+        "今日 GitHub trending 第 9 名,總星數 6.5 萬且單日增加 48 顆星,關注度持續上升"
+      ],
+      "use_cases": [
+        "對瀏覽器引擎、渲染管線或 JS/Wasm 引擎實作感興趣的研發人員參考學習",
+        "研究多程序沙箱架構設計的工程實踐案例",
+        "關注獨立於 Chromium/WebKit 生態之外的瀏覽器技術發展",
+        "有意參與開源瀏覽器引擎開發的貢獻者"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 說明簡潔,清楚描述架構與元件組成,並附建置文件與貢獻指南連結,但屬於高層次概覽、缺乏更深入的技術細節;測試品質僅能就 README 描述評估,無法看到實際程式碼與測試覆蓋狀況。專案更新頻繁(最後推送於今日),且正登上 trending 榜,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "雖仍是 pre-alpha 階段不適合一般使用,但作為少數真正獨立、自研的瀏覽器引擎專案,技術含量與社群動能兼具,值得工程師持續關注。",
+      "_mode": "light"
+    }
+  },
+  "denoland/celld": {
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-09": [
+        2734,
+        432,
+        10,
+        "self-hosted, distributed Durable Objects",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-09",
+    "analysis": {
+      "one_liner": "由 Deno 團隊打造的自架式 Durable Objects 執行環境,讓你在自己的機器上跑 Cloudflare Workers 與 Durable Objects。",
+      "summary": "celld 是一個 Rust 撰寫的 daemon,內嵌 V8 執行 Wrangler bundle,把每個 Durable Object 當成獨立的 SQLite 資料庫,透過 S3 相容 bucket 做複寫與節點間協調(用 compare-and-swap 租約取代共識協定或控制平面)。目的是讓開發者不依賴 Cloudflare 平台,也能自建分散式、可水平擴展且天然分片的物件儲存後端。",
+      "category": "infra",
+      "highlights": [
+        "架構乾淨分層:crates/logic 純粹負責決策邏輯,crates/celld 只做 I/O 與效果執行,方便測試與推理",
+        "無控制平面設計:靠物件儲存的 CAS(compare-and-swap)達成唯一 owner 租約,不需要成員協定或故障偵測器",
+        "節點間通訊具備完整防護:HMAC 簽章、body hash 綁定、時間窗限制、防重放(replay)快取,程式碼實作嚴謹且有邊界檢查",
+        "測試涵蓋面廣:除單元測試外,還有 conformance、fuzz、property-based roundtrip、故障注入(fault injection)、對 MinIO 的整合測試",
+        "發布流程成熟:GitHub Actions 走「候選建置 → 人工核准 → 簽署 provenance → 發布」流程,並用 gh attestation 驗證產物來源"
+      ],
+      "use_cases": [
+        "想在自有機房或私有雲重現 Cloudflare Workers/Durable Objects 開發體驗,不想被綁定在 Cloudflare 平台",
+        "需要天然依名稱分片(per-object SQLite)、避免單一資料庫熱點與 blast radius 的應用場景",
+        "研究無共識協定、以物件儲存作為唯一真相來源的分散式系統設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 與 docs/(limitations、security、testing、cloudflare-compat)寫得非常詳盡且誠實,明確標示這是 alpha 版本、不適合敵對式多租戶場景。程式碼風格一致、註解精煉且多解釋「為什麼」而非「做什麼」,顯示團隊工程素養高。測試涵蓋單元、property-based、fuzz、故障注入與 MinIO 整合,但目前只有一週內的歷史(2026-08-05 才推送),CI 只在 release 分支跑完整流程,尚無看到針對一般 PR 的持續整合設定(專案本身也明講暫不開放 PR)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供的官方安裝方式為 curl -fsSL https://celld.dev/install.sh | sh,屬於常見的一鍵安裝腳本模式;專案聲稱二進位檔可用 gh attestation verify 驗證來源,但 install.sh 本身內容不在此原始碼庫中,未能直接檢視其邏輯。",
+          "文件明確指出 peer 間通訊不加密(僅 HMAC 簽章與防重放),要求使用者將節點限制在受信任的私網或如 WireGuard/Tailscale 的加密疊加網路上,對外公開 IP 預設會被拒絕,需顯式加上 --unsafe-public-advertise 才能繞過——這是透明揭露而非漏洞。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "由 Deno 官方團隊出品、工程品質與文件都在水準之上的分散式系統專案,雖仍是 alpha 且刻意不開放 PR,但架構思路與安全設計值得一讀,對基礎設施/分散式系統愛好者很值得關注。",
+      "_mode": "full"
+    }
+  },
+  "litu54/DevOps-Interview-Guide": {
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-09": [
+        777,
+        68,
+        11,
+        "DevOps Interview Guide",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-08-09",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "彙整真實 DevOps/SRE 面試題庫,收錄 85 家公司共 151 篇面試經驗分享。",
+      "summary": "這是一個純文字資源彙整專案,收集 2025~2026 年真實求職者在 DevOps、SRE、雲端工程面試中被問到的原始問題,不加改寫或精簡,依公司與職稱分資料夾整理。目的是讓求職者能查詢特定公司,或廣泛瀏覽不同規模公司的面試風格與題型分佈。",
+      "highlights": [
+        "收錄 151 篇面試經驗、涵蓋 85 家公司,另設 Others 資料夾存放未具名公司的投稿",
+        "題目涵蓋 Kubernetes、Docker、Terraform、AWS/Azure/GCP、CI/CD、Ansible、Linux 及 SRE 核心概念(SLI/SLO/SLA、可觀測性、事件應變)",
+        "同一公司若有多次面試紀錄,保留為獨立檔案而非合併,以呈現不同輪次與面試官風格的差異",
+        "採開放投稿模式,任何人可依既定格式(公司/職稱/年資)新增自己的面試經驗"
+      ],
+      "use_cases": [
+        "準備特定公司 DevOps/SRE 面試前,查詢該公司過往被問過的實際題目",
+        "廣泛瀏覽多家不同規模公司(產品型、服務型、金融科技等)的面試題型以掌握出題趨勢",
+        "作為建立自己面試題庫或準備清單的參考素材"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README 結構清楚,說明了資料夾組織方式與投稿規範,但缺少授權宣告與主要語言標示;最近一次推送為 2026-08-05,且正處於 GitHub trending 上升期,顯示社群關注度與更新動能都不錯。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "內容實用但屬純文字彙整,適合收藏查閱,非技術突破性專案,值得加入面試準備書籤但不必急著深入研究。",
+      "_mode": "light"
+    }
+  },
+  "bannedbook/fanqiang": {
+    "first_seen": "2026-08-09",
+    "last_seen": "2026-08-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-09": [
+        50098,
+        101,
+        12,
+        "翻墙-科学上网",
+        "Kotlin"
+      ]
+    },
+    "last_analyzed": "2026-08-09",
+    "analysis": {
+      "one_liner": "彙整多種翻牆(繞過網路封鎖)工具與教學的資源庫,涵蓋各平台與多種代理協定。",
+      "summary": "此專案是一個大型翻牆資源彙整庫,提供 Windows、Android、iOS、macOS、路由器、Linux、遊戲機等各平台的翻牆軟體使用教程,並整合 V2ray、Shadowsocks、SSR、Trojan、Brook、Psiphon 等多種代理工具與一鍵翻牆包。主要解決中國大陸等網路受限地區使用者無法自由存取國際網路服務的問題。",
+      "category": "learning-resource",
+      "highlights": [
+        "涵蓋 Windows/iOS/Android/macOS/路由器/Linux/遊戲機等幾乎所有平台的翻牆教程",
+        "整合 Goflyway、V2ray、Daze、SSR、Brook、Lightsocks、Trojan、蓝灯、Psiphon 等多種工具的一鍵翻牆包並內建免費伺服器",
+        "提供自建 V2ray / Shadowsocks 伺服器的簡明教學,適合想自行架設節點的使用者",
+        "同時附上 Chrome 一鍵翻牆包、註冊海外 Apple ID、註冊 ChatGPT 帳號等實用附加教程",
+        "長期更新且社群活躍,提供 Telegram 群組與 GitHub Issues 作為交流回饋管道"
+      ],
+      "use_cases": [
+        "身處網路審查/封鎖地區,需要查找各平台翻牆軟體設定教學",
+        "想快速取得整合多種代理工具的一鍵翻牆安裝包(如 ChromeGo)",
+        "希望自行架設 V2ray 或 Shadowsocks 伺服器的使用者",
+        "研究不同代理協定(V2ray/SS/SSR/Trojan/Brook 等)差異與應用場景的學習者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "文件以條列式教程連結為主,結構清晰、涵蓋平台廣泛,屬資源彙整/教學類專案,測試不適用;最近推送時間為今日,且正在 GitHub Trending 上快速增星,顯示社群活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若需要查找翻牆軟體教學或整合工具包,此專案彙整完整、更新頻繁,值得收藏,但本身非程式碼工具,實用性視個人網路環境而定。",
+      "_mode": "light"
     }
   }
 }
