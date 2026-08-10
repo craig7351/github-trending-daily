@@ -1323,12 +1323,19 @@
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-07-27",
+    "last_seen": "2026-08-10",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
         15052,
         149
+      ],
+      "2026-08-10": [
+        17659,
+        163,
+        12,
+        "",
+        "TypeScript"
       ]
     },
     "last_analyzed": "2026-07-28",
@@ -1366,7 +1373,7 @@
       "verdict": "出自 T3 團隊、工程品質扎實(高測試覆蓋率+完整 CI)的多代理 AI 編碼 GUI,雖仍處早期且暫不開放貢獻,但值得追蹤與試用。",
       "_mode": "full"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "nodejs/node": {
@@ -5067,10 +5074,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-08-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5090,6 +5097,13 @@
         84793,
         779,
         2,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-08-10": [
+        85140,
+        680,
+        6,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -5225,10 +5239,10 @@
   },
   "goauthentik/authentik": {
     "first_seen": "2026-08-07",
-    "last_seen": "2026-08-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-07": [
         23116,
@@ -5241,6 +5255,13 @@
         24087,
         467,
         6,
+        "The authentication glue you need.",
+        "Python"
+      ],
+      "2026-08-10": [
+        24274,
+        310,
+        8,
         "The authentication glue you need.",
         "Python"
       ]
@@ -5494,14 +5515,21 @@
   },
   "PrimeIntellect-ai/prime-agent": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-09": [
         9660,
         2483,
+        1,
+        "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "TypeScript"
+      ],
+      "2026-08-10": [
+        11094,
+        2356,
         1,
         "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
         "TypeScript"
@@ -5547,15 +5575,22 @@
   },
   "google/skills": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-09": [
         16924,
         481,
         4,
+        "Agent Skills for Google products and technologies",
+        "Python"
+      ],
+      "2026-08-10": [
+        17224,
+        528,
+        9,
         "Agent Skills for Google products and technologies",
         "Python"
       ]
@@ -5830,6 +5865,348 @@
       },
       "star_rating": 4,
       "verdict": "若需要查找翻牆軟體教學或整合工具包,此專案彙整完整、更新頻繁,值得收藏,但本身非程式碼工具,實用性視個人網路環境而定。",
+      "_mode": "light"
+    }
+  },
+  "vitali87/code-graph-rag": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-10": [
+        2984,
+        96,
+        2,
+        "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-10",
+    "analysis": {
+      "one_liner": "用 Tree-sitter 解析多語言 monorepo,建立 Memgraph 知識圖譜,讓 AI agent 能用自然語言查詢、編輯、優化整個程式碼庫。",
+      "summary": "Code-Graph-RAG 會讀取整個 repo(支援 Python、TypeScript、Go、Java、C/C++、Rust、C#、PHP、Lua、Dart 等多種語言),用 Tree-sitter 解析出函式、類別、模組及其關聯,存進 Memgraph 圖資料庫,再透過 CLI 或 MCP server 把自然語言問題轉成 Cypher 查詢,回傳有結構依據的答案、程式碼片段,甚至驅動 AI 進行 AST 層級的精準編輯與死碼偵測。目標是解決大型 monorepo 中「LLM 缺乏全局程式碼結構理解」的痛點。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援 12+ 種語言的完整 Tree-sitter 解析,並用可插拔的 ast-grep 層以純 YAML 設定檔快速新增語言(如 Ruby)",
+        "同時提供 CLI、Python SDK 與 MCP Server 三種介面,可直接整合進 Claude Code 等 AI agent 工作流",
+        "程式碼編輯採用 AST 精準修補並附 diff 預覽,而非單純文字替換,降低 LLM 誤改風險",
+        "CI 相當扎實:多平台/多 Python 版本矩陣測試、獨立 unit/integration job、wheel 全新依賴解析驗證、binary smoke test,並整合 Codecov、SonarCloud、OpenSSF Scorecard",
+        "692 個測試檔涵蓋各語言解析、call resolver、flow tracing 等細節,測試覆蓋面極廣"
+      ],
+      "use_cases": [
+        "對大型多語言 monorepo 做語意搜尋與程式碼理解,取代單純向量搜尋的 RAG",
+        "結合 Claude Code / MCP 用自然語言查詢並安全地進行跨檔案重構或編輯",
+        "從程式呼叫圖找出死碼(dead code)或未被引用的端點",
+        "企業內需要在 air-gapped 環境自建程式碼知識圖譜的場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件相當完整,README 分門別類連到 docs/ 下的安裝、架構、SDK、進階指南;pyproject.toml 設定嚴謹(ruff、ty 型別檢查、bandit)。CI 涵蓋 lint、型別檢查、三平台單元測試、Docker 整合測試、binary 打包煙霧測試與全新依賴解析驗證,是少見的高規格 CI 設計。原始碼(如 graph_updater.py)模組化良好、有清楚的型別標註與職責分離。今天(2026-08-10)仍有 push,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與測試規模在同類 AI+程式碼工具中相當突出,對想把 LLM 接上大型 monorepo 做結構化理解的團隊值得立即關注。",
+      "_mode": "full"
+    }
+  },
+  "msitarzewski/agency-agents": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-10": [
+        140680,
+        858,
+        3,
+        "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "Shell"
+      ]
+    },
+    "last_analyzed": "2026-08-10",
+    "analysis": {
+      "one_liner": "一個涵蓋近400個「人格化」AI代理提示詞模板的超大型集合,可一鍵安裝進Claude Code、Cursor、Copilot等各種AI開發工具。",
+      "summary": "agency-agents是一套以Markdown撰寫的AI Agent人格/角色提示詞資料庫,涵蓋工程、設計、行銷、銷售、遊戲開發、法律、財務等19個「部門」、373+個檔案。每個agent檔案都有YAML frontmatter(name/description/color)加上詳細的身份設定、工作流程與程式碼範例,搭配一組Bash腳本(install.sh/convert.sh)把這些提示詞轉換並安裝到Claude Code、Cursor、Copilot、Gemini CLI、OpenCode等十幾種AI工具的對應設定目錄。專案本身不含可執行的應用程式邏輯,核心價值在於提示詞內容與跨工具安裝/轉換的自動化。",
+      "category": "ai-ml",
+      "highlights": [
+        "373+個角色化Agent提示詞,分成工程、設計、行銷、銷售、遊戲開發(含Unity/Unreal/Godot)、法律、財務、學術等19個部門",
+        "install.sh/convert.sh支援一鍵安裝到Claude Code、Cursor、Copilot、Gemini CLI、OpenCode、Codex等15+種AI工具,可依部門或單一agent篩選安裝",
+        "備有官方桌面App(agencyagents.app)提供圖形化安裝,不需clone repo或跑腳本",
+        "CI有lint-agents.sh、check-divisions.sh、check-runbooks.sh、check-tools.sh四道自動檢查,確保frontmatter格式、部門分類與工具清單一致",
+        "純Bash腳本(bash 3.2+相容,無外部依賴),邏輯清晰、有防禦性檢查(如CRLF偵測)"
+      ],
+      "use_cases": [
+        "想在Claude Code/Cursor等AI編碼工具中快速套用「有個性、有流程」的專業角色提示詞,而非自己從零寫system prompt",
+        "團隊想建立跨職能(工程/設計/行銷/銷售/法務)的AI協作代理範本作為起點,再自行客製化",
+        "研究或收藏各類AI agent提示詞設計手法,作為prompt engineering的參考素材"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README詳盡但單檔案超長(1121行);沒有傳統單元測試,但有針對內容格式的自動化lint/一致性檢查(lint-agents.sh、check-divisions.sh等)透過GitHub Actions執行,對「提示詞集合」這種專案類型算是務實的品質保障方式。腳本本身寫得乾淨,有註解說明設計取捨與歷史bug修復脈絡,近期仍持續有push(2026-08-06),活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "內容量龐大且維護紮實,適合當提示詞範本庫收藏或速覽,但對已經熟悉prompt engineering的工程師來說並非非看不可的技術突破。",
+      "_mode": "full"
+    }
+  },
+  "pranshuparmar/witr": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-10": [
+        20662,
+        210,
+        4,
+        "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-10",
+    "analysis": {
+      "one_liner": "一個用單一指令追溯「這個 process/port/container/file 到底為什麼在跑」完整因果鏈的 CLI + TUI 工具。",
+      "summary": "witr 用 Go 寫成,把 process、port、container、file lock 都轉換成 PID 問題,回答「這個東西是被誰、怎麼啟動的」,並畫出從 systemd/launchd/pm2/docker 等 supervisor 一路到目標 process 的因果鏈,取代人工在 ps、lsof、ss、systemctl、docker ps 之間交叉比對的流程。同時提供互動式 TUI 儀表板,涵蓋 process、port、container、file lock 四個分頁,支援即時篩選、排序與訊號操作。",
+      "category": "cli",
+      "highlights": [
+        "核心概念單純且落地:所有目標(port/container/file)最終都收斂成 PID,再往上溯源到 systemd/launchd/pm2/docker/cron/ssh 等啟動者",
+        "跨平台支援完整:Linux/macOS/Windows/FreeBSD 四個平台都有對應的 build-tag 檔案(如 process_darwin.go、process_windows.go),Windows 版直接呼叫 Win32 API(ToolHelp32/PSAPI/SCM)而非 PowerShell/WMI",
+        "CI 把關嚴謹:golangci-lint 依 GOOS 矩陣跑四個平台、go test -race 多作業系統矩陣、govulncheck 弱點掃描、vendor 同步檢查、coverage 報告一應俱全",
+        "退出碼設計貼近 SRE/事故處理情境(0 正常、1 有警告、2 找不到、3 權限不足、4 輸入錯誤、5 內部錯誤),方便寫進腳本與監控管線",
+        "瀏覽器互動教學(GitHub Pages + Three.js 模擬 Linux box)降低試用門檻,不用安裝就能體驗"
+      ],
+      "use_cases": [
+        "事故應變(incident response)時快速釐清一個異常 process 或佔用中 port 的來源鏈,取代手動串接多個系統工具",
+        "維運/SRE 日常巡檢容器與服務時,一次列出 Docker/Podman/K8s/LXC/FreeBSD jail 等多種 runtime 的容器與其對應 process",
+        "在 CI/監控腳本中用明確的 exit code 判斷目標 process 是否存在、是否有警告(如以 root 執行、監聽公開介面、記憶體過高等)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "工程品質在同類 CLI 專案中屬上乘:README 結構完整(安裝、旗標、輸出範例、平台相容矩陣一應俱全),internal 目錄依功能與平台清楚拆分,測試檔案覆蓋率高且涵蓋多平台 build tag,CI 設有 lint、race test、govulncheck、vendor 校驗與 coverage 報告,發布流程用 GoReleaser 自動化並限制最小權限。抽樣程式碼(main.go、pipeline/analyze.go)邏輯清晰、註解精簡且說明的是非顯而易見的設計取捨。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供的 Unix 安裝方式為 curl -fsSL ... | bash 直接執行遠端腳本,屬常見但需使用者自行留意的安裝模式",
+          "install.ps1 會從 GitHub Releases 下載官方發布的 zip 並比對 SHA256SUMS 檢查碼才安裝,流程本身有做完整性驗證",
+          "未在原始碼中發現混淆程式碼、內嵌長 base64/hex payload、寫死的可疑 IP 或網域"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程紮實、定位明確、文件與測試皆完整,值得系統管理與維運工程師立即關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "google-deepmind/weathernext": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-10": [
+        7088,
+        86,
+        5,
+        "",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-10",
+    "analysis": {
+      "one_liner": "Google DeepMind 官方發布的次世代 AI 天氣預報模型 WeatherNext 2,以及前代 GraphCast、GenCast 的完整原始碼。",
+      "summary": "此專案收錄 Google DeepMind 與 Google Research 開發的全球中期天氣及颶風預報模型 WeatherNext 2 (WN2),以及其前身 GraphCast(圖神經網路)與 GenCast(擴散模型集成預報)的原始碼與說明文件。內容涵蓋模型架構、自迴歸滾動預測、颶風追蹤演算法(direct tracker)、資料前處理工具,並提供 Colab notebook 讓使用者以雲端 TPU/GPU 直接載入預訓練權重進行推論。",
+      "category": "ai-ml",
+      "highlights": [
+        "WeatherNext 2 已用於 2025 年大西洋颶風季的實際運作預報,並在 Nature 發表颶風預報論文(FNV3/GDMI)",
+        "提供多平台資料存取管道:Google Cloud(Earth Engine/BigQuery/Vertex AI)、WeatherLab、OpenMeteo API",
+        "包含 Mini 版模型(1° 解析度),可在單張 P100 或免費 Colab TPU 上跑推論,降低硬體門檻",
+        "颶風 direct tracker 演算法有詳盡的英文說明文件,描述初始化、動量預測、mean/mode 精修等步驟",
+        "utils/ 目錄提供 JAX 相容的 xarray 工具、正規化、網格建構、loss 計算等共用基礎設施,程式碼風格一致且有型別註記"
+      ],
+      "use_cases": [
+        "氣象/氣候研究人員以預訓練權重直接產生中期天氣或颶風路徑預報",
+        "AI for Science 研究者參考其圖神經網路(GraphCast)或擴散模型(GenCast)架構做延伸研究",
+        "資料工程師透過 Google Cloud / OpenMeteo API 取得每日預報資料建置下游應用",
+        "學習 JAX + xarray 在大規模科學計算中的實務工程模式(sharding、pmap、chunked rollout)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 與程式內文件相當完整,附多篇論文與部落格連結;核心程式碼(如 rollout.py、direct_tracker.py)註解詳細、型別提示齊全,明顯是研究級但工程化良好的程式碼。有 6 個單元測試檔案覆蓋部分工具模組,但未見 CI workflow 設定,測試覆蓋率無法從 repo 直接驗證。近期仍有更新(2026-08-07 推送),活躍度良好。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "來自 Google DeepMind 的正式研究成果與可執行程式碼,對氣象 AI 或科學計算感興趣的工程師值得收藏關注,但因需要昂貴的 TPU/H100 才能跑完整模型,實際落地門檻較高。",
+      "_mode": "full"
+    }
+  },
+  "ZhuLinsen/daily_stock_analysis": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-10": [
+        61192,
+        306,
+        7,
+        "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-10",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "用 LLM 驅動的多市場（A股/港股/美股/日股/韓股/台股）每日自動選股分析與決策看板推送系統。",
+      "summary": "這個專案整合多個行情數據源（AkShare、Tushare、YFinance、Longbridge 等）、新聞舆情搜尋與 LLM（Gemini/OpenAI/Claude/DeepSeek 等）來產生每日股票決策報告，並可透過企業微信、飛書、Telegram、Discord、Slack、Email 等管道推送。支援 GitHub Actions 零成本排程、Docker 部署、Web/桌面工作台與 Agent 策略問股功能，鎖定的問題是幫個人投資者自動化每日盯盤與資訊彙整。",
+      "highlights": [
+        "工程規模龐大且成熟：268+ 個測試檔、CI 依變更路徑分流(backend/docker/frontend/futu打包)並用 3-shard 平行跑測試",
+        "支援 6 個市場 + 10 種以上行情/新聞資料源,並有清楚的 fallback 與資料源優先序文件",
+        "多元部署方式:GitHub Actions 免費排程、Docker(含健康檢查、非 root 使用者)、桌面客戶端打包(Windows/macOS)",
+        "Agent 策略問股支援 15 種內建策略(均線、纏論、波浪理論等)並可多輪追問",
+        "文件完整度高:提供簡中/英/繁中三語 README、完整部署指南、市場支援邊界說明、LLM 設定指南"
+      ],
+      "use_cases": [
+        "個人投資者想要每天自動收到 AI 生成的自選股決策報告(買賣點位、風險提示、催化因素)",
+        "需要零伺服器成本、用 GitHub Actions 排程執行的量化分析場景",
+        "想研究如何用 LiteLLM 統一調度多家 LLM 供應商並串接多源行情/新聞資料的架構範例",
+        "想要在企業微信/飛書/Telegram 等群組自動推送股市監控訊息的團隊或個人"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與測試覆蓋度在同類專案中屬上乘,README 提供三語版本並拆分出完整指南、市場支援邊界、LLM 設定指南等專門文件;CI 設定成熟,依變更路徑分流跑測試、Docker build 與桌面打包,並有 268+ 測試檔涵蓋 API、Agent、資料抓取、回測等模組;近期(2026-08-09)仍持續有 push,活躍度高。抽查的 main.py、analyzer.py 程式碼結構清晰、模組化程度高,但專案規模與依賴數量龐大(接觸多個第三方 API 與券商 SDK),長期維護成本不低。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程成熟度與文件品質都相當高,是少見在個人量化分析類專案中把 CI/測試/多平台部署做到位的範例,值得關注與參考其架構設計。",
+      "_mode": "full"
+    }
+  },
+  "Comfy-Org/ComfyUI": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-10": [
+        125521,
+        365,
+        10,
+        "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-10",
+    "analysis": {
+      "one_liner": "ComfyUI 是一套模組化、以節點圖形介面驅動的 AI 生成引擎,支援圖像、影片、3D、音訊等多種擴散模型工作流。",
+      "summary": "ComfyUI 讓使用者透過視覺化節點圖(而非寫程式)組合、重用並執行 Stable Diffusion、Flux、Wan 等各類擴散/生成模型的推理工作流程,原生支援本機離線執行、VRAM 管理、局部圖重算等進階特性。專案由 Comfy-Org 維護,搭配獨立前端倉庫與桌面應用/雲端服務,形成完整生態系,是目前最主流的開源生成式 AI 圖形化工作台。",
+      "category": "ai-ml",
+      "highlights": [
+        "節點圖形介面涵蓋圖像/影片/3D/音訊/文字生成,原生支援數十種主流開源模型(SD、Flux、Wan、Qwen Image 等)",
+        "採用非同步佇列、局部圖重算、VRAM/RAM 智慧管理與量化模型支援,適合本機硬體資源有限的使用者",
+        "核心倉庫、桌面應用(Comfy-Desktop)、前端(ComfyUI_frontend)三個倉庫協同開發,並有明確的每 2 週穩定版發布節奏",
+        "測試涵蓋單元測試、執行測試、啟動測試,並針對過往 CVE(GHSA-779p 系列路徑穿越/XSS)建立專屬回歸測試",
+        "以 GPL-3.0 授權,CI 使用 ruff 做靜態檢查,並有詳盡的 SECURITY.md 說明威脅模型與漏洞回報範圍"
+      ],
+      "use_cases": [
+        "本機或工作站上以圖形化方式建構、除錯、分享 AI 影像/影片/音訊生成工作流",
+        "整合至生產管線,透過 API 節點或本機 API 呼叫既有 ComfyUI 工作流",
+        "作為研究/教學用途快速嘗試多種擴散模型與取樣器組合",
+        "透過自訂節點擴充功能以支援新模型或自建工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整(README 詳列各平台安裝、GPU 支援、快捷鍵、疑難排解),另有 CONTRIBUTING.md、AGENTS.md、SECURITY.md。測試涵蓋單元/執行/啟動/安全回歸多層面,CI workflow 眾多(lint、build、release)。專案活躍度極高,每日皆有提交,並依週期發布穩定版。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "SECURITY.md 明確聲明威脅模型:預設僅綁定 127.0.0.1,且將「安裝不受信任的自訂節點」視為使用者自行承擔風險的行為,因為自訂節點可執行任意 Python 程式碼",
+          "README 提供產生自簽 TLS 憑證與啟用 --listen 對外暴露服務的說明,若使用者依此開放對外存取且未額外加上驗證/防火牆,需自行承擔對外曝露風險",
+          "tests-unit/security_test 內含針對先前已修復 CVE(GHSA-779p,路徑穿越、XSS、危險 Content-Type 等)的回歸測試,顯示專案有主動修補歷史漏洞並留存測試防止再犯"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "生態成熟、文件與測試齊全、社群與更新頻率都在頂尖水準,是生成式 AI 工作流工具的事實標準,非常值得關注與投入。",
+      "_mode": "full"
+    }
+  },
+  "harveyai/harvey-labs": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-10": [
+        827,
+        47,
+        11,
+        "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-10",
+    "analysis": {
+      "one_liner": "Harvey AI 推出的開源法律代理人(Agent)基準測試,評估 LLM Agent 執行真實法律工作的能力。",
+      "summary": "Harvey LAB 是一套針對 LLM Agent 的法律工作基準測試,包含涵蓋 24 個以上法律執業領域、共 1671 項任務的資料集,以及對應的執行框架(harness)用來跑任務並依評分標準(rubric)評測。目標是持續擴充任務集並精煉評測方法,協助衡量與提升 Agent 在真實法律場景中的能力。",
+      "category": "ai-ml",
+      "highlights": [
+        "提供 1671 個任務、涵蓋 24+ 法律執業領域加合約類別的大規模基準資料集",
+        "附帶完整執行框架(harness),可執行 Agent、評分、產出報告與比較儀表板",
+        "文件完整,包含端到端教學(以 M&A 資料室情境示範)、架構說明與評測方法論",
+        "有 CI 工作流程(validate-task-schema)自動驗證任務結構,顯示一定的工程品質把關",
+        "由專注法律 AI 領域的 Harvey AI 公司發布,具備明確的產業應用背景"
+      ],
+      "use_cases": [
+        "評估與比較不同 LLM Agent 在法律文件審閱、合約分析等任務上的表現",
+        "作為法律 AI 產品開發前的能力基準測試工具",
+        "研究人員用於發表法律領域 Agent 評測相關論文的標準資料集",
+        "法律科技團隊參考其任務結構與評分方法設計自有評測流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 3,
+        "comment": "README 文件結構清晰,提供教學、架構、評測方法論等完整說明,並有 CI 驗證任務格式;但僅能從 README 判斷,未實際檢視程式碼與測試涵蓋率,品質評估以文件為主。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若關注法律領域 AI Agent 評測,這是目前少見且文件完整的開源基準,值得追蹤,但仍屬剛上榜的新專案,建議先觀察後續維護狀況。",
       "_mode": "light"
     }
   }
