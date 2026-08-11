@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-11",
+    "analyzed": 8,
+    "cached": 8,
+    "deferred": 0,
+    "top_name": "ruvnet/RuView",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-10",
     "analyzed": 7,
     "cached": 5,

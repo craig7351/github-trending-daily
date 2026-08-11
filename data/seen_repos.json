@@ -502,52 +502,58 @@
   },
   "ruvnet/RuView": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
+    "last_seen": "2026-08-11",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         85942,
         1022
+      ],
+      "2026-08-11": [
+        89369,
+        154,
+        8,
+        "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-07-25",
+    "last_analyzed": "2026-08-11",
     "analysis": {
-      "category": "other",
-      "one_liner": "用 9 美元的 ESP32 讀取 WiFi CSI 訊號,在沒有攝影機的情況下做到穿牆式的人員存在偵測、生命體徵監測與姿態估計。",
-      "summary": "RuView(WiFi-DensePose)利用商用 WiFi 的 Channel State Information,結合 ESP32 邊緣硬體與 Rust 訊號處理管線,推論房間內的人員存在、呼吸/心跳、跌倒、姿態等資訊,並可整合 Home Assistant / Matter / HomePod 等智慧家庭生態系。專案同時提供 105 個可安裝的邊緣運算模組(cog)目錄與完整的 ADR(架構決策紀錄)文件體系。",
+      "category": "ai-ml",
+      "one_liner": "用 9 美元的 ESP32 把家用 WiFi 訊號變成穿牆感測系統,偵測人員存在、呼吸心跳與姿態,完全不需要攝影機。",
+      "summary": "RuView(原 WiFi-DensePose)是以 Rust 為主體的 WiFi CSI 感測平台,利用 ESP32 擷取通道狀態資訊,結合訊號處理與神經網路推論出人員存在、呼吸/心跳、姿態關鍵點與房間指紋等資訊,並整合 Home Assistant / Apple Home / Matter 等智慧家庭生態系。專案內含超過 100 個可安裝的邊緣運算模組(cogs)、完整的 ADR 架構決策紀錄與量化過的模型基準測試。",
       "highlights": [
-        "README 罕見地誠實揭露模型限制:曾宣稱的『100% 存在偵測準確率』已被撤回,現行 on-device 17 關鍵點姿態模型 PCK@20 僅 3.0%,推論路徑仍是回傳 confidence=0 的 stub",
-        "核心 Rust crate(v2/crates)結構完整,cog-pose-estimation 的推論程式碼品質紮實,附有清楚的架構註解與 LoRA 校準機制",
-        "提供 105 個場景化邊緣模組(健康照護、保全、零售、工業等)、Docker/PyPI/npm 多種安裝管道,以及 24 個 GitHub Actions workflow 涵蓋韌體、CI、發版與安全掃描",
-        "install.sh 使用官方 rustup 的 curl|sh 安裝方式,但有 --yes 旗標門檻與互動確認,非隱藏式執行",
-        "專案規模極大(逾 2700 個 .claude AI agent 定義檔、逾 890 個 Rust 原始檔),明顯是以 Claude Code / claude-flow AI 群集大量產出,文件量遠超過典型人力團隊產出"
+        "README 對模型成熟度做了罕見的誠實分級:明確標示哪些數字是『已驗證』、哪些是『第一版但偏弱』(如 pose_v1 的 PCK@20 僅 3.0%,推論路徑目前仍是回傳 confidence=0 的 stub),甚至把先前『100% presence』的誇大數字主動撤回",
+        "Rust workspace 拆分成 40+ 個 crate(訊號處理、神經網路、韌體橋接、HomeKit/Matter 整合、Wasm 邊緣運算等),搭配 rust-toolchain.toml 與嚴謹的 workspace 依賴管理",
+        "測試覆蓋非常廣,光是 v2/crates 底下就有上百個整合測試檔案,涵蓋 MQTT、WebSocket、隱私閘門、韌體同步等場景,並宣稱 1463 個測試全數通過",
+        "提供 105 個邊緣模組目錄(健康、居家安全、零售、工業、AI、群體協作等),以及可攜式的『MetaHarness』CLI 供 AI agent 進行受控、唯讀的操作與驗證",
+        "CI/CD 相當完整,近 30 個 GitHub Actions workflow 涵蓋韌體 QEMU 測試、npm/PyPI 發布、安全掃描、基準測試回歸等"
       ],
       "use_cases": [
-        "智慧家庭無攝影機式存在偵測與居家長者跌倒/生命體徵監控",
-        "零售、辦公室等場域的人流與空間使用率分析(免裝攝影機、規避 GDPR/HIPAA 疑慮)",
-        "研究用 WiFi 感測與姿態估計基準測試(對照 MM-Fi benchmark)",
-        "工業/倉儲場域的人員安全區域偵測與 Cobot 協作安全"
+        "智慧家庭場域:免攝影機的房間佔用偵測、跌倒警示、睡眠與生命徵象監測,並直接對接 Home Assistant / HomeKit / Google Home / Alexa",
+        "零售與商業空間的人流分析、排隊長度估計、桌位翻桌率追蹤等,免除攝影機帶來的 GDPR/HIPAA 疑慮",
+        "研究與教育用途:學習 WiFi CSI 訊號處理(Fresnel zone、SpotFi、BVP)與對比式表徵學習在邊緣裝置上的落地",
+        "工業與長照場域的非侵入式生命徵象與安全監控(如老人獨居跌倒偵測、受限空間工安警示)"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "文件量極其巨大(ADR、benchmark、witness log 齊全),且罕見地誠實標註模型未達標與 stub 狀態,是本專案最大加分;測試與 CI 覆蓋度看似紮實(1463 個測試、24 個 workflow),但實際核心賣點『WiFi 穿牆姿態估計』的 on-device 模型仍處於效果很差、尚未真正接上推論路徑的階段,商用可信度需打折扣。"
+        "comment": "文件品質相當突出,不只是行銷式 README,而是搭配大量 ADR(架構決策紀錄)、基準測試報告與模型誠實度分級,清楚交代哪些功能是實驗性質、哪些已有嚴謹量化驗證。程式碼抽樣(如 Fresnel zone 呼吸模型、Candle 姿態推論引擎)註解精確且引用文獻,顯示團隊具備扎實的訊號處理與 ML 工程能力。測試數量與 CI 涵蓋面在同類專案中屬於少見的完整程度,今日仍有推送記錄,活躍度極高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "未發現 npm/pip 生命週期腳本(postinstall/preinstall/prepare)執行任意程式碼",
-          "install.sh 內含官方 rustup 的 curl|sh 安裝指令,但有互動確認與 --proto/--tlsv1.2 安全旗標,非隱蔽注入",
-          "repo 主題含 wifi-security,涉及 CSI 封包擷取與研究型網卡(QCA9300 等)屬雙用途安全研究工具,若用於未經授權的無線監控需留意各地法規",
-          "未發現可疑 base64/hex payload、未發現硬編碼可疑 IP 或網域"
+          "install.sh 在使用者選擇 rust/browser/field 等安裝模式且系統未偵測到 Rust 時,會執行官方 rustup 安裝指令(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh),這是業界常見的 Rust 官方安裝方式,且預設會先詢問使用者確認(除非帶入 --yes 略過互動),並非專案自製的不明來源腳本",
+          "install.sh 於 Linux 環境下會呼叫 sudo apt-get / dnf 安裝系統套件(build-essential、libopenblas-dev 等),同樣有互動確認機制,使用者應留意賦予 sudo 權限前確認腳本內容",
+          "檢查過的 package.json 檔案(harness、tools、dashboard 等)均未發現 preinstall/postinstall/prepare 生命週期腳本執行任意程式碼的情形"
         ]
       },
-      "star_rating": 4,
-      "verdict": "工程規模與誠實揭露的文件文化值得學習,但核心『WiFi 穿牆姿態辨識』賣點目前多是展示用/基準測試數據而非可靠的落地功能,適合技術好奇心強的工程師研究,不建議直接當作生產級居家照護方案採用。",
+      "star_rating": 5,
+      "verdict": "工程深度與誠實揭露模型限度的作風在 GitHub trending 專案中相當少見,無論是想學 WiFi 感測技術或尋找可落地的邊緣 AI 架構範本都值得花時間細讀。",
       "_mode": "full"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "CoreBunch/Instatic": {
@@ -1323,8 +1329,8 @@
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 1,
+    "last_seen": "2026-08-11",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-27": [
         15052,
@@ -1336,45 +1342,53 @@
         12,
         "",
         "TypeScript"
+      ],
+      "2026-08-11": [
+        18030,
+        389,
+        14,
+        "",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-08-11",
     "analysis": {
       "category": "devtool",
-      "one_liner": "T3 Code 是一款整合 Codex、Claude Code、Cursor、OpenCode 等多種 AI 編碼代理的桌面/網頁 GUI 殼層。",
-      "summary": "由 pingdotgg(T3 團隊)開發,提供統一的圖形介面來操作多種 CLI 型 AI 編碼代理,底層是以 Effect-TS 打造的伺服器/桌面/行動端 monorepo,涵蓋認證、Git 工作流程、checkpoint、MCP 整合等模組。目標是讓開發者不必在終端機分別操作各家 agent CLI,而是透過一個桌面 App 統一管理多個 coding agent 的會話與工作區。",
+      "one_liner": "一套能讓你用手機、網頁或桌面應用程式,遠端操控本機上 Claude Code、Codex、Cursor 等 AI coding agent 的「agent 控制台」。",
+      "summary": "T3 Code 是 pingdotgg 團隊開發的 Electron 桌面應用 + 行動 App + Web App 三端合一專案,目的是統一管理與遠端操控機器上已安裝的多種 AI coding agent(Claude Code、Codex、Cursor、Grok Build、OpenCode)。技術上是採用 pnpm monorepo、Effect 函式庫、TypeScript 撰寫的重工程專案,涵蓋伺服器、桌面、行動、Web 四個 app 及多個共用套件。",
       "highlights": [
-        "同時支援 Codex、Claude Code、Cursor、OpenCode 四種 AI 編碼代理,可透過 npx t3@latest 或原生桌面安裝包(winget/brew/AUR)使用",
-        "採用 Effect-TS 架構打造伺服器端(認證、Git 管理、checkpoint、MCP HTTP server 等),搭配 Electron 桌面殼層與 Expo 行動端",
-        "CI 涵蓋 typecheck、build、test、mobile native 靜態分析與 release smoke test,workflow 相當完整",
-        "幾乎每個原始碼檔案都有對應的 *.test.ts 單元測試,測試覆蓋率高",
-        "專案仍在極早期(README 明言『expect bugs』且暫不接受外部貢獻)"
+        "跨平台三端(iOS/Android、Web、Electron 桌面)同步控制多家 AI coding agent,而非只綁定單一供應商",
+        "大量使用 Effect 生態系(Schema、TaggedError、Effect.fn 等)撰寫型別安全的錯誤處理與流程控制,程式碼品質偏工程導向",
+        "幾乎每個核心 source 檔案都有對應的 .test.ts,CI 涵蓋 typecheck、單元測試、Rust resource-monitor 測試、行動端原生靜態分析與 release smoke test",
+        ".repos/ 內用 git subtree 方式 vendor 了 effect-smol、alchemy-effect 等參考程式庫,供內部 AI agent 開發時查閱最新用法",
+        "readme 明言專案仍在早期階段、暫不太接受外部貢獻,commercial 元素(Clerk 登入、官方 relay 伺服器)已內建"
       ],
       "use_cases": [
-        "想用同一個 GUI 同時管理多個 AI coding agent(Codex/Claude/Cursor/OpenCode)工作階段的開發者",
-        "需要遠端存取/同步 coding agent 工作區(desktop + relay + mobile)的團隊",
-        "想參考 Effect-TS 在真實大型 monorepo(認證、Git、MCP、checkpoint)中的實務用法"
+        "同時使用多種 CLI coding agent(Claude Code、Codex、Cursor 等)的開發者,想要一個統一介面切換與監控",
+        "需要從手機或其他裝置遠端查看/操作正在本機執行的 agent 工作進度",
+        "想觀察 Effect 生態系(4.0 beta)在大型 TypeScript monorepo 中的實際應用範例",
+        "對『AI agent 開發控制台』這類新興工具型產品的架構設計有興趣的工程師"
       ],
       "quality": {
-        "docs": 3,
+        "docs": 4,
         "tests": 5,
         "activity": 5,
-        "comment": "README 本身簡短,但另有 docs/ 目錄涵蓋快速開始、架構、provider 指南與維運說明;程式碼品質高,採嚴謹的 Effect-TS 型別化架構,幾乎每支原始檔都配有對應單元測試,CI 涵蓋 typecheck/build/test/mobile 靜態分析與 release smoke test,今日剛有新 push,開發活躍度極高。"
+        "comment": "文件相對完整(README、docs/ 目錄、內部 .plans 設計文件、AGENTS.md),但官方坦承尚無獨立文件站;測試覆蓋率非常高,幾乎每個模組都有對應單元測試,CI 涵蓋 typecheck/測試/資源監控/行動端靜態分析/release smoke 多道關卡;今日剛推送新 commit,且有大量進行中的 .plans 文件顯示開發節奏非常密集。整體程式碼風格一致、型別嚴謹,屬工程成熟度較高的專案。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 中『若真的想貢獻』章節要求先安裝建置工具 vp,方式為 curl -fsSL https://vite.plus | bash(或 Windows 的 irm ... | iex),屬於未經雜湊驗證的 curl|bash 安裝模式,僅影響想從原始碼建置的貢獻者,不影響一般使用者透過 npx/安裝包使用",
-          "package.json 的 prepare 腳本會執行 effect-tsgo patch 與 vp config --no-agent,屬於內部建置工具設定,未發現對外部網路的可疑呼叫",
-          "未發現 preinstall/postinstall 生命週期腳本、base64/hex 大型內嵌 payload、可疑硬編碼 IP 或 typosquat 依賴名稱"
+          "README 要求貢獻者透過 `curl -fsSL https://vite.plus | bash`(macOS/Linux)或 `irm https://vite.plus/ps1 | iex`(Windows)安裝其自製的 `vp`(Vite+)建置工具,這只是原始碼建置時的開發依賴安裝步驟,不影響一般使用者透過 `npx t3@latest` 或安裝好的桌面版執行,但採用『下載腳本後直接管道執行』的安裝方式,使用前建議先檢視腳本內容",
+          "已發佈到 npm 的 `t3` 套件(apps/server)本身沒有 preinstall/postinstall 生命週期腳本,安裝過程單純,未發現可疑行為",
+          ".env.example 中的 Clerk publishable key、OAuth client id 等皆標註為公開識別碼而非機密,說明清楚,不構成洩漏風險"
         ]
       },
       "star_rating": 4,
-      "verdict": "出自 T3 團隊、工程品質扎實(高測試覆蓋率+完整 CI)的多代理 AI 編碼 GUI,雖仍處早期且暫不開放貢獻,但值得追蹤與試用。",
+      "verdict": "工程紮實、測試與 CI 覆蓋度高,是少見認真對待「多 agent 統一控制台」這個新興需求的專案,但仍屬早期階段且暫不太開放外部貢獻,值得關注但先以觀察/個人試用為主。",
       "_mode": "full"
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 2
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
@@ -1746,7 +1760,7 @@
   },
   "NanmiCoder/MediaCrawler": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-08-11",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-28": [
@@ -1756,46 +1770,51 @@
       "2026-07-30": [
         59070,
         154
+      ],
+      "2026-08-11": [
+        61016,
+        259,
+        3,
+        "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-08-11",
     "analysis": {
       "category": "cli",
-      "one_liner": "一套支援小紅書、抖音、快手、B站、微博、貼吧、知乎七大平台的多媒體資料爬蟲工具",
-      "summary": "MediaCrawler 利用 Playwright 瀏覽器自動化保存登入態，透過 JS 表達式取得簽名參數,免去逆向各平台加密演算法的麻煩,支援關鍵字搜尋、指定帖子/創作者主頁爬取、二級評論、IP 代理池與多種資料落地方式(CSV/JSON/Excel/SQLite/MySQL/MongoDB)。專案另有 WebUI(React + FastAPI)可視化操作介面,並提供付費 Pro 版本主打斷點續爬、多帳號代理池與去除 Playwright 依賴等企業級功能。",
+      "one_liner": "支援小紅書、抖音、快手、B站、微博、貼吧、知乎等七大平台的多媒體資料爬蟲工具,基於瀏覽器登入態繞過簽名逆向。",
+      "summary": "MediaCrawler 是一個以 Playwright 瀏覽器自動化為核心的多平台自媒體資料採集工具,透過保留登入態的瀏覽器上下文取得簽名參數,免去逆向各平台加密演算法的麻煩。專案提供命令列與 WebUI 兩種操作方式,支援關鍵字搜尋、指定貼文/影片 ID 爬取、二級評論、創作者主頁抓取、IP 代理池與多種資料落地格式(CSV/JSON/SQLite/MySQL/PostgreSQL/Excel)。",
       "highlights": [
-        "核心技術用瀏覽器登入態代替 JS 逆向簽名,大幅降低各平台反爬蟲門檻",
-        "七大主流中國社群/內容平台(小紅書、抖音、快手、B站、微博、貼吧、知乎)功能齊全,含二級評論與詞雲圖生成",
-        "同時提供 CLI 與 WebUI(FastAPI + React/Vite + Radix UI)兩種操作方式",
-        "tests/ 與 test/ 兩個目錄下有 18 支測試檔涵蓋各平台與儲存邏輯,工程紀律優於一般爬蟲專案",
-        "採用「非商業學習使用許可證」而非常見開源授權,商用與大規模爬取被明確禁止"
+        "七大主流中國社群/內容平台(小紅書、抖音、快手、B站、微博、百度貼吧、知乎)皆支援關鍵字搜尋、貼文詳情、二級評論、創作者主頁與登入態快取",
+        "採用 CDP 模式直接掛接使用者既有 Chrome 瀏覽器,重用真實 Cookie/擴充功能以降低風控偵測風險,免安裝額外瀏覽器驅動",
+        "提供 FastAPI 後端 + React/Vite WebUI 前端的視覺化操作介面,並支援即時日誌與資料預覽",
+        "採用 uv 進行套件與版本管理,模組化程度高(base/config/media_platform/store/cache 分層清晰),並有 test/tests 兩組測試涵蓋儲存工廠、代理池、CDP 瀏覽器等模組",
+        "有另一個閉源付費的 MediaCrawlerPro 版本,README 中大量置入贊助商廣告與導流連結"
       ],
       "use_cases": [
-        "學術研究或市場輿情分析需要蒐集中國社群平台公開貼文與評論資料",
-        "學習 Playwright 瀏覽器自動化、反爬蟲繞過與多平台爬蟲架構設計的教材",
-        "個人/研究用途的小規模資料採集與詞雲、情感等下游分析前處理",
-        "評估是否訂閱其 MediaCrawlerPro 商業版以取得斷點續爬、多帳號代理池等進階能力"
+        "學術研究或個人學習用途,需要抓取公開社群媒體資料進行文本分析、輿情或詞雲統計",
+        "需要一套可參考的 Playwright 反偵測 + CDP 登入態複用架構作為爬蟲工程範例",
+        "多平台資料採集原型開發,搭配其提供的多種儲存後端(DB/Excel/JSON)快速落地資料"
       ],
       "quality": {
         "docs": 4,
         "tests": 3,
-        "activity": 4,
-        "comment": "README 詳盡但夾雜大量贊助商廣告,可讀性打折;文件另有獨立 VitePress 站點與多篇操作指南(CDP 模式、資料儲存、Excel 匯出)。測試覆蓋七平台的登入/解析/儲存邏輯,但 GitHub Actions 目前只有文件部署流程,並無自動跑測試的 CI,持續整合這塊仍有加強空間。專案更新頻繁(最後推送在分析當日),issue/PR 數量顯示社群活躍度高。"
+        "activity": 5,
+        "comment": "README 撰寫詳盡(含快速開始、CDP 設定、WebUI 使用、資料儲存指南等獨立文件),但摻雜大量贊助商廣告降低純度。程式碼分層明確(base/config/media_platform/store/cache),核心爬蟲邏輯可讀性佳且有基本註解與型別提示。test/ 與 tests/ 兩個測試目錄並存顯得結構稍亂,測試多為 mock 導向的單元測試,缺乏 CI 自動跑測試(現有 GitHub Actions 僅用於部署文件站,未見測試流水線)。專案更新頻繁、issue/PR 活躍,star 成長迅速,顯示社群關注度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "未發現 install-time 惡意腳本、curl|bash 模式或混淆/base64 payload,程式碼中的 base64 使用僅限二維碼登入圖片編碼,屬正常用途",
-          "browser_launcher.py 使用 subprocess 啟動本機 Chrome 並以 taskkill 強制結束程序,屬 CDP 模式必要操作,非遠端可控指令注入",
-          "pyproject.toml 預設將清華大學 PyPI 鏡像設為套件來源(國內常見加速鏡像),若對供應鏈來源有疑慮建議手動改回官方 PyPI index",
-          "專案授權為「非商業學習使用許可證」,明確禁止商用與大規模爬取,並附中國網路安全法相關免責聲明,使用前須留意合規與法律風險而非程式碼安全風險"
+          "爬蟲功能依賴逆向工程各平台簽名機制與模擬登入,程式碼中內建 base_config.py 提供 DISABLE_SSL_VERIFY 選項(預設為 False),文件已註明僅限企業代理除錯情境使用,啟用時會關閉 SSL 憑證驗證",
+          "專案授權為自訂的 NON-COMMERCIAL LEARNING LICENSE,明確限制僅供學習研究、禁止大規模爬取與商業用途,使用者需留意爬蟲行為是否符合目標平台服務條款及當地法律",
+          "未發現安裝時自動執行外部腳本(無 npm pre/postinstall 或 curl|bash 安裝流程),pyproject.toml 與 package.json 內容單純,未見混淆程式碼或可疑硬編碼網域"
         ]
       },
       "star_rating": 4,
-      "verdict": "程式碼與安全面都算乾淨,功能齊全且維護活躍,若目的是學習爬蟲架構或做學術/研究用途的中國社群平台資料採集,值得關注;但商用或大規模爬取在授權與法律上都不被允許,務必先評估合規風險。",
+      "verdict": "功能完整、架構清晰且社群活躍度高,適合學習多平台爬蟲設計與 CDP 反偵測技巧,但商業使用受授權限制,且需自行承擔各平台服務條款與法律風險。",
       "_mode": "full"
     },
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "consecutive_days_on_trending": 1
   },
   "bradautomates/claude-video": {
@@ -5074,10 +5093,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5104,6 +5123,13 @@
         85140,
         680,
         6,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-08-11": [
+        85741,
+        659,
+        4,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -5515,10 +5541,10 @@
   },
   "PrimeIntellect-ai/prime-agent": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-09": [
         9660,
@@ -5531,6 +5557,13 @@
         11094,
         2356,
         1,
+        "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "TypeScript"
+      ],
+      "2026-08-11": [
+        13069,
+        2642,
+        6,
         "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
         "TypeScript"
       ]
@@ -5630,15 +5663,22 @@
   },
   "TauricResearch/TradingAgents": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-09",
+    "last_seen": "2026-08-11",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-09": [
         96733,
         153,
         7,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
+      ],
+      "2026-08-11": [
+        97218,
+        177,
+        11,
         "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "Python"
       ]
@@ -5678,15 +5718,22 @@
   },
   "LadybirdBrowser/ladybird": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-09",
+    "last_seen": "2026-08-11",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-09": [
         65082,
         48,
         9,
+        "Truly independent web browser",
+        "C++"
+      ],
+      "2026-08-11": [
+        65256,
+        56,
+        7,
         "Truly independent web browser",
         "C++"
       ]
@@ -5870,15 +5917,22 @@
   },
   "vitali87/code-graph-rag": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-10": [
         2984,
         96,
         2,
+        "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+        "Python"
+      ],
+      "2026-08-11": [
+        3533,
+        682,
+        13,
         "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
         "Python"
       ]
@@ -5918,15 +5972,22 @@
   },
   "msitarzewski/agency-agents": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-10": [
         140680,
         858,
         3,
+        "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "Shell"
+      ],
+      "2026-08-11": [
+        141828,
+        1349,
+        2,
         "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "Shell"
       ]
@@ -6016,15 +6077,22 @@
   },
   "google-deepmind/weathernext": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-10": [
         7088,
         86,
         5,
+        "",
+        "Python"
+      ],
+      "2026-08-11": [
+        7354,
+        325,
+        12,
         "",
         "Python"
       ]
@@ -6112,15 +6180,22 @@
   },
   "Comfy-Org/ComfyUI": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-10": [
         125521,
         365,
         10,
+        "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "Python"
+      ],
+      "2026-08-11": [
+        126321,
+        922,
+        15,
         "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
         "Python"
       ]
@@ -6208,6 +6283,257 @@
       "star_rating": 4,
       "verdict": "若關注法律領域 AI Agent 評測,這是目前少見且文件完整的開源基準,值得追蹤,但仍屬剛上榜的新專案,建議先觀察後續維護狀況。",
       "_mode": "light"
+    }
+  },
+  "semantica-agi/semantica": {
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-11": [
+        4101,
+        970,
+        1,
+        "Graph-Native Infrastructure for Context and Accountable AI Systems",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-11",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "為 AI Agent 打造的圖原生基礎設施,把「決策」與「知識」都變成帶溯源的可查詢知識圖譜節點。",
+      "summary": "Semantica 是一套 Python 套件,定位為「開源版 Palantir for AI Agents」:在 LLM、向量資料庫、Agent 框架之下建立一層確定性(不需 LLM)的知識圖譜與決策智慧基礎設施。它把每一次 AI 決策紀錄成帶因果關係、W3C PROV-O 溯源、SHACL/OWL 治理規則的圖節點,並提供實體/關係抽取、衝突偵測、實體去重、時間旅行查詢、多種圖資料庫與向量庫後端支援,目標客群是金融、醫療、法遵等需要「向監管機關解釋 AI 為何這樣做」的高監管產業。",
+      "highlights": [
+        "功能覆蓋極廣:從資料擷取(Databricks/Snowflake/Kafka等)、NER/關係抽取、知識圖譜建構、Rete/Datalog/SPARQL 推理引擎,到 W3C PROV-O 溯源與多格式匯出,一次到位",
+        "決策(Decision)被設計成一級圖節點,支援因果鏈追蹤、相似決策檢索、政策合規檢查,直接對應法遵稽核需求",
+        "Polyglot 儲存層:RDF(Oxigraph/Blazegraph/Jena/RDF4J)與 LPG(Neo4j/FalkorDB/AWS Neptune)後端皆可替換,不綁定單一圖資料庫廠商",
+        "測試覆蓋非常紮實(tests/ 底下有 240+ 個測試檔,依模組細分),CI 包含 CodeQL、依賴掃描、action pin 驗證等多道安全工作流",
+        "README 誠實標註已知限制(例如 ReteEngine 的條件比對目前較簡化)與 API 陷阱(如 add_step 不支援鏈式呼叫),不是純行銷文"
+      ],
+      "use_cases": [
+        "金融/保險/醫療等受監管產業需要為 AI 核准/拒絕決策留存可交付監管機關的稽核軌跡",
+        "企業資料平台團隊想把 Databricks/Snowflake 中既有的表格資料轉成帶血緣的知識圖譜,而不想先匯出到第三方 SaaS",
+        "建構 GraphRAG 系統,需要實體感知的文件切分、衝突偵測與實體去重來取代單純向量檢索",
+        "多 Agent 團隊需要共享同一份具因果關係與溯源的長期記憶/知識圖譜"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件量與範例極其詳盡(README 超過1600行,附完整模組參考、cookbook notebooks),原始碼中的 docstring 也寫得完整;tests/ 目錄結構清晰、依模組拆分且數量龐大;CI/CD 具備多層防護(CodeQL、dependabot、GitHub Action pin 驗證、Docker 非 root 使用者),近期仍持續推送(2026-08-10),是一個明顯有持續投入資源在維運的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "功能範疇龐大且工程紀律看起來扎實(測試、CI、安全掃描俱全),適合關注 Agent 記憶與決策治理領域的工程師深入研究,但因整合面向極廣,實際導入前建議先評估其核心模組的成熟度與效能表現。",
+      "_mode": "full"
+    }
+  },
+  "paperclipai/paperclip": {
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-11": [
+        76484,
+        198,
+        5,
+        "The open-source app everyone uses to manage agents at work",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-11",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "開源的 AI 代理人「公司」編排平台,把一堆 Claude Code / Codex / OpenClaw 等 agent 組織成有組織架構、預算與治理機制的虛擬團隊。",
+      "summary": "Paperclip 是一個 Node.js 伺服器 + React UI 組成的自架平台,讓使用者把多個 AI agent(Claude Code、Codex、OpenClaw、CLI/HTTP bot 等)組織成具有組織圖、任務系統、心跳排程、預算控管與審批治理的「公司」,解決多開多個 agent 終端機、失去上下文、超支失控等痛點。專案定位不是 agent 框架或聊天機器人,而是「管理一群 agent 的公司」控制平面,附帶 multi-tenant 隔離、憑證管理、外掛系統與完整審計軌跡。",
+      "highlights": [
+        "功能極廣:org chart、任務/工單系統、心跳排程、預算硬停、審批治理、密鑰管理、外掛系統、公司匯出入(portability)一應俱全",
+        "程式碼品質紮實:TypeScript 型別定義完整(如 authorization.ts 對 actor/action/resource 有嚴謹的聯合型別),服務層邏輯清晰",
+        "測試涵蓋非常大量:光 server/src/__tests__ 就有 800+ 支測試檔,且明確要求用 embedded-postgres 而非 mock DB 測授權/服務邏輯",
+        "CI/CD 完整:10 條 GitHub Actions workflow,涵蓋 PR 檢查、e2e、release-verify、docker build、storybook 視覺回歸",
+        "安裝腳本注重供應鏈安全:install.sh 對第三方下載(Homebrew installer、NodeSource repo)使用固定 commit + SHA256 校驗,而非直接 curl|bash 執行任意內容"
+      ],
+      "use_cases": [
+        "同時操控大量 Claude Code / Codex / OpenClaw 等 agent,需要任務指派、進度追蹤與跨重開機的 session 持久化",
+        "需要對多個 AI agent 的花費做預算控管與硬停機制,避免 token 超支",
+        "想建立多間「虛擬公司」(專案/客戶隔離),用同一套部署管理不同團隊或業務線的 agent",
+        "需要治理與審批流程(人審核 agent 產出、暫停/終止 agent)的企業或工作室場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件量與涵蓋面極高(doc/ 下有 100+ 份規格、安裝、部署、遙測文件),README 對安裝腳本的安全限制也誠實揭露。測試數量龐大且用真實 embedded Postgres 而非全面 mock,授權服務等核心程式碼型別嚴謹、模組化良好。CI 覆蓋 PR 檢查、e2e、release 驗證等多層次。整體是少見的、工程成熟度很高的開源專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 的 postinstall 會執行 scripts/link-plugin-dev-sdk.mjs,但內容僅在repo 內部符號連結 workspace 外掛套件到本地 SDK,且註解明確說明此舉是為了避免這段 lifecycle script 被打包進發布的 npm tarball 中,不涉及外部下載或執行",
+          "README 提供的 install.sh 快速安裝流程含 curl 下載並執行 shell script 的模式(附帶 sha256 校驗),但作者在文件中已誠實註明:校驗檔與腳本同源,建議需要獨立信任來源時改用鎖定 release tag/commit 的 GitHub 副本",
+          "install.sh 內部對第三方下載(Homebrew installer、NodeSource 套件庫)採用固定 commit hash 搭配 SHA256 雜湊比對,屬於較嚴謹的供應鏈驗證作法"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程成熟度遠超一般新興 AI 專案,測試與文件扎實,若你在管理多個 coding agent 的團隊協作與治理,值得認真評估。",
+      "_mode": "full"
+    }
+  },
+  "danielmiessler/LifeOS": {
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-11": [
+        17910,
+        315,
+        9,
+        "⛰️A General Hill-climbing AI harness that helps you move from Current State to Ideal State in both Life and Work.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-11",
+    "analysis": {
+      "one_liner": "由 Fabric 作者 Daniel Miessler 打造的「AI 人生作業系統」,讓 AI 代理記住你的目標與情境,持續協助你從現況邁向理想狀態。",
+      "summary": "LifeOS 是一套建立在 AI coding harness(主要是 Claude Code)之上的個人化框架,透過記憶、技能(Skills)、Hook 與情境檔案讓 AI 代理長期記住使用者的目標、人脈與偏好,號稱可用於寫程式、創業、創作等各種任務。它把自己定位為「引擎之上的那一層」,強調與具體 harness 無關的可移植性,但目前主要在 Claude Code 上開發與測試。",
+      "category": "ai-ml",
+      "highlights": [
+        "核心概念是「Current State → Ideal State」的持續逼近(Hill Climbing),搭配 TELOS、Skill System、Hook System 等自訂元件",
+        "安裝方式特殊:直接把安裝提示貼給 AI 代理讀取安裝頁面並自動設定,或用一行 curl 指令(僅 macOS/Linux)",
+        "作者為知名開源作者 Daniel Miessler(Fabric 專案),定位為與 Fabric 互補而非取代",
+        "公開 repo 是由私有原始碼樹產生,社群 PR 是「移植」進源碼而非直接合併,這點在協作模式上較少見",
+        "目前僅有有限的 Roadmap 項目(本地模型支援、多模型路由、遠端存取等)尚未完成"
+      ],
+      "use_cases": [
+        "已在用 Claude Code 等 AI harness 的開發者,想讓 AI 代理具備跨會話記憶與個人情境",
+        "想嘗試「個人化 AI 助理框架」概念、而非單純使用 Prompt 集合(如 Fabric)的使用者",
+        "對 Agentic 系統設計(Skill/Hook/Routing 架構)感興趣、想借鏡其設計模式的工程師"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 排版與敘事完整,含 FAQ、Roadmap、社群管道等,但技術細節多導向外部網站(ourlifeos.ai/docs),repo 本身文件偏行銷取向;測試面僅能依 README 判斷,未做原始碼審查。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl 直接下載並執行安裝腳本的指令(curl -fsSL https://ourlifeos.ai/install.sh | bash),此類「curl 到 bash」安裝模式屬常見但需留意來源可信度的做法",
+          "另一種安裝方式是要求 AI 代理讀取外部網頁(ourlifeos.ai/install)並依內容自動執行系統設定,README 聲稱會先徵求權限,但此流程仰賴外部頁面內容的可信度,屬於需要使用者自行留意的設計",
+          "本次評估僅基於 README 與 metadata,未檢視實際原始碼或安裝腳本內容"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念新穎且來自知名開源作者,適合關注 AI Agent 個人化框架發展的工程師點進去看看,但目前偏概念驗證與行銷包裝,實際落地細節仍需自行深入文件站評估。",
+      "_mode": "light"
+    }
+  },
+  "firecrawl/firecrawl": {
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-11": [
+        165074,
+        835,
+        10,
+        "The context API to search, scrape, and interact with the web at scale. 🔥",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-11",
+    "analysis": {
+      "one_liner": "開源版「網頁轉 LLM 情境」API,一鍵把任意網站轉成乾淨 Markdown 或結構化 JSON,並提供 AI Agent 自動搜尋擷取能力。",
+      "summary": "Firecrawl 是一套以 TypeScript 為主、輔以 Go 與 Rust 元件的網頁擷取服務,提供 Search、Scrape、Crawl、Map、Agent 等端點,把整個網站轉換成適合餵給 LLM 的乾淨 Markdown 或結構化資料。專案採 monorepo 架構(pnpm workspace),核心 API 服務(apps/api)搭配多語言 SDK(Python、Node、Go、Java、Rust、Ruby、.NET、PHP、Elixir),可自架(self-host)或使用官方雲端服務。",
+      "category": "infra",
+      "highlights": [
+        "單一 API 涵蓋 Search / Scrape / Crawl / Map / Interact / Agent 六大情境,對 AI Agent 與 RAG 應用相當友善",
+        "官方支援 9 種語言 SDK,並提供 MCP server 與 CLI skill,方便直接整合進 Claude Code、OpenCode 等 Agent 工具鏈",
+        "測試涵蓋廣泛,apps/api 底下有 150+ 支測試檔(單元、e2e、snips 整合測試),CI workflow 齊全(每個 SDK 都有獨立 test/publish workflow)",
+        "架構上結合 TypeScript(API 主體)、Go(html-to-markdown 共享函式庫)與 Rust(native 模組),並用 FoundationDB、ClickHouse、Redis 等基礎設施支援大規模擷取",
+        "核心程式碼品質高,控制器內建 OpenTelemetry tracing、威脅防護(threat protection)、權限檢查、速率限制等企業級考量"
+      ],
+      "use_cases": [
+        "幫 LLM/RAG 應用建立即時網頁知識來源,將任意網址轉成乾淨 Markdown 餵給模型",
+        "建置 AI Agent 的網頁瀏覽/資料蒐集能力(透過 Agent、Interact、MCP 端點)",
+        "大量網站爬取與結構化資料擷取(電商比價、市場調查、內容聚合等)",
+        "自架私有化的網頁擷取服務,滿足資料合規或內網隔離需求"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 完整詳盡,涵蓋各語言 SDK 範例與 API 說明;測試檔案數量龐大且分層清楚(unit/e2e/snips);GitHub Actions workflow 涵蓋所有子專案的 build/test/publish 流程,近日仍持續推送更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "功能完整、測試扎實、且緊貼 AI Agent 生態系需求,是目前開源網頁擷取/LLM 情境 API 的標竿專案,值得立即關注與嘗試。",
+      "_mode": "full"
+    }
+  },
+  "opa334/Dopamine": {
+    "first_seen": "2026-08-11",
+    "last_seen": "2026-08-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-11": [
+        6021,
+        111,
+        16,
+        "Dopamine is a semi-untethered jailbreak for iOS 15 to 26(.0.1)",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-08-11",
+    "analysis": {
+      "category": "security",
+      "one_liner": "Dopamine 是一款支援 iOS 15 至 26.0.1 的 rootless semi-untethered 越獄工具。",
+      "summary": "Dopamine 透過核心漏洞取得 root 權限,繞過 iOS 的程式碼簽章與信任快取(trustcache)機制,建立 rootless 的 /var/jb 越獄環境,並提供 launchd/systemhook 等元件讓越獄狀態在重啟後持續生效。專案以 C/Objective-C 撰寫,搭配 THEOS 建置系統,整合多個獨立子專案(ChOma、XPF、opainject、litehook、kfd 等)作為 git submodule。",
+      "highlights": [
+        "支援範圍廣:涵蓋 iOS 15.0 到 18.7.1(arm64/arm64e)以及最新 iOS 26.0-26.0.1(A12/A13)",
+        "模組化架構清晰:BaseBin 下拆分為 dopamine(核心)、launchdhook、systemhook、libjailbreak、jbctl 等獨立元件,各自有 Makefile",
+        "大量核心利用/簽章繞過相關子系統均獨立為 opa334 自己維護的 submodule(ChOma、XPF、opainject、litehook、kfd),顯示長期投入與模組復用",
+        "有 GitHub Actions 自動建置流程(macOS runner + THEOS + Procursus),並產出 .ipa 成品",
+        "作者明確聲明「版本支援相關 issue 將被直接刪除不回覆」,反映社群壓力大但維護態度直接"
+      ],
+      "use_cases": [
+        "研究 iOS 系統安全機制(trustcache、程式碼簽章、沙盒)的實作細節",
+        "學習 rootless 越獄環境如何透過 launchd hook 與 dyld 插入達成持久化",
+        "對已擁有裝置且了解風險的使用者,用於自訂 iOS 系統或安裝 tweak",
+        "作為 iOS 核心漏洞利用鏈(kfd 等)整合應用的參考範例"
+      ],
+      "quality": {
+        "docs": 2,
+        "tests": 1,
+        "activity": 4,
+        "comment": "主 README 內容極簡(僅版本支援聲明與官網連結),詳細說明另置於官網;但程式碼本身模組分工清晰、函式命名與錯誤處理(NSError 回傳、逐步印出安裝進度)相當工整,對越獄工具鏈而言屬於高完成度作品。無傳統單元測試(此類系統層級越獄工具本質上難以撰寫自動化測試),但有 CI 建置流程驗證可編譯性。最近一次 push 為 2026-08-09,搭配子模組同步更新,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "建置流程(.github/workflows/main.yml)與資源下載腳本(download_bootstraps.sh)會透過 curl 從外部網址(如 apt.procurs.us 的 bootstrap 套件、THEOS 官方安裝腳本、CRKatri/trustcache 原始碼)下載內容並執行/編譯,這是越獄工具鏈建置的常見作法,非隱藏行為",
+          "專案核心功能本質上就是繞過 iOS 程式碼簽章與信任快取(trustcache)機制以取得 root 權限,此為越獄工具的設計目的並在文件中明確說明,使用者應理解此類工具會降低裝置原有的系統安全防護",
+          "未發現混淆或壓縮的可疑程式碼、長段 base64/hex payload,也未發現不明硬編碼 IP 或可疑網域"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "在 iOS 越獄領域屬於維護活躍、架構完整的代表性專案,值得安全研究者關注,但一般開發者受眾有限且需自行承擔裝置風險。",
+      "_mode": "full"
     }
   }
 }
