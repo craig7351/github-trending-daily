@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-13",
+    "analyzed": 10,
+    "cached": 5,
+    "deferred": 2,
+    "top_name": "infiniflow/ragflow",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-12",
     "analyzed": 9,
     "cached": 8,

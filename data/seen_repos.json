@@ -216,7 +216,7 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-04",
+    "last_seen": "2026-08-13",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -241,45 +241,48 @@
         10,
         "Kronos: A Foundation Model for the Language of Financial Markets",
         "Python"
+      ],
+      "2026-08-13": [
+        36942,
+        266,
+        6,
+        "Kronos: A Foundation Model for the Language of Financial Markets",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-07-25",
+    "last_analyzed": "2026-08-13",
     "analysis": {
-      "one_liner": "Kronos 是首個專為金融 K 線序列設計的開源基礎模型，以創新的層級離散 token 化與自回歸 Transformer 預測 OHLCV 數據。",
-      "summary": "Kronos 採用二元球面量化（Binary Spherical Quantization, BSQ）將連續的 OHLCV K 線數據轉換為層級式離散 token，再以大型自回歸 Transformer 進行預訓練，涵蓋逾 45 個全球交易所的數據。模型提供 4.1M 至 499.2M 參數的多種規格，可透過 Hugging Face Hub 直接取用，並附完整的微調與 Qlib 回測流程，論文已被 AAAI 2026 接受。",
       "category": "ai-ml",
+      "one_liner": "Kronos 是首個開源的金融K線基礎模型,將OHLCV蜡烛图資料當作「語言」來預訓練,可直接用於股票/加密貨幣的走勢預測。",
+      "summary": "Kronos 採兩階段架構:先用二元球面量化(BSQ)Tokenizer 將連續的K線資料離散化成階層式token,再用自回歸Transformer在這些token上預訓練,形成統一的量化任務基礎模型。專案提供4種規模的預訓練模型(4.1M~499.2M參數,大模型未開源)、推論用的Predictor類別,以及針對A股市場的完整微調與回測範例流程。",
       "highlights": [
-        "首個開源金融 K 線基礎模型，預訓練自逾 45 個全球交易所的歷史數據",
-        "創新的二元球面量化（BSQ）技術，將 OHLCV 連續數據轉為層級離散 token，支援 Nucleus Sampling 機率預測",
-        "提供 4.1M 到 499.2M 四種參數規模的模型家族，全數開放於 Hugging Face Hub",
-        "附完整的兩階段微調流程（Tokenizer + Predictor），含中國 A 股 Qlib 回測範例",
-        "具備批次推論（predict_batch）能力，支援多資產並行預測與 GPU 加速"
+        "論文已被AAAI 2026接受,並掛在arXiv (2508.02739)",
+        "提供4種不同規模的預訓練模型,可直接從HuggingFace Hub載入使用",
+        "內建predict_batch支援多序列平行預測,適合同時對多檔標的做推論",
+        "附上以Qlib為基礎的A股微調+回測完整範例,並附風險免責聲明說明僅供示範",
+        "有真正跑pretrained model做數值比對的迴歸測試(MSE/相對誤差容忍度),而非僅有形式測試"
       ],
       "use_cases": [
-        "加密貨幣與股票短期走勢的概率預測與視覺化",
-        "量化交易策略的 alpha 訊號生成與回測評估",
-        "自訂市場（如港股、A 股）數據上的遷移學習研究",
-        "金融時間序列生成式基礎模型的學術研究基準"
+        "針對特定市場或標的,微調Kronos做K線走勢預測研究",
+        "作為量化策略訊號產生器,搭配自有的組合優化/風控模型使用",
+        "學術研究金融時序基礎模型的分詞與自回歸架構設計",
+        "教學/展示用途,理解如何將Qlib資料串接進微調與回測流程"
       ],
       "quality": {
         "docs": 4,
         "tests": 3,
-        "activity": 2,
-        "comment": "README 文檔詳盡，提供完整的安裝、推論、微調與回測說明，並附可執行範例；核心模型程式碼結構清晰，docstring 完整。回歸測試具有預存期望輸出，設計嚴謹，但測試需從 HuggingFace 下載模型，缺少 CI/CD 配置。專案無 GitHub Actions 工作流程，最後更新距今逾三個月，活躍度偏低。"
+        "activity": 4,
+        "comment": "README 詳盡且附使用範例、模型表格與微調教學,核心模型碼(model/kronos.py、module.py)有清楚的docstring說明每個張量形狀與參數意義,程式品質偏學術但工整。測試僅涵蓋predictor推論的數值迴歸(對照HuggingFace上pinned版本模型輸出),沒有涵蓋finetune/webui等模組,且未見GitHub Actions CI設定,測試只能靠人工執行。README明確標註finetune/目錄部分註解由AI(Gemini 2.5 Pro)生成,建議以程式碼本身為準,顯示團隊誠實揭露而非隱瞞。"
       },
       "security": {
-        "risk_level": "low",
-        "findings": [
-          "webui/run.py 啟動時以 subprocess 執行 pip install -r requirements.txt，存在第三方套件供應鏈風險",
-          "examples/get_date_new.py 與 get_akshare_date_2024-2025_x.py 中有自動執行 pip install 的 subprocess 呼叫，應注意執行前確認來源",
-          "finetune/config.py 中 Comet ML API Key 為明文佔位符 YOUR_COMET_API_KEY，使用者需自行替換並避免洩漏至版本控制"
-        ]
+        "risk_level": "none",
+        "findings": []
       },
       "star_rating": 4,
-      "verdict": "對量化金融與時間序列研究者而言，這是具備學術創新性（AAAI 2026）的開源基礎模型，值得關注並作為金融預測的研究起點，但需 GPU 資源且活躍維護不足，一般工程師短期內實際部署難度較高。",
+      "verdict": "學術嚴謹、有真實數值迴歸測試把關,且剛被AAAI 2026收錄,對做金融時序/量化研究的工程師值得一看,但finetune與webui部分仍偏示範性質,離生產可用還有距離。",
       "_mode": "full"
     },
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "consecutive_days_on_trending": 1
   },
   "Automattic/harper": {
@@ -1760,7 +1763,7 @@
   },
   "NanmiCoder/MediaCrawler": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-08-11",
+    "last_seen": "2026-08-13",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-28": [
@@ -1775,6 +1778,13 @@
         61016,
         259,
         3,
+        "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "Python"
+      ],
+      "2026-08-13": [
+        61970,
+        215,
+        7,
         "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
         "Python"
       ]
@@ -1814,7 +1824,7 @@
       "verdict": "功能完整、架構清晰且社群活躍度高,適合學習多平台爬蟲設計與 CDP 反偵測技巧,但商業使用受授權限制,且需自行承擔各平台服務條款與法律風險。",
       "_mode": "full"
     },
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "consecutive_days_on_trending": 1
   },
   "bradautomates/claude-video": {
@@ -5993,10 +6003,10 @@
   },
   "msitarzewski/agency-agents": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-12",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-13",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-10": [
         140680,
@@ -6016,6 +6026,13 @@
         143222,
         958,
         1,
+        "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "Shell"
+      ],
+      "2026-08-13": [
+        144566,
+        1873,
+        5,
         "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "Shell"
       ]
@@ -6329,10 +6346,10 @@
   },
   "semantica-agi/semantica": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-12",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-13",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-11": [
         4101,
@@ -6345,6 +6362,13 @@
         4891,
         893,
         2,
+        "Graph-Native Infrastructure for Context and Accountable AI Systems",
+        "Python"
+      ],
+      "2026-08-13": [
+        5716,
+        845,
+        3,
         "Graph-Native Infrastructure for Context and Accountable AI Systems",
         "Python"
       ]
@@ -6384,10 +6408,10 @@
   },
   "paperclipai/paperclip": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-12",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-13",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-11": [
         76484,
@@ -6400,6 +6424,13 @@
         77165,
         748,
         11,
+        "The open-source app everyone uses to manage agents at work",
+        "TypeScript"
+      ],
+      "2026-08-13": [
+        77737,
+        571,
+        10,
         "The open-source app everyone uses to manage agents at work",
         "TypeScript"
       ]
@@ -6793,15 +6824,22 @@
   },
   "stablyai/orca": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-12": [
         42779,
         875,
         10,
+        "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+        "TypeScript"
+      ],
+      "2026-08-13": [
+        43885,
+        1235,
+        4,
         "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
         "TypeScript"
       ]
@@ -7028,6 +7066,473 @@
       "star_rating": 4,
       "verdict": "作為程式學習資源清單極具參考價值,尤其適合想找硬核實作題材的工程師,但本身無程式碼可直接使用,純粹是連結彙整。",
       "_mode": "light"
+    }
+  },
+  "cathrynlavery/diagram-design": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        10414,
+        2855,
+        1,
+        "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+        "HTML"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "給 Claude Code / Codex / Pi 用的 Agent Skill,能產生 29 種「編輯風格」的靜態 HTML+SVG 圖表,不用 Figma、不長得像 AI 生成的 Mermaid 圖。",
+      "summary": "這是一個 Agent Skill 套件,讓 AI coding agent 能依語意直接畫出架構圖、流程圖、時序圖、ER 圖等 29 種視覺化類型,輸出為自帶樣式的單一 HTML 檔(內嵌 SVG),不需建置流程或外部 JS。同時支援從網站抓取品牌色彩/字體自動套用、匯入既有 draw.io 或 Mermaid 圖重新繪製,以及選用的無障礙動態效果。",
+      "highlights": [
+        "29 種圖表類型全部提供 minimal light / dark / full-editorial 三種靜態變體,開瀏覽器即看,無建置步驟",
+        "可讀取使用者網站自動萃取品牌色與字體,產生對應的 style-guide token 並附上保真度報告",
+        "支援匯入 draw.io / Mermaid 原始圖並依 format/size/detail/audience 四個維度重繪,附上保真度帳本說明哪些節點被合併或捨棄",
+        "CI 在 Linux/Windows/macOS 三平台各驗證超過 15 道關卡(語意路由、動態效果契約、無障礙 SVG、皮膚一致性、圖示產生等)",
+        "動態效果採單一經審核過的 controller,並用雜湊比對拒絕任意內嵌腳本、遠端資源或 CSS @import,降低誤用風險"
+      ],
+      "use_cases": [
+        "在 Claude Code / Codex / Pi 中直接用自然語言請求產生架構圖、流程圖、時序圖等技術文件配圖",
+        "把既有 draw.io 或 Mermaid 圖轉換成風格統一、適合部落格/簡報/社群卡片的靜態圖",
+        "為公司或個人網站快速產生符合品牌色彩與字體的圖表,取代手動 Figma 排版"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件極度完整:README、27+ 份 references/type-*.md、ADR 決策紀錄一應俱全。測試面以 Python 腳本形式的『驗證關卡』為主(語意路由、a11y、皮膚一致性、匯入正確性等),雖非傳統單元測試框架但覆蓋面廣,並在 CI 三作業系統跑 Python 3.11/3.12 矩陣。專案剛登上 trending 第一天,活躍度極高,且有清楚的貢獻與驗證流程說明。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對於用 Claude Code/Codex 產文件配圖的人來說,是目前最講究視覺一致性與無障礙性的 diagram skill,值得安裝把玩;純輸出靜態 HTML/SVG 且無安裝腳本,風險極低。",
+      "_mode": "full"
+    }
+  },
+  "macro-inc/macro": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        1807,
+        227,
+        2,
+        "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "one_liner": "Macro 是一個將 email、聊天、文件、任務、AI agent、通話與 CRM 整合成單一工作區的全能協作平台。",
+      "summary": "Macro 試圖解決團隊工具分散、彼此不互通造成的「不可計算」混亂問題,用 Rust 打造後端、SolidJS 打造前端,將所有功能模組(email、訊息、任務、文件、CRM 等)存放在同一個雙向圖資料結構中,彼此可用 @連結互相參照,並讓 AI agent 能像人類協作者一樣存取、編輯這些共享團隊記憶。",
+      "category": "app",
+      "highlights": [
+        "以雙向圖(bidirectional graph)串接 email、任務、文件、訊息、CRM 等模組,而非各自獨立的工具拼接",
+        "文件編輯採用 CRDT + Cloudflare Durable Objects,支援即時協作、離線編輯與版本歷史",
+        "強調 AI agent 為一級公民,可透過 MCP、API 或內部 agent 直接讀寫任務、文件與郵件",
+        "CRM 與郵件、聊天共享同一資料層,號稱能自動保持客戶資訊最新,不需另開系統手動同步",
+        "團隊自用兩年後開源,由 NYC 與多倫多團隊開發,目前為 GitHub trending 第 2 名且成長迅速"
+      ],
+      "use_cases": [
+        "10~20 人規模的新創團隊想用單一系統取代 Slack+Linear+Notion+HubSpot 等多套工具",
+        "需要讓 AI agent 能跨郵件、文件、任務、CRM 統一存取團隊記憶並自動執行動作的場景",
+        "重視文件協作與版本控管、且想把客服信件、CRM 客戶紀錄與任務串接在同一介面的團隊",
+        "想觀察 Rust + SolidJS + CRDT 架構如何實作多模組即時協作系統的工程師"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 撰寫詳細,對每個功能模組(email、聊天、任務、文件、CRM)都有清楚說明與截圖搭配官方文件連結,產品定位與設計理念交代得很完整;但本評估僅基於 README,未檢視原始碼,無法確認測試覆蓋率或程式碼品質。目前在 trending 榜排名第 2、單日增加 227 星,活躍度非常高,且今天有推送更新。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "產品定位清晰、文件完整且在 trending 榜快速竄升,值得追蹤觀察其後續開源進度與社群反應,但目前仍偏商業產品導向(以 sign up/demo call 為主),而非典型開源工具,實際可用性與程式碼品質需待進一步查看原始碼與試用。",
+      "_mode": "light"
+    }
+  },
+  "hugohe3/ppt-master": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        45575,
+        476,
+        8,
+        "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "用 AI 把文件或主題直接轉成原生 PowerPoint 簡報,而不只是套版填字。",
+      "summary": "PPT Master 是一個 Python 專案,讓 AI Agent 讀取來源文件或主題後,產出具備原生投影片母片、形狀、圖表/表格、轉場與動畫的可編輯 .pptx 檔案,還能將講者備忘稿轉成語音旁白,並支援套用使用者自訂的 PowerPoint 範本。整個流程在本機執行,資料不上傳雲端平台,訴求「原生深度」勝過單純的排版美化。",
+      "highlights": [
+        "產出真正的原生 PowerPoint 物件(圖表、表格、母片),而非純文字方塊拼版",
+        "支援講者備忘稿自動轉語音旁白,甚至可生成影片",
+        "可套用使用者自有的 .pptx 範本延續原有設計語言",
+        "以 Agent 工作流形式運作於任意具 Agent 能力的 AI 工具中,資料留在本機,不綁定特定平台或模型",
+        "上線第一天即衝上 GitHub trending 第 8 名,單日新增 476 顆星,成長動能強勁"
+      ],
+      "use_cases": [
+        "需要快速將研究報告、Word/PDF 文件轉成可編輯簡報草稿的知識工作者",
+        "希望簡報維持公司範本風格,但由 AI 自動填充內容與圖表的企業用戶",
+        "製作教學或會議用有聲旁白簡報(如論文導讀)的場景",
+        "作為 AI Agent 工具鏈中「文件轉簡報」的整合元件,供開發者串接自動化流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,提供 Live Demo、範例、FAQ、Roadmap 等連結,說明產品定位清楚,但內容中夾雜大量贊助商聯盟連結(如 Kimi、PackyCode 等 API 中繼服務),稀釋了技術說明密度。測試與程式碼品質無法從 README 判斷,僅能就文件本身評分;近期持續有推送更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "README 中包含多個贊助商(Kimi、PackyCode、APIKEY.FUN、RunAPI、又雲智算)的聯盟推廣連結,屬於第三方付費 API 中繼服務廣告,使用前建議自行評估其服務條款與費用,與本專案安全性無直接關聯",
+          "README 截斷部分未見任何 curl | bash 或一鍵安裝腳本,無法評估完整安裝流程"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "在「AI 生成 PPT」這個擁擠賽道中,強調原生 PowerPoint 深度與本機資料留存是差異化亮點,加上上線首日即快速攀升熱門榜,值得追蹤,但實際輸出品質仍需自行下載範例 .pptx 驗證。",
+      "_mode": "light"
+    }
+  },
+  "infiniflow/ragflow": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        87550,
+        139,
+        9,
+        "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "one_liner": "融合檢索增強生成(RAG)與 Agent 能力的開源企業級知識引擎",
+      "summary": "RAGFlow 是一套以「深度文件理解」為核心的開源 RAG 引擎,能將 Word、PPT、Excel、掃描檔、圖片等異質文件轉換為可追溯引用的知識庫,並內建 Agent 工作流(含瀏覽器操作、程式碼執行沙箱、多管道聊天整合)。專案正同時維護 Python 後端與逐步遷移中的 Go 版本(internal/ 目錄),並提供完整 Docker Compose 一鍵部署方案。",
+      "category": "ai-ml",
+      "highlights": [
+        "模板式分塊 + 視覺化引用溯源,降低 LLM 幻覺,適合企業級知識庫場景",
+        "內建 Agent 能力:瀏覽器自動化、Python/JS 沙箱程式碼執行、MCP 支援、Feishu/Discord/Telegram 等多管道聊天整合",
+        "Python 與 Go 雙棧並行,Go 版本(internal/agent)測試覆蓋極為完整,幾乎每個檔案都有對應 _test.go",
+        "支援多種文件解析引擎(DeepDoc、MinerU、Docling)與可切換的向量檢索後端(Elasticsearch/Infinity)",
+        "11 種語言 README、活躍的 Discord/GitHub Discussions 社群,以及每日排程 CI 測試"
+      ],
+      "use_cases": [
+        "企業內部知識庫問答與客服系統,需要可追溯引用來源以降低幻覺風險",
+        "需要處理複雜格式文件(掃描件、表格、多模態 PDF)的檢索增強生成應用",
+        "建構具備 Agent 能力(工具調用、程式碼執行、瀏覽器操作)的 LLM 應用工作流",
+        "需要與多種 LLM/向量庫/文件儲存(S3、MinIO、Confluence、Notion)整合的中大型部署場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與多語系 README 非常完整,官方文件站、Roadmap、Contributing 指南齊全。測試覆蓋極廣:Go 內部套件幾乎每個檔案都配對 _test.go,Python 端也有 sandbox 安全測試、token chunker 測試等,CI 設有每日排程與 PR 測試流程並使用自架 runner。專案活躍度高,今日仍有推送紀錄,是長期維護且工程成熟度高的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "成熟穩健的頭部開源 RAG 專案,工程品質與測試覆蓋在同類專案中名列前茅,值得長期關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "NVIDIA-NeMo/Switchyard": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        824,
+        421,
+        11,
+        "",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "NVIDIA 打造的 Rust LLM 流量路由代理,讓 Claude Code / Codex 等編碼代理無縫切換到自架或第三方模型後端。",
+      "summary": "Switchyard 是一個 Rust 撰寫的 LLM 流量代理與函式庫,能在 OpenAI Chat、OpenAI Responses、Anthropic Messages 三種 API 格式之間互相轉譯,並支援多種路由演算法(隨機、LLM 分類器、訊號驅動的 stage router、升級式路由)將請求分配到 vLLM、NVIDIA NIM、Ollama 或任何 OpenAI 相容端點。核心訴求是讓 Claude Code、Codex CLI 等編碼代理維持原生 API 呼叫方式,實際卻可由開源模型或多模型混合服務,方便做 A/B 測試與成本實驗。",
+      "highlights": [
+        "同時提供 Launcher(CLI 啟動器)、Server(獨立 Rust 代理)、Library(嵌入式 Rust 路由)三種使用路徑,涵蓋不同整合深度",
+        "protocol/translation crate 將 OpenAI Chat、OpenAI Responses、Anthropic Messages 三種格式做無損雙向轉譯,含串流 SSE 解碼",
+        "libsy-llm-client 內建重試退避、Retry-After 處理、Anthropic thinking block 簽章過濾等實務細節,顯示對多供應商互通性的深入處理",
+        "CI 涵蓋 Rust fmt/clippy/test、Python ruff/mypy/pytest(多版本矩陣)、SPDX 授權標頭檢查、輕量安裝 smoke test,把關嚴謹",
+        "官方明確標示為 pre-alpha 實驗性軟體,API 與演算法預期會大幅變動"
+      ],
+      "use_cases": [
+        "將 Claude Code / Codex CLI 等編碼代理接到自架的 vLLM、NIM 或 Ollama 模型,不需修改代理端設定",
+        "多模型 A/B 測試或成本實驗,依訊號(如工具呼叫結果、錯誤)動態選擇強弱模型分流",
+        "在既有代理閘道或 Agent runtime 中,以 Rust library 形式嵌入路由演算法而不綁定 HTTP 堆疊",
+        "研究/評測情境下比較不同 LLM 後端在相同編碼任務下的表現(repo 內附 benchmark 工具鏈)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 4,
+        "comment": "文件非常完整(README、INSTALLATION、docs/ 多份指南、每個 crate 各自 README),原始碼註解精煉且解釋設計理由而非重複程式邏輯。測試涵蓋單元測試、整合測試(wiremock 模擬上游、串流/重試/逾時等邊界情況)、Python 端多版本 pytest,CI pipeline 相當嚴謹(fmt/clippy/測試/SPDX/安裝 smoke test 全部是硬性關卡)。專案標示為 pre-alpha,API 仍會劇烈變動,是唯一扣分點。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質扎實、文件與測試齊備的 NVIDIA 官方專案,雖標示 pre-alpha 但已具備清晰架構,值得持續關注其後續演進。",
+      "_mode": "full"
+    }
+  },
+  "ZuodaoTech/everyone-can-use-english": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        36071,
+        86,
+        12,
+        "人人都能用英语",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "one_liner": "「人人都能用英語」— 一款以 AI 驅動、以「一千小時」學習法為核心的英語學習桌面應用與配套內容。",
+      "summary": "本專案是一個以 Electron 打造的桌面應用「Enjoy」,結合 AI(語音辨識、發音評估、GPT 對話練習)協助使用者依照作者提出的「一千小時」英語學習法進行聽說訓練。專案同時包含線上文件站(1000-hours,VitePress)、入口網站(1000h-portal)與桌面 App 三個 workspace,並附有 2010 年出版的《人人都能用英語》電子書內容。目前主力已轉向網頁版(enjoy.bot)與瀏覽器擴充功能,桌面版正在重構中。",
+      "category": "app",
+      "highlights": [
+        "整合 Whisper.cpp 語音辨識、Azure/Microsoft 語音服務發音評估、OpenAI/Ollama GPT 對話,打造沉浸式英語訓練閉環",
+        "使用 Electron Forge + Vite + Sequelize(SQLite)建構跨平台桌面應用,並用 electron-fuses 強化安全性設定(如關閉 RunAsNode)",
+        "CI 覆蓋 macOS/Windows/Ubuntu 多平台的 Playwright e2e 測試(main + renderer 雙軌),工程化程度高",
+        "內建完整的下載器/字典/YouTube-dr 等外部資源整合模組,並附上「一千小時」理論的完整電子書與訓練文件"
+      ],
+      "use_cases": [
+        "希望透過大量聽說輸入 + AI 回饋(發音評分、對話陪練)系統性練習英語口說的自學者",
+        "需要離線/桌面環境管理音檔、影片、電子書等英語學習素材並自動生成字幕/朗讀評分的使用者",
+        "對 Electron + AI 語音應用架構(主進程/渲染進程分離、Sequelize ORM、IPC handler 設計)感興趣的開發者參考"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "文件豐富(README、1000-hours 文件站、FAQ、電子書全文),核心 db handler 程式碼結構清晰、有錯誤處理與 i18n;CI 設有跨平台 e2e 測試(Playwright)。但最近一次 push 是 2026-06-29,距今已一個多月,主力已轉向網頁版,桌面版程式庫可能進入維護/重構期而非高頻更新。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、AI 語音學習場景完整,若對英語自學或 Electron+AI 應用架構有興趣值得一看,但需留意桌面版已非開發重心,建議直接體驗網頁版 enjoy.bot。",
+      "_mode": "full"
+    }
+  },
+  "smicallef/spiderfoot": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        20349,
+        74,
+        13,
+        "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "category": "security",
+      "one_liner": "SpiderFoot 是一套開源 OSINT 自動化框架,整合 200+ 模組進行威脅情資蒐集與攻擊面測繪。",
+      "summary": "SpiderFoot 用單一目標(網域、IP、Email、比特幣地址等)驅動 200 多個發布/訂閱模組,自動串接各種公開資料源與商業 API,產出可視化、可關聯分析的偵察結果。專案自 2012 年持續開發至今,提供 Web UI 與 CLI 兩種操作方式,並內建 YAML 可設定的關聯規則引擎,適合紅隊偵察與企業自我攻擊面盤點。",
+      "highlights": [
+        "200+ 模組涵蓋 DNS、威脅情資黑名單、雲端儲存桶枚舉、社群帳號、暗網搜尋等場景,且多數模組不需 API key",
+        "內建 37 條 YAML 可設定關聯規則(correlations/),可自動標記如「憑證過期」「雲端儲存桶開放」等風險",
+        "測試覆蓋率高:test/integration/modules 下對每個模組幾乎都有對應測試檔(約 450+ 個測試檔)",
+        "CI 於 GitHub Actions 對 Python 3.7-3.10、Ubuntu/macOS 矩陣執行 flake8 + pytest + Codecov,行之有年",
+        "持續開發超過 10 年,模組化架構(SpiderFootPlugin 基底類別)清晰,方便社群貢獻新模組"
+      ],
+      "use_cases": [
+        "紅隊/滲透測試前的目標偵察與資訊蒐集",
+        "企業自我攻擊面盤點(Attack Surface Management),找出暴露在外的服務、憑證、雲端儲存桶等",
+        "威脅情資研究,批次查詢 IP/網域/信箱是否出現在各黑名單或外洩資料庫",
+        "學習 OSINT 方法論與如何設計可擴充的插件式資料蒐集架構"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 詳盡列出所有模組與安裝方式,correlations/README.md 額外說明規則撰寫;程式碼風格一致(pylintrc、flake8 CI 強制),核心模組(如 sfp_dnszonexfer.py)邏輯清楚、有適度例外處理與去重機制;測試以模組為單位近乎全覆蓋,CI 在多作業系統/多 Python 版本上運行,唯 last push 為 2026-04-13 距今約 4 個月,活躍度中等偏上。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile.full(選用的完整功能版映像)內含 curl -fsSL https://deb.nodesource.com/setup_17.x | bash - 這是官方 NodeSource 提供的 Node.js 安裝方式,屬業界常見手法,非專案自製的可疑下載執行邏輯",
+          "此工具本質為主動式偵察/滲透測試工具,使用者應僅對已獲授權的目標進行掃描,避免誤用於未授權範圍"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟穩定、文件與測試都到位的 OSINT 老牌工具,若有偵察或攻擊面盤點需求值得直接採用,但需注意其偵察性質應限於已授權的目標。",
+      "_mode": "full"
+    }
+  },
+  "localsend/localsend": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        87812,
+        213,
+        14,
+        "An open-source cross-platform alternative to AirDrop",
+        "Dart"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "category": "app",
+      "one_liner": "跨平台的開源區域網路檔案分享工具,免網路、免帳號,類似 AirDrop 但支援 Windows/macOS/Linux/Android/iOS。",
+      "summary": "LocalSend 讓裝置在同一區域網路內透過自建 HTTPS REST API 安全地互傳檔案與訊息,不依賴任何外部伺服器或網際網路連線。專案以 Flutter/Dart 撰寫跨平台 UI,近期已將核心傳輸邏輯(加密、探索、HTTP client/server)重寫成 Rust(packages/core),透過 flutter_rust_bridge 橋接,並額外提供獨立的 Rust CLI 版本。",
+      "highlights": [
+        "核心傳輸協定已用 Rust 重寫(packages/core),含憑證產生/驗證、mDNS 探索、TLS pinning、WebRTC 訊號等模組,並附有大量整合測試",
+        "支援 7 大平台(Windows/macOS/Linux/Android/iOS/Fire OS + Web),另有獨立 Rust CLI 工具可供伺服器/無頭裝置使用",
+        "每台裝置採用自簽 RSA-2048 憑證,以憑證 SHA-256 指紋作為裝置識別,不依賴 CA 或帳號系統",
+        "CI 涵蓋 dart format/analyze/test、cargo clippy/test 與版本號一致性檢查,工程紀律扎實",
+        "社群活躍度高(87k+ stars、多語系翻譯經 Weblate 管理、多個套件管理器上架)"
+      ],
+      "use_cases": [
+        "同一 Wi-Fi/區網下在手機、平板、電腦之間快速互傳檔案或文字,無需申請帳號或連網",
+        "企業或家庭內網環境中取代雲端傳檔工具,避免資料經過第三方伺服器",
+        "伺服器/NAS/無頭 Linux 主機可用其 Rust CLI 版本進行腳本化收發檔案",
+        "需要跨 Android/iOS/桌面平台一致體驗的檔案分享情境"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整(多語系 README、CONTRIBUTING、CODE_SIGNING 說明),測試涵蓋 Dart 單元測試與 Rust 端加密/伺服器/多播等整合測試,CI 流程嚴謹(format/analyze/test/clippy/版本一致性檢查),且從純 Dart 遷移到 Rust 核心顯示持續的架構投入與活躍維護。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "成熟、活躍且工程品質紮實的開源專案,近期核心邏輯轉用 Rust 提升安全性與效能,值得關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "Lightricks/LTX-2": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        8711,
+        65,
+        15,
+        "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-13",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Lightricks 官方釋出的 LTX-2 音視頻生成模型推論與 LoRA 訓練工具包。",
+      "summary": "LTX-2 是首個基於 DiT 架構、同時生成同步音訊與影片的基礎模型,本專案提供完整的 Python 推論管線(文字/圖片轉影片、影格插值、音訊轉影片、去雜訊超解析等多種 pipeline)以及 LoRA/全量微調訓練工具。以 monorepo 形式組織成 ltx-core、ltx-pipelines、ltx-trainer、ltx-kernels 四個套件,支援 FP8/NVFP4 量化、CUDA 自訂核心與多 GPU 推論,鎖定生成式影片/音訊研究與生產應用。",
+      "highlights": [
+        "涵蓋 12 種以上推論 pipeline(文字轉影片、影格插值、音訊轉影片、Dub-It 對嘴配音、HDR/EXR 輸出等)",
+        "內建 FP8/NVFP4 量化與自訂 CUDA 核心(ltx-kernels),針對 Hopper/Blackwell GPU 做效能優化",
+        "支援分件下載模型組件(transformer/VAE/text encoder 各自獨立檔案),依 pipeline 需求彈性搭配",
+        "程式碼有詳盡 docstring 與註解說明設計原因(如 cutlass pinned commit、CUDA arch 判斷邏輯),工程品質高",
+        "已整合 Claude Code skill(.claude/skills/train-model)協助訓練流程,顯示對 AI 輔助開發工具鏈的重視"
+      ],
+      "use_cases": [
+        "需要生成同步音視頻內容的生成式 AI 應用開發",
+        "以 LoRA 或全量微調客製化 LTX-2 模型於特定風格/角色",
+        "結合 ComfyUI 建立影片生成工作流",
+        "研究 DiT 架構影片擴散模型與量化推論優化技術"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "README 與程式碼內部文件詳盡,函式與類別多有清楚的 docstring 說明設計理由;但整個 repo 找不到 tests/ 目錄或任何 test_*.py 檔案,也沒有 .github/workflows 做 CI,測試與自動化驗證面向明顯不足。近期更新非常頻繁(剛發佈 1.2.0 支援 LTX-2.5,changelog 詳實),活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "大廠官方釋出、功能完整且工程品質紮實的影片生成模型工具包,值得追蹤,但缺乏自動化測試與 CI 是明顯短板。",
+      "_mode": "full"
+    }
+  },
+  "embabel/embabel-agent": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        4223,
+        40,
+        16,
+        "Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
+        "Kotlin"
+      ]
+    }
+  },
+  "cactus-compute/needle": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-13": [
+        4224,
+        315,
+        17,
+        "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "Python"
+      ]
     }
   }
 }
