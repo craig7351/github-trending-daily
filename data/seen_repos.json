@@ -6003,10 +6003,10 @@
   },
   "msitarzewski/agency-agents": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-10": [
         140680,
@@ -6033,6 +6033,13 @@
         144566,
         1873,
         5,
+        "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "Shell"
+      ],
+      "2026-08-14": [
+        145187,
+        778,
+        14,
         "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "Shell"
       ]
@@ -6346,10 +6353,10 @@
   },
   "semantica-agi/semantica": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-11": [
         4101,
@@ -6369,6 +6376,13 @@
         5716,
         845,
         3,
+        "Graph-Native Infrastructure for Context and Accountable AI Systems",
+        "Python"
+      ],
+      "2026-08-14": [
+        6669,
+        713,
+        2,
         "Graph-Native Infrastructure for Context and Accountable AI Systems",
         "Python"
       ]
@@ -6676,15 +6690,22 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
+    "last_seen": "2026-08-14",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-12": [
         168130,
         485,
         7,
+        "Public repository for Agent Skills",
+        "Python"
+      ],
+      "2026-08-14": [
+        169024,
+        312,
+        3,
         "Public repository for Agent Skills",
         "Python"
       ]
@@ -6724,15 +6745,22 @@
   },
   "3b1b/manim": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
+    "last_seen": "2026-08-14",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-12": [
         90175,
         197,
         8,
+        "Animation engine for explanatory math videos",
+        "Python"
+      ],
+      "2026-08-14": [
+        90855,
+        176,
+        13,
         "Animation engine for explanatory math videos",
         "Python"
       ]
@@ -7070,14 +7098,21 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         10414,
         2855,
+        1,
+        "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+        "HTML"
+      ],
+      "2026-08-14": [
+        14539,
+        4475,
         1,
         "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
         "HTML"
@@ -7117,15 +7152,22 @@
   },
   "macro-inc/macro": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         1807,
         227,
         2,
+        "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+        "Rust"
+      ],
+      "2026-08-14": [
+        2603,
+        1239,
+        7,
         "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "Rust"
       ]
@@ -7216,15 +7258,22 @@
   },
   "infiniflow/ragflow": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         87550,
         139,
         9,
+        "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+        "Go"
+      ],
+      "2026-08-14": [
+        88013,
+        465,
+        17,
         "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
         "Go"
       ]
@@ -7264,16 +7313,23 @@
   },
   "NVIDIA-NeMo/Switchyard": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         824,
         421,
         11,
         "",
+        "Rust"
+      ],
+      "2026-08-14": [
+        1217,
+        408,
+        10,
+        "Switchyard lets LLM applications route traffic across models and providers while preserving native OpenAI and Anthropic API compatibility - enabling flexible model selection, benchmarking, and cost/performance optimization.",
         "Rust"
       ]
     },
@@ -7358,15 +7414,22 @@
   },
   "smicallef/spiderfoot": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         20349,
         74,
         13,
+        "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+        "Python"
+      ],
+      "2026-08-14": [
+        20675,
+        283,
+        9,
         "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
         "Python"
       ]
@@ -7457,14 +7520,21 @@
   },
   "Lightricks/LTX-2": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         8711,
         65,
+        15,
+        "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
+        "Python"
+      ],
+      "2026-08-14": [
+        8912,
+        205,
         15,
         "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
         "Python"
@@ -7521,10 +7591,10 @@
   },
   "cactus-compute/needle": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         4224,
@@ -7532,7 +7602,351 @@
         17,
         "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
         "Python"
+      ],
+      "2026-08-14": [
+        4954,
+        769,
+        4,
+        "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "Python"
       ]
+    },
+    "last_analyzed": "2026-08-14",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "14MB、45M參數的端側工具呼叫小模型,單一二進位引擎搭配Python套件即可在手機、穿戴裝置上跑agent與結構化擷取。",
+      "summary": "Needle 2 是 Cactus Compute 推出的超輕量基礎模型,專為工具呼叫(tool calling)、裝置端操作與結構化資料擷取設計,將45M參數壓縮成2-bit量化、14MB的單一二進位引擎,執行期間僅需約28MB RAM。本repo是對應的Python套件,提供推論、LoRA微調與匯出(build成.cact檔)的完整流程,推論引擎本身以編譯後的C/C++核心透過ctypes載入,首次使用時自動從Hugging Face下載快取。",
+      "highlights": [
+        "核心推論引擎為2-bit量化的45M參數模型,單檔14MB、執行期記憶體僅28MB,鎖定手機/穿戴/智慧家庭/機器人等資源受限裝置",
+        "採用自研Simple Attention Network架構(Hadamard MLP + GQA + engram KV記憶 + 多路hyper-connection),並有對應論文(arXiv:2607.18363)",
+        "byte-level grammar約束解碼確保工具呼叫輸出符合schema,並內建校準過的confidence分數與top-5工具檢索機制",
+        "支援LoRA微調後合併匯出成同一顆.cact引擎可直接執行,免重新編譯,並提供瀏覽器playground可視化測試",
+        "每日排程CI自動化版本號遞增、build、發佈到PyPI並打tag,發布流程頗為成熟"
+      ],
+      "use_cases": [
+        "在手機、穿戴裝置或IoT/智慧家庭裝置上做離線的工具呼叫(function calling)agent,不依賴雲端LLM",
+        "從非結構化文字擷取結構化資料(搭配Pydantic schema),用於表單、發票等資訊抽取場景",
+        "針對特定工具集合做輕量LoRA微調,產出客製化的小型on-device agent模型",
+        "教育或研究用途,研究極小型Transformer架構(Simple Attention Network)在邊緣裝置的可行性"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README與doc/apis.md、doc/finetuning.md說明詳盡,涵蓋API、微調流程與資料格式;tests目錄有針對推論、微調、LoRA、CLI渲染、工具schema等多支測試並用pytest標記區分slow/一般測試;CI設有每日自動release流程(build、twine check、發佈PyPI、打tag),搭配trending當日仍在活躍更新,整體工程成熟度偏高。唯一小瑕疵是LICENSE檔案為MIT,但pyproject.toml中宣告license為Apache-2.0,兩者不一致。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "needle/__init__.py透過ctypes.CDLL載入的推論引擎(libneedle.so/.dylib/.dll)是首次使用時由needle/agent/fetch.py從Hugging Face(Cactus-Compute/needle2 repo)自動下載的預編譯二進位檔,並快取到本機~/.cache目錄;此二進位檔不在原始碼庫中,無法直接從Python原始碼審查其行為,屬於此類「小型二進位引擎」架構常見的作法,而非本repo安裝腳本本身的異常行為",
+          "needle/model/run.py與needle/model/finetune.py使用pickle.load讀取checkpoint與LoRA adapter檔案,若載入來路不明的.pkl檔案存在反序列化任意程式碼執行風險,建議僅從官方Hugging Face來源或信任的checkpoint載入"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、定位明確(邊緣裝置工具呼叫),適合關注on-device AI與小模型agent的開發者持續追蹤,但推論引擎為下載的閉源二進位檔,無法完整審查其原始碼。",
+      "_mode": "full"
+    }
+  },
+  "altic-dev/FluidVoice": {
+    "first_seen": "2026-08-14",
+    "last_seen": "2026-08-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-14": [
+        9854,
+        76,
+        5,
+        "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows & iOS waitlist open. Linux soon.",
+        "Swift"
+      ]
+    },
+    "last_analyzed": "2026-08-14",
+    "analysis": {
+      "category": "app",
+      "one_liner": "macOS 原生語音輸入應用,支援本地端 AI 語音辨識與智慧文字增強,是 Wispr Flow 的開源替代方案。",
+      "summary": "FluidVoice 是一款 macOS 原生的語音聽寫(dictation)App,整合多種本地端 STT 模型(Nemotron、Parakeet、Whisper、Apple Speech、Cohere),並可透過全域快捷鍵在任何 App 中直接語音輸入或以語音下指令控制系統。核心程式碼以 GPLv3 開源,另有一套私有維護的「Fluid Intelligence」本地 AI 強化模組(選用),用於離線智慧格式化與後製,不上傳雲端。",
+      "highlights": [
+        "支援 7 種語音辨識引擎(Nemotron 3.5、Parakeet Flash/TDT v2v3、Cohere、Apple Speech、Whisper),依語言與延遲需求可自由切換",
+        "Command Mode 可用語音直接觸發 App、捷徑與系統動作,Write Mode 可在任意輸入框就地聽寫或改寫文字",
+        "強調 local-first:語音、錄音與逐字稿預設不上雲端,分析追蹤僅蒐集匿名低粒度使用指標且可關閉",
+        "API 金鑰以 macOS Keychain 安全儲存(KeychainService.swift 實作清楚),未見明文儲存機密資訊",
+        "CI 使用 SwiftLint strict 檢查 + xcodebuild 測試(含 13 支整合測試),工程紀律良好"
+      ],
+      "use_cases": [
+        "需要高頻率打字/寫作但想用語音取代鍵盤的 macOS 使用者",
+        "重視隱私、不想把語音資料上傳雲端服務(如 Otter、Wispr Flow)的使用者",
+        "想用語音下達系統指令、跨 App 自動化操作的效率工作流玩家",
+        "對 on-device STT/ASR 模型整合(CoreML、llama.cpp)有研究興趣的開發者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 詳盡且附示範影片,核心服務類別(如 ASRService)有完整的文件註解說明執行緒安全與模型支援範圍。Tests/ 目錄下有 13 支涵蓋音訊處理、逐字稿、金鑰服務等的整合測試,CI 以 SwiftLint strict + xcodebuild test 把關,近期仍持續有 commit 與版本更新(1.6.0),工程成熟度高於一般個人專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "開源部分程式碼品質紮實、CI 與測試完備,加上核心賣點(本地端語音辨識+可選雲端增強)實用,值得 macOS 使用者關注;但最亮眼的「Fluid Intelligence」AI 強化模組本身閉源,實際體驗上限得靠官方私有元件。",
+      "_mode": "full"
+    }
+  },
+  "unslothai/unsloth": {
+    "first_seen": "2026-08-14",
+    "last_seen": "2026-08-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-14": [
+        71060,
+        328,
+        6,
+        "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-14",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Unsloth 是一套讓 LLM/擴散模型微調與推論速度大幅提升、VRAM 用量大幅降低的框架,現已擴展為包含桌面應用與本地 Web UI(Unsloth Studio)的完整本地 AI 開發平台。",
+      "summary": "Unsloth 最初是以自訂 Triton kernel 加速 LLM LoRA/QLoRA 微調的 Python 函式庫,號稱 2-5 倍訓練加速與最多 70% VRAM 節省;此次更新新增了 Unsloth Desktop(Tauri 桌面應用)與 Unsloth Studio(本地 Web UI),讓使用者能在本機下載、聊天、微調並匯出各式 LLM、擴散、嵌入與語音模型,並提供 OpenAI/Anthropic 相容 API 與 MCP 端點供 Claude Code、Codex 等 Agent 直接呼叫本地模型。專案同時維持 Apache-2.0(核心函式庫)與 AGPL-3.0(Studio UI)雙授權。",
+      "highlights": [
+        "核心訓練程式碼(save.py、_gpu_init.py 等)註解詳實,清楚說明各種相容性修補的原因與踩雷紀錄,顯示長期維運的成熟度",
+        "測試涵蓋範圍極廣,tests/ 下有 400 多個檔案,涵蓋 GGUF 匯出、QLoRA 訓練、Windows/macOS 安裝流程、shell injection 防護等情境",
+        "CI 工作流程超過 40 個 workflow,涵蓋 lint、supply-chain audit(lockfile_supply_chain_audit.py)、跨平台安裝煙霧測試等,工程紀律高",
+        "新增 Unsloth Studio 提供 --secure 預設僅透過 Cloudflare Tunnel 對外開放、admin 密碼強制輪替等安全預設,並在 README 中明確揭露對外連線與第三方查詢(ifconfig.me、check-host.net)行為"
+      ],
+      "use_cases": [
+        "本地端微調開源 LLM(LoRA/QLoRA/全量微調)並節省 GPU VRAM",
+        "免寫程式碼、透過桌面應用或 Web UI 下載、聊天、微調並匯出模型為 GGUF 等格式",
+        "將本地模型接入 Claude Code / Codex / MCP 等 Agent 工具作為子代理或推論後端",
+        "在無網路或內網環境自建可對外(經 Cloudflare Tunnel)服務的本地 LLM 推論伺服器"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與 README 相當完整,涵蓋安裝、進階設定與解除安裝說明;測試案例數量龐大且針對邊角案例(如 shell injection、TLS、Windows 安裝並行鎖)撰寫,顯示嚴謹的品質把關;CI workflow 數量多且分工精細,加上近日仍持續推送更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl https://unsloth.ai/install.sh | sh 與 irm https://unsloth.ai/install.ps1 | iex 的一鍵安裝方式,屬於桌面應用/CLI 常見的安裝模式,且倉庫內大量 CI 與測試已針對安裝流程做把關",
+          "install.sh 本身有安全考量的設計說明(如避免管線讀取中斷),註解中提及此檔案会作為安裝器附帶於桌面版之中",
+          "Studio 服務預設僅綁定 localhost,對外公開時(--secure/--cloudflare)會強制要求更換預設密碼並有逾時保護機制,且會呼叫 ifconfig.me、check-host.net 兩個第三方服務偵測公網可達性(README 已明確揭露,可用環境變數關閉)"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "高星數並非曇花一現的炒作,而是建立在成熟的工程紀律(完整測試、多層 CI、詳實文件)之上,對從事 LLM 微調或想要本地部署 AI 工具鏈的工程師都非常值得關注。",
+      "_mode": "full"
+    }
+  },
+  "megadose/holehe": {
+    "first_seen": "2026-08-14",
+    "last_seen": "2026-08-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-14": [
+        12425,
+        195,
+        8,
+        "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-14",
+    "analysis": {
+      "one_liner": "輸入一組 email,快速掃描 120+ 個網站,回報該信箱是否已在這些服務註冊過帳號的 OSINT 工具。",
+      "summary": "holehe 是一個以 Python + trio/httpx 非同步架構打造的 OSINT 工具,透過「忘記密碼」或「註冊時檢查帳號是否存在」等網站機制,判斷輸入的 email 是否已被用來在 Twitter、Instagram、Amazon、Adobe 等超過 120 個網站註冊帳號,且過程不會通知目標信箱擁有者。專案以「每個網站一個模組」的方式組織(分類為 cms、crm、forum、jobs、mails、social_media 等資料夾),方便社群貢獻新網站支援。",
+      "category": "security",
+      "highlights": [
+        "支援 120+ 個網站的帳號存在性檢查,涵蓋社群媒體、CRM、論壇、成人網站等多種類型",
+        "採用 trio + httpx 非同步併發架構,可同時對所有網站發送請求,速度快",
+        "模組化設計清晰,每個網站獨立成一個 async function 檔案,回傳統一格式的 JSON 結果,方便整合進其他 Python 專案或串接 Maltego",
+        "可透過 PyPI、原始碼安裝或 Docker 執行,亦有線上版本(osint.industries)"
+      ],
+      "use_cases": [
+        "資安研究人員或滲透測試者在授權範圍內進行偵察(reconnaissance),了解目標信箱的網路足跡",
+        "個人自我稽核:檢查自己的 email 曾在哪些網站註冊過帳號,評估帳號外洩或隱私暴露風險",
+        "OSINT 調查、社交工程演練前的資訊蒐集階段"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 2,
+        "comment": "README 完整,附模組清單、輸出格式範例與 CLI/Python 使用範例,文件品質不錯。但專案完全沒有自動化測試(無 tests/ 目錄或 test_*.py),CI 只有 CodeQL 弱掃描,並無實際跑測試的 workflow。程式碼本身可讀性尚可,但重複度高(如 launch_module 內硬編碼一份 100+ 項的網站對照字典),缺乏共用抽象與型別提示,屬於典型「能動就好」的腳本集合風格。最後一次 push 是 2024-09-10,一年多沒更新,但作為爬蟲類工具,各網站介面隨時可能改版導致模組失效卻無人維護。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "core.py 的 check_update() 函式在每次執行 CLI 時都會自動呼叫 PyPI API 比對版本,若偵測到新版會自動執行 `pip install --upgrade holehe`,屬於未經使用者確認的自動更新行為,雖非惡意但使用者應留意其會靜默觸發套件安裝",
+          "各模組會將使用者輸入的 email 直接組進第三方網站的請求 payload 中發送出去,屬工具設計本意(查詢帳號註冊狀態),但代表你輸入的 email 會被送到 Google、Amazon 等上百個外部網域,使用時需注意隱私與該行為的合法性(僅限已獲授權對象)",
+          "GPL-3.0 授權,README 明確聲明「僅供教育用途」,且強調不會通知被查詢的信箱擁有者,屬於雙用途(dual-use)的合法 OSINT 工具,與其他 socialscan 等同類工具性質相同"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "功能實用、模組覆蓋面廣的 OSINT 工具,適合資安從業者收藏備用,但已停止更新逾一年、無測試覆蓋,實際使用前建議先驗證各網站模組是否仍然有效。",
+      "_mode": "full"
+    }
+  },
+  "holaboss-ai/holaOS": {
+    "first_seen": "2026-08-14",
+    "last_seen": "2026-08-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-14": [
+        6596,
+        241,
+        11,
+        "Open-source All in One AI agent workspace. Run any agent — Claude Code, Codex — across your tools (100+ integrations + MCP), apps, browser, and files, with shared memory. Built-in models or BYOK.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-14",
+    "analysis": {
+      "one_liner": "holaOS 是一個開源的 Electron 桌面 AI Agent 工作空間,可同時運行 Claude Code、Codex 等多種 agent,共享同一份記憶與整合工具。",
+      "summary": "holaOS 是一個以 TypeScript/Electron 打造的「All-in-One AI agent 工作站」,讓使用者在單一桌面應用中並行運行 Claude Code、Codex 或內建的 holaOS agent,並共享同一套本地記憶、100+ 工具整合、MCP 伺服器與瀏覽器/檔案操作能力。專案採 monorepo 架構(apps/desktop、runtime、packages、SDK),提供內建前沿模型或 BYOK(自帶金鑰)兩種使用模式,同時有企業版 SSO/權限與稽核功能。",
+      "category": "app",
+      "highlights": [
+        "支援多 agent 並存(Claude Code、Codex、holaOS 內建 agent)並共用同一份本地記憶與工具集",
+        "HolaApps 概念:將 Notion、瀏覽器等第三方應用以「即時互動介面」形式與 agent 並排顯示,而非純聊天視窗",
+        "內建 100+ 整合(Gmail、Notion、Slack、GitHub 等)、MCP 支援與可重複使用的 Skills/Combos",
+        "可直接輸出真實 .xlsx/.pptx/.docx 檔案,並支援排程自動化任務",
+        "monorepo 架構完整(Electron 桌面、runtime state-store/api-server/harness-host、app-sdk),CI 涵蓋 typecheck/test/build 及跨平台簽章公證發佈"
+      ],
+      "use_cases": [
+        "需要同時比較或切換多種 coding/AI agent,但希望共用工具與記憶脈絡的開發者",
+        "想在本機(local-first)跑 AI agent 操作瀏覽器、文件與辦公室檔案的個人生產力使用情境",
+        "企業需要在內部系統上部署具權限控管與稽核紀錄的 AI agent 工作平台",
+        "想透過 MCP/Skills 客製化 agent 能力並跨多個聊天管道(Slack、Telegram 等)觸發任務的團隊"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 INSTALL.md 對安裝流程描述詳盡且提供 agent 專用的一鍵安裝指令;抽樣的原始碼(如 bff-fetch.ts)品質良好,具備 host allowlist、逾時重試、結構化 log 與清楚的行內註解說明「為何」而非「做什麼」。專案有大量單元測試(*.test.ts)涵蓋 Electron 主行程模組,CI 針對 desktop typecheck、runtime、SDK、各共用套件分別跑 typecheck/test/build,並有完整的跨平台(macOS/Windows)簽章、公證、釋出驗證流程,顯示工程成熟度高。近日仍持續推送(2026-08-12),活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 與 INSTALL.md 提供 curl -fsSL https://raw.githubusercontent.com/.../scripts/install.sh | bash 的一鍵安裝方式,會下載並執行遠端 shell 腳本(常見於此類專案,但使用前建議先行檢視腳本內容)",
+          "該 install.sh 在 macOS 缺少 git 時會另外以 curl 下載並執行 Homebrew 官方安裝腳本(NONINTERACTIVE=1 /bin/bash -c \"$(curl ...)\"),屬於巢狀的下載執行行為,但目標為 Homebrew 官方來源",
+          "package.json 未發現 npm lifecycle 腳本(preinstall/postinstall/prepare)在根目錄執行任意程式碼,desktop 端的 predev/prebuild 皆呼叫本地 scripts/*.mjs,未見對外部網址的隱藏請求"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程紮實、功能定位清晰(多 agent 共享記憶與工具的本地優先工作站),雖然安裝方式含常見的 curl|bash 模式值得留意,但整體屬於值得關注與試用的專案。",
+      "_mode": "full"
+    }
+  },
+  "kepano/obsidian-skills": {
+    "first_seen": "2026-08-14",
+    "last_seen": "2026-08-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-14": [
+        45750,
+        292,
+        12,
+        "Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-08-14",
+    "analysis": {
+      "one_liner": "一組讓 AI 代理人(Claude、Codex、OpenCode 等)理解並操作 Obsidian 檔案格式的 Agent Skills 集合",
+      "summary": "這個專案提供五個 SKILL.md 技能定義,教導支援 Agent Skills 規範的 AI 代理人讀寫 Obsidian Flavored Markdown、Bases(.base)、JSON Canvas(.canvas),並透過 Obsidian CLI 操作實際運行中的 Obsidian 應用程式,另外還有一個用 Defuddle 從網頁擷取乾淨 Markdown 以節省 token 的技能。整體上是純文件型的『知識/指令集』專案,沒有任何程式邏輯,而是把 Obsidian 的格式規範與 CLI 用法整理成 AI 可讀的結構化說明。",
+      "category": "ai-ml",
+      "highlights": [
+        "涵蓋 Obsidian 生態中最常用的四種格式與工具:Markdown、Bases、JSON Canvas、CLI,外加 Defuddle 網頁擷取",
+        "遵循開放的 Agent Skills 規範,可跨 Claude Code、Codex、OpenCode 等多種代理人平台使用,不綁定單一廠商",
+        "每個技能都附有簡潔的 SKILL.md 加上 references 補充文件(如 FUNCTIONS_REFERENCE.md、CALLOUTS.md),分層清楚",
+        "作者為 Obsidian 官方團隊成員(Steph Ango,Obsidian CEO),內容權威度高",
+        "安裝方式多元:Marketplace、npx skills、手動複製,對不同代理人環境都有對應說明"
+      ],
+      "use_cases": [
+        "在 Claude Code / Codex / OpenCode 中直接對 Obsidian 保險庫(vault)進行筆記讀寫、任務管理、屬性設定等操作",
+        "讓 AI 代理人正確產生符合 Obsidian 語法的 Markdown(wikilink、callout、embed、properties)而不出錯",
+        "開發或除錯 Obsidian 外掛與主題時,透過 CLI 技能自動重載外掛、截圖、檢查 DOM 與錯誤訊息",
+        "需要讓代理人閱讀網頁文件並轉成乾淨 Markdown 以節省 token 時,搭配 Defuddle 技能使用"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 3,
+        "comment": "文件本身就是產品,寫得非常清楚簡潔,每個技能單頁搭配延伸參考文件,层次分明;但因為整個 repo 只有 Markdown/JSON 設定檔,沒有可執行程式碼,因此無測試與 CI 可言,不適用傳統程式碼品質評估。最後一次 push 是 2026-06-08,近兩個月未更新,屬於功能穩定、變動不大的小型專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若你是 Obsidian 重度使用者且正在用 Claude Code / Codex 等 AI 代理人工作,這是一份高品質、開箱即用的官方技能包,值得加入;但若不使用 Obsidian 就與你無關。",
+      "_mode": "full"
+    }
+  },
+  "lightningpixel/modly": {
+    "first_seen": "2026-08-14",
+    "last_seen": "2026-08-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-14": [
+        5410,
+        118,
+        16,
+        "Desktop app to generate 3D models from images using local AI — runs entirely on your GPU",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-14",
+    "analysis": {
+      "category": "app",
+      "one_liner": "用本地 GPU 執行開源 AI 模型,把一張照片轉成 3D 模型的桌面應用程式。",
+      "summary": "Modly 是一個 Electron + Python(FastAPI)桌面應用,讓使用者透過節點式工作流(Image → Generate Mesh → Add to Scene)將圖片轉換成 3D 網格,支援 Hunyuan3D、TripoSG、Trellis2 等多種本地開源模型,並提供可外掛擴充的模型/流程擴充系統。目標是取代需要雲端 API 或付費服務的圖轉 3D 工具,完全在使用者自己的 GPU 上運行。",
+      "highlights": [
+        "節點式工作流編輯器(基於 @xyflow/react)串接影像輸入、AI 生成、網格優化、匯出等步驟",
+        "支援多種可安裝的第三方擴充模型(Hunyuan3D 系列、TripoSG、Trellis2 GGUF),擴充在獨立 venv 子行程中執行",
+        "內建 CUDA/Metal 加速的 texture_baker、uv_unwrapper 原生模組(C++/CUDA/Metal)",
+        "提供 stdlib-only 的 Modly CLI,方便 agent/腳本以 JSON 介面驅動生成流程",
+        "路徑安全防護(extension-path-guard)有明確單元測試,防止擴充 ID 目錄穿越攻擊"
+      ],
+      "use_cases": [
+        "獨立遊戲/3D 美術工作者想從概念圖快速產生可編輯的 3D 網格素材",
+        "希望完全離線、不依賴雲端 AI 服務處理 3D 資產生成的隱私敏感場景",
+        "研究/整合本地圖轉 3D 模型(Hunyuan3D、TripoSG 等)的開發者",
+        "想透過 CLI/Agent 自動化批次生成 3D 模型的工作流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 詳盡,涵蓋安裝、開發、擴充系統與 CLI 用法;程式碼註解精簡但會解釋非顯而易見的行為(如子行程 stderr 緩衝、GPU 記憶體釋放邏輯)。有 Node 與 Python 兩套測試(路徑守衛、資產庫服務等)與三平台(Windows/Linux/macOS)CI 打包驗證,但覆蓋率偏向工具函式,對核心生成流程/UI 缺乏測試。倉庫內另外提交了少量預先編譯的 build 產物(.pyd/.obj/.lib),屬於原生擴充模組的建置暫存檔。今天剛登上 trending 且持續有 push,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 的 npm lifecycle script `prepare` 會執行 scripts/setup-hooks.mjs,將 git 的 core.hooksPath 設為 .githooks(專案內建的版控 hook),失敗時會靜默略過,不影響安裝",
+          "另有 prepare-resources 腳本(scripts/download-python-embed.js)會從 GitHub Releases(indygreg/python-build-standalone,知名開源專案)下載預編譯 Python 並解壓到 resources 目錄,屬建置階段的正常依賴下載,非執行期隱藏行為",
+          "應用程式核心功能之一是「從 GitHub 安裝擴充」,安裝後會執行擴充自帶的 setup.py 建立獨立 venv 並以子行程執行——這是文件中明確說明的功能,非隱藏行為,且有路徑穿越防護與對應單元測試",
+          "api/texture_baker、api/uv_unwrapper 目錄下提交了少量預編譯的 .pyd/.obj/.lib/.exp 建置產物,原始 C++/CUDA/Metal 原始碼皆存在,產物疑似為開發者建置暫存檔案不慎提交,非隱藏的執行碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "架構清晰、安全意識明顯(路徑防護、子行程隔離、輸入驗證),是少見兼具實用性與工程品質的本地 AI 3D 工具,值得關注與嘗試。",
+      "_mode": "full"
     }
   }
 }
