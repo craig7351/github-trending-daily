@@ -391,8 +391,8 @@
   },
   "citrolabs/ego-lite": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-27",
-    "days_on_trending": 3,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         2575,
@@ -405,46 +405,51 @@
       "2026-07-27": [
         4550,
         900
+      ],
+      "2026-08-15": [
+        10367,
+        165,
+        6,
+        "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-07-25",
+    "last_analyzed": "2026-08-15",
     "analysis": {
       "category": "devtool",
-      "one_liner": "讓 AI agent 與人類共用同一個瀏覽器(含登入狀態)的自動化框架,搭配 Claude Code、Codex 等 CLI agent 使用。",
-      "summary": "ego lite 是一款專為 AI agent 設計的瀏覽器,讓人類與多個 AI agent 能在同一瀏覽器內平行工作:agent 在獨立的「Space」中執行任務,並直接繼承使用者已登入的 Chrome 帳號、cookie、擴充功能,不需額外處理登入問題。此 GitHub repo 是開源的 ego-browser CDP 自動化引擎與 agent skill 套件,真正的瀏覽器本體 ego lite app 則是閉源的 macOS 應用程式,透過 DMG 下載安裝。",
+      "one_liner": "讓 AI Agent 與人類共用同一個瀏覽器、共享登入狀態的瀏覽器自動化工具(ego lite + ego-browser)。",
+      "summary": "ego-lite 提供一個基於 Chromium 客製化的瀏覽器(ego lite),讓 AI Agent 在獨立的「Task Space」中操作網頁,同時直接繼承使用者現有的登入狀態、Cookie 與擴充功能,不需另外登入也不會搶奪使用者正在使用的分頁。本 repo 是其配套的 Node.js runtime 套件與 Claude Code / Codex 等 Agent 的 skill 套件(ego-browser),透過 Chrome DevTools Protocol 直接驅動瀏覽器,不依賴 Puppeteer/Playwright。",
       "highlights": [
-        "每個 agent 擁有獨立 Space,可平行執行多個瀏覽任務,不干擾使用者手動操作的分頁",
-        "把瀏覽器操作(snapshot、click、fill、navigate 等)封裝成 JavaScript 函式讓 agent 直接寫程式呼叫,號稱比傳統 CLI 逐步呼叫快 2.5 倍、token 消耗更少",
-        "可繼承使用者既有的 Chrome 登入態、cookie 與擴充功能,agent 免登入即可操作需要帳號的網站",
-        "開源的 ego-browser harness 程式碼品質高:TypeScript + ESM、測試與原始碼同目錄放置、CI 跑 test/typecheck/validate 三道關卡",
-        "核心瀏覽器本體(ego lite app)為閉源 macOS 應用,目前僅支援 macOS,Windows/Linux 仍在 roadmap"
+        "以程式碼而非逐指令 CLI 呼叫的方式驅動瀏覽器,官方宣稱複雜任務可快 2.5 倍、token 用量更少",
+        "每個 Agent 有獨立的 Task Space,可與使用者的分頁並行工作、互不干擾,並支援 handoff/takeover 的人機控制權轉移協議",
+        "直接繼承 Chrome 的登入態、Cookie、書籤,不需重新登入",
+        "以 CDP(Chrome DevTools Protocol)直接實作,而非包一層 Puppeteer/Playwright,程式碼與測試分工細緻(driver/ 依能力拆分模組)",
+        "CI 涵蓋 npm test、typecheck、prettier 檢查、npm audit 弱點掃描與 site-skill 驗證,品質門檻明確"
       ],
       "use_cases": [
-        "讓 Claude Code、Codex 等 AI agent 自動化操作需要登入態的網站,例如社群平台互動、電商後台管理",
-        "多個 agent 同時處理不同網頁任務(批次爬取資料、填寫多筆表單)而不影響使用者手動瀏覽",
-        "需要穩定 DOM/AX snapshot 讓 LLM 準確理解與操作複雜頁面(如多層 iframe)的自動化場景"
+        "讓 Claude Code / Codex 等 Agent CLI 在使用者真實登入的瀏覽器環境中執行網頁操作、填表、爬取資料等任務",
+        "需要多個 Agent 同時處理多個瀏覽器任務(如批次跑多個網站)又不想互相干擾使用者手動瀏覽的場景",
+        "對現有網站做探索性測試、QA、bug 排查等需要真實登入態的瀏覽器自動化工作"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "開源的 ego-browser 部分結構清晰,採 TypeScript、ESM,測試與原始檔同目錄擺放且覆蓋 session 管理、locator 解析、helper 行為等核心邏輯,CI 有 build/typecheck/test/validate 多道關卡。文件(README、AGENTS.md、SKILL.md、install.md)相當完整詳細。但核心瀏覽器本體是閉源二進位檔,無法從原始碼驗證其實際行為與安全性,且截至今日僅支援 macOS。專案昨天(2026-07-24)才有推送,活躍度高,今日以 +884 星登上 trending 第 8 名。"
+        "comment": "文件相當完整:README、CONTRIBUTING.md 詳述架構與模組分工、AGENTS.md、雙語 SKILL.md,對開發流程與設計原則說明清楚。原始碼(TypeScript)組織良好,依職責拆成 driver/、learning/ 等模組,並附有大量 *.test.mjs 單元測試與 real-browser-e2e 端對端測試案例。CI 設定了測試、型別檢查、npm audit、prettier 風格檢查等多道品質關卡,近期仍持續有 push(last pushed 2026-08-14),屬於活躍維護中的專案。主要限制是目前僅支援 macOS,Windows/Linux 仍在 roadmap 上,核心瀏覽器二進位檔本身未開源(此 repo 僅為配套的 npm 套件與 skill)。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "skills/ego-browser/scripts/install.sh 會從官方 CDN(cdn.ego.app,與 README 下載連結網域一致)下載 DMG、掛載安裝,並主動移除 com.apple.quarantine 屬性以避開 Gatekeeper 首次執行警告——屬瀏覽器類應用常見安裝手法,但代表使用者需信任該未經 App Store 上架的閉源執行檔",
-          "核心價值所在的 ego lite 瀏覽器本體並未包含在此 repo 中,只能透過 DMG 二進位安裝,原始碼稽核僅能涵蓋開源的 CDP harness 層",
-          "package/ego-browser 的 npm \"prepare\" script 僅在非 CI 環境安裝 lefthook git hook,屬正常開發流程,未發現可疑 postinstall/preinstall 腳本或混淆程式碼",
-          "未發現 base64/hex 大型 payload、硬編碼可疑 IP/網域或 typosquat 風格的相依套件名稱"
+          "skills/ego-browser/scripts/install.sh 會從固定網址(cdn.ego.app,與專案官方網域一致)下載 DMG 安裝檔,掛載後複製到 /Applications,並在需要時使用 sudo 提權;安裝流程屬於一般 macOS 應用程式安裝腳本的常見模式,並非從不明第三方網域抓取任意腳本執行。",
+          "install.sh 會主動移除下載後 app 的 com.apple.quarantine(Gatekeeper 隔離)屬性,以避免首次開啟被封鎖,這是常見的自安裝腳本手法,使用者應留意其略過了系統原生的安全提示。"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你常用 Claude Code、Codex 等 CLI agent 做網頁自動化且需要沿用既有登入態,這個專案的開源部分程式碼品質紮實、值得一試,但要留意核心瀏覽器是閉源且僅限 macOS 的應用程式。",
+      "verdict": "文件與工程品質俱佳、切入點(人機共用同一瀏覽器狀態)也相對新穎,但目前僅支援 macOS 且核心瀏覽器本身未開源,值得關注但先評估平台限制是否符合需求。",
       "_mode": "full"
     },
-    "total_days_on_trending": 3,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 1
   },
   "yorukot/superfile": {
     "first_seen": "2026-07-25",
@@ -6353,10 +6358,10 @@
   },
   "semantica-agi/semantica": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-11": [
         4101,
@@ -6383,6 +6388,13 @@
         6669,
         713,
         2,
+        "Graph-Native Infrastructure for Context and Accountable AI Systems",
+        "Python"
+      ],
+      "2026-08-15": [
+        7526,
+        1181,
+        13,
         "Graph-Native Infrastructure for Context and Accountable AI Systems",
         "Python"
       ]
@@ -7098,10 +7110,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -7113,6 +7125,13 @@
       "2026-08-14": [
         14539,
         4475,
+        1,
+        "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+        "HTML"
+      ],
+      "2026-08-15": [
+        17258,
+        3646,
         1,
         "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
         "HTML"
@@ -7152,10 +7171,10 @@
   },
   "macro-inc/macro": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-13": [
         1807,
@@ -7168,6 +7187,13 @@
         2603,
         1239,
         7,
+        "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+        "Rust"
+      ],
+      "2026-08-15": [
+        3036,
+        436,
+        4,
         "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "Rust"
       ]
@@ -7258,10 +7284,10 @@
   },
   "infiniflow/ragflow": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-13": [
         87550,
@@ -7274,6 +7300,13 @@
         88013,
         465,
         17,
+        "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+        "Go"
+      ],
+      "2026-08-15": [
+        88382,
+        473,
+        10,
         "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
         "Go"
       ]
@@ -7414,10 +7447,10 @@
   },
   "smicallef/spiderfoot": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-13": [
         20349,
@@ -7430,6 +7463,13 @@
         20675,
         283,
         9,
+        "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+        "Python"
+      ],
+      "2026-08-15": [
+        20947,
+        293,
+        5,
         "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
         "Python"
       ]
@@ -7591,10 +7631,10 @@
   },
   "cactus-compute/needle": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-13": [
         4224,
@@ -7607,6 +7647,13 @@
         4954,
         769,
         4,
+        "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "Python"
+      ],
+      "2026-08-15": [
+        5607,
+        662,
+        2,
         "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
         "Python"
       ]
@@ -7697,15 +7744,22 @@
   },
   "unslothai/unsloth": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-14": [
         71060,
         328,
         6,
+        "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+        "Python"
+      ],
+      "2026-08-15": [
+        71507,
+        501,
+        16,
         "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
         "Python"
       ]
@@ -7748,15 +7802,22 @@
   },
   "megadose/holehe": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-14": [
         12425,
         195,
         8,
+        "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+        "Python"
+      ],
+      "2026-08-15": [
+        12849,
+        427,
+        3,
         "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
         "Python"
       ]
@@ -7798,15 +7859,22 @@
   },
   "holaboss-ai/holaOS": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-14": [
         6596,
         241,
         11,
+        "Open-source All in One AI agent workspace. Run any agent — Claude Code, Codex — across your tools (100+ integrations + MCP), apps, browser, and files, with shared memory. Built-in models or BYOK.",
+        "TypeScript"
+      ],
+      "2026-08-15": [
+        7294,
+        769,
+        7,
         "Open-source All in One AI agent workspace. Run any agent — Claude Code, Codex — across your tools (100+ integrations + MCP), apps, browser, and files, with shared memory. Built-in models or BYOK.",
         "TypeScript"
       ]
@@ -7898,16 +7966,23 @@
   },
   "lightningpixel/modly": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-14": [
         5410,
         118,
         16,
         "Desktop app to generate 3D models from images using local AI — runs entirely on your GPU",
+        "TypeScript"
+      ],
+      "2026-08-15": [
+        5939,
+        579,
+        9,
+        "Desktop app to generate 3D models from images or prompt using local AI — runs entirely on your GPU",
         "TypeScript"
       ]
     },
@@ -7947,6 +8022,297 @@
       "star_rating": 4,
       "verdict": "架構清晰、安全意識明顯(路徑防護、子行程隔離、輸入驗證),是少見兼具實用性與工程品質的本地 AI 3D 工具,值得關注與嘗試。",
       "_mode": "full"
+    }
+  },
+  "github/spec-kit": {
+    "first_seen": "2026-08-15",
+    "last_seen": "2026-08-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-15": [
+        128522,
+        1160,
+        8,
+        "💫 Toolkit to help you get started with Spec-Driven Development",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-15",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "GitHub 官方推出的「規格驅動開發(SDD)」工具組,讓 AI coding agent 先寫清楚規格再產生程式碼。",
+      "summary": "Spec Kit 提供 specify CLI 與一套 `/speckit.*` 斜線指令(constitution → specify → plan → tasks → implement),協助開發者在動手寫程式前,先由 AI 產出結構化的專案原則、需求規格、技術計畫與任務清單,再交由 30+ 種 AI coding agent(Claude、Copilot、Codex、Gemini 等)執行實作。同時支援 extensions/presets/bundles 機制,可依角色(PM、資安研究員等)客製化整個開發流程。",
+      "highlights": [
+        "由 GitHub 官方維護,已支援 30+ 種 AI coding agent 整合(Claude Code、Copilot、Codex、Gemini CLI 等)",
+        "extensions/presets/bundles 三層客製化架構,可依團隊角色打包整組工作流程",
+        "自製的下載與解壓縮安全模組(_download_security.py)詳盡防範 SSRF、zip bomb、path traversal、ZIP64 攻擊等",
+        "CI 以 ruff 明確鎖定禁止 shell=True 等危險 subprocess 用法,並在 GitHub Actions 中將所有 action 版本 pin 到 commit SHA",
+        "143 個測試檔涵蓋 CLI、bundler、各 agent 整合與安全性場景,測試覆蓋面相當廣"
+      ],
+      "use_cases": [
+        "團隊導入 AI coding agent 開發流程時,用來規範「先寫規格、後寫程式碼」的協作方式",
+        "跨多種 AI 工具(Claude/Copilot/Codex/Gemini 等)的專案,想要一致的規格驅動工作流程",
+        "企業導入 AI 開發需要客製化規範(合規、術語、審查關卡)時,透過 presets/extensions/bundles 落地"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(README、docs 目錄、多語系 README、CLI reference 等),測試涵蓋所有 integration 與 bundler 邏輯,CI 包含 ruff lint、跨平台 pytest matrix、CodeQL 與 security workflow,commit 與 release 節奏顯示為 GitHub 官方積極維護的專案。程式碼品質對於一個 CLI 工具而言相當突出,尤其下載/解壓縮安全處理邏輯寫得極為嚴謹並附有詳細的理由註解。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          ".devcontainer/post-create.sh 內對 Kiro CLI 安裝腳本使用 curl 下載後執行,但下載後有先做 sha256sum 校驗才執行,屬於開發容器設定,非終端使用者安裝流程",
+          "README 建議的安裝方式為 `uv tool install specify-cli --from git+https://...`,屬於常見的 Git 來源安裝方式,非 curl|bash 直接執行模式"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "GitHub 官方主導、生態系整合廣泛且程式碼與測試品質俱佳,對想採用規格驅動開發流程的團隊非常值得關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "cursor/plugins": {
+    "first_seen": "2026-08-15",
+    "last_seen": "2026-08-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-15": [
+        2811,
+        41,
+        11,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-15",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Cursor 官方的 Agent 外掛(Plugin)市集,收錄開發工具、框架整合與 SaaS MCP 連接器的規格與實作範例。",
+      "summary": "這是 Cursor 編輯器官方維護的 plugin marketplace repo,以 `.cursor-plugin/marketplace.json` 為索引,收錄數十個外掛(agents、skills、rules、hooks、MCP server 定義)。內容涵蓋內部開發流程工具(如 cursor-team-kit、thermos code review)、SDK 使用教學(cursor-sdk)、以及第三方 SaaS 的官方 MCP 連接器(Gmail、Salesforce、HubSpot 等)。本質上是規格與文件庫,而非傳統可執行的程式庫。",
+      "highlights": [
+        "每個外掛都是獨立目錄,含 plugin.json manifest、skills/、rules/、agents/,結構統一清晰",
+        "third_party 底下的 MCP 連接器全部指向各家官方 remote MCP server(如 googleapis.com、salesforce 官方網域),未見自架或可疑網域",
+        "CI(validate-plugins.yml)在 PR 時用 ajv 對 marketplace.json 與每個 plugin.json 做 JSON Schema 驗證,確保結構一致性",
+        "continual-learning 等外掛內含實際 TypeScript(Bun)程式碼,邏輯清楚、有型別防呆與狀態持久化,程式碼品質不錯",
+        "少數外掛(orchestrate、pstack)另帶有 bun/TypeScript 腳本子專案,顯示部分外掛具備真正可執行的自動化能力"
+      ],
+      "use_cases": [
+        "想擴充 Cursor Agent 能力(skills/rules/hooks)的開發者可直接參考或安裝現成外掛",
+        "團隊想制定內部 code review、CI 監控、PR 流程規範時可套用 cursor-team-kit 的做法",
+        "需要串接 Gmail/Salesforce/HubSpot 等 SaaS 到 Cursor Agent 時,可直接用 third_party 下的 mcp.json 定義",
+        "想學習如何設計自己的 Cursor Plugin 規格(manifest、schema、目錄結構)的參考範本"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 4,
+        "comment": "文件品質很高,README 有清楚的表格與目錄結構說明,各外掛也都有自己的 README/CHANGELOG。測試以 CI schema 驗證為主,沒有傳統單元測試套件,但因為內容多為規格/文件/skill 定義,這類驗證已足夠涵蓋主要風險。倉庫剛開始在 trending 上出現(day 1),但由 Cursor 官方帳號維護,推上市速度快,更新頻繁。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若你是 Cursor 使用者、想擴充 Agent 技能或串接常見 SaaS,這是官方一手資源,值得加入書籤;但它是規格/內容庫而非程式庫,對純技術收藏意義有限。",
+      "_mode": "full"
+    }
+  },
+  "deepseek-ai/awesome-deepseek-agent": {
+    "first_seen": "2026-08-15",
+    "last_seen": "2026-08-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-15": [
+        5705,
+        222,
+        12,
+        "",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-08-15",
+    "analysis": {
+      "one_liner": "彙整將 DeepSeek 模型整合進各種 AI agent 與程式碼助手工具的教學清單",
+      "summary": "這是一份 awesome-list 形式的資源彙整,收錄超過 20 種主流 AI agent、coding assistant 工具(如 Claude Code、Cline、OpenCode、GitHub Copilot 等)整合 DeepSeek-V4 模型的安裝與設定教學。目的是降低開發者將 DeepSeek 接入現有慣用工具的門檻,每份指南涵蓋安裝、設定到首次執行。",
+      "category": "learning-resource",
+      "highlights": [
+        "涵蓋工具數量多,超過 20 種主流終端機/IDE AI 助手皆有專屬整合指南",
+        "提供中英雙語 README,對中文使用者友善",
+        "由 DeepSeek 官方帳號維護,連結官方 API 文件與平台資源",
+        "結構清晰的表格式索引,方便依工具查找對應教學連結"
+      ],
+      "use_cases": [
+        "已在使用某個 coding agent(如 Cline、OpenCode)想改用 DeepSeek 模型作為後端時查閱設定步驟",
+        "比較不同 AI coding assistant 對 DeepSeek 的支援程度",
+        "快速取得 DeepSeek API 申請與文件入口"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README 結構清楚、雙語支援、表格索引易讀,但主 README 本身未附各工具詳細教學內容(需點入 ./docs/*.md 子頁面才能評估實質品質)。近期有推送更新且今日登上 trending,顯示維護與關注度活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "對正在評估或已使用多種 coding agent 並想串接 DeepSeek 的開發者是實用的索引工具,但本身只是彙整清單而非核心專案,值得收藏但非必看。",
+      "_mode": "light"
+    }
+  },
+  "rustdesk/rustdesk": {
+    "first_seen": "2026-08-15",
+    "last_seen": "2026-08-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-15": [
+        120632,
+        143,
+        14,
+        "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-15",
+    "analysis": {
+      "one_liner": "用 Rust 打造的開源遠端桌面軟體,支援自架伺服器,是 TeamViewer/AnyDesk 的替代方案。",
+      "summary": "RustDesk 是跨平台(Windows/macOS/Linux/Android/iOS)的遠端桌面解決方案,核心用 Rust 撰寫,桌面 GUI 使用 Flutter(舊版 Sciter 已棄用)。支援 P2P 直連或透過自建/官方 rendezvous/relay 伺服器中繼,主打資料自主可控,是需要私有化部署遠端桌面的熱門選擇。",
+      "category": "app",
+      "highlights": [
+        "採用 Rust 撰寫核心邏輯,並用 libs/hbb_common、libs/scrap、libs/enigo 等模組化函式庫處理編解碼、螢幕擷取與輸入控制",
+        "支援自架 rendezvous/relay 伺服器,資料流可完全自主掌控,不依賴官方雲端服務",
+        "CI/CD 流程完整,涵蓋 flutter-build、flutter-ci、flutter-nightly、bridge、fdroid 等多個 workflow",
+        "翻譯涵蓋近 30 種語言的 README,社群活躍度高",
+        "程式碼內散布大量 #[cfg(test)] 單元測試(逾 30 個檔案),而非集中於單一 tests 目錄"
+      ],
+      "use_cases": [
+        "企業或個人需要私有化部署、不經第三方雲端的遠端桌面存取",
+        "IT 維運人員遠端支援/管理內部機器(Windows/Linux/macOS)",
+        "需要檔案傳輸、TCP tunneling、跨平台遠端協作的場景",
+        "作為學習 Rust 大型跨平台專案(FFI、Flutter 整合、平台特定程式碼)的參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "文件非常齊全(近 30 種語言 README、CONTRIBUTING、build 文件),CI workflow 數量多且細分明確,活躍度高(當日仍有 push)。測試以檔案內 #[cfg(test)] 單元測試為主,缺乏集中的整合測試目錄,測試覆蓋深度不易從外部評估。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 與 Dockerfile 的建置流程包含 curl/wget 從 GitHub 或第三方(如 c-smile/sciter-sdk、rustup.rs、Kitware CMake)下載檔案並直接使用或執行,此為常見的開發環境安裝模式,非專案本身的惡意行為",
+          "遠端桌面軟體本質上具備螢幕控制、剪貼簿、檔案傳輸等高權限能力,屬功能所需,使用者應依官方指引妥善設定存取密碼與伺服器來源"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "成熟、活躍且文件完善的跨平台遠端桌面專案,對需要自架遠端控制解決方案或研究 Rust 大型跨平台架構的人都值得關注。",
+      "_mode": "full"
+    }
+  },
+  "OpenCut-app/OpenCut": {
+    "first_seen": "2026-08-15",
+    "last_seen": "2026-08-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-15": [
+        83164,
+        255,
+        15,
+        "The open-source CapCut alternative",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-15",
+    "analysis": {
+      "category": "app",
+      "one_liner": "開源 CapCut 替代品「OpenCut」正在進行從零重寫,目前 repo 內容多為架構骨架,實際剪輯功能尚未實作。",
+      "summary": "OpenCut 是一款開源影片剪輯器,原本的穩定版本(classic)已搬遷到另一個 repo 並持續維運,而這個目前登上 trending 的 repo 是全新重寫計畫:目標是用 Rust 核心打造跨 Web/Desktop/Mobile 的統一編輯器,並加入 Editor API、外掛系統、MCP server、Headless 批次算圖等進階功能。但目前程式碼幾乎是空殼:web 端的 Editor 頁面只顯示「Coming soon」,API 只有健康檢查與 echo 端點,桌面端則是 GPUI(Zed 團隊的 Rust UI 框架)搭建的視窗骨架,尚未有實際剪輯邏輯。",
+      "highlights": [
+        "採用 Turborepo 風格的 monorepo(apps/web、apps/api、apps/desktop)搭配 moonrepo + proto 做工具鏈管理",
+        "Desktop app 使用 Zed 團隊的 GPUI Rust UI 框架,而非常見的 Electron/Tauri",
+        "Web 端技術棧為 React 19 + TanStack Start/Router + Tailwind v4 + shadcn,元件庫已先行導入",
+        "README 明確聲明目前不開放外部貢獻(架構仍在設計中),且暫不建議一般使用者使用此版本",
+        "GitHub Actions CI 涵蓋 Ubuntu/Windows/macOS 三平台,使用 moon ci 統一跑建置流程"
+      ],
+      "use_cases": [
+        "想追蹤知名開源剪輯器如何用 Rust + GPUI 打造跨平台統一編輯器架構的開發者",
+        "對 Editor API、外掛系統、MCP server 整合 AI agent 到剪輯流程有興趣的人",
+        "想學習 moonrepo/proto 工具鏈管理多語言(TS+Rust) monorepo 的實務案例",
+        "若要「使用」CapCut 替代品剪片,應改用 README 指向的 opencut-classic 版本而非此重寫版"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 誠實揭露現況(重寫中、功能未完成、暫不接受外部貢獻),文件品質尚可但缺乏架構細節說明。程式碼庫幾乎沒有測試(未發現任何 *.test.* / *.spec.* 檔案),抽樣的核心檔案(editor.tsx、api/index.ts、desktop main.rs)都只是骨架或範例程式碼,尚無法評斷實際實作品質。CI 有跑三平台建置檢查,commit 節奏活躍,但整體專案仍處於「重寫初期」階段,star 數暴增與程式碼實質內容不成比例。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "值得追蹤這個重寫計畫的技術路線(Rust+GPUI 跨平台、MCP 整合),但現階段程式碼是空殼,若想要能用的剪輯器請改看 opencut-classic,而非此 trending repo。",
+      "_mode": "full"
+    }
+  },
+  "ToolJet/ToolJet": {
+    "first_seen": "2026-08-15",
+    "last_seen": "2026-08-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-15": [
+        39080,
+        132,
+        17,
+        "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-15",
+    "analysis": {
+      "one_liner": "開源低程式碼平台,可快速拖拉建構內部工具、儀表板與 AI Agent 應用。",
+      "summary": "ToolJet 是一套開源的低程式碼/無程式碼應用建構平台,提供視覺化拖拉編輯器、80+ 資料來源整合與內建資料庫,協助團隊快速打造內部工具、後台系統與工作流程。企業版 ToolJet AI 進一步加入 AI 生成應用、AI 查詢建構與 Agent Builder 等進階功能。",
+      "category": "framework",
+      "highlights": [
+        "60+ 現成 UI 元件(表格、圖表、表單等),支援拖拉式視覺化編輯",
+        "內建 ToolJet Database,免額外資料庫即可存資料",
+        "80+ 資料來源整合,涵蓋資料庫、API、雲端儲存與 SaaS 工具",
+        "支援多種自架部署方式:Docker、Kubernetes、AWS/GCP/Azure 等",
+        "企業版加入 AI 應用生成、AI 查詢建構與 Agent Builder"
+      ],
+      "use_cases": [
+        "快速建構內部管理後台與資料儀表板,取代手刻前後端",
+        "串接既有資料庫/API 打造客製化業務應用或審核流程工具",
+        "需要多人協作編輯與細緻權限控管的企業內部系統",
+        "結合 AI 生成能力快速原型化 Agent 或自動化工作流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 說明完整,涵蓋功能、部署方式、文件連結與社群資源,結構清晰;但無法從 README 判斷測試涵蓋率,此評分僅based on 說明品質。專案更新頻繁(最後推送為今日),且正處於 GitHub trending 上升期,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "功能完整且持續活躍的低程式碼平台,若有內部工具建構需求值得評估導入。",
+      "_mode": "light"
     }
   }
 }
