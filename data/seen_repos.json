@@ -391,8 +391,8 @@
   },
   "citrolabs/ego-lite": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 1,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
         2575,
@@ -410,6 +410,13 @@
         10367,
         165,
         6,
+        "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+        "JavaScript"
+      ],
+      "2026-08-16": [
+        10966,
+        545,
+        13,
         "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
         "JavaScript"
       ]
@@ -448,8 +455,8 @@
       "verdict": "文件與工程品質俱佳、切入點(人機共用同一瀏覽器狀態)也相對新穎,但目前僅支援 macOS 且核心瀏覽器本身未開源,值得關注但先評估平台限制是否符合需求。",
       "_mode": "full"
     },
-    "total_days_on_trending": 4,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 5,
+    "consecutive_days_on_trending": 2
   },
   "yorukot/superfile": {
     "first_seen": "2026-07-25",
@@ -7110,10 +7117,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -7133,6 +7140,13 @@
         17258,
         3646,
         1,
+        "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+        "HTML"
+      ],
+      "2026-08-16": [
+        18623,
+        1607,
+        2,
         "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
         "HTML"
       ]
@@ -7631,10 +7645,10 @@
   },
   "cactus-compute/needle": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-13": [
         4224,
@@ -7654,6 +7668,13 @@
         5607,
         662,
         2,
+        "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "Python"
+      ],
+      "2026-08-16": [
+        6069,
+        547,
+        4,
         "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
         "Python"
       ]
@@ -7696,16 +7717,23 @@
   },
   "altic-dev/FluidVoice": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-14",
+    "last_seen": "2026-08-16",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-14": [
         9854,
         76,
         5,
         "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows & iOS waitlist open. Linux soon.",
+        "Swift"
+      ],
+      "2026-08-16": [
+        10328,
+        104,
+        10,
+        "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. DM us on X for an easter egg 😉 -https://x.com/fluidvoiceapp",
         "Swift"
       ]
     },
@@ -7744,10 +7772,10 @@
   },
   "unslothai/unsloth": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-14": [
         71060,
@@ -7760,6 +7788,13 @@
         71507,
         501,
         16,
+        "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+        "Python"
+      ],
+      "2026-08-16": [
+        72049,
+        434,
+        5,
         "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
         "Python"
       ]
@@ -7802,10 +7837,10 @@
   },
   "megadose/holehe": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-14": [
         12425,
@@ -7818,6 +7853,13 @@
         12849,
         427,
         3,
+        "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+        "Python"
+      ],
+      "2026-08-16": [
+        13118,
+        382,
+        9,
         "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
         "Python"
       ]
@@ -8026,14 +8068,21 @@
   },
   "github/spec-kit": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-15": [
         128522,
         1160,
+        8,
+        "💫 Toolkit to help you get started with Spec-Driven Development",
+        "Python"
+      ],
+      "2026-08-16": [
+        129200,
+        892,
         8,
         "💫 Toolkit to help you get started with Spec-Driven Development",
         "Python"
@@ -8076,15 +8125,22 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-15": [
         2811,
         41,
         11,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ],
+      "2026-08-16": [
+        2950,
+        149,
+        3,
         "Cursor plugin specification and official plugins",
         "TypeScript"
       ]
@@ -8269,15 +8325,22 @@
   },
   "ToolJet/ToolJet": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-15": [
         39080,
         132,
         17,
+        "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+        "JavaScript"
+      ],
+      "2026-08-16": [
+        39540,
+        544,
+        11,
         "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
         "JavaScript"
       ]
@@ -8313,6 +8376,204 @@
       "star_rating": 4,
       "verdict": "功能完整且持續活躍的低程式碼平台,若有內部工具建構需求值得評估導入。",
       "_mode": "light"
+    }
+  },
+  "cordiverse/cordis": {
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-16": [
+        4071,
+        599,
+        1,
+        "Meta-Framework of Spatiotemporal Composability",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-16",
+    "analysis": {
+      "category": "framework",
+      "one_liner": "Cordis 是一個強調「時空可組合性」的 TypeScript 元框架,提供插件生命週期、依賴注入與服務容器機制。",
+      "summary": "Cordis 是給 Node.js 應用設計的元框架(meta-framework),核心概念是把 Context(上下文)、Plugin(插件)、Service(服務)組織成可巢狀、可隔離、可熱重載的樹狀結構。它透過 Proxy、Reflect 與 Fiber(類似協程/生命週期單元)機制,讓插件之間的依賴注入、事件系統與資源釋放(dispose)能夠自動化管理,原本是 Koishi 聊天機器人框架抽出的通用核心。",
+      "highlights": [
+        "採用 Fiber 概念管理插件生命週期,支援巢狀插件、自動 dispose 與依賴注入(@Inject 裝飾器)",
+        "monorepo 架構(yakumo + yarn workspaces),core/create/hmr/loader/include 等套件職責分離清楚",
+        "使用 Vitest + v8 覆蓋率設定(.nycrc.json)搭配 GitHub Actions 做 lint/build/test 三段式 CI,矩陣測試 Node 24/26",
+        "支援 HMR(熱模組替換)套件,可在開發時重新載入插件而不重啟整個應用",
+        "README 中文件連結指向與專案無關的網域,細節見安全觀察"
+      ],
+      "use_cases": [
+        "需要建構可插拔架構(plugin-based architecture)的 Node.js 應用或機器人框架",
+        "希望在服務啟動/關閉時有明確生命週期管理與資源釋放機制的專案",
+        "開發階段需要熱重載插件、加速迭代的工具鏈",
+        "作為 Koishi 等下游框架的核心依賴進行二次開發"
+      ],
+      "quality": {
+        "docs": 2,
+        "tests": 4,
+        "activity": 4,
+        "comment": "核心程式碼(context.ts、registry.ts、fiber.ts)結構清晰、型別設計嚴謹,測試覆蓋率設定完整且測試案例(如 plugin.spec.ts)涵蓋巢狀插件、dispose、快照比對等邊界情境,顯示程式品質不錯。但頂層 README.md 只是一個指向 packages/core/README.md 的替身檔案,而實際內容也僅有寥寥數行,缺乏使用範例、API 文件或架構圖,對新使用者不友善,且該文件連結本身有前述的網域異常問題。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "packages/core/README.md 中的「Documentation」連結指向 https://deepseek-harness.github.io/deepseek-harness/reference/cordis-primer,此網域與 cordiverse/cordis 專案名稱不符,性質不明,建議使用者在點擊前自行確認該網站的真實性,而非直接視為官方文件",
+          "未在 package.json 或其他設定檔中發現 preinstall/postinstall/prepare 等安裝期腳本,也未發現 curl|bash 或 base64/hex 內嵌的可疑內容"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "程式碼架構與測試品質紮實,是值得追蹤的 Node.js 插件化框架基礎建設,但文件不完整且有一處來源不明的外部連結,建議謹慎查證後再深入使用。",
+      "_mode": "full"
+    }
+  },
+  "public-apis/public-apis": {
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-16": [
+        460176,
+        2260,
+        6,
+        "A collective list of free APIs",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-16",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "一份社群共同維護、收錄大量免費公開 API 的巨型清單。",
+      "summary": "public-apis/public-apis 是一個依領域分類(動物、金融、天氣、機器學習等超過 40 個分類)整理免費公開 API 的資源彙整專案,每筆條目附上驗證方式、是否支援 HTTPS/CORS 等實用資訊。它解決的是開發者要快速找到可用第三方 API 卻苦於資訊分散的問題,同時與 APILayer 商業服務有合作推廣關係。",
+      "highlights": [
+        "依 40 多個領域分類(動物、金融、機器學習、政府資料等),索引清楚易於查找",
+        "每筆 API 條目標註 Auth 方式、HTTPS、CORS 支援與否,方便快速評估可用性",
+        "460k+ Star、今日新增 2260 顆,顯示極高人氣與社群關注度",
+        "README 開頭大篇幅置入 APILayer 商業廣告與推薦連結(帶 UTM 追蹤參數)",
+        "MIT 授權,搭配 Contributing Guide 引導社群提交新 API"
+      ],
+      "use_cases": [
+        "開發原型或демо時快速尋找免費可用的第三方 API",
+        "教學/課程中作為 API 串接練習的資源清單",
+        "調研特定領域(如天氣、金融、動物圖片)有哪些現成 API 可整合",
+        "作為 API 探索起點,再深入查閱各服務官方文件"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "資源彙整類,測試不適用。README 結構清晰、分類完整、索引方便導覽,但前段大量商業廣告(APILayer)內容稀釋了純資源清單的定位;近期(2026-08-13)仍有持續推送,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "作為 API 查找的入口清單相當實用且維護活躍,但需留意其中夾雜商業推廣內容,建議把它當索引而非最終文件來源。",
+      "_mode": "light"
+    }
+  },
+  "MakazhanAlpamys/Soup": {
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-16": [
+        1662,
+        297,
+        7,
+        "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-16",
+    "analysis": {
+      "one_liner": "用一份 YAML 設定檔微調 LLM 的 CLI 工具,主打「layer streaming」技術讓 4GB 顯卡也能訓練 8B 模型。",
+      "summary": "Soup 是一個 Python CLI(soup-cli),把 LLM 微調/後訓練(SFT、DPO、GRPO、PPO、KTO、ORPO 等)整合成單一指令流程,核心賣點是「layer streaming」——將凍結的基礎模型權重留在主機記憶體、逐層串流進 GPU,讓消費級顯卡也能訓練遠超過其 VRAM 容量的模型。專案同時提供資料處理、評測(soup ship 回歸閘門)、匯出部署(GGUF/ONNX/TensorRT)等一整套 LLMOps 功能。",
+      "category": "ai-ml",
+      "highlights": [
+        "Layer streaming 技術有具體實測數據佐證(RTX 3050 4GB 跑 Llama-3.1-8B,119.6 tok/s、3.32GB peak),並附 Zenodo 論文與 Colab 驗證 notebook",
+        "README/CHANGELOG 罕見地誠實揭露過去版本的錯誤與退版(如 v0.72.1 修復 adapter 儲存 bug、v0.73.2 修正評測指標誤判),而非只報喜不報憂",
+        "CI 設定嚴謹:3 個作業系統 × 3 個 Python 版本矩陣、ruff/mypy/actionlint 檢查、覆蓋率門檻 77%",
+        "功能覆蓋極廣,480+ 個指令模組、363 個測試檔案,涵蓋 SFT 到 DPO/GRPO/PPO 等近十種訓練方法與量化匯出",
+        "套件拆分乾淨(輕量核心 + train/serve/ui 等 extras),依賴版本鎖定並附詳細理由註解,可維護性用心"
+      ],
+      "use_cases": [
+        "個人或小團隊在單張消費級 GPU(4-8GB VRAM)上微調 7B-8B 級別的開源 LLM",
+        "需要一套 YAML 驅動、不需手動管理 HuggingFace/PEFT/TRL 版本相容性的訓練流程",
+        "訓練後需要模型匯出成 GGUF 給 Ollama/llama.cpp 部署,或跑回歸評測把關發布品質",
+        "偏好資料驅動、可重現實驗記錄(benchmarks/ 目錄含逐版本測量報告)的研究型工作流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質極高,README、docs/ 十份指南、benchmarks/ 測量記錄一應俱全且用詞誠實精確;測試量體龐大(363 個測試檔)且 CI 跨平台跑,但因規模與功能密度異常龐大(480+ 指令模組覆蓋近十種訓練演算法、多種量化/匯出格式),加上文風高度一致且細節極致到近乎不像人工逐字撰寫,實際覆蓋深度與各功能在真實硬體上的驗證程度難以單從原始碼判斷,建議實測前先看 benchmarks/ 的量測記錄。專案目前為活躍開發中(pushed 2026-08-15),issue/PR 編號密集顯示社群互動熱絡。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程紀律與文件品質在同類專案中少見,若你在找消費級顯卡微調 LLM 的工具值得一試,但功能範圍極廣,建議先用小模型驗證你關心的那條路徑是否真的穩定。",
+      "_mode": "full"
+    }
+  },
+  "HKUDS/CLI-Anything": {
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-16": [
+        47355,
+        118,
+        12,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-16",
+    "analysis": {
+      "one_liner": "用一個 AI 代理指令,把任何有原始碼的軟體自動生成成結構化、可被 AI 代理操作的 CLI 工具",
+      "summary": "CLI-Anything 是 HKUDS 團隊打造的超大型 monorepo,提供 Claude Code / Pi / OpenClaw / Codex 等多種 AI 代理平台的外掛與技能,透過七階段流程(分析、設計、實作、測試規劃、寫測試、文件、發布)自動把任意軟體(GIMP、Blender、LibreOffice、QGIS 等)轉換成具備 JSON 輸出、REPL、undo/redo 的 Click CLI。專案同時提供 CLI-Hub 套件管理器(pip install cli-anything-hub),讓使用者與代理可以瀏覽、安裝、更新社群貢獻的 CLI 封裝。",
+      "category": "devtool",
+      "highlights": [
+        "涵蓋 GIMP、Blender、LibreOffice、QGIS、FreeCAD、Godot 等 40 幾種軟體的獨立 agent-harness,每個都有自己的 Click CLI、README 與測試",
+        "README 宣稱累積 2,461+ 測試通過,實際 repo 內確實可找到數千個 test_ 函式,分散在各軟體子目錄的 tests/ 資料夾",
+        "CLI-Hub 提供跨代理平台的 meta-skill(npx skills add),讓 AI 代理自主發現、安裝、使用對應軟體的 CLI",
+        "採用 Claude Code plugin marketplace、Pi extension、OpenCode commands、Codex/Hermes/Reasonix skill 等多種代理整合方式,一套方法論適配多平台",
+        "近期紀錄顯示持續有安全強化紀錄(路徑穿越修補、defusedxml 導入防 XML 攻擊、SQLCipher 寫入保護),顯示維護者重視程式碼安全性"
+      ],
+      "use_cases": [
+        "想讓 Claude Code / OpenClaw 等 AI 代理直接操控 GIMP、Blender、LibreOffice 等桌面軟體,而非用截圖點擊的 UI 自動化",
+        "團隊有內部工具或舊系統想快速包裝成 CLI,讓代理可用結構化 JSON 指令操作,取代脆弱的 API 拼接",
+        "研究如何用 7 階段方法論(分析→設計→實作→測試→文件→發布)自動生成 production-ready 的 CLI 封裝",
+        "透過 CLI-Hub 直接安裝社群已完成的軟體 CLI(如 Zotero、Joplin、n8n),不必自己重新生成"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為詳盡(多語系 README、每個子專案有獨立 md 文件),測試覆蓋率高且分層(unit + E2E),抽樣的原始碼(如 3MF parser)具備型別註記、dataclass、清楚的 docstring,品質整齊。GitHub Actions 涵蓋 skill 驗證、PR labeler 測試、CLI-Hub 自動發布,活躍度非常高(每日多筆更新、社群 PR 持續合併)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "部分子專案(如 quietshrink)的錯誤訊息會引導使用者執行第三方 install.sh(curl | bash 模式)來安裝外部依賴軟體,這是常見的第三方安裝說明模式,並非本專案自身執行的程式碼",
+          "各平台 skill 安裝腳本(pi-extension/install.sh、codex-skill/scripts/install.sh 等)會將檔案複製到使用者家目錄下的代理設定資料夾,屬正常的本地安裝流程,未發現對外連線或可疑網域"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "巨大且高度活躍的社群專案,方法論成熟、測試紮實、文件完整,對想讓 AI 代理操控真實軟體的開發者非常值得關注與試用。",
+      "_mode": "full"
     }
   }
 }
