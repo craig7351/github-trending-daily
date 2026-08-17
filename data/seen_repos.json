@@ -7645,10 +7645,10 @@
   },
   "cactus-compute/needle": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-17",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-13": [
         4224,
@@ -7675,6 +7675,13 @@
         6069,
         547,
         4,
+        "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "Python"
+      ],
+      "2026-08-17": [
+        6570,
+        443,
+        7,
         "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
         "Python"
       ]
@@ -7772,10 +7779,10 @@
   },
   "unslothai/unsloth": {
     "first_seen": "2026-08-14",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-17",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-14": [
         71060,
@@ -7795,6 +7802,13 @@
         72049,
         434,
         5,
+        "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+        "Python"
+      ],
+      "2026-08-17": [
+        72582,
+        572,
+        3,
         "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
         "Python"
       ]
@@ -8277,15 +8291,22 @@
   },
   "OpenCut-app/OpenCut": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-17",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-15": [
         83164,
         255,
         15,
+        "The open-source CapCut alternative",
+        "TypeScript"
+      ],
+      "2026-08-17": [
+        83896,
+        150,
+        4,
         "The open-source CapCut alternative",
         "TypeScript"
       ]
@@ -8325,10 +8346,10 @@
   },
   "ToolJet/ToolJet": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-17",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-15": [
         39080,
@@ -8341,6 +8362,13 @@
         39540,
         544,
         11,
+        "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+        "JavaScript"
+      ],
+      "2026-08-17": [
+        40032,
+        452,
+        6,
         "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
         "JavaScript"
       ]
@@ -8380,14 +8408,21 @@
   },
   "cordiverse/cordis": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-16": [
         4071,
         599,
+        1,
+        "Meta-Framework of Spatiotemporal Composability",
+        "TypeScript"
+      ],
+      "2026-08-17": [
+        4724,
+        720,
         1,
         "Meta-Framework of Spatiotemporal Composability",
         "TypeScript"
@@ -8431,15 +8466,22 @@
   },
   "public-apis/public-apis": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-16": [
         460176,
         2260,
         6,
+        "A collective list of free APIs",
+        "Python"
+      ],
+      "2026-08-17": [
+        461757,
+        1588,
+        5,
         "A collective list of free APIs",
         "Python"
       ]
@@ -8573,6 +8615,57 @@
       },
       "star_rating": 5,
       "verdict": "巨大且高度活躍的社群專案,方法論成熟、測試紮實、文件完整,對想讓 AI 代理操控真實軟體的開發者非常值得關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "basecamp/omarchy": {
+    "first_seen": "2026-08-17",
+    "last_seen": "2026-08-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-17": [
+        25384,
+        270,
+        2,
+        "Beautiful, Modern & Opinionated Linux",
+        "Shell"
+      ]
+    },
+    "last_analyzed": "2026-08-17",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "DHH 團隊打造的「開箱即用、有主見」的 Arch Linux 桌面發行版,以 Hyprland 為基礎,附贈完整 CLI 工具鏈與 Quickshell 桌面殼層。",
+      "summary": "Omarchy 不是傳統程式庫,而是一套完整的 Linux 桌面發行版設定,目標是把 Arch + Hyprland 打包成「開機即用、風格統一」的開發者工作站。專案包含數千支 Shell 腳本、安裝流程、硬體修正腳本、自製的 omarchy CLI 命令中心,以及用 QML 寫的 Quickshell 桌面殼層,涵蓋主題系統、面板、剪貼簿、AI agent 整合等大量周邊工具。",
+      "highlights": [
+        "自製 omarchy CLI 採用檔名慣例 + metadata 註解自動產生指令路由、說明文件與 JSON 輸出,設計相當講究(bin/omarchy)",
+        "本地測試套件規模驚人:test/shell.d 下有 200+ 支獨立測試腳本,涵蓋音訊、藍牙、面板、快捷鍵等細節功能",
+        "manual/ 目錄提供 50+ 篇使用手冊,並有專門的 48-security.md 說明全碟加密、防火牆、簽章金鑰等安全實作",
+        "針對數十種硬體(Apple T2、Framework、ASUS ROG、Surface 等)提供逐一修正腳本,顯示長期維運與真實硬體回饋的累積",
+        "AGENTS.md/CLAUDE.md 與 agents/skills/ 目錄顯示專案已系統化整理給 AI coding agent 使用的規範文件"
+      ],
+      "use_cases": [
+        "想要一套開箱即用、視覺統一的 Arch + Hyprland 桌面環境,不想從零手刻 dotfiles",
+        "偏好用 AI coding agent(Claude/Codex 等)輔助日常系統維運的開發者,可參考其 CLI 與 agent 整合設計",
+        "研究大型 Shell 專案如何組織測試、CLI 路由與硬體相容腳本的工程實踐"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件極為完整(50+ 篇手冊、安全說明、agent skills),測試以 200+ 支 shell 腳本涵蓋大量功能點,但因專案本質是系統整合而非可獨立跑的函式庫,較難用傳統 CI 驗證所有硬體分支;倉庫內未見 .github/workflows,僅有 issue template,實際 CI 是否存在無法從原始碼確認。核心 CLI 腳本(bin/omarchy)結構清晰、有防呆與路由衝突檢查,程式碼品質在 Shell 專案中屬上乘。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "bin/omarchy-upgrade-to-quattro 腳本文件中明確說明其設計目的就是讓使用者以 curl | bash 方式從舊版升級,腳本內部也會用 curl 從 GitHub 官方 repo 下載 tarball 並解壓覆蓋設定檔",
+          "bin/omarchy-install-dev-env 是選用的開發環境安裝器,會呼叫官方上游安裝腳本(astral.sh/uv、sh.rustup.rs、opam 官方 install.sh)並以 bash -c 執行,這是 Rust/uv/OCaml 官方建議的安裝方式,但仍屬於執行遠端下載內容的模式",
+          "install/hardware/pacman.sh 等硬體修正腳本會寫入非官方第三方 pacman repo(如 arch-mact2-mirror)的來源設定,使用者需了解這是啟用第三方套件來源"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對想要現成、風格統一的 Arch/Hyprland 桌面環境的使用者非常值得一試,工程組織與文件品質在同類專案中名列前茅,但因涉及系統層安裝與多處遠端腳本執行,建議先讀過 install/ 與 manual/48-security.md 再上手。",
       "_mode": "full"
     }
   }
