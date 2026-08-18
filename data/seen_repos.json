@@ -8408,10 +8408,10 @@
   },
   "cordiverse/cordis": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-08-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-16": [
         4071,
@@ -8424,6 +8424,13 @@
         4724,
         720,
         1,
+        "Meta-Framework of Spatiotemporal Composability",
+        "TypeScript"
+      ],
+      "2026-08-18": [
+        5587,
+        957,
+        10,
         "Meta-Framework of Spatiotemporal Composability",
         "TypeScript"
       ]
@@ -8666,6 +8673,466 @@
       },
       "star_rating": 4,
       "verdict": "對想要現成、風格統一的 Arch/Hyprland 桌面環境的使用者非常值得一試,工程組織與文件品質在同類專案中名列前茅,但因涉及系統層安裝與多處遠端腳本執行,建議先讀過 install/ 與 manual/48-security.md 再上手。",
+      "_mode": "full"
+    }
+  },
+  "harry0703/MoneyPrinterTurbo": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        106041,
+        1189,
+        1,
+        "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "只要輸入主題或關鍵字,就能透過 AI 大模型自動生成腳本、素材、字幕與配樂,一鍵合成高清短影音的開源工具。",
+      "summary": "MoneyPrinterTurbo 是一套一站式 AI 短影音生成工具,使用者提供主題或關鍵字後,系統會自動呼叫大型語言模型撰寫腳本、比對素材關鍵字、生成字幕與背景音樂,最終合成高清短影片。專案同時提供 WebUI、API、CLI 與 AI Agent 四種操作介面,並支援將成片一鍵發布到 TikTok、Instagram、YouTube Shorts 等平台。",
+      "highlights": [
+        "整合多家 LLM(Kimi、OpenAI、Gemini、DeepSeek、通義千問、Azure OpenAI、火山方舟、Grok、MiniMax 等)與多種聚合閘道(Ollama、LiteLLM、OneAPI 等)",
+        "支援多種 TTS 服務(Edge TTS、Azure Speech、ElevenLabs、Gemini、Chatterbox 等)並可即時試聽",
+        "支援 9:16 直式與 16:9 橫式高清影片、批量生成、片段時長調整、多語言腳本",
+        "字幕樣式(字型、顏色、位置、描邊)與背景音樂皆可自訂,並可用本地素材或 Pexels/Pixabay/Coverr 免費素材庫",
+        "支援一鍵跨平台發布至 TikTok、Instagram、YouTube Shorts"
+      ],
+      "use_cases": [
+        "自媒體/短影音創作者想快速批量產出多支候選影片後挑選最佳版本",
+        "行銷團隊需要依關鍵字自動產生多語言短影音素材",
+        "開發者想串接自有 LLM/TTS 服務,客製化影片生成工作流",
+        "學習如何用 Python 串接 LLM + TTS + FFmpeg 打造自動化內容生成 pipeline"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容詳實,功能清單、介面截圖與實際生成作品範例齊全,說明品質高;但受限於僅檢視 README、未檢視原始碼,測試覆蓋率與程式碼品質無法評估,僅能給予基本分數。專案昨日剛推送更新,今日以 106k+ star、單日新增近 1200 star 登上 GitHub Trending 第一名,活躍度非常高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "功能完整、更新活躍且熱度爆棚的 AI 短影音生成工具,值得立即關注與試用。",
+      "_mode": "light"
+    }
+  },
+  "usestrix/strix": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        54183,
+        598,
+        2,
+        "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "one_liner": "用多智能體 AI(LLM)自動化滲透測試,實際執行漏洞探索、利用與 PoC 驗證,而非只做靜態掃描。",
+      "summary": "Strix 是開源 AI 滲透測試工具,讓 LLM 驅動的自主代理像真人駭客一樣在 Docker 沙箱中動態執行程式、發現漏洞並產生可驗證的 PoC,涵蓋 OWASP Top 10 及更多攻擊面(注入、SSRF、IDOR、認證繞過等)。同時提供多代理協作(Graph of Agents)、CI/CD 整合、本機 Web 檢視器,以及對應的雲端平台 app.strix.ai 做持續滲透測試與自動修補 PR。",
+      "category": "security",
+      "highlights": [
+        "多代理編排(Graph of Agents)分工偵察、利用、後滲透,模擬紅隊協作",
+        "內建完整攻擊工具鏈:HTTP 攔截代理(Caido)、瀏覽器自動化、終端機、Python sandbox、OSINT/SAST/DAST",
+        "支援 OpenAPI/Swagger/Postman 契約測試、CI/CD(GitHub Actions)整合與 PR diff-scope 快速掃描",
+        "本機 Web Dashboard(strix view)可視覺化漏洞、代理圖與掃描歷程,資料不上雲",
+        "型別檢查與 Lint 設定極嚴格(mypy strict、pyright strict、ruff 全規則集、bandit),測試檔案達 68 個"
+      ],
+      "use_cases": [
+        "對自家應用或 API 做快速滲透測試,產出附 PoC 與 CVSS 評分的報告",
+        "在 CI/CD pipeline 中對每個 PR 做安全掃描,攔截漏洞進入正式環境",
+        "Bug bounty 研究者自動化尋找漏洞並生成報告素材",
+        "作為 Claude Code / Cursor / Codex 等編碼代理的技能(skill),讓 AI 助理具備自動修補安全漏洞的能力"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整(獨立 docs 站、多個 skill 說明、LLM provider 指南),pyproject.toml 對 mypy/pyright/ruff/bandit 皆採嚴格設定,tests 目錄有 68 個測試檔涵蓋核心元件(runner、tool 呼叫、TUI、報告產出等)。專案剛從 v1.5.3 發布,pushed_at 為最新一天,活躍度高,但只有一個 release workflow,CI 廣度未知。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 與 CI 範例採用 curl -sSL https://strix.ai/install | bash 的常見安裝模式,scripts/install.sh 會從 GitHub Releases 下載對應平台的預編譯執行檔並放入 PATH,這是典型的公開安裝腳本模式而非本專案獨有異常行為",
+          "containers/docker-entrypoint.sh 會在沙箱容器內設定系統級 HTTP(S) 代理並將自簽 CA 憑證匯入瀏覽器信任庫,以攔截流量進行滲透測試,此為工具核心功能所需,僅在其自帶 Docker 沙箱內生效,未在原始碼中發現對外傳送資料的可疑網域或硬編碼 IP"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、文件齊全、安裝與沙箱機制透明合理,是值得關注的 AI 資安自動化工具,但因涉及主動攻擊性掃描,使用前務必確認目標的合法授權範圍。",
+      "_mode": "full"
+    }
+  },
+  "nautechsystems/nautilus_trader": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        25919,
+        120,
+        3,
+        "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "one_liner": "Rust 原生、事件驅動的高效能多資產交易引擎,同時支援回測研究與實盤交易。",
+      "summary": "NautilusTrader 是一套用 Rust 打造核心引擎、以 Python 作為策略控制層的量化交易系統,涵蓋回測、模擬與實盤執行三種場景,採用同一套確定性事件驅動架構,讓策略從研究到上線不需重寫程式碼。專案模組化支援超過 15 個交易所/資料商轉接器(涵蓋加密貨幣現貨/衍生品、傳統市場、體育博彩交易所),目標使用族群為個人與小型量化團隊。",
+      "category": "infra",
+      "highlights": [
+        "Rust 核心 + PyO3 綁定架構,兼顧編譯型引擎的效能安全與 Python 策略開發的彈性",
+        "研究與實盤共用同一套執行語義與時間模型,降低「回測有效、實盤失真」的部署風險",
+        "模組化 adapter 設計,已支援 Binance、Bybit、OKX、Coinbase、Deribit、Interactive Brokers、Betfair、Polymarket 等 17+ 個交易所/資料源",
+        "供應鏈安全措施完整:簽章 commit、Sigstore/cosign 簽署發布物、SLSA 來源證明、CodeQL/cargo-audit/cargo-deny/OSV Scanner 常態掃描",
+        "正在進行 v1→v2(Rust 原生 runtime)遷移,提供獨立的遷移指南與 release candidate 通道"
+      ],
+      "use_cases": [
+        "量化研究者需要一套可同時做歷史回測與實盤交易、且邏輯完全一致的框架",
+        "需串接多家加密貨幣交易所或傳統券商(如 IBKR)API 的自動化交易系統開發",
+        "對效能與確定性要求高、想用 Rust 撰寫關鍵交易邏輯但仍保留 Python 快速迭代能力的團隊",
+        "訓練強化學習/演化策略(RL/ES)交易代理人,需要高速回測引擎的研究場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為完整(README、SECURITY.md、developer guide、每個 adapter 的整合指南),CI/CD 涵蓋建置、測試、模糊測試、供應鏈安全掃描等十餘個 workflow。測試覆蓋深且廣:Rust 端在原始碼內大量內嵌 rstest 單元測試(單一 position.rs 檔案就有 82 處測試相關程式碼),Python 端另有 150+ 個測試檔案涵蓋單元、驗收(acceptance)與整合測試。專案仍每日有 commit(nightly/develop 分支持續建置),活躍度高,屬工程成熟度很高的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "對量化/演算法交易有興趣的工程師值得關注:這是少數把 Rust 效能與 Python 易用性結合、且研究與實盤共用同一套邏輯的成熟開源交易引擎,工程品質與安全實踐皆屬業界前段班。",
+      "_mode": "full"
+    }
+  },
+  "akitaonrails/ai-memory": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        2063,
+        207,
+        4,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "one_liner": "用 Rust 打造的跨代理長期記憶服務,讓 Claude Code、Codex、Cursor 等多種 AI coding CLI 能無縫交接同一份專案記憶。",
+      "summary": "ai-memory 透過生命週期 hook 擷取 prompt、工具呼叫與 session 邊界事件,彙整成純 Markdown wiki(可搭配 SQLite FTS5、實體索引與選用的向量檢索),讓使用者在不同 AI coding agent 之間切換時,新工作階段能自動拿到「交接摘要」而不必重新解釋架構、失敗嘗試與待解問題。同時提供 MCP server、Web 唯讀瀏覽介面、多使用者歸屬與 homelab 部署等進階功能。",
+      "category": "devtool",
+      "highlights": [
+        "支援 20 種以上 AI coding agent(Claude Code、Codex、Cursor、Gemini CLI、Kiro 等)的 MCP 設定與生命週期 hook 自動安裝",
+        "以純 Markdown + git 版本控管作為知識庫,無需額外向量資料庫也能用 FTS5 全文檢索",
+        "內建 Sanitizer 會在寫入前用正規表示式偵測並遮蔽常見金鑰/密碼格式(Bearer token、sk-、AWS AKIA、PEM 私鑰等)",
+        "CI 涵蓋 fmt/clippy/多平台測試/cargo-audit/cargo-deny/gitleaks 秘密掃描/Docker 映像 smoke test,工程紀律相當扎實",
+        "SECURITY.md 詳列威脅模型與範圍外事項(如非租戶隔離、資料未加密),對单机/homelab 使用情境誠實揭露限制"
+      ],
+      "use_cases": [
+        "個人或小型團隊在多種 AI coding CLI(如白天用 Claude Code、晚上換 Codex)之間切換,想保留專案脈絡與決策紀錄",
+        "為既有專案匯入歷史(git log、README、docs)做為 AI agent 的初始記憶種子",
+        "在 homelab/區網架設共用記憶伺服器,讓多台機器或多位開發者共享同一份專案 wiki",
+        "需要稽核 AI agent 寫入了哪些「永久筆記」或決策,並可回溯/還原單一頁面版本"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 長達千行、docs/ 目錄與 SECURITY.md 詳盡到近乎過度工程化,但確實逐項說明每個代理的相容細節與邊界情況;測試涵蓋每個 crate 且 CI 有多平台矩陣、cargo-audit、cargo-deny、gitleaks 全歷史掃描與 Docker smoke test;版本已到 1.28.0,趨勢當日仍有新版釋出,commit/changelog 紀律良好。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "安裝腳本(bin/ai-memory wrapper 與 native binary 自我更新流程)在下載後一律驗證 SHA-256 checksum 才會覆蓋既有執行檔,未發現未經驗證即執行遠端內容的情形",
+          "docs/issues-mempalace.md 中作者主動記錄了「未來若專案走紅需防範安裝指令被仿冒(typosquatting)」的風險筆記,屬於安全意識紀錄而非實際問題",
+          "git 歷史掃描(.gitleaksignore)中列出的皆為 sanitizer 測試用假樣本(正規表示式測試字串),並非真實外洩憑證"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件完整度都在同類專案中名列前茅,是解決「AI coding agent 之間記憶斷層」這個真實痛點的成熟方案,值得有多工具使用習慣的開發者關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "mukul975/Anthropic-Cybersecurity-Skills": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        28436,
+        198,
+        5,
+        "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
+        "Python"
+      ]
+    }
+  },
+  "AlexsJones/llmfit": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        32278,
+        198,
+        6,
+        "Hundreds of models & providers. One command to find what runs on your hardware.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "category": "cli",
+      "one_liner": "偵測你的硬體規格,幫你從數百個 LLM 模型中挑出真正能跑得動、跑得快的那些。",
+      "summary": "llmfit 是用 Rust 寫的終端機工具,會偵測本機的 RAM、CPU、GPU/VRAM 與可用的推論後端(Ollama、llama.cpp、MLX、Docker Model Runner、LM Studio 等),針對模型資料庫中的每個模型計算記憶體是否放得下、量化後速度估計、品質與情境長度四個面向的分數,排序出最適合當前硬體的模型。近期版本加入了「跑分並回報」機制,使用者可在 TUI 中直接把自己機器上量測到的真實 tok/s 提交成 PR,取代原本靠公式估算的數字。",
+      "highlights": [
+        "互動式 TUI 加傳統 CLI 雙模式,支援 multi-GPU、MoE 架構與動態量化選擇的評分邏輯",
+        "社群跑分機制:使用者可在本機測出真實 tok/s 後直接從 TUI 產生 PR,量測值取代估算值",
+        "CI 涵蓋 ubuntu/macos/windows 三平台 + clippy + rustfmt + Python(llmfit-python)獨立測試與型別檢查,流程成熟",
+        "README 明確寫出與 llm-checker 等替代方案的差異與取捨,態度誠實",
+        "Windows 執行檔透過 SignPath 做 Authenticode 簽章,發布流程有明確審核步驟"
+      ],
+      "use_cases": [
+        "本地部署 LLM 前,快速確認手上這台筆電/工作站能流暢跑哪些模型與量化版本",
+        "多 GPU 或 Apple Silicon 統一記憶體環境下,估算模型可用的情境長度與速度",
+        "透過 CLI JSON 輸出串接到腳本或 agent,自動化選型與下載推薦模型",
+        "在 Kubernetes/Docker 節點上以 recommend --json 批次回報各節點硬體適配結果"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "程式碼本身文件化程度很高,註解會引用實際 issue 編號說明修正原因(例如 Windows APU UMA carveout、macOS 可用記憶體回報失敗等真實案例),顯示對邊界情況的用心處理。llmfit-core 內部有 500 多個測試函式,並有獨立的 tests/ 目錄做 schema 驗證與 CLI smoke test,CI 三平台矩陣加上 clippy/fmt/Python 檢查一應俱全。專案更新頻繁(最近一次 push 在分析當日),文件涵蓋 README(三語言)、docs/ 子目錄的詳細指南與 CHANGELOG。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質扎實、文件完整、CI 嚴謹,對於想在本機跑 LLM 卻不確定硬體吃不吃得消的開發者,是值得立刻安裝把玩的實用工具。",
+      "_mode": "full"
+    }
+  },
+  "santifer/career-ops": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        64651,
+        218,
+        7,
+        "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "one_liner": "把任何 AI 編碼 CLI(Claude Code、Codex、OpenCode 等)變成求職作戰指揮中心的開源工具,自動掃描職缺、用 A-G 結構化評分、產生客製履歷並追蹤應徵進度。",
+      "summary": "career-ops 是一套跑在本機的 AI Agent 系統,透過 AI 編碼 CLI 的 skill/slash command 機制驅動:掃描 Greenhouse/Ashby/Lever 等 100+ 家公司職缺頁,依 CV 與 JD 進行 A-F 五維度加權評分(另有 G 區塊做職缺真實性/詐騙偵測),批量產生 ATS 優化 PDF 履歷與求職信,並用 Markdown/YAML 追蹤整個應徵流程。作者本人用它評估過 740+ 職缺、產出 100+ 份客製履歷並找到現職,現以 MIT 授權開源。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援 8+ 種 AI CLI(Claude Code、Codex、OpenCode、Antigravity、Grok、Qwen、Kimi、Copilot),透過共用的 Agent Skill 標準避免綁定單一供應商",
+        "強調「人在迴圈中」設計:AI 只負責評分/草擬,絕不自動送出應徵,並在 README 明確聲明不做 spray-and-pray",
+        "工程品質扎實:180+ 支測試檔、三平台(Ubuntu/macOS/Windows)CI 矩陣、CodeQL、SBOM、dependency-review 等多個 GitHub workflow",
+        "對外部職缺來源做了 SSRF 防護(redirect:'error' 阻擋重導向到內網 IP)、逾時/重試/DNS cache 等生產級網路層設計,程式碼註解著重解說每個設計取捨的來龍去脈",
+        "Plugin(Gmail、Notion、Apify)預設關閉且需自行填 API key,核心功能不依賴任何第三方帳密"
+      ],
+      "use_cases": [
+        "求職者想系統化篩選大量職缺、避免海投,快速判斷哪些機會值得投入時間",
+        "已在使用 Claude Code / Codex 等 AI CLI 的工程師,想順手擴充一個求職追蹤與履歷客製 Agent",
+        "需要批次評估職缺並產出 ATS 優化 PDF 履歷、求職信與應徵郵件草稿的場景",
+        "研究 Agent Skill 標準跨 CLI 相容設計、或想參考大型 JS 專案如何做 Provider 抽象與 SSRF 防護的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極其完整(17 種語言 README、ARCHITECTURE.md、DATA_CONTRACT.md、多份 docs/*.md),測試覆蓋率高(180+ 測試檔、含 SSRF 硬化測試、跨平台 CI),原始碼中的註解著重解釋「為什麼」而非「做什麼」,可見長期維護痕跡與高工程紀律。最近一次 push 在今天,commit 節奏密集,屬於活躍度極高的專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "npm postinstall 腳本會執行 `npx playwright install chromium --with-deps`,即安裝時會下載並安裝瀏覽器執行檔,這是 Playwright 生態常見做法且在 README 中有明確說明,CI 設定中特別以 `--ignore-scripts` 略過此步驟",
+          "核心功能透過 `.env` 檔管理多個第三方 API 金鑰(Gemini、OpenRouter、OpenAI 相容端點),`.env.example` 提供明確欄位說明,未見金鑰被寫死或回傳至專案方伺服器的程式碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件完整度在同類「AI + 求職」專案中相當突出,若你已在用 AI CLI 工作,值得花時間試用;純粹想找求職工具的一般使用者則可視為進階選項。",
+      "_mode": "full"
+    }
+  },
+  "jundot/omlx": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        18990,
+        78,
+        8,
+        "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "在 Mac 選單列管理、支援連續批次處理與 SSD 分層 KV 快取的 Apple Silicon 專用 LLM 推論伺服器。",
+      "summary": "oMLX 是專為 Apple Silicon(M 系列晶片)打造的 LLM 推論伺服器,提供 OpenAI/Anthropic 相容 API,並以原生 SwiftUI 選單列 App 管理伺服器生命週期。核心賣點是仿 vLLM 的分頁式 KV 快取,搭配記憶體(熱)與 SSD(冷)兩層快取,讓上下文即使跨請求、跨伺服器重啟仍可重複利用,同時支援多模型(LLM/VLM/OCR/Embedding/Reranker)常駐與連續批次處理。",
+      "highlights": [
+        "熱/冷兩層 KV 快取:記憶體滿了自動以 safetensors 格式落地 SSD,重啟後仍可命中前綴快取",
+        "原生 Swift/SwiftUI 選單列 App(非 Electron),搭配 Homebrew service 與 CLI 提供完整生命週期管理",
+        "支援多模型同時服務(LLM/VLM/OCR/Embedding/Reranker),具 LRU 驅逐、TTL、釘選與 per-model 設定檔",
+        "實驗性多 Mac 分散式推論,可透過 Thunderbolt/Ring RDMA 將單一模型切分到多台記憶體不對等的 Mac",
+        "測試覆蓋面廣(tests/ 下有 300 多個測試檔,含 integration 子目錄),CI 於 macOS 上跑 Python 3.11–3.13 三版矩陣"
+      ],
+      "use_cases": [
+        "在 Mac Studio/MacBook 上用 Claude Code、Codex 等工具接本地 LLM,享受 OpenAI/Anthropic API 相容且具上下文快取加速的體驗",
+        "需要在單機記憶體有限情況下常駐多個模型(對話 LLM + 嵌入 + 重排模型)的本地推論場景",
+        "研究/實驗 Apple Silicon 上的分頁 KV 快取與跨 Mac 分散式推論架構"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與程式碼內註解詳盡,大量記錄了版本相容性、平台特有的連結器/簽章問題等踩坑細節,顯示維護者對邊界情況掌握度高;pyproject.toml 與 Homebrew Formula 對第三方套件(mlx-lm、mlx-vlm、xgrammar 等)版本衝突有精確的註解說明。tests/ 目錄有 300 多個測試檔並分 integration 子目錄,CI 於 macOS 上以 3 個 Python 版本矩陣跑單元測試(排除 slow/integration),GitHub Actions 步驟皆以 commit SHA 鎖定版本,是良好實踐。專案更新頻繁(當日仍有 push),issue 追蹤與版本迭代活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "核心依賴(mlx-lm、mlx-vlm、mlx-embeddings、dflash-mlx)以 git commit SHA 直接從 GitHub 安裝而非透過 PyPI 版本號,使用者應留意這類依賴的信任鏈與更新來源",
+          "admin 後台採用 itsdangerous 簽名 session token 與可選 API key 驗證,預設在未設定 OMLX_SECRET_KEY 時會用隨機金鑰(伺服器重啟後既有 session 失效),屬正常設計而非漏洞",
+          "未發現 curl|bash、混淆程式碼、內嵌 base64 payload 或可疑網域等惡意安裝模式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能扎實、文件與測試品質高的 Apple Silicon 專用推論伺服器,若你在 Mac 上跑本地 LLM 且在意上下文快取效能,值得一試;安全面除依賴 git-pinned 第三方套件外未見明顯疑慮。",
+      "_mode": "full"
+    }
+  },
+  "immich-app/immich": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        111163,
+        175,
+        9,
+        "High performance self-hosted photo and video management solution.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "category": "app",
+      "one_liner": "Immich 是一套高效能的自架相片與影片管理解決方案,可視為 Google Photos 的自託管替代品。",
+      "summary": "Immich 提供行動 App 與網頁雙端支援,涵蓋自動備份、人臉辨識、CLIP 語意搜尋、地圖檢視、共享相簿等完整功能,目標是取代 Google Photos 讓使用者完全掌控自己的照片資料。專案採用 TypeScript(NestJS + SvelteKit)搭配 Flutter 打造行動端,以 AGPL-3.0 授權釋出。",
+      "highlights": [
+        "行動端與網頁端功能對照表完整,涵蓋備份、分享、標籤、地圖等近 30 項功能",
+        "支援人臉辨識、物件與 CLIP 語意搜尋,以及即時動態照片(Live Photo)備份",
+        "提供公開 Demo 網站可直接試用,降低評估門檻",
+        "支援近 20 種語言的 README 與 Weblate 社群翻譯,國際化程度高",
+        "AGPL-3.0 授權確保衍生服務需回饋原始碼"
+      ],
+      "use_cases": [
+        "想擺脫 Google Photos 依賴、自架相簿系統的個人或家庭用戶",
+        "NAS 或家用伺服器上架設私有雲相片備份服務",
+        "需要人臉辨識與地理位置搜尋等進階相簿管理功能的自架應用",
+        "尋找自架、開源替代方案作為技術評估或選型參考"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,附功能對照表、Demo、翻譯狀態與貢獻者資訊,文件品質高;但本次僅based README 評估,未檢視程式碼與測試涵蓋率,無法確認測試品質。近期持續有 push 且正在 GitHub trending 榜上,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "功能完整、社群活躍且持續在 trending 榜上,是自架相片管理領域的指標性專案,值得立即關注與評估導入。",
+      "_mode": "light"
+    }
+  },
+  "agalwood/Motrix": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-18": [
+        53084,
+        344,
+        11,
+        "A full-featured download manager.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-18",
+    "analysis": {
+      "one_liner": "跨平台全功能下載管理器,支援 HTTP/BT/磁力連結,並以 Electron + React + TypeScript 重寫為 v2(Motrix Turbo)。",
+      "summary": "Motrix 是知名的開源下載管理器,支援 HTTP、FTP、BitTorrent 與磁力連結下載,底層使用 aria2 引擎。目前正在進行 v2「Motrix Turbo」重寫,採用 Electron 43 + React 19 + TypeScript 嚴格模式,新增無頭伺服器模式(可搭配 Docker 部署於 NAS)、外掛沙箱系統(QuickJS)、瀏覽器擴充功能與官方 CLI 工具,並透過自訂協定 MDXP(基於 JSON-RPC 2.0)串接各元件。",
+      "category": "app",
+      "highlights": [
+        "四層嚴格分層架構(renderer → app core → engine adapter → aria2),CI 強制檢查跨層相依邊界,為未來可能的 Rust 重寫預留路徑",
+        "測試覆蓋非常扎實:600+ 個 .test.ts/.spec.ts 檔案涵蓋 bridge、engine、media pipeline 等核心模組,另有 Playwright E2E 測試套件",
+        "外掛系統以 QuickJS 沙箱隔離執行,無 Node.js API 或直接檔案/網路存取,權限需在 manifest 宣告並經使用者授權",
+        "安裝時下載的 aria2 執行檔採用鎖定版本 + SHA256 雙重驗證(封裝檔與解壓後二進位皆驗證),失敗即中止,不會靜默使用未驗證檔案",
+        "Docker Server 映像採非 root 使用者執行、生產依賴安裝時加上 --ignore-scripts、GitHub Actions 皆使用 pinned commit SHA 而非浮動版本標籤"
+      ],
+      "use_cases": [
+        "需要在 macOS/Windows/Linux 桌面環境進行多協定(HTTP/BT/磁力)下載管理的一般使用者",
+        "想在 NAS 或家用伺服器上以 Docker 部署無頭下載服務,並透過 CLI 或 Web UI 遠端操作",
+        "對 Electron + React + TypeScript 大型專案的分層架構、外掛沙箱設計、CI 相依邊界檢查等工程實踐有興趣的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(README 含中英雙語、Docker 部署指南、release notes),測試數量與涵蓋範圍在同類專案中相當突出,CI/CD 流程成熟且有明確的安全考量記錄,程式碼註解著重說明「為什麼」而非「做什麼」,整體工程品質偏向資深團隊水準。目前 v2 仍處於 beta 階段,部分平台套件(AppImage、Snap、Windows arm64)尚未提供。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與測試覆蓋度都在同類專案中名列前茅,無論是想找可靠下載工具或學習大型 Electron 專案架構設計,都值得關注。",
       "_mode": "full"
     }
   }
