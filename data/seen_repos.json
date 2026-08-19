@@ -8291,10 +8291,10 @@
   },
   "OpenCut-app/OpenCut": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-17",
+    "last_seen": "2026-08-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-15": [
         83164,
@@ -8307,6 +8307,13 @@
         83896,
         150,
         4,
+        "The open-source CapCut alternative",
+        "TypeScript"
+      ],
+      "2026-08-19": [
+        84785,
+        192,
+        13,
         "The open-source CapCut alternative",
         "TypeScript"
       ]
@@ -8473,10 +8480,10 @@
   },
   "public-apis/public-apis": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-08-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-16": [
         460176,
@@ -8489,6 +8496,13 @@
         461757,
         1588,
         5,
+        "A collective list of free APIs",
+        "Python"
+      ],
+      "2026-08-19": [
+        464571,
+        1005,
+        6,
         "A collective list of free APIs",
         "Python"
       ]
@@ -8627,15 +8641,22 @@
   },
   "basecamp/omarchy": {
     "first_seen": "2026-08-17",
-    "last_seen": "2026-08-17",
+    "last_seen": "2026-08-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-17": [
         25384,
         270,
         2,
+        "Beautiful, Modern & Opinionated Linux",
+        "Shell"
+      ],
+      "2026-08-19": [
+        26428,
+        356,
+        7,
         "Beautiful, Modern & Opinionated Linux",
         "Shell"
       ]
@@ -8678,14 +8699,21 @@
   },
   "harry0703/MoneyPrinterTurbo": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-18": [
         106041,
         1189,
+        1,
+        "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+        "Python"
+      ],
+      "2026-08-19": [
+        108543,
+        2304,
         1,
         "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "Python"
@@ -8825,15 +8853,22 @@
   },
   "akitaonrails/ai-memory": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-18": [
         2063,
         207,
         4,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
+      ],
+      "2026-08-19": [
+        2727,
+        648,
+        3,
         "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "Rust"
       ]
@@ -8877,10 +8912,10 @@
   },
   "mukul975/Anthropic-Cybersecurity-Skills": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-18": [
         28436,
@@ -8888,7 +8923,49 @@
         5,
         "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
         "Python"
+      ],
+      "2026-08-19": [
+        29199,
+        730,
+        5,
+        "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
+        "Python"
       ]
+    },
+    "last_analyzed": "2026-08-19",
+    "analysis": {
+      "one_liner": "以 agentskills.io 標準打造的大型結構化資安技能庫,讓 AI agent 具備資深資安分析師等級的實戰知識。",
+      "summary": "這是一個非程式庫、非應用程式的知識庫專案,收錄 817 個結構化的資安技能(SKILL.md),涵蓋滲透測試、DFIR、雲端安全、威脅獵捕等 29 個資安領域,並對應 MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、D3FEND、NIST AI RMF、MITRE F3 六大框架。目的是解決 AI agent 缺乏「資深分析師該用哪個工具、何時用、怎麼驗證」這類實務決策知識的問題,讓 Claude Code、Copilot、Cursor 等 26+ 平台的 agent 能直接載入使用。",
+      "category": "security",
+      "highlights": [
+        "817 個技能全部具備一致結構(SKILL.md + references + scripts + assets),並用 CI(tools/validate-skill.py)強制驗證 frontmatter 格式與唯一性",
+        "對應六大業界框架(ATT&CK v19.1、NIST CSF 2.0、ATLAS、D3FEND、NIST AI RMF、MITRE F3),且宣稱所有 ID 皆對照官方 STIX bundle 驗證過",
+        "採漸進式揭露設計,每個技能僅需 ~30 tokens 掃描 frontmatter、500-2000 tokens 完整載入,方便 agent 在單次搜尋中比對 800+ 技能而不爆 context",
+        "抽查的腳本(如 DPAPI 憑證擷取 agent.py)品質不錯,附有僅限授權測試的免責聲明,且是呼叫既有工具(Impacket、SharpDPAPI)的操作輔助程式,而非自行實作攻擊酬載",
+        "有完整的 CONTRIBUTING.md、SECURITY.md、CODE_OF_CONDUCT.md 及自動化 marketplace index 更新流程,治理與貢獻機制成熟"
+      ],
+      "use_cases": [
+        "讓 Claude Code / Copilot / Cursor 等 AI coding agent 具備事件應變(DFIR)、威脅獵捕的標準作業流程知識",
+        "作為藍隊 SOC 或紅隊在做滲透測試時,快速產出符合 MITRE ATT&CK 對應的操作步驟與驗證方式",
+        "將既有 AI 安全治理需求(NIST AI RMF、ATLAS)對應到具體技能,協助企業做 AI 風險評估文件",
+        "作為資安教育或新手分析師學習不同資安領域(雲端、容器、OT/ICS、AI 安全等)標準作業程序的參考資料"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "文件品質非常完整,README、CONTRIBUTING、SECURITY 政策、每個技能的四段式文件結構皆詳盡一致;有 CI 對 SKILL.md 格式做驗證,但屬於內容 schema 檢查而非真正的單元測試,腳本本身沒有測試覆蓋。專案活動非常頻繁(最後 push 2026-08-08、自動化 index 更新、持續有貢獻者加入),成長速度快。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "部分技能(如 DPAPI 憑證擷取、Shadow Credentials 提權)提供攻防兩用的滲透測試輔助腳本,但腳本開頭皆附有「僅限授權測試」的免責聲明,且是呼叫 Impacket/SharpDPAPI 等既有公開工具,並未內嵌任何酬載或漏洞利用程式碼",
+          "README 與部分 SKILL.md 文件中包含業界常見的官方安裝指令(如 curl/wget 下載第三方工具如 Volatility3 symbol 檔),屬文件說明性質,非本專案自身的安裝流程,未發現可疑網域或 IP"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "雖然不是傳統意義上的程式庫或工具,但作為給 AI agent 用的結構化資安知識庫,內容深度與框架對應完整度在同類專案中相當突出,值得資安或 AI agent 開發者收藏參考。",
+      "_mode": "full"
     }
   },
   "AlexsJones/llmfit": {
@@ -8992,15 +9069,22 @@
   },
   "jundot/omlx": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-18": [
         18990,
         78,
         8,
+        "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+        "Python"
+      ],
+      "2026-08-19": [
+        19401,
+        370,
+        10,
         "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
         "Python"
       ]
@@ -9091,15 +9175,22 @@
   },
   "agalwood/Motrix": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-18": [
         53084,
         344,
         11,
+        "A full-featured download manager.",
+        "TypeScript"
+      ],
+      "2026-08-19": [
+        53665,
+        609,
+        8,
         "A full-featured download manager.",
         "TypeScript"
       ]
@@ -9133,6 +9224,249 @@
       },
       "star_rating": 5,
       "verdict": "工程品質與測試覆蓋度都在同類專案中名列前茅,無論是想找可靠下載工具或學習大型 Electron 專案架構設計,都值得關注。",
+      "_mode": "full"
+    }
+  },
+  "chaitanyagiri/munder-difflin": {
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-19": [
+        2035,
+        306,
+        2,
+        "local multi-agent harness",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-19",
+    "analysis": {
+      "one_liner": "把你電腦上已安裝的終端機 AI CLI(Claude Code、Codex、Grok 等)組成一個會互相協作、有記憶的「代理人辦公室」的 Electron 桌面應用。",
+      "summary": "Munder Difflin 是一個本地優先的多代理人(multi-agent)協調框架,將 Claude Code、Antigravity(Gemini)、Codex、Grok、Kimi、Qwen 等終端機 CLI 各自包裝成一個 node-pty 程序,並以 Pixi.js 繪製成 2D 辦公室裡走動的角色。核心是磁碟上的「hive」(單一 git 倉庫、逐代理人 mailbox、共享黑板、事件日誌),由一個 GOD 協調代理人負責分派任務、路由訊息,並在涉及花費、破壞性操作或範疇變更時把決策升級給人類核准。",
+      "category": "devtool",
+      "highlights": [
+        "單一 committer 設計:只有 harness 本身會對 hive git 倉庫下 git 指令,代理人只寫檔案,避免多代理人同時操作導致 index.lock 損毀",
+        "內建 circuit breaker(steer to constrain to stop)與人類核准佇列,對失控循環、爆量錯誤或超支的代理人自動降級處置",
+        "write-only 的 secret broker:代理人只拿到一次性 capability token,實際金鑰只在主行程內解密注入,絕不落地渲染層",
+        "支援 10 種代理人引擎、BYOK 金鑰與本地 LLM(Ollama/LM Studio/vLLM),並附內建 Monaco IDE 與 git 分支比較介面",
+        "38 支 node:test 單元測試涵蓋終端自動化、hive 路由、Windows cmd shim 等邊界情境,CI 對 macOS 做型別檢查與建置"
+      ],
+      "use_cases": [
+        "想讓多個 Claude Code / Codex 等 CLI 代理人在同一台機器上並行工作、互相傳訊息並共享記憶的個人或小型團隊",
+        "需要以視覺化方式監控多代理人任務進度、成本與工具呼叫瀑布的使用者",
+        "想透過 Slack / webhook 觸發臨時 worker 代理人處理任務並自動回報結果的自動化流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整(README、HIVE.md、SPEC.md、DESIGN.md、TELEMETRY.md、SECURITY.md 分工清楚),原始碼中的註解也詳細說明設計決策與安全考量。測試以 node:test 涵蓋 38 個情境檔案,聚焦於終端自動化、Windows 相容性等實務邊界案例,但屬於單元/整合層級,未見端對端 Electron UI 測試。CI 有型別檢查與建置流程,版本號 0.4.4、CHANGELOG 更新頻繁,最近一次推送在報告前一天,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "npm postinstall 會執行 electron-rebuild 及倉庫內的本地腳本(用於重建 node-pty 原生模組),未見對外部網址的隱藏下載或執行",
+          "自動安裝缺少的 CLI 功能會在使用者可見的終端機中執行 curl 下載官方 Node.js 安裝檔,並在安裝前以 checksum 校驗雜湊後才執行,屬於透明且有驗證的下載流程"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "對想在本機同時操作多個終端 AI 代理人的重度使用者來說,這是目前把多 CLI 協作、記憶與人類核准做得最完整的開源專案之一,值得關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "volcengine/OpenViking": {
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-19": [
+        29385,
+        213,
+        4,
+        "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-19",
+    "analysis": {
+      "one_liner": "OpenViking 是位元組跳動(火山引擎)開源的「Agent 情境資料庫」,把記憶、知識與技能統一成 viking:// 虛擬檔案系統。",
+      "summary": "OpenViking 讓 AI Agent 用 ls/tree/find 等檔案系統操作方式瀏覽自己的記憶、資源與技能,取代黑盒向量資料庫。內容會被處理成 L0 摘要/L1 概覽/L2 細節三層,依需求逐層載入以節省 token,並保留可觀測的檢索軌跡。專案支援多種 Agent(Claude Code、Codex、Cursor、TRAE 等)整合,並提供 Rust CLI、C++ 向量引擎、Python 服務端等多語言元件。",
+      "category": "ai-ml",
+      "highlights": [
+        "以 viking:// URI 統一記憶(memory)、知識(resource)、技能(skill)三種情境類型,可像檔案系統一樣操作",
+        "L0/L1/L2 分層載入機制搭配目錄式遞迴檢索,官方公布在 LoCoMo/tau2-bench 上大幅降低 token 用量並提升準確率",
+        "同時支援 Python 服務端、Rust CLI(ov)、C++ 向量引擎,並內建 VikingBot Agent 框架與多家 Agent 客戶端整合(Claude Code、Codex、Cursor、LangChain 等)",
+        "AGPLv3 開源版本功能完整不閹割,另提供火山引擎託管 SaaS 與私有化部署的商業版"
+      ],
+      "use_cases": [
+        "為 Claude Code / Codex / Cursor 等 AI coding agent 建立跨 session 的長期記憶與偏好學習",
+        "企業內部知識庫/文件檢索(Agentic RAG),取代傳統向量資料庫做語意搜尋",
+        "多 Agent 協作場景中共享技能(SKILL.md)與資源目錄",
+        "需要可觀測、可除錯檢索過程(而非黑盒向量相似度)的記憶系統研究"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常齊全(多語 README、docs 站、CONTRIBUTING、SECURITY.md),CI 涵蓋 Linux/macOS/Windows 多 Python 版本的完整建置測試與 CodeQL 掃描;程式碼(如 openviking/core/context.py)結構清晰、型別註記完整。專案混合 Python/Rust/C++/TS 多語言建置鏈,複雜度高但工程紀律良好,提交與 release 十分活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "examples/ 目錄下提供選用的 Agent 插件安裝腳本(如 examples/memory-plugin-shared/install.sh、examples/codex-memory-plugin/setup-helper/install.sh),README 與腳本註解中示範以 `bash <(curl -fsSL https://raw.githubusercontent.com/...)` 方式執行,這類腳本內容公開透明、來源為官方 GitHub 或有文件記載的 Volcengine TOS 鏡像,且僅用於選用的第三方 Agent 整合安裝,並非主要安裝路徑(主要安裝方式為 `pip install openviking`)",
+          "setup.py 會在建置時呼叫 cargo/cmake/npm 編譯 Rust CLI、C++ 向量引擎與前端 SPA,屬於原始碼建置流程而非下載外部可執行檔案"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程成熟度高、文件與 CI 完整,對想幫 AI Agent 建立長期記憶/知識庫的開發者值得深入研究,但專案龐大(多語言建置鏈)且仍處 Alpha 階段,採用前建議先用 hosted demo 或小規模試跑評估。",
+      "_mode": "full"
+    }
+  },
+  "NawfalMotii79/PLFM_RADAR": {
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-19": [
+        24307,
+        192,
+        9,
+        "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+        "PLSQL"
+      ]
+    },
+    "last_analyzed": "2026-08-19",
+    "analysis": {
+      "one_liner": "AERIS-10:一套完全開源、可自製的 10.5GHz 相位陣列 PLFM 雷達系統,涵蓋硬體、韌體與軟體全棧。",
+      "summary": "此專案提供完整的相位陣列雷達解決方案,包含 PCB 電路設計與 Gerber 生產檔、STM32 韌體、Xilinx FPGA 訊號處理(脈衝壓縮、都卜勒 FFT、CFAR)、以及 Python GUI,目標是讓研究人員與玩家能以低成本重現軍規等級的雷達技術。專案提供兩種型號(3km / 20km 探測距離),並附完整電子束控與訊號處理鏈設計。",
+      "category": "infra",
+      "highlights": [
+        "橫跨硬體(Eagle 原理圖/PCB/Gerber)、FPGA(Verilog)、MCU(C/C++)、GUI(Python)的完整全棧開源雷達系統",
+        "FPGA 端具備 SymbiYosys 形式驗證(formal verification)搭配 iverilog 回歸測試,並自建「Vivado-class」靜態 lint 檢查,工程嚴謹度高於一般業餘專案",
+        "CI 涵蓋四大面向:Python 單元測試/ruff lint、MCU 韌體測試(20 個)、FPGA 回歸(25+ testbench)、以及跨層(Python↔Verilog↔C)契約測試,確保 opcode/封包格式一致",
+        "硬體採 CERN-OHL-P、軟體採 MIT 雙授權,並附完整 BOM/CPL/Gerber 生產檔案,可直接送廠打樣",
+        "文件齊全,GitHub Pages 提供架構說明、開發日誌、Bring-up 指南與測試報告"
+      ],
+      "use_cases": [
+        "大學或研究機構做相位陣列雷達與波束成形演算法教學實驗平台",
+        "無人機開發者自製低成本探測/避障雷達",
+        "SDR / RF 愛好者學習 FMCW/PLFM 雷達訊號鏈與 FPGA 數位訊號處理實作",
+        "FPGA/嵌入式工程師參考其測試方法論(形式驗證 + 回歸測試 + 跨層契約測試)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 4,
+        "comment": "文件與測試的完整度遠超一般硬體開源專案:README 詳列系統架構與各板功能,docs/ 另有 GitHub Pages 說明頁;測試面涵蓋 FPGA 形式驗證、iverilog 回歸、MCU 單元測試與跨層契約測試,CI 全部串接。最近一次 push 為 2026-06-17,距今約兩個月,活躍度仍佳但非每日更新。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "少見的高完成度開源硬體項目,軟硬體與測試工程都做得紮實,值得雷達/FPGA/RF 領域工程師關注與參考其測試方法論。",
+      "_mode": "full"
+    }
+  },
+  "bojieli/ai-agent-book": {
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-19": [
+        39120,
+        543,
+        11,
+        "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-19",
+    "analysis": {
+      "one_liner": "李博杰所著《深入理解 AI Agent：設計原理與工程實踐》開源書籍主倉庫,含全書正文、PDF/EPUB 與 103 個配套實驗程式碼",
+      "summary": "這是一本圍繞「Agent = LLM + 上下文 + 工具」核心公式展開的中文 AI Agent 教科書,共 10 章從入門原理講到工程實踐(上下文工程、記憶與 RAG、工具/MCP、Coding Agent、多模態互動、評估、後訓練、多 Agent 協作等)。倉庫開源全書 Markdown 正文、可編譯的 PDF/EPUB,以及按章節劃分、共 103 個可運行的配套實驗,並提供 14 種語言的社群翻譯版本。",
+      "category": "learning-resource",
+      "highlights": [
+        "10 章正文系統性涵蓋 AI Agent 從原理到工程的完整知識體系,2.0 版重整了交互、評估、後訓練、持續進化等章節結構",
+        "103 個配套實驗以 uv/pip 分章節安裝,可實際動手復現書中內容,而非純理論敘述",
+        "提供 14 種語言翻譯(含繁體中文台灣版由 @tigercosmos 貢獻)及線上閱讀站,支援多語言切換與全文搜尋",
+        "附錄整理 22+1 個第 6、7、8、10 章對應的外部復現倉庫(如 browser-use、XLeRobot 等),並以 commit hash 鎖定版本以確保可復現性",
+        "倉庫內含獨立的 EXPERIMENT_STATUS.md 誠實揭露各實驗執行狀態與未完成門檻,而非宣稱全部驗證通過"
+      ],
+      "use_cases": [
+        "作為系統性學習 AI Agent 設計原理與工程實踐的中文教材",
+        "搭配配套實驗動手實作 Context Engineering、RAG、MCP 工具調用、Coding Agent 等主題",
+        "作為 awesome list 或課程大綱的參考資源,快速掌握 Agent 領域的知識地圖",
+        "查閱多 Agent 協作、模型後訓練(SFT/RL)等進階章節的工程實作範例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 5,
+        "comment": "資源彙整/教學書籍類,測試不適用;README 撰寫極為詳盡,章節、實驗、語言版本、依賴安裝方式都說明清楚,且持續高頻更新(當日仍有推送)。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "中文 AI Agent 領域少見的系統性、高品質開源教材,且提供大量可動手實作的配套實驗,非常值得收藏與研讀。",
+      "_mode": "light"
+    }
+  },
+  "genlayerlabs/genlayer-project-boilerplate": {
+    "first_seen": "2026-08-19",
+    "last_seen": "2026-08-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-19": [
+        15949,
+        535,
+        12,
+        "",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-19",
+    "analysis": {
+      "category": "web",
+      "one_liner": "GenLayer 官方的智能合約專案範本,以「足球博彩」為範例示範如何寫結合網路資料與 LLM 判讀的區塊鏈合約。",
+      "summary": "這是 GenLayer(一種讓智能合約可呼叫外部網頁與 LLM 並透過「等價原則」達成共識的區塊鏈)官方提供的專案骨架。範例合約讓使用者對足球比賽下注,合約到時間會抓取 BBC Sport 頁面、用 LLM 解析比數,再透過多節點共識驗證結果是否一致,正確預測可累積積分。專案同時附上 Next.js 前端、部署腳本與三層測試策略(lint、direct 記憶體測試、對 Studio 的整合測試)。",
+      "highlights": [
+        "示範 GenLayer 特有的 gl.nondet.web.render + gl.nondet.exec_prompt + gl.eq_principle.strict_eq 模式,讓非確定性的網路/LLM 呼叫也能在多驗證者間達成共識",
+        "提供 genvm-lint 靜態檢查工具,可在部署前抓出合約中的非法 import、非確定性呼叫、儲存型別錯誤等 20+ 規則",
+        "三層測試策略齊全:contract lint(~250ms)、direct 記憶體單元測試(mock web/LLM,~ms 等級)、對 GenLayer Studio 的端對端整合測試",
+        "前端採用 Next.js 15/16、TanStack Query、wagmi/viem 錢包整合與 Radix UI,是可直接運行的完整 DApp 範例",
+        "README 明確標註此專案設計上就是給 AI coding agent(Claude Code、Cursor)使用,強調 lint+direct test 的快速回饋迴圈"
+      ],
+      "use_cases": [
+        "想入門 GenLayer 智能合約開發、了解如何寫出可呼叫外部網頁與 LLM 且仍可達成節點共識的合約",
+        "需要一份可直接 fork 改造的區塊鏈博彩/預測市場 DApp 骨架(合約+前端+部署+CI)",
+        "想參考如何為區塊鏈合約設計分層測試策略(mock 隔離 vs 真實共識端對端)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 完整說明架構、指令與測試策略,合約邏輯簡短清楚易讀;direct 測試涵蓋建立/重複下注/多使用者等情境,並有獨立的 integration 測試對 Studio 驗證共識;CI 有 lint 與 direct test 兩個 job,但未執行 integration 測試(需外部 Studio 服務,可理解)。作為「boilerplate」範本而非成熟產品,程式碼量不大但結構清晰,近期(7月底)仍有推送,活躍度尚可。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "若你對 GenLayer 這類「AI 原生區塊鏈」概念有興趣,這是了解其合約寫法與測試方法論的絕佳範本,但作為 boilerplate 本身功能單一,一般開發者非目標受眾則可以不必特別關注。",
       "_mode": "full"
     }
   }
