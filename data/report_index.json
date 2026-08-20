@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-20",
+    "analyzed": 0,
+    "cached": 10,
+    "deferred": 0,
+    "top_name": "",
+    "top_rating": 0
+  },
+  {
     "date": "2026-08-19",
     "analyzed": 6,
     "cached": 7,
