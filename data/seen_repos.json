@@ -676,8 +676,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-20",
-    "days_on_trending": 1,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -705,6 +705,13 @@
         223811,
         1894,
         6,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
+      ],
+      "2026-08-21": [
+        226514,
+        2192,
+        2,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
       ]
@@ -740,8 +747,8 @@
       "verdict": "不是程式碼庫而是「AI 協作流程」設計範本,對每天用 Claude Code / Codex 開發的工程師來說相當值得一試,尤其是 grilling 與 code-review 流程設計思路。",
       "_mode": "full"
     },
-    "total_days_on_trending": 5,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 6,
+    "consecutive_days_on_trending": 2
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1013,8 +1020,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-08-20",
-    "days_on_trending": 1,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1051,46 +1058,52 @@
         7,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-08-21": [
+        274948,
+        727,
+        4,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-08-21",
     "analysis": {
-      "one_liner": "給 Claude Code 等 AI 編碼代理裝上一套「開發方法論」技能包,強制走過腦力激盪、寫計畫、TDD、code review 的完整 SDLC 流程。",
-      "summary": "Superpowers 是一組可組合的 Skills(brainstorming、writing-plans、subagent-driven-development、test-driven-development、systematic-debugging 等),搭配一個近乎強制性的「using-superpowers」啟動指令,讓 AI 編碼代理在動手寫程式前先確認需求、產出設計文件與計畫,再以紅綠燈 TDD 與雙階段 code review 的方式一步步執行任務。目標是解決「AI 一收到需求就衝去寫程式、跳過設計與測試」的常見問題,同時支援 Claude Code、Codex、Gemini CLI、Cursor、OpenCode、Pi 等多種代理平台。",
+      "one_liner": "一套讓 Claude Code 等編碼代理人自動遵循嚴謹軟體開發流程(TDD、規劃、程式碼審查)的「skills」框架。",
+      "summary": "Superpowers 是由 Prime Radiant(Jesse Vincent 等人)開發的代理人技能框架,把腦力激盪、寫規劃、TDD、子代理人驅動開發、程式碼審查等一整套軟體工程方法論,包裝成可自動觸發的「skills」提供給 Claude Code、Codex、Gemini CLI、Cursor 等十多種編碼代理人使用。核心賣點是讓代理人在動手寫程式前先確認需求、產出可審查的計畫,並強制紅綠燈式 TDD 與逐任務審查,減少代理人「先寫再想」造成的技術債。",
       "category": "devtool",
       "highlights": [
-        "核心是 Markdown 撰寫的 SKILL.md 技能檔案,而非傳統程式庫,透過強烈祈使語氣(如「YOU MUST」「not negotiable」)引導 LLM 行為,是一種值得留意的 prompt engineering 手法",
-        "brainstorming 技能內建一個本地 WebSocket「visual companion」伺服器(server.cjs),自行實作 RFC6455 協定、per-session token 驗證、安全 headers(CSP、X-Frame-Options 等),並有對應 auth.test.js 專門測試防護機制",
-        "同時支援 9+ 種編碼代理(Claude Code、Codex App/CLI、Cursor、Antigravity、Gemini CLI、Kimi、OpenCode、Pi、Copilot CLI),各自有獨立的 plugin manifest 與相容層",
-        "tests/ 目錄涵蓋各平台安裝測試、shell script lint、伺服器單元測試,測試量頗大且貼近真實使用情境(非僅 happy path)",
-        "README 明確揭露 brainstorming 視覺元件會回傳版本號到官方網站做遙測,並提供 SUPERPOWERS_DISABLE_TELEMETRY 環境變數關閉,透明度高"
+        "以 Markdown 撰寫的 SKILL.md 定義各項流程技能(brainstorming、TDD、systematic-debugging、subagent-driven-development 等),可攜式地支援 13 種以上的編碼代理人/CLI",
+        "內建一個本地 WebSocket「視覺陪伴」伺服器(brainstorming/scripts/server.cjs),程式碼中可見 timing-safe token 比對、CSP/Referrer-Policy 標頭、路徑穿越防護、WebSocket Origin 檢查等紮實的安全實作",
+        "測試覆蓋面廣,tests/ 目錄依代理人平台分類(claude-code、codex、hermes、opencode、pi 等),混合 shell 腳本與 JS/Python 測試",
+        "RELEASE-NOTES.md 詳實記錄每個版本變更並附 issue 編號,顯示活躍且有紀律的開發流程",
+        "強制性語氣的技能說明(如 using-superpowers/SKILL.md)刻意用「不可協商」的措辭引導代理人一定要呼叫技能,是一種對 LLM 的提示工程手法而非傳統程式邏輯"
       ],
       "use_cases": [
-        "希望讓 Claude Code / Codex 等 AI 代理在開發前強制做需求釐清與設計文件,避免代理「憑感覺硬寫」",
-        "團隊想導入 subagent 分工的開發流程(規劃 → 派工 → 雙階段審查)來處理較大型、多任務的工程工作",
-        "想學習如何用 Markdown Skill 檔案 + 強語氣指令來控制 LLM 代理行為的 prompt engineering 案例",
-        "需要一個可攜式、跨多種 AI 編碼工具共用的 TDD/debugging/code review 方法論範本"
+        "希望為 Claude Code / Codex / Cursor 等代理人導入一致的 TDD 與規劃流程,避免代理人隨意生成未經測試的程式碼",
+        "團隊採用 subagent-driven-development 模式,讓多個子代理人分工執行任務並互相審查",
+        "需要一個可攜式技能庫,同時支援多種 AI 編碼工具而不想為每個工具各寫一套指引",
+        "研究如何用 SKILL.md 這種格式對 LLM agent 做流程級的提示工程"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
-        "activity": 4,
-        "comment": "README 與各 SKILL.md 文件寫得非常詳盡,docs/ 下還有大量設計文件與規格記錄(specs/plans),文件品質優異。tests/ 目錄涵蓋多平台整合測試與伺服器單元測試,對 shell script 也有 lint 測試,測試面向廣,但這次檢出的分支中沒看到 .github/workflows CI 設定,無法確認自動化程度。commit 記錄與最近推送時間(2026-07-24)顯示活躍維護中,但本身是純文字/腳本專案,程式碼量不大,主要複雜度在 skills 文件與少量 Node.js 伺服器程式碼,程式碼品質尚可(有安全考量如帧大小限制、強制 masking)。"
+        "activity": 5,
+        "comment": "文件非常完整(README 依代理人分平台列出安裝步驟,docs/ 下有大量設計文件與變更計畫),測試涵蓋多平台且有實際的單元測試而非空殼;抽查的 server.cjs 展現出對 timing attack、路徑穿越、CSP、WebSocket Origin 等安全細節的用心處理。稍嫌不足的是專案根目錄未見 GitHub Actions CI 工作流,測試主要靠貢獻者手動執行 shell/npm 腳本,自動化驗證的即時性不如典型 CI 專案。RELEASE-NOTES 顯示更新頻繁、issue 追蹤紀律良好。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "brainstorming 技能的 visual companion 功能會從官方網站載入含版本號的 logo(遙測),官方已在 README 中揭露且提供環境變數關閉,屬透明揭露而非隱藏行為",
-          "未在此次檢出中發現 curl|bash、iwr|iex 或 postinstall/preinstall 等安裝時執行任意程式碼的手法",
-          "本地 WebSocket 伺服器(server.cjs)預設綁定 127.0.0.1 並要求 per-session token 驗證,若使用者主動改為 --host 0.0.0.0 對外開放則需自行評估風險,但預設設定安全"
+          "skills/brainstorming/scripts/server.cjs 啟動的本地視覺陪伴伺服器,預設會從外部網址 primeradiant.com 載入品牌圖片(可用 SUPERPOWERS_DISABLE_TELEMETRY 等環境變數關閉),README 也明確揭露此遙測行為,屬於作者已公開說明的可選功能而非隱藏行為",
+          "未在檢視範圍內發現安裝時自動執行的可疑腳本(無 npm postinstall/preinstall、無 curl|bash 型安裝指令、無 setup.py 任意程式碼執行),各代理人的安裝方式皆為官方套件市集或 git clone"
         ]
       },
       "star_rating": 4,
-      "verdict": "屬於「流程/prompt 框架」而非傳統程式庫,文件與測試都做得紮實,對於想讓 AI 代理更守紀律地走完整個 SDLC 的團隊值得一試,但效果高度依賴底層 LLM 是否真的服從強語氣指令。",
+      "verdict": "若你已在用 Claude Code 之類的編碼代理人且想讓它更守規矩地做 TDD 與規劃,這套技能框架值得一試;程式碼與文件品質皆在水準之上,唯獨缺乏正式 CI 流程略為扣分。",
       "_mode": "full"
     },
-    "total_days_on_trending": 6,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 7,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1195,47 +1208,54 @@
   },
   "RyanCodrai/turbovec": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-07-26",
+    "last_seen": "2026-08-21",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         14287,
         86
+      ],
+      "2026-08-21": [
+        15947,
+        230,
+        17,
+        "A vector index built on TurboQuant, written in Rust with Python bindings",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-08-21",
     "analysis": {
+      "one_liner": "用 Rust 實作 Google TurboQuant 演算法的向量索引函式庫,提供 Python 綁定,主打低記憶體佔用與比 FAISS 更快的 SIMD 搜尋。",
+      "summary": "turbovec 是基於 Google Research TurboQuant 論文實作的向量量化索引,將向量壓縮到 2-4 bit/維度(1000 萬筆文件從 31GB 壓到 4GB),無需訓練階段即可線上寫入,並用 NEON/AVX-512/AVX2 手寫 SIMD 核心加速搜尋,在多項測試中速度和召回率都優於 FAISS 的 IndexPQFastScan。同時支援增量式儲存(sync)、以 id 為基礎的搜尋時過濾,並提供 LangChain、LlamaIndex、Haystack、Agno 等 RAG 框架的直接替換元件,鎖定的是重視隱私、記憶體與延遲的本地端 RAG 場景。",
       "category": "library",
-      "one_liner": "用 Rust 寫的向量索引函式庫,基於 Google Research 的 TurboQuant 演算法,提供 2-4 bit 量化壓縮與 SIMD 加速搜尋,附 Python 綁定。",
-      "summary": "turbovec 實作 TurboQuant 這種無需訓練階段的資料無關量化器,將向量壓縮至原本 float32 大小的 1/8~1/16(例如 1000 萬筆文件從 31GB 壓到 4GB),並用手寫的 NEON/AVX-512 SIMD kernel 加速搜尋,號稱在多數設定下贏過 FAISS IndexPQFastScan。同時支援線上增量插入(無需重新訓練/重建索引)與搜尋時 allowlist 過濾,鎖定 RAG/向量檢索場景的記憶體與延遲痛點。",
       "highlights": [
-        "核心演算法基於 ICLR 2026 論文 TurboQuant,並額外實作 TQ+ 逐座標校準與長度重正規化來修正量化偏差,原理說明寫得非常清楚",
-        "Rust 核心 + Python (PyO3/maturin) 綁定,x86 目標基線設為 x86-64-v2 並在執行期動態偵測 AVX-512/AVX2,相容性與效能兼顧",
-        "測試涵蓋非常全面:Rust 端有 kernel 正確性、IO 版本相容、並發搜尋、rotation 決定性等測試;Python 端額外測了 fork 安全性、GIL 釋放、pickle/copy 等邊角案例",
-        "CI/CD 成熟:cargo-deny + pip-audit 做供應鏈掃描、多平台(Linux/macOS/Windows)矩陣測試、GitHub Actions 全部以 commit SHA pin 版本,並有獨立的 downstream smoke test 驗證真實依賴情境",
-        "文件完整度高:README 詳細解釋演算法原理與 benchmark 方法論,另有 CHANGELOG、SECURITY.md、CONTRIBUTING.md 及 LangChain/LlamaIndex/Haystack/Agno 整合文件"
+        "核心量化演算法基於 2026 ICLR 論文 TurboQuant,無需訓練即可線上索引,並提供 TQ+ 校準機制提升低維度嵌入的召回率",
+        "針對 ARM NEON、x86 AVX-512 VNNI/AVX2 撰寫手工 SIMD 核心,官方跑分顯示 4-bit 平均快 3.4-3.5 倍、2-bit 快 20-26%,插入/刪除延遲也優於 FAISS",
+        "測試涵蓋極廣:Rust crate 有超過 40 個整合測試檔(含 adversarial/fuzz、跨平台編碼一致性 fingerprint、debug_assert 覆蓋),Python 綁定另有 25+ 測試檔涵蓋 fork 安全、GIL 釋放、序列化相容性",
+        "CI/CD 工程成熟度高:GitHub Actions 全部 pin 到 commit SHA、clippy 用類別白名單做棘輪式收斂、MSRV 從 manifest 動態讀取驗證、PyPI 發布走 OIDC trusted publishing",
+        "提供 LangChain/LlamaIndex/Haystack/Agno 四大 RAG 框架的 drop-in 替換元件,方便既有專案直接換用"
       ],
       "use_cases": [
-        "本地/離線 RAG 系統中取代記憶體吃緊的 float32 向量索引,大幅降低記憶體成本",
-        "需要邊插入邊檢索(無訓練/重建步驟)的線上向量檢索場景",
-        "多租戶或需要 SQL/ACL 過濾後再做向量重排的混合檢索(hybrid retrieval)架構",
-        "作為 LangChain/LlamaIndex/Haystack/Agno 既有記憶體向量庫的直接替換品"
+        "需要在單機或 VPC 內執行、不想資料外流的本地端 RAG / 向量檢索系統",
+        "嵌入向量數量巨大(百萬到千萬級)但記憶體有限,需要用量化大幅壓縮索引體積的場景",
+        "已使用 LangChain/LlamaIndex/Haystack/Agno 的專案,想直接替換記憶體內向量儲存以取得更快搜尋與持久化",
+        "需要在搜尋時做 SQL/ACL/時間窗等條件過濾的混合檢索(hybrid retrieval)應用"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
-        "activity": 5,
-        "comment": "文件、測試與 CI 的成熟度遠超一般個人專案等級,程式碼(含底層 SIMD unsafe 區塊)註解清楚且解釋了每個決策的取捨,CHANGELOG 對重大變更(如 rotation 演算法從 QR 換成 block-Hadamard 以求跨平台位元一致)交代得非常詳細,顯示團隊工程紀律很高。"
+        "activity": 4,
+        "comment": "文件與程式碼註解品質極高,README 對效能數字、演算法原理與限制交代得非常詳盡,原始碼中大量說明性註解解釋了非顯而易見的設計決策與失敗案例(如 CI 為何排除某些 lint、為何用 thread_local 而非全域變數)。測試覆蓋非常全面,涵蓋對抗性輸入、跨平台一致性、並發安全等面向。專案剛發布 1.0.0(2026-08-18),版本歷史顯示曾多次修正 MSRV 與資料格式,活躍度高但屬新上線的成熟度尚待時間驗證。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "工程品質與文件成熟度都在同類專案中名列前茅,對做本地/隱私優先 RAG 或想擺脫 FAISS 記憶體負擔的團隊,非常值得列入評估清單。",
+      "verdict": "工程品質與測試嚴謹度在同類開源專案中相當突出,對做本地 RAG 或需要壓縮向量索引的開發者非常值得關注與嘗試。",
       "_mode": "full"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "andrewyng/aisuite": {
@@ -8153,10 +8173,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -8169,6 +8189,13 @@
         2950,
         149,
         3,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ],
+      "2026-08-21": [
+        4085,
+        449,
+        5,
         "Cursor plugin specification and official plugins",
         "TypeScript"
       ]
@@ -8713,10 +8740,10 @@
   },
   "harry0703/MoneyPrinterTurbo": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-20",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-18": [
         106041,
@@ -8736,6 +8763,13 @@
         110668,
         2221,
         1,
+        "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+        "Python"
+      ],
+      "2026-08-21": [
+        112950,
+        2761,
+        8,
         "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "Python"
       ]
@@ -8881,10 +8915,10 @@
   },
   "akitaonrails/ai-memory": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-19",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-18": [
         2063,
@@ -8897,6 +8931,13 @@
         2727,
         648,
         3,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
+      ],
+      "2026-08-21": [
+        3609,
+        332,
+        7,
         "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "Rust"
       ]
@@ -9053,10 +9094,10 @@
   },
   "santifer/career-ops": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-18": [
         64651,
@@ -9069,6 +9110,13 @@
         65794,
         198,
         9,
+        "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+        "JavaScript"
+      ],
+      "2026-08-21": [
+        66687,
+        816,
+        6,
         "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
         "JavaScript"
       ]
@@ -9285,10 +9333,10 @@
   },
   "chaitanyagiri/munder-difflin": {
     "first_seen": "2026-08-19",
-    "last_seen": "2026-08-20",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-19": [
         2035,
@@ -9301,6 +9349,13 @@
         2693,
         795,
         3,
+        "local multi-agent harness",
+        "TypeScript"
+      ],
+      "2026-08-21": [
+        3132,
+        507,
+        10,
         "local multi-agent harness",
         "TypeScript"
       ]
@@ -9342,10 +9397,10 @@
   },
   "volcengine/OpenViking": {
     "first_seen": "2026-08-19",
-    "last_seen": "2026-08-20",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-21",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-19": [
         29385,
@@ -9358,6 +9413,13 @@
         30190,
         804,
         2,
+        "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+        "Python"
+      ],
+      "2026-08-21": [
+        31027,
+        950,
+        13,
         "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
         "Python"
       ]
@@ -9577,6 +9639,403 @@
         "Draw pretty maps from OpenStreetMap data! Built with osmnx +matplotlib + shapely",
         "Python"
       ]
+    }
+  },
+  "modular/modular": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        27947,
+        268,
+        1,
+        "The Modular Platform (includes MAX & Mojo)",
+        "Mojo"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Modular 公司開源的 AI 開發與部署平台,整合 MAX 推論框架與 Mojo 高效能程式語言。",
+      "summary": "此 repo 收錄 Modular Platform 的開源元件,包含 Mojo 編譯器與標準庫、MAX 加速器庫、推論伺服器(相容 OpenAI API)及模型管線等。目標是提供從底層硬體加速到高階模型部署的一站式 AI 基礎設施,解決 AI 工作負載在效能與開發體驗上的落差。",
+      "highlights": [
+        "整合 Mojo 語言(強調高效能、Python 相容語法)與 MAX 推論框架於同一平台",
+        "提供 OpenAI 相容的推論伺服器與 Python 為主的模型管線,方便串接現有生態",
+        "開源涵蓋編譯器、標準庫、加速器庫、範例程式碼等多個核心元件",
+        "目前在 GitHub trending 排名第一,單日新增近 268 顆星,社群關注度高",
+        "有活躍的社群管道(Discord、Forum、YouTube、Meetup)及貢獻指南"
+      ],
+      "use_cases": [
+        "需要高效能推論伺服器來部署 LLM 或其他 AI 模型的團隊",
+        "想嘗試 Mojo 語言以兼顧 Python 易用性與底層效能的開發者",
+        "研究 AI 加速器/編譯器技術、想參與開源標準庫或加速器庫貢獻的工程師",
+        "尋找一站式 AI 平台以減少多套框架整合成本的基礎設施團隊"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清晰,說明各元件路徑、快速上手指南、貢獻方式與授權條款皆完整,文件品質高;但僅憑 README 無法判斷程式碼測試覆蓋率,此評分僅為文件層級的推測。專案更新頻繁(近日仍持續 push),搭配今日 trending 第一與高速星數成長,活躍度非常高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "大型且活躍的 AI 基礎設施專案,對關注高效能推論與新程式語言生態的工程師來說值得立即關注與追蹤。",
+      "_mode": "light"
+    }
+  },
+  "AprilNEA/OpenLogi": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        11885,
+        1545,
+        3,
+        "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "category": "app",
+      "one_liner": "用 Rust 打造的本地優先 Logitech 週邊控制軟體,取代 Logi Options+。",
+      "summary": "OpenLogi 是一款以 Rust + GPUI 寫成的原生應用程式,透過 HID++ 協定直接控制 Logitech 滑鼠、鍵盤與 UVC 攝影機(按鍵重新映射、DPI、SmartShift、RGB 燈效等),不需帳號、不上傳遙測資料,同時支援 macOS、Windows、Linux(含 NixOS)三大平台。專案將裝置協定實作、按鍵注入、GUI 與背景 agent 拆分成十幾個獨立 crate,架構相當工程化。",
+      "highlights": [
+        "工作區拆成 17 個 crate(hidpp 協定、hid 讀寫、inject、agent-core、desktop GUI 等),職責分離清楚",
+        "CI 涵蓋 rustfmt、clippy(含 Windows)、MSRV 檢查、macOS arm64/x86_64 與 Linux 測試、cargo-deny 授權/漏洞掃描",
+        "程式碼與 workspace 設定中大量保留決策脈絡註解(例如刻意鎖定 tarpc 版本以避開已知 CVE GHSA-w9wp-h8wv-79jx)",
+        "全平台簽章發布:macOS 有公證 dmg 與 Homebrew cask、Windows 有簽章 msi/zip、Linux 提供 deb/rpm/pacman 套件與 NixOS module",
+        "各 crate 內建大量單元測試(如 dpi.rs、gesture、inventory、binding 等模組皆有 #[cfg(test)])"
+      ],
+      "use_cases": [
+        "不想安裝臃腫的 Logi Options+、又想用滑鼠 DPI / SmartShift / 手勢自訂功能的使用者",
+        "在 Linux(含 X11/Wayland)上想要原生支援 Logitech 周邊按鍵映射與電量顯示的使用者",
+        "重視隱私、不希望周邊控制軟體上傳遙測或需要綁定帳號的人",
+        "想研究 HID++ 協定實作或跨平台 Rust GUI(GPUI)架構的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件相當完整,README 提供多語系版本並連結 INSTALL/USAGE/CONFIGURATION/DEVELOPMENT 等詳細文件;各核心 crate 皆有對應測試模組,涵蓋率不錯但 GUI 層測試相對少;CI pipeline 嚴謹(fmt/clippy/MSRV/多平台測試/依賴掃描),commit 節奏積極,版本已到 0.7.3,屬於持續維護中的成熟專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件完整度都在 GitHub trending 專案中名列前茅,對 Logitech 使用者與想研究 HID++/跨平台 Rust GUI 的開發者都值得一看。",
+      "_mode": "full"
+    }
+  },
+  "agent-substrate/substrate": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        1396,
+        22,
+        9,
+        "Agent Substrate: the core system",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "Google 團隊開源的 AI Agent 沙箱調度控制平面,讓大量 AI agent 以極低延遲在共用 Kubernetes 資源上多工執行。",
+      "summary": "Agent Substrate 是一套建構在 Kubernetes 之上的「Agent 專用控制平面」,解決 AI agent 類工作負載大多時間閒置、卻又需要沙箱隔離所帶來的資源浪費與延遲問題。它透過 gVisor 或 microVM 對 actor(agent 實例)做次秒級 suspend/resume,將大量 actor 多工映射到少量常駐 worker pod 上,並提供對應的路由、快照儲存與生命週期管理機制。",
+      "highlights": [
+        "支援 gVisor 與 microVM(Kata+Cloud Hypervisor)兩種沙箱技術,對 actor 做次秒級 checkpoint/restore",
+        "以 Envoy ext_proc + 自訂 DNS 實現 agent 專屬的按需喚醒路由(atenet-router / atunnel)",
+        "提供完整的 CRD(WorkerPool、ActorTemplate)與 gRPC 控制平面(ate-api-server、atelet、ateom)",
+        "文件齊全,包含專屬的 Threat Model 文件,列出 40+ 項威脅與對應緩解措施",
+        "CI 涵蓋單元測試(go test -race)、需要 root/KVM 的整合測試,以及在 kind 叢集跑 gVisor 與 microVM 雙軌 E2E 測試"
+      ],
+      "use_cases": [
+        "大規模部署 AI coding agent(如 Claude Code)或 LLM agent,需要在有限硬體上高密度多工執行大量閒置中的 agent 實例",
+        "需要對 agent 沙箱做狀態保存(檔案系統+記憶體)並在請求到來時快速喚醒的場景",
+        "已有 Kubernetes 基礎設施、想在其上疊加 agent 專用排程與路由層,而非重新造一套基礎設施",
+        "研究/評估 agent 沙箱化執行的安全威脅模型與隔離設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(架構文件、API guide、glossary、threat model、roadmap 皆備),原始碼中的註解精簡且聚焦在非顯而易見的設計取捨(如快取失效、鎖定順序)。測試檔案超過 190 個,涵蓋單元測試、contract test、functional test 與需要 root/KVM 權限的整合測試,CI 另外跑真實 kind 叢集的 gVisor 與 microVM 雙軌 E2E 測試,並有每週排程的 govulncheck 掃描。專案由 Google 團隊維護,commit 訊息與 workflow 註解顯示工程紀律成熟,但專案本身仍處於早期階段,API 隨時可能變動。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "hack/microvm-assets/assemble.sh 會用 curl 下載 kata-static、cloud-hypervisor、virtiofsd 等 microVM 執行元件,下載後用於建置沙箱資產;下載對象為固定版本的發行檔案而非執行安裝腳本,且此腳本僅在使用者主動執行 microVM demo 建置流程時才會被呼叫",
+          "README 與 threat-model.md 明確聲明專案「早期開發階段、尚無安全強化,不適合生產環境使用」,且非 Google 官方支援產品,也不在 Google OSS 漏洞獎金計畫範圍內"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件成熟度在早期專案中相當罕見,適合關注 agent 基礎設施方向的工程師持續追蹤,但專案本身仍聲明未達生產可用階段,短期內不建議直接上線使用。",
+      "_mode": "full"
+    }
+  },
+  "PostHog/posthog": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        38004,
+        60,
+        11,
+        "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "category": "app",
+      "one_liner": "PostHog 是一套開源的「自動駕駛」產品分析平台,整合分析、Session 錄影、功能旗標、實驗、錯誤追蹤與 AI 觀測等工具。",
+      "summary": "PostHog 提供一站式的產品開發工具鏈,涵蓋產品/網站分析、Session Replay、Feature Flag、A/B 實驗、錯誤追蹤、日誌、問卷調查與資料倉儲整合,並強調把訊號轉化為 AI Agent 可診斷問題與提交修復 PR 的「self-driving」能力。可透過 PostHog Cloud 直接使用,或自行架設開源版本(MIT license,但 ee 目錄為其他授權)。",
+      "highlights": [
+        "功能面極廣:分析、錄影、旗標、實驗、錯誤追蹤、日誌、問卷、資料倉儲一次到位",
+        "主打 AI observability 與 self-driving 概念,可透過 MCP 整合進 Claude Code、Cursor 等 Agent 工具",
+        "提供一行指令 Docker 自架 hobby 版本,亦有 PostHog Cloud(US/EU)可直接免費試用",
+        "支援多語言/框架 SDK(JS、Python、Node、React Native、Android、iOS 等),生態成熟",
+        "今日在 GitHub trending 排名第 11,單日新增 60 顆星,顯示社群關注度高"
+      ],
+      "use_cases": [
+        "需要整合產品分析、Session 錄影與功能旗標的 SaaS 產品團隊",
+        "想在自建環境中導入錯誤追蹤與 AI 應用可觀測性(LLM traces/cost)的工程團隊",
+        "希望用 A/B 測試與問卷收集使用者回饋來驗證產品假設的成長團隊",
+        "想透過 MCP 讓 AI Agent 直接讀取產品訊號並提出修復建議的開發流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整、目錄清晰,涵蓋各功能連結、安裝方式、SDK 列表與貢獻指南,文件品質高;但僅憑 README 無法檢視實際程式碼與測試覆蓋率,此評分僅反映文件本身呈現狀態。最後推送時間為今日,且為 trending 新上榜項目,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供以 curl 下載腳本並透過 bash 執行的一行式 Docker 自架指令(deploy-hobby),此為常見但需留意來源可信度的安裝模式,建議先檢視腳本內容再執行",
+          "專案授權為 MIT,但 ee 目錄採用不同授權條款,自架時需留意授權範圍差異"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "功能完整且生態成熟的開源產品分析平台,尤其結合 AI observability 與 MCP 整合的方向具前瞻性,值得加入關注清單。",
+      "_mode": "light"
+    }
+  },
+  "mahlernim/google-timeline-visualizer": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        1560,
+        657,
+        12,
+        "Visualize your year in travel using your Google Location History (Timeline) data",
+        "Kotlin"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "one_liner": "將 Google Maps Timeline 的定位歷史資料轉換成一年旅程動態地圖影片的 Android 應用(含 iPhone 網頁版與桌面 Python 版)。",
+      "summary": "這是一個將使用者匯出的 Google Timeline.json 定位資料,轉換成可分享的旅程動畫 MP4 影片的工具。主要以 Kotlin/Android App 呈現,同時提供 Safari 專用的網頁版(TypeScript + mediabunny)和原始的桌面 Python 版本(matplotlib + ffmpeg),三個實作共用相同的資料解析與渲染邏輯概念,並強調完全在裝置端處理、不上傳定位資料。",
+      "category": "app",
+      "highlights": [
+        "三平台實作:Android App(Kotlin)、iPhone 網頁版(TypeScript)、桌面版(Python),對應不同使用情境",
+        "自行實作的串流式 JSON Timeline 解析器,支援新舊多種 Google Timeline 匯出格式與座標表示法(E7、geo:、latLng 等)",
+        "內建 GPS 離群點過濾演算法(基於速度/距離/時間窗判斷不合理的往返軌跡),邏輯清楚且有對應單元測試",
+        "隱私設計明確:不需 Google 登入、不要求定位權限,唯一的網路請求是地圖圖磚(CARTO/OpenStreetMap),並在文件中清楚說明",
+        "測試覆蓋率高,涵蓋 Kotlin 單元測試、Android 裝置測試、Web vitest 測試與 Python pytest,並有對應 CI workflow(validate/release/pages)"
+      ],
+      "use_cases": [
+        "想把 Google Timeline 定位歷史做成年度旅遊回顧短片分享給朋友",
+        "開發者想參考其串流式 JSON 解析與 GPS 離群點過濾演算法的實作方式",
+        "研究如何在 Android 上用 MediaCodec 做本機 MP4 影片渲染與匯出",
+        "iPhone 使用者想在不安裝 App、不上傳資料的情況下用瀏覽器產生同樣的旅程影片"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(多語 README、隱私說明文件、還原教學、CHANGELOG 逐版詳列變更),程式碼風格一致、模組切分清楚,測試涵蓋 Kotlin/Android/Web/Python 四個層面且有簽章驗證與版本一致性檢查的正式發布流程,整體工程成熟度在個人專案中相當突出。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與隱私透明度都相當出色,值得關注,尤其適合想學習跨平台定位資料處理與本機影片渲染實作的工程師。",
+      "_mode": "full"
+    }
+  },
+  "JuliusBrussee/caveman": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        99638,
+        258,
+        14,
+        "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "one_liner": "讓 AI coding agent「說話省字、讀檔也省字」的 Claude Code 技能與本地代理,號稱可省下 65% 輸出 token 與 33% 輸入 token。",
+      "summary": "Caveman 最初是讓 Claude Code 等 agent 用精簡「原始人語氣」回答問題的 skill,藉此縮短輸出 token;第二代加入本地 Proxy/Engine,在請求送往 provider 前先對工具結果、日誌、程式碼、diff 等內容做結構化壓縮與去重,並用 PNG 圖片化文字(pixel mode)進一步降低視覺模型的輸入計費。所有轉換皆搭配內容定址儲存(CCR)保留原始位元組供還原,強調「可逆」與「不可逆時直接放行原文」。",
+      "category": "devtool",
+      "highlights": [
+        "倉庫規模巨大(1450+ 檔案、Go + Node + Python 混合),涵蓋 skill、CLI、本地 Proxy、瀏覽器 a11y 樹壓縮、MCP server 等多個子系統,並非單純的 prompt 技巧",
+        "CI 涵蓋 Ubuntu/Windows/macOS 三平台,分別跑 Node/Python/Go 測試與 PowerShell 語法檢查,測試檔案超過 250 個,工程紀律明顯高於一般 meme 型專案",
+        "README 附上「Honest Numbers」章節,主動說明 65% 只是輸出 token 的量測結果、skill 本身每輪會多耗 1~1.5k 輸入 token,態度誠實而非誇大行銷",
+        "SECURITY.md 詳細揭露資料流、telemetry 內容、本地資料庫敏感性、curl|bash 安裝方式與其風險,並說明防毒軟體誤報的原因",
+        "採用 MIT(skill/CLI)+ BSL-1.1(engine/proxy)雙授權,engine 相關程式碼在 Change Date 前並非 OSI 認定的開源授權"
+      ],
+      "use_cases": [
+        "想讓 Claude Code / Codex / Gemini CLI 等 agent 回答更精簡、降低對話 token 花費的個人開發者",
+        "希望在不改程式碼的前提下,透過本地 Proxy 攔截並壓縮工具輸出(log、JSON、diff)以降低 API 帳單的重度 agent 使用者",
+        "對 prompt engineering、token 壓縮演算法(BM25 相關性、TOON 編碼、pixel 化文字)感興趣的研究/學習用途"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極度完整(README、SECURITY.md、HONEST-NUMBERS.md,每個子目錄有各自的 CLAUDE.md/AGENTS.md),原始碼中的註解多用於解釋「為何這樣做」而非重複程式邏輯,顯示長期維護痕跡(大量 issue 編號引用修過的 bug)。測試覆蓋面廣,跨三大作業系統的 CI 流程嚴謹。最近一次推送在昨天,活躍度很高。整體工程品質遠高於典型的一次性熱門專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝流程提供 curl|bash / irm|iex 的一鍵安裝腳本,但該腳本明確釘選在特定 release tag(而非可變的 main 分支),並對下載的 hook 檔案做 SHA-256 checksum 驗證,同時 README/SECURITY.md 都提供「先 clone 再檢查原始碼」的替代安裝方式",
+          "npm 套件的 package.json 未發現 preinstall/postinstall/prepare 等安裝期自動執行腳本",
+          "CLI 預設會回傳匿名使用統計(telemetry)至 Caveman 官方伺服器,雖不含 prompt/程式碼內容,但屬預設開啟(opt-out)行為,使用前建議留意 SECURITY.md 所述的關閉方式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "雖然話題包裝很 meme,但底層是一套工程嚴謹、文件誠實、測試完備的 token 壓縮工具鏈,值得工程師實際評估導入,而非只當作噱頭看看。",
+      "_mode": "full"
+    }
+  },
+  "makeplane/plane": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        56503,
+        98,
+        15,
+        "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "one_liner": "開源的專案管理平台,定位為 Jira/Linear/ClickUp 的自架替代方案,涵蓋任務、Sprint(Cycle)、文件、分類管理。",
+      "summary": "Plane 是一套採 monorepo 架構的全端專案管理系統,前端以 TypeScript/React(Next.js/Vite)構成多個 app(web、admin、space、live 協作服務),後端以 Django 提供 REST API。專案定位在解決團隊管理需求(issue tracking、看板、甘特圖、路線圖)同時保留自架與資料主控權,是市場上 Jira/Linear 類工具的開源替代品。",
+      "category": "app",
+      "highlights": [
+        "採 Turborepo + pnpm 的多 app monorepo(web/admin/space/live/proxy/api),分工清晰",
+        "後端 Django + Celery + Redis + PostgreSQL,前端 React 生態,搭配即時協作服務(live)",
+        "測試涵蓋面廣,甚至針對已知 SSRF CVE/GHSA 逐條寫回歸測試(test_ssrf_advisories.py),顯示團隊有系統性的安全維運流程",
+        "CI 完整,含 CodeQL 靜態分析、lint/build/type-check 各 app 獨立 workflow、i18n 同步檢查",
+        "56K+ star、每日仍有大量新增 star 與 push,活躍度非常高"
+      ],
+      "use_cases": [
+        "團隊想要自架、資料自主可控的專案管理/issue tracking 平台,取代 Jira 或 Linear",
+        "需要看板、Sprint(Cycle)、模組、甘特圖等多種檢視方式管理研發專案",
+        "想研究大型 TypeScript+Django monorepo 的架構與 SSRF/CSV 匯出等安全防禦實作範例",
+        "企業內網部署,需要 SSO(Google/GitHub/GitLab/Gitea)整合的專案管理系統"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件方面 README 精簡但有完整的官方文件站連結,程式內部有清楚的 CONTRIBUTING/AGENTS.md 指引;測試涵蓋 contract/unit/smoke 多層級,且對外部回報的 SSRF 安全性弱點有逐條回歸測試,顯示成熟的安全維運紀律;CI 使用 CodeQL、lint、type-check、i18n 檢查等多道關卡;活躍度高,近日仍持續 push 與大量新增 star。抽樣的前端元件程式碼風格一致、型別完整,屬於工程品質偏上的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與安全維運紀律皆屬上乘,是目前開源專案管理領域最值得關注的自架方案之一。",
+      "_mode": "full"
+    }
+  },
+  "Tencent/AI-Infra-Guard": {
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-21": [
+        4967,
+        50,
+        16,
+        "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-21",
+    "analysis": {
+      "one_liner": "騰訊朱雀實驗室出品的全端 AI 紅隊安全平台,整合 Agent、Skill、MCP、AI 基礎設施掃描與 LLM 越獄評測。",
+      "summary": "AI-Infra-Guard(A.I.G)是一套針對 AI 生態系的紅隊測試平台,涵蓋 AI 基礎設施元件的 CVE 指紋掃描(超過 100 種框架、2000+ 漏洞規則)、MCP Server 與 Agent Skill 的安全稽核、多智能體工作流掃描,以及 LLM 越獄評測。專案同時提供 Web UI、Go/Python CLI 工具(skill-scan、mcp-scan、agent-scan)以及可獨立安裝的 pip 套件,定位為企業或個人的內部風險自檢工具。",
+      "category": "security",
+      "highlights": [
+        "由騰訊朱雀實驗室主導,團隊有 Black Hat/DEF CON 等會議實績,並已被 19 篇學術論文引用",
+        "涵蓋範圍廣:AI Infra CVE 掃描、MCP/Skill 安全稽核、Agent 工作流掃描、多輪越獄攻擊評測(Many-Shot、PAIR、GOAT、ActorAttack 等)一次到位",
+        "skill-scan 對照 SkillTrustBench 基準有實測 F1 分數(可達 0.98+),顯示有嚴謹的評測方法而非空泛宣稱",
+        "發版節奏密集且更新內容具體(如 .pyc bytecode 繞過偵測、charset smuggling 防禦、RCE 白名單機制),README 內 changelog 交代版本演進脈絡清晰",
+        "Go 與 Python 程式碼品質整齊,關鍵模組(如文字解碼、命令列)有清楚的邊界處理與授權標頭"
+      ],
+      "use_cases": [
+        "企業內部在部署 vLLM、Ollama、ComfyUI 等 AI 服務前,掃描已知 CVE 弱點",
+        "CI/CD 流程中對 Agent Skill 或 MCP Server 原始碼做自動化安全審查",
+        "红队/研究人員評測 LLM 對越獄攻擊(jailbreak)的抵抗力並做跨模型比較",
+        "資安團隊評估自建 Agent(如 Dify、Coze 平台)的執行風險與工具濫用邊界"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 與多語系文件非常完整,API 文件、架構演進文件、貢獻指南齊全;各子模組(skill-scan、mcp-scan)有 pytest 測試與 CI workflow,但整體測試覆蓋率相對於專案規模仍偏薄;活躍度高,近一個月內多次發版且 changelog 內容具體詳實。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供的一鍵安裝腳本 docker.sh 採用 curl 直接下載後以 bash 執行(常見於 Docker 官方安裝流程,非此專案獨有的作法),使用前建議先檢視腳本內容",
+          "README 明確聲明專案目前缺乏身份驗證機制,不應直接部署於公開網路,官方文件已主動提示此風險",
+          "前端建置流程(Dockerfile)使用 pnpm install --ignore-scripts,屬於較嚴謹的供應鏈安全做法,未發現可疑的安裝期腳本執行"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、團隊背景扎實且更新頻繁,是 AI 紅隊/安全掃描領域值得收藏與實際評估的工具,唯獨部署前務必留意其官方提示的「無驗證機制」限制。",
+      "_mode": "full"
     }
   }
 }
