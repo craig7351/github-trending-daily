@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-22",
+    "analyzed": 8,
+    "cached": 9,
+    "deferred": 0,
+    "top_name": "microsoft/TypeScript",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-21",
     "analyzed": 10,
     "cached": 7,
