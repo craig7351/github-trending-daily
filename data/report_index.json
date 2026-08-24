@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-08-24",
+    "analyzed": 10,
+    "cached": 5,
+    "deferred": 3,
+    "top_name": "openai/codex",
+    "top_rating": 5
+  },
+  {
+    "date": "2026-08-23",
+    "analyzed": 0,
+    "cached": 0,
+    "deferred": 0,
+    "top_name": "",
+    "top_rating": 0
+  },
+  {
     "date": "2026-08-22",
     "analyzed": 8,
     "cached": 9,
