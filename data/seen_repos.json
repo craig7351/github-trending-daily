@@ -4484,10 +4484,10 @@
   },
   "Alishahryar1/free-claude-code": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-04": [
         44046,
@@ -4500,6 +4500,13 @@
         47969,
         1081,
         8,
+        "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+        "Python"
+      ],
+      "2026-08-25": [
+        48979,
+        891,
+        1,
         "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
         "Python"
       ]
@@ -8757,10 +8764,10 @@
   },
   "basecamp/omarchy": {
     "first_seen": "2026-08-17",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-17": [
         25384,
@@ -8780,6 +8787,13 @@
         29138,
         750,
         4,
+        "Beautiful, Modern & Opinionated Linux",
+        "Shell"
+      ],
+      "2026-08-25": [
+        30125,
+        1056,
+        14,
         "Beautiful, Modern & Opinionated Linux",
         "Shell"
       ]
@@ -9794,10 +9808,10 @@
   },
   "AprilNEA/OpenLogi": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-21": [
         11885,
@@ -9817,6 +9831,13 @@
         14952,
         1009,
         5,
+        "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+        "Rust"
+      ],
+      "2026-08-25": [
+        15864,
+        1097,
+        8,
         "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
         "Rust"
       ]
@@ -9907,10 +9928,10 @@
   },
   "PostHog/posthog": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-08-22",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-21": [
         38004,
@@ -9923,6 +9944,13 @@
         38292,
         335,
         5,
+        "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+        "Python"
+      ],
+      "2026-08-25": [
+        38992,
+        83,
+        10,
         "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
         "Python"
       ]
@@ -10071,15 +10099,22 @@
   },
   "makeplane/plane": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-08-21",
+    "last_seen": "2026-08-25",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-21": [
         56503,
         98,
         15,
+        "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+        "TypeScript"
+      ],
+      "2026-08-25": [
+        57930,
+        243,
+        5,
         "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
         "TypeScript"
       ]
@@ -10329,10 +10364,10 @@
   },
   "apache/maka": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-22": [
         2018,
@@ -10345,6 +10380,13 @@
         2356,
         51,
         7,
+        "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+        "TypeScript"
+      ],
+      "2026-08-25": [
+        2907,
+        411,
+        9,
         "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
         "TypeScript"
       ]
@@ -10533,15 +10575,22 @@
   },
   "openai/codex": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-24": [
         115187,
         2715,
         1,
+        "Lightweight coding agent that runs in your terminal",
+        "Rust"
+      ],
+      "2026-08-25": [
+        117048,
+        1994,
+        2,
         "Lightweight coding agent that runs in your terminal",
         "Rust"
       ]
@@ -10584,16 +10633,23 @@
   },
   "freestylefly/awesome-gpt-image-2": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-24": [
         12722,
         401,
         2,
         "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，470+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "JavaScript"
+      ],
+      "2026-08-25": [
+        15521,
+        2449,
+        17,
+        "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "JavaScript"
       ]
     },
@@ -10636,15 +10692,22 @@
   },
   "tinyhumansai/openhuman": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-24": [
         36748,
         39,
         9,
+        "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+        "Rust"
+      ],
+      "2026-08-25": [
+        37270,
+        515,
+        19,
         "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
         "Rust"
       ]
@@ -10686,15 +10749,22 @@
   },
   "VoltAgent/awesome-agent-skills": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-24": [
         31296,
         156,
         12,
+        "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+        ""
+      ],
+      "2026-08-25": [
+        31877,
+        602,
+        18,
         "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
         ""
       ]
@@ -10733,15 +10803,22 @@
   },
   "dani-garcia/vaultwarden": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-24": [
         65962,
         78,
         14,
+        "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+        "Rust"
+      ],
+      "2026-08-25": [
+        66126,
+        175,
+        16,
         "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
         "Rust"
       ]
@@ -10780,15 +10857,22 @@
   },
   "anthropics/claude-plugins-community": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-24": [
         957,
         225,
         15,
+        "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+        "Python"
+      ],
+      "2026-08-25": [
+        1354,
+        489,
+        7,
         "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
         "Python"
       ]
@@ -10847,10 +10931,10 @@
   },
   "NousResearch/hermes-agent": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-24": [
         234993,
@@ -10858,7 +10942,344 @@
         18,
         "The agent that grows with you",
         "Python"
+      ],
+      "2026-08-25": [
+        235806,
+        896,
+        6,
+        "The agent that grows with you",
+        "Python"
       ]
+    },
+    "last_analyzed": "2026-08-25",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Nous Research 打造的自我進化 AI 代理人,具備跨會話記憶、技能自學與多平台整合能力。",
+      "summary": "Hermes Agent 是一個具備「學習迴圈」的 AI 代理框架,能從使用經驗中自動生成並改進技能、持久化記憶、跨會話搜尋過去對話,並建立對使用者的深層理解模型。支援任意 LLM 供應商(OpenAI、Anthropic、OpenRouter、自架端點等),並可透過 Telegram、Discord、Slack、WhatsApp、Signal 等多種訊息平台或本機終端 TUI 操作,亦支援本機、Docker、SSH、雲端 Sandbox 等多種執行環境。",
+      "highlights": [
+        "內建自我改進學習迴圈:任務完成後自動生成技能,並在使用過程中持續優化,搭配 FTS5 全文檢索做跨會話記憶回溯",
+        "多平台訊息閘道整合(Telegram/Discord/Slack/WhatsApp/Signal/Email)加上完整 TUI 終端介面,支援語音備忘轉錄",
+        "模型供應商中立,可透過 hermes model 一鍵切換,並提供 Nous Portal 整合式訂閱(300+ 模型、網頁搜尋、圖像生成、TTS、雲端瀏覽器)",
+        "支援七種終端後端(本機、Docker、SSH、Singularity、Modal、Daytona、Vercel Sandbox),Daytona/Modal 可做到閒置時幾乎零成本的無伺服器持久化",
+        "內建 cron 排程器,可用自然語言設定每日報告、夜間備份等自動化任務,並支援子代理平行處理工作流"
+      ],
+      "use_cases": [
+        "需要長期記憶、能從互動中自我進化技能的個人或團隊 AI 助理",
+        "想在多個聊天平台(Telegram/Discord/Slack 等)統一部署同一個 AI 代理的場景",
+        "需要在雲端沙盒或低成本 VPS 上長時間背景執行、支援排程自動化任務的代理應用",
+        "研究團隊需要收集 tool-calling 軌跡資料以訓練下一代模型的場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整、附有多國語言版本、指令總覽表與詳細疑難排解章節,文件品質相當高;但僅能依 README 評估,無法看到程式碼與測試涵蓋率,故測試面向給予保守分數。專案剛推送(2026-08-24)且正處於 GitHub trending 第 6 名、單日新增近 900 星,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝方式為 curl | bash(Linux/macOS/WSL2)或 PowerShell iex (irm ...)(Windows),此為常見 CLI 安裝模式,但使用前建議自行檢視腳本內容",
+          "README 提及安裝的 uv.exe 曾被防毒軟體(如 Windows Defender、Bitdefender)誤判為惡意程式,並提供官方屬性驗證(attestation)步驟供使用者自行核實,屬已知誤判情況而非安全漏洞"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "來自 Nous Research 的重量級專案,功能完整且正在 GitHub trending 上快速衝高星數,值得 AI 代理與自動化工作流領域的工程師立即關注。",
+      "_mode": "light"
+    }
+  },
+  "MadsLorentzen/ai-job-search": {
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-25": [
+        34074,
+        434,
+        3,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-25",
+    "analysis": {
+      "one_liner": "在本機執行的 AI 求職助手,以 Claude Code 為引擎,自動評估職缺、客製化履歷與求職信、並協助面試準備。",
+      "summary": "這是一套建構在 Claude Code 之上的求職應徵框架,把「搜尋職缺 → 評估契合度 → 撰寫客製化 CV/求職信(LaTeX)→ 面試準備」的完整流程封裝成一系列 Claude Code 指令(/setup、/scrape、/apply、/interview 等)。使用者 fork 這個 repo、填入自己的背景資料,Claude 就會用 drafter-reviewer 雙代理架構產生並反覆編譯校對 PDF,直到排版與 ATS 可讀性都過關。作者本人用這套流程實際投遞 69 份履歷、拿到 20 次面試並成功轉職,是把個人經驗系統化的產物。",
+      "category": "ai-ml",
+      "highlights": [
+        "核心工作流程與語言、國家無關,僅職缺搜尋技能(Jobindex、Jobnet 等)是丹麥市場專用,並提供 /add-portal 生成器讓使用者自建在地職缺爬蟲",
+        "drafter-reviewer 雙代理架構:一個 agent 撰寫 CV/求職信,另一個以全新 context 研究公司並批評草稿,再修訂,提升輸出品質",
+        "PDF 驗證迴圈相當扎實:自動編譯 lualatex/xelatex、視覺檢查排版、並用 pdftotext 檢查 ATS 可解析性與關鍵字覆蓋率,避免「看起來像 CV 但機器讀不到」的常見問題",
+        "資安意識明顯高於一般開源專案:CI 有專門的 security-guards job,鎖死 .claude/settings.json 權限清單、hooks 白名單、.gitignore 個資規則,並禁止 package.json 內的 npm/bun 生命週期腳本(明確提到防範 Shai-Hulud 這類供應鏈攻擊手法)",
+        "文件中明確警告:fork 後的 repo 依 GitHub 規則必為公開,若不想曝光個資需改用私有 repo 搭配 upstream 同步,設計上有考慮到隱私風險"
+      ],
+      "use_cases": [
+        "使用 Claude Code 的求職者想要自動化「職缺篩選→客製化履歷/求職信→面試準備」全流程",
+        "想要研究「多代理協作(drafter-reviewer)+ 強制產出驗證(PDF 編譯與 ATS 檢查)」設計模式的 AI 工程師",
+        "想參考如何在 fork 型開源模板中設計 CI 安全防護(權限允許清單、gitignore 個資規則、禁止 lifecycle script)的專案維護者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 與 SECURITY.md 極為詳盡,對威脅模型、隱私與使用限制都有清楚說明。CI 涵蓋 lint、security-guards、Python unittest、LaTeX 編譯煙霧測試(雙環境矩陣)、TypeScript CLI 型別檢查與 fixture 測試,抽查的 salary_lookup.py 與 jobindex helpers.ts 程式碼結構清晰、註解精準且有防禦性處理(重試、逾時、HTML 解析邊界情況)。由於近期才登上 trending 且倉庫歷史較淺(git shallow clone),長期維護活躍度仍待觀察,但目前釋出節奏與 CI 嚴謹度顯示是持續投入中的專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "job-portal CLI 技能(jobindex-search、jobnet-search 等)會對外發送 HTTP 請求擷取職缺頁面內容,且依賴 bun 生態的 npm 套件安裝,使用者應留意這些技能實際存取的網域範圍",
+          "README 明確要求使用者在借用其他 fork 的 portal skill 前先閱讀原始碼,因為這些 CLI 會在 .claude/settings.json 預先核准的權限下於使用者機器上執行,屬於專案自我揭露的風險提醒而非本倉庫本身的問題",
+          "專案已內建 CI 防護機制(tools/security_guards.py)主動封鎖 package.json 中的 postinstall/preinstall 等生命週期腳本與 settings.json 權限擴張,顯示對供應鏈攻擊有主動防範"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與資安意識在同類 AI agent 專案中相當突出,若你用 Claude Code 求職或想學習多代理工作流程設計,值得一看;非丹麥地區使用者需自行搭建職缺搜尋技能。",
+      "_mode": "full"
+    }
+  },
+  "multica-ai/andrej-karpathy-skills": {
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-25": [
+        206514,
+        588,
+        4,
+        "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-08-25",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "一份濃縮成單一 CLAUDE.md 的行為準則文件,教 Claude Code(及 Cursor)避免常見的 LLM 寫程式壞習慣。",
+      "summary": "這個專案不含任何程式碼,純粹是一份指令文件(CLAUDE.md/SKILL.md/Cursor rule),依據 Andrej Karpathy 對 LLM 寫程式常見問題(亂猜、過度設計、亂改不相關程式碼)的觀察,提煉出四條原則:先思考再動手、簡潔優先、精準修改、以目標驅動並可驗證。使用者只需把檔案放進專案根目錄或安裝成 Claude Code / Cursor 的 plugin/skill,即可讓 AI agent 在協作時更收斂、更少亂改東西。",
+      "highlights": [
+        "核心內容其實就是同一份四條原則,在 CLAUDE.md、SKILL.md、.cursor/rules/*.mdc 三處重複維護,靠人工同步而非單一來源",
+        "四條原則對應 Karpathy 原文吐槽的痛點:亂猜假設、過度抽象、動了不該動的程式碼、成功標準模糊",
+        "提供 Claude Code plugin marketplace 安裝方式,也支援純 CLAUDE.md 手動複製/curl 下載,對已有專案指示的相容性設計得不錯",
+        "同時支援 Cursor(透過 .cursor/rules)與 Claude Code(透過 plugin/skill),雙工具覆蓋",
+        "完全沒有程式碼、測試、CI,是一份「提示工程/使用守則」而非軟體專案,爆紅原因是切中大量 AI 輔助開發者的痛點而非技術複雜度"
+      ],
+      "use_cases": [
+        "把 CLAUDE.md 內容併入現有專案的 AI 協作規範,約束 AI agent 少做無關重構、少自行腦補需求",
+        "團隊導入 Claude Code 或 Cursor 進行 AI 輔助開發時,作為預設行為準則的起點範本",
+        "作為撰寫自家專案「AI 協作守則」文件時的參考架構(四原則 + 可驗證成功標準)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 2,
+        "comment": "文件本身寫得清楚扼要、範例具體,但專案性質決定了沒有測試也不需要測試;沒有 CI;內容在三個檔案間手動同步,缺乏單一來源機制(SSOT),長期維護一致性有風險。README 提及最後 push 時間為 2026-04-20,爆紅前活動並不頻繁,star 數暴增主要是被動地因話題(Karpathy 發文)帶起流量,而非開發活躍度。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "內容濃縮實用、可以直接抄一份併入自己的 CLAUDE.md,但本質是一頁指引文件而非工具或程式碼,花五分鐘讀完帶走精華即可,不必特別追蹤這個 repo 本身。",
+      "_mode": "full"
+    }
+  },
+  "openclaw/openclaw": {
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-25": [
+        387439,
+        173,
+        11,
+        "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-25",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "OpenClaw 是一款可安裝在自己裝置上、透過既有聊天軟體(WhatsApp、Slack、Discord 等)互動的個人 AI 助理。",
+      "summary": "OpenClaw 提供一個本機 Gateway 作為控制中樞,串接各家 LLM 供應商、工具/技能/外掛系統,並透過多種訊息平台與裝置端 App(語音、Canvas、相機、螢幕)讓使用者在日常使用的通訊軟體中操作個人 AI 助理。專案由非營利的 OpenClaw Foundation 維護,主打「own-your-data」的自架部署模式。",
+      "highlights": [
+        "提供跨平台一鍵安裝腳本(macOS/Linux/WSL2/Windows),並支援 npm/Docker/Nix 等多種部署方式",
+        "透過 Gateway 架構整合模型供應商、工具、技能、外掛,並可連接 WhatsApp、Telegram、Slack、Discord、Signal、iMessage 等多種通訊管道",
+        "README 內附完整安全性說明章節,提及訊息配對驗證、工具預設在 host 上執行、沙盒化指南等",
+        "獲 OpenAI、GitHub、NVIDIA、Vercel 等知名企業贊助,社群活躍(Discord、ClawHub 外掛市集)",
+        "今日登上 GitHub Trending 第 11 名,單日新增 173 顆星,顯示話題熱度高"
+      ],
+      "use_cases": [
+        "想在自己裝置上自架、掌控資料的個人 AI 助理,而非依賴雲端服務",
+        "需要讓 AI 助理直接串接既有聊天工具(如 Slack、Discord、WhatsApp)進行操作或通知",
+        "開發者想透過 Plugin SDK 擴充工具/技能,建立客製化的 AI 代理應用",
+        "研究多通道、多模型的 AI Gateway 架構設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 文件結構完整,涵蓋安裝、快速上手、架構、安全性、開發與社群連結,對外部文件站的引導也很清楚;但僅能透過 README 評估,未實際檢視原始碼與測試涵蓋率,此評分僅供參考。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝方式包含 curl | bash 與 PowerShell iwr | iex 直接執行遠端腳本,使用前建議先確認腳本來源與內容",
+          "README 自述工具預設會在主要 session 的主機上執行,除非另外設定沙盒化,使用前應閱讀官方安全性與沙盒化指南",
+          "README 提及 DM 類型的通訊管道預設會對未知寄件者進行配對驗證機制,顯示專案有意識地處理未受信任輸入的風險"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "文件完整、社群與贊助陣容堅強,且今日於 Trending 榜快速竄升,值得關注,但因涉及在自己裝置上執行且預設無沙盒化,導入前應詳讀官方安全性文件。",
+      "_mode": "light"
+    }
+  },
+  "AgriciDaniel/claude-obsidian": {
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-25": [
+        11902,
+        310,
+        12,
+        "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-25",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "一套讓 Claude Code 把任何來源資料讀取、連結並歸檔進 Obsidian 知識庫的 Agent Skills 外掛,強調本機優先與可回溯的交易式寫入。",
+      "summary": "claude-obsidian 是給 Claude Code 與相容 Agent Skills 主機使用的「第二大腦」外掛,將擷取的來源轉成有引用出處、互相連結的 Obsidian Markdown 頁面,並提供研究、檢索、維護、視覺化地圖等 15 個技能。核心賣點是把 vault(知識庫)當成使用者自有的一般檔案目錄,搭配可預覽、可回溯的單一交易寫入模型(hash 核准後才 apply),避免 AI 亂寫或並發寫入造成的資料損毀,設計理念參考 Karpathy 的 LLM Wiki 模式。",
+      "highlights": [
+        "交易式寫入架構:每次知識庫變更都先產生 JSON 計畫與 approved_plan_sha256,人工核准雜湊後才真正 apply,並有 lock、journal、原子替換與中斷復原機制",
+        "來源可溯性設計:claim/source ledger 記錄權威性、新鮮度、支持/矛盾證據與審核狀態,拒絕無根據引用優於編造答案",
+        "15 個模組化 Agent Skills(wiki、wiki-ingest、wiki-query、wiki-lint、autoresearch、canvas、wiki-retrieve 等),各自職責清楚且共用同一套證據與寫入規則",
+        "CI 覆蓋 Linux/macOS 多版本 Python 且驗證 release 產物可位元重現(byte-reproducible build),另有獨立 Windows smoke job",
+        "測試量體大(逾 40 個 test_*.py/.sh),涵蓋交易、鎖定、路徑安全、URL 憑證偵測等安全相關邏輯"
+      ],
+      "use_cases": [
+        "個人研究者或工程師想用 Claude Code 自動把網頁、PDF、筆記等來源整理成互相連結、可溯源的 Obsidian 知識庫",
+        "團隊或個人想要一個「不被雲端鎖定」、資料完全掌握在本機 Markdown 檔案的 Notion/第二大腦替代方案",
+        "已有 Obsidian vault、想在既有筆記上疊加 AI 輔助的檢索(BM25)、關聯建立與健康度檢查(lint)而不想破壞既有結構"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(README、install-guide、windows-wsl 指南、transaction/provenance contract 等),測試涵蓋交易、鎖定、路徑安全、跨平台相容性等關鍵邏輯,CI 有多平台矩陣並驗證 release 產物可重現建置,commit/release 節奏活躍(v2.1.0 剛處理原生 Windows 相容性),整體工程嚴謹度在同類 AI 工具中屬於少見的高水準。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程嚴謹度與文件完整度在 AI 筆記工具中相當突出,若你已在用 Claude Code 且重視資料自主權與可回溯性,非常值得一試。",
+      "_mode": "full"
+    }
+  },
+  "rohitg00/ai-engineering-from-scratch": {
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-25": [
+        48282,
+        349,
+        13,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-25",
+    "analysis": {
+      "one_liner": "一套從線性代數到多智能體系統、共 511 課的「從零開始造 AI」開源課程,每課都要求先手刻演算法再用框架重做一次。",
+      "summary": "此專案是一套結構完整的 AI 工程教學課程,涵蓋 20 個階段(數學基礎、機器學習、深度學習、電腦視覺、NLP、語音、強化學習、Transformer、生成式 AI、LLM 從零實作、多模態、工具協定/MCP、Agent 工程、自主系統、多智能體、基礎設施、倫理、頂石專案),以 Python/TypeScript/Rust/Julia 撰寫。每課都遵循「先手刻數學與演算法(Build It)、再用正式函式庫重做(Use It)、最後產出可重用產物(Ship It:prompt/skill/agent/MCP server)」的固定套路,並附上 Claude 認證備考教材與可安裝的 AI 助教技能(SKILL.md)。",
+      "category": "learning-resource",
+      "highlights": [
+        "511 堂課、20 個階段的巨型課程,結構高度一致(code/docs/outputs 三段式),抽樣程式碼品質扎實,型別標註、docstring 交代設計理由而非流水帳",
+        "強調「先手刻再用框架」的學習方法論,例如 Phase 14 的 agent loop 用純 stdlib Python 手刻 ReAct 迴圈,再對照正式實作",
+        "CI 相當完整:audit_lessons.py、audit_certifications.py、跑遍所有 certifications 的 tests/main.py、quiz 去偏檢查、README 計數自動同步、i18n 翻譯同步檢查",
+        "提供可安裝進 Claude Code / Codex 等 agent 的學習技能(npx skills add),含placement quiz、逐課教學、MCP 與 Agent Skills 專屬路徑,並自動輸出六冊 EPUB/PDF 電子書",
+        "另附獨立的 Claude 官方認證備考學院(4 條認證路線),但聲明與 Anthropic 無關且不保證通過率"
+      ],
+      "use_cases": [
+        "想從數學與演算法底層系統性學習 AI/LLM/Agent 工程,而非只會呼叫 API 的工程師或學生",
+        "準備 Claude 官方認證考試,需要有結構的讀書計畫與模擬測驗",
+        "想在 Claude Code / Codex 等 coding agent 中安裝一套互動式 AI 家教技能,邊做邊學",
+        "尋找可直接複用的教學素材(prompt、skill、agent、MCP server 範例)做內部訓練或工作坊"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質極高,每課都有敘事說明、程式碼與測驗三件套,README 與 CI 對課程數量、翻譯同步做自動化稽核;測試以每課獨立的 main.py/tests.py 為主而非傳統 pytest 覆蓋率報告,但 CI 會逐一實際執行;活躍度極高,今天才剛 push,且有多個排程 workflow 持續維護內容一致性。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "內容深度、結構嚴謹度與工程化程度都遠超一般教學倉庫,值得立即收藏並實際跟著動手做。",
+      "_mode": "full"
+    }
+  },
+  "tashfeenahmed/freellmapi": {
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-25": [
+        19780,
+        174,
+        15,
+        "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-25",
+    "analysis": {
+      "one_liner": "把 34 家 LLM 供應商的免費額度整合成一個 OpenAI 相容 /v1 端點,自動路由與容錯的本機閘道器。",
+      "summary": "FreeLLMAPI 是一個本機優先(local-first)的 LLM 路由伺服器,將 34 家供應商、635 個免費模型端點聚合在單一 OpenAI 相容 API 之下,依速度/可靠度/額度自動選模型並在被限流時自動 failover。同時支援 Anthropic、Gemini、Ollama 等多種 wire 格式,並附帶 React 儀表板、CLI 設定工具與桌面 App。",
+      "category": "infra",
+      "highlights": [
+        "428+ 支測試檔涵蓋 provider、router、加密、migration 等核心邏輯,CI 在 Node 20/22 雙版本跑測試與建置",
+        "API 金鑰以 AES-256-GCM 加密儲存,金鑰檔案獨立於資料庫且權限限制為 owner-only,並有詳細註解說明每個安全設計取捨(如 auth tag 長度、金鑰輪替流程)",
+        "支援 34 家供應商 + 自訂 OpenAI 相容端點,並用簽章(Ed25519)目錄同步機制自動更新模型清單",
+        "涵蓋 Claude Code、Codex、Cline 等十餘種 coding agent 的一鍵設定 CLI,含乾跑模式與設定檔備份",
+        "文件齊全:README、docs/install.md、docs/architecture.md、SECURITY.md 皆詳盡且誠實列出限制與 ToS 風險"
+      ],
+      "use_cases": [
+        "個人測試/學習用途,想省錢串接多家免費 LLM API 做原型開發",
+        "想在 Claude Code / Cursor / Aider 等 coding agent 上白嫖免費模型額度",
+        "需要一個具備自動 failover 與用量追蹤的本機 LLM 閘道器做實驗"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與測試覆蓋度在 GitHub trending 專案中屬上乘,commit 訊息與程式碼註解會解釋『為什麼』而非只寫『做什麼』,migration、CI、安全政策一應俱全,明顯是長期維護的成熟專案而非快速衝星專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Quick start 採用 curl -fsSL https://freellmapi.co/install.sh | bash 的一鍵安裝方式(README 有提醒可先讀腳本內容再執行),此腳本存放於外部網域而非本倉庫內,無法在此次檢視中直接稽核其內容",
+          "進階功能(訂閱制目錄同步、Premium 授權)需要對 freellmapi.co 發出網路請求,README 聲明該服務不會接觸使用者的 prompt、回應或供應商金鑰,但屬於閉源 SaaS 元件,值得使用前留意"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質扎實、文件與測試完整,是值得收藏的免費 LLM 聚合路由器,但作者已明言僅供個人實驗用途,不建議直接用於正式環境。",
+      "_mode": "full"
     }
   }
 }

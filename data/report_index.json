@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-25",
+    "analyzed": 7,
+    "cached": 12,
+    "deferred": 0,
+    "top_name": "NousResearch/hermes-agent",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-24",
     "analyzed": 10,
     "cached": 5,
