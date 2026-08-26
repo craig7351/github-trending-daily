@@ -5801,10 +5801,10 @@
   },
   "TauricResearch/TradingAgents": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-11",
+    "last_seen": "2026-08-26",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-09": [
         96733,
@@ -5819,38 +5819,45 @@
         11,
         "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "Python"
+      ],
+      "2026-08-26": [
+        100250,
+        218,
+        5,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-09",
+    "last_analyzed": "2026-08-26",
     "analysis": {
-      "one_liner": "用多個 LLM Agent 分工模擬真實交易團隊(分析師、研究員、交易員、風控)的開源金融交易研究框架。",
-      "summary": "TradingAgents 用 LangGraph 建構多代理人架構,將基本面、情緒、新聞、技術分析師與看多/看空研究員、交易員、風險管理團隊串成一個決策流程,模擬真實投資機構的協作方式來產生交易建議。專案支援多家 LLM 供應商(OpenAI、Anthropic、Google、Bedrock、Ollama 等)及多個市場(美股、港股、A股、加密貨幣等),並提供 CLI 與 Python API 兩種使用方式。作者明確聲明此為研究用途,並非投資建議。",
+      "one_liner": "用多個 LLM Agent 模擬真實交易團隊(分析師、研究員、交易員、風控)協作做股票/加密貨幣交易決策的研究框架。",
+      "summary": "TradingAgents 用 LangGraph 建構多代理人架構,將基本面、情緒、新聞、技術面分析師與多空研究員、交易員、風控/投組經理串成一個決策管線,針對指定股票代碼與日期產出交易建議。支援 OpenAI、Anthropic、Google、xAI、DeepSeek、Qwen、GLM、MiniMax、Bedrock、Ollama 等十餘種 LLM 供應商,並具備決策記憶回放、checkpoint 續跑等工程化功能。專案明確聲明僅供研究用途,非投資建議。",
       "category": "ai-ml",
       "highlights": [
-        "多代理人角色分工(分析師、研究員、交易員、風控、投資組合經理)並以結構化辯論產生決策",
-        "支援近十家 LLM 供應商(OpenAI、Anthropic、Google、xAI、DeepSeek、Qwen、GLM、MiniMax、Bedrock、Ollama、OpenAI-compatible 端點)",
-        "具決策日誌(decision log)與 checkpoint resume 機制,能記錄歷史報酬並反思、也能從中斷處恢復執行",
-        "CHANGELOG 詳細記錄每個修正對應的 GitHub Issue/PR 與貢獻者,顯示為社群驅動、持續維護的專案",
-        "CI 涵蓋 Python 3.10-3.13 測試矩陣、乾淨安裝驗證與全庫 ruff lint,工程紀律良好"
+        "多代理人分工架構(分析師/研究員/交易員/風控)搭配 LangGraph 實作結構化辯論與決策流程",
+        "支援超過十家 LLM 供應商(含中國區 Qwen/GLM/MiniMax 雙節點、AWS Bedrock、Ollama 本地模型、任意 OpenAI 相容端點)",
+        "具備決策記憶日誌(自動回顧歷史績效與 alpha)與可續跑的 checkpoint 機制,工程細節相當成熟",
+        "CI 涵蓋多 Python 版本測試、乾淨安裝 smoke test 與全庫 ruff lint,測試檔案數量頗大(逾60個)",
+        "README 與 CHANGELOG 詳實記錄每個版本修正(如路徑穿越防護、symbol 正規化、look-ahead 過濾等資安/正確性修補)"
       ],
       "use_cases": [
-        "量化/AI 研究人員想研究多代理人 LLM 在金融決策上的協作與辯論機制",
-        "開發者想要一個可插拔多種 LLM 供應商與資料源(Yahoo Finance、Alpha Vantage、FRED、Polymarket)的交易分析 pipeline 範本",
-        "教學或論文重現(對應 arXiv 2412.20138)用於展示 LLM-based 多代理人系統設計",
-        "本地或雲端(Docker/Bedrock/Ollama)部署一個可設定的股票/加密貨幣分析 CLI 工具"
+        "研究多代理人 LLM 協作在金融決策任務上的表現與可重現性議題",
+        "作為學習 LangGraph 建構複雜多節點、可續跑 Agent 流程的參考範例",
+        "量化研究者做回測型的 AI 交易策略原型驗證(非實盤下單)",
+        "評估多 LLM 供應商切換與 Prompt/Agent 架構設計模式"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "README 詳盡且持續更新(含安裝、CLI、可重現性說明、限制聲明),CHANGELOG 精細到每個 issue/PR 與貢獻者;tests/ 目錄有 60 餘個測試檔涵蓋 provider、資料源、CLI、邊界情況,CI 有多版本 Python 測試、乾淨安裝驗證與全庫 lint;pushed_at 顯示近期(2026-07)仍有活躍修正,是一個維護良好、工程紀律高的專案。"
+        "comment": "README 與 CHANGELOG 記錄詳盡,程式碼註解清楚說明「為什麼」而非單純複述邏輯,並多處引用歷史 issue 編號說明修補動機。CI 設有多版本測試矩陣、乾淨安裝驗證與全庫 lint,測試檔案覆蓋 API key、日期邊界、checkpoint、路徑安全等多面向,工程成熟度高於一般研究型專案。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 4,
-      "verdict": "工程品質與文件成熟度在同類 LLM Agent 專案中少見的紮實,值得研究多代理人金融決策架構的人關注,但務必記住它是研究工具而非可直接用於實盤的交易系統。",
+      "star_rating": 5,
+      "verdict": "工程品質與文件皆屬上乘的多代理人交易研究框架,即使不用於實盤,也值得研究 LangGraph 多代理協作架構的工程師參考。",
       "_mode": "full"
     }
   },
@@ -8764,10 +8771,10 @@
   },
   "basecamp/omarchy": {
     "first_seen": "2026-08-17",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-17": [
         25384,
@@ -8794,6 +8801,13 @@
         30125,
         1056,
         14,
+        "Beautiful, Modern & Opinionated Linux",
+        "Shell"
+      ],
+      "2026-08-26": [
+        31269,
+        1083,
+        9,
         "Beautiful, Modern & Opinionated Linux",
         "Shell"
       ]
@@ -10364,10 +10378,10 @@
   },
   "apache/maka": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-22": [
         2018,
@@ -10387,6 +10401,13 @@
         2907,
         411,
         9,
+        "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+        "TypeScript"
+      ],
+      "2026-08-26": [
+        3336,
+        543,
+        4,
         "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
         "TypeScript"
       ]
@@ -10575,10 +10596,10 @@
   },
   "openai/codex": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-24": [
         115187,
@@ -10591,6 +10612,13 @@
         117048,
         1994,
         2,
+        "Lightweight coding agent that runs in your terminal",
+        "Rust"
+      ],
+      "2026-08-26": [
+        118111,
+        1181,
+        12,
         "Lightweight coding agent that runs in your terminal",
         "Rust"
       ]
@@ -10633,10 +10661,10 @@
   },
   "freestylefly/awesome-gpt-image-2": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-24": [
         12722,
@@ -10649,6 +10677,13 @@
         15521,
         2449,
         17,
+        "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "JavaScript"
+      ],
+      "2026-08-26": [
+        17803,
+        1698,
+        1,
         "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "JavaScript"
       ]
@@ -10692,10 +10727,10 @@
   },
   "tinyhumansai/openhuman": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-24": [
         36748,
@@ -10708,6 +10743,13 @@
         37270,
         515,
         19,
+        "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+        "Rust"
+      ],
+      "2026-08-26": [
+        37775,
+        542,
+        8,
         "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
         "Rust"
       ]
@@ -10857,10 +10899,10 @@
   },
   "anthropics/claude-plugins-community": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-24": [
         957,
@@ -10873,6 +10915,13 @@
         1354,
         489,
         7,
+        "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+        "Python"
+      ],
+      "2026-08-26": [
+        1748,
+        351,
+        2,
         "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
         "Python"
       ]
@@ -10989,14 +11038,21 @@
   },
   "MadsLorentzen/ai-job-search": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-25": [
         34074,
         434,
+        3,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
+      ],
+      "2026-08-26": [
+        35279,
+        1265,
         3,
         "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "Python"
@@ -11040,15 +11096,22 @@
   },
   "multica-ai/andrej-karpathy-skills": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-25": [
         206514,
         588,
         4,
+        "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        ""
+      ],
+      "2026-08-26": [
+        207208,
+        830,
+        11,
         "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
         ""
       ]
@@ -11139,15 +11202,22 @@
   },
   "AgriciDaniel/claude-obsidian": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-25": [
         11902,
         310,
         12,
+        "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+        "Python"
+      ],
+      "2026-08-26": [
+        12720,
+        813,
+        6,
         "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
         "Python"
       ]
@@ -11186,15 +11256,22 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-25": [
         48282,
         349,
         13,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-08-26": [
+        48978,
+        569,
+        7,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -11279,6 +11356,255 @@
       },
       "star_rating": 4,
       "verdict": "工程品質扎實、文件與測試完整,是值得收藏的免費 LLM 聚合路由器,但作者已明言僅供個人實驗用途,不建議直接用於正式環境。",
+      "_mode": "full"
+    }
+  },
+  "Shubhamsaboo/awesome-llm-apps": {
+    "first_seen": "2026-08-26",
+    "last_seen": "2026-08-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-26": [
+        134228,
+        161,
+        10,
+        "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-26",
+    "analysis": {
+      "one_liner": "收錄 100 多個開箱即用的 LLM Agent、Agent Skills 與 RAG 應用範例的開源大全",
+      "summary": "這是一個持續更新的 LLM 應用範例合輯,涵蓋單一 Agent、多 Agent 團隊、常駐型 Agent、語音 Agent 以及可直接安裝給 Coding Agent 使用的 Agent Skills,支援 Claude、Gemini、GPT、DeepSeek、Llama、Qwen 等多種模型。目標是讓開發者能快速複製、執行甚至商用這些範例,降低從零開始建構 LLM 應用的門檻。",
+      "category": "ai-ml",
+      "highlights": [
+        "涵蓋 starter、advanced、multi-agent team、always-on、voice AI 等多種 Agent 應用分類,範例數量龐大且持續每週新增",
+        "新增 Agent Skills 分類,可透過 npx skills add 指令一鍵安裝技能給 Claude Code、Codex、Cursor 等 Coding Agent 使用",
+        "Apache-2.0 授權,官方標榜可直接 clone、執行甚至商業化販售",
+        "在 GitHub Trending 上排名第 10,單日新增 161 星,顯示社群關注度高、更新頻率快"
+      ],
+      "use_cases": [
+        "尋找特定情境(如財務分析、旅遊規劃、詐欺調查)的 LLM Agent 範例作為專案起點",
+        "學習如何用 Agno、OpenAI Agents SDK 等框架搭建單一或多 Agent 系統",
+        "為 Claude Code 等 Coding Agent 安裝現成的 Agent Skills 擴充功能",
+        "作為 RAG 應用架構與最佳實踐的參考範本庫"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 5,
+        "comment": "README 結構清楚、分類完整、有快速開始指令與贊助商區塊,文件品質高;但屬於資源彙整類repo,測試不適用,故不評估程式碼測試覆蓋率。近期(2026-08-22)仍持續推送更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供的安裝方式為標準 git clone + pip install -r requirements.txt + streamlit run,以及透過 npx skills add 安裝第三方 Agent Skill,未見 curl | bash 類高風險安裝手法",
+          "本評估僅基於 README 內容,未對原始碼進行實際安全審查,無法保證每個子專案內部程式碼的安全性"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對想快速上手 LLM Agent 開發或尋找實作範本的工程師來說是相當實用的資源庫,但作為彙整型repo,品質仍取決於各子專案本身,建議實際使用前自行檢視程式碼。",
+      "_mode": "light"
+    }
+  },
+  "marin-community/marin": {
+    "first_seen": "2026-08-26",
+    "last_seen": "2026-08-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-26": [
+        2105,
+        231,
+        13,
+        "Open-source framework for the research and development of foundation models.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-26",
+    "analysis": {
+      "one_liner": "Stanford CRFM 與 Open Athena 共同打造的開源基礎模型研發框架,涵蓋資料處理到預訓練、後訓練與評估全流程。",
+      "summary": "Marin 是一個用於基礎模型(LLM)研究與開發的研究計畫暨軟體平台,提供資料策劃、轉換、過濾、tokenization、預訓練、後訓練與評估的完整工具鏈。專案強調「open development」理念,公開所有實驗過程與失敗紀錄,並已釋出如 Delphi scaling suite、8B/32B 模型等具體研究成果與 checkpoint。",
+      "category": "ai-ml",
+      "highlights": [
+        "採用類 Makefile 的拓撲式步驟執行架構(StepRunner),實驗步驟間可宣告相依關係並自動排程",
+        "已發表多項具體研究成果:Delphi scaling suite(3e18~1e23 FLOPs)、8B 模型效能超越 Llama 3.1 8B、32B 模型等,並公開 checkpoint 與訓練腳本",
+        "目前主力開發 5e24 model-FLOPs、5000 億+參數的前沿 MoE 模型",
+        "提供完整文件站(ReadTheDocs)、教學(安裝、tiny model 訓練、大型 LM 訓練)與 Discord 社群",
+        "支援 TPU(Google TRC)與多切片訓練,並已延伸應用於音訊、DNA、蛋白質模型等領域"
+      ],
+      "use_cases": [
+        "研究團隊需要一套可重現、可追蹤實驗流程的 LLM 預訓練/後訓練框架",
+        "學習 scaling law 與大型模型訓練方法論(參考 Delphi 相關資料與部落格)",
+        "在 TPU/GPU 叢集上進行大規模資料處理與模型訓練的工程參考",
+        "將 Marin 作為 library 延伸應用到非文字模態(如 DNA、蛋白質、音訊)模型訓練"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容完整,連結至獨立文件站、多篇教學、貢獻指南與技術部落格,說明清楚且有具體研究產出佐證;僅依 README 評估,未檢視程式碼與測試涵蓋率,故測試面向評分僅供參考。今日推送更新且為 GitHub trending 新上榜(#13),社群活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "由 Stanford CRFM 與 Open Athena 背書、有實際研究成果佐證的開源 LLM 訓練框架,對關注大規模預訓練與 open development 實務的工程師值得一看。",
+      "_mode": "light"
+    }
+  },
+  "DietrichGebert/ponytail": {
+    "first_seen": "2026-08-26",
+    "last_seen": "2026-08-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-26": [
+        111025,
+        982,
+        14,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-26",
+    "analysis": {
+      "one_liner": "一套讓 AI coding agent(Claude Code、Codex、Cursor 等近 20 種工具)在寫程式時「先想清楚再少寫程式碼」的規則/技能套件。",
+      "summary": "Ponytail 不是傳統函式庫,而是一組給 AI agent 使用的 prompt/skill 規則檔(YAGNI 分級決策梯:先問要不要做、能不能重用既有程式碼、標準庫/原生功能/既有套件能不能解決,最後才寫最少必要程式碼),透過 hooks 在每次對話開頭把規則注入 agent 的 system context。專案同時附上可重現的 benchmark(比較有無此 skill 時 agent 產出的程式碼量、token、成本、時間),並針對 20 種常見 agent host(Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode 等)各自提供對應的安裝格式與規則檔。",
+      "category": "devtool",
+      "highlights": [
+        "核心是「決策梯」提示工程:YAGNI→重用→標準庫→原生功能→既有依賴→單行→最小實作,且明確保留輸入驗證、錯誤處理、安全性、無障礙等「不可偷懶」項目",
+        "附完整可重現 benchmark(agentic 與 single-shot 兩種),用真實 FastAPI+React repo 的 diff 量化 LOC/token/成本/時間節省幅度,並誠實揭露先前測量方法的偏誤與修正",
+        "同時支援 Claude Code、Codex、Copilot CLI、Gemini/Antigravity CLI、OpenCode、Qoder、Devin、Grok、Hermes、Swival、Cursor/Windsurf/Cline 等近 20 種 agent host,各自對應規則檔或 plugin 格式",
+        "package.json 無 preinstall/postinstall 生命週期腳本,repo 內找不到 curl|bash 或 obfuscated/base64 payload;CI(GitHub Actions)跑 node --test 涵蓋十餘個測試檔,含跨平台 hooks、各 agent plugin 格式的一致性檢查",
+        "採用 markdown 規則檔 + 少量 Node.js hook 腳本的極簡架構,程式碼本身(如 uninstall.js)有清楚的邊界處理註解,符合專案自身標榜的極簡風格(dogfooding)"
+      ],
+      "use_cases": [
+        "希望 AI coding agent(Claude Code/Codex/Copilot CLI 等)減少過度工程化、亂裝套件或寫冗長樣板碼的團隊",
+        "需要一套可攜式規則(AGENTS.md/rules 檔)跨多種 agent host 統一「少寫程式碼」行為準則的開發者",
+        "對「AI agent 產出程式碼量/成本/速度」量化評估有興趣,想參考其 benchmark 方法論的研究者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整(多語 README、docs/agent-portability.md、benchmarks/README 附方法論與限制說明),對各 agent host 的差異描述極其詳細。測試涵蓋各 plugin 格式與跨平台 hooks,CI 有版本一致性與規則副本一致性檢查,顯示維護嚴謹;測試以行為/整合測試為主,核心邏輯是 markdown 提示文字而非傳統演算法,較難用單元測試竭盡「規則有沒有生效」。近期仍有 push(2026-08-07)且短時間內衝上 trending 第14名、star 數暴增,活躍度高但暴增幅度值得留意。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 未使用 preinstall/postinstall 等 npm 生命週期腳本執行任意程式碼",
+          "repo 內未發現 curl|bash 式安裝腳本、明顯混淆或 base64 長字串 payload",
+          "唯一涉及子行程執行的程式碼(benchmarks/correctness.js 使用 execSync)僅用於本地 benchmark 產物驗證(執行受測產生的 node/python 檔案),非安裝流程的一部分"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念新穎且執行嚴謹(有實測 benchmark 佐證、跨平台支援齊全、無安裝期風險程式碼),但本質是一組提示工程規則檔而非傳統程式庫,效果高度依賴底層模型是否確實遵循指令,值得關注但不必神化其量化數字。",
+      "_mode": "full"
+    }
+  },
+  "anthropics/claude-plugins-official": {
+    "first_seen": "2026-08-26",
+    "last_seen": "2026-08-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-26": [
+        34093,
+        55,
+        15,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-26",
+    "analysis": {
+      "one_liner": "Anthropic 官方維護的 Claude Code 外掛(plugin)目錄與市集,收錄開發工具、MCP 整合與生產力外掛。",
+      "summary": "這是 Anthropic 官方的 Claude Code 外掛市集(marketplace),透過單一 marketplace.json 索引數百個內部與第三方外掛,涵蓋安全掃描、程式碼現代化、MCP 伺服器整合(GitHub、Discord、Asana 等)。專案本身以 Python/JS 撰寫的 CI 自動化腳本為核心,負責驗證外掛結構、定期同步上游 SHA、並用 Claude 模型對每個外部外掛進行安全政策掃描,解決「如何安全地聚合第三方 AI 代理擴充套件」的信任與治理問題。",
+      "category": "devtool",
+      "highlights": [
+        "自建 AI 驅動的外掛安全掃描流程(scan-plugins.yml),對每個第三方外掛的原始碼、hooks、skills 逐一審查隱私與濫用風險,並有詳細的審查 prompt 規範跨服務憑證外洩等情境",
+        "verdict cache 機制精心設計,以 (plugin, sha) 為 key 避免每晚重複掃描,並在政策更新時自動失效重掃,工程細節相當成熟",
+        "涵蓋 490+ 個外掛檔案,含 42Crunch、Adobe、GitHub、Discord、Asana 等官方與第三方整合",
+        "內部 Python 程式碼(如 claude-security 外掛的 finding.py)型別註解完整、註解聚焦在「為什麼」而非「做什麼」,程式碼品質高",
+        "外掛名稱不可變更(immutable slug)與 renames 遷移機制設計嚴謹,避免破壞既有使用者安裝"
+      ],
+      "use_cases": [
+        "尋找官方認證的 Claude Code 外掛來擴充開發流程(程式碼審查、安全掃描、MCP 整合等)",
+        "想了解如何為自己的工具建立 Claude Code plugin marketplace 條目",
+        "研究如何用 CI + LLM 對第三方擴充套件做自動化安全政策審查",
+        "評估要不要提交自己的工具作為官方或第三方外掛"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "文件品質極高,README 清楚說明結構、安裝與貢獻流程,CI workflow 內附大量「為什麼這樣設計」的說明性註解。此倉庫本身沒有傳統單元測試目錄,但以 schema 驗證 + AI 安全掃描取代測試角色,對這種以 JSON/Markdown 為主體的市集倉庫而言是合理做法。活躍度極高,最後推送在分析當日,且有多條每日/每次 PR 觸發的自動化 workflow。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "這是一個外掛「目錄/市集」倉庫,實際風險主要來自其收錄的第三方外掛(external_plugins/*)本身,而非本倉庫程式碼;README 已明確警告使用者需自行評估信任外掛",
+          "部分外掛(如 discord、imessage 等)的 package.json start 腳本會執行 bun install 並啟動本地 MCP server,屬 MCP 整合常見模式,未發現生命週期腳本(postinstall/preinstall)藏有可疑外部下載或執行",
+          "搜尋倉庫內未發現 curl|bash 或 iwr|iex 式的一鍵執行安裝腳本用於本倉庫自身建置流程,少數 curl 出現在外掛文件中屬第三方工具安裝說明"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "官方出品、治理機制成熟,值得追蹤;若要安裝其中的第三方外掛仍需依 README 提醒自行評估個別外掛的信任度。",
+      "_mode": "full"
+    }
+  },
+  "asciimoo/hister": {
+    "first_seen": "2026-08-26",
+    "last_seen": "2026-08-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-26": [
+        2779,
+        98,
+        16,
+        "Your own search engine",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-26",
+    "analysis": {
+      "one_liner": "自架的個人瀏覽紀錄與檔案全文搜尋引擎,支援網頁、終端機與 MCP 客戶端存取。",
+      "summary": "Hister 是一個注重隱私的自架搜尋引擎,會將使用者瀏覽過的網頁與本機檔案內容建立全文索引,讓使用者可透過網頁介面、TUI 或連接 AI 助理的 MCP 伺服器重新找回這些資訊。專案支援瀏覽器擴充套件自動索引、爬蟲匯入、可選的語意搜尋,以及多使用者共享部署。",
+      "category": "app",
+      "highlights": [
+        "以 Go 撰寫,程式碼組織清晰(cmd/client/server/indexer 分層明確),229 個 _test.go 檔案顯示測試覆蓋相當完整",
+        "CI 使用 go test -race -cover 執行測試,並有獨立的 lint、build、docker-publish、winget-publish 等多條 pipeline",
+        "MCP 相關程式碼特別針對「間接提示注入」撰寫測試(例如搜尋結果中夾帶 'ignore previous instructions' 或隱藏字元時的清洗與正規化),顯示作者對 AI 助理串接的安全性有意識地設計防禦",
+        "Dockerfile 將所有基礎映像都以 sha256 摘要鎖定版本,並對下載的 yt-dlp 執行 checksum 驗證,屬於良好的供應鏈安全實踐",
+        "支援豐富的第三方服務匯入(linkding、linkwarden、karakeep、readeck、wallabag、shaarli 等),生態整合度高"
+      ],
+      "use_cases": [
+        "想要自架私人搜尋引擎,全文檢索自己瀏覽過的網頁與本機檔案",
+        "希望讓 AI 助理(透過 MCP)能查詢自己的瀏覽歷史與收藏內容,同時避免搜尋結果內容對 AI 助理造成提示注入風險",
+        "需要整合多個書籤/稍後閱讀服務(linkding、readeck、wallabag 等)並統一全文搜尋",
+        "團隊或家庭想要共享一台伺服器,但各使用者的文件與搜尋結果需要彼此隔離"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 簡潔但連結到完整的官方文件站(hister.org/docs),涵蓋 quickstart、隱私說明與設定細節。測試數量與涵蓋範圍在同類專案中相當突出,CI 有多條獨立 pipeline(test/lint/build/release/docker/winget),CHANGELOG 詳實且版本迭代快,近日仍持續 push,屬於活躍且工程紀律良好的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試紀律突出,且針對 MCP/AI 串接場景主動防範提示注入,值得對隱私自架工具或 MCP 生態感興趣的工程師關注。",
       "_mode": "full"
     }
   }
