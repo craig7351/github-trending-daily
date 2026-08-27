@@ -4484,10 +4484,10 @@
   },
   "Alishahryar1/free-claude-code": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-04": [
         44046,
@@ -4507,6 +4507,13 @@
         48979,
         891,
         1,
+        "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+        "Python"
+      ],
+      "2026-08-27": [
+        50383,
+        536,
+        4,
         "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
         "Python"
       ]
@@ -8771,10 +8778,10 @@
   },
   "basecamp/omarchy": {
     "first_seen": "2026-08-17",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-17": [
         25384,
@@ -8808,6 +8815,13 @@
         31269,
         1083,
         9,
+        "Beautiful, Modern & Opinionated Linux",
+        "Shell"
+      ],
+      "2026-08-27": [
+        32026,
+        1024,
+        7,
         "Beautiful, Modern & Opinionated Linux",
         "Shell"
       ]
@@ -10661,10 +10675,10 @@
   },
   "freestylefly/awesome-gpt-image-2": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-24": [
         12722,
@@ -10684,6 +10698,13 @@
         17803,
         1698,
         1,
+        "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "JavaScript"
+      ],
+      "2026-08-27": [
+        21330,
+        4050,
+        2,
         "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "JavaScript"
       ]
@@ -10727,10 +10748,10 @@
   },
   "tinyhumansai/openhuman": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-24": [
         36748,
@@ -10750,6 +10771,13 @@
         37775,
         542,
         8,
+        "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+        "Rust"
+      ],
+      "2026-08-27": [
+        38216,
+        525,
+        9,
         "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
         "Rust"
       ]
@@ -10791,10 +10819,10 @@
   },
   "VoltAgent/awesome-agent-skills": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-24": [
         31296,
@@ -10807,6 +10835,13 @@
         31877,
         602,
         18,
+        "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+        ""
+      ],
+      "2026-08-27": [
+        32644,
+        242,
+        16,
         "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
         ""
       ]
@@ -10899,10 +10934,10 @@
   },
   "anthropics/claude-plugins-community": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-24": [
         957,
@@ -10922,6 +10957,13 @@
         1748,
         351,
         2,
+        "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+        "Python"
+      ],
+      "2026-08-27": [
+        2198,
+        538,
+        11,
         "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
         "Python"
       ]
@@ -11038,10 +11080,10 @@
   },
   "MadsLorentzen/ai-job-search": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-25": [
         34074,
@@ -11054,6 +11096,13 @@
         35279,
         1265,
         3,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
+      ],
+      "2026-08-27": [
+        36478,
+        1300,
+        5,
         "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "Python"
       ]
@@ -11202,10 +11251,10 @@
   },
   "AgriciDaniel/claude-obsidian": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-25": [
         11902,
@@ -11217,6 +11266,13 @@
       "2026-08-26": [
         12720,
         813,
+        6,
+        "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+        "Python"
+      ],
+      "2026-08-27": [
+        13434,
+        810,
         6,
         "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
         "Python"
@@ -11256,10 +11312,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -11272,6 +11328,13 @@
         48978,
         569,
         7,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-08-27": [
+        49581,
+        838,
+        8,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -11411,15 +11474,22 @@
   },
   "marin-community/marin": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-26": [
         2105,
         231,
         13,
+        "Open-source framework for the research and development of foundation models.",
+        "Python"
+      ],
+      "2026-08-27": [
+        2462,
+        441,
+        15,
         "Open-source framework for the research and development of foundation models.",
         "Python"
       ]
@@ -11459,15 +11529,22 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-26": [
         111025,
         982,
         14,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-08-27": [
+        112568,
+        1598,
+        10,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -11510,15 +11587,22 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-26": [
         34093,
         55,
         15,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ],
+      "2026-08-27": [
+        34360,
+        308,
+        3,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
       ]
@@ -11605,6 +11689,200 @@
       },
       "star_rating": 4,
       "verdict": "工程品質與測試紀律突出,且針對 MCP/AI 串接場景主動防範提示注入,值得對隱私自架工具或 MCP 生態感興趣的工程師關注。",
+      "_mode": "full"
+    }
+  },
+  "tt-a1i/archify": {
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-27": [
+        17946,
+        1035,
+        1,
+        "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "HTML"
+      ]
+    },
+    "last_analyzed": "2026-08-27",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "讓 AI coding agent(Claude Code、Cursor、Codex 等)把系統描述或程式碼庫轉換成可互動、可驗證的架構圖 HTML 檔案。",
+      "summary": "Archify 是一個 Agent Skill,讓 LLM agent 根據使用者的文字描述或既有程式碼,產生 architecture、workflow、sequence、data-flow、lifecycle 五種類型的圖表,輸出為自帶互動性(縮放、搜尋、路徑追蹤、簡報模式)的單一 HTML 檔案,並可匯出 PNG/SVG/WebM。核心賣點是以型別化 JSON IR 搭配一整套原子化驗證器(schema、layout、路由碰撞、標籤遮蔽等檢查),確保產出的圖表不會有重疊、越界或失真的視覺瑕疵,取代人工手繪或 Mermaid 這類「畫完就算」的方案。",
+      "highlights": [
+        "型別化 JSON IR + 多達 9 項 showcase 級驗證檢查(schema、佈局、路由、標籤遮蔽等),生成前必須全部通過才會落地",
+        "支援 Architecture Delta(Before/Delta/After 比對)與 Evidence-backed 節點,可連結回實際 commit 的原始碼行號",
+        "零執行期依賴,產出為單一自包含 HTML,無需額外前端框架或雲端服務",
+        "CLI 提供 doctor/validate/preview/deliver 完整流程,preview 伺服器僅綁定 127.0.0.1,不對外開放",
+        "同時支援 Claude Code、Cursor、Codex CLI、opencode、Raven 等多種 agent 平台的 skill 安裝方式"
+      ],
+      "use_cases": [
+        "讓 coding agent 在分析完 repo 後自動產出可分享的系統架構圖,取代手畫或截圖 Mermaid",
+        "PR/設計審查時用 Architecture Delta 產生精確的變更前後對照圖",
+        "技術簡報或文件中需要一致視覺風格、支援深/淺色主題與匯出高解析度分享卡片的圖表"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為詳盡(README、SKILL.md、多份 references 規格),測試涵蓋面廣(80+ 個測試檔,含 golden file、i18n、視覺 containment、WebM 解碼等),CI 涵蓋多 Node 版本、跨平台 smoke test 及 release 一致性檢查,原始碼模組化清晰、註解精簡且多解釋『為何』而非『做什麼』,整體工程成熟度在 GitHub trending 專案中屬上乘。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件完整度都相當紮實,適合重度使用 coding agent 且需要產出高品質架構圖文件的團隊評估導入。",
+      "_mode": "full"
+    }
+  },
+  "ConardLi/garden-skills": {
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-27": [
+        10924,
+        113,
+        12,
+        "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+        "CSS"
+      ]
+    },
+    "last_analyzed": "2026-08-27",
+    "analysis": {
+      "one_liner": "test",
+      "summary": "test",
+      "category": "ai-ml",
+      "highlights": [
+        "a",
+        "b"
+      ],
+      "use_cases": [
+        "a",
+        "b"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 4,
+        "comment": "test"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "test",
+      "_mode": "full"
+    }
+  },
+  "browser-use/browser-use": {
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-27": [
+        110980,
+        149,
+        13,
+        "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-27",
+    "analysis": {
+      "one_liner": "讓 AI 代理像人類一樣操作瀏覽器完成任務的 Python 自動化框架",
+      "summary": "browser-use 是一套讓 LLM 驅動的 AI 代理能夠自動操作瀏覽器(點擊、輸入、填表、擷取資料)的 Python 函式庫,搭配 Playwright/CDP 控制瀏覽器,並可透過 CLI 技能方式讓 Claude Code、Cursor 等代理工具直接使用。專案同時提供開源函式庫與付費雲端代理服務(含隱身瀏覽器、代理輪替、CAPTCHA 處理等)。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援多家 LLM 供應商(OpenAI、Anthropic、Google、Groq、Ollama 等)並提供自家優化模型 ChatBrowserUse",
+        "內建安全機制測試涵蓋範圍廣,如網域過濾、IP 封鎖、敏感資料遮罩、下載檔名清理、上傳檔案隔離等",
+        "在 Odysseys leaderboard(200 項長時程網頁任務)排名第一,官方有公開 benchmark 專案佐證",
+        "提供 CLI 技能安裝模式,可直接整合進 Claude Code / Codex / Cursor 等代理工具使用",
+        "支援自訂 Tools 擴充代理能力,並可搭配 MCP 協定"
+      ],
+      "use_cases": [
+        "讓 AI 代理自動完成網頁表單填寫、求職申請等重複性操作",
+        "大規模、排程化的網頁資料擷取與結構化輸出",
+        "將瀏覽器自動化能力嵌入自家產品或 agent pipeline 中",
+        "作為 Claude Code / Cursor 等 coding agent 的瀏覽器操作技能擴充"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(README、FAQ、CLOUD.md、AGENTS.md 等),tests/ 目錄下有超過百支測試涵蓋瀏覽器互動、LLM 介接、安全性(網域過濾、IP 封鎖、敏感資料)等面向,CI workflow 齊全(lint、test、docker、publish)。版本號 0.13.8 顯示為成熟迭代中的專案,今日剛推送更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 中示範了以 curl 呼叫 Browser Use Cloud API(需搭配使用者自有 API key)以及在 bin/setup.sh 開發環境安裝腳本中執行 `curl -LsSf https://astral.sh/uv/install.sh | sh` 來安裝官方 uv 工具鏈,此為業界常見的開發環境安裝模式,非專案特有的異常行為",
+          "核心套件透過 pyproject.toml 中的 optional-dependencies 依平台安裝私有套件 browser-use-core(僅發布於 PyPI,原始碼未包含在此 repo 內),使用者若需要完整功能需信任該閉源二進位套件"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "功能完整、測試扎實、官方持續高頻更新的瀏覽器自動化代理框架,對於想做 LLM agent 網頁操作的工程師值得立即關注與嘗試。",
+      "_mode": "full"
+    }
+  },
+  "K-Dense-AI/scientific-agent-skills": {
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-27": [
+        34733,
+        138,
+        14,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-27",
+    "analysis": {
+      "one_liner": "一個收錄 163 個「Agent Skills」的科學研究技能庫,讓 Claude Code、Cursor、Codex 等 AI agent 秒變具備生物、化學、醫學、藥物開發等領域專業知識的「AI 科學家」。",
+      "summary": "此專案將 163 個經過驗證的科學計算技能(涵蓋生物資訊、化學資訊、蛋白質工程、臨床研究、材料科學等)與 100+ 個科學資料庫查詢介面打包成標準化的 Agent Skills / Agent Plugins 套件,讓支援該標準的 AI 編碼代理人可直接載入使用,省去自行摸索各科學套件 API 與資料庫端點的時間。每個技能都附有 SKILL.md 文件、程式範例與(若含腳本)對應測試套件,並由 CI 強制執行結構化契約檢查。",
+      "category": "ai-ml",
+      "highlights": [
+        "163 個技能對應 RDKit、Scanpy、BioPython、AlphaFold、DiffDock 等 70+ 科學 Python 套件,以及 78 個公開資料庫(PubChem、ChEMBL、ClinicalTrials.gov 等)的統一查詢介面",
+        "同時支援 Agent Skills 與 Agent Plugins 兩種開放標準,相容 Claude Code、Cursor、Codex、Gemini CLI、Google Antigravity 等多種 agent host",
+        "CI 設有『結構化契約』測試(tests/_meta),強制規定含 scripts/ 的技能必須有對應測試套件,並檢查 frontmatter、連結、腳本可解析性等",
+        "每週用 Cisco AI Defense Skill Scanner 對全部技能做 LLM 安全掃描,結果公開發布於 docs/security-report.md,展現高度透明度",
+        "README 中明確列出安全免責聲明,提醒使用者技能可執行任意程式碼、安裝套件、發出網路請求,務必自行審查再安裝"
+      ],
+      "use_cases": [
+        "讓 AI coding agent 快速執行藥物篩選、分子對接、ADMET 預測等藥物開發多步驟工作流",
+        "單細胞 RNA-seq、多體學(multi-omics)資料整合分析與生物標記發現",
+        "快速串接 78 個科學/財經資料庫(基因、化合物、臨床試驗、專利等)做可追溯的資料查詢",
+        "科學文獻回顧、證據可追溯的論文寫作與圖表/簡報產出"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質極高,README 逐一列出安裝方式、安全注意事項、163 個技能分類與範例,抽查的 SKILL.md 與 scripts(如 genomic-coordinates/convert_coords.py)程式風格清楚、型別註記完整、docstring 精確不冗長。測試方面有 tests/_meta 結構契約測試 + 215+ 個技能專屬測試檔,CI 對每個 PR 強制跑契約檢查與標準庫技能測試套件,但完整的 --isolated 全量測試(含需 GPU/CUDA/MATLAB 的技能)僅排程執行、不在每次 PR 跑。活躍度極高,2026-08-24 最新推送,近期提交密集,並持續發布 blog 深度剖析與基準測試。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "README 的『Security Disclaimer』章節明確指出:Agent Skills 可指示 AI agent 執行任意程式碼、安裝套件、發出網路請求、修改檔案,官方建議使用者只安裝實際需要的技能並自行審查 SKILL.md",
+          "專案每週用 LLM-based 掃描器(Cisco AI Defense Skill Scanner)掃描全部技能並公開發布結果(docs/security-report.md);截至 2026-08-24 的報告顯示 163 個技能中有 11 個被標記 CRITICAL、5 個 HIGH,例如 autoskill 技能因『讀取環境變數並發出網路呼叫』被掃描器標記為潛在資料外洩模式(該行為對照原始碼看似是呼叫 LLM API 時使用環境變數中的 API 金鑰,屬於此類工具常見的正常用法,但掃描器仍將其列為需人工複核的高風險模式)",
+          "README 中提供的是官方 uv 套件管理器安裝指令(curl | sh 與 irm | iex),來源為 astral.sh 官方網域,非本專案自建的安裝腳本"
+        ],
+        "risk_level_reason": null
+      },
+      "star_rating": 5,
+      "verdict": "文件、測試、CI 與安全透明度都做到業界少見的水準,是目前最完整的科學 AI Agent Skills 集合,值得科學/生醫 AI 研發工程師立即嘗試,但因技能本身具備任意程式碼執行能力,建議依官方建議只裝需要的子集並逐一檢視 SKILL.md。",
       "_mode": "full"
     }
   }

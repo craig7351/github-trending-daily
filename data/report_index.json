@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-27",
+    "analyzed": 4,
+    "cached": 12,
+    "deferred": 0,
+    "top_name": "browser-use/browser-use",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-26",
     "analyzed": 6,
     "cached": 10,
