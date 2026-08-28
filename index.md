@@ -13,18 +13,18 @@ title: "GitHub Trending 每日觀察"
 <section class="home-feature" aria-label="最新報告">
 <div class="latest-report">
 <span class="eyebrow">Latest report</span>
-<div class="latest-report__date">2026-08-27</div>
-<p class="latest-report__summary">完成 4 個專案分析，另有 12 個持續上榜。</p>
-<a class="text-link" href="reports/2026-08-27.html">閱讀完整報告</a>
+<div class="latest-report__date">2026-08-28</div>
+<p class="latest-report__summary">完成 8 個專案分析，另有 11 個持續上榜。</p>
+<a class="text-link" href="reports/2026-08-28.html">閱讀完整報告</a>
 <div class="metric-row">
-<div class="metric"><span class="metric__label">完成分析</span><span class="metric__value">4</span></div>
-<div class="metric"><span class="metric__label">持續上榜</span><span class="metric__value">12</span></div>
+<div class="metric"><span class="metric__label">完成分析</span><span class="metric__value">8</span></div>
+<div class="metric"><span class="metric__label">持續上榜</span><span class="metric__value">11</span></div>
 <div class="metric"><span class="metric__label">待分析</span><span class="metric__value">0</span></div>
 </div>
 </div>
 <div class="top-project">
 <span class="eyebrow">Project of the day</span>
-<h2 class="top-project__name">browser-use/browser-use</h2>
+<h2 class="top-project__name">calesthio/OpenMontage</h2>
 <div class="top-project__rating" aria-label="5 顆星">★★★★★</div>
 <p class="muted">依分析評分與當日關注度選出的快速入口。完整報告包含專案用途、亮點、品質與安全觀察。</p>
 <div class="top-project__meta">
@@ -41,10 +41,16 @@ title: "GitHub Trending 每日觀察"
 <div class="section-heading">
 <div>
 <h2>每日報告</h2>
-<p>共 33 份，最新報告置頂。</p>
+<p>共 34 份，最新報告置頂。</p>
 </div>
 </div>
 <div class="report-list">
+<a class="report-row" href="reports/2026-08-28.html">
+<span class="report-row__date">2026-08-28</span>
+<span class="report-row__count">分析 8 個</span>
+<span class="report-row__top">calesthio/OpenMontage · ★★★★★</span>
+<span class="report-row__arrow" aria-hidden="true">→</span>
+</a>
 <a class="report-row" href="reports/2026-08-27.html">
 <span class="report-row__date">2026-08-27</span>
 <span class="report-row__count">分析 4 個</span>

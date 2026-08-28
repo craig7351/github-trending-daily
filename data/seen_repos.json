@@ -114,8 +114,8 @@
   },
   "ComposioHQ/awesome-claude-skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-26",
-    "days_on_trending": 2,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         70055,
@@ -124,45 +124,50 @@
       "2026-07-26": [
         70586,
         577
+      ],
+      "2026-08-28": [
+        73611,
+        130,
+        16,
+        "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-07-25",
+    "last_analyzed": "2026-08-28",
     "analysis": {
-      "one_liner": "匯集 1000+ 個生產就緒 Claude Skills 的精選清單，讓 AI 代理能跨平台自動化工作流程",
-      "summary": "Awesome Claude Skills 是由 Composio 維護的精選資源清單，收錄超過 1000 個可直接用於生產環境的 Claude Skills 與插件。Claude Skills 是可重複使用的指令包，定義 AI 代理處理特定任務的行為模式，支援 Claude Code、Cursor、Gemini CLI、OpenAI Codex 等多個平台。此清單涵蓋文件處理、程式開發、資料分析、業務行銷等十大類別，並整合 Composio MCP Gateway 以串接外部服務，解決 AI 代理在生產環境中缺乏現成可用行為模組的問題。",
-      "category": "ai-ml",
+      "one_liner": "由 Composio 維護的 Claude Skills 精選清單,收錄上千個可用於 Claude 與其他 AI 編碼代理的技能與外掛。",
+      "summary": "這是一個 awesome-list 風格的資源彙整專案,分類整理超過千個 Claude Skills(SKILL.md 格式的可重用指令包),涵蓋文件處理、開發工具、資料分析、行銷溝通等領域,並支援 Claude Code、Claude.ai、Codex、Cursor、Gemini CLI 等多種代理平台。README 同時說明 Skills 的技術原理(漸進式載入、與 MCP/工具的分工),並置入 Composio 自家 MCP Gateway 與 connect-apps 外掛的安裝導引與推廣連結。",
+      "category": "learning-resource",
       "highlights": [
-        "收錄 1000+ 個涵蓋十大類別的 Claude Skills，從文件處理到資安系統一應俱全，可直接部署於生產環境",
-        "Skills 採漸進式載入機制，每個 skill 僅佔約 100 tokens，允許單一代理托管數百個 skills 而不撐爆 context window",
-        "跨平台支援：Claude Code、Claude.ai、OpenAI Codex、Cursor、Gemini CLI、Antigravity、Windsurf 均相容",
-        "內建 Composio MCP Gateway，單一端點串接 1000+ 第三方服務（含身份驗證管理、團隊存取控管與稽核日誌）",
-        "採 Anthropic 於 2025 年 12 月發布的開放標準格式（SKILL.md + YAML frontmatter），生態系持續擴張"
+        "收錄超過 1000 個第三方貢獻的 Claude Skills,依用途分成 10 大類別方便查找",
+        "清楚解說 Skills 格式的起源(2025/10 由 Anthropic 推出,2025/12 開源標準化)及與 MCP、工具層的差異",
+        "提供 Composio connect-apps 外掛的安裝與 API 金鑰設定教學,讓 Claude 串接 1000+ 應用程式",
+        "README 結構完整、目錄清晰,但明顯帶有 Composio 商業產品的行銷內容"
       ],
       "use_cases": [
-        "AI 代理開發者需要快速找到現成 Skills 擴充 Claude 能力時的一站式參考索引",
-        "企業工作流程自動化：透過 Skills 串接 Gmail、Slack、GitHub、Notion 等 1000+ SaaS 服務執行真實操作",
-        "開發工具強化：程式碼審查、LangSmith 追蹤分析、iOS 模擬器測試、FFUF Web Fuzzing 等開發輔助情境",
-        "多代理編排：利用 great_cto 等 skill 實現架構設計、TDD、QA、資安審計的完整 SDLC 多代理協作流程"
+        "快速尋找適合特定任務(如文件處理、程式碼審查、資料分析)的現成 Claude Skill",
+        "學習如何撰寫自己的 SKILL.md 及技能封裝結構",
+        "探索將 Claude 與外部 SaaS 應用(Gmail、Slack、GitHub 等)串接自動化的作法"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 1,
-        "activity": 5,
-        "comment": "資源彙整類，測試不適用。README 結構清晰、分類完整，附有快速入門指南與清晰的架構層次說明（Skills vs MCP vs Tools 的職責劃分），品質屬 awesome list 中的佼佼者。需注意此清單本質上也是 Composio 平台的行銷導流工具，部分連結指向 Composio 付費服務，使用時應有所區別。"
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README 撰寫完整、分類清楚、更新頻率高(近期即有推送),且今日登上 GitHub trending 並單日增加 130+ 星,顯示社群關注度高;但內容夾雜大量 Composio 產品推廣段落,實用資訊與商業行銷比例需留意。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "快速入門需安裝外部插件目錄（`claude --plugin-dir ./connect-apps-plugin`）並貼入 Composio API 金鑰，需留意金鑰來源與儲存安全",
-          "Chrome Relay skill 需同時安裝 Chrome Web Store 擴充功能與本機 CLI 橋接程式，賦予代理存取使用者已登入 Cookie 與 SSO 工作階段的能力，應謹慎評估使用情境"
+          "README 提供的 connect-apps 外掛安裝步驟需貼上 Composio 平台的 API 金鑰才能運作,使用前應了解該金鑰的用途與授權範圍,並確認信任 Composio 這個第三方服務",
+          "本評估僅根據 README 內容,未檢視原始碼,無法確認清單內各外部連結技能的實際安全性"
         ]
       },
       "star_rating": 4,
-      "verdict": "對於積極使用 Claude Code 或構建多代理系統的 AI 工程師而言，這是目前覆蓋最廣的 Claude Skills 生態系索引，值得加入書籤作為長期參考，但應留意其背後的 Composio 商業訴求。",
+      "verdict": "作為尋找與學習 Claude Skills 的入口清單相當實用且收錄豐富,但需自行辨別其中夾雜的 Composio 商業推廣內容。",
       "_mode": "light"
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 1
   },
   "Pumpkin-MC/Pumpkin": {
     "first_seen": "2026-07-25",
@@ -5808,10 +5813,10 @@
   },
   "TauricResearch/TradingAgents": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-26",
+    "last_seen": "2026-08-28",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-09": [
         96733,
@@ -5831,6 +5836,13 @@
         100250,
         218,
         5,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
+      ],
+      "2026-08-28": [
+        101230,
+        229,
+        19,
         "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "Python"
       ]
@@ -7144,10 +7156,10 @@
   },
   "calesthio/OpenMontage": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
+    "last_seen": "2026-08-28",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-12": [
         47342,
@@ -7155,38 +7167,45 @@
         15,
         "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "Python"
+      ],
+      "2026-08-28": [
+        52369,
+        1292,
+        9,
+        "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-12",
+    "last_analyzed": "2026-08-28",
     "analysis": {
-      "one_liner": "用 AI 編碼助手(Claude Code、Cursor 等)直接指揮的全自動 AI 影片製作系統,涵蓋研究、腳本、素材生成到剪輯合成的完整 12 種製作流程。",
-      "summary": "OpenMontage 是一套「agent-first」的開源影片製作框架:沒有傳統程式化的中控引擎,而是讓 AI 編碼助手讀取 YAML 流程 manifest 與 Markdown 技能檔案,自行呼叫 100+ 個 Python 工具(影像/影片生成、TTS、配樂、字幕、後製)完成從研究到成片的完整流程。內建 700+ 份技能與知識文件教 agent 如何正確使用每個供應商 API,並有審核關卡、成本控管與品質檢核機制,目標是取代「一句 prompt 出一段影片」的粗糙玩法,做出真正可控、可稽核的產出。",
+      "one_liner": "把 Claude Code / Cursor 等 AI 編碼助手變成一套完整影片製片廠的開源代理系統。",
+      "summary": "OpenMontage 是一套以 Python 打造的「agent-first」影片生產框架,提供 10+ 條完整製片管線(說明影片、動畫、紀錄片剪輯、有聲書轉影片等)、100+ 個生產工具與 700+ 份技能/知識文件,讓 AI 編碼助手依循 YAML 管線定義與 Markdown 技能檔案,自動完成研究、腳本、素材生成、剪輯與最終合成。特點是可用免費/開源素材(Archive.org、NASA、Wikimedia、Piper TTS)做出真實運鏡的影片,也支援串接 20+ 雲端生成式模型供應商。",
       "category": "ai-ml",
       "highlights": [
-        "12 條完整製作流程(explainer、cinematic trailer、documentary montage、talking head 等),每條都走 research→proposal→script→scene_plan→assets→edit→compose 標準管線",
-        "三層知識架構(tools/ 執行層、skills/ 使用規範層、.agents/skills/ 技術知識層)讓 agent 分層讀取「有什麼工具」「怎麼用」「技術細節」,設計思路清晰",
-        "內建 Backlot 即時看板,可視化呈現生成進度、成本與審核關卡,並支援場景級人工核准,而非全自動黑箱輸出",
-        "支援 15+ 影片供應商、11 個圖像供應商、5 個 TTS 供應商,並用 7 維度評分引擎自動選擇最佳供應商,同時保留免費/本地路徑(Piper TTS、Archive.org 素材、本地 GPU 生成)",
-        "測試覆蓋涵蓋 contracts、tools、qa、eval harness 等多層級,CI 在 push/PR 時跑 lint 與完整測試,工程紀律明顯高於一般 AI demo 專案"
+        "三層知識架構(tools/pipeline_defs 定義能力、skills 教如何用、agent_skills 提供第三方技術深度知識),讓 AI agent 能自主規劃製片流程",
+        "有實際嚴謹的品質治理機制:預合成驗證、投影片風險評分、後製自我檢查(ffprobe、音訊分析)、預算管控與人工核准關卡",
+        "可完全零付費 API 運作,靠 Piper TTS、Archive.org/NASA/Wikimedia 開放素材與 Remotion/FFmpeg 做出真正的成品影片",
+        "BaseTool 抽象類別設計乾淨,型別提示完整,提供成本估算、依賴檢查、重試策略、可續跑等生產級工具契約",
+        "支援 20+ 影片生成、15+ 圖像生成、10+ TTS 供應商,並用 7 維度評分引擎自動選擇最佳供應商"
       ],
       "use_cases": [
-        "想用 AI 編碼助手一句話生成解說影片、產品廣告、社群短片,不想自己手動串接十幾個 API",
-        "需要免費/開源路徑產出「真實素材剪輯」的紀錄片式短片(而非單純把靜態圖動畫化)",
-        "研究如何設計「agent 讀 YAML/Markdown 指令、呼叫工具、自我審核、寫入決策紀錄」的 agentic 系統架構",
-        "需要多供應商影片/圖像/TTS 生成的評分與容錯選擇機制作為系統設計參考"
+        "用自然語言 prompt 讓 AI 助手自動生成教育類說明影片或社群短影音",
+        "用免費開放素材做紀錄片式蒙太奇剪輯,不需任何付費生成式 API",
+        "將長 Podcast 或直播錄影自動剪成多支短影片供社群發布",
+        "建立品牌形象片、產品發表 Teaser 或多語系字幕/配音的在地化影片"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
-        "activity": 5,
-        "comment": "文件與知識庫規模驚人(700+ 技能檔、完整 README/AGENT_GUIDE/PROJECT_CONTEXT),抽樣檢視的 base_tool.py、tool_registry.py 程式碼結構清晰、有適度註解說明「為什麼」而非「做什麼」,例如針對 Windows cp1252 編碼問題的特別處理顯示作者實際踩過坑。測試目錄分層完整(contracts/tools/qa/eval),CI 會跑 lint 與全測試。唯一保留是專案規模極大、多數功能依賴付費第三方 API,實際端到端品質難以在不執行的情況下驗證。"
+        "activity": 4,
+        "comment": "README 與 docs/(ARCHITECTURE.md、PROVIDERS.md 等)寫得極為詳盡,700+ skill 檔案更是罕見的知識庫規模;tests/ 目錄下有 100+ 測試(contracts、tools、qa、backlot 等分類),CI 於 push/PR 皆執行 make lint 與 make test,顯示有基本的自動化把關。抽樣讀到的核心程式碼(base_tool.py、corpus.py)風格一致、型別完整、註解說明設計取捨而非贅述,工程水準高於一般個人專案。近期最後一次 push 在 2026-08-22,屬今日剛登上 trending 第一天,活躍度資訊尚待觀察後續是否持續維護這麼龐大的程式碼庫。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 4,
-      "verdict": "工程設計扎實、文件與測試完備,若你想探索或建構 agentic 影片生產系統,非常值得一看;但依賴大量第三方付費 API,實際「開箱即用」的體驗仍取決於你手上有多少金鑰。",
+      "star_rating": 5,
+      "verdict": "工程品質與文件深度都相當紮實,加上「用開源素材做出真實運鏡影片」的差異化賣點,是今天最值得點進去仔細研究的 AI 專案之一。",
       "_mode": "full"
     }
   },
@@ -8428,10 +8447,10 @@
   },
   "OpenCut-app/OpenCut": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-19",
+    "last_seen": "2026-08-28",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-15": [
         83164,
@@ -8451,6 +8470,13 @@
         84785,
         192,
         13,
+        "The open-source CapCut alternative",
+        "TypeScript"
+      ],
+      "2026-08-28": [
+        87433,
+        478,
+        18,
         "The open-source CapCut alternative",
         "TypeScript"
       ]
@@ -10675,10 +10701,10 @@
   },
   "freestylefly/awesome-gpt-image-2": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-24": [
         12722,
@@ -10705,6 +10731,13 @@
         21330,
         4050,
         2,
+        "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "JavaScript"
+      ],
+      "2026-08-28": [
+        23010,
+        2096,
+        3,
         "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "JavaScript"
       ]
@@ -11251,10 +11284,10 @@
   },
   "AgriciDaniel/claude-obsidian": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-25": [
         11902,
@@ -11274,6 +11307,13 @@
         13434,
         810,
         6,
+        "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+        "Python"
+      ],
+      "2026-08-28": [
+        14007,
+        634,
+        14,
         "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
         "Python"
       ]
@@ -11312,10 +11352,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -11335,6 +11375,13 @@
         49581,
         838,
         8,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-08-28": [
+        50170,
+        552,
+        10,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -11474,10 +11521,10 @@
   },
   "marin-community/marin": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-26": [
         2105,
@@ -11489,6 +11536,13 @@
       "2026-08-27": [
         2462,
         441,
+        15,
+        "Open-source framework for the research and development of foundation models.",
+        "Python"
+      ],
+      "2026-08-28": [
+        2697,
+        255,
         15,
         "Open-source framework for the research and development of foundation models.",
         "Python"
@@ -11529,10 +11583,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -11545,6 +11599,13 @@
         112568,
         1598,
         10,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-08-28": [
+        114054,
+        1613,
+        8,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -11587,10 +11648,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -11603,6 +11664,13 @@
         34360,
         308,
         3,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ],
+      "2026-08-28": [
+        34691,
+        292,
+        6,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
       ]
@@ -11694,10 +11762,10 @@
   },
   "tt-a1i/archify": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-27": [
         17946,
@@ -11705,6 +11773,13 @@
         1,
         "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "HTML"
+      ],
+      "2026-08-28": [
+        23268,
+        4239,
+        4,
+        "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-08-27",
@@ -11741,15 +11816,22 @@
   },
   "ConardLi/garden-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-27": [
         10924,
         113,
         12,
+        "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+        "CSS"
+      ],
+      "2026-08-28": [
+        11328,
+        415,
+        11,
         "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
         "CSS"
       ]
@@ -11835,15 +11917,22 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-28",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-27": [
         34733,
         138,
         14,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-08-28": [
+        35316,
+        498,
+        7,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -11883,6 +11972,300 @@
       },
       "star_rating": 5,
       "verdict": "文件、測試、CI 與安全透明度都做到業界少見的水準,是目前最完整的科學 AI Agent Skills 集合,值得科學/生醫 AI 研發工程師立即嘗試,但因技能本身具備任意程式碼執行能力,建議依官方建議只裝需要的子集並逐一檢視 SKILL.md。",
+      "_mode": "full"
+    }
+  },
+  "bilawalsidhu/gods-eye-view": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-28": [
+        8077,
+        1984,
+        1,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-28",
+    "analysis": {
+      "one_liner": "在瀏覽器裡打造一座「間諜衛星模擬器」,但資料全部來自公開來源的即時 3D 地球儀。",
+      "summary": "God's Eye View 是一個純前端(Vanilla JS + CesiumJS + Vite)打造的即時地理空間情報視覺化工具,把即時航班、船舶、衛星、地震、交通、公開監視器等公開資料源整合到一個逼真的 3D 地球儀上,並支援語音操控攝影機與圖層。專案定位為探索/學習用的開源基礎,而非硬化過的正式服務,所有需要密鑰的第三方請求都透過 Vite 開發伺服器代理,只有 Google Maps 與 Cesium ion 兩把公開型金鑰會落到瀏覽器端。",
+      "category": "web",
+      "highlights": [
+        "整合 13 種即時圖層(航班、船舶、衛星、地震、交通、監視器、電台、消防等),其中 10 種完全免金鑰即可使用",
+        "內建 OpenAI Realtime 語音代理,可用自然語言操控鏡頭、標註地圖、查詢即時圖資,共 28 個語音工具",
+        "SGP4 衛星軌道推算、真實大地水準面高度貼合地形、螢幕空間航向投影等紮實的圖形工程細節",
+        "伺服器端代理刻意做了 SSRF 防護(CCTV 代理只抓白名單網址)、DNS 私網位址過濾、OpenSky 用量治理器等資安考量",
+        "155+ 個單元測試檔案,涵蓋資料轉換、渲染策略、語音工具等核心邏輯"
+      ],
+      "use_cases": [
+        "學習如何在瀏覽器端用 CesiumJS 組合多種即時地理空間資料源並做效能治理(快取、配額、降級)",
+        "OSINT/GEOINT 愛好者用來即時觀察全球航班、船舶、衛星、突發事件等公開訊號",
+        "作為個人專案的起點,擴充自訂的圖層或資料來源(專案明確歡迎 PR)",
+        "研究如何安全地在客戶端應用中代理第三方 API 金鑰(server-side broker 模式)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 SECURITY.md、DATA_SOURCES.md 等文件寫得極為詳盡,對每個資料源的授權狀態、成本、風險都有清楚標示;程式碼內附有豐富的 JSDoc 註解與設計理由說明。測試檔案數量龐大(155+),涵蓋多數核心邏輯模組,但採用自訂測試跑者(scripts/run-unit-tests.mjs)而非標準框架,且未見 .github/workflows 下的 CI 設定,自動化驗證流程不明。專案剛開源、單日暴漲近 2000 星,活躍度高但屬個人維護的早期開源狀態。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Vite 開發伺服器會把 Google Maps API 金鑰與 Cesium ion token 透過 define 注入前端 bundle,屬專案文件中明確說明且建議使用者在對應平台限制網域/權限的公開型金鑰",
+          "若使用者選擇以 --host 0.0.0.0 開放區網存取,同區網任何人都能透過該伺服器代理消費其 OpenAI/Google/OpenSky/AISStream/TomTom/FIRMS 等金鑰額度,專案文件已明確警告此風險並提供限流參數,預設仍綁定 localhost",
+          "未發現 npm 生命週期腳本(postinstall 等)執行外部下載或 curl|bash 型態的安裝流程,scripts/ 下的 shell 腳本均為本機開發輔助用途"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程紮實、文件透明、資安考量到位的開源地理空間情報視覺化專案,值得瀏覽器 3D 圖形或 OSINT 愛好者一探究竟,但仍是個人維護的早期專案,非正式生產服務。",
+      "_mode": "full"
+    }
+  },
+  "zedeus/nitter": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-28": [
+        13878,
+        71,
+        2,
+        "Alternative Twitter front-end",
+        "Nim"
+      ]
+    },
+    "last_analyzed": "2026-08-28",
+    "analysis": {
+      "category": "web",
+      "one_liner": "用 Nim 打造的開源 Twitter/X 替代前端,強調隱私與輕量,無需 JavaScript 即可瀏覽。",
+      "summary": "Nitter 是自架式的 Twitter/X 前端,所有請求經由後端代理轉發,避免使用者 IP 與瀏覽器指紋被 Twitter/X 追蹤,且頁面體積僅為官方站台的一小部分。專案採用非官方 API 搭配 cookie/OAuth session pool 來繞過官方認證機制,近期(2026-08-24)收到 X Corp 的存證信函,要求下架所有 Nitter 實例與此原始碼庫。",
+      "highlights": [
+        "README 明確揭露 2026-08-24 收到 X Corp 存證信函,要求永久下架所有 Nitter 實例與此 repo",
+        "核心邏輯(auth.nim/apiutils.nim)品質扎實:session pool 管理、rate-limit 追蹤、Cloudflare 阻擋偵測、重試機制都寫得頗完整",
+        "tests/ 目錄有大量以 pytest 撰寫的黑箱整合測試,針對真實跑起來的 nitter binary 打請求驗證,並含有 SSRF(test_ssrf_1411.nim)與惡意路徑(test_security.py)的迴歸測試",
+        "CI(run-tests.yml)會實際編譯多個 Nim 版本、啟動 Redis 與 nitter binary 後跑完整整合測試,而非只是型別檢查",
+        "Docker 為標準 multi-stage build,無可疑的安裝腳本或外部下載執行行為"
+      ],
+      "use_cases": [
+        "自架一個不需要 Twitter/X 帳號、不執行 JavaScript 即可瀏覽推文的前端",
+        "作為隱私工具串接 RSS/Feed 使用,避免被官方站台做瀏覽器指紋追蹤",
+        "研究如何用 Nim 撰寫非官方 API 反向工程用戶端(session pool、OAuth1、GraphQL endpoint 拼湊)",
+        "作為架設自己 Twitter mirror 服務或提供給社群使用的公共實例(需留意法律風險)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整(README 涵蓋安裝、Docker、systemd、log 說明),核心程式碼結構清晰、有明確的錯誤處理與重試邏輯;測試涵蓋整合層級且含安全迴歸測試(SSRF、惡意路徑),CI 有實際編譯 + 跑測試而非形式檢查。活動度極高,最近才收到法律存證信函仍持續推送更新(2026-08-26),但需注意此為使用非官方 API 的第三方前端,維護風險受法律行動影響。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "程式碼與測試品質都在水準之上,是值得關注的隱私工具專案,但因近日收到 X Corp 存證信函,其未來可用性與法律風險是採用前須評估的重點。",
+      "_mode": "full"
+    }
+  },
+  "JetBrains/go-modern-guidelines": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-28": [
+        2095,
+        300,
+        5,
+        "Help AI coding agents write modern Go",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-28",
+    "analysis": {
+      "one_liner": "JetBrains 官方出品的 CLI/Skill,提供 Go 1.0~1.27 現代化寫法指南,讓 AI coding agent 寫出符合最新語言慣例的 Go 程式碼。",
+      "summary": "這個工具不是給人用的函式庫,而是設計給 Claude Code、Junie、Codex、Cursor 等 AI 編碼代理使用的知識來源。它會偵測專案 go.mod 的 Go 版本,回傳該版本可用的現代化寫法清單(如用 slices.Contains 取代手寫迴圈、cmp.Or 取代連續 nil 檢查),解決 LLM 訓練資料過時、傾向輸出舊寫法的問題。",
+      "category": "devtool",
+      "highlights": [
+        "以 skill/plugin 形式整合進 Claude Code、Junie、Codex、Cursor 等主流 AI 編碼代理,而非傳統函式庫",
+        "guidelines.json 內建結構化的規則資料庫,含 before/after 程式碼範例,並依 go.mod 版本自動篩選適用規則",
+        "CLI 採用 go install 於首次使用時自動下載安裝至本機快取目錄,不修改使用者專案",
+        "程式碼結構簡潔,cli.go / guidelines.go 職責分離清楚,並有對應的 *_test.go 單元測試覆蓋核心邏輯",
+        "提供 make dev-install 搭配環境變數 GO_MODERN_GUIDELINES_DEV,方便開發者在本機測試修改後的 CLI 版本"
+      ],
+      "use_cases": [
+        "在 Claude Code / Cursor / Codex 等 AI 代理輔助寫 Go 程式碼時,自動套用符合專案 Go 版本的現代慣用寫法",
+        "團隊想確保 AI 產生的 Go 程式碼不會使用過時語法(如手寫迴圈、舊式錯誤處理)",
+        "比對特定 Go 版本(如 1.24~1.27)新增的語言特性與標準庫用法,作為 code review 或教學參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 3,
+        "comment": "README 對安裝、使用、各平台差異、開發流程描述得非常完整清楚;內部三個套件(cli、goversion、guidelines)都各自附有對應測試檔,涵蓋版本比對、清單排序、資料完整性等情境;repo 內未見到 .github/workflows,無法直接確認 CI 狀態,但最近一次推送為 2026-08-19,屬 JetBrains 官方持續維護的專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "run-tool.sh / run-tool.ps1 首次執行時會呼叫 `go install github.com/JetBrains/go-modern-guidelines@<version>` 從 Go module proxy 下載並建置執行檔,這是 Go 工具鏈標準的安裝方式,程式邏輯有做版本核對與暫存目錄隔離,屬於此工具設計上就會做的行為,而非隱藏的安裝腳本。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "由 JetBrains 官方維護、程式碼精簡且測試扎實,定位明確(AI agent 專用的 Go 現代化指南),對有在用 AI coding agent 寫 Go 的團隊值得關注與嘗試。",
+      "_mode": "full"
+    }
+  },
+  "thedotmack/claude-mem": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-28": [
+        92279,
+        143,
+        12,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-28",
+    "analysis": {
+      "one_liner": "為 Claude Code 等 AI 代理提供跨 session 的持久記憶與上下文壓縮系統。",
+      "summary": "claude-mem 透過生命週期 hooks 攔截 agent 的工具使用紀錄,用 AI 壓縮成語意摘要,存入 SQLite 與 Chroma 向量資料庫,並在後續 session 自動注入相關上下文。目的是解決 Claude Code、Codex、Gemini 等 agent 每次重啟就失去專案記憶的問題,支援漸進式揭露與 MCP 搜尋工具來降低 token 成本。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援多種 agent 平台:Claude Code、OpenClaw、Codex、Gemini、Copilot、OpenCode 等",
+        "採用 3 層漸進式揭露搜尋(search → timeline → get_observations),號稱可省下約 10 倍 token",
+        "架構完整:5 個生命週期 hook、本地 worker HTTP 服務含網頁檢視介面、SQLite + Chroma 混合搜尋",
+        "文件齊全,提供獨立文件站與超過 30 種語言的 README 翻譯",
+        "提供雲端同步(cmem.ai)與 <private> 標籤做隱私內容排除"
+      ],
+      "use_cases": [
+        "長期使用 Claude Code 開發同一專案,希望每次開新 session 不用重新解釋背景",
+        "需要讓 AI agent 累積專案歷史知識(bug 修復紀錄、決策脈絡)並可用自然語言查詢",
+        "多 agent 工具鏈(Claude Code + Codex + Gemini 等)之間共享上下文",
+        "想在 OpenClaw gateway 上加裝持久記憶外掛"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整、有獨立文件站與多國語言版本,說明架構與使用方式相當詳盡;但本次僅根據 README 評估,未檢視原始碼與測試,實際程式碼品質與測試覆蓋率無法確認。近期(2026-08-26)仍有 push 且正衝上 trending 榜單,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl -fsSL https://install.cmem.ai/openclaw.sh | bash 的一鍵安裝方式,此類 pipe-to-shell 安裝腳本使用者應自行檢視腳本內容後再執行",
+          "系統會將 agent 的工具使用紀錄與對話上下文儲存到本地 SQLite/Chroma,並可選擇同步至雲端服務 cmem.ai,若專案含敏感資訊需留意資料留存與同步範圍",
+          "僅根據 README 進行評估,未實際檢視原始碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "Claude Code 重度使用者若在意跨 session 記憶延續性,值得一試,但雲端同步與外部安裝腳本部分建議先確認資料流向再啟用。",
+      "_mode": "light"
+    }
+  },
+  "google/googletest": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-28": [
+        39046,
+        9,
+        13,
+        "GoogleTest - Google Testing and Mocking Framework",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-08-28",
+    "analysis": {
+      "one_liner": "Google 官方 C++ 單元測試與 Mock 框架,業界標準的 xUnit 風格測試工具。",
+      "summary": "GoogleTest(合併自 GoogleTest 與 GoogleMock)是 Google 維護的 C++ 測試框架,提供豐富的斷言、死亡測試(death test)、參數化測試與 Mock 物件產生機制。被 Chromium、LLVM、Protocol Buffers、OpenCV 等重量級專案採用,是 C++ 生態系中最主流的測試框架之一。這次上榜主要是因為剛發布 1.18.0 版本(需求 C++17)帶動關注度。",
+      "category": "devtool",
+      "highlights": [
+        "支援值參數化測試、型別參數化測試、死亡測試、自訂斷言等完整測試能力",
+        "同時整合 GoogleMock,提供成熟的 mock/matcher/action 機制",
+        "同時支援 CMake 與 Bazel(含 MODULE.bazel/bzlmod)兩種主流建置系統",
+        "1.18.0 版本要求最低 C++17,並計畫未來依賴 Abseil",
+        "測試涵蓋極廣,googletest/test 目錄下有上百個涵蓋各種行為(filter、shuffle、XML/JSON 輸出、death test 等)的單元測試與對應 Python 驗證腳本"
+      ],
+      "use_cases": [
+        "為 C++ 專案撰寫單元測試與整合測試",
+        "搭配 GoogleMock 對介面/相依元件建立 mock 進行隔離測試",
+        "用於既有大型 C++ 專案(如採用 CMake/Bazel)的 CI 測試流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(獨立 GitHub Pages 文件站、Primer、cheat sheet、cook book、FAQ 齊全),測試覆蓋率極高且涵蓋各種邊界情境,原始碼風格嚴謹並保留完整授權標頭與 IWYU 標註。專案本身沒有 .github/workflows,CI 主要靠 Google 內部系統與 ci/ 目錄下的 presubmit 腳本執行,近期仍持續有 commit 與版本發布,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "成熟穩定的產業標準工具,雖非新專案但值得持續關注其版本更新(尤其這次拉高最低 C++17 門檻與未來導入 Abseil 的動向)。",
+      "_mode": "full"
+    }
+  },
+  "actions/checkout": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-28": [
+        8728,
+        8,
+        17,
+        "Action for checking out a repo",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-28",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "GitHub 官方維護的 checkout Action,用來在 GitHub Actions workflow 中簽出程式碼儲存庫。",
+      "summary": "actions/checkout 是每個 GitHub Actions workflow 幾乎都會用到的基礎元件,負責將 repo 內容拉取到 runner 的 $GITHUB_WORKSPACE。這次 v7 更新聚焦資安強化:預設拒絕在 pull_request_target / workflow_run 觸發時簽出 fork PR 程式碼,避免經典的 \"pwn request\" 漏洞,同時完成 ESM 遷移與依賴安全更新。",
+      "highlights": [
+        "v7 新增 allow-unsafe-pr-checkout 開關,預設阻擋 fork PR 在高權限 trigger(pull_request_target/workflow_run)下被簽出,直接對應真實世界的 pwn request 攻擊手法",
+        "程式碼以 TypeScript 撰寫,型別嚴謹、模組職責切分清楚(git-command-manager、github-api-helper、input-helper 等各司其職)",
+        "CI 涵蓋 Ubuntu/macOS/Windows 三平台矩陣測試、CodeQL 掃描、licensed-check 依賴授權檢查,以及透過 proxy/容器環境的整合測試",
+        "官方明確聲明目前不接受一般貢獻,僅持續維護安全性更新與重大修復"
+      ],
+      "use_cases": [
+        "任何 GitHub Actions workflow 需要先取得 repo 原始碼才能建置、測試或部署",
+        "需要簽出多個 repo(side-by-side)、稀疏簽出(sparse-checkout)或 submodule 的複雜 CI 流程",
+        "使用 pull_request_target 或 workflow_run 觸發、需要謹慎處理 fork PR 程式碼的安全敏感 workflow"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 4,
+        "comment": "文件詳盡(README 含大量情境範例與遷移說明),單元測試齊全(__test__ 目錄涵蓋各 helper 模組),CI 流程完整且含多平台整合測試與安全掃描。專案由 GitHub 官方維護,雖然不再接受外部 PR 貢獻,但安全更新與版本迭代仍持續進行(最近一次推送於 2026-08-10,並剛發布 v7)。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "雖非新專案,但作為幾乎所有 GitHub Actions workflow 的必備依賴,v7 的 fork PR 防護更新值得所有使用 pull_request_target 的團隊立即檢視並升級。",
       "_mode": "full"
     }
   }
