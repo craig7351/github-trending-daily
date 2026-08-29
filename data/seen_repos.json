@@ -3115,8 +3115,8 @@
   },
   "ChromeDevTools/chrome-devtools-mcp": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 2,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
         47885,
@@ -3128,44 +3128,51 @@
         11,
         "Chrome DevTools for coding agents",
         "TypeScript"
+      ],
+      "2026-08-29": [
+        49971,
+        67,
+        16,
+        "Chrome DevTools for coding agents",
+        "TypeScript"
       ]
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "last_analyzed": "2026-07-31",
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 1,
+    "last_analyzed": "2026-08-29",
     "analysis": {
       "category": "devtool",
-      "one_liner": "讓 AI coding agent 直接操控並檢查真實 Chrome 瀏覽器的官方 MCP 伺服器。",
-      "summary": "chrome-devtools-mcp 是 Google Chrome DevTools 團隊維護的 Model Context Protocol 伺服器,透過 Puppeteer 讓 Claude、Cursor、Copilot 等程式碼代理人能自動化瀏覽器操作、擷取效能追蹤、分析網路請求與 Console 訊息、進行記憶體快照比對等工作。目標是把 DevTools 的除錯與效能分析能力開放給 AI agent,用於可靠的網頁自動化與深度除錯。",
+      "one_liner": "Google 官方打造的 MCP 伺服器,讓 AI coding agent 能直接操控與檢查 Chrome DevTools。",
+      "summary": "chrome-devtools-mcp 讓 Claude、Cursor、Copilot 等 AI 編碼助理透過 Model Context Protocol 控制真實的 Chrome 瀏覽器,提供效能追蹤分析、網路請求檢查、Console 訊息、螢幕截圖、記憶體快照、擴充功能除錯等超過 50 個工具。它把 Puppeteer 的自動化能力與 Chrome DevTools 的除錯/效能分析能力整合成標準化 MCP 介面,解決 AI agent 缺乏「眼睛」與「除錯工具」去驗證前端程式碼實際執行結果的問題。",
       "highlights": [
-        "涵蓋輸入自動化、導覽、效能追蹤、網路、記憶體快照、擴充功能除錯等 40+ 種工具,並支援 slim 模式精簡為 3 個核心工具",
-        "官方由 Google LLC 開發維護,底層整合 Puppeteer 與 chrome-devtools-frontend、Lighthouse",
-        "支援連線既有 Chrome 實例(remote debugging / autoConnect)與多代理並行的 pageId 路由",
-        "測試涵蓋非常完整,含 60+ 單元測試檔與獨立 e2e 測試,CI 在 Ubuntu/Windows/macOS 與多個 Node 版本上跑測試",
-        "文件齊全,提供近 20 種 MCP 客戶端(Claude Code、Cursor、VS Code、Gemini CLI 等)的安裝說明與疑難排解指南"
+        "由 Google 官方(ChromeDevTools 團隊)維護,程式碼中版權宣告與發布流程均對應 Google LLC",
+        "工具涵蓋輸入自動化、效能追蹤(含 CrUX 真實使用者資料)、記憶體堆積快照、擴充功能與 PWA 除錯等 13+ 分類、共 50+ 個工具",
+        "支援幾乎所有主流 AI 編碼工具(Claude Code、Cursor、Gemini CLI、Copilot、Codex 等)的一鍵安裝設定",
+        "測試覆蓋完整,tests/ 目錄對每個 src 模組皆有對應單元測試,並含 e2e 與記憶體洩漏測試",
+        "README 主動揭露資料蒐集(usage statistics)與遠端除錯埠風險,並提供 opt-out 旗標,透明度高"
       ],
       "use_cases": [
-        "讓 AI coding agent 在開發流程中自動開啟網頁、操作元件並驗證修改結果",
-        "擷取效能追蹤(trace)並分析 Core Web Vitals 相關的效能瓶頸",
-        "透過 Console 訊息與網路請求列表協助除錯前端問題",
-        "以記憶體快照比較工具排查瀏覽器端記憶體洩漏"
+        "讓 AI agent 自動化網頁 UI 測試、表單填寫與互動流程驗證",
+        "在開發過程中請 AI 分析網頁效能瓶頸、Lighthouse 稽核結果與網路請求",
+        "除錯瀏覽器 Console 錯誤、記憶體洩漏(heap snapshot 比較)",
+        "開發或除錯 Chrome 擴充功能與 WebMCP/PWA 應用"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "程式碼組織清晰,依 tools/formatters/telemetry/daemon 等模組分層,並用 zod 做輸入驗證、ESLint 自訂規則強制型別安全。測試覆蓋單元測試與跨平台 e2e,CI matrix 涵蓋三種作業系統與三個 Node 版本,近期仍持續有版本釋出與功能更新(如 WebMCP、screencast 等實驗性工具),屬於維護活躍度很高的官方專案。"
+        "comment": "文件非常完整(README、docs/ 下多份專項文件、CLI 選項皆自動產生同步),測試覆蓋率高且分類清楚(單元測試、e2e、記憶體洩漏測試皆有),CI 設定齊全(presubmit、release-please、npm/MCP registry 發布)。程式碼風格一致,大量使用 zod schema 驗證工具參數,並以自訂 eslint 規則強制執行授權標頭與第三方引用規範,工程成熟度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "evaluate_script 工具會在使用者指定頁面中執行任意 JavaScript,屬於工具本身設計用途(供 agent 除錯與自動化使用),README 已明確揭露此風險並提醒不要在有敏感資料的網頁使用",
-          "預設會收集使用情況統計並回傳給 Google(可用 --no-usage-statistics 關閉),以及效能追蹤時可能把 trace URL 送往 Google CrUX API(可用 --no-performance-crux 關閉),兩者皆在文件中清楚說明並提供關閉選項",
-          "npm prepare 腳本(scripts/prepare.ts)僅在本地 node_modules 內清理/修補 chrome-devtools-frontend 相依套件檔案,未發現對外部網址的下載或執行行為"
+          "evaluate_script 等工具設計上允許在受控瀏覽器分頁中執行任意 JavaScript,這是 DevTools/自動化功能的必要能力,但代表 MCP 客戶端可讀寫瀏覽器內任何資料,README 已明確揭露此風險並建議勿在敏感網站上開啟",
+          "預設會蒐集使用量統計(工具呼叫成功率、延遲、環境資訊)並回傳 Google,雖預設開啟但提供 --no-usage-statistics 旗標與環境變數可關閉,且文件中清楚說明",
+          "透過 --browser-url 連線既有 Chrome 遠端除錯埠時,README 主動警告該埠開啟後同機任何程式皆可連線控制瀏覽器,屬合理的使用警示而非程式碼缺陷"
         ]
       },
       "star_rating": 5,
-      "verdict": "Google 官方維護、文件與測試都相當扎實的 Chrome 自動化/除錯 MCP 伺服器,是目前 AI coding agent 串接瀏覽器能力的首選之一,值得關注與採用。",
+      "verdict": "官方出品、工程品質扎實、生態整合廣泛,是目前 AI coding agent 搭配瀏覽器除錯與效能分析的標竿工具,值得立即關注與導入。",
       "_mode": "full"
     }
   },
@@ -4562,10 +4569,10 @@
   },
   "livekit/agents": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-04": [
         11984,
@@ -4580,38 +4587,45 @@
         13,
         "A framework for building realtime voice AI agents 🤖🎙️📹",
         "Python"
+      ],
+      "2026-08-29": [
+        13338,
+        22,
+        20,
+        "A framework for building realtime voice AI agents 🤖🎙️📹",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-04",
+    "last_analyzed": "2026-08-29",
     "analysis": {
+      "one_liner": "LiveKit 官方出品的即時語音/多模態 AI Agent 開發框架,整合 STT/LLM/TTS 與 WebRTC。",
+      "summary": "livekit/agents 是一套用來建構「即時、可程式化」語音 AI 代理人的 Python 框架,可在伺服器端執行,支援看、聽、理解等多模態互動。它提供任務排程、電話語音整合、語意斷句偵測、MCP 工具串接、以及內建的 Agent 行為測試框架,並透過近 80 個外掛套件銜接各家 STT/LLM/TTS/影像分身供應商。",
       "category": "framework",
-      "one_liner": "LiveKit 官方推出的即時語音/多模態 AI Agent 開發框架,整合 STT、LLM、TTS 與 WebRTC。",
-      "summary": "livekit/agents 是一套用於建構即時、可程式化語音 AI 代理人的 Python 框架,讓開發者能快速組裝 STT、LLM、TTS 或 Realtime API,並透過 LiveKit 的 WebRTC 基礎設施與電話系統串接使用者。框架內建工作排程、多代理人交接(handoff)、語意斷句偵測、MCP 工具支援與專屬測試框架,目標是解決打造生產級語音助理時的即時串流與可靠性問題。",
       "highlights": [
-        "支援近 60 種 STT/TTS/LLM/影像分身廠商外掛(OpenAI、Deepgram、Cartesia、ElevenLabs、Google、AWS 等),生態系相當完整",
-        "內建 AgentSession、多代理人 handoff、語意斷句偵測(transformer turn detector)等語音專屬抽象層",
-        "提供原生測試框架(judge/expect API)可對非決定性 LLM 對話流程寫斷言測試,並有豐富 CI(tests/realtime/stt/evals/release-gate 等 workflow)",
-        "原生支援 MCP(Model Context Protocol),可一行程式碼整合外部工具伺服器",
-        "官方隨附 AGENTS.md/CLAUDE.md 與 livekit/agent-skills,對 AI coding agent 開發流程有特別最佳化"
+        "採用 monorepo + uv workspace 管理核心套件與近 80 個供應商外掛(OpenAI、Deepgram、Cartesia、AWS、Google 等)",
+        "內建語意斷句偵測(turn detection)、電話語音整合、MCP 原生支援等進階能力",
+        "自帶測試框架(judges/LLM 評分)專門用來驗證非決定性的 LLM 對話行為",
+        "測試覆蓋極廣(194+ 測試檔),CI 涵蓋跨平台單元測試、供應商整合測試、build/release 流程",
+        "mypy strict 型別檢查、ruff 格式化/靜態檢查,程式碼工程規範完善"
       ],
       "use_cases": [
-        "建構具語音對話能力的客服、訂餐、櫃台預約等應用(repo 內含 drive-thru、frontdesk 等完整範例)",
-        "需要低延遲、可中斷、支援多輪交接的語音代理人系統",
-        "將 LLM 代理人接上電話/SIP 系統做語音客服或外撥",
-        "需要為 LLM 對話流程撰寫自動化測試與行為評估(evals)的團隊"
+        "建構可透過電話或 WebRTC 通話的語音客服/訂位/得來速點餐機器人",
+        "打造多模態(視覺+語音)助理,結合 Realtime API 進行低延遲對話",
+        "需要嚴謹自動化測試(含 LLM 行為斷言)的生產級語音 Agent 專案",
+        "快速串接多家 STT/LLM/TTS 供應商而不綁死單一模型商"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件完整(README、docs 網站、CONTRIBUTING、逐一範例),但主要文件在外部 docs.livekit.io,repo 內說明偏概覽;測試涵蓋率極高,168+ 測試檔案涵蓋各家外掛與核心邏輯,並有多組專屬 CI workflow(單元測試、即時模型、STT、評估、發版閘門);活躍度非常高,當日仍有 push,workflow 齊全,屬於持續高頻迭代的商業維運專案。"
+        "comment": "文件完整(README、CONTRIBUTING、AGENTS.md/CLAUDE.md 開發指引齊全),程式碼有型別註記並通過 mypy strict 與 ruff 檢查,測試數量龐大且分層清楚(unit/plugin/realtime/evals),CI 流程成熟(跨平台測試、release-gate、發佈流程皆自動化)。作為 LiveKit 官方專案,推送頻繁、issue 與外掛生態持續擴張,屬於高活躍度的成熟專案。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 4,
-      "verdict": "生態系成熟、測試扎實、由 LiveKit 官方積極維護,若要做語音/多模態 AI Agent 產品,值得列入評估清單。",
+      "star_rating": 5,
+      "verdict": "官方維護、生態成熟、測試與文件皆屬上乘,語音 AI Agent 開發者值得立即關注與嘗試。",
       "_mode": "full"
     }
   },
@@ -7156,10 +7170,10 @@
   },
   "calesthio/OpenMontage": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-12": [
         47342,
@@ -7172,6 +7186,13 @@
         52369,
         1292,
         9,
+        "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "Python"
+      ],
+      "2026-08-29": [
+        53314,
+        1144,
+        7,
         "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "Python"
       ]
@@ -8281,10 +8302,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-22",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -8313,38 +8334,45 @@
         9,
         "Cursor plugin specification and official plugins",
         "TypeScript"
+      ],
+      "2026-08-29": [
+        5961,
+        246,
+        9,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-15",
+    "last_analyzed": "2026-08-29",
     "analysis": {
       "category": "devtool",
-      "one_liner": "Cursor 官方的 Agent 外掛(Plugin)市集,收錄開發工具、框架整合與 SaaS MCP 連接器的規格與實作範例。",
-      "summary": "這是 Cursor 編輯器官方維護的 plugin marketplace repo,以 `.cursor-plugin/marketplace.json` 為索引,收錄數十個外掛(agents、skills、rules、hooks、MCP server 定義)。內容涵蓋內部開發流程工具(如 cursor-team-kit、thermos code review)、SDK 使用教學(cursor-sdk)、以及第三方 SaaS 的官方 MCP 連接器(Gmail、Salesforce、HubSpot 等)。本質上是規格與文件庫,而非傳統可執行的程式庫。",
+      "one_liner": "Cursor 官方外掛(plugin)規範與市集(marketplace)倉庫,收錄開發工具、框架規則與大量第三方 SaaS 整合外掛。",
+      "summary": "這是 Cursor 編輯器官方的多外掛市集倉庫,定義了 plugin.json / marketplace.json 規範,並內建多個開發者工具外掛(如 continual-learning、orchestrate、cursor-team-kit)以及數十個第三方服務整合外掛(Gmail、Salesforce、GitHub、HubSpot 等)。目的是讓使用者能透過標準化的 skills/rules/agents/hooks 元件擴充 Cursor Agent 的能力。",
       "highlights": [
-        "每個外掛都是獨立目錄,含 plugin.json manifest、skills/、rules/、agents/,結構統一清晰",
-        "third_party 底下的 MCP 連接器全部指向各家官方 remote MCP server(如 googleapis.com、salesforce 官方網域),未見自架或可疑網域",
-        "CI(validate-plugins.yml)在 PR 時用 ajv 對 marketplace.json 與每個 plugin.json 做 JSON Schema 驗證,確保結構一致性",
-        "continual-learning 等外掛內含實際 TypeScript(Bun)程式碼,邏輯清楚、有型別防呆與狀態持久化,程式碼品質不錯",
-        "少數外掛(orchestrate、pstack)另帶有 bun/TypeScript 腳本子專案,顯示部分外掛具備真正可執行的自動化能力"
+        "單一倉庫收錄 60+ 個外掛,涵蓋開發工具與第三方 SaaS 整合(Gmail、Salesforce、GitHub 等)",
+        "有明確的 plugin.json/marketplace.json JSON Schema,並用 GitHub Actions + ajv 在 PR 時自動驗證外掛定義",
+        "orchestrate、pstack 等外掛內含完整 TypeScript 原始碼與對應的 bun:test 單元測試(如 redact-body、slack-adapter 等)",
+        "continual-learning 的 stop hook 程式碼撰寫嚴謹,對輸入做型別檢查與防禦性解析,無明顯風險",
+        "以 skills/agents/rules 為主要載體,是 Cursor Agent 能力擴充的標準化範例"
       ],
       "use_cases": [
-        "想擴充 Cursor Agent 能力(skills/rules/hooks)的開發者可直接參考或安裝現成外掛",
-        "團隊想制定內部 code review、CI 監控、PR 流程規範時可套用 cursor-team-kit 的做法",
-        "需要串接 Gmail/Salesforce/HubSpot 等 SaaS 到 Cursor Agent 時,可直接用 third_party 下的 mcp.json 定義",
-        "想學習如何設計自己的 Cursor Plugin 規格(manifest、schema、目錄結構)的參考範本"
+        "想替 Cursor 開發自訂外掛(skill/rule/agent/hook)時參考官方規範與 scaffold 流程",
+        "需要串接 Gmail、Salesforce、GitHub 等 SaaS 服務到 Cursor Agent 工作流",
+        "研究如何設計可讓 Coding Agent 可靠呼叫的 CLI 或 Stop Hook 邏輯",
+        "打造團隊內部的多外掛市集(marketplace)倉庫結構"
       ],
       "quality": {
         "docs": 5,
-        "tests": 2,
-        "activity": 4,
-        "comment": "文件品質很高,README 有清楚的表格與目錄結構說明,各外掛也都有自己的 README/CHANGELOG。測試以 CI schema 驗證為主,沒有傳統單元測試套件,但因為內容多為規格/文件/skill 定義,這類驗證已足夠涵蓋主要風險。倉庫剛開始在 trending 上出現(day 1),但由 Cursor 官方帳號維護,推上市速度快,更新頻繁。"
+        "tests": 3,
+        "activity": 5,
+        "comment": "文件品質很高,每個外掛都有獨立 README/CHANGELOG/LICENSE,且有 JSON Schema 與 CI 驗證機制。核心工具型外掛(orchestrate、pstack)有實際 TypeScript 邏輯與對應單元測試,但多數外掛本質是 Markdown 形式的 skill/agent 提示詞,並非傳統程式邏輯,故整體測試覆蓋率中等。倉庫剛登上 trending 且持續更新(最後 push 為今日),活躍度高。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "若你是 Cursor 使用者、想擴充 Agent 技能或串接常見 SaaS,這是官方一手資源,值得加入書籤;但它是規格/內容庫而非程式庫,對純技術收藏意義有限。",
+      "verdict": "若你在使用或想擴充 Cursor Agent,這是了解官方外掛規範與現成整合範例的絕佳參考,值得關注。",
       "_mode": "full"
     }
   },
@@ -10701,10 +10729,10 @@
   },
   "freestylefly/awesome-gpt-image-2": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-24": [
         12722,
@@ -10738,6 +10766,13 @@
         23010,
         2096,
         3,
+        "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "JavaScript"
+      ],
+      "2026-08-29": [
+        24242,
+        1687,
+        10,
         "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "JavaScript"
       ]
@@ -11352,10 +11387,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -11382,6 +11417,13 @@
         50170,
         552,
         10,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-08-29": [
+        50622,
+        703,
+        17,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -11421,14 +11463,21 @@
   },
   "tashfeenahmed/freellmapi": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-25",
+    "last_seen": "2026-08-29",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-25": [
         19780,
         174,
+        15,
+        "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+        "TypeScript"
+      ],
+      "2026-08-29": [
+        21616,
+        433,
         15,
         "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
         "TypeScript"
@@ -11521,10 +11570,10 @@
   },
   "marin-community/marin": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-26": [
         2105,
@@ -11544,6 +11593,13 @@
         2697,
         255,
         15,
+        "Open-source framework for the research and development of foundation models.",
+        "Python"
+      ],
+      "2026-08-29": [
+        2899,
+        236,
+        14,
         "Open-source framework for the research and development of foundation models.",
         "Python"
       ]
@@ -11583,10 +11639,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -11606,6 +11662,13 @@
         114054,
         1613,
         8,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-08-29": [
+        115373,
+        1396,
+        18,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -11648,10 +11711,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -11671,6 +11734,13 @@
         34691,
         292,
         6,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ],
+      "2026-08-29": [
+        35031,
+        457,
+        3,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
       ]
@@ -11762,10 +11832,10 @@
   },
   "tt-a1i/archify": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-27": [
         17946,
@@ -11778,6 +11848,13 @@
         23268,
         4239,
         4,
+        "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "JavaScript"
+      ],
+      "2026-08-29": [
+        27441,
+        4562,
+        1,
         "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "JavaScript"
       ]
@@ -11917,10 +11994,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -11933,6 +12010,13 @@
         35316,
         498,
         7,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-08-29": [
+        36605,
+        720,
+        2,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -11977,15 +12061,22 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-28": [
         8077,
         1984,
         1,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ],
+      "2026-08-29": [
+        11090,
+        3829,
+        4,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
       ]
@@ -12077,15 +12168,22 @@
   },
   "JetBrains/go-modern-guidelines": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-28": [
         2095,
         300,
         5,
+        "Help AI coding agents write modern Go",
+        "Go"
+      ],
+      "2026-08-29": [
+        2599,
+        574,
+        6,
         "Help AI coding agents write modern Go",
         "Go"
       ]
@@ -12178,15 +12276,22 @@
   },
   "google/googletest": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-28": [
         39046,
         9,
         13,
+        "GoogleTest - Google Testing and Mocking Framework",
+        "C++"
+      ],
+      "2026-08-29": [
+        39175,
+        156,
+        19,
         "GoogleTest - Google Testing and Mocking Framework",
         "C++"
       ]
@@ -12266,6 +12371,257 @@
       },
       "star_rating": 4,
       "verdict": "雖非新專案,但作為幾乎所有 GitHub Actions workflow 的必備依賴,v7 的 fork PR 防護更新值得所有使用 pull_request_target 的團隊立即檢視並升級。",
+      "_mode": "full"
+    }
+  },
+  "abhigyanpatwari/GitNexus": {
+    "first_seen": "2026-08-29",
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-29": [
+        46158,
+        202,
+        5,
+        "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-29",
+    "analysis": {
+      "one_liner": "GitNexus 是一套零伺服器的程式碼知識圖譜引擎,將整個 codebase 索引成知識圖,讓 AI coding agent(Cursor、Claude Code、Codex 等)透過 MCP 工具取得精確的架構與依賴關係。",
+      "summary": "GitNexus 透過 Tree-sitter 解析多達 14 種語言,建立涵蓋 imports、call chain、繼承、執行流程的知識圖譜,並預先運算出 impact 分析、trace、cluster 等結構化結果,以 17 個 MCP 工具、resources 與 agent skills 的形式提供給 AI 編輯器使用,解決 AI 改 code 時「看不見依賴、破壞呼叫鏈」的常見問題。同時提供瀏覽器端 Web UI 可視化圖譜與聊天功能,也可透過 Render 一鍵部署自架伺服器版。",
+      "category": "devtool",
+      "highlights": [
+        "17 個 MCP 工具(impact、trace、rename、cypher、route_map、api_impact、taint/PDG 查詢等)搭配 resources 與 prompts,提供比傳統 Graph RAG 更完整的一次性回答",
+        "支援 TypeScript、Python、Java、Go、Rust、C#、Kotlin、Swift、C/C++、PHP、Ruby、Dart 等 14 種語言的匯入、繼承、建構子推斷解析",
+        "自動偵測並整合 Claude Code、Cursor、Antigravity、Codex、OpenCode、CodeBuddy、Qoder、Windsurf 等多種 AI 編輯器的 MCP/hooks/skills",
+        "文件與環境變數說明極為詳盡(單一 README 近千行,含每個 env var 的用途、預設值與適用情境),SECURITY.md 對自架部署的風險邊界說明清楚透明",
+        "CI 涵蓋 CodeQL、Trivy、Gitleaks、OpenSSF Scorecard、dependency-review、zizmor workflow lint 等多層安全掃描,並每週跑 Dependabot 更新"
+      ],
+      "use_cases": [
+        "在 Cursor / Claude Code / Codex 等工具中為 AI agent 提供大型 codebase 的架構與依賴上下文,降低破壞性修改風險",
+        "PR/commit 前的變更影響分析(impact、detect_changes)與安全的多檔案重新命名",
+        "跨服務、monorepo 架構下的 API contract 追蹤與跨 repo blast radius 分析",
+        "透過 Web UI 快速視覺化陌生 repo 的知識圖譜並用 Graph RAG 聊天理解程式碼"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件詳盡到近乎工程規格書等級,連每個環境變數的權衡都寫清楚;測試方面有 3000+ 個跨語言 fixture 與 vitest unit/integration/cross-platform 測試套件,覆蓋面極廣;開發活躍度高,昨日才有推送,CI pipeline 多達近 30 個 workflow,涵蓋建置、發布、安全掃描與自動化 PR 審查。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "npm 套件的 postinstall 腳本(scripts/build-tree-sitter-grammars.cjs)會在本機建置/啟用 vendored 的 tree-sitter 原生 grammar 二進位檔,屬於原生模組常見作法,程式碼有詳細註解說明原因且不會拋錯中斷安裝",
+          "選用依賴 onnxruntime-node 的 postinstall 會嘗試從 api.nuget.org 下載選用的 CUDA 執行檔,README 已主動揭露此行為(含代理環境下會失敗但可自我修復的說明),非隱藏行為",
+          "自架的 `gitnexus serve`/Render 部署模式僅以單一 Bearer token 做存取控制,且 CSRF 防護在透過反向代理時會失效,專案已在 SECURITY.md 中明確揭露此風險並提醒不要公開分享網址"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件透明度都屬上乘,MCP + 知識圖譜這個切入點解決了 AI coding agent 常見的「改壞依賴」痛點,值得立即關注;唯獨授權是 PolyForm Noncommercial(非 OSI 標準開源授權),商業使用前務必先確認授權條款。",
+      "_mode": "full"
+    }
+  },
+  "abi/screenshot-to-code": {
+    "first_seen": "2026-08-29",
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-29": [
+        75564,
+        326,
+        8,
+        "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-29",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "把截圖、Figma 設計稿或畫面錄影,透過多家 LLM 自動轉換成可用的前端程式碼(HTML/Tailwind/React/Vue 等)。",
+      "summary": "screenshot-to-code 是一個開源工具,讓使用者上傳網頁截圖、設計稿甚至螢幕錄影,呼叫 OpenAI/Anthropic/Gemini 等模型自動生成對應的前端程式碼,並支援多種輸出堆疊(HTML+Tailwind、React+Tailwind、Vue、Bootstrap、Ionic 等)。專案採 FastAPI 後端 + React/Vite 前端架構,並內建 agent 式工具鏈(資源萃取、圖片生成、瀏覽器截圖預覽比對)來提升生成品質。目前作者主推的是官方託管服務 screenshottocode.com,本地自架版本則作為開源替代方案。",
+      "highlights": [
+        "採用 agent 架構(backend/agent),具備 create_file、extract_assets、screenshot_preview 等工具,能自動用 headless Chromium 截圖比對生成結果",
+        "多模型 provider 抽象層(OpenAI/Anthropic/Gemini/Replicate),可依使用者提供的 API key 組合自動挑選最佳模型混合",
+        "測試覆蓋相當完整,backend/tests 下有 40+ 支測試檔涵蓋 agent engine、provider config、asset extraction、websocket 通訊等核心邏輯",
+        "支援截圖、Figma 匯入、程式碼匯入、螢幕錄影轉程式碼等多種輸入模式,功能面向廣",
+        "有內建 evals 框架(backend/evals)可對不同模型輸出做基準評測與比較"
+      ],
+      "use_cases": [
+        "快速把設計稿或現有網站截圖轉成可編輯的 HTML/React/Vue 初稿,加速前端開發",
+        "作為多 LLM 視覺理解能力的評測/比較工具(內建 evals 系統可比較不同模型生成結果)",
+        "教學或原型展示用途:輸入截圖或錄影,快速產生可互動的網頁原型",
+        "研究 agent 架構如何結合工具呼叫(截圖預覽、資源萃取)來提升程式碼生成準確度的參考實作"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "程式碼風格清晰,型別標註完整,關鍵設計決策附有精簡且有意義的註解(例如 EmptyOutputError、BudgetExceededError 的說明),模組化程度高(routes/agent/prompts/costs 等職責分離明確)。測試檔案數量多且涵蓋核心元件,但 .github 目錄下未發現 CI workflow(僅有 FUNDING.yml),無法確認測試是否於 PR 時自動執行。最後 push 為 2026-08-14,提交紀錄與功能疊代(如 agent 工具、design system、eval 系統)顯示專案仍在積極開發中。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "backend/main.py 的 CORS 設定為 allow_origins=['*'] 且 allow_credentials=True 同時開啟,本地自架時若對外曝露後端需留意此組合可能放寬跨來源存取限制",
+          "本地執行需在 backend/.env 中填入多家 LLM 供應商的 API 金鑰(OpenAI/Anthropic/Gemini/Replicate),使用者應注意金鑰保管與 .env 不被誤提交"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "已有 75k+ star 的成熟專案,程式碼與測試品質紮實,若需要截圖轉程式碼或想研究多模型 agent 架構,值得一看,但注意本地自架 CORS 設定與 API 金鑰安全。",
+      "_mode": "full"
+    }
+  },
+  "tailscale/tailcat": {
+    "first_seen": "2026-08-29",
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-29": [
+        2708,
+        965,
+        11,
+        "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-29",
+    "analysis": {
+      "one_liner": "由 Tailscale 官方推出的輕量工具,像 netcat 一樣簡單,但透過 Tailscale 的資料層(WireGuard + DERP + NAT 穿透)建立端到端加密連線,完全不需要 Tailscale 帳號或控制平面。",
+      "summary": "Tailcat 重組了 Tailscale 開源元件中的資料層(magicsock、userspace WireGuard、gVisor netstack、DERP relay),讓兩台機器不需登入 Tailscale 帳號、不需 root 權限、不改動路由表或 DNS,就能建立點對點加密通道。使用情境包含 stdin/stdout 管道傳輸、本地連接埠轉發、免驗證 SSH、SOCKS5 代理與 exit-node 模式,連線資訊(token)完全由使用者自行帶外交換。",
+      "category": "cli",
+      "highlights": [
+        "由 Tailscale 官方維護,重用其久經實戰的 magicsock、WireGuard、DERP、netstack 元件,而非從零造輪子",
+        "README 極為詳盡,清楚說明連線 token 結構、金鑰管理(ephemeral vs saved key)與完整連線流程(meow 握手、disco NAT 穿透)",
+        "CLI 功能豐富:管道傳輸、連接埠轉發、免驗證 SSH、SOCKS5 代理、exit-node、ping 偵測直連/中繼路徑等",
+        "支援自架 DERP relay,不強制依賴 Tailscale 的公開中繼伺服器",
+        "同時提供 Go library 介面與瀏覽器 WebAssembly demo,涵蓋多種使用型態",
+        "作者在文件中明確聲明無 API/CLI 穩定性承諾,且公開 DERP relay 無 SLA 保證"
+      ],
+      "use_cases": [
+        "兩台機器間臨時、免帳號的檔案或資料傳輸(netcat 替代品)",
+        "無需公網 IP 或連接埠轉發,即可對外提供本地服務(如本地開發伺服器)",
+        "透過 DNS TXT 紀錄發佈固定位址,建立無需開放連接埠、由 WireGuard 金鑰驗證的免密碼 SSH 存取",
+        "需要簡易 NAT 穿透與端到端加密通道的實驗性或個人工具,而不想部署完整 Tailscale 控制平面"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 文件品質極高,涵蓋原理、範例、金鑰管理與已知限制;9 個測試檔涵蓋 CLI、SSH、SOCKS 解析、wire 格式與 WASM,CI 有 build/test/vet 三道關卡外加 headless 瀏覽器測試;剛開源(2026年8月 TailscaleUp 大會)且作者明言無穩定性承諾,屬早期但維護積極的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "出自 Tailscale 官方之手、程式碼與文件品質俱佳的實用小工具,適合想要輕量 P2P 加密通道又不想引入完整 Tailscale 控制平面的開發者關注,但需留意目前無穩定性保證且公開中繼伺服器無 SLA。",
+      "_mode": "full"
+    }
+  },
+  "NationalSecurityAgency/ghidra": {
+    "first_seen": "2026-08-29",
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-29": [
+        73340,
+        191,
+        12,
+        "Ghidra is a software reverse engineering (SRE) framework",
+        "Java"
+      ]
+    },
+    "last_analyzed": "2026-08-29",
+    "analysis": {
+      "one_liner": "NSA 開發並開源的軟體逆向工程框架,提供反組譯、反編譯與腳本擴充能力",
+      "summary": "Ghidra 是由 NSA 研究部門建立並維護的軟體逆向工程(SRE)框架,支援多平台執行檔的反組譯、反編譯、圖形化分析與腳本開發,可透過 Java 或 Python 撰寫擴充功能。此為長期活躍的重量級開源專案,今日以第 12 名登上 GitHub trending,單日增加 191 顆星。",
+      "category": "security",
+      "highlights": [
+        "由 NSA 研究部門開發並持續維護,是業界知名的免費開源逆向工程工具,與 IDA Pro 齊名",
+        "支援多種處理器指令集與執行檔格式,涵蓋反組譯、反編譯、圖形化分析等完整功能",
+        "可透過 Eclipse 或 VS Code 進行腳本與擴充套件開發,支援 Java 與 Python(PyGhidra)",
+        "README 明確揭露特定版本存在已知安全性弱點,並提供 Security Advisories 連結供查閱",
+        "專案高度活躍,昨日(2026-08-28)才有最新推送紀錄"
+      ],
+      "use_cases": [
+        "惡意程式分析與資安研究人員進行二進位逆向工程",
+        "軟體漏洞挖掘與程式碼安全稽核",
+        "教學或自學逆向工程與編譯器/處理器指令集知識",
+        "撰寫自訂 Ghidra 腳本或擴充套件以自動化分析流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 說明清楚,涵蓋安裝、建置、開發與貢獻流程,對新手與開發者皆友善;僅能依 README 評估,未檢視原始碼與測試涵蓋率,故測試面向給予保守分數。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 自行揭露「某些版本存在已知安全性弱點」,並建議使用前先查閱官方 Security Advisories",
+          "安裝流程為下載官方 release 壓縮檔並解壓執行,或自行以 gradle 建置原始碼,未見 curl/bash 一鍵安裝等高風險模式"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "業界標竿級的開源逆向工程框架,由 NSA 維護且持續活躍更新,強烈值得資安與逆向工程領域的工程師關注與學習。",
+      "_mode": "light"
+    }
+  },
+  "swoole/typephp": {
+    "first_seen": "2026-08-29",
+    "last_seen": "2026-08-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-29": [
+        812,
+        188,
+        13,
+        "Compile PHP to Native Binaries",
+        "PHP"
+      ]
+    },
+    "last_analyzed": "2026-08-29",
+    "analysis": {
+      "one_liner": "由 Swoole 團隊打造的 PHP 原生 AOT 編譯器,能把 PHP 原始碼編譯成原生機器碼、PHP 擴充套件或共享函式庫。",
+      "summary": "TypePHP 不是 bytecode cache 或 JIT,而是把 PHP 語法直接轉譯成 C++17 再編譯成原生執行檔,同時透過 PHPX 與 Zend runtime 互通動態特性。專案完全自舉(compiler 本身用 PHP 寫成,再用自己編譯自己),鎖定數值運算、容器操作等熱路徑的效能問題,並提供高精度數值型別、強型別容器與多種編譯期程式碼產生屬性。",
+      "category": "devtool",
+      "highlights": [
+        "自舉(self-hosting):編譯器本身以純 PHP 撰寫,並用自己編譯自己成原生二進位",
+        "三種建置模式(bin/ext/lib)可產出可執行檔、PHP 擴充套件或共享函式庫,並支援 WASI/瀏覽器(Jco)輸出",
+        "官方 benchmark 顯示 PHP 語言基準測試約有 6.5~8 倍加速,std::array 對比原生 PHP 陣列快約 10 倍",
+        "提供 bigInt/decimal/bigFloat 高精度數值型別與 std:: 強型別容器(vector/map/ordered_map)",
+        "以 #[Getter]/#[Setter]/#[With]/#[Constructor] 等屬性做編譯期程式碼產生,並支援 PHP 8.4/8.5 新語法"
+      ],
+      "use_cases": [
+        "需要把效能關鍵的 PHP 數值或陣列運算路徑加速到接近原生 C++ 速度的場景",
+        "想把 PHP 服務打包成不依賴直譯器的原生可執行檔以利部署或做原始碼保護",
+        "以 PHP 撰寫邏輯但需與 C++ 效能核心混合開發(透過 stub 檔互相呼叫)",
+        "將現有 Python 腳本轉換或產生 IDE 輔助檔案的橋接需求"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 與 docs/en 下有數十篇詳細技術文件(相容性清單、各功能設計文件等),中英雙語具備。測試方面有超過 3000 個 .phpt 端對端測試案例外加 PHPUnit 單元測試與靜態分析(phpstan/rector),CI 涵蓋 Linux x64/ARM64、macOS ARM64、Windows 多平台矩陣建置。抽樣讀取的核心原始碼(compiler.php、Translator、Type.php、Installer 等)模組化良好、註解精簡且切中要害,屬於工程紮實的專案,近日仍持續有 push。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程扎實、測試與文件都很完整的 PHP AOT 編譯器,值得關注,但屬於 PHP 生態系的進階工具,對非 PHP 開發者的日常價值有限。",
       "_mode": "full"
     }
   }
