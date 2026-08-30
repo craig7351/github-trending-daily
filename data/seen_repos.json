@@ -114,7 +114,7 @@
   },
   "ComposioHQ/awesome-claude-skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-28",
+    "last_seen": "2026-08-30",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -129,6 +129,13 @@
         73611,
         130,
         16,
+        "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+        "Python"
+      ],
+      "2026-08-30": [
+        73926,
+        73,
+        9,
         "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
         "Python"
       ]
@@ -166,7 +173,7 @@
       "verdict": "作為尋找與學習 Claude Skills 的入口清單相當實用且收錄豐富,但需自行辨別其中夾雜的 Composio 商業推廣內容。",
       "_mode": "light"
     },
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "consecutive_days_on_trending": 1
   },
   "Pumpkin-MC/Pumpkin": {
@@ -5243,10 +5250,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-08-12",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5289,38 +5296,44 @@
         4,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
+      ],
+      "2026-08-30": [
+        90716,
+        196,
+        18,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-06",
+    "last_analyzed": "2026-08-30",
     "analysis": {
-      "one_liner": "一套針對 AI coding agent 設計的工程技能包,把資深工程師的開發流程(規格、規劃、TDD、審查、部署)包裝成結構化 Markdown 技能,讓 Claude Code、Cursor、Codex 等多種 agent 都能一致遵循。",
-      "summary": "agent-skills 由 Addy Osmani 主導,提供 24 個技能(定義、規劃、實作、驗證、審查、上線六階段)與 8 個對應的 slash 指令,將 Google 工程文化中的實務準則(Hyrum's Law、trunk-based development、Chesterton's Fence 等)寫成 agent 可遵循的工作流程文件。專案支援 Claude Code、Cursor、Codex、Gemini CLI 等 70 多種 agent 整合方式。核心產出是純 Markdown/JSON 內容,搭配少量 Node.js 驗證腳本與 shell hook,不涉及執行期依賴或建置流程。",
       "category": "devtool",
+      "one_liner": "一套將資深工程師開發紀律(規格、測試、審查、發佈)封裝成 AI coding agent 可遵循的技能包。",
+      "summary": "agent-skills 是由 Addy Osmani 主導的開源專案,以 25 份結構化 Markdown「技能」涵蓋軟體開發全生命週期(定義、規劃、實作、驗證、審查、發佈),搭配 slash command 與 agent persona,讓 Claude Code、Cursor、Codex、Gemini CLI、Antigravity 等多種 AI coding agent 依循一致的工程流程。每個技能都內建反合理化表格與驗證清單,目的是避免 agent 為求快而跳過測試、規格與安全審查等步驟。",
       "highlights": [
-        "24個技能涵蓋完整開發生命週期,每個技能都有一致的骨架:概觀、觸發條件、流程、反合理化表、紅旗、驗證要求",
-        "提供4個專家人格(code-reviewer、test-engineer、security-auditor、web-performance-auditor)可作為子代理人審查角色",
-        "CI使用validate-skills.js、validate-commands.js與run-evals.js做內容一致性檢查與路由評測,顯示維護者重視品質把關而非只是堆文件",
-        "支援透過官方skills CLI一鍵安裝到70多種agent工具,也提供Claude Code marketplace/plugin原生整合",
-        "session-start.sh會在會話開始時注入meta-skill,邏輯簡單透明,沒有對外連線行為"
+        "25 個技能對應完整開發生命週期,從 spec-driven-development 到 shipping-and-launch 一應俱全",
+        "內建 CI 驗證(validate-skills.js、run-evals.js)確保技能格式與觸發路由正確,並有對應單元測試",
+        "支援 70+ agent 生態系(Claude Code、Cursor、Codex、Gemini CLI、Antigravity、OpenCode 等)的原生安裝方式",
+        "每個技能都有『反合理化表格』與『red flags』段落,專門對抗 AI agent 偷懶跳過測試/審查的傾向",
+        "文件量龐大且結構化(docs/、references/、evals/ 目錄齊全),並提供與 Superpowers、Matt Pocock skills 的公開比較"
       ],
       "use_cases": [
-        "團隊想讓多個AI coding agent在專案中遵循一致的工程規範與審查標準",
-        "個人開發者想用結構化slash指令取代零散的prompt,建立可重複的開發節奏",
-        "希望在AI輔助開發中導入TDD、安全檢查清單、效能量測等最佳實務",
-        "研究如何設計可驗證、可組合的agent skill/prompt工程方法論"
+        "團隊想讓 Claude Code / Cursor / Codex 等 AI agent 在寫程式時自動遵循 TDD、程式碼審查、安全檢查等工程規範",
+        "希望用 slash command(/spec、/plan、/build、/review、/ship)標準化 AI 輔助開發流程",
+        "需要一套可攜式、與工具無關的『工程最佳實踐』知識庫,套用到多種 AI coding agent"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "文件是這個專案的核心產出,品質非常完整。雖然主體是Markdown而非傳統應用程式碼,但仍有scripts下的Node.js驗證器與對應的單元測試,CI會跑三層檢查並用claude plugin validate驗證外掛結構,顯示有實質的自動化品質把關。專案剛登上trending、一天內新增226星,活躍度高,但也代表尚缺長期社群驗證。"
+        "comment": "本質是 Markdown 內容專案,程式碼量少但品質頗高:少數 JS 驗證腳本結構清晰、有明確的職責分離(lib/skill-lint.js 為單一事實來源)且搭配 node:test 單元測試;CI 有多層驗證(skill 格式、command 一致性、eval 路由準確率、plugin 安裝測試)。文件是本專案的核心產出,質與量都相當充分,7 份參考清單、多個工具的 setup 指南一應俱全。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "若已在用Claude Code、Cursor等agent工具做正式專案開發,這套經過內容驗證與評測把關的技能包值得安裝試用;若只是好奇AI coding agent的prompt工程手法,讀README和幾個SKILL.md也很有參考價值。",
+      "verdict": "若你的團隊用 Claude Code、Cursor 或其他 AI coding agent 且苦於輸出品質不穩定,這套技能包直接可用且維護良好,值得一試;純屬提示工程/流程規範集合,沒有可執行的核心邏輯,評估重點在於它對你 agent workflow 的實際改善效果。",
       "_mode": "full"
     }
   },
@@ -7170,10 +7183,10 @@
   },
   "calesthio/OpenMontage": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-12": [
         47342,
@@ -7193,6 +7206,13 @@
         53314,
         1144,
         7,
+        "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "Python"
+      ],
+      "2026-08-30": [
+        54077,
+        806,
+        10,
         "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "Python"
       ]
@@ -11711,10 +11731,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -11741,6 +11761,13 @@
         35031,
         457,
         3,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ],
+      "2026-08-30": [
+        35413,
+        358,
+        14,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
       ]
@@ -11832,10 +11859,10 @@
   },
   "tt-a1i/archify": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-27": [
         17946,
@@ -11854,6 +11881,13 @@
       "2026-08-29": [
         27441,
         4562,
+        1,
+        "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "JavaScript"
+      ],
+      "2026-08-30": [
+        31115,
+        3902,
         1,
         "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "JavaScript"
@@ -11994,10 +12028,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -12018,6 +12052,13 @@
         720,
         2,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-08-30": [
+        37955,
+        1587,
+        3,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
     },
@@ -12061,10 +12102,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -12077,6 +12118,13 @@
         11090,
         3829,
         4,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ],
+      "2026-08-30": [
+        12646,
+        1855,
+        2,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
       ]
@@ -12168,10 +12216,10 @@
   },
   "JetBrains/go-modern-guidelines": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-28": [
         2095,
@@ -12184,6 +12232,13 @@
         2599,
         574,
         6,
+        "Help AI coding agents write modern Go",
+        "Go"
+      ],
+      "2026-08-30": [
+        2872,
+        303,
+        8,
         "Help AI coding agents write modern Go",
         "Go"
       ]
@@ -12276,10 +12331,10 @@
   },
   "google/googletest": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-28": [
         39046,
@@ -12292,6 +12347,13 @@
         39175,
         156,
         19,
+        "GoogleTest - Google Testing and Mocking Framework",
+        "C++"
+      ],
+      "2026-08-30": [
+        39322,
+        128,
+        15,
         "GoogleTest - Google Testing and Mocking Framework",
         "C++"
       ]
@@ -12330,15 +12392,22 @@
   },
   "actions/checkout": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
+    "last_seen": "2026-08-30",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-28": [
         8728,
         8,
         17,
+        "Action for checking out a repo",
+        "TypeScript"
+      ],
+      "2026-08-30": [
+        8804,
+        5,
+        16,
         "Action for checking out a repo",
         "TypeScript"
       ]
@@ -12428,15 +12497,22 @@
   },
   "abi/screenshot-to-code": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-29": [
         75564,
         326,
         8,
+        "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
+        "Python"
+      ],
+      "2026-08-30": [
+        76043,
+        550,
+        13,
         "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
         "Python"
       ]
@@ -12479,15 +12555,22 @@
   },
   "tailscale/tailcat": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-30",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-29": [
         2708,
         965,
         11,
+        "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+        "Go"
+      ],
+      "2026-08-30": [
+        3503,
+        789,
+        4,
         "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
         "Go"
       ]
@@ -12622,6 +12705,360 @@
       },
       "star_rating": 4,
       "verdict": "工程扎實、測試與文件都很完整的 PHP AOT 編譯器,值得關注,但屬於 PHP 生態系的進階工具,對非 PHP 開發者的日常價值有限。",
+      "_mode": "full"
+    }
+  },
+  "THU-MAIC/OpenMAIC": {
+    "first_seen": "2026-08-30",
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-30": [
+        22267,
+        907,
+        5,
+        "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-30",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "用一鍵生成 + 多智能體協作,把任何主題或文件變成沉浸式互動課堂的開源平台。",
+      "summary": "OpenMAIC(Open Multi-Agent Interactive Classroom)是清華團隊開源的 AI 教學平台,透過兩階段生成管線(大綱→場景)與 LangGraph 多智能體編排,把一段描述或上傳的文件自動轉成含投影片、測驗、互動模擬、專案式學習(PBL)的完整課堂,並由會說話、能在白板上畫圖的 AI 老師與同學即時互動。v1.0.0 新增可對話的 Agent Workbench,能規劃課程、逐頁修改、串接使用者上傳的教材,並支援可插拔的儲存後端(瀏覽器 IndexedDB 或 PostgreSQL/S3)。",
+      "highlights": [
+        "v1.0.0 新增聊天式 Agent Workbench,可規劃課綱、原子化修改單一場景、串接教材與 20 種內建技能",
+        "支援近 20 家 LLM/影像/語音供應商(OpenAI、Anthropic、Bedrock、Gemini、GLM、MiniMax 等),也可接 Ollama/Lemonade 做本地推論",
+        "課程可匯出為可編輯 .pptx、離線可播放的互動 HTML(內嵌 CDN 資源成 data URI)或完整課堂 ZIP",
+        "透過 OpenClaw 技能可直接從 Feishu/Slack/Telegram 等 20+ 訊息 App 生成課堂",
+        "CI 涵蓋 lint、型別檢查、i18n key 檢查、多套件單元測試、Playwright E2E 與容器建置,測試檔案超過 800 個"
+      ],
+      "use_cases": [
+        "教育工作者或自學者想針對某主題快速產出含講解、測驗、互動模擬的完整課程",
+        "團隊想要一個可自架、可接多家 LLM/語音供應商的教學內容生成系統",
+        "透過聊天機器人(Feishu/Slack/Telegram)整合 AI 教學功能,免架設前端",
+        "需要離線/內網可播放教材(如企業內訓、無網路教室)的場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 與程式內註解都相當詳盡,清楚說明每個功能開關、資料流與已知限制(例如開發用 token 的安全邊界都直接寫在程式碼註解裡)。原始碼樣本(director-graph.ts 等)型別嚴謹、註解解釋設計取捨而非重述程式碼行為。CI pipeline 涵蓋 lint/tsc/i18n/單元測試/E2E/容器建置多道關卡,測試檔案數量龐大(800+),且每日都有更新,是少見兼具工程嚴謹度與活躍度的專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 與 lib/persistence/server-auth.ts 皆明確標示:啟用伺服器端持久化(server-persistence)時所用的 PERSISTENCE_DEV_TOKEN 會被編譯進公開的瀏覽器 bundle,不具保密性,任何存取該頁面的人都能讀寫所有學習者的資料,官方文件建議僅用於本機或受信任內網,正式環境需自行替換為真正的身份驗證模組。這是專案主動揭露的已知限制,而非隱藏漏洞。",
+          "postinstall 腳本僅對 monorepo 內部的 @openmaic/* workspace 套件執行建置(npm/pnpm run build),未發現對外下載或執行遠端腳本的行為。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與功能完整度都達到少見水準,若你對 AI 教學生成或多智能體編排系統感興趣,非常值得一探究竟。",
+      "_mode": "full"
+    }
+  },
+  "p-e-w/heretic": {
+    "first_seen": "2026-08-30",
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-30": [
+        28702,
+        150,
+        6,
+        "Fully automatic censorship removal for language models",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-30",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "全自動移除語言模型「安全對齊」審查限制的命令列工具,基於方向消融(abliteration)技術與貝葉斯參數優化。",
+      "summary": "Heretic 結合方向消融(directional ablation/abliteration)與 Optuna 的 TPE 參數優化器,自動搜尋能同時減少模型拒答並保持與原模型 KL 散度最小的消融參數,讓使用者無需理解 transformer 內部原理即可產出「解除審查」的模型版本。專案由單一開發者維護,已被社群用來產出超過 5000 個 Hugging Face 模型,並附有殘差幾何分析等研究向功能。",
+      "highlights": [
+        "透過 Optuna TPE 優化器自動搜尋消融參數,在拒答率與 KL 散度間取得優於人工消融版本的平衡",
+        "支援多數 dense 模型、多模態模型、MoE 及 Qwen3.5 等混合架構,並支援 bitsandbytes 4-bit 量化以降低顯存需求",
+        "提供 reproduce.json 機制與 SHA256 雜湊驗證,讓他人能重現特定模型的消融結果",
+        "附帶殘差向量 PaCMAP 視覺化與殘差幾何統計等可解釋性研究功能",
+        "程式碼有大量說明「為什麼」的註解(如批次大小基準測試、Chain-of-Thought 前綴處理等非顯而易見的設計決策)"
+      ],
+      "use_cases": [
+        "研究者想針對特定開源 LLM 自動化產生解除安全對齊限制的變體,而不需手動調整消融參數",
+        "可解釋性研究人員想觀察/視覺化 harmful 與 harmless prompt 在各層 residual stream 中的幾何分布差異",
+        "需要在本地或租用 GPU 主機上批次處理多個模型並上傳到 Hugging Face 的模型製作者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 詳盡,附有原理圖解、對照表與研究功能說明;CI 涵蓋格式檢查、lint、型別檢查(ty)、單元測試與套件建置,涵蓋 Python 3.10-3.13。測試以 SHA256 雜湊比對驗證消融結果的可重現性(依賴外部下載模型,單元測試本身較少但涵蓋設定驗證邏輯)。程式碼品質高,有清楚的架構分層(config/model/evaluator/scorers plugin 系統),註解聚焦於解釋非顯而易見的設計取捨而非重複程式碼邏輯,並對 Hugging Face token 等敏感資訊的處理有明確安全考量(不寫入磁碟)。專案剛在 2026-08-17 有推送,並持續有 issue 討論與功能演進(如 plugin scorer 重構)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "程式碼中使用 transformers 的 trust_remote_code 選項來載入部分需要自訂程式碼的模型,但僅在使用者於首次載入時透過 Hugging Face 官方互動提示明確同意後才會啟用,且採用每次會話的 allowlist(trusted_models 集合),並非預設信任或靜默執行遠端程式碼",
+          "上傳模型至 Hugging Face 時,程式明確選擇不使用 huggingface_hub.login()(該函式會將 token 寫入磁碟),而是要求以環境變數或互動輸入方式提供 token,並在註解中說明這是因為此工具常在租用或共享 GPU 主機上執行"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質扎實、文件與 CI 完整,對關心模型可解釋性或想自動化產出解除審查模型的 AI 研發者值得一看;但其核心用途(移除安全對齊)本身涉及倫理與使用場景考量,使用前應了解目標模型的授權條款與部署情境。",
+      "_mode": "full"
+    }
+  },
+  "bigskysoftware/htmx": {
+    "first_seen": "2026-08-30",
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-30": [
+        49121,
+        32,
+        7,
+        "</> htmx - high power tools for HTML",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-08-30",
+    "analysis": {
+      "category": "library",
+      "one_liner": "用 HTML 屬性就能發出 AJAX、WebSocket、SSE 請求的輕量前端函式庫,不需要寫 JavaScript",
+      "summary": "htmx 讓開發者透過 hx-* 屬性直接在 HTML 標籤上宣告 AJAX、CSS Transition、WebSocket、SSE 等行為,取代傳統需要大量 JavaScript 樣板程式碼的做法,實踐 HATEOAS 精神。它是 intercooler.js 的後繼專案,壓縮後僅約 14KB 且無任何執行期依賴,是後端渲染(server-rendered)應用要做互動效果的熱門輕量替代方案。",
+      "highlights": [
+        "核心邏輯集中在單一檔案 src/htmx.js,附完整 JSDoc 型別註解,程式碼可讀性高",
+        "測試涵蓋非常完整:test/attributes、test/core 分類清晰,還有專門的 test/core/security.js 安全測試",
+        "建置流程單純透明:scripts/dist.sh 只是複製原始檔並用 uglify-js 壓縮,產出 IIFE/AMD/CJS/ESM 多種格式",
+        "package.json 無 preinstall/postinstall 生命週期腳本,無需執行任何額外程式碼即可安裝",
+        "版本紀錄詳實(CHANGELOG.md 逐版列出修復與貢獻者),CI 用 GitHub Actions 跑 lint + 型別檢查 + 多瀏覽器測試"
+      ],
+      "use_cases": [
+        "伺服器端渲染(Django/Rails/Laravel/Go 等)專案想要局部更新頁面而不想引入 React/Vue 等 SPA 框架",
+        "需要用 hx-post/hx-swap 等屬性快速做出互動式表單、無限捲動、即時更新等效果",
+        "搭配 SSE/WebSocket 擴充套件做即時通知或聊天室等功能"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 4,
+        "comment": "文件與程式碼內 JSDoc 註解非常完整,README 與官網文件互相呼應;測試分類細緻且含專門的安全測試檔案;CHANGELOG 顯示穩定的維護節奏(每隔數月一個修正版),但屬於功能已成熟的專案,新特性釋出頻率不高,故活躍度給 4 分而非滿分。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "成熟穩定、文件與測試俱佳的長青專案,對想擺脫前端框架複雜度的後端工程師來說值得立即關注。",
+      "_mode": "full"
+    }
+  },
+  "every-app/open-seo": {
+    "first_seen": "2026-08-30",
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-30": [
+        14652,
+        517,
+        11,
+        "Open source alternative to Semrush and Ahrefs",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-30",
+    "analysis": {
+      "one_liner": "開源版 Semrush / Ahrefs 替代方案,提供 SEO 儀表板與 MCP 伺服器讓 AI agent 直接操作你的 SEO 數據。",
+      "summary": "OpenSEO 是一套以 TypeScript 打造、可自架的全方位 SEO 工具,涵蓋關鍵字研究、排名追蹤、反向連結分析、網站健診與 AI 能見度追蹤等主流工作流程。資料來源仰賴使用者自備的 DataForSEO API 金鑰(依用量付費,無訂閱綁定),並額外提供 MCP 伺服器與 Agent Skills,讓 Claude Code 等 AI agent 能直接調用 SEO 數據執行任務。",
+      "category": "web",
+      "highlights": [
+        "同時支援 Cloudflare Workers 與 Postgres 兩種自架路徑,並提供 Docker 一鍵部署",
+        "內建 MCP server 與多組預建 Agent Skills(關鍵字研究、競品分析、網站健診等),鎖定 AI-native 使用情境",
+        "測試涵蓋率相當完整,133+ 支測試檔涵蓋 server 服務、billing、MCP 認證與前端邏輯,並搭配 Playwright e2e",
+        "CI 流程嚴謹:型別檢查、lint、單元測試、Docker build guard 一應俱全",
+        "採用量計費模式(自備 DataForSEO 金鑰),避免傳統 SEO 工具的高額訂閱費"
+      ],
+      "use_cases": [
+        "中小團隊或個人想要低成本、依用量付費的 SEO 分析工具",
+        "希望讓 AI agent(Claude Code、OpenClaw 等)直接存取 SEO 數據做關鍵字/競品/網站健診自動化",
+        "偏好自架掌控資料、不想被 SaaS 訂閱綁定的開發者",
+        "想研究 Cloudflare Workers + MCP + AI SDK 整合架構的工程師"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 4,
+        "comment": "程式碼品質相當扎實,抽樣的 billing/metering 模組與 MCP 目錄結構清晰、註解精準說明非顯而易見的限制(如 lazy import 避免 SDK 拖慢啟動),而非贅述程式在做什麼。測試數量與涵蓋範圍(單元 + e2e)在同類專案中屬上乘,CI 也強制型別檢查、lint、build 驗證與測試通過才能合併。文件方面 README 精簡但將細節拆到 docs/ 各文件,對自架使用者算友善。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Docker 自架版的啟動腳本 docker-entrypoint.sh 會在啟動時提示「傳送匿名使用量遙測(僅計數)」,並說明可用 OPENSEO_TELEMETRY_DISABLED=1 關閉,屬於已揭露且可選擇退出的行為,未發現安裝腳本執行外部下載內容或其他可疑模式。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試紀律明顯優於一般 trending 專案,若你正在找依用量付費且可自架的 SEO 工具,或對 MCP + AI agent 整合 SEO workflow 有興趣,值得花時間深入研究。",
+      "_mode": "full"
+    }
+  },
+  "Osmantic/ODS": {
+    "first_seen": "2026-08-30",
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-30": [
+        4922,
+        35,
+        12,
+        "Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-30",
+    "analysis": {
+      "one_liner": "一鍵把電腦變成本地 AI 伺服器:LLM 推論、聊天 UI、語音、Agent、工作流程與繪圖服務全部裝好、串接好。",
+      "summary": "ODS(Osmantic Deployment System)是一個安裝腳本 + Docker Compose 編排系統,自動偵測硬體(NVIDIA/AMD Strix Halo/Apple Silicon/Intel Arc)並選擇合適的 GGUF 模型,一次裝好 Open WebUI、llama-server、n8n、ComfyUI、Whisper/Kokoro、Qdrant/SearXNG 等一整套本地 AI 服務堆疊,目標是取代手動兜湊多個開源專案的痛苦。專案採模組化擴充架構(每個服務是一個含 manifest.yaml + compose.yaml 的資料夾),並提供 ods CLI 做狀態管理、模型切換、模式切換(local/cloud/hybrid)。",
+      "category": "infra",
+      "highlights": [
+        "安裝器高度模組化:19 個函式庫模組、13 個依序執行的 phase,支援 Linux/macOS/Windows 三平台且各自有獨立實作路徑",
+        "測試涵蓋異常紮實:298+ 測試檔案,包含 bats 單元測試、contract tests(Python/Shell)、多款 GPU topology fixture、fleet/distro 級別驗證腳本",
+        "公開維護一份 SECURITY_AUDIT.md,追蹤 2026-03 第三方稽核(gitleaks/bandit/semgrep)發現的問題與修復證據,附對應程式碼連結",
+        "Bootstrap 模式:先用小模型(1.5B)在一分鐘內完成首次對話,背景下載完整模型後熱切換,體驗設計細緻",
+        "GitHub Actions workflow 數量多且涵蓋 lint(shell/python/powershell)、secret-scan(gitleaks + checksum 驗證)、compose 驗證、catalog 驗證等"
+      ],
+      "use_cases": [
+        "想在家中或工作站自架私有 AI 伺服器,又不想手動兜 Ollama+WebUI+n8n+RAG 等多個專案",
+        "需要語音助理、自動化工作流程、RAG 檢索、影像生成整合在同一套本地環境的個人/小型實驗室",
+        "對資料隱私敏感、想避免把 Prompt 送往雲端供應商的使用者或團隊",
+        "想研究「模組化安裝器架構」或「多平台 GPU 自動偵測」設計的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件量與細緻度罕見(README、多份 docs/、SECURITY_AUDIT.md、CONTRIBUTORS.md 皆完整);測試涵蓋 bats + contract tests + fleet/distro 驗證,顯示對安裝穩定性有系統化把關;CI workflow 眾多(lint、secret-scan、compose 驗證等),且最後推送時間就是今天,活躍度高。抽查的 select-model.py 程式碼風格清晰、有型別註記與清楚註解,反映工程成熟度。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 與 get-ods.sh 提供 curl -fsSL https://install.osmantic.com/ods.sh | bash 的一鍵安裝方式,此為自架 AI 工具常見模式(類似 Ollama/Docker),腳本本身邏輯是複製 GitHub repo 後執行安裝器,並非直接執行遠端動態內容;專案另提供 Installer Trust 文件說明如何先行檢視腳本或改用固定版本安裝",
+          "secret-scan workflow 下載 gitleaks 執行檔時有做 SHA256 checksum 驗證,屬於良好實踐",
+          "SECURITY_AUDIT.md 揭露曾有一筆歷史性的 LiveKit 憑證外洩事件,但文件說明該憑證在外洩前已失效且相關程式碼已從目前維護的程式樹移除,屬於已解決的歷史紀錄"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程紀律與測試/文件完整度在同類「一鍵本地 AI 伺服器」專案中相當突出,值得想自架本地 AI 環境的人關注,但因牽涉大量系統層安裝與多服務編排,仍建議先讀過 Installer Trust 文件再執行安裝腳本。",
+      "_mode": "full"
+    }
+  },
+  "kaifcodec/user-scanner": {
+    "first_seen": "2026-08-30",
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-30": [
+        3563,
+        39,
+        17,
+        "🕵️‍♂️ (2-in-1) Email & Username OSINT suite for deep data extraction just from a single Email/Username. Analyzes 455+ actively maintained scan vectors (175+ email / 280+ username) for security research, investigations, and digital footprinting.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-30",
+    "analysis": {
+      "category": "security",
+      "one_liner": "整合 Email 與帳號 OSINT 的雙模式掃描工具,一次比對 455+ 個平台的帳號存在性與元資料。",
+      "summary": "User Scanner 是一套 Python 撰寫的 OSINT 情蒐工具,輸入單一 Email 或使用者名稱後,可平行掃描超過 450 個網站(175+ 支援 Email、280+ 支援帳號名),擷取頭像、簡介、粉絲數等公開資料。額外提供 Cross-Scan 跨平台 pivot、Hudson Rock 資安外洩情資查詢、MCP 伺服器供 AI agent 呼叫,以及 PDF/JSON/CSV 報告匯出。",
+      "highlights": [
+        "455+ 個持續維護的掃描模組,分為 Email 與 Username 兩大類別,並依 dev/social/adult/shopping 等分類組織",
+        "Cross-Scan pivot 引擎可從已掃描到的個人檔案中挖出次要帳號、Email 或連結,做多層次遞迴情蒐",
+        "內建 MCP Server,可讓 Claude Desktop、Cursor 等 AI agent 直接呼叫 scan_username/scan_email 工具自動化偵查",
+        "支援 Hudson Rock infostealer 外洩紀錄查詢、代理伺服器輪替與健康檢查、TLS 指紋偽裝(curl_cffi)",
+        "測試覆蓋率高,tests/ 目錄涵蓋 engine、cross_scan、confidence、mcp_handlers 等核心模組,且有 pytest+coverage 的 CI"
+      ],
+      "use_cases": [
+        "資安研究人員或紅隊在授權範圍內進行帳號足跡調查與社交工程前置偵查",
+        "OSINT 調查員快速確認目標 Email/帳號在哪些平台註冊過,並串連相關身分線索",
+        "資料外洩應變人員透過 Hudson Rock 整合功能檢查目標是否出現在 infostealer 惡意程式紀錄中",
+        "開發者將 engine 模組嵌入自有 Python pipeline,批次化執行帳號驗證"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件相當完整,README 之外還有 docs/ 目錄細分 FLAGS、CROSS_SCAN、PATTERNS、USAGE 等專門文件。tests/ 目錄涵蓋核心模組且 CI 有 pytest+coverage,程式碼風格清晰(型別註記、docstring、模組化良好)。抽查的 engine.py、helpers.py 程式碼結構清楚,無明顯壞味道。近期仍在持續開發(最後 push 為 2026-08-28),issue 數量與版本號顯示活躍維護。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝流程為標準 PyPI/pip 安裝或 Nix flake,未發現 postinstall/preinstall 等安裝期自動執行腳本",
+          "utils/update.py 使用 subprocess 呼叫 pip 進行自我更新(uninstall 後重新 install),屬常見的 CLI 自我更新模式,執行對象固定為 pip 與套件名稱,非動態外部輸入",
+          "npmjs.py 模組中使用 base64 解碼 npm 頭像 URL 中的 JSON payload 以取得 avatarURL,屬解析既有服務回傳資料的正常用途,非隱藏惡意payload",
+          "本工具的核心功能(帳號/Email OSINT 掃描、跨站 pivot、infostealer 外洩查詢)屬雙用途資安工具,使用者應確認掃描行為符合當地法規與目標授權範圍"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "程式碼品質與文件完整度都在水準之上,對紅隊/OSINT工作流有實用價值,值得評估導入,但使用時務必留意授權與法規邊界。",
+      "_mode": "full"
+    }
+  },
+  "workweave/router": {
+    "first_seen": "2026-08-30",
+    "last_seen": "2026-08-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-30": [
+        2725,
+        284,
+        19,
+        "Model router for agentic systems. Routes every prompt to the right model in <50ms. Cut costs 40-70% with just an endpoint change.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-30",
+    "analysis": {
+      "one_liner": "workweave/router 是一個 Go 打造的智慧模型路由代理,自動幫每個 prompt 挑選最適合的 LLM,號稱可省 40-70% 的模型花費。",
+      "summary": "這是一個 drop-in proxy,同時支援 Anthropic、OpenAI、Gemini 三種 API 格式,內建一個基於 in-process ONNX embedder 的 cluster scorer(源自 Avengers-Pro 論文),依語意分群自動選擇最划算又夠用的模型,並提供 BYOK 金鑰加密、OTLP 可觀測性與自架 Dashboard。可直接接上 Claude Code、Codex、opencode、pi、Cursor 等 agentic coding 工具的既有設定檔。",
+      "category": "infra",
+      "highlights": [
+        "支援 Anthropic Messages、OpenAI Chat Completions、Gemini native 三種上游協定的雙向轉譯",
+        "以本機 ONNX embedder(Jina v2 / Qwen3)做語意分群路由,而非用 prompt 硬猜模型",
+        "針對 Claude Code / Codex / opencode / pi 都有專門的一鍵安裝器,採 marker 區塊方式非破壞性寫入既有設定檔",
+        "內建 BYOK 金鑰 Tink AES-256-GCM 加密、Postgres search_path 防護等多層防禦設計",
+        "測試覆蓋非常完整,395+ 個 _test.go 檔案涵蓋 auth、provider、cluster scorer 等核心模組"
+      ],
+      "use_cases": [
+        "想在 Claude Code / Codex / opencode 前面加一層智慧路由,依任務難度自動切換便宜或高階模型以降成本",
+        "團隊自架 LLM Gateway,統一管理多供應商 API 金鑰與用量分析(analytics export)",
+        "需要對 agentic coding 工具的模型呼叫做可觀測性追蹤(OTLP/Honeycomb/Datadog/Grafana)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與程式碼註解品質極高,大量說明「為什麼」而非「做什麼」(如 search_path pinning、CGO tag 陷阱等);測試檔案數量龐大且分佈於各模組;CI workflows 齊全(test、smoke、cluster routing 檢查等);當日仍有 push,活躍度高。整體工程成熟度遠超一般 trending repo。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "npx @workweave/router 實際上是呼叫倉庫內的 install.sh,會修改使用者本機的 ~/.claude/settings.json、~/.codex/config.toml、opencode.json 等設定檔(採 marker 區塊寫入,並有 symlink 防護與 chmod 600 保護金鑰檔案)",
+          "Dockerfile 建置時會從 huggingface.co 下載 ONNX 模型與 tokenizer(已用固定 commit SHA/revision pin 版本,並檢查下載檔案大小以避免拿到錯誤內容)",
+          "install.sh 內建 --uninstall 的 curl-piped 執行路徑(從 raw.githubusercontent.com 抓取 uninstall.sh 並以 bash -c 執行),屬常見的 curl|sh 安裝模式,腳本本身有做內容前綴檢查(需以 #! 開頭)才會執行"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、測試完整、安裝腳本設計得比多數同類專案謹慎,若你在用 Claude Code / Codex 這類 agentic 工具且在意 API 花費,值得一試,但因涉及本機設定檔修改與外部下載,建議先看過 install.sh 再執行。",
       "_mode": "full"
     }
   }
