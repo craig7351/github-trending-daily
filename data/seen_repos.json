@@ -2074,7 +2074,7 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-08-03",
+    "last_seen": "2026-08-31",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-28": [
@@ -2105,45 +2105,51 @@
         11,
         "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "Python"
+      ],
+      "2026-08-31": [
+        60504,
+        230,
+        7,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-08-31",
     "analysis": {
       "category": "ai-ml",
-      "one_liner": "一個讓 AI agent(Claude Code、Codex 等)跨 Reddit、X、YouTube、HN、Polymarket 等平台做「近 30 天」深度研究並自動生成摘要簡報的技能套件。",
-      "summary": "last30days 是一套 Agent Skill,輸入任一主題(人物、公司、產品、話題)後,會平行搜尋 Reddit、X/Twitter、YouTube、TikTok、Hacker News、Polymarket、GitHub、arXiv、Techmeme 等近 20 個來源,依真實互動熱度(讚數、上讚、下注金額)排序去重合併,再由 AI 判斷綜合寫成一份有引用出處的近 30 天情報簡報。核心賣點是「用真人參與度取代 SEO/編輯排序」,解決一般搜尋引擎看不到社群第一手討論的問題。",
+      "one_liner": "一個 AI agent skill,能同時搜尋 Reddit、X、YouTube、HN、Polymarket 等十多個平台,彙整成一份有引用來源的「近 30 天」研究簡報。",
+      "summary": "last30days-skill 是給 Claude Code、Codex、Gemini CLI 等 agent 平台使用的技能套件,輸入一個主題(人物、公司、產品、比較題)後,會平行查詢十幾個社群/市場資料源(Reddit 留言與讚數、X 貼文、YouTube 逐字稿、Polymarket 賠率、GitHub 動態等),依真實互動量排序去重,再由 agent 綜合成一份附引用來源的簡報。核心賣點是解決「Google 只收錄編輯內容、抓不到社群即時討論」的痛點,讓使用者在會議、銷售拜訪或市場調查前快速掌握最新輿情。",
       "highlights": [
-        "純 Python 3.12+ stdlib 實作,pyproject.toml 宣告 runtime dependencies = [],大幅降低供應鏈風險",
-        "CI/CD 相當成熟:pinned SHA actions、TruffleHog 密鑑掃描、Semgrep SAST、OSV/uv audit 依賴稽核、OpenSSF Scorecard、Release 附 provenance attestation",
-        "測試覆蓋率門檻鎖在 84%(社群持續拉高),tests/ 目錄超過 200 個測試檔案,涵蓋各來源模組與邊界情境",
-        "支援 50+ agent host(Claude Code/Desktop、Codex、Cursor、Gemini CLI、OpenClaw 等),安裝方式多樣但文件清楚說明差異",
-        "瀏覽器 Cookie 擷取功能(Firefox/Chrome/Safari)有明確的安全處理,例如複製出的暫存 cookie 檔會 chmod 0o600 限制權限"
+        "零設定即可用 Reddit、HN、Polymarket、GitHub 四個免費來源,其餘來源可自帶 API key 或瀏覽器 cookie 解鎖",
+        "測試量體龐大(repo 內超過 200 個 test_*.py 檔,README 聲稱 2,700+ 測試),並在 pyproject.toml 設定 84% 覆蓋率門檻",
+        "CI/CD 相當成熟:TruffleHog 密鑰掃描、Semgrep SAST、OSV/uv 依賴稽核、OpenSSF Scorecard、zizmor 檢查 GitHub Actions 設定,且 Action 全部 pin 到 commit SHA",
+        "核心引擎純 Python 標準庫實作(pyproject.toml dependencies 為空),大幅降低供應鏈風險",
+        "支援 50+ agent host(Claude Code、Codex、Cursor、Copilot、Gemini CLI、OpenClaw 等),同一套引擎可跨平台安裝"
       ],
       "use_cases": [
-        "會議前快速掌握對象(人物/公司)近期在社群上的最新動態與輿論風向",
-        "產品/市場調研:比較多個工具或話題在社群熱度與觀點差異(如 A vs B)",
-        "內容創作前的素材收集,取代人工逐一翻 Reddit/X 的耗時流程",
-        "topic 趨勢監控與定期簡報(watchlist + briefing 排程,支援 Slack/webhook 通知)"
+        "會議或銷售拜訪前,快速掌握對方公司/人物近 30 天的社群動態與新聞",
+        "產品或技術選型時做多工具比較(如 A vs B vs C),取得含互動數據佐證的評比",
+        "內容創作者用來蒐集 Reddit/X/YouTube 上關於某主題的第一手熱門觀點,取代人工逐一搜尋",
+        "長期趨勢監控:搭配 --store 寫入 SQLite,用 watchlist.py 排程比對並透過 Slack/webhook 通知新發現"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件極為完整(README、CONFIGURATION、CONCEPTS、AGENTS.md 等多份專門文件),程式碼有型別註記與清楚的 docstring,平台相容性處理細緻(WSL、macOS Keychain、Windows 編碼)。CI 流程專業度高於一般個人專案等級,含 SAST、密鑑掃描、依賴稽核與 provenance attestation。近期(2026-07-26)仍持續有 push,changelog.d 顯示採用 towncrier 做版本管理,活躍度很高。"
+        "comment": "文件非常完整(多語系 README、CONFIGURATION.md、CONCEPTS.md、docs/solutions 內大量記錄設計決策與踩坑過程),程式碼模組化清晰(lib/ 下依來源拆分,pipeline.py 統一編排)。測試覆蓋率門檻設在 84% 並有專門 CI 檢查,GitHub Actions 全數 pin 到 commit SHA 且涵蓋 SAST、密鑰掃描、依賴稽核,工程成熟度在同類專案中屬上乘。近期(2026-08-30)仍持續高頻更新,活躍度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "未發現 curl|bash 或 iwr|iex 之類的一鍵執行遠端腳本模式,安裝流程走官方 plugin marketplace 或 npx skills,無 preinstall/postinstall 任意程式碼",
-          "瀏覽器 Cookie 擷取(cookie_extract.py)屬於敏感能力,會讀取本機 Firefox/Chrome/Safari 的登入 Cookie 以模擬瀏覽器身份存取 X 等平台,雖是使用者主動選用且有明確文件與權限限制(0o600),使用前仍應留意這類憑證存取行為",
-          "需要使用者自行提供多個第三方服務的 API 金鑑(ScrapeCreators、Perplexity、XAI 等),存在憑證管理面的信任邊界,但作者提供 macOS Keychain 整合與 .env 隔離,設計上偏保守"
+          "文件中的疑難排解訊息裡出現一個 curl | bash 安裝指令(用於安裝第三方 Grok CLI:curl -fsSL https://x.ai/cli/install.sh | bash),這是給使用者參考的建議指令而非程式自動執行的內容,使用前應自行評估該第三方安裝腳本",
+          "此技能會依需求讀取瀏覽器 cookie(如 X/Twitter 登入狀態)、macOS Keychain 或 .env 中的 API 金鑰以存取各平台,屬功能所需的正常設計,但涉及憑證存取,使用者應了解金鑰/cookie 的儲存與使用範圍(README 有說明儲存於本機、無遙測)"
         ]
       },
       "star_rating": 5,
-      "verdict": "工程成熟度與文件品質在 GitHub Trending 專案中屬上乘,零外部 runtime 依賴加上扎實的 CI 安全稽核,值得研究其架構,若有跨平台社群輿情彙整需求也值得實際安裝試用。",
+      "verdict": "工程品質與文件完整度在 GitHub trending 專案中相當突出,若你需要在 agent 工作流中快速彙整社群輿情與市場資訊,值得立即嘗試。",
       "_mode": "full"
     },
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "consecutive_days_on_trending": 1
   },
   "ocornut/imgui": {
@@ -4576,10 +4582,10 @@
   },
   "livekit/agents": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-08-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-04": [
         11984,
@@ -4599,6 +4605,13 @@
         13338,
         22,
         20,
+        "A framework for building realtime voice AI agents 🤖🎙️📹",
+        "Python"
+      ],
+      "2026-08-31": [
+        13757,
+        132,
+        18,
         "A framework for building realtime voice AI agents 🤖🎙️📹",
         "Python"
       ]
@@ -11483,10 +11496,10 @@
   },
   "tashfeenahmed/freellmapi": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-08-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-25": [
         19780,
@@ -11499,6 +11512,13 @@
         21616,
         433,
         15,
+        "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+        "TypeScript"
+      ],
+      "2026-08-31": [
+        22778,
+        504,
+        17,
         "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
         "TypeScript"
       ]
@@ -11859,10 +11879,10 @@
   },
   "tt-a1i/archify": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-31",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-27": [
         17946,
@@ -11889,6 +11909,13 @@
         31115,
         3902,
         1,
+        "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "JavaScript"
+      ],
+      "2026-08-31": [
+        34607,
+        3722,
+        4,
         "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "JavaScript"
       ]
@@ -12028,10 +12055,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-08-31",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -12058,6 +12085,13 @@
         37955,
         1587,
         3,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-08-31": [
+        39249,
+        1114,
+        2,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -12445,15 +12479,22 @@
   },
   "abhigyanpatwari/GitNexus": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-08-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-29": [
         46158,
         202,
         5,
+        "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
+        "TypeScript"
+      ],
+      "2026-08-31": [
+        46564,
+        182,
+        19,
         "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
         "TypeScript"
       ]
@@ -12611,15 +12652,22 @@
   },
   "NationalSecurityAgency/ghidra": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-08-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-29": [
         73340,
         191,
         12,
+        "Ghidra is a software reverse engineering (SRE) framework",
+        "Java"
+      ],
+      "2026-08-31": [
+        73899,
+        198,
+        11,
         "Ghidra is a software reverse engineering (SRE) framework",
         "Java"
       ]
@@ -12710,15 +12758,22 @@
   },
   "THU-MAIC/OpenMAIC": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-31",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-30": [
         22267,
         907,
         5,
+        "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "TypeScript"
+      ],
+      "2026-08-31": [
+        24026,
+        1370,
+        1,
         "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "TypeScript"
       ]
@@ -12761,15 +12816,22 @@
   },
   "p-e-w/heretic": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-31",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-30": [
         28702,
         150,
         6,
+        "Fully automatic censorship removal for language models",
+        "Python"
+      ],
+      "2026-08-31": [
+        29173,
+        369,
+        5,
         "Fully automatic censorship removal for language models",
         "Python"
       ]
@@ -12858,15 +12920,22 @@
   },
   "every-app/open-seo": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-08-31",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-30": [
         14652,
         517,
         11,
+        "Open source alternative to Semrush and Ahrefs",
+        "TypeScript"
+      ],
+      "2026-08-31": [
+        15165,
+        469,
+        15,
         "Open source alternative to Semrush and Ahrefs",
         "TypeScript"
       ]
@@ -13059,6 +13128,451 @@
       },
       "star_rating": 4,
       "verdict": "工程品質紮實、測試完整、安裝腳本設計得比多數同類專案謹慎,若你在用 Claude Code / Codex 這類 agentic 工具且在意 API 花費,值得一試,但因涉及本機設定檔修改與外部下載,建議先看過 install.sh 再執行。",
+      "_mode": "full"
+    }
+  },
+  "Lakr233/vphone-cli": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        9613,
+        361,
+        3,
+        "",
+        "Swift"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "security",
+      "one_liner": "在 Apple Silicon Mac 上,用 Virtualization.framework 開一台可以被完整越獄的虛擬 iPhone。",
+      "summary": "vphone-cli 是一套 Swift 寫成的 CLI 工具,利用蘋果私有的 PCC(Private Cloud Compute)研究型虛擬機基礎設施,把 iPhone 韌體(iBoot/kernel/TXM 等開機鏈)打上補丁後,在虛擬機裡完整跑出一台「虛擬 iPhone」,並提供從下載韌體、DFU 還原、CFW 安裝到開機的全自動流程。專案內附五種安全繞過強度不同的韌體變體(patchless 到含 Sileo/TrollStore 的完整越獄),並附有大量針對 kernel/AMFI/TXM 補丁的逆向研究文件。",
+      "highlights": [
+        "提供 vm create 一鍵完成下載→補丁→DFU 還原→CFW 安裝→開機的全流程",
+        "自製 ARM64 反組譯/編碼器與超過 30 個 kernel jailbreak 補丁模組(AMFI、沙箱、TrustCache 等)",
+        "research/ 目錄下有大量詳實的逆向工程筆記,記錄各補丁的來源與驗證方式",
+        "提供主機控制 socket(screenshot/touch/clipboard)方便 AI 驅動的 E2E 測試整合(vphone-mcp)",
+        "測試涵蓋 Swift 單元測試 + 針對每個支援 kernel 版本實跑補丁的整合測試腳本"
+      ],
+      "use_cases": [
+        "iOS 安全研究人員需要無實體裝置即可測試越獄補丁與核心漏洞",
+        "行動應用開發者想在 CI 或本機跑一台可完整互動的虛擬 iPhone 做自動化 UI/AI 測試",
+        "越獄社群研究蘋果開機鏈(iBoot/TXM/AMFI)安全機制的教學與範例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README、多語系文件與 research/ 逆向筆記都寫得非常詳盡;Swift 原始碼命名清楚、註解精簡且針對『為什麼』而非『做什麼』,搭配 Swift Testing 單元測試與整合測試腳本,工程成熟度明顯偏高。CI 僅設定 release 階段的打包發佈,未見 PR/push 時的自動化測試 workflow,活躍度則由近期 push 時間與大量 issue 引用可佐證。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "此工具的核心用途就是繞過 iOS 安全機制(SIP/AMFI 停用、AMFI 私有權限放行、TXM/AMFI/沙箱 kernel 補丁),使用前需要在 Recovery 模式下關閉 SIP 或設定 AMFI boot-arg,這是專案設計目的而非隱藏行為,但使用者應了解這會大幅降低主機系統的安全防護",
+          "scripts/vphoned/signcert.p12 是一個已提交到版本庫的程式碼簽章憑證(用於對客端 daemon 做 ad-hoc 簽章),屬於越獄工具鏈常見做法,非外流的正式開發者憑證",
+          "建置流程會從多個外部 GitHub submodule(含非 Apple/非原作者帳號,如 zqxwce/vphone-cli-storage)拉取資源與工具原始碼並在本機編譯執行,使用前建議確認這些 submodule 來源與內容",
+          "安裝與建置腳本(setup_tools.sh、build.sh)使用 brew/git/clang 建置流程,未發現 curl|bash 式的匿名遠端執行或混淆程式碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與逆向研究深度都相當紮實,對 iOS 安全研究與越獄社群是值得關注的專案,但因其本質涉及大幅降低系統安全防護與依賴多方外部程式碼,一般開發者使用前應充分理解風險。",
+      "_mode": "full"
+    }
+  },
+  "unclecode/crawl4ai": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        80232,
+        221,
+        6,
+        "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here:https://discord.gg/jP8KfhDhyN",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "將網頁轉換成乾淨、對 LLM 友善的 Markdown 與結構化資料的非同步爬蟲框架。",
+      "summary": "Crawl4AI 是以 Playwright 為核心的開源非同步網頁爬蟲,專為 RAG、AI Agent 與資料管線設計,能將任意網頁轉成乾淨 Markdown 或依 CSS/LLM schema 抽取結構化 JSON。專案同時提供 Python 套件、CLI(crwl)與可自架的 Docker API 服務(含監控儀表板、瀏覽器池、深度爬取)。已累積 8 萬多顆星,是目前 GitHub 上最受歡迎的爬蟲專案,近期版本持續針對 Docker API 進行安全性強化。",
+      "highlights": [
+        "支援多種擷取策略:CSS/XPath schema、BM25、內容剪枝(pruning)、以及呼叫任意 LLM 做結構化抽取",
+        "內建 Adaptive Crawler、深度爬取(BFS/DFS/BestFirst)與可斷點續爬(resume_state)機制",
+        "Docker 部署版本提供即時監控儀表板、瀏覽器池管理與 MCP(給 Claude Code 等 AI 工具用)整合",
+        "近期多個版本(v0.8.5~v0.9.0)專門修補 Docker API 的 RCE、SSRF、認證繞過等重大安全問題,且將預設姿態改為 secure-by-default",
+        "測試覆蓋範圍廣,tests/ 目錄下有 200 多個測試檔案,涵蓋瀏覽器管理、快取、深度爬取、Docker API 等模組"
+      ],
+      "use_cases": [
+        "為 RAG 系統批次擷取網頁並轉成乾淨 Markdown 語料",
+        "以 LLM 或 CSS schema 從電商、新聞等網站抽取結構化資料",
+        "需要大規模、可控的非同步爬蟲搭配代理、Session、瀏覽器指紋管理",
+        "自架 Docker API 提供團隊內部的網頁擷取服務"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與模組內 docstring 相當完整,核心程式如 async_webcrawler.py 有清楚的用法範例與型別註記;tests/ 目錄涵蓋廣泛(200+ 檔案),另外有專門的 security.yml CI 針對 Docker API 的安全姿態做行為測試。專案活躍度高,commit/release 頻繁(最近一次推送在 2026-08-29,v0.9.2),CHANGELOG 顯示每次發版都有明確的修補紀錄。頂層雖無傳統跑全量 pytest 的 CI workflow(僅見 release、docker-release、security 三種),對主套件的自動化測試覆蓋透明度略顯不足。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 中會透過 curl 下載 Redis 官方 GPG 金鑰並加入 apt 來源(屬常見的套件庫簽章驗證流程,非任意程式碼執行)",
+          "專案 README 揭露先前(v0.8.5、v0.8.7 等)Docker API 曾有 RCE、SSRF、硬編碼 JWT 密鑰等安全漏洞,官方已釋出修補並將新版預設改為 secure-by-default(需自架 Docker API 的使用者應確認已升級至最新版本)"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "生態成熟、文件與測試完整、且持續積極修補安全問題,是目前 LLM 資料擷取領域最值得關注的開源爬蟲專案之一。",
+      "_mode": "full"
+    }
+  },
+  "majd/ipatool": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        10212,
+        58,
+        8,
+        "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "cli",
+      "one_liner": "用 Go 寫的命令列工具,讓你在 iOS/iPadOS/tvOS/visionOS 上搜尋、購買並下載 App Store 的 ipa 安裝檔。",
+      "summary": "ipatool 透過重建 Apple App Store 的私有 API 流程(登入、搜尋、購買、下載),讓開發者與研究人員能在沒有 macOS/Xcode 的情況下取得任意平台上的 ipa 檔案,常用於逆向工程、越獄社群與資安研究。近期版本新增了以 Unicorn CPU 模擬器執行 Apple 官方私有框架二進位檔的機制,用來取代原本手刻的 SAP(Store Application Protocol)簽章邏輯,大幅提升與蘋果伺服器互動的相容性與穩定性。",
+      "highlights": [
+        "以 Unicorn 引擎模擬執行從 Apple 官方 OSXUpd10.9.pkg 更新包中取出的 CommerceKit/CoreFP 私有框架二進位檔,直接重用蘋果原生簽章邏輯而非逆向猜測協定",
+        "下載的 Apple 資產有 SHA-256 雜湊與檔案大小雙重校驗,且來源固定為 swcdn.apple.com 官方 CDN,並具備本地快取機制",
+        "測試覆蓋率極高,幾乎每個原始檔都有對應的 _test.go,涵蓋 appstore、http、keychain、sap 模擬器等核心模組",
+        "CI 齊全,包含 lint、unit-tests(跨 ubuntu/windows/windows-arm)、integration-tests、dry-build、release 五條 workflow",
+        "支援跨平台(Windows/Linux/macOS)並整合系統 Keychain 儲存帳號憑證,登入流程有完整的重試與錯誤分類處理"
+      ],
+      "use_cases": [
+        "資安研究人員或逆向工程師需要取得特定版本的 ipa 檔進行靜態/動態分析",
+        "企業內部 QA/測試流程需要自動化下載已購買的 App Store 應用程式進行迴歸測試",
+        "越獄或客製化韌體社群用於保存、降級特定版本的 App"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼風格一致、錯誤處理細膩(含重試、狀態機式的登入回應解析),測試檔案幾乎與原始檔一一對應,CI 流程完整涵蓋多平台與 lint;README 僅涵蓋安裝與 CLI 用法,缺乏架構說明或 CONTRIBUTING 文件,對想深入理解 SAP/Unicorn 模擬機制的人略顯不足。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "internal/sap/assets/assets.go 會在執行期從 Apple 官方 CDN(swcdn.apple.com)下載一個 macOS 10.9 更新包,擷取其中的 CommerceKit/CoreFP 私有框架二進位檔,並以 Unicorn CPU 模擬器執行這些蘋果原生程式碼來產生登入所需的簽章;下載內容有 SHA-256 與檔案大小校驗,且結果會快取於使用者快取目錄",
+          "此工具的核心功能(重建 App Store 私有登入/購買/下載協定)本質上依賴逆向工程蘋果的私有 API,使用前需以合法擁有的 Apple ID 及取得授權的方式使用,不建議用於規避付費授權或散布未經授權的應用程式副本"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "程式碼與測試品質在同類 CLI 工具中屬上乘,尤其是用 CPU 模擬器重用蘋果官方簽章邏輯的手法相當巧妙,值得逆向工程或 iOS 安全研究者關注,但一般開發者需留意其功能涉及 App Store 私有協定的合規使用邊界。",
+      "_mode": "full"
+    }
+  },
+  "punkpeye/awesome-mcp-servers": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        93322,
+        96,
+        9,
+        "A collection of MCP servers.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "一份持續更新的 Model Context Protocol (MCP) 伺服器實作總覽清單。",
+      "summary": "這是由 punkpeye 維護的 awesome-list,收錄各種 MCP 伺服器實作,依領域(資料庫、瀏覽器自動化、雲端平台、開發工具等)分類,並用圖示標示程式語言與部署範圍。目的是幫助開發者快速找到可整合進 AI Agent/Claude 等用戶端的現成 MCP 伺服器,並附有官方 web 目錄(glama.ai)同步。",
+      "highlights": [
+        "近 93,322 顆星、單日 +96,目前是 GitHub trending 熱門清單",
+        "以圖示系統標示程式語言(🐍📇🏎️🦀等)、部署範圍(☁️🏠📟)與作業系統支援,查找方便",
+        "支援多國語言 README(泰、英、繁中、簡中、日、韓、葡)",
+        "分類極細,涵蓋 40+ 領域,從資料庫、法律、太空到靈性玄學都有對應區塊",
+        "與 glama.ai/mcp/servers 官方網頁目錄同步,並有 Discord/Reddit 社群連結"
+      ],
+      "use_cases": [
+        "尋找特定領域(如資料庫、瀏覽器自動化、監控)的現成 MCP 伺服器可直接整合進 Claude Desktop 等用戶端",
+        "研究 MCP 生態系目前有哪些實作模式與服務類型",
+        "作為建置自己 MCP 伺服器時的參考範例來源"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "資源彙整類,測試不適用。README 結構清晰、分類完整且有圖例說明,但條目大量且部分描述像是廠商自我推銷文案(尤其 Aggregators 分類中多筆 x402 加密貨幣微支付相關服務),品質參差不齊,建議使用前自行評估各條目連結的實際專案品質。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 本身不含可直接執行的 curl|bash 安裝指令,多數條目使用 npx/pip install 等常見套件管理工具安裝方式",
+          "清單中部分伺服器(如涉及 USDC/加密貨幣微支付、無需 API key 的第三方遠端服務)屬第三方維護內容,安裝前應自行檢視對應專案原始碼與權限需求,本評估未對個別子專案做原始碼審查"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若需要快速找 MCP 伺服器實作參考,這份清單廣度足夠值得加入書籤,但條目品質不一,實際採用前仍需自行把關。",
+      "_mode": "light"
+    }
+  },
+  "checkstyle/checkstyle": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        9201,
+        115,
+        10,
+        "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
+        "Java"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Checkstyle 是一套成熟的 Java 程式碼風格與靜態分析工具,協助團隊維持一致的編碼規範。",
+      "summary": "Checkstyle 可檢查 Java 程式碼是否符合 Google Java Style Guide、Sun Code Conventions 或自訂規則,支援命令列、ANT task 及 Maven 整合。專案已存在多年、社群成熟,今日因某次更新登上 GitHub trending。",
+      "highlights": [
+        "9201 顆星、成立已久的老牌 Java 靜態分析工具,今日 trending 新增 115 顆星",
+        "高度可配置的規則系統,可透過 XML config 客製化檢查項目(如範例中的 FallThrough 檢查)",
+        "CI/品質檢測體系非常完整,涵蓋 Snyk、CodeCov、PIT mutation testing、Checker Framework、Qodana 等多重驗證",
+        "同時支援命令列獨立執行、ANT task 整合、以及 Maven Central 套件發佈",
+        "有 Discussions、Discord、Stack Overflow、Google Groups 多管道社群支援"
+      ],
+      "use_cases": [
+        "為 Java 專案導入統一的程式碼風格規範(如 Google Style 或 Sun Conventions)",
+        "整合進 CI/CD pipeline 做自動化程式碼品質把關",
+        "搭配 IDE 或建置工具(Maven/ANT)在開發階段即時抓出風格違規",
+        "作為團隊制定自訂 coding standard 的基礎框架"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,含快速開始範例、貢獻指南、支援管道與授權說明,文件品質良好;但僅能就 README 評估,未實際檢視程式碼與測試覆蓋,故測試面向以 README 資訊為限。專案有多組 CI 徽章與 pitest/coverage 檢測,顯示測試流程完善但無法直接驗證。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對 Java 開發者而言是值得認識的成熟工具,雖非新專案但持續活躍維護,適合加入程式碼品質相關的資源清單。",
+      "_mode": "light"
+    }
+  },
+  "pollen-robotics/microduck_rl": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        795,
+        168,
+        12,
+        "RL training environments for Microduck (mjlab)",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Pollen Robotics 為旗下雙足機器人 Microduck 打造的強化學習訓練環境,基於 mjlab(MuJoCo Warp)+ PPO,產出可直接部署到實體機器人的 ONNX 策略。",
+      "summary": "這是一個針對 ~800g、25cm 高的雙足機器人 Microduck 的 sim-to-real RL 訓練套件,涵蓋走路、站立恢復、踢球、前滾翻、輪滑等 13+ 種任務,並內建 BAM 致動器物理模型(電壓控制律、反電動勢、摩擦力)、齒隙(backlash)模擬與網域隨機化,專門解決小型伺服馬達 sim2real 落差問題。訓練出的策略經 ONNX 匯出後,由姊妹專案 pollen-robotics/microduck 的執行環境在實體機器人上熱切換部署。",
+      "highlights": [
+        "61 維觀測空間在所有任務策略間共用,使執行環境可在走路/恢復/特技策略間即時熱切換",
+        "BAM 致動器模型深入電壓控制律、反電動勢、Stribeck 摩擦,而非簡化 PD 控制,並支援每個環境獨立的摩擦力/齒隙域隨機化",
+        "AGENTS.md 詳細記錄了工程上踩過的坑與不可違反的不變量(如觀測層版位固定、DR 不可跨 reset 累積),對協作開發或 AI coding agent 都很友善",
+        "測試涵蓋 NaN 防護、joint index 映射、reward 正負號等真實訓練中曾出過包的迴歸情境,而非表面測試"
+      ],
+      "use_cases": [
+        "研究小型雙足/輪滑機器人的 sim2real 強化學習遷移技術",
+        "作為 mjlab + rsl_rl 訓練框架搭配真實致動器物理模型(BAM)的參考實作",
+        "想在自製機器人上實驗多策略熱切換(walk/recover/trick)部署架構的團隊"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 AGENTS.md 文件品質極高,清楚說明任務清單、觀測/關節慣例、致動器模型原理與已知陷阱;tests/ 目錄有 18 支測試涵蓋 cfg 不變量與 reward/NaN 迴歸,但未見 .github/workflows 的 CI 設定,測試需手動執行;程式碼(如 friction_dr_bam.py)註解精確解釋了 WHY 而非 WHAT,顯示成熟的工程紀律。近日仍持續有 push,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對機器人 RL / sim2real 領域的工程師來說是難得一見、文件與工程細節都做得極其扎實的參考專案,值得關注;若非該領域受眾則實用性有限。",
+      "_mode": "full"
+    }
+  },
+  "handsomestWei/patent-disclosure-skill": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        5650,
+        62,
+        13,
+        "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "給 Claude Code / Cursor 用的中國專利技能包:自動挖專利點、寫交底書、查新、通俗解讀專利,並輔助審查答復。",
+      "summary": "這是一個以 AgentSkills 規範打包的「Claude Code / Cursor Skill」,核心是大量結構化 Prompt(prompts/)搭配 Python 輔助工具(tools/),協助研發人員從專案文件/代碼中挖掘專利點,分類型(發明/實用新型/外觀設計)產出交底書 Markdown+Word,並整合國知局公布公告站查新、Mermaid 框圖、線稿生成、Obsidian 知識庫解讀、政策動向嗅探與審查意見答復(含可選向量檢索 RAG)等完整工作流。本質上是「教 AI Agent 怎麼做專利事務」的知識與流程封裝,而非一般的獨立應用程式。",
+      "highlights": [
+        "單包模組化設計:SKILL.md 僅做路由,分步邏輯全放在 prompts/ 對應子目錄,搭配詳盡的 Agent 自檢清單",
+        "涵蓋發明/實用新型/外觀設計三種專利類型的完整交底流程,並針對每型有獨立範本,避免混用",
+        "深度整合 Obsidian(知識圖譜、雙鏈、Canvas)做專利通俗解讀與私有專利知識庫累積",
+        "審查答復模組支援案例脫敏入庫、標籤檢索+可選向量 RAG、多策略草稿產出,且要求人工複核才遞交",
+        "30+ 個 pytest 測試檔涵蓋 crawl/oa/patent_reader/shared 各工具模組,文件與範例(examples/)非常完整"
+      ],
+      "use_cases": [
+        "企業研發人員想把自己做的技術方案快速整理成專利交底書初稿",
+        "想批量、系統化通俗解讀公開專利並建立個人可檢索的專利知識庫",
+        "專利工程師需要輔助工具處理審查意見答復草稿與歷史案例複用",
+        "關注中國專利審查政策動向、希望有工具定期彙整國知局等官方資訊"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質極高(README/SKILL.md/INSTALL.md 分工清楚,附大量效果截圖與範例目錄),Python 工具程式碼有清楚的模組職責與中文說明註解;測試涵蓋主要工具模組但沒有對應的 CI workflow 自動跑測試(僅有 star-history 排程),公式求值採 AST 白名單而非裸 eval,顯示作者有一定安全意識;活躍度很高,今日仍在推送更新。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "tools/oa/book_to_skill_setup.py 在使用者明確觸發「審查答復/實務書蒸餾」流程且經確認後,會從 GitHub raw README 抓取內容、用正規表示式解析出一行 npx 安裝指令並執行(找不到 npx 則改用 git clone),屬於「抓取遠端內容並依其推導出指令執行」的模式,使用前建議留意該外部套件 virgiliojr94/book-to-skill 的來源與內容",
+          "查新工具(tools/crawl)與可選審查答復向量檢索(tools/oa)會依使用者設定連線至國知局公布站或第三方 Embedding API(智譜/DashScope/MiniMax/OpenAI 等),金鑰由使用者自行提供並存放於系統文件目錄設定檔,未見程式碼中硬編碼金鑰或可疑網域",
+          "未發現混淆或壓縮過的可疑程式碼(僅 tools/shared/vendor/mermaid.min.js 為正常第三方函式庫壓縮檔),也未發現長 base64/hex payload 或寫死 IP"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你在中國體系內需要處理專利交底或審查答復,這是目前少見、打磨完整的 Agent Skill,值得一試;但務必留意其中一個模組會自動抓取並執行外部 GitHub 專案的安裝指令。",
+      "_mode": "full"
+    }
+  },
+  "corsairdev/corsair": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        10953,
+        126,
+        14,
+        "Connect your users to their apps",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "開源的產品整合平台,用單一 REST API 語法統一連接 240 多個第三方服務(Airtable、Slack、GitHub 等),讓 AI Agent 與後端服務共用同一套整合層。",
+      "summary": "Corsair 是一個 TypeScript 打造的整合平台,目標是取代「每個第三方 API 都要重寫一套串接邏輯」的痛點。它提供統一的 endpoint/webhook/auth 語法,涵蓋 OAuth2 金鑰管理、多租戶帳號、webhook 驗證等基礎設施,且可自架或使用官方 Hub 代管 OAuth refresh。核心賣點是不只支援 MCP,而是原生 REST API,同時服務 Agent、後端服務與客戶儀表板。",
+      "highlights": [
+        "monorepo 內有超過 240 個獨立整合套件(packages/*),每個都有型別化的 endpoints/schema/webhooks,結構高度一致",
+        "核心加密模組使用 AES-256-GCM 信封加密(KEK 包 DEK)搭配 scrypt 金鑰衍生,用於保護使用者 OAuth token 與 API 金鑰",
+        "CI 流程完整:lint、typecheck、plugin 驗證、docs 驗證、依 PR 影響範圍分流測試,並有獨立的 Plugin PR Gate 機制審核新整合",
+        "支援 Express/Fastify/Hono/Next.js 等多種框架的 adapter,方便嵌入既有後端",
+        "程式碼中留有清楚的並發寫入競態(lost-update)註解,顯示團隊有踩過真實 bug 並記錄下已知限制而非隱藏"
+      ],
+      "use_cases": [
+        "需要讓 AI Agent 一次串接多個 SaaS 工具(如 CRM、通訊、辦公軟體)而不想為每個 API 重寫認證與呼叫邏輯",
+        "建構多租戶 SaaS 產品,讓終端使用者自行連接自己的第三方帳號(OAuth)",
+        "想要自架整合層以避免資料經過第三方平台,同時仍可選擇性使用官方 Hub 代管 webhook/OAuth refresh",
+        "取代零散的 MCP-only 整合方案,需要同時支援 REST API 與 Agent 兩種呼叫情境"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 簡潔但清楚說明定位,搭配官網與影片;每個整合套件都有對應 package.json 與 jest 測試,但部分測試(如 api.test.ts、integration.test.ts)在一般 CI 流程中被排除,實際覆蓋率無法完全確認。核心加密與金鑰管理模組寫得嚴謹,函式有清楚的 JSDoc 註解與已知限制說明。commit 與 PR 檢查機制非常活躍,顯示是持續維護中的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "架構扎實、整合數量龐大且加密設計正規,對需要多整合能力的 AI Agent/後端專案值得列入評估清單。",
+      "_mode": "full"
+    }
+  },
+  "colinhacks/zod": {
+    "first_seen": "2026-08-31",
+    "last_seen": "2026-08-31",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-08-31": [
+        43651,
+        31,
+        16,
+        "TypeScript-first schema validation with static type inference",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-08-31",
+    "analysis": {
+      "category": "library",
+      "one_liner": "TypeScript 生態系最主流的 schema 驗證函式庫,零依賴、型別推導與執行期驗證合一。",
+      "summary": "Zod 讓開發者用單一 schema 定義同時完成執行期資料驗證與 TypeScript 靜態型別推導,省去手寫型別與驗證邏輯重複維護的問題。此次上榜版本為 v4.5.4,新增 z.compile() 的 AOT 編譯快速路徑,針對高頻驗證場景可帶來 2-9 倍效能提升。",
+      "highlights": [
+        "新增 z.compile() 提供 AOT 編譯快速路徑,大型陣列/物件 schema 效能提升約 9 倍",
+        "核心 bundle 僅 2kb(gzip)、零外部依賴",
+        "同時維護 v3/v4 兩套 API 並存,並提供 mini 版本供 bundle size 敏感場景使用",
+        "189+ 個測試檔案覆蓋各種 schema 型別與邊界案例,CI 涵蓋多組 TypeScript 版本(5.5/6/latest)矩陣測試",
+        "內建 JSON Schema 轉換與 Standard Schema 介面支援,生態系相容性佳"
+      ],
+      "use_cases": [
+        "API 請求/回應資料的執行期驗證與型別推導",
+        "表單驗證(常與 React Hook Form、Zod resolver 搭配)",
+        "設定檔或環境變數的結構化驗證",
+        "與 tRPC、OpenAPI/JSON Schema 等工具鏈整合的型別安全資料層"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼組織清晰,核心邏輯有精確的行內註解說明非顯而易見的設計決策(例如 tree-shaking 相容性、compile fallback 語意),測試覆蓋極廣,CI 使用多版本 TypeScript 矩陣驗證相容性,並有 lint/format/circular-dependency 檢查,整體工程成熟度是同類專案中的標竿。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "TypeScript 驗證函式庫的事實標準,持續活躍開發且工程品質頂尖,值得長期關注與採用。",
       "_mode": "full"
     }
   }
