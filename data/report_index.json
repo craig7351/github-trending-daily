@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-01",
+    "analyzed": 4,
+    "cached": 12,
+    "deferred": 0,
+    "top_name": "firecrawl/pdf-inspector",
+    "top_rating": 5
+  },
+  {
     "date": "2026-08-31",
     "analyzed": 10,
     "cached": 9,

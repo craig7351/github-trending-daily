@@ -1354,7 +1354,7 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-08-24",
+    "last_seen": "2026-09-01",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
@@ -1386,6 +1386,13 @@
       "2026-08-24": [
         242557,
         427,
+        10,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
+      ],
+      "2026-09-01": [
+        245248,
+        512,
         10,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
@@ -1428,7 +1435,7 @@
       "verdict": "若你已在用 Claude Code 或 Codex 進行日常開發,這套整合度高的代理工作流值得一試,但因規模龐大且僅能從 README 評估,建議先在非關鍵專案試裝並檢查其 hook 權限再全面採用。",
       "_mode": "light"
     },
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "consecutive_days_on_trending": 1
   },
   "pingdotgg/t3code": {
@@ -3250,10 +3257,10 @@
   },
   "zhaoxuya520/reverse-skill": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-05",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-01": [
         10725,
@@ -3289,43 +3296,49 @@
         2,
         "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "PowerShell"
+      ],
+      "2026-09-01": [
+        33138,
+        1401,
+        9,
+        "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "PowerShell"
       ]
     },
-    "last_analyzed": "2026-08-01",
+    "last_analyzed": "2026-09-01",
     "analysis": {
       "category": "security",
-      "one_liner": "給 AI 程式助理用的「逆向工程 / 滲透測試」任務路由包,依情境自動導向對應技能文件與工具鏈。",
-      "summary": "reverse-skill 是一套給 Claude Code、Cursor、Cline 等程式 AI 客戶端使用的技能路由系統,把 APK 逆向、二進位分析、JS 逆向、滲透測試、CTF 等 40 多種情境各自整理成 SKILL.md + 工具索引 + 腳本,讓 AI 讀取後自動判斷該用 jadx/IDA/Frida/nmap 等哪個工具鏈。核心賣點是「按需自舉工具鏈」與「經驗自動進化」(field-journal),搭配 PowerShell 腳本檢查本機工具是否已安裝、缺少時自動用 winget/apt 安裝。",
+      "one_liner": "給 AI coding agent(Claude Code、Cursor、Codex 等)用的逆向工程/滲透測試技能路由包,依任務類型自動分派到對應方法論與工具鏈。",
+      "summary": "reverse-skill 不是一般的工具集合,而是一套「Skill Router」規則與腳本系統:當 AI agent 遇到 APK、二進位檔、前端 JS 加密、CTF 題目或滲透測試任務時,先透過 routing.json 規則比對決定進入哪個方法論(skills/ 下 44 個模組 + CTF-Sandbox-Orchestrator 42 個競賽子技能),再視情況自舉安裝對應工具鏈(jadx、frida、radare2、IDA MCP 等),並要求先建立 case scope(需 auth.status=granted)才能對真實目標動手。專案同時附帶 173 條路由回歸測試與 Windows+Ubuntu 雙平台 CI。",
       "highlights": [
-        "覆蓋範圍極廣:APK/iOS/二進位/韌體/.NET/JS/CTF/紅隊攻擊鏈等 40+ 技能目錄,每個都有獨立 SKILL.md 與 references",
-        "有實際的自動化測試腳本(smoke.ps1、test-p0-friction.ps1、verify-routing-coherence.ps1)驗證路由邏輯與 case-init 流程,並非空殼專案",
-        "供應鏈相對嚴謹:bootstrap 腳本使用 winget 官方來源安裝,對 jadx/apktool 等下載物做 SHA256/digest 驗證,並釘選第三方版本號",
-        "field-journal 的 PR 有 GitHub Actions 白名單與 prompt injection/HTML注入/明碼金鑰等關鍵字掃描,自動合併前會做安全檢查",
-        "文件量龐大、雙語(中英)且結構化,對『AI 該用哪個逆向/滲透工具』這類選擇困難有明確的解法"
+        "路由邏輯集中在單一 routing.json(43 條規則 R0–R44),並有 173 案例的回歸測試防止路由漂移",
+        "工具自舉腳本(BootstrapSupplyChain.ps1)對 git-clone 安裝做了 commit pinning、checkout 乾淨度驗證、CI 有 supply-chain pin gate 檔案不能是未鎖版本",
+        "明確的授權閘門設計(precedent-auth.md + scope.md 的 auth.status=granted)禁止 AI 把「使用者提到網域/IP」當成已授權,對真實外網目標動手前有硬性擋點",
+        "README_AI.md 內含一份專門寫給 AI agent 的『自動配置』指令與 agent-obedience-engineering.md,目的是讓 agent 確實照著工作流步驟做、不要偷跳步驟或用藉口省略操作",
+        "CHANGELOG 記錄詳盡、CI 涵蓋 Windows/Ubuntu 雙平台、PowerShell 編碼相容性等實務細節,顯示持續維護且非一次性拋出"
       ],
       "use_cases": [
-        "授權範圍內的滲透測試或 CTF 比賽中,用 AI 助理自動選擇 nmap/sqlmap/burp 等對應工具鏈與方法論",
-        "APK、二進位、前端加密參數等逆向工程任務,快速找到 jadx/IDA/radare2/Frida 的標準作業流程與腳本",
-        "跨機器/跨專案重複使用的資安工具鏈索引與經驗庫,避免每次都重新摸索環境設定",
-        "團隊建立自有的資安技能路由包時,參考其 SKILL.md/routing.md 的分層設計方式"
+        "授權滲透測試/紅隊演練中,讓 AI coding agent 依任務自動路由到正確的偵察、逆向或攻擊鏈方法論",
+        "CTF 競賽時用 CTF-Sandbox-Orchestrator 的 42 個子技能加速解題流程",
+        "APK/二進位/前端 JS 逆向工程時,統一管理 jadx、apktool、frida、IDA MCP 等工具的安裝與呼叫順序",
+        "團隊要把分散在不同機器上的逆向/滲透工具鏈與經驗知識庫(field-journal)標準化、可攜化"
       ],
       "quality": {
         "docs": 5,
-        "tests": 3,
-        "activity": 4,
-        "comment": "文件極其詳盡(README/RULES/README_AI 分層,加上 40+ 個技能子目錄各自的 SKILL.md),但份量大到近乎「提示工程」而非傳統技術文件。倉庫內附有真實的 PowerShell 測試腳本可驗證路由與 case-init 邏輯,但 CI 只驗證 field-journal PR,並未自動跑這些測試,品質保證主要靠人工。近期(2026-07-31)仍有推送與 CHANGELOG 更新,包含供應鏈安全稽核紀錄,顯示維護者持續在意這類問題。"
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件量極大且分層清楚(README/README_AI/RULES/AGENTS 各司其職),有 173 條路由回歸測試、smoke test、結構一致性檢查與雙平台 CI,PowerShell 腳本品質偏高(有 pinned commit 驗證、乾淨度檢查等防呆設計)。缺點是專案規模龐大(620+ 檔案)、幾乎全是 Markdown 規則文件與 PowerShell/Bash 腳本膠水,核心邏輯的『真正代碼』佔比不高,品質高度依賴使用者所連的 AI agent 是否確實遵循規則。"
       },
       "security": {
         "risk_level": "medium",
         "findings": [
-          "RULES.md 與 skills/field-journal/precedent-auth.md 明確要求 AI 代理『在安全審查機制觸發之前』先假設使用者已獲得授權,只要對話中提到目標就視為已授權,並且明文禁止 AI 輸出法律風險提示、授權確認或 scope disclaimer 之類的訊息。",
-          "RULES.md 要求 AI 在首次使用時把這套路由規則寫入使用者所屬 AI 客戶端的『全域設定檔』(例如 ~/.claude/CLAUDE.md),使規則套用到使用者之後開啟的所有專案,而不僅限於本倉庫目錄。",
-          "文件中包含針對 AI 猶豫/拒絕執行的『藉口反駁表』,設計目的是降低 AI 對可能屬於未授權操作的請求進行二次確認的機率;這類設計對已獲授權的滲透測試工作者是效率工具,但若使用者未充分理解其效果,可能在不知情下讓 AI 對外部目標放寬預設的安全審查。",
-          "未在原始碼中發現 curl|bash / iwr|iex 之類的遠端執行安裝手法;bootstrap 腳本改用 winget 官方來源並對第三方下載物做 SHA256/digest 驗證,供應鏈處理方式相對嚴謹。"
+          "README_AI.md 包含一段專門寫給 AI agent 的指令,要求 agent 讀完後『立即自動執行』設定流程、安裝工具、並且不要因猶豫或免責聲明而停下(skills/llm-security/references/agent-obedience-engineering.md 詳述了如何用強制性語言與『藉口反駁表』讓 agent 不中途卡關)。這類技巧會讓連接此專案的 AI agent 傾向自動執行安裝與滲透相關腳本,而非停下來與使用者確認,使用前建議先審閱該檔案內容。",
+          "工具自舉腳本(bootstrap-reverse.ps1、BootstrapSupplyChain.ps1)會從 GitHub Releases API 與官方套件源(npm/pnpm)下載並安裝二進位檔或原始碼,雖然對 git-clone 安裝做了 commit pinning 與 checkout 驗證,但仍屬於『代理程式自動下載執行外部程式碼』模式,建議在隔離或可控環境中首次執行",
+          "專案本身設計了授權閘門(precedent-auth.md 明確禁止把使用者提及的網域/IP 當成已授權,要求 case-init 產生 scope.md 且 auth.status=granted 才能對目標動手),顯示作者有意識地限制未授權濫用,這點降低了整體風險"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程完整度與文件覆蓋範圍在同類專案中少見,適合已有合法授權情境的資安/逆向工作者評估導入;但其刻意設計讓 AI 略過安全審查、並把規則寫入使用者全域設定的作法,值得使用前先仔細讀懂再決定是否啟用。",
+      "verdict": "工程完整度遠超一般「prompt 包」專案,對已經在做授權滲透測試/CTF/逆向工作的 AI agent 使用者很有參考價值,但其刻意設計的『讓 agent 不要停下來確認』機制值得先讀懂再接入自己的工作流。",
       "_mode": "full"
     }
   },
@@ -4385,10 +4398,10 @@
   },
   "firecrawl/pdf-inspector": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-07",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-04": [
         8241,
@@ -4417,38 +4430,45 @@
         13,
         "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "Rust"
+      ],
+      "2026-09-01": [
+        17362,
+        228,
+        15,
+        "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-08-04",
+    "last_analyzed": "2026-09-01",
     "analysis": {
-      "one_liner": "Firecrawl 出品的純 Rust PDF 檢測與文字擷取函式庫,免 OCR 即可判斷 PDF 是否為掃描檔並轉成乾淨的 Markdown。",
-      "summary": "pdf-inspector 能在毫秒等級判斷 PDF 是文字型、掃描型還是混合型,並提供逐頁 OCR 路由建議,對文字型 PDF 則直接擷取具座標資訊的內容並轉換成結構化 Markdown(標題、清單、表格、程式碼區塊等)。目標是讓 PDF 處理管線省去多數場景下昂貴且較慢的 OCR 步驟,官方基準測試顯示其在閱讀順序、表格辨識與速度上都優於同類工具。",
       "category": "library",
+      "one_liner": "用 Rust 打造的高速 PDF 檢測與文字擷取函式庫,能自動判斷 PDF 是純文字還是掃描檔,聰明決定是否要走 OCR。",
+      "summary": "pdf-inspector 由 Firecrawl 開發,核心用途是在大量處理 PDF 的流程中先快速分類(文字型/掃描型/圖片型/混合型),讓約 54% 不需要 OCR 的文件可以在 200ms 內於本地完成擷取與轉 Markdown,省下昂貴的 OCR 運算與延遲。除了 Rust 原生 API 與 CLI 工具(pdf2md、detect-pdf),也提供 Python、Node.js 綁定以及瀏覽器 WebAssembly 版本,並支援選擇性 OCR(僅對需要的頁面呼叫本地 PP-OCRv6 模型)。",
       "highlights": [
-        "核心邏輯純 Rust 實作,唯一相依 lopdf,無 ML 模型、無外部服務依賴,官方基準測試 200 份文件僅需 0.47 秒且整體分數贏過 liteparse、pymupdf4llm、markitdown 等對手",
-        "偵測邏輯設計細膩,detector.rs 對向量描邊文字、Identity-H 無 ToUnicode、Type3 字型、報紙式多欄版面等邊角案例都有專門啟發式與詳細註解說明校準依據",
-        "一次載入文件、偵測與擷取共用同一份解析結果,避免重複 I/O,並提供 EarlyExit/Full/Sample/Pages 多種掃描策略因應不同精度與速度取捨",
-        "同時提供 Rust crate、Python(PyO3)、Node.js(napi-rs)與瀏覽器 WebAssembly 四種介面,案例覆蓋主流語言與執行環境",
-        "CI 涵蓋 cargo test、rustfmt、clippy(含 WASM 目標)與多作業系統建置,測試包含手造 PDF 樣本與多份真實文件的 Markdown 快照比對"
+        "內建 benchmark 與同類工具(liteparse、opendataloader、pymupdf4llm、markitdown)比較,速度與表格/閱讀順序準確度皆領先",
+        "支援多語言綁定:Rust crate、Python (PyPI)、Node.js (napi-rs)、瀏覽器 WASM,涵蓋面廣",
+        "分類邏輯不需完整載入文件即可判斷 PDF 類型,300+ 頁 PDF 可在毫秒級完成偵測",
+        "支援 CID 字型、ToUnicode CMap、多欄版面、RTL 文字、財務表格等進階 PDF 解析情境",
+        "CI 涵蓋 fmt/clippy/測試/跨平台建置/OCR 執行期煙霧測試/WASM,工程紀律扎實"
       ],
       "use_cases": [
-        "RAG / LLM 文件前處理管線中,快速篩選哪些 PDF 可本地免 OCR 擷取、哪些需送往 OCR 服務",
-        "財報、法律文件、發票等結構化表格較多的文字型 PDF 轉 Markdown 供後續解析或索引",
-        "瀏覽器端(WebAssembly)本地判斷與擷取 PDF 內容,避免將檔案上傳伺服器",
-        "大量 PDF 批次分類任務,需要逐頁 OCR 路由而非整份文件二選一的場景"
+        "文件處理管線中先分流 PDF,決定要本地擷取還是送往 OCR 服務,節省成本與延遲",
+        "將報告、論文、財報、發票等文字型 PDF 快速轉換為結構化 Markdown(含表格、標題、清單)",
+        "需要在瀏覽器或 Node.js 環境中不依賴伺服器就能解析 PDF 的應用",
+        "RAG / LLM 前處理階段用於清理與結構化 PDF 內容"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "README 與 docs/ 下的多語言文件(rust-api、python、debugging、benchmarking)完整且附有基準測試方法論;測試涵蓋手造 PDF edge case 與真實文件快照比對,CI 有 test/fmt/clippy/build/wasm 五條 pipeline;版本號與發布 workflow(crates.io、PyPI、npm、wasm)顯示專案持續且規律地維護與發版。"
+        "comment": "README 詳盡且附有可重現的 benchmark 結果與架構圖,docs/ 目錄涵蓋 Python、Rust API、OCR 執行期設定等主題;tests/ 目錄有大量真實 PDF fixture 與對應 Markdown snapshot 測試,並涵蓋加密、CID 字型、Hebrew RTL 等邊界案例;CI 工作流程涵蓋格式檢查、clippy、跨平台建置、OCR 煙霧測試與 WASM 測試,顯示工程品質嚴謹。原始碼(detector.rs、extractor/mod.rs 等)模組化清楚,doc comment 完整。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 4,
-      "verdict": "程式碼品質與文件都在水準之上,是專為 PDF/OCR 路由管線設計的實用工具,值得對 LLM 文件前處理有需求的工程師關注與評估導入。",
+      "star_rating": 5,
+      "verdict": "由 Firecrawl 團隊打造、工程品質與文件都相當扎實的 PDF 分類/擷取函式庫,對需要大規模處理 PDF 並想省下 OCR 成本的團隊值得立即評估。",
       "_mode": "full"
     }
   },
@@ -11879,10 +11899,10 @@
   },
   "tt-a1i/archify": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-27": [
         17946,
@@ -11916,6 +11936,13 @@
         34607,
         3722,
         4,
+        "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "JavaScript"
+      ],
+      "2026-09-01": [
+        38732,
+        3991,
+        2,
         "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
         "JavaScript"
       ]
@@ -12055,10 +12082,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -12092,6 +12119,13 @@
         39249,
         1114,
         2,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-09-01": [
+        40727,
+        1980,
+        3,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -12758,10 +12792,10 @@
   },
   "THU-MAIC/OpenMAIC": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-30": [
         22267,
@@ -12773,6 +12807,13 @@
       "2026-08-31": [
         24026,
         1370,
+        1,
+        "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "TypeScript"
+      ],
+      "2026-09-01": [
+        27056,
+        2824,
         1,
         "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "TypeScript"
@@ -12816,10 +12857,10 @@
   },
   "p-e-w/heretic": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-30": [
         28702,
@@ -12832,6 +12873,13 @@
         29173,
         369,
         5,
+        "Fully automatic censorship removal for language models",
+        "Python"
+      ],
+      "2026-09-01": [
+        29656,
+        537,
+        13,
         "Fully automatic censorship removal for language models",
         "Python"
       ]
@@ -12920,10 +12968,10 @@
   },
   "every-app/open-seo": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-30": [
         14652,
@@ -12936,6 +12984,13 @@
         15165,
         469,
         15,
+        "Open source alternative to Semrush and Ahrefs",
+        "TypeScript"
+      ],
+      "2026-09-01": [
+        15761,
+        610,
+        12,
         "Open source alternative to Semrush and Ahrefs",
         "TypeScript"
       ]
@@ -12977,15 +13032,22 @@
   },
   "Osmantic/ODS": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-30",
+    "last_seen": "2026-09-01",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-30": [
         4922,
         35,
         12,
+        "Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
+        "Python"
+      ],
+      "2026-09-01": [
+        5493,
+        77,
+        7,
         "Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
         "Python"
       ]
@@ -13029,16 +13091,23 @@
   },
   "kaifcodec/user-scanner": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-08-30",
+    "last_seen": "2026-09-01",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-30": [
         3563,
         39,
         17,
         "🕵️‍♂️ (2-in-1) Email & Username OSINT suite for deep data extraction just from a single Email/Username. Analyzes 455+ actively maintained scan vectors (175+ email / 280+ username) for security research, investigations, and digital footprinting.",
+        "Python"
+      ],
+      "2026-09-01": [
+        4246,
+        93,
+        11,
+        "🕵️‍♂️ (2-in-1) Email & Username OSINT suite for deep data extraction just from a single Email/Username. Analyzes 465+ actively maintained scan vectors (175+ email / 290+ username) for security research, investigations, and digital footprinting.",
         "Python"
       ]
     },
@@ -13236,15 +13305,22 @@
   },
   "majd/ipatool": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-31": [
         10212,
         58,
         8,
+        "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
+        "Go"
+      ],
+      "2026-09-01": [
+        10536,
+        373,
+        5,
         "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
         "Go"
       ]
@@ -13336,15 +13412,22 @@
   },
   "checkstyle/checkstyle": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-31": [
         9201,
         115,
         10,
+        "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
+        "Java"
+      ],
+      "2026-09-01": [
+        9409,
+        198,
+        8,
         "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
         "Java"
       ]
@@ -13384,15 +13467,22 @@
   },
   "pollen-robotics/microduck_rl": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-31": [
         795,
         168,
         12,
+        "RL training environments for Microduck (mjlab)",
+        "Python"
+      ],
+      "2026-09-01": [
+        1138,
+        385,
+        16,
         "RL training environments for Microduck (mjlab)",
         "Python"
       ]
@@ -13430,15 +13520,22 @@
   },
   "handsomestWei/patent-disclosure-skill": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-08-31",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-31": [
         5650,
         62,
         13,
+        "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+        "Python"
+      ],
+      "2026-09-01": [
+        6209,
+        571,
+        14,
         "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
         "Python"
       ]
@@ -13573,6 +13670,109 @@
       },
       "star_rating": 5,
       "verdict": "TypeScript 驗證函式庫的事實標準,持續活躍開發且工程品質頂尖,值得長期關注與採用。",
+      "_mode": "full"
+    }
+  },
+  "k1tbyte/Wand-Enhancer": {
+    "first_seen": "2026-09-01",
+    "last_seen": "2026-09-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-01": [
+        23387,
+        582,
+        4,
+        "Advanced UX and interoperability extension for Wand (WeMod) app",
+        "C#"
+      ]
+    },
+    "last_analyzed": "2026-09-01",
+    "analysis": {
+      "one_liner": "一款針對 WeMod(Wand)Electron 桌面應用程式的 .NET/WPF 本地修補工具,提供 UI 客製化、遠端手機面板,並內建繞過付費訂閱檢查的修補項。",
+      "summary": "Wand-Enhancer 是一個 C# WPF 桌面程式,透過解包/重新打包 Wand(WeMod)的 Electron app.asar,對其渲染程序 JS bundle 做字串比對式修補,加入主題客製化、遠端 Web 面板(LAN 上用手機控制)、自訂 renderer script 注入等功能。專案同時包含一個以 TypeScript/React(Preact)撰寫、有完整測試與 CI 的 web-panel 子專案,做為遠端控制介面的前後端橋接。程式碼中明確存在名為 ActivatePro 的修補項,會攔截並改寫 Wand 帳號相關 API 回應與 Redux reducer,強制回傳 subscription:{state:\"active\"},使本地端顯示為已付費 Pro 帳號。",
+      "category": "app",
+      "highlights": [
+        "提供 LAN/手機遠端控制面板(WebSocket + HTTP,預設埠 3223),含 QR code 配對與自訂 JS 注入渲染程序機制",
+        "web-panel 子專案採 TypeScript + Preact + Vite + Vitest,測試覆蓋 protocol、reducer、normalizer 等核心邏輯,並有 lint/typecheck CI 流程",
+        "README 大篇幅提醒使用者官方不提供編譯好的 .exe,只能自行 fork 並用 GitHub Actions 建置,以防詐騙影片散布惡意程式",
+        "內建 ActivatePro 修補項,透過改寫 getUserAccount、setAccountLanguage 等 API 回應與 Redux reducer,強制注入 subscription:active 來繞過 WeMod 的付費訂閱檢查",
+        "AGENTS.md 記錄了大量針對 Wand 各版本 minified bundle 的逆向工程細節與修補不變量,顯示維護者對目標應用程式內部行為有深入且持續的追蹤"
+      ],
+      "use_cases": [
+        "想客製化 WeMod/Wand 用戶端外觀、主題或修正相容性問題的使用者",
+        "想用手機在同一區網內遠端操作 Wand 已啟用的 trainer/cheat 的使用者",
+        "對 Electron app.asar 修補、renderer 注入或逆向工程手法感興趣的開發者",
+        "研究如何繞過商業桌面應用程式訂閱驗證機制的資安/逆向工程研究人員(教育用途)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README、AGENTS.md、CONTRIBUTING 等文件詳盡,web-panel 子專案有 Vitest 單元測試與 CI workflow,C# 主程式(修補邏輯、ASAR 處理)則沒有測試覆蓋。commit 與 push 時間顯示專案非常活躍,且已上榜 GitHub Trending 第一天即獲得大量星數,社群關注度高。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "程式內建的 ActivatePro 修補項會改寫 Wand 用戶端的帳號 API 回應與 Redux reducer,強制注入 subscription:{state:\"active\"},讓本地端顯示為已付費 Pro 訂閱,實質上是繞過 WeMod 的付費訂閱驗證機制,使用者應了解這可能違反 WeMod 的服務條款",
+          "選用的 Remote Web Panel 功能會在區網開啟一個沒有配對碼保護的純 HTTP/WebSocket 服務(預設埠 3223),README 已明確提示不要將該埠對外網公開,否則同網段任何人都能操控使用中的 trainer",
+          "自訂 renderer script 注入機制允許使用者載入任意 .js 檔案,並在 Wand 渲染程序中以完整 DOM 權限與 Node require 執行,官方文件也提醒僅應載入信任的腳本",
+          "官方 Releases 只提供 release note、不提供編譯好的 .exe,使用者須自行 fork 並透過 GitHub Actions 建置,此設計本身是為了避免第三方冒充散布惡意程式,而非專案本身的風險"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件完整度在同類「修補/增強工具」中相當突出,值得對 Electron 修補技術或逆向工程感興趣者參考,但使用者必須清楚知道其中包含繞過 WeMod 付費訂閱的修補項,存在服務條款與帳號風險。",
+      "_mode": "full"
+    }
+  },
+  "jingyaogong/minimind": {
+    "first_seen": "2026-09-01",
+    "last_seen": "2026-09-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-01": [
+        56115,
+        495,
+        6,
+        "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-01",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "從零開始、以極低成本（約3元人民幣、2小時)在單張3090上訓練出一個64M參數LLM的教學型專案。",
+      "summary": "MiniMind 提供從 Tokenizer 訓練、Pretrain、SFT、LoRA、DPO/RLHF、PPO/GRPO/CISPO 等 RLAIF 演算法，到 Agentic RL 與 Tool Use 的完整 LLM 訓練管線，且核心演算法皆以 PyTorch 原生實作、不依賴 transformers/trl/peft 等高階封裝。目標是降低一般人理解與親手訓練 LLM 的門檻，同時相容 llama.cpp、vllm、ollama 等主流推理生態。",
+      "highlights": [
+        "模型結構與訓練配置對齊 Qwen3/Qwen3-MoE 生態，方便直接轉換到 transformers/llama.cpp/vllm/ollama",
+        "涵蓋 Pretrain→SFT→LoRA→DPO→RLAIF(PPO/GRPO/CISPO)→Agentic RL 的完整訓練鏈路，且都是從0原生實現，教學價值高",
+        "支援斷點續訓、多卡 DDP/DeepSpeed、wandb/SwanLab 可視化，工程細節較完整",
+        "README 非常詳盡，附訓練成本估算、loss 曲線、架構圖與資料集說明",
+        "作者持續維護，2026-04-01 有大版本更新(對齊 Qwen3、新增 Agentic RL 等)"
+      ],
+      "use_cases": [
+        "個人或教學場景下快速上手、理解 LLM 訓練全流程(而非只做推理微調)",
+        "低成本驗證 Pretrain/SFT/RLHF/RLAIF 各階段演算法實作細節",
+        "作為理解 Qwen3 系列結構、MoE、YaRN 長文本外推等技術的簡化參考實作",
+        "串接 llama.cpp/vllm/ollama 或 OpenAI 相容 API 做小型模型部署實驗"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 5,
+        "comment": "README 撰寫非常詳盡專業，涵蓋原理說明、資料格式、訓練成本與架構圖；核心模型程式碼(model_minimind.py)風格緊湊、邏輯清晰，可讀性佳。但整個 repo 未見任何單元測試目錄或 CI workflow，程式正確性主要仰賴作者手動驗證與訓練 loss 曲線，工程化測試覆蓋率偏低。最近一次 push 為 2026-08-31，屬活躍維護專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "scripts/web_demo.py 中的 execute_tool 函式對 'calculate_math' 工具呼叫直接使用 Python 內建 eval() 執行模型產生的 expression 字串(第128行)，若此 Demo 被串接到會接受不受信任輸入的服務，存在任意程式碼執行風險；此為 Streamlit demo 範例程式碼，非核心訓練/推理程式。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對想要真正理解並動手訓練 LLM 全流程的工程師或學生來說，是目前中文社群裡數一數二完整且持續更新的教學型專案，值得收藏學習；但缺乏自動化測試，直接用於生產環境需自行把關。",
       "_mode": "full"
     }
   }
