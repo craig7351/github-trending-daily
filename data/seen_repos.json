@@ -1354,8 +1354,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-01",
-    "days_on_trending": 1,
+    "last_seen": "2026-09-02",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1394,6 +1394,13 @@
         245248,
         512,
         10,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
+      ],
+      "2026-09-02": [
+        245762,
+        623,
+        13,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
       ]
@@ -1435,8 +1442,8 @@
       "verdict": "若你已在用 Claude Code 或 Codex 進行日常開發,這套整合度高的代理工作流值得一試,但因規模龐大且僅能從 README 評估,建議先在非關鍵專案試裝並檢查其 hook 權限再全面採用。",
       "_mode": "light"
     },
-    "total_days_on_trending": 7,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 8,
+    "consecutive_days_on_trending": 2
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -3741,10 +3748,10 @@
   },
   "iv-org/invidious": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-02": [
         21653,
@@ -3766,38 +3773,45 @@
         13,
         "Invidious is an alternative front-end to YouTube",
         "Crystal"
+      ],
+      "2026-09-02": [
+        23766,
+        577,
+        4,
+        "Invidious is an alternative front-end to YouTube",
+        "Crystal"
       ]
     },
-    "last_analyzed": "2026-08-02",
+    "last_analyzed": "2026-09-02",
     "analysis": {
-      "category": "app",
-      "one_liner": "開源、不依賴官方 API 的 YouTube 替代前端,強調隱私與無廣告觀看體驗。",
-      "summary": "Invidious 是以 Crystal 語言開發的 YouTube 替代前端,讓使用者在不被 Google 追蹤、不看廣告、不需 JavaScript 的情況下觀看 YouTube 影片,並提供獨立的訂閱系統、通知、匯入/匯出功能與開發者 API。專案已發展多年,擁有龐大的公開實例網絡與活躍社群。",
+      "category": "web",
+      "one_liner": "Invidious 是一個開源的 YouTube 替代前端,強調無廣告、無追蹤、免 JavaScript 也能觀看影片。",
+      "summary": "Invidious 讓使用者在不透過 Google 官方 API 的情況下觀看 YouTube 影片、訂閱頻道與匯入/匯出訂閱資料,主打隱私與輕量化。專案以 Crystal 語言撰寫後端,搭配伺服器端渲染頁面與少量前端 JS,可自架成私人或公開實例。",
       "highlights": [
-        "不使用 YouTube 官方 API,自行解析影片資料以避免追蹤與廣告",
+        "無廣告、無追蹤,且支援不開 JavaScript 也能觀看影片",
         "支援從 YouTube、NewPipe、FreeTube 匯入/匯出訂閱與觀看紀錄",
-        "CI 涵蓋多個 Crystal 版本(1.14~1.21 及 nightly)並包含 Docker build/run 測試",
-        "使用 Ameba 做程式碼風格檢查,並要求 crystal tool format 通過",
-        "提供官方 Docker Compose 部署方式,亦有公開實例清單可直接使用"
+        "提供完整開發者 API,且不依賴 YouTube 官方 API",
+        "CI 涵蓋 8 個 Crystal 版本矩陣測試 + Docker AMD64/ARM64 建置驗證 + Ameba lint",
+        "多語言在地化(Weblate 管理),社群翻譯活躍"
       ],
       "use_cases": [
-        "想在觀看 YouTube 影片時避免廣告與追蹤的一般使用者",
-        "希望自架輕量、無 JavaScript 需求前端服務的自架愛好者",
-        "需要透過開發者 API 存取 YouTube 資料而不受官方配額限制的開發者",
-        "研究影片串流代理、反爬蟲對抗機制的工程師"
+        "自架私人 YouTube 前端以避免廣告與追蹤",
+        "在無法直接存取 YouTube 的網路環境下,透過公開 instance 觀看影片",
+        "開發第三方應用程式時,呼叫 Invidious 的開發者 API 取得影片/頻道資料",
+        "研究 Crystal 語言撰寫大型 Web 服務的架構參考"
       ],
       "quality": {
         "docs": 4,
-        "tests": 3,
+        "tests": 4,
         "activity": 5,
-        "comment": "文件完整(README + 獨立 documentation repo),CI 設定嚴謹,涵蓋多版本編譯測試、Docker build 驗證與 lint(Ameba + crystal format);spec/ 目錄有一定測試覆蓋但多集中在 helpers 與 parser 邏輯,對路由層與資料庫層測試較少。抽查的核心程式碼(utils.cr、video_playback.cr)風格清晰,關鍵處(如影片轉發代理)有針對安全性的網域格式檢查,顯示維護者對安全問題有意識。專案活躍度高,今日新增 435 星、持續每日 push。"
+        "comment": "程式碼結構清晰,依功能模組化(routes、database、jobs、helpers 等),核心工具函式可讀性佳且有適度註解說明邊界案例(如連結解析、日期解析)。spec 目錄涵蓋多個核心模組的單元測試,CI 對多個 Crystal 版本與 Docker 建置皆有驗證,並搭配 Ameba 靜態檢查與格式化檢查。文件則主要外部化在獨立的 documentation repo,倉庫內 README 精簡但連結完整。專案活躍度高,近期仍有持續 commit 與 issue/PR 互動。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "長期活躍、文件與 CI 完善的成熟專案,對隱私導向的 YouTube 前端或自架服務有興趣者值得關注。",
+      "verdict": "成熟穩定、社群活躍的隱私向 YouTube 前端專案,適合想自架或研究輕量化影音服務架構的開發者關注。",
       "_mode": "full"
     }
   },
@@ -4398,10 +4412,10 @@
   },
   "firecrawl/pdf-inspector": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-09-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-04": [
         8241,
@@ -4435,6 +4449,13 @@
         17362,
         228,
         15,
+        "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "Rust"
+      ],
+      "2026-09-02": [
+        17923,
+        541,
+        7,
         "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "Rust"
       ]
@@ -5072,10 +5093,10 @@
   },
   "browser-use/video-use": {
     "first_seen": "2026-08-05",
-    "last_seen": "2026-08-05",
+    "last_seen": "2026-09-02",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-05": [
         19331,
@@ -5083,41 +5104,47 @@
         16,
         "Edit videos with coding agents",
         "Python"
+      ],
+      "2026-09-02": [
+        22937,
+        472,
+        8,
+        "Edit videos with coding agents",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-05",
+    "last_analyzed": "2026-09-02",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "讓 Claude Code 等編碼型 AI Agent 透過對話直接剪輯影片的開源「skill」套件。",
-      "summary": "video-use 不是傳統影片剪輯軟體,而是一組給 Claude Code / Codex 等 agent 使用的 SKILL.md 指令 + Python 輔助腳本。使用者把素材丟進資料夾,用自然語言跟 agent 對話(\"剪成一支發表影片\"),agent 會呼叫 ElevenLabs Scribe 做逐字稿轉錄、用 ffmpeg 做剪接/調色/字幕燒錄,並透過 timeline_view 產生的縮圖+波形圖在關鍵決策點\"看\"畫面,而非逐幀餵給 LLM。核心理念與 browser-use 給 LLM 結構化 DOM 而非截圖類似,這裡是給 LLM 結構化逐字稿而非影格。",
+      "category": "ai-ml",
+      "one_liner": "讓 Claude Code / Codex 等具備 shell 存取權的編碼代理人,透過對話幫你剪輯影片的開源 skill 套件。",
+      "summary": "video-use 是 browser-use 團隊推出的「AI 代理人影片編輯 skill」:使用者把毛片丟進資料夾、跟 Claude Code 對話,代理人呼叫 ElevenLabs Scribe 做逐字稿+說話者分離,轉成極精簡的文字表示讓 LLM「讀」影片而非「看」影片,再用 ffmpeg 依 EDL 執行剪接、調色、字幕燒錄與動畫疊加,並在算圖後自我檢查每個剪接點。核心賣點是把「30000 幀 × 1500 tokens」的暴力視覺輸入,壓縮成一份 12KB 的文字逐字稿加上按需產生的縮圖合成圖,類似 browser-use 給 LLM 結構化 DOM 而非截圖的思路。",
       "highlights": [
-        "音訊轉錄為主軸:靠 ElevenLabs Scribe 的字詞級時間戳做剪點判斷,只在必要時才產生視覺縮圖,大幅降低 token 消耗(README 宣稱比逐幀餵圖省下 45M tokens)",
-        "12 條「硬規則」寫在 SKILL.md 中,規範字幕必須最後疊加、音訊需 30ms 淡入淡出、剪點需對齊字詞邊界等,避免 agent 產生無聲失敗的輸出",
-        "render.py 內建 HDR 轉 SDR tonemap、直式影片偵測、雙軌響度正規化(-14 LUFS)等貼近實務的影片後製細節",
-        "支援多種動畫引擎(HyperFrames、Remotion、Manim、PIL)並可平行派送多個 sub-agent 各自產生一段動畫",
-        "自我校驗迴圈:render 完會用 timeline_view 檢查每個剪點有無跳幀、音訊爆音、字幕被遮擋等問題,最多重試 3 次才呈現給使用者"
+        "以文字逐字稿+按需視覺合成圖取代逐幀餵圖,大幅降低 token 成本,設計思路承襲自 browser-use 的 DOM-over-screenshot 理念",
+        "render.py 對 HDR 轉 SDR tone-mapping、直向影片偵測、fps 有理數解析等邊角案例都有實際處理,不是玩具程式碼",
+        "SKILL.md 把 12 條「Hard Rules」(字幕最後套用、30ms 音訊淡入淡出、逐段擷取後無損 concat 等)寫得非常明確,降低代理人自由發揮出錯的機率",
+        "install.md 設計成給代理人自動執行的安裝腳本,涵蓋 clone、依賴安裝、skill 註冊、API 金鑰存放的完整流程"
       ],
       "use_cases": [
-        "個人 vlogger / YouTuber 想用聊天方式快速把多顆素材剪成一支影片,不想學剪輯軟體",
-        "產品發表影片、教學影片等需要字幕燒錄+動畫疊圖+調色的內容,交給 agent 全自動處理",
-        "需要在 CI 或無人值守環境(如透過 Telegram/VPS)持續產出剪輯內容的自動化流程"
+        "個人開發者或內容創作者想用對話方式快速剪出訪談、教學、旅拍等影片的初剪",
+        "已在用 Claude Code / Codex 等代理人工作流的使用者,想把影片後製也納入代理人自動化範圍",
+        "需要研究「LLM 如何用結構化文字表示取代逐幀視覺輸入」這類 token 節省設計模式的工程師"
       ],
       "quality": {
         "docs": 5,
-        "tests": 1,
-        "activity": 3,
-        "comment": "README、install.md、SKILL.md 文件寫得非常詳盡且具體(含理由、範例、反例),對 agent 使用情境的說明品質很高。helpers/ 下的 Python 腳本(render.py、transcribe.py 等)結構清晰、有函式層級註解說明「為什麼」而非只說「做什麼」,subprocess 呼叫皆用參數陣列而非 shell 字串拼接,未見明顯注入風險。但本專案性質是「agent skill」而非傳統函式庫,沒有自動化測試、也沒有 CI workflow,程式正確性目前仰賴人工/agent 驗證而非測試覆蓋。最後一次推送為 2026-07-01,近期無新提交。"
+        "tests": 2,
+        "activity": 4,
+        "comment": "README、SKILL.md、install.md 文件詳盡到近乎規格書等級,對 production-correctness 規則寫得極清楚;core render.py 程式碼品質紮實,有處理 HDR tone-map、直向影片、fps 有理數等真實邊角案例。但測試只涵蓋 render.py 的 fps/orientation 邏輯,transcribe.py、grade.py、timeline_view.py、pack_transcripts.py 皆無測試,且未見任何 CI workflow(無 .github/workflows),品質把關主要仰賴人工與代理人自我檢查(self-eval loop)而非自動化測試。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "install.md 引導 agent 執行 git clone、brew/apt/pacman 安裝套件、以及建立符號連結到 ~/.claude/skills 等操作,屬於一般開發工具安裝流程,但因為是設計給 AI agent 自動執行的指令文件,使用者應留意 agent 是否真的依照文件描述行事,而非盲目授權任意指令。",
-          "ElevenLabs API 金鑰會寫入本地 .env 檔(並設定 chmod 600),transcribe.py 會讀取此金鑰並以 HTTPS 呼叫 api.elevenlabs.io 上傳音訊做轉錄,屬預期功能,但代表使用者的影片音訊內容會被傳送到第三方(ElevenLabs)服務。",
-          "SKILL.md 建議動畫引擎可用 npx --yes 直接執行套件(如 hyperframes、create-video),npx --yes 會自動下載並執行對應 npm 套件,使用者應了解這會從 npm registry 取得並執行未經額外審查的第三方套件碼。"
+          "install.md 是設計給編碼代理人自動執行的安裝腳本,內容包含 git clone、brew/apt/pip 安裝依賴、以及用 npx --yes 執行第三方套件(hyperframes、create-video)等指令,使用者授權代理人執行後,實際安裝的套件與版本由代理人在當下自行決定,而非鎖定於 lockfile。",
+          "ElevenLabs API 金鑰是以明文寫入專案根目錄的 .env 檔(install.md 有提醒設定 chmod 600、且 .env 已列在 .gitignore),屬常見作法,但仍建議使用者留意金鑰檔案的存取權限與備份範圍。",
+          "未發現混淆程式碼、base64/hex 大型payload、寫死的可疑 IP 或網域,transcribe.py 呼叫的外部端點僅為官方 api.elevenlabs.io。"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念新穎且文件品質極高,對想用 AI agent 自動化剪片的人值得一試,但屬新專案且無自動化測試,實際穩定度仍待觀察。",
+      "verdict": "概念新穎且程式碼紮實,是觀察「AI 代理人 + 結構化文字表示」設計模式的好案例,但測試覆蓋率與 CI 尚未跟上其爆紅速度,生產環境重度使用前建議先自行驗證剪接品質。",
       "_mode": "full"
     }
   },
@@ -6959,10 +6986,10 @@
   },
   "3b1b/manim": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-14",
+    "last_seen": "2026-09-02",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-12": [
         90175,
@@ -6977,38 +7004,43 @@
         13,
         "Animation engine for explanatory math videos",
         "Python"
+      ],
+      "2026-09-02": [
+        92556,
+        86,
+        6,
+        "Animation engine for explanatory math videos",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-12",
+    "last_analyzed": "2026-09-02",
     "analysis": {
-      "one_liner": "3Blue1Brown 作者所開發的數學動畫引擎,用程式碼精準產生講解性數學動畫影片。",
-      "summary": "manim(ManimGL)是 Grant Sanderson(3Blue1Brown)為製作其 YouTube 數學科普影片而開發的動畫引擎,透過 Python 程式碼定義向量圖形物件(Mobject)與動畫(Animation),並用 OpenGL 即時渲染或輸出成影片檔。與後來由社群分岔出的 ManimCommunity/manim 不同,本專案定位為作者個人創作工具,穩定性與文件完整度優先程度較低,但生態與知名度極高。",
-      "category": "library",
+      "category": "app",
+      "one_liner": "3Blue1Brown 頻道創辦人開發的數學動畫引擎,用程式碼精準生成解說性數學影片。",
+      "summary": "manim(ManimGL)是一套 Python 動畫引擎,讓使用者以程式化方式描述向量圖形、公式與場景轉換,產生高品質數學解說動畫。此為 3b1b 本人維護的原始版本,與後續社群 fork 出的 ManimCommunity/manim 是兩條不同但相關的開發線,兩者安裝方式互不相容。",
       "highlights": [
-        "核心抽象清晰:Mobject(數學物件)+ Animation + Scene 的架構在原始碼中一致且可讀性高",
-        "透過 custom_config.yml / default_config.yml 提供彈性設定,CLI 參數涵蓋解析度、輸出格式、互動模式等",
-        "支援 OpenGL 即時互動預覽與 LaTeX 數學排版渲染",
-        "官方文件站(Sphinx)與中文文件(docs.manim.org.cn)並存,社群資源豐富",
-        "PyPI 套件名為 manimgl,需與社群版 manim 區分,README 有明確警告避免混裝安裝"
+        "3Blue1Brown YouTube 頻道實際生產影片所用的原始程式碼,具高知名度與教學參考價值",
+        "採用 OpenGL 即時渲染,支援互動式場景操作與命令列參數(-w/-o/-s/-n/-f)控制輸出",
+        "README 明確區分 ManimGL 與 Community Edition 安裝方式,避免混淆",
+        "MIT 授權,搭配完整 Sphinx 文件站(3b1b.github.io/manim)並有中文文件社群維護"
       ],
       "use_cases": [
-        "製作數學、物理等科普教育動畫影片",
-        "課堂教學或線上課程的視覺化示範內容產出",
-        "程式化生成向量圖形動畫,取代手動關鍵幀動畫工具",
-        "學習 3Blue1Brown 影片背後程式碼作為动画程式設計範例"
+        "製作數學、物理等 STEM 主題的解說動畫影片",
+        "教育工作者或內容創作者需要精準控制公式推導與幾何變換的視覺呈現",
+        "學習程式化動畫/圖形渲染技術(OpenGL、座標變換、插值動畫)的參考專案"
       ],
       "quality": {
         "docs": 4,
-        "tests": 1,
+        "tests": 2,
         "activity": 4,
-        "comment": "README 與官方 Sphinx 文件站相當完整,涵蓋多平台安裝步驟與設定說明,但屬手寫文件而非自動化 API 文件(未使用 autodoc)。程式碼本身命名清晰、型別註記(from __future__ import annotations)使用一致,可讀性不錯。倉庫內完全找不到 tests/ 目錄或任何測試檔案,也沒有對應的 CI 測試流程,只有文件建置與發布到 PyPI 的 workflow,品質把關主要依賴作者人工驗證與社群 PR review,對於一個 9 萬星專案而言測試覆蓋率明顯偏低。專案持續活躍維護,最近一次推送在分析當日,issue template 與 PR template 齊備。"
+        "comment": "README 與官方文件站說明完整,核心程式碼(如 animation.py)結構清晰、型別註解齊全且有適量說明性註解。但測試覆蓋有限,僅兩個檔案針對座標系統與空間運算做單元測試,且 CI 只跑文件建置與發版流程,並未執行測試套件。專案本身仍持續有 commit 與 issue 互動,活躍度良好,惟作者曾表示這是個人專案性質,測試與貢獻流程不如社群版嚴謹。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "作為數學動畫領域事實上的標準工具與 3Blue1Brown 影片背後的引擎,知名度與實用性都值得關注,但若需要穩定 API 與測試保障,應優先考慮社群版 ManimCommunity/manim。",
+      "verdict": "知名度與教學價值高,程式碼品質扎實,但測試與 CI 覆蓋薄弱,適合學習與內容創作而非當作生產級穩定函式庫。",
       "_mode": "full"
     }
   },
@@ -12082,10 +12114,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-09-01",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-02",
+    "days_on_trending": 7,
+    "consecutive_days_on_trending": 7,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -12126,6 +12158,13 @@
         40727,
         1980,
         3,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-09-02": [
+        41538,
+        912,
+        9,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -12792,10 +12831,10 @@
   },
   "THU-MAIC/OpenMAIC": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-09-01",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-02",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-30": [
         22267,
@@ -12815,6 +12854,13 @@
         27056,
         2824,
         1,
+        "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "TypeScript"
+      ],
+      "2026-09-02": [
+        29486,
+        3128,
+        3,
         "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "TypeScript"
       ]
@@ -13254,15 +13300,22 @@
   },
   "unclecode/crawl4ai": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-08-31",
+    "last_seen": "2026-09-02",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-31": [
         80232,
         221,
         6,
+        "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here:https://discord.gg/jP8KfhDhyN",
+        "Python"
+      ],
+      "2026-09-02": [
+        80851,
+        145,
+        14,
         "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here:https://discord.gg/jP8KfhDhyN",
         "Python"
       ]
@@ -13520,10 +13573,10 @@
   },
   "handsomestWei/patent-disclosure-skill": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-09-01",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-02",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-31": [
         5650,
@@ -13536,6 +13589,13 @@
         6209,
         571,
         14,
+        "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+        "Python"
+      ],
+      "2026-09-02": [
+        6697,
+        501,
+        10,
         "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
         "Python"
       ]
@@ -13728,15 +13788,22 @@
   },
   "jingyaogong/minimind": {
     "first_seen": "2026-09-01",
-    "last_seen": "2026-09-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-01": [
         56115,
         495,
         6,
+        "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+        "Python"
+      ],
+      "2026-09-02": [
+        57059,
+        1005,
+        5,
         "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "Python"
       ]
@@ -13773,6 +13840,203 @@
       },
       "star_rating": 4,
       "verdict": "對想要真正理解並動手訓練 LLM 全流程的工程師或學生來說，是目前中文社群裡數一數二完整且持續更新的教學型專案，值得收藏學習；但缺乏自動化測試，直接用於生產環境需自行把關。",
+      "_mode": "full"
+    }
+  },
+  "Gitlawb/openclaude": {
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-02": [
+        31294,
+        80,
+        1,
+        "runs anywhere. uses anything",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-02",
+    "analysis": {
+      "one_liner": "一個把 Claude Code 開源化、可接任何 LLM 供應商的終端機編碼代理人(Coding Agent CLI)。",
+      "summary": "OpenClaude 是從 Anthropic Claude Code 程式碼庫衍生出的開源分支,把原本綁定 Anthropic 的終端機編碼代理 CLI,擴充成可接 OpenAI 相容 API、Gemini、Ollama、GitHub Models、Codex 等 200+ 種模型供應商,同時保留原本的工具呼叫、agents、MCP、slash commands 與串流輸出等工作流程。目標是讓開發者用同一套終端機工作流,自由切換雲端與本地端模型,而不必為每個供應商準備不同工具鏈。",
+      "category": "devtool",
+      "highlights": [
+        "支援 20 種以上供應商(OpenAI 相容、Gemini、Ollama、GitHub Models、Codex OAuth、Fireworks、Bedrock/Vertex/Foundry 等),並提供 /provider 導引設定與儲存設定檔",
+        "功能完整:背景工作階段(--bg/ps/logs/kill)、對話續傳與分支、Repo Map 程式碼結構分析、Headless gRPC 伺服器、VS Code 擴充套件",
+        "測試量體巨大(700+ 個 *.test.ts 檔案),CI 涵蓋 smoke test、typecheck、provider tests,並內建「可疑 PR 意圖掃描」(security:pr-scan)機制",
+        "安裝腳本管理嚴謹:package.json 用 allowScripts 白名單限制僅 protobufjs 與 sharp 可執行原生建置腳本,其餘依賴的 postinstall 一律停用",
+        "有專門的安全強化回歸測試,涵蓋 MCP 結果 Unicode 消毒、WebFetch SSRF 防護、外掛 git clone/pull 停用 hooks 等項目"
+      ],
+      "use_cases": [
+        "不想被單一模型供應商綁定、想在同一套終端機工作流中切換 GPT/Gemini/DeepSeek/本地 Ollama 模型的開發者",
+        "需要在 CI/CD 或自訂 UI 中嵌入編碼代理能力,透過 Headless gRPC Server 整合",
+        "想用低成本或免費本地模型(Ollama/LM Studio)做基本的程式碼編輯、grep/glob、agent 任務的個人開發者",
+        "對 Claude Code 工作流已熟悉、想繼續使用相同介面但改用其他模型的團隊"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常齊全(README、docs/ 下數十篇設定指南、架構文件),CI 使用 pinned commit hash 的 GitHub Actions、matrix 測試多個 Node 版本、typecheck、provider 測試分開跑;原始碼模組化清晰、型別完整。測試檔案數量與涵蓋範圍(單元測試、安全回歸測試、bug fix 回歸測試)在同類專案中屬上乘。最後推送時間為當日,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 的 allowScripts 白名單限制僅 protobufjs@7.6.4 與 sharp@0.34.5 可執行原生建置用的 npm/bun 生命週期腳本,其餘依賴的 install 腳本被停用,屬於較嚴謹的供應鏈防護作法,而非風險本身",
+          "CLI 支援連接多種第三方 API 端點與 OpenAI 相容閘道(如 Gitlawb Opengateway、各種第三方 gateway),使用者需自行評估各供應商的資料處理與金鑰安全性,但這是文件中明確說明的功能,非隱藏行為"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程紀律扎實、文件與測試都到位的 Claude Code 開源多供應商分支,若已習慣 Claude Code 介面又想接其他模型,值得一試;若只需要單一 Anthropic 官方體驗則非必要。",
+      "_mode": "full"
+    }
+  },
+  "Imbad0202/academic-research-skills": {
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-02": [
+        44895,
+        193,
+        2,
+        "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-02",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "為 Claude Code 打造的學術研究技能套件,涵蓋「研究→寫作→審查→修訂→定稿」全流程的 Prompt 工程框架。",
+      "summary": "這是一組以 Markdown 定義的 Claude Code Skills/Agents,結合多智能體協作(研究團隊、寫作團隊、審稿團隊、10階段流水線)來輔助學術論文的產出。專案強調「人類主導、AI 輔助」而非全自動寫作,並針對 AI 研究常見的幻覺引用、論證造假等問題設計了多層完整性驗證機制(如 claim-audit、citation locator、Material Passport)。背後有大量 Python 檢查腳本與 CI 流程,確保這些 Prompt 規格與文件保持一致。",
+      "highlights": [
+        "4 個技能、27 種模式、39 個 Prompt 角色,涵蓋深度研究、論文寫作、同儕審查與流程協調",
+        "針對 AI 研究已知失效模式(幻覺引用、論證造假、框架鎖定)設計了 Stage 2.5/4.5 完整性關卡與引用溯源機制",
+        "430+ 支 Python 檢查腳本 + pytest 測試套件 + 14 個 GitHub Actions workflow,對這種『Prompt/Markdown 為主』的專案而言測試與 CI 密度異常高",
+        "write-scope guard 等 hook 腳本程式碼品質相當高,註解清楚說明設計取捨與已知邊界案例(而非流水帳)",
+        "文件量極大(多國語言 README、ARCHITECTURE、RISK_REGISTER、DATA_FLOWS、GOVERNANCE 等),對其自身限制與未驗證的效果聲明也相當坦白"
+      ],
+      "use_cases": [
+        "使用 Claude Code 撰寫學術論文、文獻回顧或系統性回顧(PRISMA)時作為輔助流程",
+        "模擬多視角同儕審查以在投稿前先自我檢視論文的論證與方法學缺陷",
+        "需要引用溯源與『聲稱-證據』一致性檢查,降低 AI 協作寫作中的幻覺引用風險",
+        "教學或研究方法課程中示範人機協作寫作的工作流程設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件與規格撰寫的嚴謹度遠超一般開源專案,version pinning、CHANGELOG、RISK_REGISTER 一應俱全;抽樣的 Python 程式碼(write-scope guard)邏輯嚴謹、邊界案例處理細膩,並附有 pytest 測試與 CI 強制;但核心價值在於 Markdown 定義的 Prompt 規格而非傳統程式邏輯,其『有效性』難以用一般軟體測試完全驗證,專案自身文件也坦承部分機制(如 calibration、claim audit)仍屬 NOT_CALIBRATED / 未來工作。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程嚴謹度與文件透明度在同類 AI 寫作輔助專案中相當突出,值得對 Claude Code 學術工作流有興趣的研究者一試,但要注意其效果聲明多屬未經大規模驗證的設計假設。",
+      "_mode": "full"
+    }
+  },
+  "VoltAgent/awesome-design-md": {
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-02": [
+        112756,
+        323,
+        11,
+        "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-09-02",
+    "analysis": {
+      "category": "other",
+      "one_liner": "彙整知名品牌與網站的 DESIGN.md 設計系統說明檔,讓 AI coding agent 能直接參考生成風格一致的 UI。",
+      "summary": "這是一個 awesome-list 型的資源彙整專案,收錄了 73 份針對知名品牌(如 Apple、Stripe、Linear、Notion 等)網站設計語言分析而成的 DESIGN.md 檔案。使用者只要將對應檔案放入專案根目錄,AI coding agent 或 Google Stitch 就能理解該品牌的視覺風格(色彩、字體、版面規則等)並生成對應的 UI,解決「用文字描述設計風格」的溝通落差問題。",
+      "highlights": [
+        "純 Markdown 格式,無需 Figma 匯出或 JSON schema,任何 AI coding agent 都能直接讀取",
+        "涵蓋 73 個知名品牌/網站(AI 平台、開發工具、金融科技、電商等六大分類),數量具一定規模",
+        "概念源自 Google Stitch 提出的 DESIGN.md 標準,呼應 AGENTS.md 的設計對照概念",
+        "可額外「請求」特定網站的 DESIGN.md 客製化分析",
+        "README 中夾雜多則贊助商廣告(EveryFeed、LaunchKit),商業化痕跡明顯"
+      ],
+      "use_cases": [
+        "vibe coding 時想快速讓 AI 生成與知名品牌風格一致的落地頁或 UI 原型",
+        "設計系統教學或案例研究,參考不同品牌的設計語言分析範例",
+        "作為建立自家專案 DESIGN.md 的範本參考"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README 結構清晰、分類明確,但內容偏向行銷與贊助商置入,實質技術文件深度不高;近期有持續更新且正處於 GitHub trending 上升期。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "概念新穎且免安裝、上手快,適合 vibe coding 玩家收藏參考,但屬於彙整型資源而非工具本體,價值上限有限。",
+      "_mode": "light"
+    }
+  },
+  "averygan/reclip": {
+    "first_seen": "2026-09-02",
+    "last_seen": "2026-09-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-02": [
+        7652,
+        56,
+        12,
+        "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+        "HTML"
+      ]
+    },
+    "last_analyzed": "2026-09-02",
+    "analysis": {
+      "category": "web",
+      "one_liner": "用 yt-dlp 包成的自架影音下載器,附一個乾淨的網頁介面。",
+      "summary": "ReClip 是一個單檔 Flask 後端(約 150 行)搭配純 HTML/CSS/JS 前端的自架服務,讓使用者貼上網址就能透過 yt-dlp 下載 YouTube、TikTok、Instagram 等上千個網站的影片或音訊,並可選擇畫質或轉成 MP3。定位是輕量、無框架、無建置步驟的個人工具,方便一鍵用 Docker 或 shell script 跑起來。",
+      "highlights": [
+        "後端僅約 150 行 Python,搭配 yt-dlp + ffmpeg 完成核心下載邏輯,程式碼精簡易讀",
+        "前端為純手刻 HTML/CSS/JS,無框架、無建置流程",
+        "支援批次貼上多網址、自動去重、畫質挑選、MP4/MP3 雙輸出",
+        "容器啟動時會自動 pip install -U yt-dlp 以因應各網站爬蟲規則常態性失效的問題",
+        "提供 Docker、docker-compose、以及一鍵 shell script 三種啟動方式"
+      ],
+      "use_cases": [
+        "個人在家用 NAS 或小型伺服器上自架影音下載服務",
+        "需要批次備份自己上傳到社群平台影片的使用者",
+        "想要一個輕量、無需資料庫與帳號系統的單人工具"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 2,
+        "comment": "README 清楚說明安裝、使用方式與技術棧,對小工具而言文件足夠;但完全沒有測試(tests/ 目錄或 CI 皆不存在),程式碼品質仰賴少量核心檔案的可讀性維持,長期維護性有待觀察。專案最後一次推送是在 2026-07,屬於單人維護的小型專案,活躍度中等偏低。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "app.py 呼叫 subprocess.run 時皆以參數陣列(非 shell=True)傳遞使用者輸入的 URL/format_id,未發現明顯的命令注入手法",
+          "Docker 容器與本機啟動腳本(docker-entrypoint.sh、reclip.sh)在啟動時都會執行 pip install -U yt-dlp 從 PyPI 更新套件,屬於維持爬蟲規則有效性的常見作法,而非從不明來源下載執行程式碼",
+          "服務本身未內建任何身份驗證機制,若使用者將 8899 埠直接對外公開(而非僅供內網或本機使用),任何能連上該服務的人都可以透過它對外發送下載請求,等同於讓伺服器代為存取使用者指定的任意網址"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "功能單純、程式碼精簡好讀的自架下載工具,適合個人輕量使用,但缺乏測試與存取控制,不建議直接公開部署在公網上。",
       "_mode": "full"
     }
   }
