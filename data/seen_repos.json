@@ -695,7 +695,7 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-24",
+    "last_seen": "2026-09-03",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -747,6 +747,13 @@
         3,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-09-03": [
+        245230,
+        1166,
+        17,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-08-24",
@@ -781,7 +788,7 @@
       "verdict": "若你正在用 Claude Code 或類似 agent 做正式工程專案,這套結構化的技能集值得一試;但它是流程/提示詞框架而非程式庫,價值取決於你是否認同其工作方法論。",
       "_mode": "full"
     },
-    "total_days_on_trending": 8,
+    "total_days_on_trending": 9,
     "consecutive_days_on_trending": 1
   },
   "Lordog/dive-into-llms": {
@@ -1354,8 +1361,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-02",
-    "days_on_trending": 2,
+    "last_seen": "2026-09-03",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1403,6 +1410,13 @@
         13,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-03": [
+        246343,
+        516,
+        12,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-08-22",
@@ -1442,8 +1456,8 @@
       "verdict": "若你已在用 Claude Code 或 Codex 進行日常開發,這套整合度高的代理工作流值得一試,但因規模龐大且僅能從 README 評估,建議先在非關鍵專案試裝並檢查其 hook 權限再全面採用。",
       "_mode": "light"
     },
-    "total_days_on_trending": 8,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 9,
+    "consecutive_days_on_trending": 3
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -3142,7 +3156,7 @@
   },
   "ChromeDevTools/chrome-devtools-mcp": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-03",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
@@ -3162,9 +3176,16 @@
         16,
         "Chrome DevTools for coding agents",
         "TypeScript"
+      ],
+      "2026-09-03": [
+        50634,
+        148,
+        6,
+        "Chrome DevTools for coding agents",
+        "TypeScript"
       ]
     },
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "consecutive_days_on_trending": 1,
     "last_analyzed": "2026-08-29",
     "analysis": {
@@ -4412,10 +4433,10 @@
   },
   "firecrawl/pdf-inspector": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-09-02",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-03",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-04": [
         8241,
@@ -4456,6 +4477,13 @@
         17923,
         541,
         7,
+        "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "Rust"
+      ],
+      "2026-09-03": [
+        18510,
+        586,
+        19,
         "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
         "Rust"
       ]
@@ -10215,15 +10243,22 @@
   },
   "JuliusBrussee/caveman": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-08-21",
+    "last_seen": "2026-09-03",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-21": [
         99638,
         258,
         14,
+        "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+        "Go"
+      ],
+      "2026-09-03": [
+        102636,
+        238,
+        16,
         "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "Go"
       ]
@@ -10603,15 +10638,22 @@
   },
   "protocolbuffers/protobuf": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-03",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-22": [
         71769,
         4,
         15,
+        "Protocol Buffers - Google's data interchange format",
+        "C++"
+      ],
+      "2026-09-03": [
+        71936,
+        18,
+        13,
         "Protocol Buffers - Google's data interchange format",
         "C++"
       ]
@@ -11175,10 +11217,10 @@
   },
   "NousResearch/hermes-agent": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-24": [
         234993,
@@ -11191,6 +11233,13 @@
         235806,
         896,
         6,
+        "The agent that grows with you",
+        "Python"
+      ],
+      "2026-09-03": [
+        240125,
+        533,
+        7,
         "The agent that grows with you",
         "Python"
       ]
@@ -11731,10 +11780,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -11761,6 +11810,13 @@
         115373,
         1396,
         18,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-09-03": [
+        121552,
+        1354,
+        3,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -13845,15 +13901,22 @@
   },
   "Gitlawb/openclaude": {
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-02",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-03",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-02": [
         31294,
         80,
         1,
+        "runs anywhere. uses anything",
+        "TypeScript"
+      ],
+      "2026-09-03": [
+        31985,
+        775,
+        18,
         "runs anywhere. uses anything",
         "TypeScript"
       ]
@@ -13896,15 +13959,22 @@
   },
   "Imbad0202/academic-research-skills": {
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-02",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-03",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-02": [
         44895,
         193,
         2,
+        "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+        "Python"
+      ],
+      "2026-09-03": [
+        45557,
+        799,
+        11,
         "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
         "Python"
       ]
@@ -14037,6 +14107,443 @@
       },
       "star_rating": 3,
       "verdict": "功能單純、程式碼精簡好讀的自架下載工具,適合個人輕量使用,但缺乏測試與存取控制,不建議直接公開部署在公網上。",
+      "_mode": "full"
+    }
+  },
+  "fmtlib/fmt": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        24259,
+        14,
+        1,
+        "A modern formatting library",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "category": "library",
+      "one_liner": "{fmt} 是一套快速、安全的 C++ 字串格式化函式庫,是 C++20 std::format 的原始實作來源。",
+      "summary": "fmt 提供類似 Python str.format 語法的格式化 API,做為 C stdio 與 C++ iostreams 的高效替代方案,效能實測比 printf 快約 50%,浮點數格式化更快 20-30 倍。它同時是 C++20 std::format 與 C++23 std::print 標準函式庫實作的技術源頭,被 PyTorch、MongoDB、ClickHouse、Windows Terminal 等大量知名專案採用。",
+      "highlights": [
+        "以極少數標頭檔(base.h、format.h、format-inl.h)提供高效能格式化,可編譯速度快、產生的執行檔體積小",
+        "使用 Dragonbox 演算法達成正確捨入與往返保證的浮點數格式化",
+        "支援編譯期格式字串檢查,格式錯誤可在 C++20 編譯階段直接報錯而非執行期才發現",
+        "持續透過 OSS-Fuzz 進行模糊測試,並有 OpenSSF Best Practices 與 Scorecard 徽章佐證安全治理成熟度",
+        "被 PyTorch、MongoDB、ClickHouse、Envoy、Windows Terminal 等重量級專案採用,生態系驗證度高"
+      ],
+      "use_cases": [
+        "C++ 專案中取代 printf/iostream 做高效能字串格式化與輸出",
+        "需要正確、快速浮點數轉字串(如金融、科學運算、日誌系統)的場景",
+        "尚未升級到 C++20/23 但想提前使用 std::format/std::print 語意的專案",
+        "開發高效能 log 函式庫(如 spdlog、fmtlog 即建構於此)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(獨立 fmt.dev 文件站、API 說明、格式語法說明),測試涵蓋非常廣(含 gtest、fuzzing、CUDA、module、header-only 等多種建置情境的獨立測試),CI 涵蓋 Linux/macOS/Windows/CodeQL/lint/fuzz/supply-chain 多層檢查,近期仍持續有提交與發版,屬於維護活躍的成熟專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "成熟穩定、被業界廣泛驗證的 C++ 基礎函式庫,C++ 開發者值得長期關注與採用。",
+      "_mode": "full"
+    }
+  },
+  "google-research/timesfm": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        29791,
+        343,
+        2,
+        "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "one_liner": "Google Research 開發的時間序列預測基礎模型 TimesFM,剛推出支援多變量與共變數的 3.0 版本。",
+      "summary": "TimesFM 是一個預訓練的 decoder-only 時間序列基礎模型,可做零樣本(zero-shot)時間序列預測,已整合進 BigQuery ML、Google Sheets、Vertex Model Garden 等 Google 產品。3.0 版新增原生多變量預測與過去/未來共變數支援,並在 fev-bench、TIME Benchmark、GIFT-Eval 三大時間序列基礎模型評測中排名第一。",
+      "category": "ai-ml",
+      "highlights": [
+        "3.0 版本原生支援多變量時間序列與過去/過去-未來共變數,不需針對任務個別調參",
+        "在 fev-bench、TIME Benchmark、GIFT-Eval 三項主流基準測試皆排名第一",
+        "同時提供 PyTorch 與 Flax(JAX)兩種實作,並附 LoRA 微調範例與 AGENTS/SKILL.md 供 agent 整合",
+        "程式碼有完整型別註記、docstring,並有對應的 unit test(如 model_test.py、transformer_test.py)",
+        "3.0 預訓練權重採用非商用授權(timesfm-non-commercial-license-v1.0),與程式碼本身的 Apache-2.0 授權不同"
+      ],
+      "use_cases": [
+        "需要零樣本或少樣本時間序列預測的場景,如銷售預測、資源用量預測",
+        "多變量、含共變數的複雜預測任務(例如同時預測多個相關指標並納入已知未來事件)",
+        "在 BigQuery ML / Google Sheets 等既有工作流中快速套用預測模型",
+        "研究人員或工程師想微調(LoRA)基礎模型以適應特定領域資料"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常詳盡(README、AGENTS.md、SKILL.md、多個 examples 皆有說明),核心程式碼(model.py、transformer.py 等)具型別註記與清楚的 docstring,品質屬業界水準。tests/ 與 src/timesfm3/*_test.py 涵蓋核心層、config、模型載入等單元測試,但未見端到端整合測試。CI(.github/workflows)僅做 build 驗證,未執行測試套件。專案由 Google Research 團隊持續更新,近期(2026-08)才推出 3.0 大版本,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "Google 官方出品、有實際論文與產品背書的時間序列基礎模型重大更新,值得 AI/資料科學工程師立即關注,但商用需留意 3.0 權重的非商用授權限制。",
+      "_mode": "full"
+    }
+  },
+  "debpalash/VoiceStudio": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        14721,
+        832,
+        4,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "category": "app",
+      "one_liner": "完全本地端執行的開源語音工作站,涵蓋語音克隆、配音、聽寫、轉錄與有聲書製作,主打「本地優先」的 ElevenLabs 替代方案。",
+      "summary": "VoiceStudio(前身 OmniVoice-Studio)是以 Tauri + React 前端搭配 FastAPI 後端打造的桌面應用,整合 16 種 TTS 引擎與 11 種 ASR 引擎,支援語音克隆、語音設計、影片配音、聽寫、轉錄與有聲書製作等工作流程,涵蓋 646 種語言。核心賣點是所有運算預設在本機執行(CUDA/MPS/ROCm/CPU),不需帳號、API key 或訂閱費用,並提供與 OpenAI 相容的本地 API 及 MCP Server 介面。",
+      "highlights": [
+        "架構完整:Tauri(Rust)桌面殼層 + React/Vite 前端 + FastAPI 後端,並有清楚的分層文件(desktop/frontend/API/services/engines/worker)",
+        "測試與 CI 規格極高:近 500 個測試檔,涵蓋 backend、frontend(Vitest)、Tauri Rust 單元測試、跨平台(macOS/Windows/Linux)smoke matrix,並有 production bundle 的白屏回歸測試",
+        "安全治理成熟:CI 內建 gitleaks(阻擋合併的秘密掃描)、CodeQL(Python+JS/TS SAST)、bandit、pip-audit、bun audit,權限採最小化原則",
+        "認證機制設計謹慎:auth.py 具備失敗嘗試速率限制、CSRF 檢查、secure/httponly/samesite cookie、loopback 與遠端 API 分權",
+        "安裝腳本預設走「下載官方發行版 + SHA256 校驗」路徑,原始碼建置模式才會呼叫 brew/apt 或下載 uv/bun 安裝腳本(先存檔再執行,而非直接 curl|sh)"
+      ],
+      "use_cases": [
+        "需要離線、隱私敏感的語音克隆與有聲書/播客製作,不想把音檔上傳雲端服務",
+        "影片配音在地化(多語言翻譯 + 保留說話者聲紋 + 匯出成品)",
+        "開發者想要一個本機可跑、與 OpenAI Audio API 相容的 TTS/ASR 端點,整合進既有工具鏈或 Agent(MCP)",
+        "系統層級的聽寫/語音輸入工具,含本地 LLM 文字潤飾"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件品質相當高,README 結構清晰且附有比較表、FAQ、架構圖與各引擎授權說明;測試覆蓋範圍廣(單元、整合、跨平台 smoke、prod bundle 回歸),CI pipeline 設計成熟並附有大量說明性註解記錄過往踩坑經驗;commit/release 節奏活躍(最後推送於 2026-09-02),issue 模板與貢獻指南齊全。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "scripts/install.sh 預設(binary 模式)會從 GitHub Releases 下載打包好的應用程式,並用發行版附帶的 SHA256SUMS 檔案做校驗後才安裝,流程透明",
+          "scripts/install.sh 的 --source 模式(需使用者主動指定)會呼叫 brew/apt-get/dnf/pacman 安裝系統套件,並下載 uv、bun 官方安裝腳本到暫存檔後以 sh 執行(而非直接 curl|sh 管線),屬於常見的開發環境建置手法,使用者若在意可先檢視暫存腳本內容",
+          "後端具備遠端管理 API(/api/auth/session 等),但預設僅監聽 loopback,遠端存取需額外設定 API key 或分享 PIN,且有失敗嘗試速率限制與 CSRF 防護"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與安全治理水準遠超一般熱門專案,是想要本地化語音生成/配音方案的開發者值得立即關注並嘗試的專案。",
+      "_mode": "full"
+    }
+  },
+  "sngyai/Sequoia-X": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        6051,
+        63,
+        5,
+        "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Sequoia-X 是一套針對 A 股市場的量化選股系統，收盘後自動掃描多種技術形態並推送結果到飛書群。",
+      "summary": "此專案使用 baostock 免費資料源拉取 A 股歷史與增量日K線資料，存入本地 SQLite,再以多種向量化技術策略(海龟突破、均線放量、高窄旗形、涨停洗盘等)進行選股,最後透過飛書 Webhook 卡片推送結果。V2 版本強調現代 Python 工程化(pydantic-settings、rich 日誌、pytest + hypothesis 屬性測試),解決個人或小團隊每日盤後自動化選股與通知的需求。",
+      "highlights": [
+        "七種可插拔選股策略(海龜突破、均線放量、高窄旗形、涨停洗盘、跌停反包、RPS相對強度、定增)",
+        "資料層採用免費且無限流的 baostock,並用後複權+本地 SQLite 增量存儲避開東方財富反爬限制",
+        "日常模式用 8 進程並行拉增量資料,2~3 分鐘完成全市場更新;回填模式含重試與定期重連機制",
+        "飛書推送以互動卡片呈現,並支援每個策略路由到獨立 Webhook",
+        "採用 pydantic-settings 管理設定、rich 結構化日誌,並用 pytest + hypothesis 做屬性測試"
+      ],
+      "use_cases": [
+        "個人投資者想要收盤後自動掃描 A 股技術形態並用飛書接收選股清單",
+        "量化愛好者想參考向量化選股策略(海龜突破、RPS、旗形等)的實作方式",
+        "需要一套輕量、免付費資料源(baostock)的 A 股歷史/增量 K 線資料管線範例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 3,
+        "comment": "README 結構清晰,涵蓋安裝、雙運行模式、策略列表與目錄結構;程式碼有型別註記與 docstring,策略採向量化計算(明確避免 iterrows)。測試以 hypothesis 做屬性測試但覆蓋範圍有限,且未見任何 CI 工作流程,倉庫非常新(僅十餘個原始檔),尚無法驗證長期穩定度。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "程式碼乾淨、策略邏輯清楚且無安全疑慮,適合想學習 A 股量化選股實作或直接拿來盤後自動通知的使用者,但功能單一、缺乏 CI 與回測驗證,非必看等級的重量級專案。",
+      "_mode": "full"
+    }
+  },
+  "superlinked/sie": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        3060,
+        60,
+        8,
+        "Open-source inference server and production cluster for all the models your agent needs.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "一套自架的推理引擎,把 Embedding、Rerank、OCR、結構化輸出、內容安全、Agent Loop 等多種模型統一收攏成一個 OpenAI 相容 API 叢集。",
+      "summary": "SIE(Superlinked Inference Engine)是開源推理伺服器與生產叢集方案,目標是取代「每種任務各自架一台模型伺服器」的做法,改用單一叢集依需求動態載入 100+ 種模型(BGE、SPLADE、ColBERT、GLiNER、SigLIP 等),對外統一以 OpenAI 相容 API(`/v1/embeddings`、`/v1/chat/completions` 等)服務。專案同時提供 Kubernetes/Helm 部署、KEDA 自動縮放、Grafana 監控儀表板,並有 Python/TypeScript SDK 及九種主流 RAG 框架與向量資料庫的整合套件。",
+      "highlights": [
+        "Rust 撰寫的 Gateway(sie_gateway)負責路由、佇列與負載平衡,採用 HRW(rendezvous hashing)搭配壓力感知排程,程式碼註解清楚說明了設計取捨(如避免 XOR 對稱造成的雜湊碰撞)",
+        "模型層以 Python adapters 實作,涵蓋 embedding、reranking、OCR、NER、生成等任務,並支援 LoRA、Flash Attention 變體等效能優化路徑",
+        "測試覆蓋非常廣,單是 sie_server/tests 就有 200+ 個測試檔,涵蓋 adapters、API、config 等多個面向,並用 pytest marker 區分 integration/gpu/model 等測試類型",
+        "提供官方 Docker image(CPU/CUDA12/CUDA13 各版本)、Helm chart 與 Terraform 模組(AWS/GCP/Azure/阿里雲),生產部署路徑完整",
+        "CHANGELOG 顯示採用 release-please 風格的自動化版本發布,近期仍持續有 feature/fix 提交"
+      ],
+      "use_cases": [
+        "需要在自有機房或雲端 GPU 叢集上,同時服務多種 embedding/rerank/OCR 模型,取代分散的多套推理服務",
+        "建構 RAG 或 Agent 系統,想要用 OpenAI 相容 API 直接串接 LangChain/LlamaIndex/CrewAI/Haystack 等框架,但模型全部自架不依賴外部 API",
+        "需要文件轉 Markdown(PDF/Office/掃描件)、結構化資訊抽取(NER/JSON 抽取)等多任務的統一推理後端",
+        "團隊已有 Kubernetes 環境,想要開箱即用的 Helm chart、KEDA 自動縮放與 Grafana 監控來管理推理服務"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 4,
+        "comment": "README 與各套件內文件詳盡,原始碼中的模組層級註解會解釋設計原因而非重述程式碼行為,品質偏高;測試檔案數量與涵蓋面(adapters/api/config/queue routing)相當完整,顯示團隊重視回歸測試;CHANGELOG 顯示採自動化版本發布且更新頻繁,但本地檢出的工作目錄中未見到 .github/workflows,無法直接確認 CI pipeline 設定(可能因為淺層 clone 未包含,或 CI 設定於其他位置)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "CUDA 版本的 Dockerfile(packages/sie_server/Dockerfile.cuda12/13)在建置階段使用『curl 下載官方 uv 安裝腳本後以 sh 執行』的模式(curl -LsSf https://astral.sh/uv/... | sh),這是 astral.sh(uv 官方)常見的安裝方式,僅發生在 Docker image 建置過程,而非使用者本機執行環境",
+          "檢出的工作目錄中未發現 .github/workflows,無法確認實際 CI 設定內容;但也未發現任何可疑的安裝期腳本、混淆程式碼、內嵌 base64 payload 或異常網域"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程成熟度與測試涵蓋率明顯高於一般新專案,若團隊有自架多模型推理叢集的需求,值得認真評估。",
+      "_mode": "full"
+    }
+  },
+  "pacifio/atlas": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        2884,
+        888,
+        9,
+        "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Atlas 是一個把多個 AI coding agent(Claude Code、Codex、自家 agent 等)統一到同一個工作區,並將每次 commit 連結回產生它的 agent session 的「agent 版控」桌面應用。",
+      "summary": "Atlas 用 Tauri(Rust + TypeScript)打造,核心概念是「checkpoint」:每個 commit 都會連回產生它的 agent session,包含 prompt、工具呼叫與推理過程,方便事後查詢「哪個 agent 改了什麼、為什麼」。它也提供跨 agent 的共用記憶(on-device embedding + HNSW 語意搜尋),讓切換 Claude Code、Codex 或其他 ACP registry agent 時不用從零開始。專案本地優先,session 記錄預設存在本機 SQLite,帳號同步為選用功能。",
+      "highlights": [
+        "Checkpoint 機制把 git commit 與產生它的 agent session(prompt/工具呼叫/推理)綁在一起,且能在 rebase/amend 後透過 patch-id 追蹤存活",
+        "支援多 agent 並行:Claude Code、Codex 走 ACP 協定作為子行程,自家 agent 用 Rust 框架 Cersei 原生執行,還能拉 ACP registry 裡的其他 agent(Cursor、OpenCode、Kilo Code)",
+        "TELEMETRY.md 罕見地詳盡揭露每個遙測事件、欄位與「絕不收集」清單,透明度在同類專案中相對突出",
+        "CI 涵蓋前端(lint/typecheck/build/vitest)與 19 個獨立 Rust crate 各自的 cargo test/clippy,加上 Tauri app 194 個測試,測試覆蓋面完整",
+        "程式碼與註解品質高,大量說明設計取捨與來源(例如明確標註『Ported from Zed』的邏輯來源與行號)"
+      ],
+      "use_cases": [
+        "同時用多個 AI coding agent(Claude Code、Codex 等)開發同一個 repo,想要統一管理與比較它們的變更歷史",
+        "需要事後稽核『這段程式碼是哪個 agent、在什麼指示下寫出來的』,做 code review 或除錯",
+        "想要跨 agent session 共享專案記憶(架構筆記、之前的決策、失敗紀錄),避免每次換 agent 都要重新給上下文",
+        "偏好本地優先、資料留在自己機器上的開發工具,但仍想要簡單的團隊同步選項"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件品質相當高,README、ARCHITECTURE.md、TELEMETRY.md、SECURITY.md 一應俱全且寫得誠實詳細,連遙測欄位變更的『這裡曾經寫錯』都公開說明。CI 對前端與近 20 個 Rust crate 都有獨立測試與部分 clippy 檢查,測試量體不小,但仍有多個 crate 尚未加入 clippy 嚴格模式(`-D warnings`),顯示品質收斂中而非已完成。目前僅支援 macOS(Linux/Windows 為 build-from-source 但未測試),活躍度從近期密集提交與版本分支流程來看非常高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對於同時使用多個 coding agent 的開發者,這是目前少見把「agent 版控與可稽核性」做得認真的工具,值得關注,但目前僅正式支援 macOS 是主要限制。",
+      "_mode": "full"
+    }
+  },
+  "zyronon/TypeWords": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        9305,
+        21,
+        10,
+        "Practice English, one strike, one step forward; 练习英语，一次敲击，一点进步；",
+        "Vue"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "category": "app",
+      "one_liner": "開源的英語單字與文章打字練習工具,用「敲鍵盤」的方式強化記憶。",
+      "summary": "TypeWords 是一個以 Nuxt/Vue 3 打造的英語學習應用,結合單字打字練習、文章跟寫默寫、以及基於記憶曲線(FSRS 演算法)的智能複習排程。內建 CET-4/6、GRE、IELTS、TOEFL 等多套詞庫,支援本機資料儲存與跨裝置備份,主打無廣告、免登入即可使用。",
+      "highlights": [
+        "採用 FSRS(自由間隔重複演算法)實作智能記憶曲線排程,比傳統艾賓浩斯排程更精細",
+        "內建多國詞庫(CET4/6、GRE、IELTS、TOEFL、考研等)與文章跟寫/聽寫雙模式",
+        "程式碼組織清晰,composables 依功能拆分(practice-words、practice-sentences 等),型別定義完整",
+        "多語系 README(13 種語言),i18n 支援完整",
+        "純前端本地儲存,不強制登入,亦提供 Supabase 雲端同步選項"
+      ],
+      "use_cases": [
+        "需要準備英語考試(四六級、托福雅思、GRE)並想用打字方式強化單字記憶的學習者",
+        "尋找可自架、資料保存在本機、無廣告訂閱制的英語學習工具",
+        "開發者想參考 Nuxt 4 + Pinia + TypeScript 的中大型前端專案架構",
+        "想研究間隔重複記憶演算法(FSRS)在實際產品中的應用"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 完整且多語系,貢獻指南齊全;但完全沒有自動化測試(package.json 的 test script 為空字串),也沒有 .github/workflows CI 設定,品質把關依賴人工。原始碼取樣顯示型別完整、模組拆分合理、命名清晰,屬於維護良好的中大型前端專案。最近一次 push 在 2026-08-28,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、程式碼品質不錯的英語學習工具,適合學習者直接使用或開發者參考其前端架構,唯獨缺乏自動化測試與 CI 是主要扣分點。",
+      "_mode": "full"
+    }
+  },
+  "vercel-labs/portless": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        11764,
+        73,
+        14,
+        "Replace port numbers with stable, named local URLs. For humans and agents.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "one_liner": "用穩定的具名 .localhost 網址取代本地開發時零散的 port 號碼,並自動處理 HTTPS/憑證信任。",
+      "summary": "portless 是 Vercel Labs 推出的 CLI 工具,會啟動一個本地反向代理,把 `next dev`、`vite` 等開發伺服器對應到固定的 `https://myapp.localhost` 網址,取代每次重啟就會變動的 port 號碼。內建自動產生本地 CA 並信任、HTTP/2、monorepo/turborepo 支援、git worktree 子網域、LAN/Tailscale/ngrok 分享等功能,鎖定人類與 AI agent 都能用穩定網址存取本地服務的場景。",
+      "category": "devtool",
+      "highlights": [
+        "自動產生並信任本地 CA 憑證,支援 HTTPS + HTTP/2,涵蓋 macOS/Linux/Windows/WSL 各種信任存放區",
+        "對 vite、astro、expo 等框架的啟動指令做語法層級的智慧判斷,只在安全情況下注入 --port/--host",
+        "git worktree 自動偵測並產生獨立子網域,monorepo 透過 turborepo 一次啟動所有 workspace 服務",
+        "支援 LAN mDNS、Tailscale、ngrok 對外分享,並可安裝成開機自啟服務(systemd/launchd/Task Scheduler)"
+      ],
+      "use_cases": [
+        "多服務 monorepo 本地開發時,需要穩定、可記憶的網址取代隨機 port",
+        "需要 HTTPS 才能運作的 OAuth callback、Service Worker 或 cross-subdomain cookie 本地測試",
+        "團隊或 AI agent 需要透過固定網址存取彼此的本地開發環境(LAN/Tailscale/ngrok 分享)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 極為詳盡且涵蓋各種邊界情況;src 底下幾乎每個模組都有對應的 .test.ts,另有 differential/contract 測試,CI 在 Linux 與 Windows 上都跑 lint/type-check/build/test/e2e;抽樣的 certs.ts 與 proxy.ts 程式碼品質高,對憑證有效期、平台差異、逾時、檔名長度限制等邊界案例都有明確註解與處理,近期仍持續推送(2026-08-29)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "套件的 package.json 未使用 preinstall/postinstall 等安裝期生命週期腳本,只有標準的 build/prepublishOnly(複製 README 並執行 tsup build)",
+          "proxy 預設只綁定 127.0.0.1/::1 loopback 位址,LAN 模式需明確加上 --lan 才會對外綁定 0.0.0.0/::,且會提示使用者裝置在同網路才可見",
+          "hosts-sync 端點對 request token 使用 crypto.timingSafeEqual 做常數時間比對,並檢查來源是否為 loopback 連線,屬於針對 CSRF/計時攻擊的防範設計",
+          "`portless trust` 會將自產生的本地 CA 加入系統信任存放區(macOS Keychain、Linux 系統 CA 目錄、Windows certutil),這是功能所需且有明確使用者操作觸發,非背景靜默執行"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質扎實、文件與測試都到位,對常跑多服務本地開發或需要穩定 HTTPS 網址的團隊很實用,值得一試但非人人必裝的工具。",
+      "_mode": "full"
+    }
+  },
+  "blader/humanizer": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-03": [
+        40395,
+        374,
+        15,
+        "Agent skill that removes signs of AI-generated writing from text",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-03",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "測試",
+      "summary": "測試",
+      "highlights": [
+        "測試一",
+        "測試二",
+        "測試三"
+      ],
+      "use_cases": [
+        "測試一",
+        "測試二"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 4,
+        "comment": "測試"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "測試",
       "_mode": "full"
     }
   }
