@@ -695,8 +695,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -754,6 +754,13 @@
         17,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-09-04": [
+        247407,
+        1601,
+        2,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-08-24",
@@ -788,8 +795,8 @@
       "verdict": "若你正在用 Claude Code 或類似 agent 做正式工程專案,這套結構化的技能集值得一試;但它是流程/提示詞框架而非程式庫,價值取決於你是否認同其工作方法論。",
       "_mode": "full"
     },
-    "total_days_on_trending": 9,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 10,
+    "consecutive_days_on_trending": 2
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1061,8 +1068,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-08-22",
-    "days_on_trending": 3,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1113,45 +1120,53 @@
         7,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-04": [
+        281340,
+        462,
+        19,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-08-21",
+    "last_analyzed": "2026-09-04",
     "analysis": {
-      "one_liner": "一套讓 Claude Code 等編碼代理人自動遵循嚴謹軟體開發流程(TDD、規劃、程式碼審查)的「skills」框架。",
-      "summary": "Superpowers 是由 Prime Radiant(Jesse Vincent 等人)開發的代理人技能框架,把腦力激盪、寫規劃、TDD、子代理人驅動開發、程式碼審查等一整套軟體工程方法論,包裝成可自動觸發的「skills」提供給 Claude Code、Codex、Gemini CLI、Cursor 等十多種編碼代理人使用。核心賣點是讓代理人在動手寫程式前先確認需求、產出可審查的計畫,並強制紅綠燈式 TDD 與逐任務審查,減少代理人「先寫再想」造成的技術債。",
       "category": "devtool",
+      "one_liner": "一套讓 Claude Code、Codex、Gemini CLI 等多種 AI 編碼助手都能套用的「軟體開發方法論」外掛,透過可組合的 Skills 強制執行 TDD、系統化除錯與 subagent 協作流程。",
+      "summary": "Superpowers 不是傳統程式庫,而是一組給 AI 編碼代理人使用的「技能(Skills)」框架,內容以 Markdown 定義的流程規範(brainstorming → 寫計畫 → subagent-driven-development → TDD → code review → 收尾)串成一套完整的軟體開發 SOP。它同時支援十幾種主流 coding agent(Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Devin、Hermes 等),各自有對應的外掛安裝方式與相容層,目的是讓代理人在寫程式前先想清楚需求、用測試驅動開發、並以可審核的小任務逐步推進,而不是一次性亂槍打鳥式產出程式碼。",
       "highlights": [
-        "以 Markdown 撰寫的 SKILL.md 定義各項流程技能(brainstorming、TDD、systematic-debugging、subagent-driven-development 等),可攜式地支援 13 種以上的編碼代理人/CLI",
-        "內建一個本地 WebSocket「視覺陪伴」伺服器(brainstorming/scripts/server.cjs),程式碼中可見 timing-safe token 比對、CSP/Referrer-Policy 標頭、路徑穿越防護、WebSocket Origin 檢查等紮實的安全實作",
-        "測試覆蓋面廣,tests/ 目錄依代理人平台分類(claude-code、codex、hermes、opencode、pi 等),混合 shell 腳本與 JS/Python 測試",
-        "RELEASE-NOTES.md 詳實記錄每個版本變更並附 issue 編號,顯示活躍且有紀律的開發流程",
-        "強制性語氣的技能說明(如 using-superpowers/SKILL.md)刻意用「不可協商」的措辭引導代理人一定要呼叫技能,是一種對 LLM 的提示工程手法而非傳統程式邏輯"
+        "涵蓋 10+ 種 coding agent 的安裝與相容層(Claude Code plugin、Codex、Cursor、Gemini CLI、OpenCode、Devin、Hermes、Pi 等),移植文件齊全(docs/porting-to-a-new-harness.md)",
+        "以 Markdown SKILL.md 定義的方法論非常詳盡,例如 systematic-debugging 明確規定「無根因分析不得修 bug」的四階段流程,並列出常見藉口與反制方式",
+        "內建一個從零開始手刻的 WebSocket 伺服器(brainstorming/scripts/server.cjs)用於視覺化腦力激盪companion,程式碼有做 timing-safe token 比對、CSP、Origin 檢查等安全細節,品質高於一般玩具腳本",
+        "tests/ 目錄涵蓋各家 agent 平台的整合測試(shell script + JS + Python),測試面向廣但未接上 GitHub Actions CI",
+        "選配的視覺腦力激盪功能會從外部網址載入 Prime Radiant 品牌 Logo 並回傳版本號作為使用量遙測,預設開啟但可用環境變數關閉"
       ],
       "use_cases": [
-        "希望為 Claude Code / Codex / Cursor 等代理人導入一致的 TDD 與規劃流程,避免代理人隨意生成未經測試的程式碼",
-        "團隊採用 subagent-driven-development 模式,讓多個子代理人分工執行任務並互相審查",
-        "需要一個可攜式技能庫,同時支援多種 AI 編碼工具而不想為每個工具各寫一套指引",
-        "研究如何用 SKILL.md 這種格式對 LLM agent 做流程級的提示工程"
+        "想在 Claude Code / Codex / Cursor 等 AI 編碼助手上,強制導入 TDD 與系統化除錯流程的團隊",
+        "需要讓多個 subagent 分工完成大型重構或功能開發,並要求逐任務審查(spec compliance + code quality)的工作流",
+        "想參考別人如何設計「給 LLM 遵循的流程規範」(Skill 撰寫最佳實踐)以自製類似框架的開發者",
+        "需要跨多種 AI coding agent 平台維護一致開發方法論的團隊(一次寫 Skill,多平台相容)"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
-        "activity": 5,
-        "comment": "文件非常完整(README 依代理人分平台列出安裝步驟,docs/ 下有大量設計文件與變更計畫),測試涵蓋多平台且有實際的單元測試而非空殼;抽查的 server.cjs 展現出對 timing attack、路徑穿越、CSP、WebSocket Origin 等安全細節的用心處理。稍嫌不足的是專案根目錄未見 GitHub Actions CI 工作流,測試主要靠貢獻者手動執行 shell/npm 腳本,自動化驗證的即時性不如典型 CI 專案。RELEASE-NOTES 顯示更新頻繁、issue 追蹤紀律良好。"
+        "activity": 4,
+        "comment": "文件量極為豐富,README、AGENTS.md、CLAUDE.md、docs/ 下大量設計文件(specs/plans)完整記錄每次功能演進的思路與紅綠測試結果,對於一個「方法論框架」型專案來說相當罕見地嚴謹。測試涵蓋多平台整合腳本與 JS 單元測試,brainstorm-server 的程式碼品質也看得出對安全與邊界情況的用心(timing-safe 比較、CSP、路徑穿越防護)。扣分點是找不到 .github/workflows,沒有自動化 CI 把關,測試需仰賴手動執行 run-*.sh 或 npm test。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "skills/brainstorming/scripts/server.cjs 啟動的本地視覺陪伴伺服器,預設會從外部網址 primeradiant.com 載入品牌圖片(可用 SUPERPOWERS_DISABLE_TELEMETRY 等環境變數關閉),README 也明確揭露此遙測行為,屬於作者已公開說明的可選功能而非隱藏行為",
-          "未在檢視範圍內發現安裝時自動執行的可疑腳本(無 npm postinstall/preinstall、無 curl|bash 型安裝指令、無 setup.py 任意程式碼執行),各代理人的安裝方式皆為官方套件市集或 git clone"
+          "skills/brainstorming 的視覺化 companion 功能預設會從 https://primeradiant.com 載入品牌 Logo 圖檔,並在請求中夾帶版本號作為使用量統計,官方稱不含專案內容或提示詞,可用 SUPERPOWERS_DISABLE_TELEMETRY 等環境變數關閉",
+          "package.json 與各平台外掛 manifest(.claude-plugin、.codex-plugin、.devin-plugin 等)均未定義 postinstall/preinstall/prepare 等安裝期自動執行腳本",
+          "OpenCode 安裝文件要求代理人「Fetch and follow instructions from」一個 raw.githubusercontent.com 上的 INSTALL.md,實際內容為一般安裝步驟說明,未見可疑指令"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你已在用 Claude Code 之類的編碼代理人且想讓它更守規矩地做 TDD 與規劃,這套技能框架值得一試;程式碼與文件品質皆在水準之上,唯獨缺乏正式 CI 流程略為扣分。",
+      "verdict": "如果你正在用多種 AI coding agent 且想要一套可落地的「代理人開發 SOP」,這個專案的方法論設計與跨平台相容工程值得研究,但因缺乏自動化 CI,大規模採用前建議自行驗證各平台外掛的實際行為。",
       "_mode": "full"
     },
-    "total_days_on_trending": 8,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 9,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1361,8 +1376,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 3,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1417,6 +1432,13 @@
         12,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-04": [
+        247194,
+        751,
+        6,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-08-22",
@@ -1456,8 +1478,8 @@
       "verdict": "若你已在用 Claude Code 或 Codex 進行日常開發,這套整合度高的代理工作流值得一試,但因規模龐大且僅能從 README 評估,建議先在非關鍵專案試裝並檢查其 hook 權限再全面採用。",
       "_mode": "light"
     },
-    "total_days_on_trending": 9,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 10,
+    "consecutive_days_on_trending": 4
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -5338,10 +5360,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-08-30",
+    "last_seen": "2026-09-04",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5389,6 +5411,13 @@
         90716,
         196,
         18,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-09-04": [
+        92032,
+        264,
+        12,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -6148,10 +6177,10 @@
   },
   "bannedbook/fanqiang": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-09",
+    "last_seen": "2026-09-04",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-09": [
         50098,
@@ -6159,38 +6188,49 @@
         12,
         "翻墙-科学上网",
         "Kotlin"
+      ],
+      "2026-09-04": [
+        52155,
+        522,
+        11,
+        "翻墙-科学上网",
+        "Kotlin"
       ]
     },
-    "last_analyzed": "2026-08-09",
+    "last_analyzed": "2026-09-04",
     "analysis": {
-      "one_liner": "彙整多種翻牆(繞過網路封鎖)工具與教學的資源庫,涵蓋各平台與多種代理協定。",
-      "summary": "此專案是一個大型翻牆資源彙整庫,提供 Windows、Android、iOS、macOS、路由器、Linux、遊戲機等各平台的翻牆軟體使用教程,並整合 V2ray、Shadowsocks、SSR、Trojan、Brook、Psiphon 等多種代理工具與一鍵翻牆包。主要解決中國大陸等網路受限地區使用者無法自由存取國際網路服務的問題。",
+      "one_liner": "翻牆工具與教程大全,彙整多平台(Windows/Mac/iOS/Android/路由器)科學上網教學與一鍵翻牆包",
+      "summary": "這是一個彙整各類翻牆(科學上網)工具使用教程的資源庫,涵蓋 V2ray、Shadowsocks、SSR、Clash、Trojan 等主流工具在各平台的設定教學,並提供 Chrome/Firefox/Edge 一鍵翻牆包整合多種代理工具。目的是降低一般使用者在中國大陸網路封鎖環境下取得翻牆工具與設定教學的門檻。",
       "category": "learning-resource",
       "highlights": [
-        "涵蓋 Windows/iOS/Android/macOS/路由器/Linux/遊戲機等幾乎所有平台的翻牆教程",
-        "整合 Goflyway、V2ray、Daze、SSR、Brook、Lightsocks、Trojan、蓝灯、Psiphon 等多種工具的一鍵翻牆包並內建免費伺服器",
-        "提供自建 V2ray / Shadowsocks 伺服器的簡明教學,適合想自行架設節點的使用者",
-        "同時附上 Chrome 一鍵翻牆包、註冊海外 Apple ID、註冊 ChatGPT 帳號等實用附加教程",
-        "長期更新且社群活躍,提供 Telegram 群組與 GitHub Issues 作為交流回饋管道"
+        "涵蓋 Windows、Mac、iOS、Android、路由器、Linux、遊戲主機等多平台教程",
+        "整合 ChromeGo 一鍵翻牆包,內建 Goflyway、v2ray、SSR、Brook、Trojan 等多款工具及免費伺服器",
+        "README 結構清晰,以條列式連結彙整 Wiki 與子目錄文件,方便查找",
+        "持續更新(最近一次推送為 2026-08-30),且今日在 GitHub trending 上榜(+522 star)",
+        "額外附有中國大陸註冊 ChatGPT、Apple ID 等延伸教程"
       ],
       "use_cases": [
-        "身處網路審查/封鎖地區,需要查找各平台翻牆軟體設定教學",
-        "想快速取得整合多種代理工具的一鍵翻牆安裝包(如 ChromeGo)",
-        "希望自行架設 V2ray 或 Shadowsocks 伺服器的使用者",
-        "研究不同代理協定(V2ray/SS/SSR/Trojan/Brook 等)差異與應用場景的學習者"
+        "需要在網路審查環境下設定翻牆工具的一般使用者查找教程",
+        "開發者或教學者想找現成的翻牆工具比較與設定說明彙整",
+        "作為 awesome-list 或翻牆相關資源收藏的參考來源",
+        "查詢特定平台(如路由器、遊戲主機)的翻牆設定方案"
       ],
       "quality": {
         "docs": 4,
         "tests": 1,
         "activity": 5,
-        "comment": "文件以條列式教程連結為主,結構清晰、涵蓋平台廣泛,屬資源彙整/教學類專案,測試不適用;最近推送時間為今日,且正在 GitHub Trending 上快速增星,顯示社群活躍度高。"
+        "comment": "README 以條列式清楚彙整各平台教程連結,文件量豐富且分類明確,但屬於資源彙整類專案,測試不適用。近期有持續推送更新,今日並登上 trending,顯示社群關注度高。"
       },
       "security": {
         "risk_level": "low",
-        "findings": []
+        "findings": [
+          "README 未提供任何 curl|bash 或腳本安裝指令,主要為文件連結與下載壓縮包(一鍵翻牆包)的說明",
+          "僅提醒使用者下載後需解壓縮再執行,未見明顯的自動化安裝腳本",
+          "本評估僅基於 README 內容,未對實際程式碼或壓縮包內容進行審查,無法確認內含工具的安全性"
+        ]
       },
       "star_rating": 4,
-      "verdict": "若需要查找翻牆軟體教學或整合工具包,此專案彙整完整、更新頻繁,值得收藏,但本身非程式碼工具,實用性視個人網路環境而定。",
+      "verdict": "作為翻牆教程與工具彙整資源相當完整且持續更新,適合收錄進科學上網相關的資源清單,但因屬於文件彙整類而非程式碼專案,實用性因人而異。",
       "_mode": "light"
     }
   },
@@ -6959,10 +6999,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-14",
+    "last_seen": "2026-09-04",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -6977,38 +7017,45 @@
         3,
         "Public repository for Agent Skills",
         "Python"
+      ],
+      "2026-09-04": [
+        173651,
+        281,
+        5,
+        "Public repository for Agent Skills",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-12",
+    "last_analyzed": "2026-09-04",
     "analysis": {
       "category": "ai-ml",
-      "one_liner": "Anthropic 官方釋出的 Agent Skills 範例集,教 Claude 如何用「資料夾+SKILL.md+腳本」的模式學會特定任務。",
-      "summary": "這個倉庫收錄了 Anthropic 用來讓 Claude 具備文件處理(docx/pdf/pptx/xlsx)、視覺設計、MCP server 開發、內部溝通等能力的實際 Skill 實作範例,每個 skill 都是一個包含 YAML frontmatter 說明與可執行腳本的自包含資料夾。同時附上 Agent Skills 規格(spec)與建立新 skill 的範本(template),是理解與打造自訂 Skill 的第一手參考。",
+      "one_liner": "Anthropic 官方發布的 Agent Skills 範例集,教 Claude 如何用「資料夾+SKILL.md」的形式學會特定任務。",
+      "summary": "此repo收錄了一系列「Skill」——每個都是一個包含 SKILL.md(YAML frontmatter+指令說明)以及輔助腳本/範本的資料夾,讓 Claude 在對話中動態載入以完成特定任務,涵蓋創意設計(algorithmic-art、canvas-design)、企業溝通(internal-comms、brand-guidelines)、技術工具(mcp-builder、webapp-testing)及文件處理(docx/pdf/pptx/xlsx)。文件處理系列是 Claude.ai 實際生產環境功能背後的原始碼(source-available,非開源),其餘多數採 Apache 2.0 授權。同時提供 Claude Code 外掛市集(marketplace.json)可一鍵安裝這些 Skill 組合。",
       "highlights": [
-        "docx/pdf/pptx/xlsx 四個 skill 是 Claude.ai 文件功能背後實際使用的原始碼(source-available,非開源)",
-        "skill-creator 內建完整的 skill 迭代與 eval 框架(quick_validate.py、run_eval.py、improve_description.py)",
-        "canvas-design 附帶數十款開源字型(OFL 授權)與範本,供設計類 skill 直接取用",
-        "可透過 /plugin marketplace add 直接安裝進 Claude Code,對接 document-skills 與 example-skills 兩組 plugin",
-        "各 skill 各自附獨立 LICENSE.txt,授權條款依用途不同(多數 Apache 2.0,文件類為 source-available)"
+        "定義了 Agent Skills 標準規格(spec/agent-skills-spec.md),並提供 template-skill 供使用者快速建立自訂 Skill",
+        "docx/pdf/pptx/xlsx 四個 Skill 是 Claude.ai 文件功能背後實際使用的程式碼,含完整 OOXML XSD schema 驗證邏輯,程式品質紮實(如使用 defusedxml 防範 XML 攻擊、lxml schema 驗證、關聯性 ID 完整性檢查)",
+        "可透過 /plugin marketplace add 直接註冊為 Claude Code 外掛市集,一鍵安裝 document-skills 或 example-skills 套件",
+        "canvas-design 等 Skill 內附大量開源字型(OFL 授權)與範本檔案,展示 Skill 可攜帶完整資源而非只是文字指令",
+        "mcp-builder Skill 附帶 MCP Server 最佳實踐文件與評估腳本,可指導使用者建立自己的 MCP Server"
       ],
       "use_cases": [
-        "想了解 Claude Skills 機制運作原理、動手寫自己的 SKILL.md",
-        "需要文件自動化(產生/編輯 Word、PPT、Excel、PDF)且想參考官方實作細節",
-        "打造內部知識庫或工作流程 skill,參考 skill-creator 的 progressive disclosure 設計模式",
-        "開發 MCP server 時借用 mcp-builder 內的評測腳本(evaluation.py)驗證 tool 品質"
+        "為 Claude(Claude.ai / Claude Code / API)客製化特定領域工作流程,例如套用公司品牌規範產生文件",
+        "參考官方 Skill 寫法與 SKILL.md 規格,設計自己的 Agent Skill",
+        "直接安裝 document-skills 外掛,取得 Word/PDF/PPT/Excel 的產生與編輯能力",
+        "研究 Agent Skills 標準(agentskills.io)及其與 Claude 工具生態的整合方式"
       ],
       "quality": {
         "docs": 5,
-        "tests": 2,
-        "activity": 4,
-        "comment": "文件品質極高,每個 skill 的 SKILL.md 都詳細說明使用時機、常見陷阱與依賴;程式碼(Python/JS)風格乾淨、有型別註記與 docstring。但沒有傳統意義上的單元測試目錄或 CI workflow,skill-creator 提供的是「eval」型驗證而非自動化測試,對持續品質保證來說較弱。"
+        "tests": 1,
+        "activity": 5,
+        "comment": "文件說明極為完整(README、spec 規格文件、每個 Skill 自帶 SKILL.md),但整個repo未見 tests/ 目錄或 .github/workflows CI 設定——這符合其「內容/範例集」而非傳統軟體套件的定位。抽查 docx skill 的 XML 驗證程式碼(office/validators/base.py)品質良好,妥善使用 defusedxml 與 lxml 做安全的 XML 解析與 schema 驗證,邏輯清晰且有例外處理。因是 Anthropic 官方倉庫且今日新上 trending、star 數暴增(+281),活躍度極高。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "Anthropic 官方一手資料,想搞懂或自製 Claude Skills 的 AI 工程師值得直接研讀原始碼,而非只看文件介紹。",
+      "verdict": "Anthropic 官方出品、文件完整且可直接安裝使用,對想客製化 Claude Skill 或了解 Agent Skills 標準的開發者非常值得一看。",
       "_mode": "full"
     }
   },
@@ -10243,10 +10290,10 @@
   },
   "JuliusBrussee/caveman": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-21": [
         99638,
@@ -10261,41 +10308,49 @@
         16,
         "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "Go"
+      ],
+      "2026-09-04": [
+        103102,
+        543,
+        7,
+        "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-08-21",
+    "last_analyzed": "2026-09-04",
     "analysis": {
-      "one_liner": "讓 AI coding agent「說話省字、讀檔也省字」的 Claude Code 技能與本地代理,號稱可省下 65% 輸出 token 與 33% 輸入 token。",
-      "summary": "Caveman 最初是讓 Claude Code 等 agent 用精簡「原始人語氣」回答問題的 skill,藉此縮短輸出 token;第二代加入本地 Proxy/Engine,在請求送往 provider 前先對工具結果、日誌、程式碼、diff 等內容做結構化壓縮與去重,並用 PNG 圖片化文字(pixel mode)進一步降低視覺模型的輸入計費。所有轉換皆搭配內容定址儲存(CCR)保留原始位元組供還原,強調「可逆」與「不可逆時直接放行原文」。",
       "category": "devtool",
+      "one_liner": "讓 AI coding agent 少講廢話、少讀廢話的 Claude Code Skill + 本地代理伺服器,靠壓縮輸出/輸入省下大量 token。",
+      "summary": "Caveman 提供兩層方案:一個是免費的「skill」規則檔,讓 Claude Code / Codex / Gemini 等 30+ agent 用「穴居人式」精簡口吻回答,平均省下 65% 輸出 token;另一個是本地代理(proxy),攔截 agent 讀進來的 JSON/log/diff/搜尋結果等內容,依內容型態做安全分類的無損/可回溯壓縮,平均省下約 33% 輸入 token。核心賣點是「省錢但不犧牲正確性」,並提供可回溯機制(CCR store)保證原始內容隨時可取回。",
       "highlights": [
-        "倉庫規模巨大(1450+ 檔案、Go + Node + Python 混合),涵蓋 skill、CLI、本地 Proxy、瀏覽器 a11y 樹壓縮、MCP server 等多個子系統,並非單純的 prompt 技巧",
-        "CI 涵蓋 Ubuntu/Windows/macOS 三平台,分別跑 Node/Python/Go 測試與 PowerShell 語法檢查,測試檔案超過 250 個,工程紀律明顯高於一般 meme 型專案",
-        "README 附上「Honest Numbers」章節,主動說明 65% 只是輸出 token 的量測結果、skill 本身每輪會多耗 1~1.5k 輸入 token,態度誠實而非誇大行銷",
-        "SECURITY.md 詳細揭露資料流、telemetry 內容、本地資料庫敏感性、curl|bash 安裝方式與其風險,並說明防毒軟體誤報的原因",
-        "採用 MIT(skill/CLI)+ BSL-1.1(engine/proxy)雙授權,engine 相關程式碼在 Change Date 前並非 OSI 認定的開源授權"
+        "採 fail-closed 設計:偵測不到型別、無法確認可回溯、壓縮後沒有變小,一律直接原樣放行,不會硬壓縮犧牲正確性",
+        "engine 目錄有數百個 *_test.go,含 adversarial probe 測試與跨平台(Windows/macOS/Linux)CI matrix,測試文化紮實",
+        "install.sh/install.js 明確 pin 到固定 release tag(非 main 分支),並在註解中解釋是為了修過去的安全事故(issue #249、#261)",
+        "誠實揭露效益上限:README 明講 65% 只算輸出 token,並附 docs/HONEST-NUMBERS.md 說明何時可能反而更貴",
+        "License 採 MIT(skill/CLI)+ BSL-1.1(engine/proxy)雙軌,四年後轉 Apache-2.0,商業自架收費模式寫得清楚"
       ],
       "use_cases": [
-        "想讓 Claude Code / Codex / Gemini CLI 等 agent 回答更精簡、降低對話 token 花費的個人開發者",
-        "希望在不改程式碼的前提下,透過本地 Proxy 攔截並壓縮工具輸出(log、JSON、diff)以降低 API 帳單的重度 agent 使用者",
-        "對 prompt engineering、token 壓縮演算法(BM25 相關性、TOON 編碼、pixel 化文字)感興趣的研究/學習用途"
+        "用 Claude Code / Codex / Gemini CLI 等工具時想降低 API 帳單,尤其是輸出冗長解說的場景",
+        "agent 需要頻繁讀取大型 log、JSON、diff、搜尋結果時,想在丟給模型前先做內容感知壓縮",
+        "想觀察自己過去 agent session 的 token 花費分布,找出最浪費 token 的操作模式",
+        "需要把同一個壓縮/包裝機制套用到多種 agent(用 baseURL 換源接 Vercel AI SDK、LangChain、LiteLLM 等)"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件極度完整(README、SECURITY.md、HONEST-NUMBERS.md,每個子目錄有各自的 CLAUDE.md/AGENTS.md),原始碼中的註解多用於解釋「為何這樣做」而非重複程式邏輯,顯示長期維護痕跡(大量 issue 編號引用修過的 bug)。測試覆蓋面廣,跨三大作業系統的 CI 流程嚴謹。最近一次推送在昨天,活躍度很高。整體工程品質遠高於典型的一次性熱門專案。"
+        "comment": "文件非常完整(README、INSTALL.md、CLAUDE.md、docs/HONEST-NUMBERS.md 等),誠實揭露效益侷限而非誇大宣傳。測試覆蓋面廣,Go 引擎有大量單元測試與逆向測試(adversarial probe),CI 涵蓋 Ubuntu/Windows/macOS 三平台且 GitHub Actions 全部 pin 到 commit SHA,近期仍持續 push(2026-09-04),是相當成熟的專案。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "安裝流程提供 curl|bash / irm|iex 的一鍵安裝腳本,但該腳本明確釘選在特定 release tag(而非可變的 main 分支),並對下載的 hook 檔案做 SHA-256 checksum 驗證,同時 README/SECURITY.md 都提供「先 clone 再檢查原始碼」的替代安裝方式",
-          "npm 套件的 package.json 未發現 preinstall/postinstall/prepare 等安裝期自動執行腳本",
-          "CLI 預設會回傳匿名使用統計(telemetry)至 Caveman 官方伺服器,雖不含 prompt/程式碼內容,但屬預設開啟(opt-out)行為,使用前建議留意 SECURITY.md 所述的關閉方式"
+          "安裝方式包含 curl | bash 與 irm | iex 兩種常見遠端腳本執行模式,但腳本內容有 pin 到固定 release tag(非可變的 main 分支),並在註解中說明此設計是為了防止過去發生的供應鏈相關問題(issue #249、#261),屬於較嚴謹的做法",
+          "package.json 未使用 preinstall/postinstall/prepare 等生命週期腳本執行任意程式碼",
+          "CLI 預設會回傳匿名使用統計(執行了哪些指令、token 節省數字),README 與 SECURITY.md 有明確說明範圍並提供 `caveman telemetry off` 關閉方式,不涉及程式碼或檔案路徑外洩"
         ]
       },
       "star_rating": 4,
-      "verdict": "雖然話題包裝很 meme,但底層是一套工程嚴謹、文件誠實、測試完備的 token 壓縮工具鏈,值得工程師實際評估導入,而非只當作噱頭看看。",
+      "verdict": "工程品質與文件誠實度都在水準之上,若你重度使用 Claude Code / Codex 等 agent 又在意 token 帳單,值得一試,但記得先讀 HONEST-NUMBERS.md 校正自己的期待值。",
       "_mode": "full"
     }
   },
@@ -11217,10 +11272,10 @@
   },
   "NousResearch/hermes-agent": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-24": [
         234993,
@@ -11240,6 +11295,13 @@
         240125,
         533,
         7,
+        "The agent that grows with you",
+        "Python"
+      ],
+      "2026-09-04": [
+        240843,
+        774,
+        3,
         "The agent that grows with you",
         "Python"
       ]
@@ -11780,10 +11842,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -11817,6 +11879,13 @@
         121552,
         1354,
         3,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-09-04": [
+        123432,
+        2128,
+        4,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -13901,10 +13970,10 @@
   },
   "Gitlawb/openclaude": {
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-02": [
         31294,
@@ -13917,6 +13986,13 @@
         31985,
         775,
         18,
+        "runs anywhere. uses anything",
+        "TypeScript"
+      ],
+      "2026-09-04": [
+        32345,
+        451,
+        16,
         "runs anywhere. uses anything",
         "TypeScript"
       ]
@@ -13959,10 +14035,10 @@
   },
   "Imbad0202/academic-research-skills": {
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-02": [
         44895,
@@ -13975,6 +14051,13 @@
         45557,
         799,
         11,
+        "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+        "Python"
+      ],
+      "2026-09-04": [
+        45991,
+        496,
+        15,
         "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
         "Python"
       ]
@@ -14061,15 +14144,22 @@
   },
   "averygan/reclip": {
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-02",
+    "last_seen": "2026-09-04",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-02": [
         7652,
         56,
         12,
+        "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+        "HTML"
+      ],
+      "2026-09-04": [
+        8368,
+        88,
+        10,
         "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
         "HTML"
       ]
@@ -14112,14 +14202,21 @@
   },
   "fmtlib/fmt": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-03": [
         24259,
         14,
+        1,
+        "A modern formatting library",
+        "C++"
+      ],
+      "2026-09-04": [
+        25080,
+        963,
         1,
         "A modern formatting library",
         "C++"
@@ -14160,15 +14257,22 @@
   },
   "google-research/timesfm": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-03": [
         29791,
         343,
         2,
+        "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+        "Python"
+      ],
+      "2026-09-04": [
+        30700,
+        1618,
+        9,
         "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "Python"
       ]
@@ -14208,15 +14312,22 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-03": [
         14721,
         832,
         4,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-09-04": [
+        16276,
+        1672,
+        17,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -14505,15 +14616,22 @@
   },
   "blader/humanizer": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-03": [
         40395,
         374,
         15,
+        "Agent skill that removes signs of AI-generated writing from text",
+        "Python"
+      ],
+      "2026-09-04": [
+        41481,
+        1208,
+        8,
         "Agent skill that removes signs of AI-generated writing from text",
         "Python"
       ]
@@ -14545,6 +14663,155 @@
       "star_rating": 3,
       "verdict": "測試",
       "_mode": "full"
+    }
+  },
+  "ByteByteGoHq/system-design-101": {
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-04": [
+        88340,
+        171,
+        13,
+        "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-09-04",
+    "analysis": {
+      "one_liner": "用視覺化圖解說明系統設計核心概念的免費知識庫,是準備系統設計面試的熱門參考資料。",
+      "summary": "這個專案本質上是 ByteByteGo 部落格內容的鏡像倉庫,收錄超過 400 篇以圖解為主的系統設計、API、資料庫、快取、安全、雲端與 DevOps 主題文章,每篇都是簡短的 Markdown 搭配一張外部託管的示意圖。它不含任何可執行程式碼,純粹是給工程師快速複習系統設計知識、準備面試用的圖解手冊。",
+      "category": "learning-resource",
+      "highlights": [
+        "README 以巨大的目錄結構整理超過 400 個主題,涵蓋 API、資料庫、快取、安全、雲端、DevOps 等 14 大分類",
+        "data/guides 底下每篇文章採統一 frontmatter 格式(title、description、image、categories、tags),結構一致、易於程式化解析或轉發布",
+        "圖片皆託管於 assets.bytebytego.com,倉庫本身不存放大型二進位檔,repo 體積輕量",
+        "CONTRIBUTING.md 明確規範貢獻方式,並要求不要用 AI 生成內容、圖片問題請開 issue 而非直接改圖,治理流程清楚",
+        "授權為 CC BY-NC-ND 4.0(非開源軟體授權),代表內容僅供閱讀分享、禁止商業使用與改作發布"
+      ],
+      "use_cases": [
+        "系統設計面試前快速複習各類主題的核心概念與圖解",
+        "作為工程團隊內部教育訓練或新人 onboarding 的補充教材",
+        "撰寫技術部落格或簡報時,查找特定主題(如快取策略、訊息佇列比較)的高品質圖解靈感"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 2,
+        "comment": "文件品質非常高,主題分類、frontmatter 格式一致且維護良好;但這是純內容/文案倉庫,沒有原始碼、沒有測試,唯一的 GitHub Action 僅是歡迎新貢獻者的機器人。最近一次 push 是 2025-04-04,已超過一年未更新新內容,近期的高討論度主要來自今日 trending 曝光,而非新內容產出。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "不是程式碼專案,但作為免費、圖解精美且分類完整的系統設計知識庫,值得加入書籤長期查閱,尤其適合準備面試或需要快速複習概念的工程師。",
+      "_mode": "full"
+    }
+  },
+  "magnitudedev/magnitude": {
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-04": [
+        1950,
+        161,
+        14,
+        "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-04",
+    "analysis": {
+      "one_liner": "一鍵幫你的 AI coding agent 接上本機最佳化模型的推論伺服器,免 API key、離線可用。",
+      "summary": "Magnitude 是開源推論伺服器,會偵測使用者硬體規格,推薦合適的本地模型,自動下載、調校(speculative decoding、併發設定等)並串接到使用者已在用的 agent 工具(如 Claude Code、Codex、Cline、OpenCode 等)。目標是讓開發者免費、私密、離線跑 agent 工作流,不用自己摸索 Ollama 該裝什麼模型、量化方式。",
+      "category": "ai-ml",
+      "highlights": [
+        "TypeScript CLI/TUI + Rust(Cargo)推論引擎並存的大型 monorepo,架構分層清楚(cli/inference/packages/*)",
+        "核心 agent 邏輯採用 Effect-TS 做事件溯源(event-core、projections、workers)架構,型別安全且模組化程度高",
+        "硬體感知的模型推薦與調校流程(icn-catalog、benchmark、parity 測試皆有獨立套件與 CI job)",
+        "官方發行流程嚴謹:changesets 版本控管、release-build/release-checks 多層 GitHub Actions,npm 發佈後有 public-smoke 驗證與 integrity 檢查",
+        "單元測試覆蓋面很廣,數百支 *.test.ts 分布在 cli、web、desktop、inference 各子專案"
+      ],
+      "use_cases": [
+        "想在本機免費、離線跑 AI coding agent(Claude Code、Cline、OpenCode 等)又不想手動挑模型/量化參數的開發者",
+        "需要在無網路或高隱私要求環境下處理程式碼、文件的团队",
+        "對 Effect-TS 事件驅動架構或 Rust 推論引擎設計有興趣的工程師,可參考其專案結構"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 對一般使用者友善且附 FAQ,但深入的架構文件較少,需靠程式碼與 AGENTS.md 自行理解;測試檔案數量龐大且分散在各子套件,顯示團隊重視回歸測試;發布與 CI pipeline(release.yml、release-build.yml 等)設計嚴謹,近期(2026-09-03)仍持續有提交與版本發佈,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未在任何 package.json 中發現 preinstall/postinstall/prepare 之類會在安裝時自動執行的可疑腳本(僅根目錄 package.json 有標準的 prepare 腳本,內容為產生版本號與套用 language-service patch,屬正常開發流程)",
+          "專案透過 git submodule 引用 inference/native/llama-cpp-rs,來源為 magnitudedev 自己維護的 fork(非第三方不明網域)",
+          "README 建議使用者複製一段指令請 agent 執行 `npm i -g @magnitudedev/cli` 後再跑 `magnitude docs onboarding`,屬於一般 npm 全域安裝流程,未發現 curl|bash 或不明網址下載執行的模式",
+          "本次抽樣未發現混淆或壓縮過的原始碼、長 base64/hex 字串、硬編碼 IP 或已提交的執行檔案"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與發布流程都相當扎實,若你想在本機免費跑 agent 又懶得自己挑模型,值得一試;但目前僅支援 macOS/Linux(Windows 需透過 WSL),且是新上榜專案,建議先觀察社群回饋再導入正式工作流。",
+      "_mode": "full"
+    }
+  },
+  "f/prompts.chat": {
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-04": [
+        168995,
+        168,
+        18,
+        "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+        "HTML"
+      ]
+    },
+    "last_analyzed": "2026-09-04",
+    "analysis": {
+      "one_liner": "全球最大的開源 AI 提示詞(prompt)庫,前身為 Awesome ChatGPT Prompts,支援自架私有版本。",
+      "summary": "prompts.chat 是一個社群共建的提示詞收藏庫,適用於 ChatGPT、Claude、Gemini 等各家 LLM,同時提供網站瀏覽、CSV/Markdown/Hugging Face 資料集等多種存取形式。專案已從單純的 awesome list 演進為具備 Next.js 網站、CLI、MCP Server 與自架能力的完整產品。",
+      "category": "ai-ml",
+      "highlights": [
+        "由知名 Awesome ChatGPT Prompts 演進而來,累積 16 萬+ star,曾被 Forbes、Harvard、Columbia 引用,學術引用 40+ 次",
+        "提供多種消費形式:網站瀏覽、PROMPTS.md、prompts.csv、Hugging Face 資料集",
+        "支援一鍵自架(npx prompts.chat new)、Docker 部署,可搭配 GitHub/Google/Azure AD 驗證,適合企業內部私有提示詞庫",
+        "提供 MCP Server 與 Claude Code Plugin 整合,可直接接入 AI 開發工具鏈",
+        "附帶免費互動式 Prompt Engineering 教學書籍(25+ 章節)"
+      ],
+      "use_cases": [
+        "快速尋找或參考現成的高品質提示詞範本",
+        "企業或團隊想自架私有、客製化品牌的提示詞管理平台",
+        "透過 MCP Server 或 CLI 將提示詞庫整合進既有 AI 開發流程",
+        "新手學習 prompt engineering 的入門教材"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 5,
+        "comment": "README 結構完整、連結豐富,自架與整合說明清楚;因屬資源彙整類專案,測試面向不適用,故此項給分偏低。近期(2026-09-03)仍有推送記錄,且今日進入 trending 第一天,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 中的自架與 CLI 使用方式包含執行 `npx prompts.chat`、`npx -y prompts.chat mcp` 等指令,會下載並執行遠端 npm 套件,屬於一般 npm 生態系常見模式,非 curl|bash 直接執行遠端腳本;本評估僅依據 README,未實際檢視原始碼。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對於需要提示詞資源或想自架企業內部 prompt 庫的團隊,這是目前最成熟、生態最完整的選項之一,值得關注但非程式碼層級的技術突破。",
+      "_mode": "light"
     }
   }
 }
