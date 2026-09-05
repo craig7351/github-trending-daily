@@ -695,8 +695,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -761,6 +761,13 @@
         2,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-09-05": [
+        250406,
+        2758,
+        1,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-08-24",
@@ -795,8 +802,8 @@
       "verdict": "若你正在用 Claude Code 或類似 agent 做正式工程專案,這套結構化的技能集值得一試;但它是流程/提示詞框架而非程式庫,價值取決於你是否認同其工作方法論。",
       "_mode": "full"
     },
-    "total_days_on_trending": 10,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 11,
+    "consecutive_days_on_trending": 3
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1376,8 +1383,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 4,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1439,47 +1446,54 @@
         6,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-05": [
+        248518,
+        1135,
+        4,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-22",
+    "last_analyzed": "2026-09-05",
     "analysis": {
-      "one_liner": "ECC 是一套為 Claude Code、Codex 等多種 AI 編碼代理提供技能、記憶與安全掃描的「代理工具鏈作業系統」外掛。",
-      "summary": "ECC 提供大量預製的 agents、skills、commands 與 hooks,試圖把「規劃→測試→實作→審查→驗證→記憶→改進」的完整工程流程包裝進 Claude Code 等多種 AI 編碼工具中,並附帶名為 AgentShield 的安全掃描功能(掃描 prompt、hook、MCP 設定、權限與密鑰)。目標是讓使用者不必在每次對話中重新建立這套流程,而是一次安裝、長期沿用。",
       "category": "devtool",
+      "one_liner": "一套巨型的 Claude Code / Codex 等 AI 編碼代理「操作系統」套件,把技能、代理、規則、hook、記憶體整合成一套標準化工作流程。",
+      "summary": "ECC(Engineering Command Center 一類的縮寫)是給 Claude Code、Codex、OpenCode、Cursor 等多種 AI 編碼代理使用的外掛/規則包,內含 68 個 agents、286 個 skills、94 個指令 shim,以及 hooks、rules、記憶體與 AgentShield 安全掃描系統,目的是把「先計劃、先寫測試、再實作、再審查、再驗證」這套工程流程標準化,讓代理不必每次從頭重建這套紀律。專案同時提供 npm 套件、GitHub App、Claude 外掛市集等多種安裝管道,並針對跨代理(Kimi、Codex、Cursor 等)做了適配層。",
       "highlights": [
-        "宣稱內建 68 個 agents、286 個 skills、94 個 command shim,規模相當龐大",
-        "同時支援 Claude Code、Codex、Cursor、OpenCode、Gemini、Zed、GitHub Copilot 等 7 種以上代理平台(功能完整度不一)",
-        "附帶 AgentShield 安全掃描模組,針對 prompt、hook、MCP 設定、權限與密鑰做檢查",
-        "README 明確警告只能從官方管道安裝,提醒第三方鏡像可能含惡意內容",
-        "多國語言 README(含繁體中文版本),文件本地化程度高"
+        "涵蓋 68 個 agents、286 個 skills、94 個 legacy 指令,規模在同類專案中相當龐大",
+        "CI 相當扎實:跨 OS(Ubuntu/Windows/macOS)、跨 Node 版本、跨套件管理器(npm/pnpm/yarn/bun)矩陣測試,另有獨立的 lint、coverage、npm audit、supply-chain IOC 掃描 job",
+        "自建 AgentShield 掃描代理設定本身(prompts、hooks、MCP config、權限、密鑰)是否有風險,把『代理設定當攻擊面』的概念產品化",
+        "提供 Plan Canvas(本機 loopback 瀏覽器介面)讓使用者用點選方式審核代理產出的計畫,而非只能在終端機文字互動",
+        "README 明確警告『僅從官方管道安裝』,並列出多種安裝路徑互斥的注意事項,顯示作者對安裝混亂/供應鏈風險有一定意識"
       ],
       "use_cases": [
-        "想在 Claude Code 或 Codex 中導入一套標準化的規劃、測試、審查工作流程",
-        "需要現成的 agent/skill 庫來加速常見開發任務(TDD、文件撰寫、安全審查等)",
-        "希望在多個 AI 編碼工具間共用一致的記憶與規則系統",
-        "評估 AI 代理外掛的安全掃描機制作為導入前的風險檢查"
+        "長期使用 Claude Code / Codex 進行團隊開發,想統一 TDD、程式碼審查、安全掃描等流程規範",
+        "需要在多種 AI 編碼工具(Cursor、OpenCode、Kimi Code 等)之間共享相同的技能與記憶體格式",
+        "想要一套現成的『計畫 -> 測試 -> 實作 -> 審查 -> 驗證』代理工作流程範本,而非自己從零設計 prompt/hook",
+        "對代理設定本身的安全性(hooks、MCP、權限)有稽核需求"
       ],
       "quality": {
         "docs": 4,
-        "tests": 2,
+        "tests": 4,
         "activity": 5,
-        "comment": "README 內容詳盡、附多語系文件與清楚的安裝路徑說明,但也夾雜大量贊助商與行銷素材;本評估僅基於 README,未檢視原始碼,無法確認測試覆蓋率或程式碼品質,活躍度從最近推送時間與今日上榜熱度來看相當高。"
+        "comment": "README 極其詳盡(甚至到囉唆的程度),多語言翻譯齊全;有真正的 CI 矩陣測試、覆蓋率門檻(80%)、npm audit 與自製供應鏈 IOC 掃描,顯示工程紀律不弱。核心安裝腳本(scripts/ecc.js、install.sh)結構清晰、模組化。但專案本質上是「規則/提示詞/腳本」的大集合而非傳統應用程式,大部分內容是 Markdown skill 定義而非可獨立驗證邏輯正確性的程式碼,單一維護者(自述『single maintainer ships weekly』)長期可持續性與跨數百個 skill 的品質一致性仍是隱憂。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "安裝方式為 Claude Code 外掛市集指令或 npm 套件,README 未出現 curl | bash 之類直接執行遠端腳本的指令",
-          "README 特別提醒僅從官方 GitHub repo、npm 套件、GitHub App 與官網安裝,並警告第三方鏡像可能含惡意內容,顯示專案方對供應鏈風險有意識但也代表確實存在被冒充的可能性",
-          "外掛會安裝由 ECC 管理的 hooks 與 GitHub App,使用前建議使用者自行檢視其權限範圍與 hook 行為",
-          "本評估僅依據 README 描述,未實際檢視原始碼或執行安裝流程"
+          "package.json 未使用 preinstall/postinstall/prepare 等 npm 生命週期腳本執行任意程式碼(僅有 prepack 呼叫內部 build 腳本)",
+          "install.sh 為單純的 Node 轉接殼層,不含 curl|bash 下載執行外部內容的行為",
+          "程式碼中出現的 IP 位址皆為 127.0.0.1/localhost,用於本機限定的 Plan Canvas 與 control-pane 伺服器(有專門的 loopback-guard 檢查 Host header),非對外連線的可疑網域",
+          "專案本身內建 scripts/ci/scan-supply-chain-iocs.js 與每週排程的 supply-chain-watch.yml workflow,顯示作者主動監控相依套件的供應鏈風險"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你已在用 Claude Code 或 Codex 進行日常開發,這套整合度高的代理工作流值得一試,但因規模龐大且僅能從 README 評估,建議先在非關鍵專案試裝並檢查其 hook 權限再全面採用。",
-      "_mode": "light"
+      "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
+      "_mode": "full"
     },
-    "total_days_on_trending": 10,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 11,
+    "consecutive_days_on_trending": 5
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -6177,10 +6191,10 @@
   },
   "bannedbook/fanqiang": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-09": [
         50098,
@@ -6192,6 +6206,13 @@
       "2026-09-04": [
         52155,
         522,
+        11,
+        "翻墙-科学上网",
+        "Kotlin"
+      ],
+      "2026-09-05": [
+        52769,
+        730,
         11,
         "翻墙-科学上网",
         "Kotlin"
@@ -6999,10 +7020,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -7021,6 +7042,13 @@
       "2026-09-04": [
         173651,
         281,
+        5,
+        "Public repository for Agent Skills",
+        "Python"
+      ],
+      "2026-09-05": [
+        174128,
+        511,
         5,
         "Public repository for Agent Skills",
         "Python"
@@ -7440,10 +7468,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -7472,37 +7500,44 @@
         2,
         "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
         "HTML"
+      ],
+      "2026-09-05": [
+        30931,
+        437,
+        17,
+        "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
       ]
     },
-    "last_analyzed": "2026-08-13",
+    "last_analyzed": "2026-09-05",
     "analysis": {
       "category": "devtool",
-      "one_liner": "給 Claude Code / Codex / Pi 用的 Agent Skill,能產生 29 種「編輯風格」的靜態 HTML+SVG 圖表,不用 Figma、不長得像 AI 生成的 Mermaid 圖。",
-      "summary": "這是一個 Agent Skill 套件,讓 AI coding agent 能依語意直接畫出架構圖、流程圖、時序圖、ER 圖等 29 種視覺化類型,輸出為自帶樣式的單一 HTML 檔(內嵌 SVG),不需建置流程或外部 JS。同時支援從網站抓取品牌色彩/字體自動套用、匯入既有 draw.io 或 Mermaid 圖重新繪製,以及選用的無障礙動態效果。",
+      "one_liner": "為 Claude Code、Codex 等 AI Agent 打造的「編輯設計感」圖表產生技能包,一次提供 39 種自成一體的 HTML+SVG 圖表類型。",
+      "summary": "這是一個 Agent Skill / Plugin,讓 Claude Code、Codex、Factory Droid、Pi 等 AI coding agent 能依照品牌色調與字型,產生 39 種「編輯感」風格的靜態 HTML+SVG 圖表(架構圖、流程圖、ER 圖、甘特圖等),取代 AI 常見的通用圓角方框或 Mermaid 樣式。同時支援從 draw.io / Mermaid 來源重繪圖表,並可依格式、尺寸、細節、受眾四個維度輸出。",
       "highlights": [
-        "29 種圖表類型全部提供 minimal light / dark / full-editorial 三種靜態變體,開瀏覽器即看,無建置步驟",
-        "可讀取使用者網站自動萃取品牌色與字體,產生對應的 style-guide token 並附上保真度報告",
-        "支援匯入 draw.io / Mermaid 原始圖並依 format/size/detail/audience 四個維度重繪,附上保真度帳本說明哪些節點被合併或捨棄",
-        "CI 在 Linux/Windows/macOS 三平台各驗證超過 15 道關卡(語意路由、動態效果契約、無障礙 SVG、皮膚一致性、圖示產生等)",
-        "動態效果採單一經審核過的 controller,並用雜湊比對拒絕任意內嵌腳本、遠端資源或 CSS @import,降低誤用風險"
+        "39 種圖表類型,每種都有 minimal light / minimal dark / full-editorial 三種靜態變體,開瀏覽器即可看、無需建置流程",
+        "CI 極為嚴謹:超過 40 個獨立的 verify-*.py / test-verify-*.py 幾何與內容校驗腳本(標籤幾何、樹狀圖面積保真度、Sankey 流量守恆、無障礙 SVG 名稱等),並用 headless Chromium 做實際渲染檢查",
+        "draw.io/Mermaid 匯入解析器對輸入做了明確的安全防護:拒絕 DTD/ENTITY 宣告(防 XXE)、限制解壓縮後的檔案大小上限(防 zip bomb)",
+        "文件完整度高,包含架構說明、9 篇 ADR(設計決策紀錄)、cookbook 操作手冊、貢獻指南與安全政策",
+        "支援品牌自動擷取(讀取使用者網站配色與字型)並自動做 WCAG AA 對比檢查"
       ],
       "use_cases": [
-        "在 Claude Code / Codex / Pi 中直接用自然語言請求產生架構圖、流程圖、時序圖等技術文件配圖",
-        "把既有 draw.io 或 Mermaid 圖轉換成風格統一、適合部落格/簡報/社群卡片的靜態圖",
-        "為公司或個人網站快速產生符合品牌色彩與字體的圖表,取代手動 Figma 排版"
+        "技術寫作者或部落客需要快速產生與網站風格一致、非「AI 感」的架構圖或流程圖插圖",
+        "在 Claude Code / Codex 等 agent 工作流中,讓 AI 自動選擇合適的圖表類型並產生可直接發佈的靜態 HTML/SVG",
+        "需要將既有 draw.io 或 Mermaid 圖表重新排版成適合投影片、社群圖卡或列印用途的場景"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "文件極度完整:README、27+ 份 references/type-*.md、ADR 決策紀錄一應俱全。測試面以 Python 腳本形式的『驗證關卡』為主(語意路由、a11y、皮膚一致性、匯入正確性等),雖非傳統單元測試框架但覆蓋面廣,並在 CI 三作業系統跑 Python 3.11/3.12 矩陣。專案剛登上 trending 第一天,活躍度極高,且有清楚的貢獻與驗證流程說明。"
+        "comment": "文件與 ADR 齊全,CI 涵蓋幾何、無障礙、內容保真度等多面向的自動化驗證,遠超一般前端專案水準;version 2.6.12 且有自動化版本升版流程,顯示持續活躍維護。純 HTML/SVG + Python 校驗腳本,程式碼可讀性高、風格一致。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "對於用 Claude Code/Codex 產文件配圖的人來說,是目前最講究視覺一致性與無障礙性的 diagram skill,值得安裝把玩;純輸出靜態 HTML/SVG 且無安裝腳本,風險極低。",
+      "verdict": "工程嚴謹度與文件品質在同類 Agent Skill 專案中相當突出,若你常用 Claude Code/Codex 產圖表,值得一試,但實際價值高度取決於個人對其「編輯感」設計美學的喜好。",
       "_mode": "full"
     }
   },
@@ -10290,10 +10325,10 @@
   },
   "JuliusBrussee/caveman": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-21": [
         99638,
@@ -10313,6 +10348,13 @@
         103102,
         543,
         7,
+        "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+        "Go"
+      ],
+      "2026-09-05": [
+        103574,
+        501,
+        8,
         "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "Go"
       ]
@@ -11272,10 +11314,10 @@
   },
   "NousResearch/hermes-agent": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-24": [
         234993,
@@ -11302,6 +11344,13 @@
         240843,
         774,
         3,
+        "The agent that grows with you",
+        "Python"
+      ],
+      "2026-09-05": [
+        241491,
+        720,
+        7,
         "The agent that grows with you",
         "Python"
       ]
@@ -11842,10 +11891,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -11886,6 +11935,13 @@
         123432,
         2128,
         4,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-09-05": [
+        126021,
+        1679,
+        2,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -14202,10 +14258,10 @@
   },
   "fmtlib/fmt": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-03": [
         24259,
@@ -14218,6 +14274,13 @@
         25080,
         963,
         1,
+        "A modern formatting library",
+        "C++"
+      ],
+      "2026-09-05": [
+        25470,
+        688,
+        3,
         "A modern formatting library",
         "C++"
       ]
@@ -14257,10 +14320,10 @@
   },
   "google-research/timesfm": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-03": [
         29791,
@@ -14273,6 +14336,13 @@
         30700,
         1618,
         9,
+        "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+        "Python"
+      ],
+      "2026-09-05": [
+        31052,
+        342,
+        13,
         "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
         "Python"
       ]
@@ -14312,10 +14382,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -14328,6 +14398,13 @@
         16276,
         1672,
         17,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-09-05": [
+        17983,
+        1345,
+        12,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -14616,10 +14693,10 @@
   },
   "blader/humanizer": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-03": [
         40395,
@@ -14632,6 +14709,13 @@
         41481,
         1208,
         8,
+        "Agent skill that removes signs of AI-generated writing from text",
+        "Python"
+      ],
+      "2026-09-05": [
+        42711,
+        1130,
+        6,
         "Agent skill that removes signs of AI-generated writing from text",
         "Python"
       ]
@@ -14714,15 +14798,22 @@
   },
   "magnitudedev/magnitude": {
     "first_seen": "2026-09-04",
-    "last_seen": "2026-09-04",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-05",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-04": [
         1950,
         161,
         14,
+        "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+        "TypeScript"
+      ],
+      "2026-09-05": [
+        2480,
+        391,
+        9,
         "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
         "TypeScript"
       ]
@@ -14812,6 +14903,201 @@
       "star_rating": 4,
       "verdict": "對於需要提示詞資源或想自架企業內部 prompt 庫的團隊,這是目前最成熟、生態最完整的選項之一,值得關注但非程式碼層級的技術突破。",
       "_mode": "light"
+    }
+  },
+  "bikini/exploitarium": {
+    "first_seen": "2026-09-05",
+    "last_seen": "2026-09-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-05": [
+        4509,
+        74,
+        10,
+        "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-05",
+    "analysis": {
+      "one_liner": "一位獨立資安研究者匯集自己發現的公開漏洞 PoC 與研究報告的整合式檔案庫。",
+      "summary": "Exploitarium 是作者將先前散落在多個獨立 repo 的漏洞 PoC(涵蓋 Firefox、Ghidra、c-ares、ffmpeg、Docker、RustDesk 等近 40 個項目)整併到單一 repo,並附上已取得的 12 個 CVE 編號清單。每個子資料夾各自獨立,包含 README、PoC 程式碼(Python/C/JS/Shell)與部分驗證證據(GDB stack、ASAN 輸出、SHA256SUMS),偏向真實漏洞研究寫作而非教學範本。",
+      "category": "security",
+      "highlights": [
+        "已有 12 個正式 CVE 編號對應到本 repo 的研究成果(cves.md),顯示部分揭露具備可信度",
+        "提供合併前後的 Git blob ID 比對報告,證明從舊有獨立 repo 搬遷時內容未被篡改",
+        "單一 PoC(c-ares UAF)的 README 寫得相當詳實,包含漏洞成因、呼叫鏈、可靠度數據、受影響套件盤點與緩解建議",
+        "作者在頂層 README 坦承 README 文字由 AI 生成、PoC 程式碼手工撰寫,並附上致謝與去重覆聲明(objdump 案例讓給原作者)",
+        "近 40 個子專案涵蓋瀏覽器、資料庫、容器、CI runner、VPN 用戶端等多元攻擊面,廣度可觀"
+      ],
+      "use_cases": [
+        "資安研究者學習真實世界漏洞的重現手法與 PoC 撰寫風格",
+        "藍隊/資安團隊比對自身環境是否受影響套件(如 c-ares、curl、ffmpeg)波及,並參考緩解建議",
+        "準備投稿或申請 CVE 的研究者參考文件撰寫格式與驗證證據呈現方式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 3,
+        "comment": "各子專案 README 品質高、附有驗證證據(GDB/ASAN log、SHA256SUMS),但沒有傳統意義上的自動化測試套件或 CI,「測試」多半是手動重現腳本與可靠度紀錄;repo 最後推送於 2026-07-15,活躍度中等,無 issue/CI 可觀察持續維護跡象。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "各子資料夾內含真實漏洞的可運作 PoC 程式碼(C、Python、JS、Shell),部分會啟動計算機或寫入 /tmp 作為觸發證明,執行前須理解程式行為並僅在授權/隔離環境中運行",
+          "repo 未附 LICENSE 檔案,也沒有 setup.py/package.json 等頂層安裝腳本或 postinstall/preinstall 生命週期腳本,未發現 curl|bash 式安裝流程或可疑外部網域",
+          "部分 PoC 程式碼中出現 eval()/exec() 字樣,但屬於漏洞示範情境本身(例如展示目標程式的 pyeval 表達式注入),非本 repo 安裝或建置流程的一部分"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對資安研究或滲透測試領域的工程師來說,是值得瀏覽的高品質 PoC 合輯,但需注意其中程式碼具備真實攻擊能力,務必只在授權環境中執行。",
+      "_mode": "full"
+    }
+  },
+  "radixark/miles": {
+    "first_seen": "2026-09-05",
+    "last_seen": "2026-09-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-05": [
+        2551,
+        64,
+        14,
+        "Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-05",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "面向企業級大規模 LLM/VLM 後訓練的強化學習框架,結合 SGLang 推論與 Megatron-LM 訓練。",
+      "summary": "Miles 是從 THUDM/slime fork 並持續共同演進的 RL 後訓練框架,整合 SGLang(高吞吐 rollout)與 Megatron-LM(大規模訓練),鎖定 trillion 參數等級模型的 RLHF/RLVR 訓練場景。主打全非同步 RL、P2P 權重更新、低精度訓練(MXFP8/NVFP4)、路由重放(R3)與容錯機制,目標是把研究級 RL 演算法(GRPO、GSPO、PPO 等)落地到企業級大規模訓練基礎設施。",
+      "highlights": [
+        "支援 Day-0 對接 DeepSeek-V4、Kimi-K3、GLM-5.2 等前沿模型,並涵蓋 NVIDIA GB300 到 AMD MI355X 的廣泛硬體",
+        "提供 Rollout Routing Replay(R3)、容錯自動恢復、P2P RDMA 權重傳輸等針對超大規模訓練的工程機制",
+        "測試涵蓋率極高,tests/ 目錄下有近千個檔案,包含 e2e、容錯、多種模型/並行配置的整合測試,並有完整的 CI pipeline 與 metric history gate",
+        "Docker 建置流程透明,固定各依賴的 git commit 版本以確保可重現性,並對已知相依衝突留有詳細註解說明"
+      ],
+      "use_cases": [
+        "企業或研究團隊需要在數百至數千張 GPU 規模上訓練/微調大型 LLM 或 VLM 的 RL 後訓練管線",
+        "需要多種 RL 演算法(GRPO/GSPO/PPO/REINFORCE++)與 LoRA、低精度(FP8/INT4)訓練支援的場景",
+        "建置 agentic/多輪任務代理人並串接沙盒環境(E2B、Daytona、Modal)進行 RL 訓練"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件、CI 與測試基礎建設非常完整,README 連結至獨立文件站,程式碼有清楚的行內註解說明非顯而易見的工程權衡(如 patch 失敗處理、依賴版本衝突原因),屬於工程成熟度很高的基礎設施專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與測試基礎建設扎實,是想投入大規模 LLM RL 後訓練的團隊值得立即關注的專案。",
+      "_mode": "full"
+    }
+  },
+  "anomalyco/opencode": {
+    "first_seen": "2026-09-05",
+    "last_seen": "2026-09-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-05": [
+        204130,
+        345,
+        15,
+        "The open source coding agent.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-05",
+    "analysis": {
+      "one_liner": "開源終端機 AI 程式碼代理工具,提供 build/plan 雙模式與跨平台安裝方式。",
+      "summary": "opencode 是一款開源的 AI coding agent,主打終端機 UI 操作與新推出的桌面應用程式(Beta)。它內建 build(完整權限開發代理)與 plan(唯讀分析代理)兩種模式,可用 Tab 鍵切換,適合在不同開發情境下控制 AI 代理的操作權限。",
+      "category": "ai-ml",
+      "highlights": [
+        "提供 build(完整存取)與 plan(唯讀、需授權才能執行指令)兩種內建代理模式,方便控管 AI 代理的操作範圍",
+        "另有 general 子代理,可用 @general 語法呼叫處理複雜多步驟搜尋任務",
+        "支援極多元的安裝方式:curl 腳本、npm/bun/pnpm/yarn、Homebrew、Scoop、Chocolatey、pacman/AUR、mise、nix,涵蓋 macOS/Windows/Linux",
+        "新增桌面應用程式(Beta),提供 macOS(Apple Silicon/Intel)、Windows、Linux(.deb/.rpm/.AppImage)安裝包",
+        "README 提供多達 21 種語言版本,社群觸及面廣,並附有 Discord 與貢獻指南連結"
+      ],
+      "use_cases": [
+        "在終端機中以 AI 代理輔助日常程式開發、除錯與重構",
+        "用 plan 模式唯讀探索不熟悉的程式碼庫或規劃變更,避免誤動作",
+        "透過桌面應用程式在 GUI 環境中使用 AI coding agent"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,涵蓋安裝、代理模式、文件連結與貢獻指南,且提供大量多語言翻譯,文件完整度高;但因僅能檢視 README,無法確認測試涵蓋狀況,此評分僅反映 README 本身呈現的品質。專案在 2026-09-05 仍有推送紀錄,且單日新增 345 星、位居 trending 第 15 名,活躍度非常高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl -fsSL https://opencode.ai/install | bash 的一鍵安裝方式,屬於常見但需自行評估風險的遠端腳本執行模式,建議使用前先查看腳本內容或改用套件管理器安裝",
+          "本評估僅根據 README 與中繼資料,未實際檢視原始碼,無法確認實際安全性"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "熱度與活躍度都相當高,若在尋找終端機/桌面版 AI coding agent 工具,值得列入觀察與試用清單。",
+      "_mode": "light"
+    }
+  },
+  "clshortfuse/renodx": {
+    "first_seen": "2026-09-05",
+    "last_seen": "2026-09-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-05": [
+        3527,
+        261,
+        16,
+        "Renovation Engine for DirectX Games",
+        "HLSL"
+      ]
+    },
+    "last_analyzed": "2026-09-05",
+    "analysis": {
+      "category": "app",
+      "one_liner": "RenoDX 是基於 ReShade 附加元件系統打造的 DirectX 遊戲畫面改造(Mod)引擎,專攻 HDR 與色彩管線改造。",
+      "summary": "RenoDX 讓開發者能對既有 DirectX 遊戲替換著色器、注入緩衝區、升級交換鏈與材質格式、疊加畫面覆蓋層,主要用途是為遊戲加入或修正 HDR 支援、色調對應(tonemap)與色彩分級。它利用 ReShade 的鉤子機制避開針對特定版本執行檔做修補的痛點,因此相容性較廣,已被用來製作多款遊戲的畫面改造 Mod。",
+      "highlights": [
+        "採用 ReShade add-on 架構而非直接改可執行檔,降低版本相容性維護成本",
+        "內建完整的 HLSL 色彩科學函式庫(ACES、GT Tonemap、Uchimura、RenoDRT 等業界知名演算法)",
+        "以 CMake + 多重 CI(Clang/Ninja/Visual Studio,x86/x64)建置,並有 CTest 整合測試涵蓋 swapchain、resource upgrade、shader injection 等底層行為",
+        "透過 git submodule 整合 ReShade、NVIDIA DLSS/Streamline、DirectXTex 等官方或知名開源依賴",
+        "附有針對 AI 協作的 AGENTS.md 與 .agents/skills 工作流程規範,顯示專案對開發流程有一定治理"
+      ],
+      "use_cases": [
+        "為老遊戲或不支援 HDR 的遊戲加入 HDR 輸出與色調對應",
+        "遊戲畫面 Mod 開發者需要注入自訂著色器、緩衝區或疊加層",
+        "研究 DirectX 交換鏈/資源升級、色彩管線與 tonemap 演算法實作的參考範例",
+        "學習如何用 ReShade add-on API 做低層次 GPU 資源攔截與轉換"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件分層清楚(README、CONTRIBUTING、AGENTS.md、test/README 皆說明具體行為與相容性契約),test/ 目錄有多組針對 D3D12/Vulkan 底層行為的 CTest 整合測試而非空殼;抽樣的 HLSL 與 C++ 原始碼命名規範、註解引用學術/業界出處,品質扎實。CI 涵蓋 Clang、Ninja、Visual Studio 多組建置矩陣,且有 nightly 與 snapshot workflow,近期(2026-09-04)仍有持續推送,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對於做 DirectX 遊戲畫面/HDR Mod 或想研究色彩管線與 GPU 資源攔截技術的工程師,這是一個工程紀律高、測試扎實的專案,值得列入關注清單。",
+      "_mode": "full"
     }
   }
 }
