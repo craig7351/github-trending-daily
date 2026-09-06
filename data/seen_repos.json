@@ -695,8 +695,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 3,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -768,6 +768,13 @@
         1,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-09-06": [
+        252650,
+        2692,
+        1,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-08-24",
@@ -802,8 +809,8 @@
       "verdict": "若你正在用 Claude Code 或類似 agent 做正式工程專案,這套結構化的技能集值得一試;但它是流程/提示詞框架而非程式庫,價值取決於你是否認同其工作方法論。",
       "_mode": "full"
     },
-    "total_days_on_trending": 11,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 12,
+    "consecutive_days_on_trending": 4
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1383,8 +1390,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 5,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 6,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1453,6 +1460,13 @@
         4,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-06": [
+        249906,
+        1314,
+        2,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-05",
@@ -1492,8 +1506,8 @@
       "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
       "_mode": "full"
     },
-    "total_days_on_trending": 11,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 12,
+    "consecutive_days_on_trending": 6
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -6969,10 +6983,10 @@
   },
   "nvm-sh/nvm": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
+    "last_seen": "2026-09-06",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-12": [
         94488,
@@ -6980,50 +6994,57 @@
         3,
         "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
         "Shell"
+      ],
+      "2026-09-06": [
+        94919,
+        22,
+        16,
+        "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions. $nvm: 3ArcxqLtXMmBnWbbtfwQgVL3MNnDsggzgGDtXMnjpump",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-08-12",
+    "last_analyzed": "2026-09-06",
     "analysis": {
+      "one_liner": "nvm 是業界標準的 POSIX shell node.js 版本管理工具,讓開發者能在同一台機器上安裝並切換多個 Node.js 版本。",
+      "summary": "nvm(Node Version Manager)透過純 shell 函式(nvm.sh)實作,無需編譯,支援 bash/zsh/dash/ksh 等 POSIX-compliant shell。它解決了多專案間 Node.js 版本不一致的痛點,是 Node.js 生態圈中使用最廣泛的版本管理工具之一,長期維持每日星數成長。",
       "category": "devtool",
-      "one_liner": "一支純 POSIX shell 腳本,讓你在同一台機器上安裝、切換多個 Node.js 版本。",
-      "summary": "nvm(Node Version Manager)是一個不依賴任何編譯器或執行環境、僅用 bash/POSIX shell 撰寫的版本管理工具,可依專案需求快速安裝、切換、移除不同的 Node.js(含 io.js)版本。它解決了「多專案需要不同 Node 版本」以及「全域安裝套件版本衝突」的老問題,是 Node.js 生態圈最廣泛使用的版本管理方案之一。",
       "highlights": [
-        "核心 nvm.sh 單檔近 4700 行,功能完整涵蓋安裝、別名、LTS 偵測、鏡像來源、離線安裝等進階情境",
-        "測試涵蓋非常紮實:test/fast 底下有近 300 個以行為命名的測試案例,另外還有 slow、installation、sourcing 等多套測試套件",
-        "CI 配置齊全,包含 shellcheck 靜態檢查、CodeQL 掃描、Alpine/Xenial 等多平台安裝測試、npm/nodejs.org 相容性驗證等十餘個 workflow",
-        "專案罕見地公開 THREAT_MODEL.md 與 INCIDENT_RESPONSE_PLAN.md,對命令注入、URI scheme、明文通訊等風險做了系統性威脅建模",
-        "install.sh 對 curl|bash 安裝方式內建了遠端倉庫來源變更的警示機制,提升透明度"
+        "由 nvm-sh 官方團隊長期維護,GitHub Star 數近 9.5 萬,是 Node.js 生態圈的標準工具",
+        "測試涵蓋極廣:test/fast、test/slow、install_script、installation、sourcing 等多套測試,案例數達數百個,並在 CI 中對 bash/sh/dash/zsh/ksh 多種 shell 矩陣測試",
+        "具備正式的資安治理文件,包含 THREAT_MODEL.md、SECURITY.md、INCIDENT_RESPONSE_PLAN.md,顯示專案對供應鏈安全的重視",
+        "CI 使用 shellcheck 對 nvm.sh、install.sh、bash_completion、nvm-exec 進行多 shell 靜態檢查,並搭配 CodeQL 分析",
+        "install.sh 對於非官方 repo(NVM_INSTALL_GITHUB_REPO 被改寫)會主動印出警告提示使用者留意,展現良好的安全意識設計"
       ],
       "use_cases": [
-        "前端/Node.js 開發者需要在多個專案間切換不同 Node 版本",
-        "CI/CD pipeline 中依 .nvmrc 自動安裝指定 Node 版本",
-        "團隊統一開發環境版本,避免『在我機器上可以跑』問題",
-        "Docker 映像檔建置時安裝特定版本 Node.js"
+        "前端/後端工程師需要在多個專案間切換不同 Node.js 版本進行開發或測試",
+        "CI/CD pipeline 或 Docker 映像檔中安裝指定版本的 Node.js",
+        "團隊透過 .nvmrc 統一專案指定的 Node.js 版本,避免環境差異造成的問題"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
-        "activity": 4,
-        "comment": "文件極為完整,README 目錄結構清楚且涵蓋大量疑難排解情境;測試案例數量龐大且以行為命名易讀;CI 涵蓋靜態分析、多平台安裝驗證與相依套件相容性測試。專案已成熟穩定(v0.40.6),近期以維護性更新為主而非大重構,7 月底仍有 push,活躍度中上。"
+        "activity": 5,
+        "comment": "README 詳盡且結構化(含自動生成的目錄),涵蓋安裝、Docker、Alpine、WSL 等多種情境的疑難排解;測試框架成熟且多層次;近期仍持續有 commit 與每日發布報告(last pushed 2026-09-04),CI workflow 數量多且涵蓋面廣,屬於維護活躍度極高的專案。程式碼本身雖有大量版本判斷的重複邏輯(逐版本比對 Node LTS 分界),但註解清楚、shellcheck 通過,整體品質穩健。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 建議的安裝方式是 curl -o- https://raw.githubusercontent.com/... | bash,屬於典型的『下載後直接執行』安裝模式;不過此為 nvm 廣為人知且長期採用的官方安裝方式,install.sh 內部對 NVM_INSTALL_GITHUB_REPO 被竄改的情況有加上警示訊息",
-          "package.json 的 devDependencies 僅用於文件/lint 工具(doctoc、eclint、markdown-link-check 等),未發現 preinstall/postinstall 等生命週期腳本"
+          "README 與安裝流程使用傳統的『curl 下載後直接 pipe 給 bash 執行』模式(curl | bash),這是此類工具常見的安裝方式,腳本本身有版本鎖定(v0.40.7)與可讀原始碼,使用者可自行下載檢視後再執行",
+          "install.sh 會依偵測結果自動修改使用者的 shell 設定檔(如 ~/.bashrc、~/.zshrc)以加入 nvm 載入指令,此為工具運作所需的正常行為,並提供 PROFILE=/dev/null 可關閉此行為",
+          "package.json 未使用 preinstall/postinstall/prepare 等 npm 生命週期腳本,降低透過 npm 安裝鏈觸發非預期程式碼執行的風險"
         ]
       },
-      "star_rating": 4,
-      "verdict": "成熟穩定、文件與測試品質俱佳的老牌工具,雖非新技術但仍是 Node.js 開發環境管理的可靠首選,值得收藏但不必因「今日上升榜」而特別關注。",
+      "star_rating": 5,
+      "verdict": "nvm 是 Node.js 生態圈中歷經長期考驗、文件與測試都非常完整的標準工具,值得持續關注與信賴使用。",
       "_mode": "full"
     }
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -7050,6 +7071,13 @@
         174128,
         511,
         5,
+        "Public repository for Agent Skills",
+        "Python"
+      ],
+      "2026-09-06": [
+        174568,
+        475,
+        6,
         "Public repository for Agent Skills",
         "Python"
       ]
@@ -7468,10 +7496,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -7505,6 +7533,13 @@
         30931,
         437,
         17,
+        "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-09-06": [
+        31691,
+        855,
+        7,
         "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -10604,10 +10639,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-08-24",
+    "last_seen": "2026-09-06",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -10622,42 +10657,45 @@
         11,
         "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
+      ],
+      "2026-09-06": [
+        70696,
+        136,
+        9,
+        "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-22",
+    "last_analyzed": "2026-09-06",
     "analysis": {
-      "one_liner": "Ruflo(前身 Claude Flow)是圍繞 Claude Code / Codex 打造的「agent meta-harness」,讓多個 AI agent 能協同組成 swarm 並具備長期記憶。",
-      "summary": "Ruflo 定位為模型之外的執行層,提供 100+ 專用 agent、swarm 協調、跨會話記憶、跨機器聯邦通訊與企業安全防護,目標是讓 Claude Code / Codex 從單次任務執行升級成可自我學習、自我協調的代理系統。專案以 35 個模組化外掛(plugin)形式提供功能,並支援輕量 Claude Code Plugin 安裝與完整 CLI(npx ruflo init)兩種安裝路徑。",
-      "category": "ai-ml",
+      "one_liner": "Ruflo(前身 Claude Flow)是為 Claude Code 與 Codex 打造的「agent meta-harness」,提供多代理群集協作、記憶學習與跨機器聯邦通訊能力。",
+      "summary": "Ruflo 是一套建構在 Claude Code / Codex 之上的執行層框架,可透過 CLI(npx ruflo init)或 Claude Code Plugin 兩種方式安裝,提供 98 個以上專用代理、60+ 指令、30 個技能、MCP 伺服器與 hooks 系統,目標是讓多個 AI agent 自我組織成 swarm、彼此協作、持續學習並跨會話保留記憶。專案由原本的 Claude Flow 更名而來,涵蓋記憶儲存、RAG、知識圖譜、安全稽核、DevOps 觀測等 35 個外掛模組。",
+      "category": "devtool",
       "highlights": [
-        "提供兩種安裝深度:輕量的 Claude Code Plugin(僅 slash commands)與完整 CLI 安裝(98 個 agent、60+ 指令、30 個 skill、MCP server、hooks)",
-        "35 個功能外掛涵蓋記憶/知識、智慧學習、程式碼品質、安全稽核、DevOps 觀測、架構方法論等多個領域",
-        "強調自我學習迴圈(Learning Loop)與跨機器 federation,讓不同機器上的 agent 能安全協作而不外洩資料",
-        "原生整合 Claude Code、Codex、MCP server,並附有專屬安全稽核(ruflo-security-audit、ruflo-aidefence)外掛",
-        "GitHub star 數已達 68,646、今日新增 140,顯示社群關注度高且仍在快速成長"
+        "提供 CLI 與 Claude Code Plugin 兩種安裝路徑,README 清楚說明兩者功能差異與檔案落地範圍",
+        "內建 35 個模組化外掛,涵蓋協作、記憶、學習、測試、安全、架構治理、DevOps 等多面向",
+        "強調「Federation」功能,可讓不同機器上的 agent 安全互通而不外洩資料",
+        "目前在 GitHub trending 排名第 9,單日新增 136 顆星,顯示社群關注度正快速上升"
       ],
       "use_cases": [
-        "需要在 Claude Code 或 Codex 中建立多 agent 協作流程(如程式碼審查、測試生成、文件維護自動化)",
-        "想為 AI agent 系統加入跨會話記憶與 RAG 檢索能力的開發者",
-        "需要在多台機器間協調多個 agent 並確保資料不外洩的企業級應用場景",
-        "希望透過現成 plugin(如 SPARC、DDD、ADR)套用特定開發方法論的團隊"
+        "需要在 Claude Code / Codex 上建立多代理協作工作流程的開發團隊",
+        "想為 AI agent 加上跨會話記憶、RAG 檢索或知識圖譜能力的專案",
+        "想導入自動化測試生成、安全稽核或架構決策紀錄(ADR)等工程治理外掛的團隊"
       ],
       "quality": {
         "docs": 4,
-        "tests": 1,
+        "tests": 2,
         "activity": 5,
-        "comment": "README 結構完整、安裝路徑與外掛清單說明清楚,但屬於資源彙整/框架類專案,測試面向不適用,故給予最低分;活動度極高,昨日剛推送更新且正處於 trending 榜單上升期。"
+        "comment": "README 說明結構清晰、功能表格豐富,但內容以行銷式描述與外掛清單為主,缺乏具體技術細節;測試與程式碼品質僅能依 README 推測,無法從中判斷實際涵蓋率,此為 README-only 評估。近期推送頻繁且正處於 trending 榜單,活躍度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供的安裝方式為標準 npm 指令(npx ruflo init)與 Claude Code 的 /plugin marketplace add,未見 curl | bash 這類直接執行遠端腳本的模式",
-          "完整 CLI 安裝會在使用者工作目錄寫入多個設定檔(.claude/、.claude-flow/、CLAUDE.md 等)並註冊 MCP server 與 hooks,使用前建議先了解其行為範圍",
-          "僅根據 README 進行評估,未實際檢視原始碼,無法確認外掛程式碼本身的安全性"
+          "安裝方式為標準 npm 指令(npx ruflo init)或 Claude Code 官方 plugin marketplace 機制,README 中未見 curl | bash 之類的高風險安裝手法;僅為 README 層級審視,未進行原始碼層級安全檢視。"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你已在用 Claude Code 或 Codex 做多 agent 開發,Ruflo 的模組化外掛生態值得研究,但功能龐雜、CLI 安裝會大量寫入專案設定,建議先用輕量 Plugin 模式試水溫。",
+      "verdict": "若正在使用 Claude Code / Codex 建構多代理系統,值得一試;但功能表面極廣、外掛眾多,建議先以單一外掛小範圍驗證,再評估是否導入完整 CLI 安裝。",
       "_mode": "light"
     }
   },
@@ -11314,10 +11352,10 @@
   },
   "NousResearch/hermes-agent": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-24": [
         234993,
@@ -11351,6 +11389,13 @@
         241491,
         720,
         7,
+        "The agent that grows with you",
+        "Python"
+      ],
+      "2026-09-06": [
+        242014,
+        575,
+        4,
         "The agent that grows with you",
         "Python"
       ]
@@ -11891,10 +11936,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -11942,6 +11987,13 @@
         126021,
         1679,
         2,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-09-06": [
+        127951,
+        2845,
+        3,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -14258,10 +14310,10 @@
   },
   "fmtlib/fmt": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-03": [
         24259,
@@ -14281,6 +14333,13 @@
         25470,
         688,
         3,
+        "A modern formatting library",
+        "C++"
+      ],
+      "2026-09-06": [
+        25571,
+        134,
+        5,
         "A modern formatting library",
         "C++"
       ]
@@ -14693,10 +14752,10 @@
   },
   "blader/humanizer": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-03": [
         40395,
@@ -14716,6 +14775,13 @@
         42711,
         1130,
         6,
+        "Agent skill that removes signs of AI-generated writing from text",
+        "Python"
+      ],
+      "2026-09-06": [
+        43486,
+        990,
+        11,
         "Agent skill that removes signs of AI-generated writing from text",
         "Python"
       ]
@@ -14798,10 +14864,10 @@
   },
   "magnitudedev/magnitude": {
     "first_seen": "2026-09-04",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-04": [
         1950,
@@ -14814,6 +14880,13 @@
         2480,
         391,
         9,
+        "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+        "TypeScript"
+      ],
+      "2026-09-06": [
+        3209,
+        674,
+        14,
         "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
         "TypeScript"
       ]
@@ -14907,15 +14980,22 @@
   },
   "bikini/exploitarium": {
     "first_seen": "2026-09-05",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-05": [
         4509,
         74,
         10,
+        "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
+        "Python"
+      ],
+      "2026-09-06": [
+        4710,
+        230,
+        15,
         "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
         "Python"
       ]
@@ -15004,15 +15084,22 @@
   },
   "anomalyco/opencode": {
     "first_seen": "2026-09-05",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-05": [
         204130,
         345,
         15,
+        "The open source coding agent.",
+        "TypeScript"
+      ],
+      "2026-09-06": [
+        204679,
+        725,
+        8,
         "The open source coding agent.",
         "TypeScript"
       ]
@@ -15097,6 +15184,150 @@
       },
       "star_rating": 4,
       "verdict": "對於做 DirectX 遊戲畫面/HDR Mod 或想研究色彩管線與 GPU 資源攔截技術的工程師,這是一個工程紀律高、測試扎實的專案,值得列入關注清單。",
+      "_mode": "full"
+    }
+  },
+  "humanlayer/skills": {
+    "first_seen": "2026-09-06",
+    "last_seen": "2026-09-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-06": [
+        2704,
+        442,
+        10,
+        "",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-06",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "HumanLayer 團隊釋出的一組 Claude Code Skills(技能/外掛)集合,用來擴充 Claude Code 的特定工作流程。",
+      "summary": "這個 repo 不是傳統程式庫,而是一組給 Claude Code 使用的「skill」定義(SKILL.md + 參考範本),透過 npx skills add 安裝成外掛。內容涵蓋改寫 CLAUDE.md、收斂 React prop 型別、建置反覆運作的 agentic coding workflow、設計控制迴路,以及用圖表/HTML 視覺化說明主題等五種技能,目標是把常見的 Claude Code 使用模式標準化、可重複使用。",
+      "highlights": [
+        "提供 5 個現成的 Claude Code plugin/skill,可用 npx skills add 直接安裝使用",
+        "improve-claude-md 技能提出用 <important if> 條件區塊來提升 CLAUDE.md 指令遵循度,概念具體且有清楚的前後對照範例",
+        "build-iterated-agentic-loop / design-control-loop 附帶完整的 GitHub Actions workflow 範本、prompt 範本與 memory 檔案範本,方便串接排程型 coding agent",
+        "narrow-react-prop-types 技能對「型別因 Storybook/測試而被過度放寬」這個常見痛點給出很具體的判斷準則與檢查清單",
+        "純文件與範本內容,無執行期程式碼,安裝與使用風險低"
+      ],
+      "use_cases": [
+        "想讓 Claude Code 更準確遵循 CLAUDE.md 指令的團隊,可套用 improve-claude-md 技能重寫專案指引",
+        "維護大型 React 專案、需要清理因測試/Storybook 而過度寬鬆的 prop 型別",
+        "想建立排程執行的 coding agent(例如 GitHub Actions 定時跑 agent 修 PR)並需要標準化 prompt 與 memory 檔案格式",
+        "在會議或文件中需要快速產生圖表/流程圖/HTML 視覺化說明程式概念"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 3,
+        "comment": "SKILL.md 文件寫得非常詳盡,每個技能都有明確的核心原則、逐步流程與正反範例,文件品質在同類專案中屬上乘;但本質是 prompt/範本集合,沒有也不需要傳統意義的自動化測試,repo 本身也沒有 CI 設定,最近一次 push 落在 trending 前約三週,屬於小而穩定的維護節奏。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "給重度使用 Claude Code 的團隊值得一看,尤其 improve-claude-md 與 narrow-react-prop-types 兩個技能立即可用;但因內容屬於 prompt/流程範本而非程式庫,價值取決於你的工作流程是否吻合這幾個特定場景。",
+      "_mode": "full"
+    }
+  },
+  "BraveOPotato/FckSignups": {
+    "first_seen": "2026-09-06",
+    "last_seen": "2026-09-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-06": [
+        2897,
+        68,
+        12,
+        "A list of tools that are open-source, in-browser, and require no-signups!",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-06",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "一個彙整免註冊、開源、可直接在瀏覽器使用的工具清單網站。",
+      "summary": "NoSignups(原名 FckSignups)是以 React + TypeScript 打造的網站,收錄超過 200 個不需註冊帳號即可使用的開源工具,並依類別(生產力、設計、開發、隱私等)分類展示,目的是解決許多線上工具強迫註冊、追蹤使用者資料的痛點。",
+      "highlights": [
+        "收錄 200+ 個開源、免註冊的線上工具,依 10 個類別分類瀏覽",
+        "定義清楚的 Tool schema(id、name、url、category、tags 等欄位),方便社群貢獻新工具",
+        "強調隱私與反追蹤理念:無 cookie、無分析、無資料蒐集",
+        "提供明確的貢獻流程,可透過 GitHub issue 範本或網站按鈕提交新工具",
+        "GPL-3.0 授權,但收錄工具本身各自保有原授權"
+      ],
+      "use_cases": [
+        "尋找不需註冊帳號即可快速使用的線上工具時查閱",
+        "重視隱私、想避免資料被追蹤蒐集的使用者",
+        "想貢獻或推廣自己開源工具的開發者",
+        "作為 awesome-list 類型資源整理的參考範例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README 結構清楚,說明了貢獻方式、工具 schema 與分類邏輯,文件品質中上;近期有推送更新且正在 GitHub trending 上升中,顯示社群活躍度不錯。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "概念實用且執行清楚,適合收藏當作尋找免註冊工具的入口,但屬於彙整型資源而非技術突破,非必看等級。",
+      "_mode": "light"
+    }
+  },
+  "WorldFlowAI/everything-claude-code": {
+    "first_seen": "2026-09-06",
+    "last_seen": "2026-09-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-06": [
+        2358,
+        95,
+        13,
+        "Claude Code toolkit - agents, commands, skills, rules, and hooks for productive AI-assisted development",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-06",
+    "analysis": {
+      "one_liner": "一套完整的 Claude Code 設定集合,包含 agents、skills、commands、hooks 與 rules,用來打造生產力導向的 AI 輔助開發工作流。",
+      "summary": "此專案是作者(Affaan Mustafa,Anthropic 駭客松得獎者)過去 10 個月實際生產環境使用所累積的 Claude Code 配置檔集合,涵蓋 agent 委派、TDD 工作流、程式碼審查、記憶持久化 hooks、MCP 伺服器設定等。可作為 Claude Code plugin 直接安裝,或手動複製個別元件到 `~/.claude/` 使用。本倉庫(WorldFlowAI 分支)實質內容與上游 affaan-m/everything-claude-code 相同,額外附加了一份 WORLDFLOWAI.md 內部使用指南,針對其自身的 synapse(Rust)與 arbiter(ML/Python)專案客製化工作流程說明。",
+      "category": "devtool",
+      "highlights": [
+        "提供 9 個專職 subagent(planner、architect、tdd-guide、code-reviewer、security-reviewer 等)可委派特定任務",
+        "hooks.json 內建多種自動化:阻擋非 tmux 執行的 dev server、Edit 後自動跑 Prettier/TypeScript 檢查、偵測 console.log",
+        "近期更新將所有腳本改寫為跨平台 Node.js,同時支援 Windows/macOS/Linux,並提供 npm/pnpm/yarn/bun 套件管理器自動偵測",
+        "附有簡易測試套件(tests/run-all.js),但沒有 CI workflow 自動執行",
+        "README 明確提醒 context window 管理策略(MCP 數量上限建議),是實務經驗的具體體現"
+      ],
+      "use_cases": [
+        "想快速建立一套經過實戰驗證的 Claude Code agent/hook/rule 配置,而非從零開始摸索",
+        "需要 TDD、程式碼審查、安全審查等標準化 AI 輔助開發流程範本",
+        "想了解如何設計 SessionStart/PreCompact/Stop 等 hook 來做記憶持久化與 context 管理",
+        "參考跨平台(Windows/macOS/Linux)Node.js hook 腳本的寫法"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 3,
+        "comment": "README 與各 agent/skill/rule 的 Markdown 文件寫得相當清楚、結構完整,說明也具體;但沒有 package.json 與 .github/workflows,測試僅靠 tests/run-all.js 手動執行、無 CI 自動驗證,程式碼品質難以持續把關。scripts/lib 底下的核心工具程式碼簡潔且有基本測試覆蓋,屬於單純的檔案/系統操作,複雜度不高。整體是文件驅動型的配置集合而非傳統應用程式,活躍度以 README 更新與腳本重寫(Node.js 跨平台化)來看尚可,但缺乏 issue/PR 活動的觀察管道。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "對於想快速上手 Claude Code 進階工作流(agents/hooks/skills)的開發者是不錯的參考資源,但本身是設定檔集合而非程式庫,價值取決於你是否採用 Claude Code 生態,且此 WorldFlowAI 分支與上游內容高度重疊,建議直接看原始的 affaan-m/everything-claude-code。",
       "_mode": "full"
     }
   }
