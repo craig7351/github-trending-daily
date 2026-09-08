@@ -1396,8 +1396,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 7,
+    "last_seen": "2026-09-08",
+    "days_on_trending": 8,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1480,6 +1480,13 @@
         1,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-08": [
+        252848,
+        1897,
+        6,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-05",
@@ -1519,8 +1526,8 @@
       "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
       "_mode": "full"
     },
-    "total_days_on_trending": 13,
-    "consecutive_days_on_trending": 7
+    "total_days_on_trending": 14,
+    "consecutive_days_on_trending": 8
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -2258,8 +2265,8 @@
   },
   "pascalorg/editor": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-07-31",
-    "days_on_trending": 3,
+    "last_seen": "2026-09-08",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-29": [
         18705,
@@ -2275,46 +2282,48 @@
         6,
         "Create and share 3D architectural projects.",
         "TypeScript"
+      ],
+      "2026-09-08": [
+        22333,
+        168,
+        13,
+        "Create and share 3D architectural projects.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-07-29",
+    "last_analyzed": "2026-09-08",
     "analysis": {
       "category": "app",
-      "one_liner": "Pascal Editor 是一款基於 React Three Fiber 與 WebGPU 打造的開源 3D 建築設計編輯器。",
-      "summary": "這是一個讓使用者在瀏覽器中建立、編輯與分享 3D 建築專案(牆面、樓層、屋頂、管線等)的工具,採 Turborepo monorepo 架構,核心邏輯(scene state、schema)、3D 渲染(viewer)、編輯工具(editor)與內建元件(nodes)分成獨立套件發布至 npm,並支援第三方外掛擴充節點類型與工具面板。",
+      "one_liner": "用 React Three Fiber 打造的開源 3D 建築/室內設計編輯器,支援 AI Agent 透過 MCP 直接操作場景。",
+      "summary": "Pascal Editor 是一個以 TypeScript/React 19/Next.js 16 打造的 3D 建築設計工具,讓使用者能繪製牆體、樓層、屋頂、家具等建築元件並即時渲染。專案採 Turborepo monorepo 架構,將場景狀態(Zustand)、3D 渲染(React Three Fiber + WebGPU)、編輯工具、CLI 安裝器與 MCP(Model Context Protocol)伺服器拆分成獨立套件,讓 AI Agent 也能透過標準協議操作 3D 場景與本地專案資料。",
       "highlights": [
-        "架構文件極為詳盡,README 完整說明 Node/Registry/System/Event Bus 等核心概念與資料流",
-        "採用 Zustand + Zundo 實現含 50 步復原/重做的場景狀態管理,IndexedDB 持久化",
-        "支援插件系統(Plugin manifest),第三方可擴充節點類型、3D 渲染與工具面板",
-        "測試覆蓋非常廣,超過 310 個 *.test.ts(x) 檔案涵蓋 schema、systems、spatial-grid、editor tools 等核心模組",
-        "內建 CORS 白名單、timing-safe token 比對、rate limiting 的 Scene API 安全層,並有對應安全測試"
+        "內建 MCP 伺服器,讓 AI Agent(如 Claude、GPT 等)能直接讀寫 3D 建築場景,對應近期 AI + CAD/BIM 整合的趨勢",
+        "Monorepo 架構清晰劃分 core/viewer/editor/nodes/cli/mcp 等職責,並附有詳盡的架構說明文件(README 與 CLAUDE.md/AGENTS.md)",
+        "測試覆蓋相當紮實,單是 core 套件就有 100+ 個 *.test.ts 檔案,涵蓋 schema 遷移、幾何運算、場景狀態等核心邏輯",
+        "CI 流程完整,含 lint、型別檢查、測試、build,以及對打包後 CLI/編輯器執行檔的 smoke test",
+        "程式碼中大量針對「為什麼這樣寫」的註解(如場景資料遷移的邊界案例),顯示維護者對歷史相容性與資料完整性很講究"
       ],
       "use_cases": [
-        "需要在網頁上嵌入 3D 建築/室內設計編輯器的產品",
-        "學習 React Three Fiber + WebGPU 打造大型互動式 3D 應用的架構範例",
-        "想擴充 BIM/建築資料模型(牆、管線、暖通空調節點)並自訂渲染邏輯的開發者",
-        "研究 Zustand 搭配 Zundo 做複雜場景 undo/redo 狀態管理的設計模式"
+        "快速建立 3D 建築/樓層平面圖並匯出分享,取代傳統 CAD 軟體的輕量場景",
+        "作為 AI Agent 的空間操作後端,透過 MCP 讓 LLM 直接生成或修改 3D 建築模型",
+        "開發者可依 Plugin 機制擴充新的節點類型(如樹木、家具),不需修改核心程式碼"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件品質極高,README 詳述架構、資料流與擴充方式;測試數量龐大且涵蓋核心邏輯與 API 安全性;CI 有 lint、格式檢查與型別檢查;最後推送時間為今天,活躍度高,是目前 GitHub Trending 第一名。"
+        "comment": "文件、測試與 CI 三方面都相當完整;README 詳述架構、資料流與核心概念,程式碼中的遷移邏輯附有清楚的來龍去脈說明,屬於維護良好的專案。"
       },
       "security": {
         "risk_level": "none",
-        "findings": [
-          "postinstall script(apps/ifc-converter)僅將 node_modules 內的 web-ifc wasm 檔複製到 public 目錄,無外部網路請求或任意程式碼執行,行為透明且具冪等性",
-          "Scene API 具備 origin allowlist、timing-safe token 比對(node:crypto timingSafeEqual)與 rate limiting,顯示團隊對 API 安全有意識地設計並撰寫對應測試",
-          "未發現 curl|bash、iwr|iex、可疑 base64 payload、硬編碼 IP 或 typosquat 依賴等風險模式"
-        ]
+        "findings": []
       },
-      "star_rating": 5,
-      "verdict": "架構清晰、文件與測試俱佳、安全性設計到位,是少見兼具工程品質與熱度的 3D 編輯器專案,值得立即關注與深入研讀其 monorepo 架構設計。",
+      "star_rating": 4,
+      "verdict": "架構嚴謹、測試齊全,且踩在 AI+3D/BIM 的浪頭上,值得關注,尤其對想結合 AI Agent 與空間設計工具的開發者。",
       "_mode": "full"
     },
-    "total_days_on_trending": 3,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 4,
+    "consecutive_days_on_trending": 1
   },
   "huggingface/speech-to-speech": {
     "first_seen": "2026-07-29",
@@ -4097,10 +4106,10 @@
   },
   "bytedance/deer-flow": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-02",
+    "last_seen": "2026-09-08",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-02": [
         78769,
@@ -4108,42 +4117,48 @@
         15,
         "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
         "Python"
+      ],
+      "2026-09-08": [
+        81855,
+        195,
+        10,
+        "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-02",
+    "last_analyzed": "2026-09-08",
     "analysis": {
-      "one_liner": "ByteDance 打造的開源「超級智能體」執行框架,結合 LangGraph/LangChain,提供沙箱、記憶、技能與子智能體來完成長時程任務。",
-      "summary": "DeerFlow 2.0 是從原本的 Deep Research 框架重寫而成的通用 Agent Harness,內建檔案系統、長期記憶、可擴充技能(Skills)、沙箱執行環境與子智能體派工機制,讓 LLM 能規劃並執行從研究、寫程式到產生簡報、影片等分鐘到數小時等級的複雜任務。專案同時提供 Web UI、Gateway API、多種 IM 頻道整合(Slack、Telegram、Feishu、企業微信等)與完整的正式環境部署方案(Docker Compose、Postgres/Redis、多 worker)。",
+      "one_liner": "ByteDance 開源的長時程「超級代理人」框架,能自主研究、寫程式、操作沙箱並產出成果,是深度研究框架 DeerFlow 的 2.0 全面重寫版。",
+      "summary": "DeerFlow 2.0 是一套可自我延伸技能(skills)、支援子代理人(sub-agents)、記憶體與沙箱執行的 Agent Harness,目標是處理從幾分鐘到數小時不等的複雜任務,例如深度研究、程式撰寫、資料分析與內容產出。它整合 LangGraph 作為執行引擎,搭配 FastAPI Gateway、Next.js 前端、多種 IM 通道(Telegram、Slack、飛書等)與 MCP 工具生態,形成一套完整可自架的多代理人平台。",
       "category": "ai-ml",
       "highlights": [
-        "採用「漸進式技能載入」機制,SKILL.md 只在任務需要時才載入,兼顧上下文長度與可擴充性,並內建 SkillScan 靜態安全掃描器審核技能安裝與編輯",
-        "子智能體(Sub-agent)派工具備明確的成本效益判斷邏輯,避免濫用平行化,且有獨立的 context 隔離與 token 用量歸戶",
-        "正式環境部署方案完整:支援多 Gateway worker、Redis stream bridge、run ownership lease/心跳機制、SSE 斷線續傳與孤兒任務復原,顯示對分散式系統邊界情況的高度重視",
-        "backend 有 500+ 個測試檔案,並用 Blockbuster 強制檢查阻塞式 I/O(tests/blocking_io),CI 包含後端/前端單元測試、E2E、lint、nightly 等 10+ 個 workflow",
-        "bash 執行沙箱內建 SandboxAuditMiddleware,以正則表達式分類辨識高風險指令(如指令替換執行下載內容、fork bomb、覆寫系統檔案等),程式碼註解詳盡且引用實際 issue 修正紀錄"
+        "架構完整:FastAPI Gateway + LangGraph + Next.js 前端 + Docker/K8s 沙箱,支援本機、Docker、Kubernetes 三種執行模式",
+        "可擴充技能與子代理人系統,並整合 MCP 伺服器、多種 LLM Provider(含 Codex CLI、Claude Code OAuth)",
+        "文件與工程規範極為詳盡:README 超過 1600 行,另有 CLAUDE.md、AGENTS.md、CONTRIBUTING.md、SECURITY.md 等治理文件一應俱全",
+        "測試覆蓋非常紮實:backend/tests 內有數百個測試檔,CI 以 4 shard 平行跑並整合 Postgres/Redis,另有專門的 blocking-io 靜態掃描機制",
+        "官方主動揭露部署風險:明確說明此代理人具備系統指令執行等高權限能力,並提供詳細的網路隔離與存取控制建議"
       ],
       "use_cases": [
-        "需要一個可自架、可擴充的通用 Agent 執行環境,用來做深度研究、報告/簡報自動生成或資料分析工作流",
-        "想要串接多種 IM(Slack、Telegram、飛書、企業微信等)作為 AI 助理入口的團隊",
-        "需要在 Kubernetes/Docker 沙箱中安全執行 LLM 產生程式碼,並要求審計與風險攔截機制的場景",
-        "研究 LangGraph/LangChain 之上如何設計 Memory、Skill、Sub-agent、Checkpoint 等大型 Agent 系統架構的工程師"
+        "需要長時間、多步驟自主研究並產出報告/文章的知識工作流程",
+        "打造具備程式碼執行、檔案讀寫能力的內部 AI 助理或客服機器人(可接 Telegram/Slack/飛書等 IM)",
+        "希望在自架環境中串接多種 LLM(含本機 vLLM、Claude Code、Codex CLI)並用技能/MCP 擴充能力的團隊",
+        "需要沙箱化程式碼執行與資料視覺化(如 CSV 分析、網頁生成)的自動化任務"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件極為詳盡(README 超過千行、多語系版本、獨立的 CONTRIBUTING/AGENTS.md/SECURITY.md),測試覆蓋涵蓋單元、阻塞式 I/O、E2E、追蹤系統等面向,CI workflow 齊全。今日剛推送新 commit,活躍度非常高,程式碼風格嚴謹、註解交代設計取捨與已知邊界案例,屬於工程成熟度很高的專案。"
+        "comment": "文件、治理與工程流程成熟度極高,測試套件龐大且 CI 覆蓋多種整合情境(DB、Redis、阻塞 IO 掃描、E2E),原始碼具備詳細的邊界情況說明與清楚的模組化設計,屬於企業級專案水準。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供「One-Line Agent Setup」與 Install.md,設計上是要讓 Claude Code / Codex 等編碼代理人讀取後自動執行安裝步驟(clone、make setup/install 等),屬於「餵給 AI 代理人的操作說明文件」形式,使用前建議先自行檢視該文件內容再授權代理人執行",
-          "Lark/Feishu 技能安裝時會在安裝階段從 GitHub 下載官方 CLI 執行檔並以 SHA-256 驗證後掛載到沙箱中執行,屬於安裝期下載可執行內容的行為,文件中已明確揭露此行為與離線替代方案",
-          "未發現 npm/pip 生命週期腳本(preinstall/postinstall)、curl|bash 型態的隱藏安裝腳本,或混淆/長 base64 payload 等可疑內容"
+          "專案本身具備系統指令執行、檔案讀寫等高權限能力,官方 README 已主動且明確警示:預設設計為僅限本機信任環境(127.0.0.1)使用,若部署到公網、LAN 或多端可存取環境卻未做好存取控制,可能被未授權掃描或第三方濫用執行高風險操作",
+          "README 明確指出「Gateway 管理員權限等同於主機端程式碼執行」,因為管理員可註冊 stdio MCP 伺服器(npx/uvx 等啟動器本質上會抓取並執行外部套件),即便有指令白名單機制,官方仍將其定位為深度防禦而非安全邊界,建議使用者謹慎授予 Gateway 管理權限"
         ]
       },
       "star_rating": 5,
-      "verdict": "工程品質與文件完整度都屬頂尖水準,是值得研究 Agent Harness 架構設計的重量級專案,強烈建議關注。",
+      "verdict": "文件、測試與工程治理都達到少見的高水準,是目前最完整、最透明的開源 Agent Harness 之一,值得 AI 研發工程師深入研究與參考其架構設計。",
       "_mode": "full"
     }
   },
@@ -10659,10 +10674,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-08",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -10689,6 +10704,13 @@
         70978,
         276,
         10,
+        "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
+      ],
+      "2026-09-08": [
+        71395,
+        394,
+        14,
         "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
       ]
@@ -15306,10 +15328,10 @@
   },
   "BraveOPotato/FckSignups": {
     "first_seen": "2026-09-06",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-08",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-06": [
         2897,
@@ -15322,6 +15344,13 @@
         3315,
         436,
         12,
+        "A list of tools that are open-source, in-browser, and require no-signups!",
+        "TypeScript"
+      ],
+      "2026-09-08": [
+        3822,
+        501,
+        9,
         "A list of tools that are open-source, in-browser, and require no-signups!",
         "TypeScript"
       ]
@@ -15409,15 +15438,22 @@
   },
   "openai/skills": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-08",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-07": [
         25618,
         46,
         5,
+        "Skills Catalog for Codex",
+        "Python"
+      ],
+      "2026-09-08": [
+        26036,
+        351,
+        11,
         "Skills Catalog for Codex",
         "Python"
       ]
@@ -15506,15 +15542,22 @@
   },
   "coreyhaines31/marketingskills": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-08",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-07": [
         47518,
         329,
         13,
+        "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+        "JavaScript"
+      ],
+      "2026-09-08": [
+        48133,
+        580,
+        7,
         "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "JavaScript"
       ]
@@ -15657,15 +15700,22 @@
   },
   "The-Swarm-Corporation/AutoHedge": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-08",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-07": [
         4718,
         142,
         17,
+        "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+        "Python"
+      ],
+      "2026-09-08": [
+        5259,
+        517,
+        8,
         "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
         "Python"
       ]
@@ -15754,6 +15804,306 @@
       "star_rating": 4,
       "verdict": "Stremio 官方維護、架構設計有特色(React + Rust/WASM),搭配今日上榜熱度,值得關注與研究其架構,但一般開發者需求則視是否使用 Stremio 生態系而定。",
       "_mode": "light"
+    }
+  },
+  "heygen-com/hyperframes": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-08": [
+        45946,
+        474,
+        1,
+        "Write HTML. Render video. Built for agents.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-08",
+    "analysis": {
+      "category": "framework",
+      "one_liner": "用 HTML/CSS 寫腳本、輸出確定性 MP4 影片的開源渲染框架,專為 AI 程式代理設計。",
+      "summary": "HyperFrames 由 HeyGen 開源,讓開發者(或 AI 代理)用 HTML、CSS、媒體素材與可尋軌動畫來產生可重現的 MP4 影片,底層結合 ffmpeg 與 puppeteer 進行渲染、GSAP 等處理動畫。它提供 CLI 本機使用方式,也內建一套 20 個「skills」模組,可直接整合進 Claude Code、Cursor、Gemini CLI、Codex 等 AI 編碼代理,讓代理依照產品發表片、解說影片、字幕、簡報等不同情境自動選擇對應工作流程來產生影片。",
+      "highlights": [
+        "用 HTML/CSS 取代傳統影片編輯軟體或 React(如 Remotion)來描述動畫與排版,學習成本對前端工程師較低",
+        "內建 20 種 skills,涵蓋產品發表、講解影片、PR 轉影片、字幕、簡報等多種情境,並有 /hyperframes 路由器自動挑選工作流程",
+        "同時支援本機 CLI 與多種主流 AI 編碼代理(Claude Code、Cursor、Gemini CLI、Codex)整合",
+        "由 HeyGen(知名 AI 影片新創)開源釋出,今日 GitHub Trending 排名第一、單日新增近 500 顆星,聲量成長迅速",
+        "採用 Apache-2.0 授權,對商業與個人專案使用限制較少"
+      ],
+      "use_cases": [
+        "AI 代理自動化生成行銷短片、產品發表影片或社群素材",
+        "把既有網站/產品截圖與文案快速轉成 30-90 秒宣傳影片",
+        "為既有訪談或 Podcast 影片自動加上字幕、圖表疊加或下三分之一字卡",
+        "將 GitHub PR 內容自動轉成變更說明或功能介紹影片"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容詳實,對 skills 架構、安裝方式與各工作流程用途都有清楚表格說明,文件品質高;但測試相關資訊未在 README 呈現,此評估僅基於 README,無法驗證程式碼實際測試涵蓋率。專案剛推送(2026-09-08)且為 GitHub Trending 第一名、單日暴增近 500 星,活躍度相當高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝與更新皆透過 npx 執行 npm 套件(如 npx skills add、npx hyperframes skills update),屬於標準 npm 生態系操作,而非 curl | bash 之類的高風險安裝方式",
+          "README 提及 skills 套件解析自 skills.sh 註冊表,內容可能落後於 main 分支數小時,使用者若需要最新版本需改用 update 指令,此為版本同步議題而非安全疑慮"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "來自 HeyGen 的新穎影片生成框架,結合 HTML 渲染與 AI 代理工作流程,文件完整且聲量爆發中,值得立即關注與試用。",
+      "_mode": "light"
+    }
+  },
+  "microsoft/markitdown": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-08": [
+        180238,
+        886,
+        2,
+        "Python tool for converting files and office documents to Markdown.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-08",
+    "analysis": {
+      "category": "library",
+      "one_liner": "微軟出品的 Python 工具,將 PDF、Office 文件、圖片、音訊等多種格式轉換成 Markdown,專為 LLM 文字處理管線設計。",
+      "summary": "MarkItDown 是一套輕量的 Python 檔案轉換工具,支援 PDF、Word、PowerPoint、Excel、圖片、音訊、HTML、ZIP、YouTube 字幕、EPub 等多種來源轉為結構化 Markdown,並可選擇性整合 Azure Document Intelligence / Content Understanding 或 LLM 進行圖片描述與 OCR。設計目標是讓輸出對 LLM 友善(保留標題、列表、表格等結構),而非追求人類閱讀的高保真呈現。",
+      "highlights": [
+        "採用可插拔的 Converter 架構(register_converter + priority 排序),核心 MarkItDown 類別與各格式轉換器解耦,擴充新格式或第三方外掛（markitdown-plugin）很容易",
+        "支援本地檔案、URL、data URI、串流四種輸入介面(convert_local/convert_uri/convert_stream/convert_response),並用 magika 做內容嗅探以正確判斷格式",
+        "README 明確揭露安全注意事項,提醒使用者在不受信任環境中應消毒輸入、選用最窄範圍的 convert_* API,而非籠統的 convert()",
+        "官方另提供 markitdown-mcp(MCP server)與 markitdown-ocr(LLM Vision OCR 外掛)子套件,並支援 Azure Document Intelligence / Content Understanding 整合",
+        "GitHub Actions 使用 commit SHA 鎖定版本,並針對 Python 3.10–3.13 做矩陣測試,另有獨立 OCR 測試流程"
+      ],
+      "use_cases": [
+        "將使用者上傳的各類辦公文件(Word/Excel/PPT/PDF)批次轉換成 Markdown,餵給 LLM 做摘要或 RAG 檢索前處理",
+        "建置文件解析管線時取代多個格式專用套件(textract 替代方案),統一輸出格式",
+        "搭配 Azure Document Intelligence / Content Understanding 做高品質掃描文件、發票欄位擷取",
+        "透過 markitdown-mcp 讓具備 MCP 支援的 Agent(如 Claude Desktop)直接呼叫文件轉換能力"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 內容詳盡且誠實(明確列出「不支援什麼」與安全風險),core 原始碼分層清楚、型別標註完整;tests 目錄涵蓋多種格式與邊界案例(含 OCR 測試資料、CLI 測試),但屬白箱單元測試為主,未見大型整合/模糊測試。CI 使用 SHA 鎖定 action 版本、跨 Python 版本矩陣測試,活躍度高(近期持續有 commit 與新增子套件)。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "微軟官方維護、架構乾淨、文件與安全揭露都到位,是目前 LLM 文件前處理場景中值得優先評估的工具。",
+      "_mode": "full"
+    }
+  },
+  "mksglu/context-mode": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-08": [
+        20834,
+        96,
+        3,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-08",
+    "analysis": {
+      "one_liner": "一個 MCP 伺服器,透過沙盒化工具輸出、持久化 session 記憶與跨平台強制路由,大幅減少 AI coding agent 的 context window 消耗。",
+      "summary": "context-mode 針對「MCP 工具呼叫把大量原始資料塞進 context window」的問題提出解法:把 Bash/Read/WebFetch 等大輸出工具攔截並在沙盒中執行,只回傳精簡結果(號稱 98% 縮減),同時用 SQLite + FTS5/BM25 持久化 session 事件,讓對話 compact 後仍能恢復進度。它透過 hooks(PreToolUse/PostToolUse/SessionStart/PreCompact 等)在 17 種 AI coding 平台(Claude Code、Gemini CLI、Cursor、Codex、OpenCode 等)上強制路由,而非只靠模型自律。",
+      "category": "devtool",
+      "highlights": [
+        "支援 17 種平台的 adapter 架構(src/adapters/ 下每個平台獨立資料夾),並用 hooks 機制做強制路由而非僅靠 prompt 建議",
+        "security.ts 內建相當細膩的命令權限引擎:能正確處理 shell chain 分割、subshell/backtick 巢狀擷取、符號連結逃逸防護、專案邊界防護(對應 GitHub Issue #852),並有多語言(Python/JS/Go/PHP/Ruby/Rust)shell-escape 偵測",
+        "測試覆蓋度高,tests/ 目錄下有 210+ 個測試檔,涵蓋各 adapter、hooks、CLI upgrade、security 等,且 CI 在 ubuntu/macos/windows 三平台矩陣跑測試",
+        "postinstall.mjs 雖然邏輯複雜(多層 self-heal),但每個步驟都有詳細註解說明修的是哪個 GitHub Issue,且明確標示「best effort、never block install」,並有 isGlobalInstall() 防呆避免誤改開發者本機設定",
+        "採用 Elastic License 2.0(非 OSI 標準開源授權),原始碼公開但限制以此打造競爭性的託管服務"
+      ],
+      "use_cases": [
+        "長時間、多工具呼叫的 AI coding agent session,需要避免 context window 被大量工具輸出(如瀏覽器快照、日誌、API 回應)迅速耗盡",
+        "使用 Claude Code / Cursor / Codex 等多種 agent 工具的團隊,想要統一的 session 記憶與跨平台路由治理",
+        "需要對 agent 執行的 Bash 指令做細粒度 allow/deny/ask 權限控管的場景"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 極為詳盡(逐平台安裝步驟、原理說明),原始碼中大量保留「為何這樣寫」的註解並對應具體 Issue 編號,顯示長期迭代與真實使用者回報修正的痕跡。測試檔案數量龐大且 CI 涵蓋三大作業系統,活躍度高(最近一次推送即當天)。整體工程成熟度明顯高於一般 trending 專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 含 postinstall 生命週期腳本(scripts/postinstall.mjs),會在全域安裝時執行檔案系統修復操作(建立 Windows junction、修補 Claude Code 外掛登錄檔、修復 better-sqlite3 原生綁定等),邏輯複雜但程式碼有詳盡註解說明每個分支對應的問題,且對 cmd.exe 路徑插入做了字元過濾防護",
+          "README 中 OpenClaw 安裝段落建議在無法用 Node 22.5 時透過官方 bun.sh 的 curl|bash 安裝 Bun(非 context-mode 自身的安裝方式,屬於第三方常見作法)",
+          "採用 Elastic License 2.0 而非標準 OSI 開源授權,商業使用前建議確認授權條款是否符合需求"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試紀律遠超一般 trending 專案,若你的團隊深受 AI agent context window 爆掉之苦,值得評估導入;但授權為 Elastic License 2.0 而非標準開源,商業託管使用前需先確認條款。",
+      "_mode": "full"
+    }
+  },
+  "jo-inc/camofox-browser": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-08": [
+        9703,
+        135,
+        4,
+        "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-08",
+    "analysis": {
+      "one_liner": "camofox-browser 是包裝 Camoufox(具備 C++ 層級指紋偽裝的 Firefox 分支)的 REST API 伺服器,讓 AI agent 能以無痕、抗偵測的方式操作瀏覽器。",
+      "summary": "此專案將 Camoufox(在 C++ 層偽造 navigator、WebGL、AudioContext 等瀏覽器指紋的 Firefox 分支)包裝成一套 REST API,提供無障礙快照(accessibility snapshot)、穩定元素參照(e1/e2/e3)、cookie 匯入、代理 + GeoIP、VNC 互動登入、session tracing 等功能,主打取代 Puppeteer/Playwright 讓 AI agent 更難被 Cloudflare 等反爬蟲機制偵測。專案由 askjo.ai(個人 AI agent 產品 Jo)團隊維護,同時也是 OpenClaw 的官方外掛。",
+      "category": "devtool",
+      "highlights": [
+        "C++ 層級指紋偽裝(非 JS shim),號稱可繞過 Google、Cloudflare 等反機器人偵測",
+        "以無障礙樹快照取代原始 HTML,號稱比傳統 DOM 小約 90%,對 LLM token 消耗更友善",
+        "內建 session 隔離、cookie 匯入、代理 + GeoIP、VNC 視覺化登入、Playwright trace 錄製等生產環境向功能",
+        "README 有專門的「Security Model」章節,說明程式碼隔離、無內嵌密鑰、遙測匿名化與驗證方式,罕見地透明",
+        "測試覆蓋非常廣(unit/e2e/live/plugin 皆有),CI 以 GitHub Actions 跑在 Node 24 上"
+      ],
+      "use_cases": [
+        "需要讓 AI agent 瀏覽會被 Cloudflare 或其他反爬蟲機制擋下的真實網站",
+        "以 OpenClaw 或其他 agent 框架搭建瀏覽器自動化工具(取代 Puppeteer/Playwright)",
+        "需要在低資源機器(樹莓派、$5 VPS)長時間跑多 session 瀏覽器自動化並要求 idle 自動關閉",
+        "需要 session 持久化、cookie 匯入、代理輪替等進階爬蟲/自動化基礎設施"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 極為詳盡,涵蓋安裝、環境變數、架構圖、安全模型等;測試目錄分為 unit/e2e/live/plugins 多層,覆蓋面廣;抽樣讀到的 lib/auth.js、lib/reporter.js 程式碼品質高,JSDoc、timing-safe 比較等細節都有顧到;CI 有跑 unit 與 e2e(含真實 Firefox)兩條 pipeline。最近一次 push 在 2026-09-06,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "npm install 會觸發 postinstall script(scripts/postinstall.js),下載約 300MB 的 Camoufox 瀏覽器執行檔;README 與程式內註解說明其來源為 camoufox-js 套件從官方 GitHub Releases 下載,並附完整性驗證,無自訂下載網址或裸 IP",
+          "postinstall.js 原始碼註解明確寫道會以動態 import 並重新命名綁定(renamed binding)的方式呼叫 child_process,目的是避免像 OpenClaw 外掛安全掃描這類靜態掃描工具誤判為可疑的 child_process 呼叫模式——這是作者主動揭露的行為,而非隱藏,但使用靜態掃描做安全稽核者應留意此手法",
+          "預設會將匿名化的當機/卡死遙測資料回傳至官方 Cloudflare Worker 端點(camofox-telemetry.askjo.workers.dev),README 提供 /source 端點雜湊比對方式驗證部署程式碼與 repo 一致,並可用 CAMOFOX_CRASH_REPORT_ENABLED=false 關閉或指向自架端點",
+          "伺服器預設綁定所有網路介面且無驗證(除非設定 CAMOFOX_ACCESS_KEY),暴露在非 localhost 環境時需自行加上存取金鑰"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "文件與安全揭露品質遠高於一般同類專案,程式碼與測試也相當扎實,若有反偵測瀏覽器自動化需求值得一試,但需注意 postinstall 會下載大型執行檔且預設會回傳遙測資料。",
+      "_mode": "full"
+    }
+  },
+  "MoonTechLab/LunaTV": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-08": [
+        9715,
+        197,
+        5,
+        "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-08",
+    "analysis": {
+      "one_liner": "一套可自部署的開箱即用影視聚合播放器,基於 Next.js 整合多資源搜尋、線上播放與雲端同步播放記錄",
+      "summary": "LunaTV(原 MoonTV)是用 Next.js 14 + TypeScript + Tailwind 打造的跨平台影視聚合播放器,支援多來源搜尋、ArtPlayer/HLS.js 線上播放、收藏與播放進度雲端同步(Redis/Kvrocks/Upstash)。專案部署後為「空殼」,需自行填入符合蘋果 CMS V10 格式的資源站 API 才能使用,官方也明確聲明僅供個人學習用途、禁止商業化與公開分享。",
+      "category": "app",
+      "highlights": [
+        "支援多種儲存後端(Redis、Kvrocks、Upstash)同步收藏與播放記錄,並提供 PWA 離線安裝體驗",
+        "密碼處理採 scrypt 加鹽雜湊 + timingSafeEqual 比對,並提供舊版明文密碼的相容遷移邏輯",
+        "可搭配 Selene(行動端)與 OrionTV(Android TV)使用,形成完整多端生態",
+        "README 明確聲明僅供個人/學習用途、要求關閉公網註冊並設密碼,對法律與隱私風險有清楚提醒"
+      ],
+      "use_cases": [
+        "個人自架的私有影視搜尋與播放後台,搭配自行收集的資源站 API 使用",
+        "搭配 Android TV(OrionTV)或行動端(Selene)作為家庭影音串流控制中心",
+        "學習 Next.js App Router 搭配多種 Redis 相容儲存後端的實作範例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 3,
+        "comment": "README 詳盡,ESLint/Prettier/Husky/commitlint 齊全,程式碼結構分層清晰;但雖有 jest.config.js 與 test 腳本,實際找不到任何測試檔案,覆蓋率為零。CI 僅建置並推送 Docker image,未含 lint/typecheck/test 步驟。最後 push 於 2026-05-28,距今三個多月未更新,但今日仍以高星數登上趨勢榜,顯示關注度高但開發節奏轉低頻。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "功能完整、文件清楚的自架影視聚合工具,適合想架設個人影音後台的開發者,但缺乏自動化測試與 CI 品質把關,且需自行收集播放源,實際可用性因人而異。",
+      "_mode": "full"
+    }
+  },
+  "lightpanda-io/browser": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-08": [
+        34853,
+        58,
+        12,
+        "Lightpanda: the headless browser designed for AI and automation",
+        "Zig"
+      ]
+    },
+    "last_analyzed": "2026-09-08",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "用 Zig 從零打造的無頭瀏覽器,專為 AI 代理與自動化爬蟲設計,主打極低記憶體與高速執行。",
+      "summary": "Lightpanda 是一個不基於 Chromium/WebKit、完全自行實作的無頭瀏覽器,以 Zig 撰寫,內建 V8 引擎執行 JavaScript,支援 CDP 與 WebDriver BiDi 協定,可直接相容 Puppeteer/Playwright 腳本。相較於 Headless Chrome,官方測試顯示記憶體用量減少約 16 倍、執行速度快約 9 倍,鎖定 AI agent 自動化與大量爬蟲場景。近期新增了原生 Agent 模式與 MCP server 功能,可讓 LLM 直接操控瀏覽器並輸出可重放的 PandaScript。",
+      "highlights": [
+        "非 Chromium/WebKit fork,以 Zig 語言從零實作瀏覽器核心,對記憶體控制與效能有明顯優勢(官方 benchmark:100 頁面記憶體 123MB vs Chrome 2GB)",
+        "同時支援 CDP、WebDriver BiDi 協定,可直接相容既有 Puppeteer/Playwright 自動化腳本",
+        "內建原生 Agent 模式與 MCP server,支援多家 LLM 供應商(Anthropic、OpenAI、Gemini、Ollama 等),並可將互動過程輸出成無需模型即可重放的 PandaScript",
+        "CI 相當扎實:zig fmt 檢查、debug/release 雙軌單元測試、Web Platform Tests 每日跑分、agent 迴歸測試,GitHub Actions 皆使用 commit SHA 鎖定版本",
+        "原始碼結構清晰,模組化程度高(browser/js/agent/server 分層),註解著重解釋非顯而易見的設計取捨而非流水帳"
+      ],
+      "use_cases": [
+        "大規模網頁爬蟲或資料擷取,需要比 Headless Chrome 更省資源、更快速的執行環境",
+        "AI agent 自動化網頁操作(填表單、點擊、擷取結構化資料),可搭配多家 LLM 或以 --no-llm 模式手動操控",
+        "既有 Puppeteer/Playwright 測試或爬蟲腳本的直接替代後端,透過 CDP endpoint 無痛切換",
+        "需要在容器化環境大量並行啟動瀏覽器實例,但受限於 CPU/記憶體成本的場景"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 詳盡且包含安裝、CDP/BiDi、Agent 模式、MCP 等完整使用情境;程式碼內建大量單元測試檔(testing.zig、test_runner.zig)並搭配 Web Platform Tests 每日跑分驗證瀏覽器相容性,CI 流程分層完整(fmt、debug/release 測試、e2e、agent 迴歸)。commit 紀錄顯示近期(2026-09-07)仍持續更新,活躍度高。缺點是專案仍非常年輕、功能覆蓋(尤其 CSS 渲染、WPT 通過率)仍在持續補齊中,不算完整瀏覽器引擎。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 與 Makefile 中會用 curl 下載 Rust 安裝腳本、Zig 編譯器、V8 預編譯庫等外部資源後執行,這是建置流程常見做法,且下載 Zig 版本會用 minisign 做簽章驗證,curl 也搭配 --fail 避免下載失敗被忽略",
+          "預設會蒐集並回傳使用遙測資料(usage telemetry),可透過環境變數 LIGHTPANDA_DISABLE_TELEMETRY=true 關閉,README 有明確揭露並附隱私權政策連結"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "技術路線大膽且工程品質扎實,對需要輕量、高速無頭瀏覽器做 AI 自動化或大規模爬蟲的開發者值得馬上試用,但作為新生瀏覽器引擎,相容性覆蓋仍在成長中,正式導入前建議先用實際目標網站驗證相容性。",
+      "_mode": "full"
     }
   }
 }
