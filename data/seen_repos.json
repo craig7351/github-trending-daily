@@ -1088,7 +1088,7 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-04",
+    "last_seen": "2026-09-09",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
@@ -1147,6 +1147,13 @@
         19,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-09": [
+        283361,
+        452,
+        7,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-04",
@@ -1185,7 +1192,7 @@
       "verdict": "如果你正在用多種 AI coding agent 且想要一套可落地的「代理人開發 SOP」,這個專案的方法論設計與跨平台相容工程值得研究,但因缺乏自動化 CI,大規模採用前建議自行驗證各平台外掛的實際行為。",
       "_mode": "full"
     },
-    "total_days_on_trending": 9,
+    "total_days_on_trending": 10,
     "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
@@ -1396,8 +1403,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 8,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 9,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1487,6 +1494,13 @@
         6,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-09": [
+        254301,
+        1427,
+        4,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-05",
@@ -1526,8 +1540,8 @@
       "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
       "_mode": "full"
     },
-    "total_days_on_trending": 14,
-    "consecutive_days_on_trending": 8
+    "total_days_on_trending": 15,
+    "consecutive_days_on_trending": 9
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -7524,10 +7538,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -7575,6 +7589,13 @@
         32369,
         620,
         3,
+        "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-09-09": [
+        34812,
+        710,
+        2,
         "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -11559,10 +11580,10 @@
   },
   "multica-ai/andrej-karpathy-skills": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-25": [
         206514,
@@ -11577,37 +11598,43 @@
         11,
         "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
         ""
+      ],
+      "2026-09-09": [
+        211457,
+        333,
+        8,
+        "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        ""
       ]
     },
-    "last_analyzed": "2026-08-25",
+    "last_analyzed": "2026-09-09",
     "analysis": {
-      "category": "learning-resource",
-      "one_liner": "一份濃縮成單一 CLAUDE.md 的行為準則文件,教 Claude Code(及 Cursor)避免常見的 LLM 寫程式壞習慣。",
-      "summary": "這個專案不含任何程式碼,純粹是一份指令文件(CLAUDE.md/SKILL.md/Cursor rule),依據 Andrej Karpathy 對 LLM 寫程式常見問題(亂猜、過度設計、亂改不相關程式碼)的觀察,提煉出四條原則:先思考再動手、簡潔優先、精準修改、以目標驅動並可驗證。使用者只需把檔案放進專案根目錄或安裝成 Claude Code / Cursor 的 plugin/skill,即可讓 AI agent 在協作時更收斂、更少亂改東西。",
+      "category": "other",
+      "one_liner": "一份濃縮成單一 CLAUDE.md 的行為準則文件,教 Claude Code 避免常見的 LLM 寫程式壞習慣。",
+      "summary": "這個專案不含任何原始碼,核心是一份根據 Andrej Karpathy 對 LLM 寫程式問題的觀察所整理出的行為準則(CLAUDE.md),涵蓋「先思考再動手」「簡潔優先」「精準修改」「目標導向執行」四大原則。專案同時提供 Claude Code Plugin、Cursor Rule 等多種安裝方式,讓使用者能在不同 AI 編碼工具中套用相同準則。",
       "highlights": [
-        "核心內容其實就是同一份四條原則,在 CLAUDE.md、SKILL.md、.cursor/rules/*.mdc 三處重複維護,靠人工同步而非單一來源",
-        "四條原則對應 Karpathy 原文吐槽的痛點:亂猜假設、過度抽象、動了不該動的程式碼、成功標準模糊",
-        "提供 Claude Code plugin marketplace 安裝方式,也支援純 CLAUDE.md 手動複製/curl 下載,對已有專案指示的相容性設計得不錯",
-        "同時支援 Cursor(透過 .cursor/rules)與 Claude Code(透過 plugin/skill),雙工具覆蓋",
-        "完全沒有程式碼、測試、CI,是一份「提示工程/使用守則」而非軟體專案,爆紅原因是切中大量 AI 輔助開發者的痛點而非技術複雜度"
+        "內容濃縮成一份 CLAUDE.md,四大原則對應 Karpathy 提到的 LLM 常見問題(亂猜假設、過度工程化、動到不該動的程式碼)",
+        "同時支援 Claude Code Plugin 與 Cursor Rule 兩種安裝方式,涵蓋主流 AI 編碼工具",
+        "README 提供具體可驗證的成效指標(diff 減少、返工減少、提問提前),而非空泛口號",
+        "upstream 為 forrestchang/andrej-karpathy-skills,本 fork/鏡像帶有作者自家產品 Multica 的推廣連結"
       ],
       "use_cases": [
-        "把 CLAUDE.md 內容併入現有專案的 AI 協作規範,約束 AI agent 少做無關重構、少自行腦補需求",
-        "團隊導入 Claude Code 或 Cursor 進行 AI 輔助開發時,作為預設行為準則的起點範本",
-        "作為撰寫自家專案「AI 協作守則」文件時的參考架構(四原則 + 可驗證成功標準)"
+        "想套用一套現成、經驗證的 prompt 準則來減少 Claude Code / Cursor 產生過度複雜或牽連過廣程式碼的團隊",
+        "希望在多個專案間共用一致 AI 編碼行為準則,而不想每個專案重寫 CLAUDE.md 的開發者",
+        "對「如何寫出讓 LLM 更聽話的指令文件」感興趣、想參考範例結構的人"
       ],
       "quality": {
         "docs": 4,
         "tests": 1,
         "activity": 2,
-        "comment": "文件本身寫得清楚扼要、範例具體,但專案性質決定了沒有測試也不需要測試;沒有 CI;內容在三個檔案間手動同步,缺乏單一來源機制(SSOT),長期維護一致性有風險。README 提及最後 push 時間為 2026-04-20,爆紅前活動並不頻繁,star 數暴增主要是被動地因話題(Karpathy 發文)帶起流量,而非開發活躍度。"
+        "comment": "文件內容清楚扎實、結構完整,但整個專案本質上就是文件,沒有原始碼、沒有測試、也沒有 CI 流程可供評估工程品質;README 標示 last pushed 為 2026-04-20,近期沒有更動,活躍度偏低。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 3,
-      "verdict": "內容濃縮實用、可以直接抄一份併入自己的 CLAUDE.md,但本質是一頁指引文件而非工具或程式碼,花五分鐘讀完帶走精華即可,不必特別追蹤這個 repo 本身。",
+      "star_rating": 2,
+      "verdict": "內容濃縮實用,值得花五分鐘讀完拿去套用,但沒有程式碼與持續維護,不必長期關注這個 repo 本身。",
       "_mode": "full"
     }
   },
@@ -12359,16 +12386,23 @@
   },
   "browser-use/browser-use": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-27",
+    "last_seen": "2026-09-09",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-27": [
         110980,
         149,
         13,
         "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+        "Python"
+      ],
+      "2026-09-09": [
+        113506,
+        228,
+        12,
+        "Agents that use the browser.",
         "Python"
       ]
     },
@@ -15438,10 +15472,10 @@
   },
   "openai/skills": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-07": [
         25618,
@@ -15454,6 +15488,13 @@
         26036,
         351,
         11,
+        "Skills Catalog for Codex",
+        "Python"
+      ],
+      "2026-09-09": [
+        26517,
+        490,
+        3,
         "Skills Catalog for Codex",
         "Python"
       ]
@@ -15542,10 +15583,10 @@
   },
   "coreyhaines31/marketingskills": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-07": [
         47518,
@@ -15558,6 +15599,13 @@
         48133,
         580,
         7,
+        "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+        "JavaScript"
+      ],
+      "2026-09-09": [
+        48813,
+        666,
+        6,
         "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "JavaScript"
       ]
@@ -15700,10 +15748,10 @@
   },
   "The-Swarm-Corporation/AutoHedge": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-07": [
         4718,
@@ -15716,6 +15764,13 @@
         5259,
         517,
         8,
+        "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+        "Python"
+      ],
+      "2026-09-09": [
+        5706,
+        494,
+        14,
         "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
         "Python"
       ]
@@ -15808,15 +15863,22 @@
   },
   "heygen-com/hyperframes": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-08": [
         45946,
         474,
         1,
+        "Write HTML. Render video. Built for agents.",
+        "TypeScript"
+      ],
+      "2026-09-09": [
+        47762,
+        2627,
+        5,
         "Write HTML. Render video. Built for agents.",
         "TypeScript"
       ]
@@ -15859,15 +15921,22 @@
   },
   "microsoft/markitdown": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-08": [
         180238,
         886,
         2,
+        "Python tool for converting files and office documents to Markdown.",
+        "Python"
+      ],
+      "2026-09-09": [
+        181687,
+        2047,
+        9,
         "Python tool for converting files and office documents to Markdown.",
         "Python"
       ]
@@ -15907,15 +15976,22 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-08": [
         20834,
         96,
         3,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-09-09": [
+        21394,
+        651,
+        13,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -15958,15 +16034,22 @@
   },
   "jo-inc/camofox-browser": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-08": [
         9703,
         135,
         4,
+        "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+        "JavaScript"
+      ],
+      "2026-09-09": [
+        10496,
+        871,
+        10,
         "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
         "JavaScript"
       ]
@@ -16011,15 +16094,22 @@
   },
   "MoonTechLab/LunaTV": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-08": [
         9715,
         197,
         5,
+        "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
+        "TypeScript"
+      ],
+      "2026-09-09": [
+        10170,
+        505,
+        11,
         "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
         "TypeScript"
       ]
@@ -16103,6 +16193,157 @@
       },
       "star_rating": 4,
       "verdict": "技術路線大膽且工程品質扎實,對需要輕量、高速無頭瀏覽器做 AI 自動化或大規模爬蟲的開發者值得馬上試用,但作為新生瀏覽器引擎,相容性覆蓋仍在成長中,正式導入前建議先用實際目標網站驗證相容性。",
+      "_mode": "full"
+    }
+  },
+  "ayghri/i-have-adhd": {
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-09": [
+        30467,
+        656,
+        1,
+        "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-09",
+    "analysis": {
+      "one_liner": "一份讓 AI coding agent(Claude Code、Codex、Gemini CLI 等)輸出「行動優先、不廢話」的 Skill/Plugin,對應各家 agent 平台的整合方式。",
+      "summary": "i-have-adhd 是一組定義好的輸出風格規則(10 條規則,寫在 SKILL.md),用來強迫 coding agent 回答時先給出可執行的下一步、把多步驟工作編號、限制離題與贅字,解決「AI 廢話太多、答案被埋起來」的痛點。專案本身不是傳統應用程式,而是針對十幾種 agent 平台(Claude Code、Codex、Gemini CLI、OpenCode、Pi、Copilot、Zed、Cursor、Kimi 等)分別提供對應的 plugin/extension/hook 轉接層,核心邏輯只是讀取並注入同一份 Markdown 規則文字。",
+      "category": "devtool",
+      "highlights": [
+        "核心價值是一份精心撰寫的 SKILL.md 規則文件(10 條規則加例外情境),而非複雜程式邏輯",
+        "同時支援十多種 AI agent 平台的原生整合方式,工程量集中在跨平台相容層",
+        "SessionStart hook 採用防禦性寫法,任何例外都直接結束不阻擋 agent 啟動,以 opt-in 旗標檔案控制是否常駐啟用",
+        "備有多語系文件與完整評測框架驗證規則有效性",
+        "測試涵蓋 node、sh、PowerShell 三種 hook runtime 的行為一致性"
+      ],
+      "use_cases": [
+        "想讓 Claude Code、Codex、Gemini CLI 等 agent 回答更直接、少廢話的日常開發使用",
+        "團隊統一 coding agent 輸出風格,避免冗長解釋掩蓋實際操作步驟",
+        "想客製化輸出規則的使用者可以 fork 後修改規則檔套用自己的風格準則",
+        "研究如何為多種不同 agent runtime 撰寫相容的 plugin 或 extension 的參考範例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整,包含多語系 README 與 INSTALL、AGENTS.md 導覽、CONTRIBUTING;測試涵蓋跨平台 hook 行為與 opencode、pi 擴充邏輯;CI 使用標準 claude-code-action 且僅在留言標記時觸發、權限最小化。程式碼量不大但結構清晰,TypeScript extension 有型別與邊界情況處理。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "INSTALL.md 中多處安裝指令使用 curl 下載檔案寫入本機設定目錄,屬於一般 CLI 工具常見的安裝模式,並非執行遠端腳本,且目標網址均為此專案自身的 GitHub raw 內容",
+          "SessionStart hook 會讀取外部環境變數來定位並執行 node 指令,但實際載入的規則檔路徑是相對於腳本自身位置解析,並非直接信任該環境變數作為程式碼來源"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念單純但執行到位,適合想讓 AI coding agent 少廢話、多行動的開發者直接安裝試用,程式碼與安全面均無疑慮。",
+      "_mode": "full"
+    }
+  },
+  "viarotel-org/escrcpy": {
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-09": [
+        11399,
+        178,
+        15,
+        "📱 Display and control your Android device graphically with scrcpy.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-09",
+    "analysis": {
+      "category": "app",
+      "one_liner": "用圖形化介面搭配 scrcpy 來顯示與控制 Android 裝置的桌面應用程式。",
+      "summary": "Escrcpy 是基於 Electron + Vue 開發的桌面應用,包裝 Google 的 scrcpy 核心,提供圖形化介面來鏡像與操控 Android 裝置。它解決了原生 scrcpy 只有命令列操作、缺乏視覺化管理的問題,並額外加入多裝置管理、無線連線、快捷鍵設定與 AI 助理等功能。",
+      "highlights": [
+        "支援多裝置同時控制、批次截圖與 APK 安裝",
+        "內建無線 ADB 連線與區網自動探索,並支援 Gnirehtet 反向網路共享",
+        "整合基於 MCP 協定的 AI Copilot 助理,可用自然語言操控裝置",
+        "提供視覺化自動化腳本工作流程,支援畫面圖像辨識與跨裝置批次執行",
+        "跨平台支援 Windows、macOS、Linux,並有 Homebrew 安裝管道"
+      ],
+      "use_cases": [
+        "需要圖形化管理與同時操控多台 Android 測試機的 QA 或行動裝置管理情境",
+        "透過無線 ADB 進行遠端裝置除錯與螢幕鏡像展示",
+        "需要錄製、截圖或直播 Android 畫面的內容製作場景",
+        "以視覺化自動化腳本執行重複性裝置操作測試"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 僅簡要說明功能與安裝方式,細節文件外連至官方文件站,本評估僅根據 README 內容,未檢視實際程式碼與測試涵蓋率。專案近期(2026-09-01)仍有推送紀錄,且目前登上 GitHub trending 排行,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、活躍度高且解決實際痛點,對需要圖形化管理 Android 裝置的開發者或測試人員值得關注,但部分進階功能屬付費擴充,需留意。",
+      "_mode": "light"
+    }
+  },
+  "openai/plugins": {
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-09": [
+        5798,
+        105,
+        16,
+        "OpenAI Plugins",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-09",
+    "analysis": {
+      "one_liner": "OpenAI 官方維護的 Codex/ChatGPT 外掛(plugin)範例與市集集合,收錄上百個第三方服務整合範本。",
+      "summary": "這個 repo 是 Codex 外掛生態系的官方範例集,每個外掛以 `plugins/<name>/` 目錄組織,包含 `.codex-plugin/plugin.json` 清單、可選的 skills、MCP server、hooks 與 app 設定,並透過 `.agents/plugins/marketplace.json` 統一列出可安裝的外掛市集。目的是讓開發者快速理解外掛結構、並可直接參考或 fork 這些範本來串接如 Figma、Notion、Airtable、Stripe、Adobe 等服務。",
+      "category": "devtool",
+      "highlights": [
+        "涵蓋上百個真實服務整合範例(Figma、Notion、Stripe、Adobe、Shopify、Airtable 等),適合直接參考外掛結構",
+        "部分外掛(如 data-analytics、public-equity-investing、codex-security)附有大量單元/合約測試(.test.mjs、test_*.py),品質把關扎實",
+        "提供 plugin-creator skill 與 Python 腳手架腳本,可一鍵產生符合規範的 plugin.json 與 marketplace 條目",
+        "codex-security 外掛內建完整的掃描/威脅建模/報告 pipeline,含 JSON schema 定義,設計相對嚴謹",
+        "部分外掛的 MCP server 透過 npx 動態抓取第三方套件(如 xcodebuildmcp@latest),屬常見但需留意的作法"
+      ],
+      "use_cases": [
+        "想開發自己的 Codex/ChatGPT 外掛時,參考現成範本(skills、MCP server、plugin.json 結構)",
+        "評估要串接哪些第三方服務(Notion、Slack、GitHub、Stripe 等)到 ChatGPT/Codex 工作流程",
+        "學習如何撰寫 SKILL.md 與 agents/openai.yaml 讓 Codex 代理正確使用外部工具",
+        "研究 OpenAI 官方對外掛市集(marketplace.json)、權限政策(installation/authentication policy)的設計方式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "頂層 README 精簡,但個別外掛普遍附有詳盡的 SKILL.md、references 文件與 schema 定義;測試涵蓋度視外掛而異,部分核心外掛(data-analytics、public-equity-investing、ngs-analysis)測試相當完整,但未見到 .github/workflows 之類的 CI 設定;因為是 OpenAI 官方每日更新的 repo,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "plugins/codex-security/mcp/server.mjs 本身只是個 loader,實際邏輯是以 Brotli 壓縮後分片存成 server.mjs.br.part-000/001 二進位檔,執行時才解壓縮並用 Module._compile 動態載入,原始碼在版本庫中並非人類可讀,無法直接審閱其邏輯",
+          "部分外掛的 .mcp.json 設定會用 npx -y 在執行時動態抓取並執行第三方套件的最新版本(例如 build-ios-apps 使用 xcodebuildmcp@latest),這是 MCP/npm 生態常見做法,但代表實際執行的程式碼版本不受此 repo 版本控管"
+        ],
+        "risk_level_note": ""
+      },
+      "star_rating": 4,
+      "verdict": "作為 OpenAI 官方的 Codex 外掛範例庫,結構清晰且範例豐富,值得想開發或整合 Codex/ChatGPT 外掛的工程師收藏參考,但 codex-security 外掛的核心程式碼以壓縮二進位形式提供,若要安裝使用建議留意此點。",
       "_mode": "full"
     }
   }
