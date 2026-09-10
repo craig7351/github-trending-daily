@@ -1088,8 +1088,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 1,
+    "last_seen": "2026-09-10",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1154,6 +1154,13 @@
         7,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-10": [
+        284030,
+        688,
+        3,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-04",
@@ -1192,8 +1199,8 @@
       "verdict": "如果你正在用多種 AI coding agent 且想要一套可落地的「代理人開發 SOP」,這個專案的方法論設計與跨平台相容工程值得研究,但因缺乏自動化 CI,大規模採用前建議自行驗證各平台外掛的實際行為。",
       "_mode": "full"
     },
-    "total_days_on_trending": 10,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 11,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1403,8 +1410,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 9,
+    "last_seen": "2026-09-10",
+    "days_on_trending": 10,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1501,6 +1508,13 @@
         4,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-10": [
+        255180,
+        1133,
+        13,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-05",
@@ -1540,8 +1554,8 @@
       "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
       "_mode": "full"
     },
-    "total_days_on_trending": 15,
-    "consecutive_days_on_trending": 9
+    "total_days_on_trending": 16,
+    "consecutive_days_on_trending": 10
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -2279,7 +2293,7 @@
   },
   "pascalorg/editor": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-10",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-29": [
@@ -2302,6 +2316,13 @@
         168,
         13,
         "Create and share 3D architectural projects.",
+        "TypeScript"
+      ],
+      "2026-09-10": [
+        22922,
+        107,
+        4,
+        "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
         "TypeScript"
       ]
     },
@@ -2336,7 +2357,7 @@
       "verdict": "架構嚴謹、測試齊全,且踩在 AI+3D/BIM 的浪頭上,值得關注,尤其對想結合 AI Agent 與空間設計工具的開發者。",
       "_mode": "full"
     },
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "consecutive_days_on_trending": 1
   },
   "huggingface/speech-to-speech": {
@@ -6027,10 +6048,10 @@
   },
   "TauricResearch/TradingAgents": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-28",
+    "last_seen": "2026-09-10",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-09": [
         96733,
@@ -6059,38 +6080,49 @@
         19,
         "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "Python"
+      ],
+      "2026-09-10": [
+        103956,
+        367,
+        7,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-26",
+    "last_analyzed": "2026-09-10",
     "analysis": {
-      "one_liner": "用多個 LLM Agent 模擬真實交易團隊(分析師、研究員、交易員、風控)協作做股票/加密貨幣交易決策的研究框架。",
-      "summary": "TradingAgents 用 LangGraph 建構多代理人架構,將基本面、情緒、新聞、技術面分析師與多空研究員、交易員、風控/投組經理串成一個決策管線,針對指定股票代碼與日期產出交易建議。支援 OpenAI、Anthropic、Google、xAI、DeepSeek、Qwen、GLM、MiniMax、Bedrock、Ollama 等十餘種 LLM 供應商,並具備決策記憶回放、checkpoint 續跑等工程化功能。專案明確聲明僅供研究用途,非投資建議。",
+      "one_liner": "用多個 LLM Agent 模擬真實交易公司分工(分析師、研究員、交易員、風控),協同產生股票交易決策的研究框架。",
+      "summary": "TradingAgents 用 LangGraph 建構一組角色化 LLM Agent(基本面/情緒/新聞/技術分析師、多空研究員、交易員、風控與投資組合經理),透過結構化辯論與流程圖產生交易訊號。專案支援十餘家 LLM 供應商、多市場代碼(美股、港股、日股、加密貨幣等)、決策日誌記憶與 LangGraph checkpoint 續跑機制,定位為金融多代理人研究工具而非實盤交易系統。",
       "category": "ai-ml",
       "highlights": [
-        "多代理人分工架構(分析師/研究員/交易員/風控)搭配 LangGraph 實作結構化辯論與決策流程",
-        "支援超過十家 LLM 供應商(含中國區 Qwen/GLM/MiniMax 雙節點、AWS Bedrock、Ollama 本地模型、任意 OpenAI 相容端點)",
-        "具備決策記憶日誌(自動回顧歷史績效與 alpha)與可續跑的 checkpoint 機制,工程細節相當成熟",
-        "CI 涵蓋多 Python 版本測試、乾淨安裝 smoke test 與全庫 ruff lint,測試檔案數量頗大(逾60個)",
-        "README 與 CHANGELOG 詳實記錄每個版本修正(如路徑穿越防護、symbol 正規化、look-ahead 過濾等資安/正確性修補)"
+        "模組化架構清晰:agents/dataflows/graph/llm_clients 分層明確,搭配 LangGraph 做流程編排與 checkpoint 續跑",
+        "測試覆蓋面廣,tests/ 目錄下有 60+ 個測試檔涵蓋各供應商、資料驗證、路徑穿越防護、checkpoint 生命週期等",
+        "CI 設定完善:多版本 Python(3.10–3.13)矩陣測試、乾淨安裝 smoke test、ruff 嚴格 lint 全倉庫檢查",
+        "程式碼中主動處理安全與正確性邊界案例,例如 ticker 路徑穿越防護(safe_ticker_component)、symbol 正規化避免幻覺價格、point-in-time 記憶過濾避免回測學到未來資訊",
+        "CHANGELOG 顯示版本迭代頻繁(v0.2.0 到 v0.4.0),持續修正 look-ahead bias、crash-safety 等實務問題"
       ],
       "use_cases": [
-        "研究多代理人 LLM 協作在金融決策任務上的表現與可重現性議題",
-        "作為學習 LangGraph 建構複雜多節點、可續跑 Agent 流程的參考範例",
-        "量化研究者做回測型的 AI 交易策略原型驗證(非實盤下單)",
-        "評估多 LLM 供應商切換與 Prompt/Agent 架構設計模式"
+        "研究多代理人 LLM 系統在金融決策場景的協作與辯論機制",
+        "作為 LangGraph 應用架構(狀態機、checkpoint 續跑、工具節點)的參考範例",
+        "學術或教育用途探討 LLM 驅動的量化交易策略回測與訊號產生流程",
+        "評估/比較不同 LLM 供應商(OpenAI、Anthropic、Gemini、Qwen、GLM 等)在金融分析任務上的表現"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "README 與 CHANGELOG 記錄詳盡,程式碼註解清楚說明「為什麼」而非單純複述邏輯,並多處引用歷史 issue 編號說明修補動機。CI 設有多版本測試矩陣、乾淨安裝驗證與全庫 lint,測試檔案覆蓋 API key、日期邊界、checkpoint、路徑安全等多面向,工程成熟度高於一般研究型專案。"
+        "comment": "文件詳盡(README 涵蓋安裝、CLI、持久化、可重現性等說明),程式碼註解著重解釋「為何」而非「做什麼」,並附帶 issue 編號追溯設計決策。測試數量多且針對邊界案例(路徑穿越、look-ahead bias、checkpoint 續跑)撰寫,CI 有多版本矩陣與 lint gate。近期(2026-09)持續有版本發布與修正,活躍度高。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "Docker 映像使用非 root 使用者(appuser)執行,屬於良好實踐,無異常發現",
+          "程式碼中未發現 eval/exec/os.system/subprocess 等高風險呼叫,也無 curl|bash 型安裝腳本或混淆程式碼",
+          "使用者需注意:此工具會將 ticker、新聞等外部資料餵給 LLM 並執行工具呼叫,專案本身已針對路徑穿越等注入風險做防範(如 safe_ticker_component 驗證檔名字元),使用時仍建議留意 API 金鑰以環境變數管理,勿提交至版控"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "工程品質與文件皆屬上乘的多代理人交易研究框架,即使不用於實盤,也值得研究 LangGraph 多代理協作架構的工程師參考。",
+      "star_rating": 4,
+      "verdict": "工程品質紮實、文件與測試齊全的多代理人金融研究框架,適合想研究 LLM 協作決策或 LangGraph 應用架構的工程師深入一探,但需謹記其定位是研究工具而非可直接用於實盤的交易系統。",
       "_mode": "full"
     }
   },
@@ -7538,10 +7570,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-09-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -7596,6 +7628,13 @@
         34812,
         710,
         2,
+        "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-09-10": [
+        36594,
+        2249,
+        6,
         "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -11061,10 +11100,10 @@
   },
   "freestylefly/awesome-gpt-image-2": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-24": [
         12722,
@@ -11107,42 +11146,45 @@
         10,
         "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
         "JavaScript"
+      ],
+      "2026-09-10": [
+        30048,
+        705,
+        10,
+        "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-24",
+    "last_analyzed": "2026-09-10",
     "analysis": {
-      "category": "learning-resource",
-      "one_liner": "GPT-Image2 提示詞逆向工程案例庫與工業級模板集,把零散的圖像生成提示詞整理成結構化、可重用的「Prompt as Code」資產。",
-      "summary": "此專案收錄 500+ 個 GPT-Image2 圖像生成案例的逆向工程提示詞,並提煉出 20+ 套工業級模板與 Agent Skill,目標是把散亂的社群範例轉化成可被 agent、腳本與自動化流程重用的結構化提示詞協定。內容依 UI 介面、圖表資訊圖、海報排版、產品電商、品牌、建築、攝影寫實、插畫、角色等類別分類整理。",
+      "category": "ai-ml",
+      "one_liner": "一套將 GPT-Image2 提示詞「工程化」的模板庫,收錄 500+ 個逆向工程案例與 20+ 套工業級模板。",
+      "summary": "這是一個以「Prompt as Code」為理念的資源彙整專案,針對 GPT-Image2 影像生成模型,將散落在社群的優秀提示詞範例拆解成可組合的結構化模板(主體、光線、材質、排版等原子化欄位)。專案同時提供分類案例畫廊(UI介面、海報、產品攝影、品牌識別等)、Agent Skill 檔案,以及一個獨立網站供瀏覽與測試生成。",
       "highlights": [
-        "500+ 個真實案例的提示詞逆向工程,並拆解成主體、光線、材質、排版等原子化結構",
-        "提供 20+ 套可直接套用的工業級提示詞模板,並整理成 Agent Skill 供 Claude Code / Cursor 等工具調用",
-        "依 9 大類別(UI、資訊圖、海報、產品、品牌、建築、攝影、插畫、角色)組織案例畫廊,方便快速找靈感",
-        "今日 GitHub Trending 第 2 名,單日新增 401 星,顯示社群關注度快速上升",
-        "另有獨立網站 gpt-image2.canghe.ai 提供圖庫瀏覽、提示詞複製與線上生成測試體驗"
+        "530+ 個真實案例逆向工程,拆解成可重用的結構化提示詞協議",
+        "提供 20+ 套工業級模板與踩坑指南(docs/templates.md),並提煉為 Agent Skill 供 Claude Code、Cursor 等工具直接調用",
+        "案例依用途分類(UI介面、圖表資訊圖、海報、產品電商、品牌、建築、攝影、插畫等),方便快速定位風格方向",
+        "附有獨立視覺化網站與多國語言 README(英/簡中/日),文件呈現完整度高",
+        "目前正值 GitHub Trending 榜第10名、單日新增 705 星,聲量成長迅速"
       ],
       "use_cases": [
-        "需要大量 GPT-Image2 提示詞範例作為靈感或起手式的設計師與內容創作者",
-        "想把提示詞工程系統化、模板化以整合進批次生成或自動化工作流的開發者",
-        "使用 Claude Code / Cursor 等 Agent 工具、想直接載入 Agent Skill 生成特定風格圖像的工程師",
-        "研究提示詞結構化與 Prompt-as-Code 概念的 AI 應用學習者"
+        "需要大量批次生成 GPT-Image2 圖像、想要穩定可控輸出的自動化工作流開發者",
+        "學習或蒐集高品質提示詞範例,作為個人設計/行銷素材靈感來源",
+        "想將提示詞工程整合進 Agent、Claude Code 等工具鏈,直接套用 Skill 檔案",
+        "研究提示詞結構化、模板化方法論的 AI 應用工程師"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 1,
         "activity": 5,
-        "comment": "屬於資源彙整類專案,測試不適用;README 結構清楚、分類明確且附有視覺化案例畫廊與模板文件連結,說明完整度高;近日(2026-08-23)仍持續更新,且處於 Trending 榜前段,活躍度高。"
+        "comment": "資源彙整類,測試不適用。README 結構清晰、分類完整、附有多語版本與外部展示網站,文件品質高;但由於未審視實際程式碼(JavaScript 部分用途不明,推測為輔助網站或工具腳本),僅能就 README 呈現內容評估。最近推送時間為 2026-09-09,且正處於 Trending 熱度上升期,活躍度高。"
       },
       "security": {
-        "risk_level": "low",
-        "findings": [
-          "README 未提供任何 curl|bash 或需要執行的安裝指令,主要內容為文件、圖片與提示詞範本,本身不構成可執行風險",
-          "專案內含多個第三方 API 中轉平台的贊助連結與聯盟連結(如 APIMart、hiapi、PackyCode 等),使用前建議自行評估這些第三方服務的條款與費用",
-          "README 提及付費社群(一次性人民幣 9.90 元透過支付寶付款取得微信群 QR code),此為維護者自行營運的加值服務,僅為說明性質,未進行原始碼層級審查"
-        ]
+        "risk_level": "none",
+        "findings": []
       },
       "star_rating": 4,
-      "verdict": "若你正在用 GPT-Image2 做圖像生成或提示詞工程,這是一份分類清楚、案例豐富的參考資源,值得收藏瀏覽,但商業推廣與贊助連結較多,使用時可自行篩選。",
+      "verdict": "對於需要 GPT-Image2 提示詞範例與結構化模板的使用者來說值得收藏,但本質是資源彙整而非工具程式庫,不必當作核心開發依賴。",
       "_mode": "light"
     }
   },
@@ -11760,10 +11802,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-29",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -11799,38 +11841,45 @@
         17,
         "Learn it. Build it. Ship it for others.",
         "Python"
+      ],
+      "2026-09-10": [
+        53693,
+        343,
+        11,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-25",
+    "last_analyzed": "2026-09-10",
     "analysis": {
-      "one_liner": "一套從線性代數到多智能體系統、共 511 課的「從零開始造 AI」開源課程,每課都要求先手刻演算法再用框架重做一次。",
-      "summary": "此專案是一套結構完整的 AI 工程教學課程,涵蓋 20 個階段(數學基礎、機器學習、深度學習、電腦視覺、NLP、語音、強化學習、Transformer、生成式 AI、LLM 從零實作、多模態、工具協定/MCP、Agent 工程、自主系統、多智能體、基礎設施、倫理、頂石專案),以 Python/TypeScript/Rust/Julia 撰寫。每課都遵循「先手刻數學與演算法(Build It)、再用正式函式庫重做(Use It)、最後產出可重用產物(Ship It:prompt/skill/agent/MCP server)」的固定套路,並附上 Claude 認證備考教材與可安裝的 AI 助教技能(SKILL.md)。",
       "category": "learning-resource",
+      "one_liner": "一套從數學基礎到自主 AI 代理都親手實作的超大型 AI 工程課程,含 523 堂課、20 個階段。",
+      "summary": "此專案是一套結構化的 AI 工程學習曲線,涵蓋線性代數、機器學習、深度學習、電腦視覺、NLP、Transformer、LLM、多代理系統到正式上線基礎設施共 20 個階段、523 堂課,每堂課都要求「先手刻演算法、再用正式框架」並產出可重複使用的成品(prompt、skill、agent、MCP server)。內容以 Python 為主,搭配 TypeScript、Rust、Julia,並整合 Claude Code / Codex 等 AI 代理作為互動式家教,同時提供多國語系 README 與可下載的 EPUB/PDF 書籍。",
       "highlights": [
-        "511 堂課、20 個階段的巨型課程,結構高度一致(code/docs/outputs 三段式),抽樣程式碼品質扎實,型別標註、docstring 交代設計理由而非流水帳",
-        "強調「先手刻再用框架」的學習方法論,例如 Phase 14 的 agent loop 用純 stdlib Python 手刻 ReAct 迴圈,再對照正式實作",
-        "CI 相當完整:audit_lessons.py、audit_certifications.py、跑遍所有 certifications 的 tests/main.py、quiz 去偏檢查、README 計數自動同步、i18n 翻譯同步檢查",
-        "提供可安裝進 Claude Code / Codex 等 agent 的學習技能(npx skills add),含placement quiz、逐課教學、MCP 與 Agent Skills 專屬路徑,並自動輸出六冊 EPUB/PDF 電子書",
-        "另附獨立的 Claude 官方認證備考學院(4 條認證路線),但聲明與 Anthropic 無關且不保證通過率"
+        "20 個階段、523 堂課,從線性代數一路涵蓋到多代理群、強化學習與正式上線維運",
+        "每堂課都要求先手刻演算法(Build It)再對照正式函式庫(Use It),並產出實際可用的 prompt/skill/agent/MCP artifact",
+        "透過 `npx skills add` 可把課程包裝成 Claude Code、Codex 等 AI 代理可直接呼叫的技能,做為互動家教使用",
+        "CI 相當完整,涵蓋教材一致性稽核、各課程程式的單元測試、靜態網站建置、翻譯同步、題庫去偏誤等多項自動化檢查",
+        "抽查的核心程式碼(如 Phase 14 的 agent loop 範例)風格乾淨、型別標註完整、附帶對應單元測試"
       ],
       "use_cases": [
-        "想從數學與演算法底層系統性學習 AI/LLM/Agent 工程,而非只會呼叫 API 的工程師或學生",
-        "準備 Claude 官方認證考試,需要有結構的讀書計畫與模擬測驗",
-        "想在 Claude Code / Codex 等 coding agent 中安裝一套互動式 AI 家教技能,邊做邊學",
-        "尋找可直接複用的教學素材(prompt、skill、agent、MCP server 範例)做內部訓練或工作坊"
+        "想系統性地把 AI/ML 從數學基礎補到 LLM 與 Agent 工程的自學者",
+        "想要在 Claude Code / Codex 等工具中安裝互動式 AI 家教技能,邊做邊學的工程師",
+        "需要一套教材範例來規劃內部 AI 工程訓練課程或工作坊的講師",
+        "準備 Claude 官方認證考試,尋找對應練習題與實作 lab 的考生"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "文件品質極高,每課都有敘事說明、程式碼與測驗三件套,README 與 CI 對課程數量、翻譯同步做自動化稽核;測試以每課獨立的 main.py/tests.py 為主而非傳統 pytest 覆蓋率報告,但 CI 會逐一實際執行;活躍度極高,今天才剛 push,且有多個排程 workflow 持續維護內容一致性。"
+        "comment": "文件品質極高,每堂課都附有敘事文件、程式碼、輸出成品與測驗,README 結構清楚且有多國語系版本。抽查的多個課程資料夾都附帶對應的 unit test(unittest/tsx --test),CI 流程涵蓋教材稽核、測試執行、網站建置與題庫去偏誤等,自動化程度相當高。近期仍持續有推送(2026-09-07),活躍度高。扣分點在於部分課程的『測試』偏向驗證資料結構而非深度邏輯覆蓋,且如此龐大的內容量難以保證每堂課品質一致。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 5,
-      "verdict": "內容深度、結構嚴謹度與工程化程度都遠超一般教學倉庫,值得立即收藏並實際跟著動手做。",
+      "star_rating": 4,
+      "verdict": "內容量與工程紀律都相當紮實,對想系統性補齊 AI 工程知識的人值得一看,但 523 堂課規模龐大,建議先用內建的分級測驗找到適合自己的起點,而非從頭看到尾。",
       "_mode": "full"
     }
   },
@@ -16198,14 +16247,21 @@
   },
   "ayghri/i-have-adhd": {
     "first_seen": "2026-09-09",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-09": [
         30467,
         656,
+        1,
+        "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "Python"
+      ],
+      "2026-09-10": [
+        34629,
+        4650,
         1,
         "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "Python"
@@ -16297,15 +16353,22 @@
   },
   "openai/plugins": {
     "first_seen": "2026-09-09",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-09": [
         5798,
         105,
         16,
+        "OpenAI Plugins",
+        "JavaScript"
+      ],
+      "2026-09-10": [
+        6198,
+        498,
+        9,
         "OpenAI Plugins",
         "JavaScript"
       ]
@@ -16344,6 +16407,197 @@
       },
       "star_rating": 4,
       "verdict": "作為 OpenAI 官方的 Codex 外掛範例庫,結構清晰且範例豐富,值得想開發或整合 Codex/ChatGPT 外掛的工程師收藏參考,但 codex-security 外掛的核心程式碼以壓縮二進位形式提供,若要安裝使用建議留意此點。",
+      "_mode": "full"
+    }
+  },
+  "Tencent/teamai-cli": {
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-09-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-10": [
+        2980,
+        556,
+        2,
+        "Make Every Team AI Native",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-10",
+    "analysis": {
+      "one_liner": "TeamAI-CLI 是騰訊推出的團隊 AI 治理工具,讓團隊能透過 Git 統一管理並分發 skills、rules、MCP 等 AI agent 資源到 Claude Code、Codex、Cursor 等多種工具。",
+      "summary": "這個 CLI 解決的是「每個成員的 AI agent 各自為政、經驗無法共享」的問題:團隊管理者透過 push/review/pull 的 Git 流程統一分發 skills、rules、hooks、MCP 設定,並額外提供知識回憶(recall)、程式碼知識圖譜(codebase graph)與團隊使用儀表板等進階功能,同時支援十種以上的 AI coding agent。",
+      "category": "devtool",
+      "highlights": [
+        "同時支援 Claude Code、Codex、Cursor、CodeBuddy、OpenCode 等十種以上 AI agent,統一管理 skills/rules/hooks/MCP 分發",
+        "以 Git push → review → merge → pull 流程做團隊資源同步,並可訂閱其他團隊或組織的共享資源庫",
+        "內建 friction 偵測機制,在 session 結束時自動判斷是否值得記錄經驗並提示分享至團隊知識庫",
+        "以 tree-sitter WASM 解析 TypeScript/Python/Go 原始碼建構跨repo 程式碼知識圖譜,強化知識檢索的精準度",
+        "231+ 個測試檔涵蓋單元/E2E測試,CI 在多作業系統(Ubuntu/macOS)與多 Node 版本矩陣下執行型別檢查與測試"
+      ],
+      "use_cases": [
+        "公司內多團隊統一治理與分發 AI coding agent 的 skills、rules、MCP 設定,避免各自維護造成落差",
+        "希望把團隊在 AI 協作過程中踩過的坑(debug 經驗、部署設定)沉澱為可搜尋知識庫,供全員 AI session 自動查詢",
+        "需要對團隊 AI 使用狀況(token 用量、介入率、session 品質)做週報與儀表板追蹤的工程管理者",
+        "想針對既有程式碼庫建立跨 repo 依賴知識圖譜,提升 AI agent 對大型 codebase 的理解與回答品質"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整,README、usage-guide 皆提供中英雙語版本,並附設計文件(docs/designs)說明架構決策;測試涵蓋單元測試與大量 e2e 情境(如 scope isolation、hooks 安全性、多 provider 相容性),CI 以 Ubuntu/macOS × Node 20/22 矩陣執行並使用 `npm ci --ignore-scripts`;CHANGELOG 詳細對應 issue/PR 編號,提交與版本發布(2026-09-09 最新)頻率高,活躍度佳。抽查的核心程式碼(exec、hook-dispatch、clone、api-key)風格一致,並有針對非顯而易見設計決策(如逾時機制、遷移安全性)的精簡註解,展現良好工程紀律。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "文件、測試、CI 與程式碼品質皆屬上乘,且解決的是團隊 AI 協作治理這個尚未被充分解決的真實痛點,值得立即關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "earthtojake/text-to-cad": {
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-09-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-10": [
+        15032,
+        124,
+        5,
+        "A library of agent skills for CAD, CAE and CAM",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-10",
+    "analysis": {
+      "one_liner": "一套讓 AI agent 具備 CAD/CAE/CAM 能力的技能庫,可從文字或圖片生成 STEP/STL/URDF 等工程檔案。",
+      "summary": "text-to-cad 是一組 agent skills 的集合,搭配自研的 cadgen Python 套件,讓 Claude Code、Codex、Grok 等 AI agent 可以直接生成、檢查、切片與交接 CAD 與機器人描述檔案。",
+      "category": "ai-ml",
+      "highlights": [
+        "涵蓋 CAD、DXF、URDF、SRDF、SDF、G-code 切片等技能",
+        "核心 cadgen 套件程式碼品質高",
+        "測試涵蓋量大,CI 同時跑 Linux 與 Windows",
+        "支援 Claude Code、Codex、Grok Build 外掛安裝"
+      ],
+      "use_cases": [
+        "生成 3D CAD 模型並匯出 STEP/STL",
+        "自動產生機器人描述檔"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與測試品質優良"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "值得關注",
+      "_mode": "full"
+    }
+  },
+  "liquidslr/system-design-notes": {
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-09-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-10": [
+        18001,
+        1397,
+        8,
+        "Notes of the book System Desgin Interview - An Insider's Guide",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-09-10",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "彙整《System Design Interview》(Vol 1、2)書籍內容的系統設計讀書筆記",
+      "summary": "此專案是根據 Alex Xu 所著《System Design Interview - An Insider's Guide》第一、二冊整理的讀書筆記,涵蓋 28 個經典系統設計主題(如速率限制器、一致性雜湊、URL 縮短服務、聊天系統、YouTube、Google Drive 等),每章附有延伸閱讀資源連結,方便讀者快速複習系統設計面試常考主題。",
+      "highlights": [
+        "涵蓋 28 個章節,對應書籍完整目錄結構,方便對照原書複習",
+        "每個主題附上延伸閱讀資源(如 Amazon Dynamo、Google BigTable、Discord 架構文等一手技術文獻)",
+        "另有外部平台 pagefy.io 提供更完整的筆記閱讀體驗",
+        "作為系統設計面試準備的輔助資源,對求職者有實用價值"
+      ],
+      "use_cases": [
+        "準備系統設計面試(尤其對照 Alex Xu 書籍複習)的工程師",
+        "想快速瀏覽系統設計經典主題摘要與延伸資源的學習者",
+        "作為 awesome list 或面試準備資源清單的補充連結"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 1,
+        "activity": 3,
+        "comment": "資源彙整類,測試不適用。README 結構清楚,章節目錄完整,但作者自述「仍在整理中」,部分章節內容深度未知(僅有目錄連結,無法從 README 判斷實際筆記品質)。最後推送時間為 2026-08-12,約一個月前,更新頻率中等。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "對準備系統設計面試者是實用的複習索引與資源清單,但屬於筆記彙整而非原創技術內容,建議搭配原書或作者的 pagefy.io 網站一起使用。",
+      "_mode": "light"
+    }
+  },
+  "vastsa/PI-Desktop": {
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-09-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-10": [
+        1665,
+        417,
+        12,
+        "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-10",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "本地優先的 AI 編碼代理桌面應用,結合 Electron、Rust 主機核心與可插拔的 pi Agent Harness。",
+      "summary": "PI-Desktop 是一個獨立桌面工作區,讓 AI 編碼代理(Agent)在其中操作專案、瀏覽檔案、執行指令與審核修改,而不綁定特定編輯器或終端機。它強調「本地優先」:對話、設定、API 金鑰皆存於本機,不強制經過雲端中繼,並支援多家模型供應商與外掛擴充系統。",
+      "highlights": [
+        "Electron 渲染層 + Rust host-core(權限、檔案系統、SQLite、金鑰)+ pi Agent Sidecar 三層架構,職責分離明確",
+        "支援 Agent / Plan / Goal 三種代理模式,對高風險工具(Write/Edit/Bash)強制走權限審核關卡",
+        "API 金鑰以 AES-256-GCM 加密存於本機,並有針對舊格式相容性、nonce 唯一性、GCM 認證失敗等情境的單元測試",
+        "可安裝外掛(.piplug)延伸工具、面板、MCP 伺服器、Subagent,並提供本地 MCP 控制端點供外部代理操控桌面",
+        "測試涵蓋範圍極廣(desktop 端 244+ 支 *.test.mjs,另有 Rust cargo test 與多支 E2E 腳本)"
+      ],
+      "use_cases": [
+        "需要一個不綁定特定編輯器、可長時間執行多個代理工作階段的桌面工作區",
+        "希望自帶模型(OpenAI/Anthropic/本地 Ollama/LM Studio 等)並保留 API 金鑰完全在地端的開發者",
+        "想要在大型或高風險變更前先讓代理產出計畫並經人工核准後再執行(Plan/Goal 模式)",
+        "想從 Claude Code、Codex、OpenCode 等既有工具匯入既有工作階段"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(README、雙語文件、docs/spec 下細分至 08 個章節的規格文件、ADR 決策紀錄),原始碼中的註解多用於解釋『為什麼』而非『做什麼』,顯示出成熟的工程紀律。測試覆蓋率高,前端有 244+ 支 node:test 單元測試,另有多支 E2E 腳本(plan、supervision、subagents、electron-boot),Rust host-core 也有對應 cargo test,並針對加密格式相容性等邊界情境撰寫測試。CI 涵蓋 JS 建置/型別檢查/lint/測試與 Rust 測試,並有獨立的 release 與 linux-package workflow。專案仍處於 Early Preview 版本(0.14.x),但推送與提交頻率高,活躍度佳。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝生命週期腳本 apps/desktop/package.json 的 postinstall 執行 `electron-builder install-app-deps`,這是 Electron 專案常見且必要的原生依賴修補步驟,非外部下載執行",
+          "應用程式可選擇性開啟本地 MCP 控制端點(環境變數 PI_DESKTOP_MCP_CONTROL=1),該端點僅綁定 loopback 並需搭配 bearer token,但官方文件明確指出一旦啟用,會授予呼叫端與桌面應用相同的操作權限(`confirm: true` 並非使用者提示),使用者若啟用此功能應了解其權限範圍",
+          "外掛(plugin)機制雖有權限隔離,但官方文件也坦承外掛是「使用者信任的程式碼」而非完整作業系統沙箱,安裝外掛需自行評估來源可信度"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "架構清晰、測試與文件都相當扎實,對想要在地端掌控 AI 編碼代理工作流程的開發者值得一試,但仍屬 Early Preview,API 與外掛沙箱化尚在演進中。",
       "_mode": "full"
     }
   }

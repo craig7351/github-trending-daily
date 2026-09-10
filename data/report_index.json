@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-10",
+    "analyzed": 7,
+    "cached": 6,
+    "deferred": 0,
+    "top_name": "Tencent/teamai-cli",
+    "top_rating": 5
+  },
+  {
     "date": "2026-09-09",
     "analyzed": 4,
     "cached": 12,
