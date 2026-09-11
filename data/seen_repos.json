@@ -873,50 +873,56 @@
   },
   "diegosouzapw/OmniRoute": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
+    "last_seen": "2026-09-11",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         28841,
         1841
+      ],
+      "2026-09-11": [
+        64240,
+        626,
+        11,
+        "Never stop coding. Free MIT AI gateway: one endpoint, 352 providers (150+ free), 1200+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 550+ contributors",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-07-25",
+    "last_analyzed": "2026-09-11",
     "analysis": {
+      "one_liner": "一個免費的 AI 閘道器,透過單一端點聚合 352 家供應商、1200+ 模型,主打零成本與自動容錯轉移。",
+      "summary": "OmniRoute 是一個 MIT 授權的 AI Gateway,將 Claude、GPT、Gemini、DeepSeek、Kimi 等上百家供應商(含 150+ 免費方案)統一成單一 API 端點,並提供配額感知自動切換、RTK+Caveman 壓縮技術宣稱可節省 15-95% token 用量。可整合進 Claude Code、Cursor、Cline、Copilot 等主流 AI 編碼工具,並提供 CLI、Docker、npm、桌面版/PWA 等多種安裝方式。",
       "category": "ai-ml",
-      "one_liner": "免費開源 AI 閘道,單一端點串接 290+ 供應商、500+ 模型,自動容錯與省 token",
-      "summary": "OmniRoute 是一個 MIT 授權的 AI 閘道(gateway)工具,整合 290 家以上 AI 供應商(其中 90+ 提供免費額度)與 500+ 模型,透過單一 API 端點統一存取,並支援 Claude Code、Cursor、Cline、Copilot 等主流編碼工具。內建配額感知自動容錯移轉(quota-aware auto-fallback)與 RTK+Caveman 壓縮技術,號稱可省下 15-95% token 用量,同時支援 MCP/A2A 協議及桌面/PWA 用戶端。",
       "highlights": [
-        "彙整 43 個供應商池、516 個模型的免費額度,號稱每月約 1.53B 免費 token",
-        "RTK+Caveman 堆疊式壓縮技術,平均省下約 89% token 用量",
-        "支援 MCP、A2A 協議,並提供 Desktop/PWA 用戶端",
-        "可直接整合 Claude Code、Codex、Cursor、Cline、Copilot 等主流編碼工具",
-        "聲稱由 500+ 貢獻者維護,README 提供 43 種語言在地化版本"
+        "單一端點串接 352 家 AI 供應商、1312 個模型 ID,並附有免費額度目錄(/dashboard/free-tiers)與方法論文件",
+        "宣稱 RTK + Caveman 疊加壓縮技術可節省平均約 89% token 用量",
+        "支援 MCP、A2A 協定,並相容 Claude Code、Codex、Cursor、Cline、Copilot 等主流 AI 編碼助手",
+        "提供 npm、Docker Hub、Electron 桌面版等多元安裝管道,並有 51 種語言的 README 翻譯",
+        "今日登上 GitHub Trending 第 11 名,單日新增 626 星,總星數已達 6.4 萬"
       ],
       "use_cases": [
-        "開發者想免費疊加多家 LLM 供應商額度,避免單一服務額度用盡",
-        "為 Claude Code / Cursor / Cline 等 AI 編碼工具加上自動容錯與省 token 的中介層",
-        "需要單一端點管理多組 API 金鑰與模型路由的團隊或個人專案",
-        "希望降低 LLM API 呼叫成本、延長免費試用額度的使用場景"
+        "想在多個 AI 編碼工具(Cursor、Cline、Copilot 等)間共用一個 API 端點、避免重複設定金鑰的開發者",
+        "希望善用各家供應商免費額度、降低 LLM 使用成本的個人開發者或小團隊",
+        "需要配額用盡時自動容錯轉移至其他供應商的生產環境應用"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 內容詳盡、多語系齊全且更新頻繁(單日推送、trending 榜快速竄升),但整體行銷語氣濃厚,充斥大量徽章與誇張數字(如 1.53B 免費 token),且僅能從 README 評估,無法看到實際程式碼與測試覆蓋率,可信度需自行驗證。"
+        "comment": "README 內容非常豐富,含目錄、圖表、多語言翻譯與詳細功能說明,文件完整度高;但整體風格偏行銷導向(大量徽章、社群連結、星數宣傳),實際程式碼品質與測試涵蓋率無法從 README 判斷,僅能就文件面給分。專案推送頻率高、Trending 動能強,顯示開發活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 未提供明確的 curl | bash 類一鍵安裝指令,主要透過 npm/Docker Hub 套件安裝,風險相對可控",
-          "此工具本質為集中式 AI API 閘道,使用者需將多家供應商的 API 金鑰集中提供給同一服務,存在金鑰集中管理與第三方信任風險,建議正式使用前確認金鑰儲存與私有化部署方式"
+          "README 截斷部分未顯示具體安裝指令(如是否有 curl | bash 模式),僅提及 npm、Docker、Electron 等安裝方式,無法從目前內容判斷風險",
+          "作為 AI 閘道器,使用時需要集中管理多家供應商的 API 金鑰,建議使用前確認金鑰儲存與傳輸方式,但本評估僅based於 README,未進行原始碼審查"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念實用且成長動能強勁,值得追蹤試用,但誇張的免費額度數字與行銷式 README 建議實測驗證後再導入正式環境。",
+      "verdict": "若你需要整合多家 AI 供應商並善用免費額度,這個專案功能豐富、社群活躍,值得一試,但因僅讀 README 尚無法驗證程式碼品質與安全性,建議實際使用前先做基本盡職調查。",
       "_mode": "light"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "OtterMind/Chat2DB": {
@@ -1088,8 +1094,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 2,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1161,6 +1167,13 @@
         3,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-11": [
+        284700,
+        732,
+        3,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-04",
@@ -1199,8 +1212,8 @@
       "verdict": "如果你正在用多種 AI coding agent 且想要一套可落地的「代理人開發 SOP」,這個專案的方法論設計與跨平台相容工程值得研究,但因缺乏自動化 CI,大規模採用前建議自行驗證各平台外掛的實際行為。",
       "_mode": "full"
     },
-    "total_days_on_trending": 11,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 12,
+    "consecutive_days_on_trending": 3
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -7570,10 +7583,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -7635,6 +7648,13 @@
         36594,
         2249,
         6,
+        "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-09-11": [
+        37755,
+        1294,
+        8,
         "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -9556,10 +9576,10 @@
   },
   "AlexsJones/llmfit": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-18",
+    "last_seen": "2026-09-11",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-18": [
         32278,
@@ -9567,38 +9587,45 @@
         6,
         "Hundreds of models & providers. One command to find what runs on your hardware.",
         "Rust"
+      ],
+      "2026-09-11": [
+        35733,
+        258,
+        6,
+        "Hundreds of models & providers. One command to find what runs on your hardware.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-08-18",
+    "last_analyzed": "2026-09-11",
     "analysis": {
       "category": "cli",
-      "one_liner": "偵測你的硬體規格,幫你從數百個 LLM 模型中挑出真正能跑得動、跑得快的那些。",
-      "summary": "llmfit 是用 Rust 寫的終端機工具,會偵測本機的 RAM、CPU、GPU/VRAM 與可用的推論後端(Ollama、llama.cpp、MLX、Docker Model Runner、LM Studio 等),針對模型資料庫中的每個模型計算記憶體是否放得下、量化後速度估計、品質與情境長度四個面向的分數,排序出最適合當前硬體的模型。近期版本加入了「跑分並回報」機制,使用者可在 TUI 中直接把自己機器上量測到的真實 tok/s 提交成 PR,取代原本靠公式估算的數字。",
+      "one_liner": "偵測你的硬體規格,告訴你哪些開源 LLM 模型真的跑得動的 Rust 命令列工具與 TUI。",
+      "summary": "llmfit 會掃描使用者的 CPU、RAM、GPU/VRAM 與加速後端(CUDA、Metal、ROCm、SYCL 等),比對內建的數百款模型資料庫(含量化格式 GGUF/AWQ/GPTQ/EXL2),依記憶體容量、推論速度、品質與情境長度四個面向評分,推薦真正能在使用者機器上順跑的模型。同時提供互動式 TUI、REST API 與 Docker 部署方式,並支援社群基準測試回饋機制以校正效能估算。",
       "highlights": [
-        "互動式 TUI 加傳統 CLI 雙模式,支援 multi-GPU、MoE 架構與動態量化選擇的評分邏輯",
-        "社群跑分機制:使用者可在本機測出真實 tok/s 後直接從 TUI 產生 PR,量測值取代估算值",
-        "CI 涵蓋 ubuntu/macos/windows 三平台 + clippy + rustfmt + Python(llmfit-python)獨立測試與型別檢查,流程成熟",
-        "README 明確寫出與 llm-checker 等替代方案的差異與取捨,態度誠實",
-        "Windows 執行檔透過 SignPath 做 Authenticode 簽章,發布流程有明確審核步驟"
+        "硬體自動偵測涵蓋 CPU/RAM/多 GPU/統一記憶體架構,並針對 AMD APU 的 UMA carveout、macOS 記憶體回報異常等實際硬體怪異行為做了修正",
+        "評分引擎採用可調校的記憶體頻寬模型,並結合社群實測 tok/s 數據持續校準估算準確度",
+        "支援 TUI、CLI、REST API、Docker、Python (uv/pip) 等多種使用型態,文件齊全(多國語言 README、docs/ 詳細指南)",
+        "CI 涵蓋 Rust 三平台矩陣測試、clippy、rustfmt、Python lint/type check,並有 JSON Schema 驗證模型資料庫的自動化測試",
+        "Windows 發行版本經 SignPath 簽章,install.sh 具備 SHA256 checksum 驗證機制"
       ],
       "use_cases": [
-        "本地部署 LLM 前,快速確認手上這台筆電/工作站能流暢跑哪些模型與量化版本",
-        "多 GPU 或 Apple Silicon 統一記憶體環境下,估算模型可用的情境長度與速度",
-        "透過 CLI JSON 輸出串接到腳本或 agent,自動化選型與下載推薦模型",
-        "在 Kubernetes/Docker 節點上以 recommend --json 批次回報各節點硬體適配結果"
+        "在本機挑選能跑得動的開源 LLM 模型,避免下載後才發現記憶體不足或速度太慢",
+        "混合異質硬體(多 GPU、APU 統一記憶體)環境下評估模型部署可行性",
+        "透過 REST API 或 Docker 整合進自動化部署流程或 agent 工具鏈,程式化取得硬體適配建議",
+        "貢獻或查詢社群基準測試數據,取得比理論估算更準確的實測 tok/s 參考"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "程式碼本身文件化程度很高,註解會引用實際 issue 編號說明修正原因(例如 Windows APU UMA carveout、macOS 可用記憶體回報失敗等真實案例),顯示對邊界情況的用心處理。llmfit-core 內部有 500 多個測試函式,並有獨立的 tests/ 目錄做 schema 驗證與 CLI smoke test,CI 三平台矩陣加上 clippy/fmt/Python 檢查一應俱全。專案更新頻繁(最近一次 push 在分析當日),文件涵蓋 README(三語言)、docs/ 子目錄的詳細指南與 CHANGELOG。"
+        "comment": "程式碼品質相當紮實:核心邏輯(fit.rs、hardware.rs)有清楚的註解說明設計取捨與已知硬體例外情況(如特定 issue 編號的修正),測試涵蓋 schema 驗證、硬體 profile、CLI smoke test。CI 使用 GitHub Actions 對 Rust 三平台(Linux/macOS/Windows)加上 Python 子專案做完整測試、clippy、rustfmt、ruff、type check,近期仍持續有推送與 weekly model update 排程,活躍度很高。文件除英文外還有日文、中文版本,並有獨立 docs/ 目錄詳述架構與使用方式。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "工程品質扎實、文件完整、CI 嚴謹,對於想在本機跑 LLM 卻不確定硬體吃不吃得消的開發者,是值得立刻安裝把玩的實用工具。",
+      "verdict": "工程品質與文件完整度都在水準之上,對於想快速判斷「這台機器能跑什麼模型」的開發者相當實用,值得關注與嘗試。",
       "_mode": "full"
     }
   },
@@ -11100,10 +11127,10 @@
   },
   "freestylefly/awesome-gpt-image-2": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-24": [
         12722,
@@ -11152,6 +11179,13 @@
         705,
         10,
         "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "JavaScript"
+      ],
+      "2026-09-11": [
+        30841,
+        962,
+        9,
+        "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
         "JavaScript"
       ]
     },
@@ -12588,10 +12622,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -12613,42 +12647,48 @@
         2,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
+      ],
+      "2026-09-11": [
+        24305,
+        1762,
+        2,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-28",
+    "last_analyzed": "2026-09-11",
     "analysis": {
-      "one_liner": "在瀏覽器裡打造一座「間諜衛星模擬器」,但資料全部來自公開來源的即時 3D 地球儀。",
-      "summary": "God's Eye View 是一個純前端(Vanilla JS + CesiumJS + Vite)打造的即時地理空間情報視覺化工具,把即時航班、船舶、衛星、地震、交通、公開監視器等公開資料源整合到一個逼真的 3D 地球儀上,並支援語音操控攝影機與圖層。專案定位為探索/學習用的開源基礎,而非硬化過的正式服務,所有需要密鑰的第三方請求都透過 Vite 開發伺服器代理,只有 Google Maps 與 Cesium ion 兩把公開型金鑰會落到瀏覽器端。",
+      "one_liner": "在瀏覽器裡打造一顆可即時互動的 3D 地球,整合航班、船舶、衛星、地震、監視器等公開資料,模擬「間諜衛星視角」。",
+      "summary": "God's Eye View 是一個以 CesiumJS 打造的開源專案,將 OpenSky、AISStream、CelesTrak、USGS、NASA FIRMS 等多種公開即時資料源整合到一個照片級真實感的 3D 地球介面上,讓使用者可以追蹤飛機、船隻、衛星、野火、地震與公共監視器畫面。專案還內建 OpenAI Realtime API 驅動的語音控制代理,可用自然語言操作鏡頭、繪製標註、查詢即時圖層狀態。所有需要私密金鑰的 API 呼叫都經由伺服器端代理處理,瀏覽器端僅接觸 Google Maps 與 Cesium ion 金鑰。",
       "category": "web",
       "highlights": [
-        "整合 13 種即時圖層(航班、船舶、衛星、地震、交通、監視器、電台、消防等),其中 10 種完全免金鑰即可使用",
-        "內建 OpenAI Realtime 語音代理,可用自然語言操控鏡頭、標註地圖、查詢即時圖資,共 28 個語音工具",
-        "SGP4 衛星軌道推算、真實大地水準面高度貼合地形、螢幕空間航向投影等紮實的圖形工程細節",
-        "伺服器端代理刻意做了 SSRF 防護(CCTV 代理只抓白名單網址)、DNS 私網位址過濾、OpenSky 用量治理器等資安考量",
-        "155+ 個單元測試檔案,涵蓋資料轉換、渲染策略、語音工具等核心邏輯"
+        "整合 13 種即時/近即時資料圖層(航班、船舶、衛星、地震、CCTV、電台、共享單車等),其中 11 種完全免金鑰即可使用",
+        "OpenAI Realtime API 驅動的語音代理,提供 28 種語音工具,可用口語操作鏡頭運鏡、繪製地理標註、查詢實體資訊",
+        "程式碼與測試幾乎 1:1 對應,168+ 個 *.test.mjs 檔案涵蓋資料轉換、幾何運算、UI 策略等核心邏輯",
+        "CI 涵蓋 Linux 與 Windows 雙平台、多個 Node 版本矩陣,並有專門的 Pinokio 安裝路徑測試",
+        "明確劃出倫理界線:專案聲明不支援具名人物搜尋或臉部辨識等追蹤個人的功能"
       ],
       "use_cases": [
-        "學習如何在瀏覽器端用 CesiumJS 組合多種即時地理空間資料源並做效能治理(快取、配額、降級)",
-        "OSINT/GEOINT 愛好者用來即時觀察全球航班、船舶、衛星、突發事件等公開訊號",
-        "作為個人專案的起點,擴充自訂的圖層或資料來源(專案明確歡迎 PR)",
-        "研究如何安全地在客戶端應用中代理第三方 API 金鑰(server-side broker 模式)"
+        "學習如何將多個公開地理空間資料源(ADS-B、AIS、TLE 衛星軌道、USGS 地震)整合進 CesiumJS 3D 地球",
+        "研究如何安全地在前端應用中代理需要私密金鑰的第三方 API 呼叫(SSRF 防護、金鑰不落地瀏覽器)",
+        "作為 OSINT / GEOINT 教學或展示工具,理解開源公開資料能拼湊出多少即時態勢感知",
+        "參考如何用 OpenAI Realtime API 打造具備場景感知能力的語音互動代理"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "README 與 SECURITY.md、DATA_SOURCES.md 等文件寫得極為詳盡,對每個資料源的授權狀態、成本、風險都有清楚標示;程式碼內附有豐富的 JSDoc 註解與設計理由說明。測試檔案數量龐大(155+),涵蓋多數核心邏輯模組,但採用自訂測試跑者(scripts/run-unit-tests.mjs)而非標準框架,且未見 .github/workflows 下的 CI 設定,自動化驗證流程不明。專案剛開源、單日暴漲近 2000 星,活躍度高但屬個人維護的早期開源狀態。"
+        "comment": "文件非常詳盡(README、SECURITY.md、DATA_SOURCES.md、CURRENT-STATE.md 分工清楚),測試檔案數量與原始碼模組幾乎一一對應,CI 涵蓋跨平台與多 Node 版本並包含 Pinokio 安裝流程驗證,顯示工程紀律良好;抽樣程式碼可讀性高、函式職責單一且附有恰當的 JSDoc 註解。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "Vite 開發伺服器會把 Google Maps API 金鑰與 Cesium ion token 透過 define 注入前端 bundle,屬專案文件中明確說明且建議使用者在對應平台限制網域/權限的公開型金鑰",
-          "若使用者選擇以 --host 0.0.0.0 開放區網存取,同區網任何人都能透過該伺服器代理消費其 OpenAI/Google/OpenSky/AISStream/TomTom/FIRMS 等金鑰額度,專案文件已明確警告此風險並提供限流參數,預設仍綁定 localhost",
-          "未發現 npm 生命週期腳本(postinstall 等)執行外部下載或 curl|bash 型態的安裝流程,scripts/ 下的 shell 腳本均為本機開發輔助用途"
+          "repo 內含 pinokio/install.js,會執行 node scripts/pinokio-install.mjs 並將多組 API 金鑰(OpenAI、Google Maps、AISStream 等)以環境變數形式轉發給子行程,屬於一鍵安裝器常見模式,金鑰仍由使用者自行輸入且不會外傳至第三方伺服器",
+          "README 與 SECURITY.md 明確說明:若將開發伺服器以 --host 0.0.0.0 分享到區網,會讓區網內任何人都能透過你的伺服器代理去消耗你設定的付費 API 金鑰,專案本身有提示使用者設定流量限制與帳單警示,但這屬於使用者需自行注意的部署風險,而非程式碼缺陷"
         ]
       },
-      "star_rating": 4,
-      "verdict": "工程紮實、文件透明、資安考量到位的開源地理空間情報視覺化專案,值得瀏覽器 3D 圖形或 OSINT 愛好者一探究竟,但仍是個人維護的早期專案,非正式生產服務。",
+      "star_rating": 5,
+      "verdict": "工程品質與文件完整度在同類「一人打造的爆紅專案」中相當罕見,值得花時間研究其資料整合架構與測試策略。",
       "_mode": "full"
     }
   },
@@ -13210,10 +13250,10 @@
   },
   "THU-MAIC/OpenMAIC": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-09-02",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-30": [
         22267,
@@ -13240,6 +13280,13 @@
         29486,
         3128,
         3,
+        "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "TypeScript"
+      ],
+      "2026-09-11": [
+        35313,
+        837,
+        13,
         "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "TypeScript"
       ]
@@ -16247,10 +16294,10 @@
   },
   "ayghri/i-have-adhd": {
     "first_seen": "2026-09-09",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-09": [
         30467,
@@ -16262,6 +16309,13 @@
       "2026-09-10": [
         34629,
         4650,
+        1,
+        "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "Python"
+      ],
+      "2026-09-11": [
+        38313,
+        3882,
         1,
         "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "Python"
@@ -16412,15 +16466,22 @@
   },
   "Tencent/teamai-cli": {
     "first_seen": "2026-09-10",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-10": [
         2980,
         556,
         2,
+        "Make Every Team AI Native",
+        "TypeScript"
+      ],
+      "2026-09-11": [
+        3787,
+        841,
+        5,
         "Make Every Team AI Native",
         "TypeScript"
       ]
@@ -16505,15 +16566,22 @@
   },
   "liquidslr/system-design-notes": {
     "first_seen": "2026-09-10",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-10": [
         18001,
         1397,
         8,
+        "Notes of the book System Desgin Interview - An Insider's Guide",
+        ""
+      ],
+      "2026-09-11": [
+        18777,
+        900,
+        7,
         "Notes of the book System Desgin Interview - An Insider's Guide",
         ""
       ]
@@ -16551,15 +16619,22 @@
   },
   "vastsa/PI-Desktop": {
     "first_seen": "2026-09-10",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-10": [
         1665,
         417,
         12,
+        "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+        "TypeScript"
+      ],
+      "2026-09-11": [
+        2297,
+        624,
+        16,
         "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
         "TypeScript"
       ]
@@ -16598,6 +16673,254 @@
       },
       "star_rating": 4,
       "verdict": "架構清晰、測試與文件都相當扎實,對想要在地端掌控 AI 編碼代理工作流程的開發者值得一試,但仍屬 Early Preview,API 與外掛沙箱化尚在演進中。",
+      "_mode": "full"
+    }
+  },
+  "alsk1992/CloddsBot": {
+    "first_seen": "2026-09-11",
+    "last_seen": "2026-09-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-11": [
+        1647,
+        277,
+        4,
+        "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-11",
+    "analysis": {
+      "category": "app",
+      "one_liner": "一個以 Claude 驅動、可自架的全市場自動化交易終端。",
+      "summary": "CloddsBot 是以 TypeScript 打造的開源 AI 交易代理,整合多個預測市場、期貨交易所與鏈上 DeFi 協議,透過多種通訊平台以自然語言操作。",
+      "highlights": [
+        "功能涵蓋通訊管道、預測市場、期貨交易所與大量技能模組",
+        "內建風控層,包含VaR、斷路器與Kelly動態部位大小",
+        "憑證加密儲存並保留舊版格式相容邏輯",
+        "支援代理間USDC支付與代理論壇市集",
+        "CI包含型別檢查、測試、build與相依漏洞掃描"
+      ],
+      "use_cases": [
+        "個人自架的自動化量化交易終端",
+        "多代理策略回測與風控實驗",
+        "代理對代理支付協定的實作參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件齊全,程式碼結構清晰,測試與CI完整,但作為短時間內完成的大型專案仍有待長期驗證。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "postinstall腳本用途透明且有詳細註解,未發現可疑外部連線",
+          "install.sh的curl bash安裝方式僅呼叫npm install",
+          "專案需要使用者提供交易所API金鑰與私鑰,涉及真實資金操作風險"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能範疇與工程完整度突出,值得關注,但正式資金部署前建議先以dry-run模式充分驗證。",
+      "_mode": "full"
+    }
+  },
+  "armory3d/armorpaint": {
+    "first_seen": "2026-09-11",
+    "last_seen": "2026-09-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-11": [
+        4419,
+        72,
+        10,
+        "Graphics Creation Tools",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-09-11",
+    "analysis": {
+      "one_liner": "ArmorPaint 是一套開源的 3D PBR 貼圖繪製工具,以自研的輕量 C 引擎打造,對應 Blender/Substance Painter 的紋理繪製工作流程。",
+      "summary": "此專案為桌面應用程式,提供類似 Substance Painter 的即時 3D PBR 紋理繪製功能,底層採用作者自研的 C 語言 3D 引擎(內部代號 Iron)而非商用引擎,涵蓋渲染後端(Direct3D12/Vulkan/Metal/WebGPU)、UI、物理、音訊等自製模組。原始碼公開且可自行編譯,官方預編譯版本需付費以支持專案資金,但原始碼本身完全開放。",
+      "category": "app",
+      "highlights": [
+        "自研輕量 C 3D 引擎(sources/ 下含 GPU 抽象層、UI、物理、音訊、壓縮等模組),不依賴大型第三方引擎",
+        "支援多平台建置:Windows(Direct3D12)、Linux(Vulkan)、macOS/iOS(Metal)、Android(Vulkan)、WebAssembly(WebGPU)",
+        "外掛系統完整,plugins/ 內含 FBX、glTF、SVG、TIFF、PSD 匯入以及 UV 展開等實用模組",
+        "自製 Shader 語言 Kong(.kong 檔)並提供跨平台編譯輸出(SPIR-V/HLSL/Metal/WGSL)",
+        "官方 CI 針對三大平台(Vulkan/Metal/Direct3D12)各自建置驗證,確保跨平台編譯可用性"
+      ],
+      "use_cases": [
+        "3D 美術/遊戲開發者需要免費開源的 PBR 貼圖繪製工具",
+        "對圖形引擎架構、自製 Shader 語言或跨平台 GPU 抽象層設計有興趣的工程師研究學習",
+        "想要客製化貼圖工具功能或撰寫外掛(C 語言)整合到自己的美術流程"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 2,
+        "activity": 5,
+        "comment": "程式碼風格一致、模組化清晰,核心引擎程式碼(engine.c 等)可讀性佳、命名規範。README 對建置流程說明詳盡,但 base/tests 內僅為手動示範用的小型專案(cube/fall/triangle),並非自動化單元測試,缺乏正式測試覆蓋。CI 僅驗證三平台可成功編譯,未執行任何測試案例。專案活躍度極高,近期(2026-09-09)仍持續推送,commit 頻率密集。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "repo 內含大量已編譯的 shader 二進位檔(.cso/.spirv/.metal),這是圖形引擎專案常見的建置產物快取方式,並非隱藏的原始碼",
+          "sources/libs/minic.c 是一套內嵌的迷你 C 直譯器(對應 with_eval 建置選項,推測用於材質節點腳本功能),為官方文件記載的既有功能,非隱藏或混淆程式碼",
+          "未發現 npm/pip 等套件管理的安裝期腳本執行、curl|bash 型安裝指令,或原始碼中的可疑 base64/hex payload"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對 3D 美術工作者是實用的免費開源貼圖工具,對工程師而言則是研究自製圖形引擎與跨平台 Shader 編譯架構的優質範例,值得關注但需注意缺乏正式自動化測試。",
+      "_mode": "full"
+    }
+  },
+  "JustVugg/colibri": {
+    "first_seen": "2026-09-11",
+    "last_seen": "2026-09-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-11": [
+        27465,
+        98,
+        12,
+        "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-09-11",
+    "analysis": {
+      "one_liner": "用純 C、零依賴的推論引擎,把 744B~2.8T 參數的 MoE 大模型「串流」到一般人買得起的硬體上跑。",
+      "summary": "Colibrì 把 VRAM、RAM、NVMe 磁碟視為同一個記憶體層級,只讓 MoE 模型真正會用到的少數 expert(專家)常駐記憶體,其餘從磁碟隨選串流讀取,搭配路由熱度學習快取、批次合併讀取、CPU/GPU overlap 等技巧,讓 744B 參數的 GLM-5.2 能在 25GB RAM 的筆電上跑起來。專案支援八個模型家族(GLM、Kimi K3、DeepSeek V4 Flash、Qwen 系列、OLMoE 等),每個模型是獨立的單一 C 檔案引擎,共用底層 header(safetensors 讀取、tokenizer、expert cache)。",
+      "category": "ai-ml",
+      "highlights": [
+        "核心思路是把權重當成「JIT 編譯的熱路徑」:用實測的路由命中率決定哪些 expert 常駐哪個記憶體層級,而非把整個模型硬塞進 RAM/VRAM",
+        "CI 極為紮實:多平台(Linux/macOS/Windows)建置、ASan+UBSan、CUDA/HIP/Vulkan 語法檢查、ARM NEON 核對、以及對 transformers oracle 做 token-exact 驗證,確保優化不會偷偷改變模型輸出語意",
+        "原始碼註解大量記錄「歷史踩過的坑」並附 issue 編號,例如 MTP 頭必須是 int8 否則 draft acceptance 掉到 0%、int4 量化容器選錯導致無限生成迴圈等,顯示維護者對正確性與可重現性要求很高",
+        "README 誠實揭露各項優化的限制與尚待驗證的假設(例如 O_DIRECT 依硬碟而異、推測解碼在低 expert 命中率下反而變慢),而非單純堆疊行銷式效能數字",
+        "雙硬碟鏡像串流、叢集模式(多台 Mac 分擔 expert 運算)等進階功能都有對應的驗證機制(SHA-256 驗證、位元一致性檢查)"
+      ],
+      "use_cases": [
+        "研究者或愛好者想在自己家用高階工作站/多張消費級 GPU 上跑開源前沿 MoE 大模型,而非透過 API 租用",
+        "系統/推論工程師想研究記憶體分層排程、expert 串流、推測解碼等推論系統優化技術的實作範例",
+        "需要離線、可控、可審查程式碼的私有大模型部署場景(硬體受限但仍想跑巨型模型)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 與程式碼註解質量都很高,誠實列出未驗證假設與已知限制;測試涵蓋 C/Python/CUDA/Metal/Vulkan 多後端,CI 有 20+ 個 job 涵蓋多平台建置、記憶體安全(sanitizer)、token-exact 正確性驗證,活躍度與工程紀律在同類專案中屬上乘水準。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程紀律與測試嚴謹度遠超一般熱門專案,對想深入理解大模型推論系統優化的工程師非常值得研究,即使沒有頂級硬體也能體會其設計理念。",
+      "_mode": "full"
+    }
+  },
+  "nashsu/llm_wiki": {
+    "first_seen": "2026-09-11",
+    "last_seen": "2026-09-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-11": [
+        18105,
+        142,
+        14,
+        "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-11",
+    "analysis": {
+      "one_liner": "桌面版知識庫應用,讓 LLM 自動把你的文件整理成互相連結、持續更新的 Wiki,而非每次都重新 RAG 檢索。",
+      "summary": "LLM Wiki 是基於 Karpathy 提出的「LLM Wiki」模式所實作的跨平台桌面應用(Tauri + Rust + React),核心概念是讓 LLM 漸進式建立並維護一份持久化的個人 Wiki,而不是傳統 RAG 每次從頭檢索。專案在原始構想之上大幅擴充,加入知識圖譜、社群偵測、向量搜尋、Deep Research、Chrome 網頁剪藏、MCP Server 與本機 HTTP API 等功能。",
+      "category": "app",
+      "highlights": [
+        "兩階段思維鏈式 Ingest:先分析再生成 Wiki 頁面,並有 SHA256 增量快取避免重複耗費 LLM token",
+        "4 訊號知識圖譜(直接連結、來源重疊、Adamic-Adar、類型親和)搭配 Louvain 社群偵測與圖譜洞察(孤立頁面、橋接節點)",
+        "Rust 後端 Agent 執行工具呼叫(wiki/來源/圖譜/網頁搜尋),並支援可載入的 Agent Skills",
+        "內建 127.0.0.1 專用、token 保護的 HTTP API 與 MCP Server,可讓 Claude Code / Codex 等 agent 直接查詢知識庫",
+        "多格式文件解析(PDF/DOCX/PPTX/XLSX/EPUB)與 Chrome 網頁剪藏擴充"
+      ],
+      "use_cases": [
+        "個人研究者將論文、筆記、網頁剪藏整理成持續維護、可追溯來源的知識庫",
+        "需要長期累積且互相關聯知識(而非每次重新檢索)的深度閱讀或業務分析場景",
+        "想讓 AI Coding Agent(Claude Code/Codex)透過 MCP 存取本地知識庫做輔助研究",
+        "使用 Obsidian 生態系並希望 LLM 自動生成、維護 wikilink 筆記結構的使用者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 撰寫非常詳盡,清楚說明架構、與原始構想的差異及每項功能的設計動機;前後端(TypeScript + Rust)都有相當數量的單元測試檔案(*.test.ts、Rust 內建 #[test]),並有跨平台(macOS/Linux/Windows)CI 建置與 Release 流程;Rust 後端程式碼可讀性高,對本機 API 加入了 rate limit、in-flight 請求上限、body 大小限制、常數時間 token 比對等防護措施,顯示作者有一定的安全與工程考量。因為近期才大量新增功能(如 Rust Agent、MCP Server),部分模組相對新,長期穩定性仍待觀察。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "概念清晰、工程紮實且文件完善,對想要建立可長期累積知識庫或串接 AI Agent 的人相當值得一試,但作為桌面應用需自行建置或下載執行檔案,並非單純函式庫。",
+      "_mode": "full"
+    }
+  },
+  "vercel-labs/skills": {
+    "first_seen": "2026-09-11",
+    "last_seen": "2026-09-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-11": [
+        31146,
+        122,
+        15,
+        "The open agent skills tool - npx skills",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-11",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "一個讓 AI coding agent(Claude Code、Cursor、Codex 等 80+ 種)可以共用「Agent Skills」的 CLI 安裝工具。",
+      "summary": "skills 是 Vercel Labs 推出的 CLI(npx skills),用來從 GitHub/GitLab/任意 Git repo 或直接下載連結安裝、列出、更新、移除「SKILL.md」格式的 agent 技能包,並自動偵測本機已安裝的 AI coding agent(Claude Code、Cursor、Codex、OpenCode 等)並將技能安裝到對應目錄。目的是解決目前各家 coding agent 各自定義技能格式、沒有統一分發機制的問題,讓開發者寫一次技能就能在多個 agent 間共用。",
+      "highlights": [
+        "支援 80 幾種 coding agent(Claude Code、Cursor、Codex、OpenCode、GitHub Copilot 等)的技能安裝路徑對照表,維護量頗大",
+        "下載/解壓縮流程有明確的防護:限制下載大小(10MiB)、解壓大小(25MiB)、檔案數(1000),並對 zip/tar 做路徑穿越(path traversal)檢查",
+        "有獨立的 sanitize.ts 模組專門過濾終端機逃脫序列,防止惡意 SKILL.md 內容偽造終端輸出或執行 CWE-150 攻擊",
+        "src 底下每個核心模組幾乎都有對應的 *.test.ts,CI 在 ubuntu/windows 三種 Node 版本上跑測試、型別檢查與 prettier 格式檢查",
+        "內建可選的匿名遙測與第三方「安全稽核」API 呼叫,且都可用環境變數關閉"
+      ],
+      "use_cases": [
+        "團隊要在多種 AI coding agent(Claude Code、Cursor、Codex 等)之間共用同一套自訂技能/prompt 指令集",
+        "想從 GitHub 上的技能倉庫(如 vercel-labs/agent-skills)一鍵安裝特定技能到專案或全域目錄",
+        "需要在 CI/CD 中非互動式安裝、更新特定 agent 的技能組合"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 非常詳盡,涵蓋安裝、來源格式、私有倉庫認證、環境變數、相容性表格等;src 目錄幾乎每個模組都配有對應測試檔,CI 在多作業系統與多 Node 版本上執行測試、型別檢查與格式檢查,近期(2026-09-08)仍持續 push,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 有 prepare: husky 這個 npm lifecycle script,但僅在開發者 clone 倉庫貢獻程式碼時觸發,一般透過 npx skills 安裝使用不會執行",
+          "CLI 預設會傳送匿名遙測資料(如安裝的技能來源、agent 名稱)到 add-skill.vercel.sh,可用 DISABLE_TELEMETRY 或 DO_NOT_TRACK 關閉,README 有明確說明",
+          "當使用 skills add 安裝來自任意 GitHub/GitLab/直接下載連結的技能時,本質上是取用第三方撰寫的 SKILL.md 指令內容餵給 coding agent,使用者需自行評估來源技能內容是否可信(此為功能設計本身而非程式碼漏洞)"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、對供應鏈風險（下載/解壓、終端逃脫序列）有明確防護意識,若你已在用多種 AI coding agent 且想統一管理技能,值得一試。",
       "_mode": "full"
     }
   }
