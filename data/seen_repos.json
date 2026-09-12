@@ -1094,8 +1094,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 3,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1174,6 +1174,13 @@
         3,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-12": [
+        285380,
+        729,
+        9,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-04",
@@ -1212,8 +1219,8 @@
       "verdict": "如果你正在用多種 AI coding agent 且想要一套可落地的「代理人開發 SOP」,這個專案的方法論設計與跨平台相容工程值得研究,但因缺乏自動化 CI,大規模採用前建議自行驗證各平台外掛的實際行為。",
       "_mode": "full"
     },
-    "total_days_on_trending": 12,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 13,
+    "consecutive_days_on_trending": 4
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -2306,7 +2313,7 @@
   },
   "pascalorg/editor": {
     "first_seen": "2026-07-29",
-    "last_seen": "2026-09-10",
+    "last_seen": "2026-09-12",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-29": [
@@ -2335,6 +2342,13 @@
         22922,
         107,
         4,
+        "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
+        "TypeScript"
+      ],
+      "2026-09-12": [
+        23602,
+        106,
+        16,
         "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
         "TypeScript"
       ]
@@ -2370,7 +2384,7 @@
       "verdict": "架構嚴謹、測試齊全,且踩在 AI+3D/BIM 的浪頭上,值得關注,尤其對想結合 AI Agent 與空間設計工具的開發者。",
       "_mode": "full"
     },
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "consecutive_days_on_trending": 1
   },
   "huggingface/speech-to-speech": {
@@ -8590,10 +8604,10 @@
   },
   "github/spec-kit": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-16",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-15": [
         128522,
@@ -8608,40 +8622,45 @@
         8,
         "💫 Toolkit to help you get started with Spec-Driven Development",
         "Python"
+      ],
+      "2026-09-12": [
+        135770,
+        1015,
+        15,
+        "💫 Toolkit to help you get started with Spec-Driven Development",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-15",
+    "last_analyzed": "2026-09-12",
     "analysis": {
+      "one_liner": "GitHub 官方出品的「規格驅動開發(Spec-Driven Development)」工具組,讓 AI coding agent 先寫清楚規格再動手實作。",
+      "summary": "Spec Kit 提供一套 CLI(specify)與斜線指令流程(constitution → specify → plan → tasks → implement → converge),協助開發者用結構化的規格文件驅動 30 多種 AI coding agent(Copilot、Claude、Codex、Gemini 等)產生程式碼,而不是直接讓 AI 隨性生成。專案已滿一年並發布 1.0.0,並延伸出 extensions/presets/bundles 機制,支援擴充功能、模板客製化與角色化的整套安裝包。",
       "category": "devtool",
-      "one_liner": "GitHub 官方推出的「規格驅動開發(SDD)」工具組,讓 AI coding agent 先寫清楚規格再產生程式碼。",
-      "summary": "Spec Kit 提供 specify CLI 與一套 `/speckit.*` 斜線指令(constitution → specify → plan → tasks → implement),協助開發者在動手寫程式前,先由 AI 產出結構化的專案原則、需求規格、技術計畫與任務清單,再交由 30+ 種 AI coding agent(Claude、Copilot、Codex、Gemini 等)執行實作。同時支援 extensions/presets/bundles 機制,可依角色(PM、資安研究員等)客製化整個開發流程。",
       "highlights": [
-        "由 GitHub 官方維護,已支援 30+ 種 AI coding agent 整合(Claude Code、Copilot、Codex、Gemini CLI 等)",
-        "extensions/presets/bundles 三層客製化架構,可依團隊角色打包整組工作流程",
-        "自製的下載與解壓縮安全模組(_download_security.py)詳盡防範 SSRF、zip bomb、path traversal、ZIP64 攻擊等",
-        "CI 以 ruff 明確鎖定禁止 shell=True 等危險 subprocess 用法,並在 GitHub Actions 中將所有 action 版本 pin 到 commit SHA",
-        "143 個測試檔涵蓋 CLI、bundler、各 agent 整合與安全性場景,測試覆蓋面相當廣"
+        "由 GitHub 官方維護,一年內迭代到 1.0.0,commit 與 release 節奏非常密集",
+        "支援 30+ 種 AI coding agent 整合(Copilot、Claude Code、Codex、Gemini CLI 等),並可透過 extensions/presets/bundles 深度客製化工作流程",
+        "下載與解壓縮程式碼(_download_security.py)寫得相當嚴謹,內建 zip bomb、路徑穿越、symlink、SSRF/loopback 重導向等多重防護,並非隨手拼湊的腳本",
+        "CI 設置完整:ruff lint、跨平台(Linux/Windows/macOS)pytest matrix、CodeQL、定期 pip-audit 依賴掃描,且 GitHub Actions 皆以 commit SHA 鎖定版本",
+        "文件量龐大且分工清楚(README、CONTRIBUTING、DEVELOPMENT、SECURITY.md、docs/ 站點),另有簡體中文版 README"
       ],
       "use_cases": [
-        "團隊導入 AI coding agent 開發流程時,用來規範「先寫規格、後寫程式碼」的協作方式",
-        "跨多種 AI 工具(Claude/Copilot/Codex/Gemini 等)的專案,想要一致的規格驅動工作流程",
-        "企業導入 AI 開發需要客製化規範(合規、術語、審查關卡)時,透過 presets/extensions/bundles 落地"
+        "團隊想在導入 AI coding agent 前,先建立「先寫規格、再產生程式碼」的標準化開發流程",
+        "需要同時支援多種 AI 助理(Copilot/Claude/Codex/Gemini 等)且希望流程一致的組織",
+        "想要針對特定角色(PM、資安研究員、工程師)提供客製化 SDD 工作包(bundles)的團隊",
+        "已有專案想漸進導入規格文件並讓 AI 輔助處理 bug fix 或既有系統現代化(brownfield)"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件非常完整(README、docs 目錄、多語系 README、CLI reference 等),測試涵蓋所有 integration 與 bundler 邏輯,CI 包含 ruff lint、跨平台 pytest matrix、CodeQL 與 security workflow,commit 與 release 節奏顯示為 GitHub 官方積極維護的專案。程式碼品質對於一個 CLI 工具而言相當突出,尤其下載/解壓縮安全處理邏輯寫得極為嚴謹並附有詳細的理由註解。"
+        "comment": "文件、測試、CI 三方面都達到大型開源專案水準:README 結構完整、docs/ 站點齊全;tests/ 底下依 contract/integration/unit 分層,涵蓋數十種 agent 整合與 bundler 邏輯;CI 有 lint、跨平台測試、CodeQL 與排程式依賴掃描。原始碼(如 _download_security.py)品質遠高於一般 CLI 工具,對 zip/tar 解壓與下載重導向都有詳細註解說明防護理由。"
       },
       "security": {
-        "risk_level": "low",
-        "findings": [
-          ".devcontainer/post-create.sh 內對 Kiro CLI 安裝腳本使用 curl 下載後執行,但下載後有先做 sha256sum 校驗才執行,屬於開發容器設定,非終端使用者安裝流程",
-          "README 建議的安裝方式為 `uv tool install specify-cli --from git+https://...`,屬於常見的 Git 來源安裝方式,非 curl|bash 直接執行模式"
-        ]
+        "risk_level": "none",
+        "findings": []
       },
       "star_rating": 5,
-      "verdict": "GitHub 官方主導、生態系整合廣泛且程式碼與測試品質俱佳,對想採用規格驅動開發流程的團隊非常值得關注與試用。",
+      "verdict": "GitHub 官方維護、工程品質與安全意識都在水準之上的 SDD 工具,對導入 AI 輔助開發流程的團隊值得立即關注與試用。",
       "_mode": "full"
     }
   },
@@ -12622,10 +12641,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -12651,6 +12670,13 @@
       "2026-09-11": [
         24305,
         1762,
+        2,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ],
+      "2026-09-12": [
+        27120,
+        3680,
         2,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
@@ -16294,10 +16320,10 @@
   },
   "ayghri/i-have-adhd": {
     "first_seen": "2026-09-09",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-09": [
         30467,
@@ -16316,6 +16342,13 @@
       "2026-09-11": [
         38313,
         3882,
+        1,
+        "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "Python"
+      ],
+      "2026-09-12": [
+        41838,
+        3463,
         1,
         "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "Python"
@@ -16619,10 +16652,10 @@
   },
   "vastsa/PI-Desktop": {
     "first_seen": "2026-09-10",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-10": [
         1665,
@@ -16635,6 +16668,13 @@
         2297,
         624,
         16,
+        "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+        "TypeScript"
+      ],
+      "2026-09-12": [
+        2778,
+        552,
+        5,
         "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
         "TypeScript"
       ]
@@ -16678,15 +16718,22 @@
   },
   "alsk1992/CloddsBot": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-11": [
         1647,
         277,
         4,
+        "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+        "TypeScript"
+      ],
+      "2026-09-12": [
+        2153,
+        626,
+        7,
         "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "TypeScript"
       ]
@@ -16729,15 +16776,22 @@
   },
   "armory3d/armorpaint": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-11": [
         4419,
         72,
         10,
+        "Graphics Creation Tools",
+        "C"
+      ],
+      "2026-09-12": [
+        4721,
+        350,
+        6,
         "Graphics Creation Tools",
         "C"
       ]
@@ -16827,15 +16881,22 @@
   },
   "nashsu/llm_wiki": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-12",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-11": [
         18105,
         142,
         14,
+        "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+        "TypeScript"
+      ],
+      "2026-09-12": [
+        18739,
+        647,
+        8,
         "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
         "TypeScript"
       ]
@@ -16921,6 +16982,362 @@
       },
       "star_rating": 4,
       "verdict": "工程品質紮實、對供應鏈風險（下載/解壓、終端逃脫序列）有明確防護意識,若你已在用多種 AI coding agent 且想統一管理技能,值得一試。",
+      "_mode": "full"
+    }
+  },
+  "nab138/iloader": {
+    "first_seen": "2026-09-12",
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-12": [
+        2908,
+        50,
+        3,
+        "User friendly sideloader",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-12",
+    "analysis": {
+      "category": "app",
+      "one_liner": "跨平台的 iOS 免越獄側載工具,讓使用者輕鬆安裝 SideStore 並管理裝置配對檔案",
+      "summary": "iloader 是以 Tauri(Rust + TypeScript/React)打造的桌面應用程式,用來安裝 SideStore(或 SideStore + LiveContainer)、匯入任意 IPA、管理配對檔案與開發者憑證/App ID,解決一般使用者手動操作 AltServer/SideStore 流程繁瑣的問題。專案背後仰賴作者自家的 idevice/isideload Rust 生態系與 Apple 開發者私有 API 進行裝置通訊與簽章。",
+      "highlights": [
+        "支援 Windows/macOS/Linux/NixOS 多平台,並提供官方簽章與公證(macOS notarization)的發布流程",
+        "已完成 29 種語言在地化,社群翻譯貢獻活躍",
+        "帳密與配對檔案優先透過 OS 原生 keyring 儲存,keyring 不可用時會明確警告後才退回檔案儲存",
+        "README 明確聲明官方下載來源,提醒使用者避免從非官方管道下載,降低假冒風險",
+        "GitHub Actions 涵蓋六種平台組合的自動建置與簽章/公證流程,CI 較為完整"
+      ],
+      "use_cases": [
+        "一般 iOS 使用者想在沒有 Mac 的情況下安裝/管理 SideStore 或 LiveContainer",
+        "需要簡易匯入自製或第三方 IPA 檔案到裝置的開發者或愛好者",
+        "想查看、撤銷開發者憑證與 App ID 的進階使用者",
+        "研究 Tauri + Rust 如何與 idevice/usbmuxd 通訊實作 iOS 側載工具的開發者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "README 詳盡(安裝、疑難排解、翻譯貢獻、建置方式皆有說明),Rust 後端程式碼結構清晰、錯誤處理完整(自訂 AppError,無明顯 unwrap 濫用),前端 TSX 元件邏輯清楚但缺乏抽象化重複的 onClick 樣板。倉庫內找不到任何自動化測試(單元/整合測試目錄或檔案),對於處理帳密與憑證的敏感應用來說是明顯短板。CI/CD 相當成熟,近期提交頻繁(最後推送於 2026-09-10),活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "應用程式會要求使用者輸入 Apple ID 帳號密碼並可選擇儲存,程式碼優先使用作業系統 keyring(Windows Credential Manager / macOS Keychain / Linux Secret Service)儲存,若 keyring 不可用則明確記錄警告後退回明文寫入應用程式資料夾(FsStorage),使用者在無 keyring 環境下應留意此行為",
+          "CI 建置流程中使用了程式碼簽署與 Apple 公證所需的多個 Secrets(如 DEV_ID_P12_BASE64、NOTARIZE_APPLE_ID 等),屬標準的桌面應用簽章流程,未發現異常網域或不明資料外送行為",
+          "未發現 curl|bash 類安裝腳本、混淆程式碼、內嵌 base64/hex payload 或可疑依賴名稱"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能明確、跨平台支援完整且維護活躍,是值得關注的 iOS 側載工具,但缺乏自動化測試是其在安全敏感場景下的主要弱點。",
+      "_mode": "full"
+    }
+  },
+  "melgarafael/DeskcommCRM": {
+    "first_seen": "2026-09-12",
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-12": [
+        1346,
+        152,
+        4,
+        "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-12",
+    "analysis": {
+      "one_liner": "開源、可自架的 AI 銷售 CRM,原生整合 WhatsApp 與 AI 業務代理人,主打多租戶與 LGPD 合規。",
+      "summary": "DeskcommCRM 是一套用 Next.js 16 + Supabase 打造的開源 CRM,核心賣點是「AI 代理人直接在 WhatsApp 上接待、篩選、成交」,並透過 MCP 讓外部代理人也能操作整個 CRM。定位為 Kommo、Octadesk、Intercom 的開源替代方案,強調一鍵自架、多租戶 RLS 隔離與 LGPD(巴西個資法)合規設計。",
+      "category": "app",
+      "highlights": [
+        "AI 代理人具備 per-tenant RAG、記憶、情緒分析、AI→真人交接與支出上限,並以 MCP 對外暴露 CRM 能力",
+        "WhatsApp 雙通道支援:QR code(WAHA,含防封號節流)與 Meta 官方 Cloud API",
+        "多租戶採 Postgres RLS 逐表隔離,CI 的 invariants job 會實際建兩個組織驗證零資料外洩",
+        "自架安裝/升級走 install.sh、update.sh,具備自動備份、失敗自動回滾與冪等性設計",
+        "文件量體極大(157 份文件、ARCHITECTURE.md、VISION.md、CLAUDE.md 規範),且針對 AI coding agent 準備了完整 skills 目錄"
+      ],
+      "use_cases": [
+        "想自架、不想被 SaaS CRM 綁死且需要 WhatsApp 銷售自動化的中小企業或代理商",
+        "研究如何用 AI 代理人接管客服/業務對話流程並保留人工介入機制的團隊",
+        "需要多租戶 + RLS + LGPD/GDPR 合規範例的 SaaS 架構參考",
+        "評估以 MCP 將既有系統開放給外部 AI 代理人操作的實作案例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與治理成熟度遠超一般開源專案:README 對安裝/升級/風險描述詳盡,並有 ARCHITECTURE.md、VISION.md、CLAUDE.md、157 份文件索引。CI 設有 verify、invariants(RLS 隔離測試)、e2e(48/49 Playwright specs)、build-and-size、imagens-ok 五道必過關卡,另有獨立的 test:shell 覆蓋安裝腳本 163 個案例。抽查的原始碼(登入 action、Sentry scrub 模組)品質很高,註解聚焦在『為什麼』而非『做什麼』,並附帶 issue 編號與踩坑歷史,顯示長期維護痕跡。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 `curl -fsSL .../comecar.sh | bash` 的一鍵安裝方式,這是自架型專案常見的安裝模式;README 本身也提供替代做法(先 clone 再手動執行 `bash hostgator-setup-kit/comecar.sh`),且腳本會在真正安裝前逐步詢問確認,未見到未經同意的隱性下載執行行為。",
+          "package.json 對多個間接依賴(hono、js-yaml、brace-expansion、path-to-regexp 等)使用 pnpm overrides 鎖定安全版本,並附註解說明原因,顯示團隊有主動追蹤依賴安全公告的習慣。",
+          "未發現 npm 生命週期腳本(preinstall/postinstall/prepare)執行任意程式碼,也未在原始碼中找到混淆程式碼、長 base64 payload 或寫死的可疑 IP/網域。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "文件、測試、安全設計三方面都遠超一般 trending 專案的水準,無論是要自架使用還是研究 AI 代理人 + CRM 架構,都值得立即關注。",
+      "_mode": "full"
+    }
+  },
+  "Sonarr/Sonarr": {
+    "first_seen": "2026-09-12",
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-12": [
+        15736,
+        191,
+        10,
+        "Smart PVR for newsgroup and bittorrent users.",
+        "C#"
+      ]
+    },
+    "last_analyzed": "2026-09-12",
+    "analysis": {
+      "category": "app",
+      "one_liner": "Sonarr 是一套自動監控、下載、整理電視劇集的智慧型 PVR(個人錄影/下載管理)軟體。",
+      "summary": "Sonarr 可監控多個 RSS 來源以偵測新一集的節目,自動抓取、分類並重新命名檔案,並支援畫質自動升級(如從 DVD 升級到 Blu-Ray)。它與 SABnzbd、NZBGet、Kodi、Plex 等下載/媒體中心軟體深度整合,是 Servarr 系列(與 Radarr、Lidarr 同源)中最成熟的旗艦專案之一。",
+      "highlights": [
+        "C# .NET 撰寫,採用清晰的分層架構(Core/Api/Host/Mono/Windows),介面與依賴注入使用一致",
+        "測試專案涵蓋單元測試、整合測試、自動化測試與跨平台(Mono/Windows)測試,測試文化成熟",
+        "GitHub Actions workflow 齊全,涵蓋建置、封裝、API 文件產生、issue 管理等自動化流程",
+        "支援 Windows、Linux、macOS、Raspberry Pi 等多平台,並提供 Docker 建置腳本",
+        "專案已持續開發十餘年(2010 年至今),社群與贊助生態(OpenCollective、JetBrains)完整"
+      ],
+      "use_cases": [
+        "家庭媒體伺服器(NAS/Home Server)使用者自動化管理電視劇下載與檔案整理",
+        "與 Plex/Kodi/Jellyfin 等媒體中心搭配,自動更新媒體庫與詮釋資料",
+        "搭配 SABnzbd/NZBGet 等下載工具建立全自動的 Usenet/BitTorrent 追劇流程",
+        "作為研究大型 C# 專案架構、CI/CD 流程與跨平台桌面/伺服器應用設計的參考範例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼組織良好,採介面導向與依賴注入,錯誤處理與記錄(logging)一致;測試專案齊全(單元/整合/自動化/跨平台),CI workflow 完整;README 較精簡但另有完整 Wiki 與 CONTRIBUTING 文件補足;近期仍每日有推送與 issue 互動,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "distribution/debian/install.sh 為官方提供的選用安裝腳本,需以 root 執行,並透過 wget 從官方網域 services.sonarr.tv(HTTPS)下載執行檔後解壓安裝、建立系統服務,這是自架媒體伺服器類軟體常見的慣例作法,使用者應留意腳本要求較高權限",
+          "package.json 的 npm scripts 僅為一般前端建置/測試指令(webpack、eslint、stylelint),未發現 preinstall/postinstall 等安裝期任意程式碼執行",
+          "抽樣核心原始碼(Tv 模組)未發現混淆程式碼、內嵌 base64/hex payload 或可疑硬編碼網域/IP"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟穩定、工程實踐紮實的老牌開源專案,雖非全新技術突破,但架構品質與維運活躍度都值得軟體工程師參考。",
+      "_mode": "full"
+    }
+  },
+  "jihe520/MathModelAgent": {
+    "first_seen": "2026-09-12",
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-12": [
+        4858,
+        129,
+        11,
+        "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-12",
+    "analysis": {
+      "one_liner": "用多 Agent 或 Claude Code/Codex SKILLS 自動完成數學建模全流程，直接產出可提交論文的開源工具。",
+      "summary": "MathModelAgent 針對數學建模競賽（國賽、美賽 MCM/ICM 等）設計，透過建模手、代碼手、論文手等多 Agent 分工，自動完成問題分析、寫代碼跑實驗、繪圖到 Typst 排版，產出完整 PDF 論文。專案近期方向轉型為「純 SKILLS 驅動」，可直接掛載到 Claude Code / Codex 等 Harness 使用，同時仍保留傳統 FastAPI + Vue 前後端分離部署方式（Docker 或本地）。",
+      "category": "ai-ml",
+      "highlights": [
+        "提供 17 套 Typst 論文模板，自動比對賽事類型（國賽、華數杯、MCM/ICM）產出排版精良的可提交論文",
+        "Multi-agent 架構分工明確（coordinator / modeler / coder / writer），coder_agent 具備錯誤反思重試與工具調用循環",
+        "Agent 基類內建 token 估算與對話歷史自動壓縮機制，避免長任務超出 context window",
+        "已推出桌面版（macOS 已簽署並經 Apple 公證，Windows 尚未簽章），內建 Claude Code 與全套 SKILL，降低使用門檻",
+        "README 誠實列出多項「後期計畫」項目為未實作或僅有 TODO（如 RAG 知識庫、Web Search、Evaluator+Feedback 等），透明度高"
+      ],
+      "use_cases": [
+        "數學建模競賽參賽者用來加速從問題分析到論文初稿的產出流程",
+        "Agent/Harness 開發者研究「多 Agent workflow → 收斂為 SKILLS」的架構演進案例",
+        "需要 LLM 自動生成程式碼、跑資料分析並產出圖表與 Typst/PDF 報告的場景"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 與程式碼內文件相對完整（繁中說明、docstring 齊全、後期計畫誠實標注未完成項目），核心 Agent 程式碼結構清晰、有基本例外處理與重試機制。但正式測試僅兩個檔案（test_common_utils.py、test_e2b.py），覆蓋率明顯不足，且未見 CI workflow；README 與 TODO 註解也坦承專案本身處於「實驗探索迭代 demo 階段」，存在較多 bug。活躍度極高，近日每日皆有推送且剛登上 trending。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "技術方向與活躍度都值得關注，但屬實驗性專案且測試覆蓋薄弱，生產使用前需自行驗證穩定性。",
+      "_mode": "full"
+    }
+  },
+  "p1neappleXpress/OpenFlux": {
+    "first_seen": "2026-09-12",
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-12": [
+        1149,
+        198,
+        12,
+        "Network stack research tool. TCP tunnel with pluggable transports.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-12",
+    "analysis": {
+      "category": "security",
+      "one_liner": "用 Yandex Docs 協作編輯訊息與 MAX 通訊軟體 WebRTC 資料通道偽裝流量的 TCP 穿隧工具。",
+      "summary": "OpenFlux 是用 Go 寫的 TCP 穿隧工具,客戶端提供 SOCKS5 代理,出口節點以 gVisor 使用者空間 TCP 堆疊搭配 raw socket 轉發封包,支援 Android/iOS 客戶端。核心賣點是「可插拔傳輸層」,目前實作把封包偽裝成 Yandex Docs 線上編輯的游標同步訊息,或透過 MAX 通訊軟體的 WebRTC DataChannel 傳送,藉此讓流量看起來像正常的第三方服務流量。",
+      "highlights": [
+        "Transport 介面採插件式設計,可自行實作新的偽裝載體(transport/transport.go)",
+        "Yandex 傳輸層寫得頗細緻:exponential backoff + jitter 重連、寫入佇列、cookie/token 解析都有考慮邊界情況",
+        "README 詳細記載了為何出口節點要抑制核心 TCP RST(gVisor 使用者空間堆疊沒有對應 socket),並給出「限定來源 IP」與「全主機」兩種 iptables 作法及風險提醒",
+        "MAX 傳輸層文件明確警告『不要用主帳號』『可能導致帳號被封鎖且穿隧停止後仍持續』,對使用風險說明相對誠實",
+        "同時提供 Android 獨立 APK 與 iOS TestFlight 系統級 VPN 客戶端"
+      ],
+      "use_cases": [
+        "研究網路審查規避技術或流量偽裝手法的資安研究人員",
+        "需要在受限網路環境下,以偽裝成常見服務流量的方式建立 SOCKS5 代理穿隧",
+        "學習如何用 Go 實作使用者空間 TCP 堆疊(gVisor)搭配 raw socket 出口節點的架構參考"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 3,
+        "comment": "README 涵蓋架構圖、建置步驟、旗標說明、免責聲明都齊全,對出口節點的網路細節(RST 抑制)解釋得比一般專案更透徹。但測試覆蓋很薄,只有 yandex 傳輸層的 HTTP 設定解析有單元測試,SOCKS5、tunnel、raw socket、MAX 傳輸等核心邏輯都沒有測試;倉庫也沒有 .github/workflows CI 設定。抽樣的 Go 原始碼(transport.go、socks5.go)寫法乾淨、有適當的 panic recover 與邊界檢查,程式品質本身不差。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "專案的核心功能是把 TCP 流量偽裝成 Yandex Docs 協作編輯訊息或 MAX 通訊軟體 WebRTC DataChannel,藉此繞過網路限制/審查,README 免責聲明雖聲稱『不鼓勵繞過限制』,但同時描述這類特徵是『架構上的巧合』",
+          "倉庫根目錄有一個約 922KB、名為 universal-bypass-tool 的已編譯二進位檔,且該檔案已被 git 追蹤(存在於 .git/index 中),雖然目前 .gitignore 已將其列為忽略項目;使用者若直接執行此既有二進位檔而非自行從原始碼建置,應自行確認其來源與雜湊",
+          "README 指示出口節點操作者用 iptables 丟棄核心產生的 TCP RST 封包,並列出『限定來源 IP』與『整台主機』兩種做法,後者會讓該主機所有連接埠的 RST 行為改變(已關閉的連接埠會表現得像被防火牆過濾而非拒絕連線),文件本身已對此風險提出警告",
+          "MAX 傳輸層文件明確提示使用該傳輸模式可能導致 MAX 帳號被限制,且限制可能在停用工具後持續存在"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "程式碼與文件品質尚可、傳輸層設計有巧思,但測試薄弱、無 CI,且核心用途涉及流量偽裝繞過限制,適合資安研究或審查規避技術學習者關注,一般開發者可以先觀望。",
+      "_mode": "full"
+    }
+  },
+  "jordan-gibbs/hyperresearch": {
+    "first_seen": "2026-09-12",
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-12": [
+        2615,
+        153,
+        13,
+        "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-12",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "把 Claude Code 變成一套 16 步驟、可持久累積知識庫的深度研究代理系統。",
+      "summary": "Hyperresearch 是一個透過 Claude Code Skill 機制驅動的深度研究框架,將單一研究提示拆解成 16 個階段(分解、多角度搜尋、矛盾圖譜、批判性審稿、引用查核等),並將所有擷取的來源存入一個以 Markdown + SQLite 索引的可搜尋「保險庫(vault)」,讓後續研究可重複利用先前累積的資料。它同時內建對抗式審稿(多個 critic subagent)、引用驗證、來源品質評分與學術資料源整合(OpenAlex、Crossref、CORE 等),目標是產生附完整來源溯源、經過查核的研究報告。",
+      "highlights": [
+        "16 步驟管線含分層(tier)與齒輪(gear)機制,依查詢複雜度自動路由到 30 分鐘~8 小時不等的研究規模",
+        "多重對抗式審稿代理(dialectic/depth/width/instruction critic)搭配「只能修補、不能重寫」的工具鎖定機制(patcher/polish 僅限 Read+Edit)",
+        "自建的網路內容『不可信來源』隔離機制,將抓取的網頁內容以 <untrusted-source> 包裹,防止頁面內容偽裝成指令注入代理",
+        "整合八個學術資料源(OpenAlex、Crossref、CORE、DOAB、ClinicalTrials.gov、SEC EDGAR、FRED)並自動處理開放取用全文回補與已撤回文獻偵測",
+        "測試覆蓋相當廣泛(逾 70 個測試檔,涵蓋 CLI、核心邏輯、學術 API、網路擷取、XSS 等),並有雙作業系統 CI"
+      ],
+      "use_cases": [
+        "需要產出附完整引用溯源、經過事實查核的長篇研究報告(如市場調查、學術文獻回顧)",
+        "希望在多次研究工作階段間持續累積並重用已擷取的網路/學術資料,而非每次從零開始",
+        "在 Claude Code 中以 MCP 或 CLI 方式串接既有研究筆記庫,供其他工具(Claude Desktop、Cursor)共同存取"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 對架構、安全模型與限制的說明異常詳盡且坦誠(明確標示效能圖表為內部初步評估、第三方驗證仍待進行),核心程式碼(如 citecheck.py)註解清楚說明設計理由而非贅述功能。測試目錄涵蓋 CLI、核心邏輯、學術 API、網路擷取與 XSS 防護等超過 70 個測試檔,並有跨 Ubuntu/Windows 的 CI 流程。專案仍標示為 Alpha(v0.11.1),尚無長期穩定性驗證,但目前呈現的工程紀律水準明顯高於一般同類型專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install 指令會偵測並視需要透過 subprocess 執行 patchright/playwright 安裝 Chromium 瀏覽器(向官方套件的既定安裝流程呼叫,非從第三方網址下載執行任意腳本)",
+          "專案本身設計了 SSRF 防護與『不可信來源』內容隔離機制(如 web/builtin.py、core/oa.py 中的 is_public 判斷),顯示作者對網路擷取相關風險有主動防範意識,而非疏漏"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件透明度在同類「深度研究代理」專案中屬上乘,若你已在用 Claude Code 做長期研究型工作,值得一試,但仍是 Alpha 階段且效能數據尚待第三方驗證。",
+      "_mode": "full"
+    }
+  },
+  "alphaXiv/OpenResearch": {
+    "first_seen": "2026-09-12",
+    "last_seen": "2026-09-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-12": [
+        1277,
+        120,
+        14,
+        "Run parallel research agents with any model",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-12",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "用 Rust 打造的本地優先研究工作站,協調 Claude Code / Codex / OpenCode 等 AI 代理並行跑研究實驗。",
+      "summary": "OpenResearch(CLI 名稱 orx)是 alphaXiv 推出的本地優先工作站,讓使用者把研究流程(文獻回顧、假設發想、實驗執行、證據彙整)交給 Claude Code、Codex 或 OpenCode 等代理去平行執行,每個方向使用獨立 git worktree,並以 git-native 實驗樹追蹤每次執行的不可變快照。可將運算派送到本機、SSH 遠端主機、Slurm、Kubernetes、Ray、Hugging Face Jobs、Modal、Tinker 或代管的 OpenResearch 運算資源。",
+      "highlights": [
+        "支援多種運算後端(本機/SSH/Slurm/K8s/Ray/HuggingFace Jobs/Modal/Tinker/代管運算)",
+        "git-native 實驗樹,每次執行都保留不可變的 commit 快照,方便追溯實驗譜系",
+        "可插拔的 agent harness,同時支援 Claude Code、Codex、OpenCode 三種編碼代理",
+        "內建一整套 agent-skills(SKILL.md),涵蓋文獻回顧、圖表製作、論文寫作、GPU 運算派工等",
+        "CI 涵蓋 Linux/Windows 的 cargo fmt/clippy/build/test,以及 UI 的 i18n、typecheck、單元測試"
+      ],
+      "use_cases": [
+        "AI 研究團隊想讓多個 LLM 代理平行測試不同研究假設並比較結果",
+        "需要把實驗派送到遠端 GPU/HPC 叢集(Slurm、K8s、Ray)但仍希望本機保留完整程式碼與紀錄",
+        "想用 Claude Code / Codex 自動化文獻回顧、寫論文、產生圖表等研究輔助工作"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "這是工程成熟度偏高的 Rust 專案:模組劃分清楚(commands/jobs/local 分層),原始碼中散布大量解釋『為什麼』而非『做什麼』的註解,顯示團隊維持一定的程式碼審查紀律。CI 涵蓋 cargo fmt/clippy/build/test(Linux 與 Windows 雙平台)、UI 的 i18n 與型別檢查,並有版本號自動化把關,避免壞版本觸發發版。原始碼內散布大量 #[test] 單元測試,測試涵蓋率不錯,但沒有看到端對端整合測試目錄。文件方面 README、docs/ 與多個 SKILL.md 都相當詳盡。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "官方安裝方式為 curl -LsSf https://openresearch.sh/install.sh | sh(下載並執行遠端腳本),屬於常見的 CLI 安裝模式;遠端主機安裝走的則是釘選版本、限定 https/TLS1.2 的 curl | sh,風險較典型 curl|bash 略低,但使用者仍應自行評估安裝來源信任度。",
+          "README 主動揭露:`orx up --remote` 啟動的遠端服務雖綁定在 loopback,但沒有應用層驗證,同一台主機上的其他使用者可連線存取,這點官方文件已明確告知使用者。",
+          "官方發布版本預設會傳送不含程式碼、路徑、token 的匿名裝機 ID 使用統計,可用 `orx telemetry off` 關閉;原始碼自行建置的版本則不會傳送任何遙測資料。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程紀律扎實、功能完整,適合想用多個 AI 編碼代理平行跑研究實驗的團隊嘗試,但遠端模式的存取控制較弱,多人共用主機時需留意。",
       "_mode": "full"
     }
   }
