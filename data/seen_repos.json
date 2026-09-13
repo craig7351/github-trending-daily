@@ -12002,10 +12002,10 @@
   },
   "Shubhamsaboo/awesome-llm-apps": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-26",
+    "last_seen": "2026-09-13",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-26": [
         134228,
@@ -12013,40 +12013,45 @@
         10,
         "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
         "Python"
+      ],
+      "2026-09-13": [
+        137632,
+        230,
+        10,
+        "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-26",
+    "last_analyzed": "2026-09-13",
     "analysis": {
-      "one_liner": "收錄 100 多個開箱即用的 LLM Agent、Agent Skills 與 RAG 應用範例的開源大全",
-      "summary": "這是一個持續更新的 LLM 應用範例合輯,涵蓋單一 Agent、多 Agent 團隊、常駐型 Agent、語音 Agent 以及可直接安裝給 Coding Agent 使用的 Agent Skills,支援 Claude、Gemini、GPT、DeepSeek、Llama、Qwen 等多種模型。目標是讓開發者能快速複製、執行甚至商用這些範例,降低從零開始建構 LLM 應用的門檻。",
-      "category": "ai-ml",
+      "one_liner": "一個收錄超過百種 LLM 應用、AI Agent 與 RAG 範例的開源大型範本庫。",
+      "summary": "這是由 Unwind AI 維護的開源專案,彙整了 100 多種可直接執行的 AI Agent、Agent Skills 與 RAG 應用範例,涵蓋單一 Agent、多 Agent 團隊、常駐型 Agent 等不同架構,並支援 Claude、Gemini、GPT、DeepSeek、Llama、Qwen 等多種模型。目的是讓開發者能快速複製、學習並直接套用到自己的專案或產品中。",
+      "category": "learning-resource",
       "highlights": [
-        "涵蓋 starter、advanced、multi-agent team、always-on、voice AI 等多種 Agent 應用分類,範例數量龐大且持續每週新增",
-        "新增 Agent Skills 分類,可透過 npx skills add 指令一鍵安裝技能給 Claude Code、Codex、Cursor 等 Coding Agent 使用",
-        "Apache-2.0 授權,官方標榜可直接 clone、執行甚至商業化販售",
-        "在 GitHub Trending 上排名第 10,單日新增 161 星,顯示社群關注度高、更新頻率快"
+        "收錄超過百種涵蓋旅遊規劃、醫療影像、財務分析、詐欺調查、會議準備等多元場景的 Agent 範例",
+        "提供「Agent Skills」機制,可用 npx 指令一鍵為 Claude Code、Codex、Cursor 等程式碼助理安裝新技能",
+        "同時包含常駐型(always-on)Agent 與多 Agent 協作團隊,展示不同複雜度的架構設計",
+        "每週持續更新範本,並宣稱每個 Agent Skill 都通過安全與評估的 CI 檢查",
+        "今日 GitHub trending 第 10 名,單日新增 230 顆星,累積已達 13 萬 7 千多顆星,社群熱度高"
       ],
       "use_cases": [
-        "尋找特定情境(如財務分析、旅遊規劃、詐欺調查)的 LLM Agent 範例作為專案起點",
-        "學習如何用 Agno、OpenAI Agents SDK 等框架搭建單一或多 Agent 系統",
-        "為 Claude Code 等 Coding Agent 安裝現成的 Agent Skills 擴充功能",
-        "作為 RAG 應用架構與最佳實踐的參考範本庫"
+        "想快速上手 AI Agent 開發、尋找可直接執行範例作為學習起點的工程師",
+        "需要為特定業務場景(如財務、醫療、客服)尋找 Agent 原型作為 PoC 基礎",
+        "希望為 Claude Code 等程式碼助理擴充自訂技能(Agent Skills)的開發者",
+        "教學或內部訓練需要一份持續更新、涵蓋多種 LLM 與框架的範例合輯"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 1,
         "activity": 5,
-        "comment": "README 結構清楚、分類完整、有快速開始指令與贊助商區塊,文件品質高;但屬於資源彙整類repo,測試不適用,故不評估程式碼測試覆蓋率。近期(2026-08-22)仍持續推送更新,活躍度高。"
+        "comment": "README 結構清楚、分類明確且附有範例截圖與快速上手指令,文件品質良好;但本質上屬於資源彙整/教學類專案,測試面向不適用,故給予最低分。從推送時間與 trending 排名來看,專案活躍度非常高。"
       },
       "security": {
-        "risk_level": "low",
-        "findings": [
-          "README 提供的安裝方式為標準 git clone + pip install -r requirements.txt + streamlit run,以及透過 npx skills add 安裝第三方 Agent Skill,未見 curl | bash 類高風險安裝手法",
-          "本評估僅基於 README 內容,未對原始碼進行實際安全審查,無法保證每個子專案內部程式碼的安全性"
-        ]
+        "risk_level": "none",
+        "findings": []
       },
       "star_rating": 4,
-      "verdict": "對想快速上手 LLM Agent 開發或尋找實作範本的工程師來說是相當實用的資源庫,但作為彙整型repo,品質仍取決於各子專案本身,建議實際使用前自行檢視程式碼。",
+      "verdict": "作為 AI Agent 與 RAG 應用的學習範例庫相當值得參考與收藏,但因屬於彙整型專案而非單一產品,實際導入前仍需自行檢視各子專案程式碼品質。",
       "_mode": "light"
     }
   },
@@ -12641,10 +12646,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -12678,6 +12683,13 @@
         27120,
         3680,
         2,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ],
+      "2026-09-13": [
+        29919,
+        2265,
+        1,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
       ]
@@ -16718,10 +16730,10 @@
   },
   "alsk1992/CloddsBot": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-11": [
         1647,
@@ -16734,6 +16746,13 @@
         2153,
         626,
         7,
+        "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+        "TypeScript"
+      ],
+      "2026-09-13": [
+        2504,
+        376,
+        8,
         "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
         "TypeScript"
       ]
@@ -16776,10 +16795,10 @@
   },
   "armory3d/armorpaint": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-11": [
         4419,
@@ -16792,6 +16811,13 @@
         4721,
         350,
         6,
+        "Graphics Creation Tools",
+        "C"
+      ],
+      "2026-09-13": [
+        4913,
+        237,
+        12,
         "Graphics Creation Tools",
         "C"
       ]
@@ -16987,15 +17013,22 @@
   },
   "nab138/iloader": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-12": [
         2908,
         50,
         3,
+        "User friendly sideloader",
+        "TypeScript"
+      ],
+      "2026-09-13": [
+        3080,
+        209,
+        4,
         "User friendly sideloader",
         "TypeScript"
       ]
@@ -17039,15 +17072,22 @@
   },
   "melgarafael/DeskcommCRM": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-12": [
         1346,
         152,
         4,
+        "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "TypeScript"
+      ],
+      "2026-09-13": [
+        1810,
+        504,
+        2,
         "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "TypeScript"
       ]
@@ -17091,15 +17131,22 @@
   },
   "Sonarr/Sonarr": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-12": [
         15736,
         191,
         10,
+        "Smart PVR for newsgroup and bittorrent users.",
+        "C#"
+      ],
+      "2026-09-13": [
+        15923,
+        227,
+        7,
         "Smart PVR for newsgroup and bittorrent users.",
         "C#"
       ]
@@ -17143,15 +17190,22 @@
   },
   "jihe520/MathModelAgent": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-12": [
         4858,
         129,
         11,
+        "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+        "Python"
+      ],
+      "2026-09-13": [
+        5129,
+        262,
+        6,
         "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
         "Python"
       ]
@@ -17190,15 +17244,22 @@
   },
   "p1neappleXpress/OpenFlux": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-12": [
         1149,
         198,
         12,
+        "Network stack research tool. TCP tunnel with pluggable transports.",
+        "Go"
+      ],
+      "2026-09-13": [
+        1402,
+        355,
+        11,
         "Network stack research tool. TCP tunnel with pluggable transports.",
         "Go"
       ]
@@ -17338,6 +17399,323 @@
       },
       "star_rating": 4,
       "verdict": "工程紀律扎實、功能完整,適合想用多個 AI 編碼代理平行跑研究實驗的團隊嘗試,但遠端模式的存取控制較弱,多人共用主機時需留意。",
+      "_mode": "full"
+    }
+  },
+  "asgeirtj/system_prompts_leaks": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-13": [
+        65410,
+        217,
+        3,
+        "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-13",
+    "analysis": {
+      "one_liner": "收錄各家主流 AI 產品(Claude、ChatGPT、Gemini、Grok 等)洩漏系統提示詞的持續更新資料庫。",
+      "summary": "這是一個以 Markdown 檔案為主的資料彙整專案,收集並分類各家 AI 聊天機器人與 Agent 工具(Anthropic Claude 系列、OpenAI ChatGPT/Codex、Google Gemini、xAI Grok、Perplexity、Cursor、Copilot 等)實際被洩漏或擷取出的系統提示詞全文。專案本身不含應用程式邏輯,而是以資料夾分類、README 索引的方式維護一份「AI 系統提示詞語料庫」,方便研究者比對不同模型/版本的行為設定與工具定義演進。",
+      "category": "learning-resource",
+      "highlights": [
+        "涵蓋範圍極廣,從 Claude Fable 5.1、Opus 5 到 ChatGPT、Gemini、Grok、Kimi、DeepSeek、Cursor、Copilot 等數十種產品的系統提示詞",
+        "部分條目附帶完整的工具定義與 skill 原始碼(如 Claude Design 的 53 個工具、22 個 skills、10 組 starter components),資訊細緻度高",
+        "更新頻率高,README 內有「最近新增」列表且持續追加最新模型版本(如 2026-09-05 的 Claude Code headless Fable 5.1)",
+        "已被華盛頓郵報、CEPS AI World 等媒體引用作為報導與資料視覺化素材,顯示內容具一定公信力與影響力",
+        "純資料/文件型專案,沒有建置流程或執行邏輯,對使用者而言風險極低,可直接瀏覽取用"
+      ],
+      "use_cases": [
+        "研究不同 AI 廠商如何設計系統提示詞、工具描述與安全防護規則",
+        "比較同一模型不同版本(如 Claude Opus 4.6 → 4.7 → 4.8 → 5)之間 prompt 的演進差異",
+        "作為 prompt engineering 教學或分析報告的素材來源",
+        "了解 Claude Code、Codex、Cursor 等 AI 編碼助手內部的 Agent 工具定義與 skill 架構"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "README 索引結構清楚、分類完整,但本質是資料彙整而非軟體專案,沒有測試也不需要;更新非常頻繁(近期每週都有新增),可視為活躍維護的社群資料庫。內含少量 JavaScript/TypeScript 檔案為「被洩漏出的內部工具原始碼」樣本,非本專案自行開發維護的程式碼,不適用一般程式碼品質標準。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對想研究或比較各家 AI 系統提示詞設計的工程師來說是很有價值的一手資料庫,雖非程式碼專案但內容豐富且更新即時,值得加入書籤追蹤。",
+      "_mode": "full"
+    }
+  },
+  "Flowseal/zapret-discord-youtube": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-13": [
+        33209,
+        65,
+        5,
+        "",
+        "Batchfile"
+      ]
+    },
+    "last_analyzed": "2026-09-13",
+    "analysis": {
+      "category": "security",
+      "one_liner": "一組打包好的 Windows 批次腳本 + 預編譯執行檔,透過 DPI 深度封包檢測繞過技術讓 Discord、YouTube 等在特定 ISP 環境下被限速/封鎖的服務恢復連線。",
+      "summary": "本專案是 bol-van/zapret(基於 WinDivert 的 DPI 反審查工具)的「開箱即用」封裝版,提供大量預設 general*.bat 策略檔、service.bat 服務管理選單,以及 hosts/ipset/域名清單,主要用於解決俄語地區使用者遇到的 Discord 語音連線、YouTube 節流等問題。核心繞過引擎(winws.exe、WinDivert 驅動)是直接從上游 zapret-win-bundle 拿來的二進位檔,本倉庫本身幾乎不含可執行程式邏輯的原始碼,而是大量調參後的批次腳本組合。",
+      "highlights": [
+        "service.bat 提供完整選單:安裝/移除服務、切換 Game Filter/IPSet 模式、診斷常見衝突(Adguard、Killer、Check Point、VPN 等)、自動更新檢查",
+        "README 以繁多的 FAQ 涵蓋各種常見故障排除情境(Secure DNS、hosts 修正、防毒誤判 WinDivert 等)",
+        "bin 目錄內含多組偽造封包樣板(fake TLS ClientHello、QUIC initial、STUN 等)搭配不同 general (ALT/FAKE).bat 策略,方便使用者依 ISP 特性切換",
+        "release.yml 會自動打包 bin/lists/utils/*.bat 成 zip/rar/tar.gz 並附上 SHA256,方便使用者核對下載內容",
+        "作者在 README 中明確提醒二進位檔案來源(zapret-win-bundle/zapret 上游專案)並建議使用者自行核對雜湊值"
+      ],
+      "use_cases": [
+        "在 ISP 對 Discord 語音、QUIC/TLS 流量進行 DPI 限速或封鎖的網路環境下嘗試恢復連線品質",
+        "研究/學習 DPI 探測與規避技術(fake packet、TCP 分片、seqovl 等參數)的實作範例",
+        "作為 Windows 端 censorship circumvention 工具鏈整合的參考(WinDivert + winws.exe 服務化流程)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "docs_comment": "",
+        "tests_comment": "",
+        "activity": 5,
+        "comment": "README 與 FAQ 撰寫詳盡(但僅俄文),對非核心開發者友善;倉庫幾乎不含傳統意義上的原始碼與單元測試,utils/test zapret.ps1 屬於功能性連線測試腳本而非回歸測試;.github/workflows 只有 release 打包、stale bot、留言 bot,沒有 build/lint CI,不過從 issue 討論、README 更新頻率與版本號可看出維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "bin 目錄內的 winws.exe、WinDivert.dll/WinDivert64.sys、cygwin1.dll 為直接提交的二進位檔,並非由本倉庫原始碼建置,而是取自上游 bol-van/zapret-win-bundle;README 已明確揭露此點並建議使用者自行核對雜湊",
+          "WinDivert 驅動屬於流量攔截/過濾工具,常被防毒軟體標記為 PUA/RiskTool,README 也已註明此為已知的誤判情形而非病毒行為",
+          "service.bat 會以系統管理員權限(UAC RunAs)安裝並啟動 Windows 服務,執行帶有攔截流量能力的 winws.exe + WinDivert 核心驅動",
+          "service.bat 內建的『Check for Updates』『Update IPSet List』『Update Hosts File』功能會透過 curl/PowerShell Invoke-WebRequest 向 raw.githubusercontent.com(官方倉庫)下載 ipset 清單、版本資訊與 hosts 內容,屬於一般性的線上更新機制,目標網域為官方 GitHub Raw 網址"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你身處會被 DPI 限速/封鎖 Discord、YouTube 等服務的網路環境,這是目前最活躍、文件最完整的現成解決方案;但若是想研究原創演算法或程式碼架構,實際「原創程式碼量」偏低,多數邏輯與二進位皆來自上游 zapret 專案。",
+      "_mode": "full"
+    }
+  },
+  "yuliskov/SmartTube": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-13": [
+        33214,
+        136,
+        9,
+        "Browse media content with your own rules on Android TV",
+        "Java"
+      ]
+    },
+    "last_analyzed": "2026-09-13",
+    "analysis": {
+      "one_liner": "無需 Google 服務、可自訂規則瀏覽 YouTube 內容的 Android TV 開源播放器",
+      "summary": "SmartTube 是一款主要以 Java 撰寫、鎖定 Android TV / TV Box 裝置的開源 YouTube 用戶端,支援 SponsorBlock 跳過贊助段落、8K/60fps/HDR 播放、自訂播放速度等功能。專案由單一開發者長期維護超過 33,000 顆星,並整合了 exoplayer 分支、chatkit 等第三方函式庫作為子模組。",
+      "category": "app",
+      "highlights": [
+        "SponsorBlock 整合、8K/60fps/HDR 播放、可調速播放等針對 Android TV 優化的功能",
+        "支援從 Android 4.3 (Kitkat) 到最新 Android TV/Google TV/FireTV 裝置的廣泛相容性",
+        "原始碼中可見大量針對特定裝置型號(如 Panasonic、Xgimi、MStar)的相容性修補邏輯,顯示長期實戰經驗",
+        "CI 已加入 VirusTotal 掃描工作流程,對每次 release 與 debug build 的 APK 自動掃毒並公布報告連結"
+      ],
+      "use_cases": [
+        "在不支援 Google Play 服務或想避免官方 YouTube App 廣告/追蹤的 Android TV/TV Box 上瀏覽 YouTube",
+        "想要跳過贊助商置入段落、以更高畫質(AV1/VP9/8K/HDR)觀看影片的電視用戶",
+        "研究 Android TV Leanback UI、ExoPlayer 客製化播放器架構的開發者可參考其原始碼實作"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README/FAQ 極為詳盡,涵蓋安裝、相容性、常見問題等,文件品質高。但專案本身(smarttubetv 模組)幾乎沒有針對核心邏輯的單元測試,可見的 *Test.java 檔案主要來自內嵌的第三方函式庫(exoplayer-amzn fork、slidableactivity),而非 App 自身測試。開發活躍度高,最近有推送、CI 持續建置、issue/PR 討論熱絡,且針對眾多實際裝置型號有細緻的相容性修補,顯示長期實戰維護。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "專案 README 中,維護者自行揭露其開發環境曾遭惡意軟體感染,部分建置版本可能受影響,且簽署用的公開金鑰可能已外洩,並提供了撤銷第三方連線授權的操作步驟",
+          "作為因應措施,專案已在 .github/workflows 新增 CI.yml 與 virustotal_scan.yml,對每次 release 與 debug build 產出的 APK 自動送交 VirusTotal 掃描並在 release notes 附上掃描結果連結",
+          "官方安裝說明引導使用者透過短網址服務(kutt.to)下載 APK 或 bridge app,短網址本身不易直接驗證最終下載目標,是側載類 App 常見但值得留意的安裝方式",
+          "本次分析僅檢視原始碼與設定檔,未發現原始碼中有混淆程式碼、可疑硬編碼網域或 IP、或安裝腳本自動下載執行外部內容等情況"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能成熟、社群活躍的 Android TV YouTube 替代客戶端,值得關注,但因維護者自曝過去建置環境曾遭入侵,使用側載安裝或更新前建議留意官方公告與 VirusTotal 掃描結果。",
+      "_mode": "full"
+    }
+  },
+  "SnailSploit/Claude-Red": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-13": [
+        3598,
+        113,
+        13,
+        "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+        "Python"
+      ]
+    }
+  },
+  "multimodal-art-projection/YuE": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-13": [
+        7291,
+        210,
+        14,
+        "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-13",
+    "analysis": {
+      "one_liner": "YuE2:能將歌曲拆解成可編輯樂譜(旋律與和弦)的開源音樂生成模型,支援零樣本翻唱與代理式編輯,品質可媲美 Suno v5/v6。",
+      "summary": "YuE2 是 M·A·P、HKUST 等機構開發的開源音樂生成系統,核心賣點是「白盒」符號式規劃:先生成可讀寫的 ABC 樂譜(旋律、和弦),再據此合成完整人聲與伴奏音訊。除了從歌詞加風格生成新歌,也支援用轉譜工具(SheetSage2)對既有錄音做零樣本翻唱,以及透過對話式編輯樂譜來反覆修改歌曲。在 WildSongBench 192 首評測中,YuE2(best-of-8)取得目前最高的 SongBench 平均分,超越 Suno v5/v6 等商業系統。",
+      "category": "ai-ml",
+      "highlights": [
+        "符號規劃管線(plan→generate_semantic→synthesize→decode)讓使用者或代理人可以在生成前檢視、修改旋律與和弦,而非黑盒音訊生成",
+        "WildSongBench 公開評測中 SongBench Avg 6.9632(best-of-8)為所有 17 個評測設定中最高,含 Suno v5/v6、Mureka 9 等商業系統",
+        "提供 SKILL.md 格式的 agent skill,可讓 LLM agent 直接呼叫生成、轉譜、樂譜編輯與試聽比較工具",
+        "模型權重下載與載入採 SHA256 完整性驗證,resolve_model 對 Hugging Face 下載檔案有明確白名單(MODEL_FILES),未見任意程式碼下載執行的疑慮",
+        "CI 只跑 CPU 端可行性測試(CLI --help/doctor 與不需下載模型的單元測試),測試檔案齊全,涵蓋 CLI、模型、NAR、VAE、progress、skill 腳本等模組"
+      ],
+      "use_cases": [
+        "研究或評測音樂生成模型,對比符號規劃式生成與端對端生成的差異",
+        "將既有錄音轉譜後做風格轉換的零樣本翻唱實驗",
+        "結合 LLM agent(如 Claude/GPT)透過提供的 skill 包做「音樂編輯對話」流程原型開發",
+        "學習如何設計可重現、帶完整性驗證(hash 校驗、artifact manifest)的生成式 AI pipeline 工程實踐"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 docs/ 目錄(benchmarks、covers、editing、generation)文件詳實且附評測方法論;測試涵蓋 CLI、模型、VAE、NAR、progress 與 skill 腳本共 14 個測試檔,CI 設有 CPU-only 測試工作流程,但實際模型推論(GPU 路徑)無法在 CI 中驗證;原始碼(如 pipeline.py、storage.py)風格嚴謹,有型別檢查、防禦性驗證與明確錯誤訊息,工程品質高;最後推送於 2026-09-11,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "技術與工程品質俱佳、評測數據亮眼且無安全疑慮,對關注音樂生成或符號式可控生成架構的工程師值得立即一探。",
+      "_mode": "full"
+    }
+  },
+  "max-sixty/worktrunk": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-13": [
+        7236,
+        54,
+        15,
+        "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-13",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Worktrunk 是一個為平行 AI agent 工作流設計的 Git worktree 管理 CLI 工具",
+      "summary": "Worktrunk 用 Rust 撰寫,把「建立分支 + 建立 worktree + cd 過去」這種需要重複打branch 名稱三次的繁瑣流程,簡化成 `wt switch -c` 之類的單一指令,並提供 list/merge/remove 等指令搭配狀態列顯示、hooks 自動化、LLM 產生 commit 訊息、PR checkout 等進階功能。主打場景是同時開多個 Claude Code / Codex agent 平行工作,每個 agent 各自佔用一個 worktree 互不干擾。",
+      "highlights": [
+        "三個核心指令(switch/list/merge)取代繁瑣的 git worktree 手動操作,並支援互動式 picker、CI 狀態顯示、LLM 摘要",
+        "命令執行採「approve at the gate」設計:專案設定中的 hook/自訂指令需經使用者一次性核准並記錄,避免每次執行都重複詢問,同時降低任意指令被靜默執行的風險",
+        "Cargo.toml 顯式設定 unsafe_code = \"forbid\",且有獨立的 tests/integration_tests/security.rs 針對 shell injection、NUL 位元組注入等攻擊面撰寫測試",
+        "測試覆蓋非常齊全,tests/ 目錄下有上百個 integration test 檔案與大量 insta snapshot,並用 cargo-nextest、cargo-affected、codecov 等工具強化 CI",
+        "支援多平台安裝(Homebrew、Cargo、Winget、pacman、conda-forge),Windows 版本另有 SignPath 程式碼簽章"
+      ],
+      "use_cases": [
+        "需要同時操作多個 Claude Code / Codex agent 平行開發不同功能分支的工程師",
+        "團隊想用 git worktree 加速 code review、PR 並行測試,但嫌原生 git worktree 指令繁瑣",
+        "想要在每個 worktree 自動跑 hook(裝依賴、啟動 dev server)並用 LLM 產生 commit 訊息的工作流"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼註解品質相當高,大量說明「為什麼」而非「做什麼」(例如版本鎖定原因、測試檔案設計取捨),README 有清楚的圖表與比較表,文件另建置獨立網站 worktrunk.dev。CI 涵蓋 lint、coverage、benchmark、nightly、release 等多條 workflow,commit 與 issue 活動頻繁,是目前少見兼具工程紀律與文件完整度的 Rust CLI 專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件完整度都屬上乘,對常用 AI agent 平行開發工作流的工程師來說非常值得試用。",
+      "_mode": "full"
+    }
+  },
+  "vxcontrol/pentagi": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-13": [
+        23454,
+        189,
+        16,
+        "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-13",
+    "analysis": {
+      "category": "security",
+      "one_liner": "PentAGI 是一套以多代理 AI 系統自動執行滲透測試任務的自架平台,整合 20+ 專業資安工具與沙箱化 Docker 執行環境。",
+      "summary": "PentAGI 讓 AI Agent(研究員、開發者、執行者等分工角色)在隔離的 Docker 容器中自動規劃並執行滲透測試流程,支援 10+ 種 LLM 供應商(OpenAI、Anthropic、Bedrock、Ollama 等)與多種搜尋引擎整合。系統提供完整的記憶系統(向量存儲、知識圖譜)、監控堆疊(Grafana/Prometheus/Langfuse)以及 REST/GraphQL API,目標是解決資安研究人員需要可擴展、可自動化滲透測試流程的痛點。",
+      "highlights": [
+        "多代理架構(Orchestrator/Researcher/Developer/Executor)搭配長短期記憶與知識圖譜(Graphiti+Neo4j)",
+        "內建執行監控與智慧任務規劃機制,官方以 Qwen3.5-27B-FP8 實測聲稱能讓小模型結果品質提升 2 倍",
+        "README 對 Docker socket 掛載風險有清楚的技術性說明,並提供 dind+TLS 的安全替代方案",
+        "CI 涵蓋前端 lint/type-check/test/Playwright e2e 視覺回歸測試,以及後端 go test 與跨平台建置",
+        "支援多租戶(TENANT_ID)部署與雙節點(worker node)隔離架構,考量到生產環境安全邊界"
+      ],
+      "use_cases": [
+        "資安團隊需要自動化、可重複執行的滲透測試流程之自架方案",
+        "研究人員評估多代理 LLM 系統在攻防場景下的任務分解與工具調用能力",
+        "企業想在隔離網路環境(air-gapped)中用本地 LLM(如 Ollama/vLLM)進行合規的紅隊演練",
+        "教學或 CTF 場景中觀察 AI Agent 如何自主使用 nmap、sqlmap、metasploit 等工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常詳盡,README 逾 4000 行涵蓋架構圖、環境變數、安全注意事項與多場景部署指南;後端有大量 _test.go 單元測試,前端具備 Playwright e2e 與視覺回歸測試,CI 涵蓋 lint/type-check/test/跨平台建置;近期提交頻繁(最新推送於 2026-09-10),維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "專案本質為攻擊性資安工具,設計上會在沙箱容器內執行滲透測試指令(nmap、sqlmap、metasploit 等),此為其核心功能而非缺陷,但使用者需注意授權範圍與網路隔離",
+          "README 明確警告直接掛載 host 的 Docker socket(DOCKER_SOCKET)會讓自主 Agent 取得 host Docker API 進而可能危及整個節點,並建議改用具 TLS 的獨立 dind 架構,屬於作者主動揭露的風險而非隱藏行為",
+          "Docker 容器預設以 root 執行以存取 docker.sock,README 有說明可改用 TCP/IP 連線並降權為非特權使用者",
+          "手動安裝步驟使用 curl 下載 .env.example 與 docker-compose.yml 等設定檔(非執行檔),未發現 curl | bash 類型的直接管線執行安裝腳本"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程成熟度與文件品質在同類 AI Agent 專案中相當突出,若你在合法授權範圍內從事滲透測試或紅隊自動化研究,值得花時間深入評估。",
       "_mode": "full"
     }
   }
