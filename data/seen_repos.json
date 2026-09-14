@@ -984,7 +984,7 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-09-14",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
@@ -1002,45 +1002,51 @@
       "2026-07-30": [
         16004,
         359
+      ],
+      "2026-09-14": [
+        23518,
+        443,
+        14,
+        "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-09-14",
     "analysis": {
-      "one_liner": "阿里巴巴內部驗證兩年、服務數萬工程師的 AI Code Review CLI,開源後結合確定性引擎與 LLM Agent 做精準行級評論。",
-      "summary": "Open Code Review 是一套 Go 撰寫的 CLI 工具,讀取 Git diff 後交給可設定的 LLM(OpenAI/Anthropic 相容)進行代碼審查,產生行級精準的評論,並內建 NPE、執行緒安全、XSS、SQL injection 等調校過的規則集。核心設計是「確定性工程 + Agent」混合架構:檔案篩選、分組、規則比對用工程邏輯保證穩定,只把動態決策交給 LLM Agent,藉此解決一般通用 Agent(如 Claude Code)review 時覆蓋不全、行號漂移、品質不穩定的問題。",
       "category": "devtool",
+      "one_liner": "阿里巴巴內部驗證兩年、服務數萬名工程師後開源的 AI 程式碼審查 CLI 工具",
+      "summary": "Open Code Review 結合「確定性工程 pipeline」與「LLM Agent」的混合架構,讀取 Git diff 後交給可設定的 LLM 進行逐行精準審查,內建多語言規則集(NPE、執行緒安全、XSS、SQL injection 等)。相較於用 Claude Code 之類的通用 Agent 做 code review,官方基準測試顯示其在同模型下有更高的 Precision/F1,且 token 消耗僅約 1/9。",
       "highlights": [
-        "阿里巴巴內部大規模驗證(兩年、數萬開發者、數百萬缺陷)後開源的實戰工具,並附真實 PR benchmark(50 repo/200 PR/1505 條人工標註缺陷)證明 precision/F1 優於通用 Agent 且 token 用量僅約 1/9",
-        "確定性引擎(檔案篩選、智慧分組、規則比對)搭配 Agent 動態決策的混合架構,設計思路清晰且有明確論述",
-        "支援多種審查模式:workspace diff、branch range、單一 commit、全檔案 scan、以及 delegate 模式讓使用者自己的 Agent(Claude Code/Codex/Cursor)執行審查",
-        "CI 嚴謹:gofmt 檢查、go vet、govulncheck、race detector、80% 測試覆蓋率門檻、五平台 cross-compile 全部跑在自架 runner 上",
-        "有正式 SECURITY.md 揭露流程,且原始碼中可見已修過的實際安全問題(如 ref-option injection,issue #112),顯示團隊有意識地在做威脅建模"
+        "核心用 Go 撰寫,搭配確定性檔案篩選、smart bundling、規則比對等工程手段,減少純語言驅動 Agent 的不穩定性",
+        "提供 50 個開源專案、200 個真實 PR、1505 筆人工標註的 AACR-Bench 基準資料集(公開於 Hugging Face)佐證效果",
+        "CI 非常嚴謹:gofmt 檢查、go vet、govulncheck、race detector、90% 覆蓋率門檻、跨平台交叉編譯與 Windows 原生測試皆納入",
+        "支援多種整合方式:CLI、GitHub Actions、GitLab/Gerrit/Bitbucket CI、VSCode 外掛,以及 Claude Code / Codex / Cursor 的 plugin 與 delegation 模式",
+        "release 二進位檔使用 Sigstore/GitHub Artifact Attestations 簽章,並附 SHA256 checksum 供驗證"
       ],
       "use_cases": [
-        "在 CI/CD(GitHub Actions/GitLab CI/Gerrit 等)自動化 PR 審查,抓 NPE、執行緒安全、XSS、SQL injection 等常見缺陷",
-        "作為 Claude Code / Codex / Cursor 的 skill 或 plugin,用 delegate 模式讓現有 Agent 執行結構化審查而不需另外設定 LLM key",
-        "審查沒有 git 歷史的整包程式碼(ocr scan),適合快速盤點不熟悉的舊專案或第三方 repo",
-        "團隊想要比通用 Agent 更省 token、更穩定行號定位的專屬 code review 工具"
+        "在 CI/CD pipeline 中自動化 PR 審查,減少人工 code review 負擔",
+        "審查未熟悉的大型程式碼庫或無明顯 diff 的目錄(ocr scan 全檔案掃描模式)",
+        "已使用 Claude Code / Cursor / Codex 的團隊,想要更精準、token 成本更低的專用審查 Agent",
+        "需要內建 NPE、執行緒安全、XSS、SQL injection 等規則的多語言靜態審查輔助"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件非常完整(多語言 README、官網文件、CONTRIBUTING 多語版、ROADMAP、ASSURANCE_CASE);測試覆蓋率在 CI 強制 80% 門檻,內部各模組都有對應 _test.go;活躍度極高,今日仍有 push,CI/release/翻譯同步等 workflow 齊備,工程成熟度明顯高於一般開源專案初期水準。"
+        "comment": "文件非常完整(多語系 README、CLI Reference、CONTRIBUTING 多國語言版本),原始碼中的 Go 檔案註解清楚說明邊界條件與設計取捨而非贅述表面邏輯。測試覆蓋率在 CI 中強制門檻 90%,並有 237+ 個 _test.go 檔案,涵蓋 agent、diff、llm、viewer 等模組;CI 另包含 gofmt、go vet、govulncheck、race detector、跨平台交叉編譯與 Windows 原生測試,工程嚴謹度在開源專案中屬上乘。最近一次推送為 2026-09-12,活躍度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "npm 套件的 postinstall 會從 GitHub Releases 下載對應平台的原生二進位檔,但有做 HTTPS 強制與 SHA256 checksum 驗證,流程設計合理",
-          "bin/ocr.js 每次執行 CLI 都會在背景默默檢查更新,若偵測到新版會自動執行 `npm i -g @alibaba-group/open-code-review@latest` 靜默安裝(可用 OCR_NO_UPDATE 環境變數關閉),此自動全域升裝行為未經使用者每次確認,雖然是透過官方 npm registry 走正常安裝流程,仍屬於背景動側寫且會修改全域環境,使用時建議留意或直接設定 OCR_NO_UPDATE=1",
-          "未發現 curl|bash、混淆程式碼、base64 payload、可疑網域或典型供應鏈攻擊手法"
+          "npm 套件的 postinstall 會執行 scripts/install.js,從 GitHub Releases 下載對應平台的預編譯二進位檔;程式碼中已限制僅接受 https 網址(拒絕非 HTTPS 來源),並在下載後以 SHA256 checksum 驗證完整性,驗證失敗會刪除檔案並報錯",
+          "官方 release 二進位檔與 checksum 另以 Sigstore(GitHub Artifact Attestations)簽章,SECURITY.md 提供 gh attestation verify 指令供使用者自行驗證"
         ]
       },
       "star_rating": 5,
-      "verdict": "這是少見有真實大規模生產驗證、benchmark 數據、嚴謹 CI 與資安意識的開源 code review 工具,值得立即關注並可考慮導入 CI 流程,但建議留意其背景自動更新機制。",
+      "verdict": "工程成熟度與文件品質俱佳,搭配可驗證的效能基準與嚴謹 CI,值得台灣 AI/DevOps 團隊實際評估導入 CI pipeline。",
       "_mode": "full"
     },
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "consecutive_days_on_trending": 1
   },
   "anthropics/claude-cookbooks": {
@@ -7385,10 +7391,10 @@
   },
   "huggingface/transformers": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
+    "last_seen": "2026-09-14",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-12": [
         163808,
@@ -7396,38 +7402,45 @@
         12,
         "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
         "Python"
+      ],
+      "2026-09-14": [
+        165523,
+        152,
+        19,
+        "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-12",
+    "last_analyzed": "2026-09-14",
     "analysis": {
-      "one_liner": "Hugging Face Transformers:業界標準的模型定義框架,統一支援文字、視覺、音訊與多模態模型的推論與訓練。",
-      "summary": "Transformers 是 Hugging Face 打造的模型定義框架,將超過百萬個模型 checkpoint 用統一 API 串接,並可與 vLLM、SGLang、DeepSpeed、Axolotl 等訓練/推論框架互通。它讓開發者透過 Pipeline API 幾行程式碼就能完成文字生成、語音辨識、影像分類、視覺問答等任務,同時支援自訂與跨框架(PyTorch/JAX/TF)搬移模型。",
+      "one_liner": "Hugging Face Transformers:橫跨文字、視覺、音訊與多模態的模型定義框架,支援推論與訓練。",
+      "summary": "Transformers 提供統一的高階 API(如 Pipeline),讓使用者能快速使用 Hugging Face Hub 上超過百萬個預訓練模型 checkpoint。它作為「模型定義」的中樞,讓同一個模型定義能相容於多種訓練框架(Axolotl、DeepSpeed、PyTorch-Lightning)與推論引擎(vLLM、SGLang、TGI 等),降低跨生態系整合成本。",
       "category": "ai-ml",
       "highlights": [
-        "作為模型定義的「樞紐」,一旦模型在 transformers 中定義,即可相容 Axolotl、Unsloth、DeepSpeed、vLLM、TGI、llama.cpp、mlx 等多數訓練與推論生態系",
-        "Hugging Face Hub 上有超過 100 萬個相容的預訓練 checkpoint 可直接使用",
-        "提供高階 Pipeline API,幾行程式碼即可完成文字生成、聊天、語音辨識、影像分類、視覺問答等多模態任務",
-        "支援 transformers serve / transformers chat 指令,可直接在命令列與模型互動",
-        "16 種語言的 README 翻譯,社群與文件規模龐大,163k+ 星星、每日仍持續有大量新增星星,活躍度極高"
+        "作為模型定義中樞,同時相容多種訓練框架與推論引擎(vLLM、SGLang、TGI、llama.cpp 等)",
+        "Pipeline API 三行程式碼即可完成文字生成、語音辨識、圖像分類、視覺問答等多模態任務",
+        "支援 1M+ 預訓練模型 checkpoint,涵蓋 Qwen、DeepSeek、Gemma、GLM 等主流 LLM/VLM",
+        "提供 CLI 工具(如 transformers chat/serve)方便本機互動測試模型",
+        "README 明確標示不適用場景(非通用神經網路建構工具箱、範例腳本僅供參考),降低誤用風險"
       ],
       "use_cases": [
-        "快速載入並試用 Hub 上的 SOTA 模型進行推論(文字、語音、影像、多模態)",
-        "作為訓練/微調流程的模型定義層,搭配 DeepSpeed、Axolotl、Unsloth 等框架進行客製化訓練",
-        "研究人員需要在 PyTorch/JAX/TF 之間搬移同一模型定義做實驗",
-        "建置推論服務,銜接 vLLM、SGLang、TGI 等生產環境推論引擎"
+        "快速載入並推論 Hugging Face Hub 上的預訓練模型(文字生成、語音辨識、影像分類等)",
+        "作為訓練框架(DeepSpeed、FSDP、Axolotl)與推論引擎(vLLM、TGI)之間共通的模型定義層",
+        "研究人員快速實驗、複現論文模型架構",
+        "企業或開發者建置聊天機器人、多模態應用的模型後端"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 內容非常完整,涵蓋安裝、快速上手範例、多語言翻譯與框架定位說明,文件品質極高。測試部分僅能依 README 判斷,無法檢視原始碼中的實際測試覆蓋率,故僅能給出基於文件的粗略評估。專案 last pushed 為近日,且今日即有 +80 star 的成長動能,活躍度非常高。"
+        "comment": "README 結構完整、範例豐富、多語言支援齊全,文件品質極佳;但本次評估僅based於README與metadata,未檢視程式碼與測試,故測試分數僅供參考;最後推送時間為2026-09-13,且今日仍在trending清單上,活躍度高。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "已是 AI/ML 生態系的核心基礎設施,長期活躍且文件完善,絕對值得關注與收藏。",
+      "verdict": "生態系地位穩固、文件與範例齊全、持續高度活躍,是 AI/ML 工程師必看且值得長期關注的核心專案。",
       "_mode": "light"
     }
   },
@@ -7480,10 +7493,10 @@
   },
   "calesthio/OpenMontage": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-12": [
         47342,
@@ -7512,38 +7525,49 @@
         10,
         "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "Python"
+      ],
+      "2026-09-14": [
+        58434,
+        380,
+        6,
+        "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-28",
+    "last_analyzed": "2026-09-14",
     "analysis": {
-      "one_liner": "把 Claude Code / Cursor 等 AI 編碼助手變成一套完整影片製片廠的開源代理系統。",
-      "summary": "OpenMontage 是一套以 Python 打造的「agent-first」影片生產框架,提供 10+ 條完整製片管線(說明影片、動畫、紀錄片剪輯、有聲書轉影片等)、100+ 個生產工具與 700+ 份技能/知識文件,讓 AI 編碼助手依循 YAML 管線定義與 Markdown 技能檔案,自動完成研究、腳本、素材生成、剪輯與最終合成。特點是可用免費/開源素材(Archive.org、NASA、Wikimedia、Piper TTS)做出真實運鏡的影片,也支援串接 20+ 雲端生成式模型供應商。",
+      "one_liner": "把 AI 編碼助手(Claude Code、Cursor 等)變成全流程影片製作工作室的開源 agentic 框架。",
+      "summary": "OpenMontage 不是一個獨立的 App,而是一整套給 AI coding assistant 使用的「工具 + 流程手冊 + 知識庫」:100+ 個 Python 工具(影像/影片生成、TTS、混音、字幕等)、12 條 YAML 定義的生產管線(explainer、cinematic、documentary montage 等),以及 700+ 份 Markdown skill 文件教 agent 怎麼用每個工具。使用者用自然語言下指令,AI 助手依照 research → proposal → script → scene_plan → assets → edit → compose 的固定流程,呼叫工具、自我審查、寫檢查點,最後產出成品影片。",
       "category": "ai-ml",
       "highlights": [
-        "三層知識架構(tools/pipeline_defs 定義能力、skills 教如何用、agent_skills 提供第三方技術深度知識),讓 AI agent 能自主規劃製片流程",
-        "有實際嚴謹的品質治理機制:預合成驗證、投影片風險評分、後製自我檢查(ffprobe、音訊分析)、預算管控與人工核准關卡",
-        "可完全零付費 API 運作,靠 Piper TTS、Archive.org/NASA/Wikimedia 開放素材與 Remotion/FFmpeg 做出真正的成品影片",
-        "BaseTool 抽象類別設計乾淨,型別提示完整,提供成本估算、依賴檢查、重試策略、可續跑等生產級工具契約",
-        "支援 20+ 影片生成、15+ 圖像生成、10+ TTS 供應商,並用 7 維度評分引擎自動選擇最佳供應商"
+        "三層知識架構(tools/pipeline_defs 的『有什麼』、skills/ 的『怎麼用』、.agents/skills 的『技術細節』)把可執行程式碼與 agent 決策邏輯清楚分離",
+        "支援 60+ 供應商並以 7 維度評分機制自動選擇(任務契合度、品質、成本、延遲等),含完整 fallback 與決策稽核紀錄",
+        "零付費 API 也能跑:Piper 免費 TTS + Archive.org/NASA/Wikimedia 免費素材 + Remotion/FFmpeg 本地渲染,可產出『真實影格』而非只是把靜態圖動畫化",
+        "內建預算控管(花費上限、逐筆核准門檻)與多道品質關卡(渲染前驗證、渲染後 ffprobe/音訊/字幕自我審查),避免 agent 產出半成品或超支",
+        "126 個測試檔涵蓋 contracts/tools/pipelines/eval,並有 GitHub Actions CI(lint + pytest)"
       ],
       "use_cases": [
-        "用自然語言 prompt 讓 AI 助手自動生成教育類說明影片或社群短影音",
-        "用免費開放素材做紀錄片式蒙太奇剪輯,不需任何付費生成式 API",
-        "將長 Podcast 或直播錄影自動剪成多支短影片供社群發布",
-        "建立品牌形象片、產品發表 Teaser 或多語系字幕/配音的在地化影片"
+        "用 Claude Code / Cursor 等 AI 編碼助手,直接用一句話生成教學型解說影片、產品宣傳短片或紀錄式蒙太奇",
+        "把長篇 Podcast 或直播剪成多支短影音素材,做社群平台二次利用",
+        "研究 agentic 系統如何用 Markdown skill + YAML manifest 取代傳統程式碼編排器(orchestrator)的設計模式",
+        "需要免費/開源素材(政府檔案、Wikimedia、Archive.org)拼接真實影片而非單純圖片動畫化的紀錄片型專案"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 4,
-        "comment": "README 與 docs/(ARCHITECTURE.md、PROVIDERS.md 等)寫得極為詳盡,700+ skill 檔案更是罕見的知識庫規模;tests/ 目錄下有 100+ 測試(contracts、tools、qa、backlot 等分類),CI 於 push/PR 皆執行 make lint 與 make test,顯示有基本的自動化把關。抽樣讀到的核心程式碼(base_tool.py、corpus.py)風格一致、型別完整、註解說明設計取捨而非贅述,工程水準高於一般個人專案。近期最後一次 push 在 2026-08-22,屬今日剛登上 trending 第一天,活躍度資訊尚待觀察後續是否持續維護這麼龐大的程式碼庫。"
+        "comment": "README 與架構文件非常詳盡,700+ skill 文件形成完整知識庫,但也代表大量內容尚待長期維護與正確性驗證。原始碼(tool_registry.py、base_tool.py)風格一致、有型別註記與 docstring,工程紀律良好。測試涵蓋 contracts/tools/pipelines/eval 多層次且有 CI 把關,但 last pushed 僅到 2026-09-06,且 agent-driven 流程的『正確性』難以用單元測試完全覆蓋,實際生產品質仍取決於 LLM 執行時的判斷。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "安裝方式為標準 `make setup`(pip install -r requirements.txt + npm install),Makefile 中會透過 `npx --yes hyperframes` 從 npm registry 預先快取套件,屬常見的 Node 生態安裝行為,非倉庫自身注入的可疑腳本",
+          "`.agents/skills/media-use/SKILL.md` 文件中提及第三方 HeyGen CLI 的官方安裝指令 `curl -fsSL https://static.heygen.ai/cli/install.sh | bash`,屬於使用說明文件裡引用外部廠商的官方安裝方式,並非本專案的自動安裝流程,使用前應自行評估該外部腳本",
+          "API 金鑰透過 `.env` 檔案讀取,程式碼中有解析邏輯但未發現外洩或上傳金鑰的行為"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "工程品質與文件深度都相當紮實,加上「用開源素材做出真實運鏡影片」的差異化賣點,是今天最值得點進去仔細研究的 AI 專案之一。",
+      "star_rating": 4,
+      "verdict": "工程結構嚴謹、文件與測試齊全,是觀察「agent-first」影片生產框架設計的絕佳範例,值得 AI 應用開發者一看,但要注意這是重度依賴 AI 編碼助手執行、且持續演進中的專案。",
       "_mode": "full"
     }
   },
@@ -12646,10 +12670,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -12690,6 +12714,13 @@
         29919,
         2265,
         1,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ],
+      "2026-09-14": [
+        31904,
+        2680,
+        3,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
       ]
@@ -14672,10 +14703,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -14694,6 +14725,13 @@
       "2026-09-05": [
         17983,
         1345,
+        12,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-09-14": [
+        26833,
+        2632,
         12,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
@@ -16860,15 +16898,22 @@
   },
   "JustVugg/colibri": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-11",
+    "last_seen": "2026-09-14",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-11": [
         27465,
         98,
         12,
+        "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "C"
+      ],
+      "2026-09-14": [
+        29831,
+        868,
+        1,
         "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "C"
       ]
@@ -17072,10 +17117,10 @@
   },
   "melgarafael/DeskcommCRM": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-12": [
         1346,
@@ -17088,6 +17133,13 @@
         1810,
         504,
         2,
+        "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "TypeScript"
+      ],
+      "2026-09-14": [
+        2190,
+        432,
+        5,
         "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "TypeScript"
       ]
@@ -17190,10 +17242,10 @@
   },
   "jihe520/MathModelAgent": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-12": [
         4858,
@@ -17206,6 +17258,13 @@
         5129,
         262,
         6,
+        "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+        "Python"
+      ],
+      "2026-09-14": [
+        5351,
+        246,
+        15,
         "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
         "Python"
       ]
@@ -17353,15 +17412,22 @@
   },
   "alphaXiv/OpenResearch": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-12",
+    "last_seen": "2026-09-14",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-12": [
         1277,
         120,
         14,
+        "Run parallel research agents with any model",
+        "Rust"
+      ],
+      "2026-09-14": [
+        2065,
+        289,
+        11,
         "Run parallel research agents with any model",
         "Rust"
       ]
@@ -17404,15 +17470,22 @@
   },
   "asgeirtj/system_prompts_leaks": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-13": [
         65410,
         217,
         3,
+        "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+        "JavaScript"
+      ],
+      "2026-09-14": [
+        66026,
+        706,
+        7,
         "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "JavaScript"
       ]
@@ -17506,15 +17579,22 @@
   },
   "yuliskov/SmartTube": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-13": [
         33214,
         136,
         9,
+        "Browse media content with your own rules on Android TV",
+        "Java"
+      ],
+      "2026-09-14": [
+        33452,
+        233,
+        10,
         "Browse media content with your own rules on Android TV",
         "Java"
       ]
@@ -17557,14 +17637,21 @@
   },
   "SnailSploit/Claude-Red": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-13": [
         3598,
         113,
+        13,
+        "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+        "Python"
+      ],
+      "2026-09-14": [
+        4143,
+        506,
         13,
         "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
         "Python"
@@ -17573,15 +17660,22 @@
   },
   "multimodal-art-projection/YuE": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-13": [
         7291,
         210,
         14,
+        "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "Python"
+      ],
+      "2026-09-14": [
+        7747,
+        487,
+        9,
         "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "Python"
       ]
@@ -17668,15 +17762,22 @@
   },
   "vxcontrol/pentagi": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-13": [
         23454,
         189,
         16,
+        "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+        "Go"
+      ],
+      "2026-09-14": [
+        23975,
+        590,
+        8,
         "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
         "Go"
       ]
@@ -17716,6 +17817,257 @@
       },
       "star_rating": 4,
       "verdict": "工程成熟度與文件品質在同類 AI Agent 專案中相當突出,若你在合法授權範圍內從事滲透測試或紅隊自動化研究,值得花時間深入評估。",
+      "_mode": "full"
+    }
+  },
+  "ever-co/ever-gauzy": {
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-14": [
+        5082,
+        191,
+        2,
+        "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-14",
+    "analysis": {
+      "category": "app",
+      "one_liner": "開源全功能企業管理平台,整合 ERP、CRM、HRM、ATS 與專案管理於一身。",
+      "summary": "Ever Gauzy 是以 TypeScript/NestJS/Angular 打造的開源商業管理平台,涵蓋人資、時間追蹤、CRM、會計發票、專案管理等企業常見需求,並提供 Web、Server、Desktop(Electron)多種部署形態。專案採 Nx monorepo 架構,模組化插件系統(plugin-*)支援 Jira、Upwork、Hubstaff、Zapier 等第三方整合,並內建多種 AI provider(OpenAI、Anthropic、Gemini 等)插件。",
+      "highlights": [
+        "Nx monorepo 架構,拆分出上百個 packages/plugins(auth、common、core、desktop-* 、各種 integration 插件等),模組化程度高",
+        "CI/CD 極為完整:74 個 GitHub Actions workflow,涵蓋單元測試、Cypress/Playwright E2E、Snyk 安全掃描、secrets-analysis、多環境(demo/stage/prod)部署",
+        "採 AGPL-3.0 + 商業授權雙軌模式(Community/Small Business/Enterprise),商業色彩濃厚但核心確實開源",
+        "支援多種資料庫(SQLite/PostgreSQL/MySQL/MongoDB 等)與完整 Docker Compose / Kubernetes / Pulumi 部署方案",
+        "postinstall 腳本經過仔細設計並附有詳細註解說明,對原生模組(better-sqlite3、bcrypt)編譯失敗會刻意讓建置失敗以避免生產環境資料庫無法開啟"
+      ],
+      "use_cases": [
+        "中小型企業想要一套整合 HR、CRM、專案管理、記帳開票的自架系統,不想拼湊多套 SaaS 工具",
+        "接案工作室或遠端團隊需要員工時間追蹤與活動監控(含桌面計時器 App)",
+        "想研究大型 Nx monorepo / NestJS + Angular 全端架構與外掛系統設計的工程師"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件齊全(README、Wiki、各 package 皆有 README/CHANGELOG),測試涵蓋 Jest 單元測試與 Cypress/Playwright E2E,抽查的測試案例撰寫嚴謹並附說明性註解。CI/CD 管線非常成熟,近期仍持續每日提交,活躍度高。唯獨專案龐大導致部分程式碼品質難以逐一驗證,且商業授權模式使部分進階功能不完全開源。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 使用 npm/yarn 生命週期腳本(postinstall 呼叫 patch-package 與自訂 .scripts/postinstall.js),屬常見作法,腳本內容可讀且有詳細註解說明原生模組編譯邏輯,未發現可疑外部下載或執行行為",
+          "README 提醒正式環境務必自行設定 JWT_SECRET 等機密值,預設值僅供 Demo 使用,屬於正常的安全提醒而非漏洞",
+          ".github/workflows 中包含 harvest-secrets-to-openbao.yml 等處理機密的工作流程,屬其自身 CI/CD 基礎設施範疇,未見硬編碼機密或異常網域"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、工程成熟度高的開源 ERP/HRM 平台,若有自架企業管理系統或研究大型 monorepo 架構的需求,值得花時間評估;但商業授權分層與龐大程式庫也意味導入與維運成本不低。",
+      "_mode": "full"
+    }
+  },
+  "tech-leads-club/agent-skills": {
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-14": [
+        5653,
+        265,
+        4,
+        "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-14",
+    "analysis": {
+      "one_liner": "為 Claude Code、Cursor、Copilot 等 AI 編碼代理提供的「安全驗證版」技能(Skill)登錄庫與 CLI 安裝工具。",
+      "summary": "agent-skills 是一個 Nx monorepo,包含 CLI(npx @tech-leads-club/agent-skills)、MCP server 與技能目錄(skills-catalog),讓使用者能一鍵將預先審核過的「技能包」(SKILL.md + 範本 + 參考文件)安裝到十多種 AI 編碼代理中。專案主打的賣點是相較於開放式技能市集,這裡的每個技能都經過人工審查與 Snyk Agent Scan 靜態掃描,CLI 本身也內建路徑穿越防護、symlink 防護與鎖檔完整性校驗。",
+      "category": "devtool",
+      "highlights": [
+        "CLI 安裝流程具備多層防禦:名稱清洗(sanitizeName)、路徑安全檢查(isPathSafe)、symlink 目標驗證(防 TOCTOU)、原子化鎖檔寫入(backup→tmp→rename)與附加式 audit log",
+        "每個技能發布前會用 Snyk Agent Scan 做增量式安全掃描,CI 對同倉 PR 與 merge queue(含 fork PR)皆會擋下掃描失敗的合併",
+        "GitHub Actions 全面使用 commit SHA 釘選第三方 action、發布流程需 approve-release 環境審核 + npm provenance,供應鏈把關相對嚴謹",
+        "測試覆蓋相當完整,libs/core 幾乎每個 service/adapter 都有對應 __tests__/*.spec.ts,採用 hexagonal architecture(ports/adapters)方便測試與替換",
+        "package.json 明確設定 nx.includedScripts: [] 且無 npm 生命週期腳本(如 postinstall)執行任意程式碼"
+      ],
+      "use_cases": [
+        "想快速為 Claude Code / Cursor / Copilot 等工具擴充特定領域技能(如 AWS 架構建議、Playwright 自動化、Figma 轉程式碼)的開發者",
+        "需要在團隊內以較可控方式管理與分發 AI 代理技能(而非讓每個人各自從不明來源下載)的工程團隊",
+        "想參考如何用 hexagonal architecture + Nx monorepo 組織 CLI/MCP/資料目錄三個套件的架構範例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README、SECURITY.md、CONTRIBUTING.md 文件齊全且具體(附程式碼片段說明防護機制),核心程式碼有完整 JSDoc 與大量單元測試;CI/CD pipeline 設計嚴謹(pinned actions、多階段掃描、發布審核)。少數技能腳本(如 vercel-deploy 的 deploy.sh)缺乏自動化測試,但這類外部整合腳本本就難以在 CI 中完整驗證。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "packages/skills-catalog/skills/(cloud)/vercel-deploy/scripts/deploy.sh 會將專案目錄打包(已排除 node_modules、.git、.env)後以 curl 上傳至外部端點 deploy-skills.vercel.sh 進行部署,這是該技能文件中說明的預期行為,而非安裝過程中自動觸發的腳本,但使用該技能前應留意此上傳行為",
+          "repo 內文件多處提及 curl/外部 API 呼叫,經檢視均屬技能參考文件(如 Cloudflare API 範例)或使用者主動觸發的部署腳本,並非安裝期自動執行的下載-執行(curl | bash)模式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "架構嚴謹、安全設計與文件品質都在同類專案中名列前茅,若你正在用多種 AI 編碼代理並想要有治理的技能來源,值得一試;但因技能本質仍是「代理會執行的指令」,安裝前仍建議自行檢視內容。",
+      "_mode": "full"
+    }
+  },
+  "tonhowtf/omniget": {
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-14": [
+        11664,
+        507,
+        16,
+        "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-14",
+    "analysis": {
+      "one_liner": "免終端機操作的開源桌面下載工具,一站式抓取 Udemy/Hotmart 課程、YouTube、IG、TikTok 等 1,800+ 網站內容。",
+      "summary": "OmniGet 是以 Rust/Tauri 打造的跨平台(Windows/macOS/Linux)開源桌面應用,底層整合 yt-dlp 與 FFmpeg,提供圖形化介面下載線上課程平台(Udemy、Hotmart、Kiwify等)、YouTube、Instagram、TikTok、Bilibili、Telegram、磁力連結等內容。內建課程播放器、PDF/EPUB 閱讀器、音樂庫與 108 項工具,強調檔案完全保存在本機、不上傳遙測資料。",
+      "category": "app",
+      "highlights": [
+        "支援 1,800+ 網站下載,對 Udemy、Hotmart、Bilibili、Telegram、種子/磁力連結等提供原生擷取器",
+        "內建 108 個工具(16 類別),涵蓋課程播放器、PDF/EPUB 閱讀器、字幕下載、語音轉文字、Anki 間隔重複記憶卡等",
+        "以 yt-dlp、FFmpeg 為引擎並自動安裝更新,GUI 操作免終端機,並支援可攜式(portable)模式",
+        "GPL-3.0 開源授權,README 明確聲明無帳號、無廣告、下載內容無遙測",
+        "今日登上 GitHub trending 第16名,單日新增 507 星,顯示短時間內社群關注度快速上升"
+      ],
+      "use_cases": [
+        "想備份已購買的 Udemy/Hotmart 等線上課程供離線觀看",
+        "需要整合下載 YouTube、Instagram、TikTok、X 等多平台影音內容,不想手動操作 yt-dlp 指令列",
+        "搭配課程播放、PDF/EPUB 閱讀與間隔重複記憶卡片的自學/學習工作流程",
+        "尋找開源、無遙測、檔案僅存本機的下載管理替代方案"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,含目錄、功能比較表、逐平台安裝與疑難排解說明、多語言版本,文件品質高;但僅能依 README 評估,未檢視原始碼故無法確認測試覆蓋程度。專案近期(2026-09-11)仍有推送,且首日登上 trending 即獲大量星數,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 說明 macOS 安裝需執行 `xattr -cr` 與 `codesign --force --deep --sign -` 指令以繞過 Gatekeeper 簽章驗證,屬於降低系統安全檢查的操作,使用者應理解其意義後再執行",
+          "應用程式未使用付費簽章憑證,Windows(SmartScreen)與 macOS(Gatekeeper)首次啟動皆會顯示系統警告,README 中已透明說明此為已知情況",
+          "本評估僅根據 GitHub metadata 與 README 內容,未實際檢視原始碼或執行測試,無法確認實際網路請求與資料處理行為"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "文件完整、功能豐富的開源下載整合工具,適合有課程備份或多平台內容下載需求者嘗試,但與 AI 研發工作本身關聯性有限,可視個人使用場景決定是否收藏。",
+      "_mode": "light"
+    }
+  },
+  "jiji262/douyin-downloader": {
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-14": [
+        11359,
+        452,
+        17,
+        "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-14",
+    "analysis": {
+      "one_liner": "功能齊全的抖音批量下載工具,支援去水印影片、圖集、合集、音樂下載,並具備直播錄製、留言蒐集、REST API 等進階功能。",
+      "summary": "douyin-downloader 是一個以 Python 撰寫的抖音內容下載器,支援單一作品與帳號批量下載,具備 SQLite 去重、斷點續傳、瀏覽器 fallback 繞過分頁風控、直播錄製、留言蒐集、語音轉文字、通知推播(Bark/Telegram/Webhook)及 REST API 伺服器模式。專案架構模組化(core/auth/cli/config/control),並附有對應的閉源桌面應用(Douzy)作為前端。",
+      "category": "cli",
+      "highlights": [
+        "功能覆蓋面廣:單片/圖集/合集/音樂、帳號批量下載、直播錄製、留言蒐集、熱搜與關鍵字搜尋、REST API 模式一應俱全",
+        "測試涵蓋度高,tests/ 目錄下有超過 60 個測試檔案,涵蓋 API client、下載器、資料庫遷移、限流器等核心模組",
+        "原始碼註解品質佳,對風控退避策略、增量下載邏輯等非顯而易見的設計決策有清楚說明",
+        "支援瀏覽器 fallback 繞過分頁風控、SQLite+本機檔案雙重去重機制,工程細節考慮周全",
+        "採用 Cookie 登入與 X-Bogus/A-Bogus 簽名等技術與抖音風控對抗,屬於典型爬蟲對抗場景,長期維護成本較高"
+      ],
+      "use_cases": [
+        "個人備份自己或他人公開發布的抖音影片、圖集、音樂內容",
+        "研究抖音風控/簽名機制或爬蟲技術的技術學習用途",
+        "自架 REST API 服務整合下載功能到自動化流程",
+        "搭配通知推播與排程,監控特定創作者的更新並自動下載"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 詳盡(含中英雙語版本),但聲稱有 GitHub Actions CI/CD,實際檢查專案並無 .github/workflows 目錄,文件與現況有落差。程式碼組織清晰、模組化良好,核心程式碼註解著重解釋非顯而易見的設計權衡(如風控退避、增量下載邏輯),品質優於一般個人專案。測試檔案數量多且涵蓋核心模組,但未執行實際跑測試驗證覆蓋率。最近一次推送在 2026-09-10,搭配 AGENTS.md/CLAUDE.md 等 AI 協作文件顯示專案仍在積極開發中。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "程式會抓取使用者的抖音 Cookie(包含 msToken、ttwid、sid_guard 等敏感登入憑證)並寫入本機 config.yml,使用者需自行妥善保管此設定檔",
+          "core/audio_extraction.py 等模組使用 subprocess 呼叫本機或內建的 ffmpeg 執行檔處理音訊,用途明確且非任意程式碼執行,未發現指令注入疑慮",
+          "未發現 curl|bash、混淆程式碼、base64 payload 或安裝腳本自動執行等可疑模式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、程式碼與測試品質皆優於同類專案,值得抖音下載需求或爬蟲風控對抗技術學習者關注,但需留意其對抗性爬蟲本質帶來的長期維護風險與 Cookie 憑證保管問題。",
+      "_mode": "full"
+    }
+  },
+  "Swordfish90/cool-retro-term": {
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-14": [
+        26226,
+        57,
+        18,
+        "A good looking terminal emulator which mimics the old cathode display...",
+        "QML"
+      ]
+    },
+    "last_analyzed": "2026-09-14",
+    "analysis": {
+      "category": "app",
+      "one_liner": "一款模擬老式陰極射線管螢幕效果的復古終端機模擬器,使用 Qt6/QML 打造。",
+      "summary": "cool-retro-term 是一個終端機模擬器,透過 QML shader 特效重現老式 CRT 螢幕的掃描線、螢光殘影、色差等視覺效果,底層終端機核心借用 qmltermwidget(源自 Konsole)。專案主打「好看又輕量」,使用者可透過右鍵選單即時調整顏色、字型與各種懷舊特效。",
+      "highlights": [
+        "內建數十種懷舊字型(IBM、Apple II、Commodore、Atari 等)並提供完整字型管理機制",
+        "透過 qmake 產生大量 shader 變體(raster/burn-in/bloom/curvature 等參數組合)來達成不同 CRT 效果",
+        "官方 CI 會自動建置 Linux AppImage 與 macOS DMG 並發布 Rolling Release",
+        "C++ 核心程式碼(FontManager 等)結構清晰、命名一致,屬於維護良好的中型專案"
+      ],
+      "use_cases": [
+        "想要有懷舊 CRT 視覺風格的終端機使用者",
+        "在 Linux/macOS 上尋找美觀且可高度客製化外觀的終端機模擬器",
+        "對 QML shader 特效實作或 Qt6 桌面應用開發有興趣的開發者參考"
+      ],
+      "quality": {
+        "docs": 2,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 精簡但將詳細建置步驟導向 GitHub Wiki;缺乏自動化測試(屬 GUI/桌面應用常見情況),但有專門的 Release CI 工作流程能自動建置多平台安裝檔;抽樣的 C++ 原始碼(fontmanager.cpp、fileio.cpp、main.cpp)結構清楚、命名一致,屬維護良好的中型專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對於喜歡復古美學或需要客製化終端機外觀的使用者,這是一個值得一試的成熟專案;程式碼品質佳,但若期待完整測試覆蓋率則會略顯不足。",
       "_mode": "full"
     }
   }
