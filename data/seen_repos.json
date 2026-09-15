@@ -536,7 +536,7 @@
   },
   "ruvnet/RuView": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-11",
+    "last_seen": "2026-09-15",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -549,45 +549,52 @@
         8,
         "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
         "Rust"
+      ],
+      "2026-09-15": [
+        93839,
+        383,
+        12,
+        "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-08-11",
+    "last_analyzed": "2026-09-15",
     "analysis": {
       "category": "ai-ml",
-      "one_liner": "用 9 美元的 ESP32 把家用 WiFi 訊號變成穿牆感測系統,偵測人員存在、呼吸心跳與姿態,完全不需要攝影機。",
-      "summary": "RuView(原 WiFi-DensePose)是以 Rust 為主體的 WiFi CSI 感測平台,利用 ESP32 擷取通道狀態資訊,結合訊號處理與神經網路推論出人員存在、呼吸/心跳、姿態關鍵點與房間指紋等資訊,並整合 Home Assistant / Apple Home / Matter 等智慧家庭生態系。專案內含超過 100 個可安裝的邊緣運算模組(cogs)、完整的 ADR 架構決策紀錄與量化過的模型基準測試。",
+      "one_liner": "用一般家用 WiFi 訊號取代攝影機,打造能穿牆偵測人體、生命徵象與姿態的邊緣感測平台。",
+      "summary": "RuView 是以 Rust 打造的 WiFi CSI(通道狀態資訊)感測平台,透過低成本 ESP32 節點分析 WiFi 訊號反射,偵測人員存在、呼吸心跳、跌倒與姿態動作,並原生整合 Home Assistant、Apple Home、Google Home、Alexa 等智慧家庭生態系。專案附有大量 ADR 架構決策文件、基準測試數據與已發布於 Hugging Face 的預訓練模型。",
       "highlights": [
-        "README 對模型成熟度做了罕見的誠實分級:明確標示哪些數字是『已驗證』、哪些是『第一版但偏弱』(如 pose_v1 的 PCK@20 僅 3.0%,推論路徑目前仍是回傳 confidence=0 的 stub),甚至把先前『100% presence』的誇大數字主動撤回",
-        "Rust workspace 拆分成 40+ 個 crate(訊號處理、神經網路、韌體橋接、HomeKit/Matter 整合、Wasm 邊緣運算等),搭配 rust-toolchain.toml 與嚴謹的 workspace 依賴管理",
-        "測試覆蓋非常廣,光是 v2/crates 底下就有上百個整合測試檔案,涵蓋 MQTT、WebSocket、隱私閘門、韌體同步等場景,並宣稱 1463 個測試全數通過",
-        "提供 105 個邊緣模組目錄(健康、居家安全、零售、工業、AI、群體協作等),以及可攜式的『MetaHarness』CLI 供 AI agent 進行受控、唯讀的操作與驗證",
-        "CI/CD 相當完整,近 30 個 GitHub Actions workflow 涵蓋韌體 QEMU 測試、npm/PyPI 發布、安全掃描、基準測試回歸等"
+        "以 9 美元 ESP32 節點讀取 WiFi CSI,免攝影機即可實現透牆人體偵測、呼吸心跳量測與 17 個關節點姿態估計",
+        "原生支援 Home Assistant、Apple Home/HomePod、Google Home、Amazon Alexa 四大智慧家庭生態系統,並可透過 Matter 端點串接",
+        "提供 105 個邊緣模組(Cog)目錄,涵蓋健康、居家安全、零售、工業等應用場景,並附完整 ADR 設計文件",
+        "README 罕見地主動揭露並更正先前誇大的準確率數據(如姿態估計 PCK@20 僅 3%,尚未達到內部目標,且該路徑仍是 confidence=0 的初版模型)",
+        "內建 RuView MetaHarness(npx @ruvnet/ruview)可供 AI Agent(Claude Code/Codex)進行守護式操作,預設唯讀,需明確加旗標才能寫入"
       ],
       "use_cases": [
-        "智慧家庭場域:免攝影機的房間佔用偵測、跌倒警示、睡眠與生命徵象監測,並直接對接 Home Assistant / HomeKit / Google Home / Alexa",
-        "零售與商業空間的人流分析、排隊長度估計、桌位翻桌率追蹤等,免除攝影機帶來的 GDPR/HIPAA 疑慮",
-        "研究與教育用途:學習 WiFi CSI 訊號處理(Fresnel zone、SpotFi、BVP)與對比式表徵學習在邊緣裝置上的落地",
-        "工業與長照場域的非侵入式生命徵象與安全監控(如老人獨居跌倒偵測、受限空間工安警示)"
+        "智慧家庭中的無感跌倒偵測、長者獨居安全監控與異常行為告警",
+        "睡眠品質與生命徵象(呼吸、心跳)非接觸式監測",
+        "零售、工業或建築場域的人流計數與空間佔用感測研究",
+        "WiFi 感測、邊緣運算與姿態估計相關的學術研究或技術教學參考"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 2,
         "activity": 5,
-        "comment": "文件品質相當突出,不只是行銷式 README,而是搭配大量 ADR(架構決策紀錄)、基準測試報告與模型誠實度分級,清楚交代哪些功能是實驗性質、哪些已有嚴謹量化驗證。程式碼抽樣(如 Fresnel zone 呼吸模型、Candle 姿態推論引擎)註解精確且引用文獻,顯示團隊具備扎實的訊號處理與 ML 工程能力。測試數量與 CI 涵蓋面在同類專案中屬於少見的完整程度,今日仍有推送記錄,活躍度極高。"
+        "comment": "README 內容非常完整,附有大量 ADR 決策文件、基準測試表格與模型連結,文件品質高;但僅能依 README 判斷,無法檢視實際程式碼與測試涵蓋率,標榜的 1463 項測試通過為自我陳述、未經第三方驗證。最後推送時間為今日,搭配 trending 熱度顯示專案仍在積極開發中。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "install.sh 在使用者選擇 rust/browser/field 等安裝模式且系統未偵測到 Rust 時,會執行官方 rustup 安裝指令(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh),這是業界常見的 Rust 官方安裝方式,且預設會先詢問使用者確認(除非帶入 --yes 略過互動),並非專案自製的不明來源腳本",
-          "install.sh 於 Linux 環境下會呼叫 sudo apt-get / dnf 安裝系統套件(build-essential、libopenblas-dev 等),同樣有互動確認機制,使用者應留意賦予 sudo 權限前確認腳本內容",
-          "檢查過的 package.json 檔案(harness、tools、dashboard 等)均未發現 preinstall/postinstall/prepare 生命週期腳本執行任意程式碼的情形"
+          "README 提供的安裝與操作方式是透過 npx 執行官方發布的 npm 套件(@ruvnet/ruview),並非 curl|bash 這類直接執行遠端腳本的高風險模式",
+          "文件明確說明 AI Agent 操作預設為唯讀模式,需同時加上 --allow-write 與 --confirm 兩個旗標才能寫入工作區,顯示對操作風險有一定防護設計",
+          "此評估僅根據 README 描述,未實際檢視原始碼或進行程式碼層級的資安稽核"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程深度與誠實揭露模型限度的作風在 GitHub trending 專案中相當少見,無論是想學 WiFi 感測技術或尋找可落地的邊緣 AI 架構範本都值得花時間細讀。",
-      "_mode": "full"
+      "star_rating": 4,
+      "verdict": "概念新穎且文件詳盡、生態整合完整,值得關注與追蹤,但專案本身坦承部分準確率數據仍待驗證,實際落地效果建議親自測試後再評估。",
+      "_mode": "light"
     },
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "consecutive_days_on_trending": 1
   },
   "CoreBunch/Instatic": {
@@ -984,8 +991,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 1,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1007,6 +1014,13 @@
         23518,
         443,
         14,
+        "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
+      ],
+      "2026-09-15": [
+        25728,
+        1571,
+        2,
         "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
       ]
@@ -1046,8 +1060,8 @@
       "verdict": "工程成熟度與文件品質俱佳,搭配可驗證的效能基準與嚴謹 CI,值得台灣 AI/DevOps 團隊實際評估導入 CI pipeline。",
       "_mode": "full"
     },
-    "total_days_on_trending": 5,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 6,
+    "consecutive_days_on_trending": 2
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -4348,10 +4362,10 @@
   },
   "Panniantong/Agent-Reach": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-03": [
         64702,
@@ -4366,33 +4380,47 @@
         11,
         "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "Python"
+      ],
+      "2026-09-15": [
+        81252,
+        651,
+        6,
+        "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-03",
+    "last_analyzed": "2026-09-15",
     "analysis": {
-      "one_liner": "test",
-      "summary": "test",
-      "category": "devtool",
+      "category": "ai-ml",
+      "one_liner": "讓 AI Agent 一鍵接上 Twitter、Reddit、YouTube、B站、小紅書等十多個平台的 CLI 能力層,不寫爬蟲、零 API 費用。",
+      "summary": "Agent Reach 本身不做內容抓取,而是扮演「選型 + 安裝 + 體檢 + 路由」的能力層:為每個平台維護「首選後端 + 備選後端」清單(如 Twitter 走 twitter-cli 備選 OpenCLI,B站走 bili-cli 備選搜索 API),讓 AI Agent(Claude Code、Cursor、OpenClaw 等)透過一句安裝指令,自動偵測環境並串接對應的上游開源工具。當某個平台的接入方式失效(如反爬升級),維護者只需調整後端順序,使用者無感知升級。",
       "highlights": [
-        "a",
-        "b"
+        "「首選+備選」多後端路由設計,平台反爬/API 變動時只需換路由順序,不必重寫程式碼",
+        "安裝流程預設唯讀檢查(不動系統),要明確加 --system 才會安裝依賴或寫入設定,並提供 --dry-run 預覽",
+        "Cookie/Token 只存在本機 config.yaml(權限 600),且程式碼中有 scrub_url_credentials、atomic 私有寫入、防 symlink 讀取等具體安全實作",
+        "32 個測試檔涵蓋 cookie 安全、憑證邊界、doctor 診斷等面向,CI 含 Linux/Windows 矩陣測試與 wheel 打包驗證",
+        "README 明確提醒 Cookie 登入類平台有封號風險,建議用小號而非主帳號"
       ],
       "use_cases": [
-        "a",
-        "b"
+        "讓 Claude Code / Cursor / OpenClaw 等 Agent 具備讀取 Twitter、Reddit、YouTube 字幕、GitHub Issue 等內容的能力,免去手動申請付費 API",
+        "需要定期監控多平台輿情或內容更新(如產品口碑、技術討論)但不想自建爬蟲維護成本的個人開發者",
+        "在伺服器或無桌面環境上,搭配 OpenCLI/MCP 後端讀取需要登入態的平台內容"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "test"
+        "comment": "README 與 install.md 文件詳盡,明確列出安裝步驟、安全邊界與可選渠道;測試涵蓋憑證安全、路徑處理、各渠道行為等面向,CI 有多平台矩陣與 wheel 驗證;抽查的 core.py、cookie_extract.py、cli.py 程式碼結構清晰、有型別註記,對敏感操作(cookie 擷取、私有檔案寫入)有明確的安全考量。近期仍持續推送(2026-09-01)。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "安裝流程設計為由 AI Agent 依 docs/install.md 的指示執行 shell 指令(pip/pipx 安裝、寫入 ~/.agent-reach/ 設定、依使用者同意安裝瀏覽器擴充功能等),屬於「文件驅動 Agent 執行指令」而非傳統的 curl|bash 一鍵腳本,但使用者應理解安裝過程涉及 Agent 自動執行多項系統指令",
+          "文件中出現從 GitHub 特定 commit 安裝第三方套件的指令(如 rdt-cli 透過 pip install git+https://... @commit_hash),屬於固定版本依賴,非官方 PyPI 套件來源"
+        ]
       },
       "star_rating": 4,
-      "verdict": "test",
+      "verdict": "工程實作嚴謹、安全意識明確、文件與測試完整,是目前少見把「多平台資料存取」做成可維護能力層的專案,值得关注與嘗試。",
       "_mode": "full"
     }
   },
@@ -6081,10 +6109,10 @@
   },
   "TauricResearch/TradingAgents": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-09-10",
+    "last_seen": "2026-09-15",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-09": [
         96733,
@@ -6118,6 +6146,13 @@
         103956,
         367,
         7,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
+      ],
+      "2026-09-15": [
+        106124,
+        745,
+        11,
         "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "Python"
       ]
@@ -7391,10 +7426,10 @@
   },
   "huggingface/transformers": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-12": [
         163808,
@@ -7407,6 +7442,13 @@
         165523,
         152,
         19,
+        "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+        "Python"
+      ],
+      "2026-09-15": [
+        165971,
+        536,
+        15,
         "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
         "Python"
       ]
@@ -8072,10 +8114,10 @@
   },
   "localsend/localsend": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
+    "last_seen": "2026-09-15",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         87812,
@@ -8083,38 +8125,45 @@
         14,
         "An open-source cross-platform alternative to AirDrop",
         "Dart"
+      ],
+      "2026-09-15": [
+        91323,
+        251,
+        9,
+        "An open-source cross-platform alternative to AirDrop",
+        "Dart"
       ]
     },
-    "last_analyzed": "2026-08-13",
+    "last_analyzed": "2026-09-15",
     "analysis": {
       "category": "app",
-      "one_liner": "跨平台的開源區域網路檔案分享工具,免網路、免帳號,類似 AirDrop 但支援 Windows/macOS/Linux/Android/iOS。",
-      "summary": "LocalSend 讓裝置在同一區域網路內透過自建 HTTPS REST API 安全地互傳檔案與訊息,不依賴任何外部伺服器或網際網路連線。專案以 Flutter/Dart 撰寫跨平台 UI,近期已將核心傳輸邏輯(加密、探索、HTTP client/server)重寫成 Rust(packages/core),透過 flutter_rust_bridge 橋接,並額外提供獨立的 Rust CLI 版本。",
+      "one_liner": "開源跨平台的 AirDrop 替代方案,透過本機網路以 HTTPS 安全傳輸檔案與訊息,無需網際網路連線。",
+      "summary": "LocalSend 是以 Flutter 撰寫 UI、Rust 撰寫核心傳輸協定的跨平台應用程式,支援 Windows/macOS/Linux/Android/iOS,透過裝置間自簽憑證與指紋比對建立加密通道進行區域網路檔案分享。專案同時提供圖形介面 App 與獨立的 CLI 工具,並有完整的多平台打包與發布流程。",
       "highlights": [
-        "核心傳輸協定已用 Rust 重寫(packages/core),含憑證產生/驗證、mDNS 探索、TLS pinning、WebRTC 訊號等模組,並附有大量整合測試",
-        "支援 7 大平台(Windows/macOS/Linux/Android/iOS/Fire OS + Web),另有獨立 Rust CLI 工具可供伺服器/無頭裝置使用",
-        "每台裝置採用自簽 RSA-2048 憑證,以憑證 SHA-256 指紋作為裝置識別,不依賴 CA 或帳號系統",
-        "CI 涵蓋 dart format/analyze/test、cargo clippy/test 與版本號一致性檢查,工程紀律扎實",
-        "社群活躍度高(87k+ stars、多語系翻譯經 Weblate 管理、多個套件管理器上架)"
+        "Rust 核心(packages/core)負責 HTTP server/client、憑證驗證、探索協定,並有大量單元測試與整合測試(tls pinning、web download、multicast 等)",
+        "檔名處理針對 Windows/HFS/FAT/POSIX 各平台規則做了嚴謹的路徑穿越防護(sanitize_path 會把 ../../etc/passwd 收斂成 passwd),並附完整測試案例",
+        "憑證採用裝置自簽 RSA-2048 + SHA-256 指紋比對,而非依賴 CA,設計理念與測試(含過期、簽章錯誤、公鑰不符情境)都寫得很清楚",
+        "CI 涵蓋 dart format、flutter analyze/test、Rust clippy/test,以及版本號與著作權字串跨平台一致性檢查,工程紀律高",
+        "支援十幾種平台的完整封裝發布管線(Winget、Homebrew、Flathub、Snap、AUR、MSIX 等)"
       ],
       "use_cases": [
-        "同一 Wi-Fi/區網下在手機、平板、電腦之間快速互傳檔案或文字,無需申請帳號或連網",
-        "企業或家庭內網環境中取代雲端傳檔工具,避免資料經過第三方伺服器",
-        "伺服器/NAS/無頭 Linux 主機可用其 Rust CLI 版本進行腳本化收發檔案",
-        "需要跨 Android/iOS/桌面平台一致體驗的檔案分享情境"
+        "需要在無網際網路環境下(純區網)於多台裝置間快速互傳檔案",
+        "取代 AirDrop 用於跨 Windows/Linux/Android 平台的檔案分享情境",
+        "以 CLI 方式整合進伺服器或自動化腳本,批次傳送檔案/資料夾",
+        "學習如何以 Rust + flutter_rust_bridge 打造高效能跨平台 Flutter 應用的核心邏輯"
       ],
       "quality": {
-        "docs": 4,
-        "tests": 4,
+        "docs": 5,
+        "tests": 5,
         "activity": 5,
-        "comment": "文件完整(多語系 README、CONTRIBUTING、CODE_SIGNING 說明),測試涵蓋 Dart 單元測試與 Rust 端加密/伺服器/多播等整合測試,CI 流程嚴謹(format/analyze/test/clippy/版本一致性檢查),且從純 Dart 遷移到 Rust 核心顯示持續的架構投入與活躍維護。"
+        "comment": "文件完整(README、CONTRIBUTING、CODE_SIGNING 等),CI 流程嚴謹涵蓋格式、靜態分析、單元/整合測試與跨平台版本一致性檢查;核心 Rust 程式碼註解清楚說明設計理由(如憑證有效期、檔名規則差異),測試涵蓋邊界情境,整體工程品質屬於資安敏感型專案中少見的高水準。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "成熟、活躍且工程品質紮實的開源專案,近期核心邏輯轉用 Rust 提升安全性與效能,值得關注與試用。",
+      "verdict": "工程品質與安全設計都相當扎實,是值得研究本機網路安全傳輸與跨平台 Flutter+Rust 架構的優質專案。",
       "_mode": "full"
     }
   },
@@ -11399,10 +11448,10 @@
   },
   "dani-garcia/vaultwarden": {
     "first_seen": "2026-08-24",
-    "last_seen": "2026-08-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-24": [
         65962,
@@ -11417,37 +11466,45 @@
         16,
         "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
         "Rust"
+      ],
+      "2026-09-15": [
+        67526,
+        115,
+        10,
+        "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-08-24",
+    "last_analyzed": "2026-09-15",
     "analysis": {
-      "one_liner": "用 Rust 打造的非官方 Bitwarden 相容伺服器,適合資源有限的自架環境。",
-      "summary": "Vaultwarden(前身 bitwarden_rs)是一個以 Rust 撰寫、相容 Bitwarden 用戶端 API 的密碼管理伺服器,提供近乎完整的官方功能(組織、附件、2FA、緊急存取等),但資源消耗遠低於官方 Java/.NET 實作,主要透過 Docker 容器發佈供自架使用。",
       "category": "infra",
+      "one_liner": "用 Rust 打造的輕量版 Bitwarden 相容伺服器,適合自架密碼管理服務。",
+      "summary": "Vaultwarden(前身 bitwarden_rs)是一個以 Rust 撰寫、相容官方 Bitwarden 用戶端 API 的非官方伺服器實作,鎖定自架族群、家庭與小型組織,資源消耗遠低於官方 Java 版伺服器。專案涵蓋密碼庫、組織、多因子驗證(TOTP/WebAuthn/YubiKey/Duo/Email)、SSO(OIDC)、緊急存取等接近完整的 Bitwarden 功能集,並提供官方容器映像方便部署。",
       "highlights": [
-        "功能涵蓋個人密碼庫、組織、Send、附件、多種 2FA(TOTP、Email、WebAuthn、YubiKey、Duo)、緊急存取等,幾乎對齊官方 Bitwarden API",
-        "採用 Rocket 框架搭配 Diesel ORM,支援 SQLite/MySQL/PostgreSQL 多種資料庫遷移腳本",
-        "CI 相當完整,包含 build/release workflow、hadolint(Dockerfile 檢查)、trivy(漏洞掃描)、zizmor(GitHub Actions 安全檢查)、typos 拼字檢查",
-        "使用 playwright 撰寫端對端整合測試,涵蓋登入、組織、SSO、Send 等核心流程",
-        "加密相關程式碼(crypto.rs)使用成熟函式庫(ring、subtle 做常數時間比較),PBKDF2 參數與隨機數產生方式符合業界慣例"
+        "支援 SQLite/MySQL/PostgreSQL 三種資料庫後端,並可選用 S3 作為附件儲存",
+        "近乎完整重現 Bitwarden API,含組織、群組、原則、緊急存取與多種 2FA 方式",
+        "CI 涵蓋 cargo test(多資料庫組合)、clippy、rustfmt、Trivy 弱點掃描、zizmor(GitHub Actions 安全檢查)、hadolint、typos 等多層品質把關",
+        "GitHub Actions 全數以 commit SHA 釘選版本,並將 workflow 權限預設收斂為空,安全實務到位",
+        "另有 Playwright 端對端測試涵蓋登入、SSO、組織、Send 等關鍵流程"
       ],
       "use_cases": [
-        "個人或家庭想要自架密碼管理服務,取代官方雲端 Bitwarden",
-        "小型組織/團隊需要低資源消耗、可用 Docker 快速部署的密碼庫伺服器",
-        "研究 Rust 撰寫 Web 服務(Rocket + Diesel)架構與安全實作的參考專案"
+        "個人或家庭想自架 Bitwarden 相容的密碼管理伺服器,節省官方伺服器的資源開銷",
+        "小型團隊需要具備組織、群組、原則管理功能的自架密碼管理方案",
+        "需要透過 Docker/Podman 快速部署並串接反向代理與 HTTPS 的維運場景",
+        "研究 Rust 撰寫的 Web 後端(Rocket 框架)搭配 Diesel ORM 與多資料庫支援的實作範例"
       ],
       "quality": {
         "docs": 4,
         "tests": 4,
         "activity": 5,
-        "comment": "專案結構成熟,原始碼模組化清楚(auth、crypto、db/models、api/core 分層明確),CI/CD 涵蓋建置、安全掃描(trivy、zizmor)、Dockerfile lint、拼字檢查,並有 playwright 端對端測試涵蓋主要使用情境。README 與 Wiki 文件完整,GitHub 討論區與 Matrix 社群活躍,commit 與 issue 頻率高,是長期維護、品質穩定的專案。"
+        "comment": "文件方面 README 精簡但完整,詳細操作說明另外維護在 Wiki;程式碼採模組化拆分(auth/config/crypto/db/api 等),抽樣讀取的 crypto.rs 使用 ring 與 subtle 等成熟函式庫,常數時間比較、PBKDF2 等安全實作正確且註解得宜。測試方面除 Rust 單元/整合測試(依資料庫特性分組執行)外,還有一套完整的 Playwright E2E 測試涵蓋登入、SSO、組織等流程,CI 流程齊全(build/test/clippy/fmt/Trivy/zizmor/hadolint/typos),活躍度高,最近一次推送在 2026-09-13,commit 歷史頻繁。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "成熟穩定、社群活躍、程式碼品質高的自架密碼管理方案,值得收藏與關注。",
+      "verdict": "成熟、活躍且工程實務嚴謹的自架密碼管理伺服器,對需要輕量化 Bitwarden 替代方案的使用者非常值得關注。",
       "_mode": "full"
     }
   },
@@ -14703,10 +14760,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -14733,6 +14790,13 @@
         26833,
         2632,
         12,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-09-15": [
+        29197,
+        2776,
+        4,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -16898,10 +16962,10 @@
   },
   "JustVugg/colibri": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-11": [
         27465,
@@ -16913,6 +16977,13 @@
       "2026-09-14": [
         29831,
         868,
+        1,
+        "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "C"
+      ],
+      "2026-09-15": [
+        32080,
+        2173,
         1,
         "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "C"
@@ -17470,10 +17541,10 @@
   },
   "asgeirtj/system_prompts_leaks": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-13": [
         65410,
@@ -17485,6 +17556,13 @@
       "2026-09-14": [
         66026,
         706,
+        7,
+        "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+        "JavaScript"
+      ],
+      "2026-09-15": [
+        66760,
+        764,
         7,
         "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
         "JavaScript"
@@ -17637,10 +17715,10 @@
   },
   "SnailSploit/Claude-Red": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-13": [
         3598,
@@ -17655,15 +17733,22 @@
         13,
         "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
         "Python"
+      ],
+      "2026-09-15": [
+        4732,
+        579,
+        20,
+        "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+        "Python"
       ]
     }
   },
   "multimodal-art-projection/YuE": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-13": [
         7291,
@@ -17676,6 +17761,13 @@
         7747,
         487,
         9,
+        "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "Python"
+      ],
+      "2026-09-15": [
+        8336,
+        559,
+        3,
         "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "Python"
       ]
@@ -17822,15 +17914,22 @@
   },
   "ever-co/ever-gauzy": {
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-14": [
         5082,
         191,
         2,
+        "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
+        "TypeScript"
+      ],
+      "2026-09-15": [
+        5981,
+        1130,
+        16,
         "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
         "TypeScript"
       ]
@@ -17873,15 +17972,22 @@
   },
   "tech-leads-club/agent-skills": {
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-14": [
         5653,
         265,
         4,
+        "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+        "TypeScript"
+      ],
+      "2026-09-15": [
+        6058,
+        512,
+        13,
         "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
         "TypeScript"
       ]
@@ -18068,6 +18174,298 @@
       },
       "star_rating": 4,
       "verdict": "對於喜歡復古美學或需要客製化終端機外觀的使用者,這是一個值得一試的成熟專案;程式碼品質佳,但若期待完整測試覆蓋率則會略顯不足。",
+      "_mode": "full"
+    }
+  },
+  "666ghj/MiroFish": {
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-15": [
+        73147,
+        560,
+        5,
+        "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-15",
+    "analysis": {
+      "one_liner": "用多智能體群體模擬技術「預演未來」的開源引擎,能把新聞、政策草案等種子資訊轉成高擬真數位社會進行推演預測。",
+      "summary": "MiroFish 是由盛趣遊戲孵化的多智能體社會模擬引擎,核心構想是把使用者上傳的文本(新聞、小說、政策草案等)透過知識圖譜(Zep Cloud)與本體生成技術,轉換成具有人設、記憶與行為邏輯的大量智能體,並在 Twitter/Reddit 雙平台模擬環境(基於 CAMEL-AI 的 OASIS 框架)中進行群體互動演化,最終產生預測報告。專案採 Flask 後端 + 前端(Vite)+ Docker 三種部署方式,並依賴外部 LLM API 與 Zep Cloud 圖譜服務運作。",
+      "category": "ai-ml",
+      "highlights": [
+        "基於 CAMEL-AI 的 OASIS 開源模擬引擎,結合 GraphRAG 知識圖譜(Zep Cloud)自動生成實體本體、人設與模擬配置,自動化程度高",
+        "支援雙平台(Twitter/Reddit 風格)並行社群模擬,並有 ReportAgent 可在模擬結束後與使用者深度互動、追問推演細節",
+        "後端程式碼結構清晰(app/api、services、utils 分層),有中文技術註解說明設計理念(如本體生成的兜底類型設計)",
+        "backend/tests 下有相對完整的單元測試(涵蓋 ontology、zep 圖譜分頁、profile 正規化等模組),測試覆蓋面在同類 AI agent 專案中屬中上水準",
+        "提供官方線上 Demo、B 站示範影片(武漢大學輿情模擬、紅樓夢結局推演),展示效果直觀"
+      ],
+      "use_cases": [
+        "公關/政策決策者做零風險的輿情或政策沙盤推演",
+        "研究人員探索多智能體群體湧現(swarm intelligence)與社會模擬",
+        "內容創作者對小說、劇本做「假設性結局」的創意推演",
+        "社會或輿情事件的情境模擬與影響評估(官方標示尚在完善中)"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 圖文並茂、雙語(中英)且提供影片示範,文件品質高;抽樣的核心程式碼(simulation_manager.py、ontology_generator.py、config.py)結構清晰、模組化良好且含中文說明註解。tests 目錄涵蓋多個關鍵模組但看不到 CI 自動跑測試的 workflow(僅有 Docker build workflow),活躍度方面最近一次 push 在 2026-09-03,今天(9/15)登上 trending 第 5 名且單日新增 560 星,顯示社群關注度正快速上升。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Docker 部署需使用者自行在 .env 檔填入 LLM_API_KEY 與 ZEP_API_KEY 等第三方服務金鑰,且模擬功能依賴外部雲端服務(Zep Cloud、LLM API 供應商),使用前應了解資料會傳送給這些第三方",
+          "config.py 中若 Flask DEBUG 模式開啟會發出執行期警告,提醒使用者不要在正式環境使用,屬於良好實踐而非疑慮",
+          "未發現 curl|bash 型態的安裝腳本、混淆程式碼、內嵌 base64 巨量 payload 或硬編碼 IP/可疑網域,安裝流程為標準的 npm install 與 uv sync"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念新穎且工程實作紮實,是目前 AI agent 群體模擬領域值得關注的專案,但依賴多項外部付費/雲端服務,實際落地成本需留意。",
+      "_mode": "full"
+    }
+  },
+  "rlaope/oh-my-hermes": {
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-15": [
+        2040,
+        77,
+        8,
+        "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-15",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "為 Hermes Agent 打造的「操作層」外掛,加上模型路由、平行執行、長期記憶與上百個專家技能。",
+      "summary": "oh-my-hermes(OMH)是架在 NousResearch 的 Hermes Agent 之上的一整套外掛系統,提供依任務類別自動選模型/推理強度的路由機制、可平行執行且不互相干擾檔案的工作分派(fanout)、108 個 omh-* 專家技能目錄,以及一個需人工審核、有到期機制的長期專案記憶系統。核心訴求是「證據優先」:任何步驟在被驗證通過前都不會被回報為「完成」。",
+      "highlights": [
+        "混合模型路由:依任務複雜度自動挑選模型與推理強度(如 GPT-6 Astra、Claude Fable、Kimi K3 等),鏈路可由使用者編輯覆寫",
+        "ulw-work 平行工作流:將任務拆成互不共用檔案的單元,各自獨立 worktree,並用型別化結果(process exited / schema valid / verification observed / integration ready)避免「假完成」",
+        "長期記憶系統採審核制:候選記憶需經過審核卡片同意、有效期與回顧機制,且與 Hermes 原生記憶分離存放",
+        "CI 設計嚴謹:Linux/Windows 雙平台、測試分片(shard)+ 隔離區(quarantine)+ 結果彙總校驗,GitHub Actions 全部以 commit SHA 釘選版本",
+        "文件與測試量體龐大(700+ 測試檔、多語言 README、詳盡的 docs/ 目錄),顯示專案已相對成熟"
+      ],
+      "use_cases": [
+        "已在使用 Hermes Agent 且想要更精細的模型成本/效能控管(依任務類別分派模型與推理強度)",
+        "需要多個編碼任務平行執行且要求嚴謹「已驗證才算完成」流程的團隊",
+        "想要為 AI 代理建立可審核、有生命週期管理的專案長期記憶",
+        "想瀏覽/借鏡其 108 個技能(omh-*)與 ulw-* workflow 設計思路的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件量與涵蓋面非常完整(多語言 README、docs/ 下十幾份規格文件、架構文件),測試套件規模龐大且 CI 對 Linux/Windows 雙平台都有完整涵蓋,並用分片+隔離區+彙總校驗確保沒有測試被漏跑,工程紀律高於一般個人專案。程式碼採高度模組化拆分(單一 src/coding 目錄下就有數十個小檔案),但也因此模組數量偏多、耦合面廣,單一檔案追蹤上下文成本較高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install.sh/install.ps1 採用常見的 curl|sh 或 irm|iex 一鍵安裝模式,預設會從 GitHub Releases 下載已發版的 wheel(依版本 tag 命名,而非任意內容),preview 頻道則抓取 main 分支封存檔;此為此類 CLI 工具常見做法,非該專案獨有問題",
+          "README 提供一段「貼給 AI 代理執行」的安裝指令範本,要求代理先用 git ls-remote 解析 main 為完整 commit SHA 再讀取/執行該 SHA 版本的 INSTALL_FOR_AGENTS.md,避免代理直接信任可變動的 main 分支內容——這是專案自行設計的防竄改措施,而非可疑行為",
+          "GitHub Actions workflow 已將所有第三方 action 釘選至完整 commit SHA(而非僅版本 tag),屬於供應鏈安全的良好實踐"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程紀律與文件品質在同類 AI 代理外掛中相當突出,若你已經在用 Hermes Agent、在意模型成本與平行任務可靠性,值得一試;若你不使用 Hermes 生態系,參考價值主要在其路由與證據驗證的設計思路。",
+      "_mode": "full"
+    }
+  },
+  "OpenBMB/VoxCPM": {
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-15": [
+        37366,
+        216,
+        14,
+        "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-15",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "OpenBMB 推出的 tokenizer-free TTS 模型 VoxCPM2,支援 30 種語言、語音設計與高擬真聲音克隆。",
+      "summary": "VoxCPM2 是基於 MiniCPM-4 骨幹的 2B 參數擴散自回歸(diffusion autoregressive)語音合成模型,直接在連續潛在空間生成語音而非離散 token,訓練資料超過 200 萬小時。它主打多語言(30 種語言含多種中文方言)、免參考音檔的「語音設計」、可控聲音克隆,以及 48kHz 錄音室等級輸出,解決傳統 TTS 表現力不足與音質受限的問題。",
+      "highlights": [
+        "Tokenizer-free 的 diffusion autoregressive 架構(LocEnc → TSLM → RALM → LocDiT),直接生成連續語音表徵",
+        "支援 30 種語言與多種中文方言,並提供語音設計(文字描述生成聲音)與可控聲音克隆兩種模式",
+        "官方提供 Nano-vLLM、vLLM-Omni、llama.cpp-omni 等多條生態系推理路徑,RTF 最低可到 0.13",
+        "在 Seed-TTS-eval、CV3-eval 等多項公開基準上達到與商用閉源模型相當甚至更好的表現",
+        "程式碼庫附有真正的 pytest 測試,並針對 torch.load 反序列化風險撰寫了專門的靜態掃描與行為測試"
+      ],
+      "use_cases": [
+        "需要多語言、高擬真度語音合成或聲音克隆的產品開發(有聲書、配音、客服語音)",
+        "研究擴散自回歸 TTS 架構或 tokenizer-free 語音生成方法的學術/研究用途",
+        "以少量音檔(5-10 分鐘)做 LoRA/全量微調以打造特定說話人或領域語音",
+        "透過 vLLM-Omni / Nano-vLLM 建置高吞吐、OpenAI 相容的 TTS 推理服務"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 內容非常完整,涵蓋安裝、API、CLI、部署、微調、基準測試與風險說明,文件品質優異。專案有正式的 tests/ 目錄與 pytest 測試(含 CLI、LoRA checkpoint 載入、torch.load 反序列化安全性測試等),但沒有對應的 CI workflow 會自動跑這些測試(僅有發版到 PyPI 的 workflow),測試覆蓋率也偏向工具函式而非核心模型邏輯,故 tests 給中等分數。專案活躍度高:今日新上榜、有多個版本迭代(0.5B → 1.5 → 2)、生態系整合(vLLM-Omni、llama.cpp-omni 等)持續擴充,活躍度給滿分。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "技術與文件品質俱佳、生態系快速擴張的開源 TTS 模型,值得 AI 語音方向的工程師立即關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "Crosstalk-Solutions/project-nomad": {
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-15": [
+        36906,
+        40,
+        17,
+        "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-15",
+    "analysis": {
+      "one_liner": "test",
+      "summary": "test summary",
+      "category": "app",
+      "highlights": [
+        "a",
+        "b",
+        "c"
+      ],
+      "use_cases": [
+        "a",
+        "b"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 3,
+        "activity": 3,
+        "comment": "test"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "test",
+      "_mode": "full"
+    }
+  },
+  "reconurge/flowsint": {
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-15": [
+        8341,
+        280,
+        18,
+        "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-15",
+    "analysis": {
+      "category": "security",
+      "one_liner": "以圖形化介面串接大量 OSINT 情蒐工具的開源調查平台,讓資安分析師與調查人員能視覺化探索實體之間的關聯。",
+      "summary": "Flowsint 是一個基於圖資料庫(Neo4j)+ PostgreSQL 的 OSINT 圖形調查工具,內建數十種 enricher(網域、IP、ASN、社群帳號、加密貨幣錢包等)自動擴充實體關係,並以視覺化圖表呈現調查結果。專案採模組化架構(types → enrichers → core → api → app),用 Docker Compose 一鍵部署,鎖定資安研究員、記者、執法與威脅情報團隊等合法調查場景。",
+      "highlights": [
+        "模組化五層架構(flowsint-types/enrichers/core/api/app)分工清楚,依賴方向單一",
+        "涵蓋網域、IP、ASN、CIDR、社群、加密貨幣、電子郵件等十餘類共數十種自動化 enricher",
+        "API 金鑰保管庫採 AES-256-GCM + HKDF 逐使用者衍生金鑰,並以 AAD 綁定 owner_id 防止跨帳號誤用",
+        "README 明確提供正式環境部署安全指引(host allowlist 防 DNS rebinding、僅開放 5173、建議搭配反向代理 HTTPS)",
+        "有 ETHICS.md / DISCLAIMER.md 明訂僅限合法用途,並附完整開發文件與 docs/ 專章"
+      ],
+      "use_cases": [
+        "資安分析師進行威脅情報蒐集與攻擊面(網域、IP、ASN)關聯分析",
+        "記者或調查人員進行公開資訊(OSINT)人物、組織關聯調查",
+        "內部紅隊/藍隊建立自架的偵察資料視覺化平台",
+        "學習如何設計模組化 enricher 架構與圖資料庫服務"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "文件完整度高,除 README 外另有 docs/ 專章、CONTRIBUTING、ETHICS、DISCLAIMER 等治理文件;各模組皆有獨立 pytest 測試套件並整合進 CI(tests.yml、lint.yml),但 README 自陳測試套件「尚不完整」,且 mypy 採漸進式 ratchet 而非全庫強制,顯示型別覆蓋仍在補強中。近期(2026-09-06)仍持續推送,CI/CD(測試、lint、映像檔建置、release)齊全,開發活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "架構清晰、安全實作到位(加密、非 root 容器、host 白名單)且文件治理完善,對需要 OSINT 圖形調查工具或想學習模組化 Python/TS 架構的工程師都值得一看。",
+      "_mode": "full"
+    }
+  },
+  "peetzweg/opendisplay": {
+    "first_seen": "2026-09-15",
+    "last_seen": "2026-09-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-15": [
+        3570,
+        229,
+        19,
+        "Free, open-source Sidecar/Duet alternative — use your iPhone or iPad as a true second monitor for your Mac over USB or WiFi. Low latency H.264, Retina HiDPI, touch input.",
+        "Swift"
+      ]
+    },
+    "last_analyzed": "2026-09-15",
+    "analysis": {
+      "one_liner": "開源、免費的 iPhone/iPad 變身 Mac 第二螢幕工具,取代 Sidecar/Duet Display 的訂閱制方案。",
+      "summary": "OpenDisplay 用 Swift 打造,透過私有 CGVirtualDisplay API 在 Mac 上建立真正的擴充螢幕(非鏡射),搭配 ScreenCaptureKit 擷取畫面、VideoToolbox 硬體編碼 H.264,經 USB(自行實作 usbmuxd 協定,不依賴 libimobiledevice)或 WiFi 傳輸到 iPhone/iPad,並支援觸控、捲動與 Apple Pencil 輸入回傳。整個方案點對點、無伺服器,解決 Duet Display 收費、Luna Display 需要硬體 dongle、Sidecar 限定同 Apple ID 且不支援 iPhone 的痛點。",
+      "category": "app",
+      "highlights": [
+        "自行實作 usbmuxd 明線協定(Usbmux.swift),不需要 iproxy/libimobiledevice 等外部工具即可走 USB 傳輸",
+        "PROTOCOL.md 完整公開線路協定規格,讓第三方能實作自己的 client(已有社群做出 Android、Linux、舊版 iOS 的相容接收端)",
+        "程式碼註解品質很高,大量記錄「為什麼」而非「做什麼」,例如對 CGVirtualDisplay 私有 API 各種 macOS 行為怪癖(鏡射誤判、HiDPI 模式被還原、螢幕排列被覆寫)都有清楚的因應說明與理由",
+        "CI 對每個 PR 都跑 xcodebuild test(含 MacTests 單元測試)並額外編譯 Receiver 目標,確保低階目標裝置的 API 相容性",
+        "發布流程用 release-please + fastlane 全自動化,含公證簽章與 Sparkle 自動更新機制,且清楚說明私鑰只存在於 CI secret、絕不進版控"
+      ],
+      "use_cases": [
+        "想把閒置的舊 iPhone/iPad 變成 Mac 副螢幕,但不想訂閱 Duet Display 或購買 Luna Display 硬體",
+        "需要不同 Apple ID 裝置間的螢幕延伸(Sidecar 做不到)",
+        "對虛擬顯示器、螢幕擷取、硬體編碼串流等 macOS 私有/公開 API 整合有興趣的 Swift 開發者,可作為架構參考",
+        "想串接自製客戶端(Android、Linux)延伸螢幕的開發者,可依 PROTOCOL.md 規格開發"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 PROTOCOL.md/COMPATIBILITY.md 等文件非常完整,FAQ 涵蓋常見坑;原始碼註解聚焦在解釋非顯而易見的系統行為與取捨,品質優於一般開源專案。CI 有跑單元測試與編譯檢查,但測試檔案數量(4個)相對整體程式規模仍偏少,對輸入注入、串流編解碼等核心邏輯覆蓋有限。專案活躍度高,近期仍持續推送、發布流程全自動化。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "程式碼與文件品質在同類專案中屬上乘,對 macOS 私有 API 與系統怪癖的處理相當扎實,值得 Swift/macOS 開發者關注與參考。",
       "_mode": "full"
     }
   }

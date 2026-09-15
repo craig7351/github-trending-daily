@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-15",
+    "analyzed": 10,
+    "cached": 9,
+    "deferred": 1,
+    "top_name": "localsend/localsend",
+    "top_rating": 5
+  },
+  {
     "date": "2026-09-14",
     "analyzed": 8,
     "cached": 10,
