@@ -991,8 +991,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-15",
-    "days_on_trending": 2,
+    "last_seen": "2026-09-16",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1021,6 +1021,13 @@
         25728,
         1571,
         2,
+        "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
+      ],
+      "2026-09-16": [
+        28583,
+        2756,
+        1,
         "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
       ]
@@ -1060,8 +1067,8 @@
       "verdict": "工程成熟度與文件品質俱佳,搭配可驗證的效能基準與嚴謹 CI,值得台灣 AI/DevOps 團隊實際評估導入 CI pipeline。",
       "_mode": "full"
     },
-    "total_days_on_trending": 6,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 7,
+    "consecutive_days_on_trending": 3
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -5512,10 +5519,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-09-04",
+    "last_seen": "2026-09-16",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5572,37 +5579,44 @@
         12,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
+      ],
+      "2026-09-16": [
+        94804,
+        307,
+        12,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-30",
+    "last_analyzed": "2026-09-16",
     "analysis": {
       "category": "devtool",
-      "one_liner": "一套將資深工程師開發紀律(規格、測試、審查、發佈)封裝成 AI coding agent 可遵循的技能包。",
-      "summary": "agent-skills 是由 Addy Osmani 主導的開源專案,以 25 份結構化 Markdown「技能」涵蓋軟體開發全生命週期(定義、規劃、實作、驗證、審查、發佈),搭配 slash command 與 agent persona,讓 Claude Code、Cursor、Codex、Gemini CLI、Antigravity 等多種 AI coding agent 依循一致的工程流程。每個技能都內建反合理化表格與驗證清單,目的是避免 agent 為求快而跳過測試、規格與安全審查等步驟。",
+      "one_liner": "給 AI coding agent 用的工程技能包",
+      "summary": "agent-skills 提供 25 個技能工作流程,涵蓋開發生命週期。搭配指令與角色。目的是讓 AI agent 遵循一致品質關卡。",
       "highlights": [
-        "25 個技能對應完整開發生命週期,從 spec-driven-development 到 shipping-and-launch 一應俱全",
-        "內建 CI 驗證(validate-skills.js、run-evals.js)確保技能格式與觸發路由正確,並有對應單元測試",
-        "支援 70+ agent 生態系(Claude Code、Cursor、Codex、Gemini CLI、Antigravity、OpenCode 等)的原生安裝方式",
-        "每個技能都有『反合理化表格』與『red flags』段落,專門對抗 AI agent 偷懶跳過測試/審查的傾向",
-        "文件量龐大且結構化(docs/、references/、evals/ 目錄齊全),並提供與 Superpowers、Matt Pocock skills 的公開比較"
+        "技能格式統一",
+        "有驗證工具鏈與測試",
+        "有評測案例",
+        "支援多種工具",
+        "hooks 設計嚴謹"
       ],
       "use_cases": [
-        "團隊想讓 Claude Code / Cursor / Codex 等 AI agent 在寫程式時自動遵循 TDD、程式碼審查、安全檢查等工程規範",
-        "希望用 slash command(/spec、/plan、/build、/review、/ship)標準化 AI 輔助開發流程",
-        "需要一套可攜式、與工具無關的『工程最佳實踐』知識庫,套用到多種 AI coding agent"
+        "自動遵循開發流程",
+        "跨工具工程規範模板",
+        "工程文化落地參考"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "本質是 Markdown 內容專案,程式碼量少但品質頗高:少數 JS 驗證腳本結構清晰、有明確的職責分離(lib/skill-lint.js 為單一事實來源)且搭配 node:test 單元測試;CI 有多層驗證(skill 格式、command 一致性、eval 路由準確率、plugin 安裝測試)。文件是本專案的核心產出,質與量都相當充分,7 份參考清單、多個工具的 setup 指南一應俱全。"
+        "comment": "文件品質高，程式碼有測試與CI驗證。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "若你的團隊用 Claude Code、Cursor 或其他 AI coding agent 且苦於輸出品質不穩定,這套技能包直接可用且維護良好,值得一試;純屬提示工程/流程規範集合,沒有可執行的核心邏輯,評估重點在於它對你 agent workflow 的實際改善效果。",
+      "verdict": "內容紮實值得關注",
       "_mode": "full"
     }
   },
@@ -13270,10 +13284,10 @@
   },
   "NationalSecurityAgency/ghidra": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-08-31",
+    "last_seen": "2026-09-16",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-29": [
         73340,
@@ -13288,41 +13302,49 @@
         11,
         "Ghidra is a software reverse engineering (SRE) framework",
         "Java"
+      ],
+      "2026-09-16": [
+        76710,
+        725,
+        8,
+        "Ghidra is a software reverse engineering (SRE) framework",
+        "Java"
       ]
     },
-    "last_analyzed": "2026-08-29",
+    "last_analyzed": "2026-09-16",
     "analysis": {
-      "one_liner": "NSA 開發並開源的軟體逆向工程框架,提供反組譯、反編譯與腳本擴充能力",
-      "summary": "Ghidra 是由 NSA 研究部門建立並維護的軟體逆向工程(SRE)框架,支援多平台執行檔的反組譯、反編譯、圖形化分析與腳本開發,可透過 Java 或 Python 撰寫擴充功能。此為長期活躍的重量級開源專案,今日以第 12 名登上 GitHub trending,單日增加 191 顆星。",
       "category": "security",
+      "one_liner": "NSA 開發的開源軟體逆向工程框架,提供反組譯、反編譯、圖形化分析等完整功能。",
+      "summary": "Ghidra 是由美國國家安全局研究部門開發並維護的軟體逆向工程(SRE)框架,支援多種處理器指令集與執行檔格式,可在 Windows、macOS、Linux 上分析編譯後的程式碼。它整合反組譯、組譯、反編譯、圖形化與腳本擴充等能力,可用互動或自動化模式運作,並支援 Java 與 Python 撰寫擴充套件。",
       "highlights": [
-        "由 NSA 研究部門開發並持續維護,是業界知名的免費開源逆向工程工具,與 IDA Pro 齊名",
-        "支援多種處理器指令集與執行檔格式,涵蓋反組譯、反編譯、圖形化分析等完整功能",
-        "可透過 Eclipse 或 VS Code 進行腳本與擴充套件開發,支援 Java 與 Python(PyGhidra)",
-        "README 明確揭露特定版本存在已知安全性弱點,並提供 Security Advisories 連結供查閱",
-        "專案高度活躍,昨日(2026-08-28)才有最新推送紀錄"
+        "由 NSA 官方開發並維護,長期用於惡意程式分析與漏洞研究",
+        "支援多平台(Windows/macOS/Linux)與多種處理器架構、執行檔格式",
+        "具備反組譯、反編譯、圖形化分析、腳本擴充等完整逆向工程功能",
+        "可透過 Java 或 Python(PyGhidra)開發自訂擴充套件與腳本",
+        "採用 Apache-2.0 授權,原始碼與建置流程公開透明"
       ],
       "use_cases": [
-        "惡意程式分析與資安研究人員進行二進位逆向工程",
-        "軟體漏洞挖掘與程式碼安全稽核",
-        "教學或自學逆向工程與編譯器/處理器指令集知識",
-        "撰寫自訂 Ghidra 腳本或擴充套件以自動化分析流程"
+        "惡意程式分析與資安事件調查",
+        "軟體漏洞研究與弱點挖掘",
+        "二進位檔案逆向工程教學與研究",
+        "客製化 SRE 擴充工具或腳本開發"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 說明清楚,涵蓋安裝、建置、開發與貢獻流程,對新手與開發者皆友善;僅能依 README 評估,未檢視原始碼與測試涵蓋率,故測試面向給予保守分數。"
+        "comment": "README 對安裝、建置、開發流程說明清楚且結構完整,但屬於 README-only 評估,未檢視原始碼與測試涵蓋率;專案本身推送頻繁、目前正在 GitHub trending 上升中,活躍度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 自行揭露「某些版本存在已知安全性弱點」,並建議使用前先查閱官方 Security Advisories",
-          "安裝流程為下載官方 release 壓縮檔並解壓執行,或自行以 gradle 建置原始碼,未見 curl/bash 一鍵安裝等高風險模式"
+          "README 明確提醒使用者存在已知安全性弱點(Security Advisories),建議安裝前先行閱讀相關公告",
+          "安裝方式為下載官方 release 壓縮檔或自行建置原始碼,並未使用 curl | bash 之類的一鍵執行腳本",
+          "本評估僅根據 README 內容,未實際檢視原始碼或執行安裝流程"
         ]
       },
       "star_rating": 5,
-      "verdict": "業界標竿級的開源逆向工程框架,由 NSA 維護且持續活躍更新,強烈值得資安與逆向工程領域的工程師關注與學習。",
+      "verdict": "業界知名且持續活躍的逆向工程框架,對資安研究與惡意程式分析工作者而言絕對值得關注與收藏。",
       "_mode": "light"
     }
   },
@@ -14760,10 +14782,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -14796,6 +14818,13 @@
       "2026-09-15": [
         29197,
         2776,
+        4,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-09-16": [
+        30976,
+        2072,
         4,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
@@ -14938,15 +14967,22 @@
   },
   "pacifio/atlas": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-03",
+    "last_seen": "2026-09-16",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-03": [
         2884,
         888,
         9,
+        "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+        "Rust"
+      ],
+      "2026-09-16": [
+        4626,
+        91,
+        10,
         "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
         "Rust"
       ]
@@ -16962,10 +16998,10 @@
   },
   "JustVugg/colibri": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-11": [
         27465,
@@ -16985,6 +17021,13 @@
         32080,
         2173,
         1,
+        "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "C"
+      ],
+      "2026-09-16": [
+        33843,
+        2026,
+        2,
         "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "C"
       ]
@@ -17188,10 +17231,10 @@
   },
   "melgarafael/DeskcommCRM": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-12": [
         1346,
@@ -17211,6 +17254,13 @@
         2190,
         432,
         5,
+        "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "TypeScript"
+      ],
+      "2026-09-16": [
+        2835,
+        193,
+        6,
         "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
         "TypeScript"
       ]
@@ -17483,10 +17533,10 @@
   },
   "alphaXiv/OpenResearch": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-14",
+    "last_seen": "2026-09-16",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-12": [
         1277,
@@ -17500,6 +17550,13 @@
         289,
         11,
         "Run parallel research agents with any model",
+        "Rust"
+      ],
+      "2026-09-16": [
+        3362,
+        531,
+        7,
+        "Turn your coding agents into research agents",
         "Rust"
       ]
     },
@@ -17914,10 +17971,10 @@
   },
   "ever-co/ever-gauzy": {
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-14": [
         5082,
@@ -17930,6 +17987,13 @@
         5981,
         1130,
         16,
+        "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
+        "TypeScript"
+      ],
+      "2026-09-16": [
+        6666,
+        634,
+        3,
         "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
         "TypeScript"
       ]
@@ -18029,15 +18093,22 @@
   },
   "tonhowtf/omniget": {
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-14",
+    "last_seen": "2026-09-16",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-14": [
         11664,
         507,
         16,
+        "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+        "Rust"
+      ],
+      "2026-09-16": [
+        12928,
+        258,
+        13,
         "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
         "Rust"
       ]
@@ -18466,6 +18537,200 @@
       },
       "star_rating": 4,
       "verdict": "程式碼與文件品質在同類專案中屬上乘,對 macOS 私有 API 與系統怪癖的處理相當扎實,值得 Swift/macOS 開發者關注與參考。",
+      "_mode": "full"
+    }
+  },
+  "Homebrew/BrewUI": {
+    "first_seen": "2026-09-16",
+    "last_seen": "2026-09-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-16": [
+        1361,
+        271,
+        5,
+        "📺 Homebrew's official macOS GUI",
+        "Swift"
+      ]
+    },
+    "last_analyzed": "2026-09-16",
+    "analysis": {
+      "category": "app",
+      "one_liner": "Homebrew 官方推出的 macOS 原生圖形化介面,讓不熟悉終端機的使用者也能圖形化管理套件。",
+      "summary": "BrewUI 是 Homebrew 官方維護的 SwiftUI 桌面應用程式,包裝 brew CLI 與 Homebrew JSON API,提供套件搜尋、安裝、更新、解除安裝與 Doctor 診斷等功能,同時強調操作透明(讓使用者看到實際執行的指令)。專案採用 Clean Architecture + MVVM-C 分層設計,對 Homebrew 環境變數載入行為(brew.env、zsh 啟動檔案處理)有非常細緻的說明與控制。",
+      "highlights": [
+        "Homebrew 官方帳號下的專案,並非第三方套件殼,可信度高",
+        "架構文件(ARCHITECTURE.md)、AGENTS.md、Cursor rules 等治理文件非常完整,對分層(View/ViewModel/Repository/Interactor/Service)有明確規範",
+        "測試涵蓋度高:Unit、UI(BrewUITests)、E2E(Brew-E2E.xctestplan)分開的 xctestplan,並有 FakeBrew 測試替身",
+        "CI 設定齊全:build、e2e、swift_quality、actionlint、CodeQL、Dependabot、licenses 檢查皆已設置",
+        "對安全性與環境變數注入的處理相當謹慎:自訂啟動 brew 時清除 shell 環境、停用使用者 rc 檔案,避免被外部設定汙染"
+      ],
+      "use_cases": [
+        "不熟悉終端機操作、但想圖形化管理 Homebrew 套件(安裝/更新/移除)的 macOS 使用者",
+        "想觀摩大型 Swift 6 專案如何用 Clean Architecture + MVVM-C + 嚴格並發模式組織程式碼的開發者",
+        "研究如何安全地在 App 中以受控環境執行外部 CLI 子行程(subprocess)的實作參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與治理規範異常完整(ARCHITECTURE.md、AGENTS.md、.cursor/rules 等),測試分層清楚(Unit/UI/E2E 各自獨立的 xctestplan),CI 工作流程涵蓋建置、E2E、程式碼風格、授權檢查與相依套件更新,抽樣的核心程式碼(SerialBrewCommandCenter、HelperSelfUpgradeHandoff)可讀性高且對邊界情況有清楚註解說明取捨原因,整體工程成熟度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "Homebrew 官方出品、工程品質與治理成熟度都屬上乘,無論是一般使用者或想學習 Swift 專案架構的開發者都值得關注。",
+      "_mode": "full"
+    }
+  },
+  "danny-avila/LibreChat": {
+    "first_seen": "2026-09-16",
+    "last_seen": "2026-09-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-16": [
+        43837,
+        254,
+        9,
+        "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-16",
+    "analysis": {
+      "one_liner": "支援多家 AI 供應商、Agents 與 MCP 的開源自架 ChatGPT 替代方案",
+      "summary": "LibreChat 是一套可自行部署的全功能 AI 聊天平台,整合 OpenAI、Anthropic、Azure、AWS Bedrock、Google Vertex AI 等主流模型供應商於單一介面,並提供 Agents、MCP 伺服器支援、Code Interpreter、Artifacts、多使用者驗證與管理後台等企業級功能。專案採 monorepo 架構(api / client / packages),前端 React + TypeScript,後端 Node.js + Express + MongoDB,開發活躍且社群龐大。",
+      "category": "app",
+      "highlights": [
+        "一站式整合近 20 家 AI 模型供應商與自訂端點,並支援 Model Context Protocol (MCP) 工具擴充",
+        "內建 Agents 平台、Code Interpreter 沙盒執行、Artifacts 生成式 UI 等進階功能,更新頻繁(README 顯示 v0.8.8-rc3 changelog 相當詳盡)",
+        "企業級能力完整:多使用者 OAuth2/LDAP 驗證、角色權限管理、Admin Panel、OpenTelemetry 可觀測性",
+        "CI/CD 覆蓋面廣,超過 30 個 GitHub Actions workflow(單元測試、Playwright e2e、a11y、Lighthouse、Docker 建置等)",
+        "後端路由模組化清晰,並搭配速率限制、同源檢查、2FA、CloudFront 簽章 cookie 等安全中介層,且對應路由多有獨立測試檔"
+      ],
+      "use_cases": [
+        "企業或團隊想自架私有化、多供應商可切換的 ChatGPT 替代方案",
+        "需要整合多個 LLM 供應商與 MCP 工具生態的 AI 應用開發者",
+        "希望有現成 Agents/Code Interpreter/Artifacts 功能而不想從零打造聊天平台的團隊",
+        "研究大型 TypeScript/Node.js 全端專案的架構與 CI 實踐案例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與官方文件站內容詳盡,changelog 更新頻繁;測試方面 routes/controllers 多有對應 .test.js 檔案,並有完整 Playwright e2e、a11y、Lighthouse 等 CI 流程覆蓋;近期仍持續推送(2026-09-15),Issue/PR 活動量大,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "功能完整度、活躍度與工程實踐(CI、測試、模組化)皆屬一線水準,是自架 AI 聊天平台的首選專案之一,值得立即關注。",
+      "_mode": "full"
+    }
+  },
+  "MG1937/ASC": {
+    "first_seen": "2026-09-16",
+    "last_seen": "2026-09-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-16": [
+        1174,
+        129,
+        11,
+        "ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-16",
+    "analysis": {
+      "category": "security",
+      "one_liner": "直接對 APK 的 Deflate/DEX 位元流做查詢式解析,免建索引就能毫秒級抓出目標類別與交叉引用的 Android 反編譯前端。",
+      "summary": "ASC(Droid ASC)是一個專為 Agent 與行動安全研究員設計的 Android 反編譯前端,核心賣點是跳過傳統反編譯器「全量解壓 + 建立全域索引」的重流程,改用探測 Deflate bitstream 與 R8 編譯器優化特性(常數重定位、指令去重)直接定位目標,並在記憶體中即時重建最小可解析的 DEX。作者將於 Black Hat Europe Arsenal 發表此工具,並附上針對 352MB 商業 APK 的效能數據(1.79 秒全域交叉引用搜尋、177 毫秒單類別反編譯)。",
+      "highlights": [
+        "繞過傳統反編譯器的重量級預處理,直接在壓縮的 DEX/APK 位元流上做查詢式解析",
+        "利用 R8 編譯器優化留下的物理佈局規律(常數重定位、指令去重)做跨 DEX 快速搜尋",
+        "CLI 提供 getclass / getmanifest / findrefs 三種子指令,並支援 GUI 模式,對 Agent 工作流友善",
+        "CI 設有嚴格的效能迴歸測試(paired sign test + Bonferroni 校正),對 0.088 秒等具體效能預算做把關,工程嚴謹度高於一般開源專案",
+        "即將在 Black Hat Europe Arsenal 2026 展示,屬於受關注的資安研究工具"
+      ],
+      "use_cases": [
+        "行動安全研究員快速抓取巨型商用 APK 中特定類別或字串/方法/欄位的交叉引用",
+        "AI Agent 自動化逆向工程流程中作為輕量、低延遲的反編譯後端",
+        "在資源受限環境(如 CI 或雲端沙箱)中對大型 APK 做增量式、按需反編譯,避免全量索引造成的記憶體開銷"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 簡潔但清楚說明安裝與 CLI 用法,搭配 Black Hat 議程摘要與效能圖表;核心程式碼(如 DEX 編碼值解析、DVM 直譯器)結構清晰、附有位元格式註解,可讀性佳。測試與 CI 設計異常嚴謹,包含單元/整合測試、啟動時間門檻、跨版本效能迴歸比對(統計顯著性檢定),在同類專案中屬少見水準。目前僅 0.1.0 版,屬早期但活躍開發階段,近期仍持續 push。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與效能設計皆紮實,對做 Android 逆向或 Agent 自動化分析的研究者值得一試,但仍是 0.1.0 早期版本,建議先在測試環境評估穩定性。",
+      "_mode": "full"
+    }
+  },
+  "earendil-works/pi": {
+    "first_seen": "2026-09-16",
+    "last_seen": "2026-09-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-16": [
+        105712,
+        458,
+        14,
+        "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-16",
+    "analysis": {
+      "one_liner": "Pi 是一套 TypeScript 打造的 AI 代理工具箱,整合統一 LLM API、代理執行迴圈、終端機 UI 與可自我擴充的編碼代理 CLI。",
+      "summary": "Pi 由多個模組化 npm 套件組成(pi-ai、pi-agent-core、pi-tui、pi-coding-agent 等),提供跨 OpenAI/Anthropic/Google 等供應商的統一 LLM 呼叫介面,以及具備工具呼叫、狀態管理、可持久化 session 的代理執行框架。核心產品是一款互動式編碼代理 CLI,強調可自我擴充(extensions/skills)並附有詳盡的容器化沙盒指引。",
+      "category": "ai-ml",
+      "highlights": [
+        "Monorepo 拆分為 6+ 個獨立套件(ai、agent、tui、coding-agent、chord、telemetry),邊界清晰、各自有 README 與 CHANGELOG",
+        "測試覆蓋非常完整,僅 agent 套件底下就有 50+ 個 .test.ts,涵蓋 session 儲存、compaction、branch 分支、telemetry 等子系統,並有 conformance 測試套件",
+        "README 明確列出「Supply-chain hardening」章節:鎖定 exact 版本、min-release-age=2、lockfile 變更需明確授權、CI 用 --ignore-scripts 安裝並定期跑 npm audit / audit signatures",
+        "SECURITY.md 清楚界定信任邊界(本機使用者權限 = Pi 權限),對 prompt injection、惡意 extension/skill 等風險有明確說明,而非含糊帶過",
+        "CI 使用 SHA 釘選 GitHub Actions 版本,並有自動關閉新貢獻者 issue/PR 的治理流程"
+      ],
+      "use_cases": [
+        "需要統一介面呼叫多家 LLM 供應商(OpenAI/Anthropic/Google)的應用開發",
+        "想建構具工具呼叫、狀態持久化能力的自訂 AI 代理系統",
+        "尋找可自我擴充、支援 extension/skill 機制的終端機編碼代理 CLI",
+        "研究代理框架的 session 管理、compaction、可恢復性等工程實作範例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README、SECURITY.md、per-package 文件與 work-package 設計文件都相當完整;測試數量與涵蓋面在同類專案中屬上乘;CI 流程(build/check/test)齊全且用 SHA 釘選 action 版本,今日仍有推送,活躍度高。抽樣的 agent-loop.ts 程式碼型別定義清楚、函式職責單一,整體工程品質偏向嚴謹。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "根套件 package.json 未發現 preinstall/postinstall 生命週期腳本執行任意程式碼",
+          "packages/coding-agent/README.md 提供 `curl -fsSL https://pi.dev/install.sh | sh` 的替代安裝方式(獨立執行檔安裝),此為常見的 CLI 安裝模式,腳本託管於專案自有網域,建議使用前自行檢視該腳本內容",
+          "SECURITY.md 明確將「使用者主動安裝的不受信任 extension/skill」、「prompt injection」列為不在漏洞回報範疇內,反映此工具設計上假設使用者需自行把關本機安全邊界,而非有沙盒保護"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程紀律與文件品質在 AI 代理工具中屬前段班,supply-chain 與安全邊界說明清楚,值得研究其架構設計或作為編碼代理 CLI 的候選方案,但因無內建沙盒,正式使用時建議搭配容器化隔離。",
       "_mode": "full"
     }
   }
