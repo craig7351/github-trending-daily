@@ -991,8 +991,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-16",
-    "days_on_trending": 3,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1027,6 +1027,13 @@
       "2026-09-16": [
         28583,
         2756,
+        1,
+        "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
+      ],
+      "2026-09-17": [
+        31864,
+        3231,
         1,
         "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
@@ -1067,8 +1074,8 @@
       "verdict": "工程成熟度與文件品質俱佳,搭配可驗證的效能基準與嚴謹 CI,值得台灣 AI/DevOps 團隊實際評估導入 CI pipeline。",
       "_mode": "full"
     },
-    "total_days_on_trending": 7,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 8,
+    "consecutive_days_on_trending": 4
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -1457,8 +1464,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-10",
-    "days_on_trending": 10,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1562,6 +1569,13 @@
         13,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-17": [
+        260286,
+        1057,
+        21,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-05",
@@ -1601,8 +1615,8 @@
       "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
       "_mode": "full"
     },
-    "total_days_on_trending": 16,
-    "consecutive_days_on_trending": 10
+    "total_days_on_trending": 17,
+    "consecutive_days_on_trending": 1
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -4901,10 +4915,10 @@
   },
   "jamiepine/voicebox": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-04",
+    "last_seen": "2026-09-17",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-04": [
         48677,
@@ -4912,41 +4926,49 @@
         16,
         "The open-source AI voice studio. Clone, dictate, create.",
         "TypeScript"
+      ],
+      "2026-09-17": [
+        54383,
+        417,
+        5,
+        "The open-source AI voice studio. Clone, dictate, create.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-04",
+    "last_analyzed": "2026-09-17",
     "analysis": {
-      "one_liner": "開源本地優先 AI 語音工作室,整合語音克隆、TTS、STT 與 AI Agent 語音輸出/輸入於一體",
-      "summary": "Voicebox 是一套以 Tauri (Rust) + React 打造的桌面應用,內建 7 種 TTS 引擎(含 Qwen3-TTS、Chatterbox、Kokoro 等)與 Whisper STT,主打完全本地運算、語音克隆、全域聽寫熱鍵、以及透過 MCP 讓 Claude Code / Cursor 等 AI Agent 用你克隆的聲音說話。目標是取代 ElevenLabs(語音輸出)與 WisprFlow(語音輸入)兩類雲端服務,一次補齊語音 I/O 的兩端。",
       "category": "app",
+      "one_liner": "本機優先、開源的 AI 語音工作室,整合語音克隆、TTS、STT 與 AI agent 語音輸出於一體。",
+      "summary": "Voicebox 是以 Tauri(Rust)+ React 打造的桌面應用,搭配 Python FastAPI 後端,整合 7 種 TTS 引擎(Qwen3-TTS、Chatterbox、Kokoro 等)與 Whisper STT,提供聲音克隆、全域語音輸入(dictation)、以及透過 MCP 讓 Claude Code / Cursor 等 agent 用你複製的聲音說話。目標是取代 ElevenLabs(語音輸出)與 WisprFlow(語音輸入)兩類雲端服務,所有模型與資料都留在本機執行。",
       "highlights": [
-        "7 種 TTS 引擎可切換,支援零樣本語音克隆與 23 種語言",
-        "內建 MCP Server,讓 Claude Code、Cursor 等 Agent 能用 voicebox.speak 直接開口說話",
-        "全域聽寫熱鍵,含 macOS 無障礙權限驗證的自動貼上機制",
-        "後端 FastAPI 與前端 Tauri/React 分層清楚,28+ 個後端測試檔涵蓋各引擎、GPU 後端與離線防護",
-        "支援 macOS MLX、Windows CUDA、AMD ROCm、Intel Arc 多平台 GPU 加速"
+        "7 種 TTS 引擎可切換(Qwen3-TTS、Chatterbox、Kokoro、HumeAI TADA 等),支援 23 種語言與零樣本聲音克隆",
+        "內建 MCP server,讓 Claude Code / Cursor / Windsurf 等 AI agent 可直接呼叫 voicebox.speak 用克隆聲音說話",
+        "全域語音輸入(dictation)搭配 macOS 無障礙 API 自動貼上,並有本機 LLM 做語意精修",
+        "原生效能:採用 Tauri(Rust)而非 Electron,支援 macOS MLX/Metal、Windows CUDA、AMD ROCm、Intel Arc 等多種硬體後端",
+        "後端測試檔案數量多(逾 25 支 pytest 檔),涵蓋各 TTS/STT backend 與 GPU 偵測邏輯"
       ],
       "use_cases": [
-        "需要完全離線、隱私優先的語音克隆與文字轉語音工具",
-        "開發者想讓 AI coding agent(如 Claude Code)用自訂聲音回報任務進度",
-        "podcast 或有聲書等多軌語音敘事製作",
-        "為視障或語言障礙者提供語音輸入輸出輔助工具"
+        "個人或团队想要完全本機、不上雲的語音克隆與 TTS 內容產出(播客、有聲書、遊戲對白)",
+        "開發者想讓 AI coding agent(Claude Code、Cursor)在完成任務時用語音通知或對話",
+        "需要免持語音輸入取代雲端聽寫服務(如 WisprFlow)的使用者",
+        "研究/評測多種開源 TTS、STT 引擎在本機不同硬體(CUDA/ROCm/MLX)下的表現"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 與文件非常詳盡(含 API、MCP 整合、Roadmap、疑難排解文件),CHANGELOG 詳細記錄每版變更。backend/tests 下有 28 個以上測試檔涵蓋各 TTS 引擎、GPU 偵測、離線防護等關鍵路徑,但 CI(ci.yml)目前只跑前端 typecheck 與 build,並未見到後端 pytest 或 Rust cargo test 的 CI 步驟,測試覆蓋與 CI 執行有落差。專案有明確版本規劃、Roadmap 文件與 agent skill 自動化流程,活躍度高。"
+        "comment": "README 與文件相當完整(含 troubleshooting、MCP 指南、PROJECT_STATUS 追蹤文件),原始碼分層清楚(routes/services/backends),抽樣讀到的 generation.py 與 mcp_server/tools.py 邏輯清晰、有適當的輸入驗證(如 MCP transcribe 工具限制 loopback 才能讀取任意本機路徑、大小限制),显示作者有意識地處理安全邊界。backend/tests 下有 25+ 支測試檔涵蓋各 GPU backend 與下載流程,但目前 CI(ci.yml)只跑前端 typecheck/build,未見到自動執行 pytest 的 job,測試涵蓋與 CI 整合略有落差。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "Dockerfile 建置階段會直接安裝 git+https://github.com/QwenLM/Qwen3-TTS.git,屬第三方原始碼相依而非套件註冊表釘選版本,更新時需留意上游變動",
-          "MCP 工具 voicebox.transcribe 提供 audio_path 模式可讀取本機任意檔案,程式碼中已限制僅限 loopback(本機)呼叫端使用,屬合理防護但仍是需留意的功能設計"
+          "MCP 的 voicebox.transcribe 工具支援以絕對路徑讀取本機任意檔案,但程式碼有限制僅允許 loopback(本機)呼叫端使用此模式,並有 200MB 檔案大小上限,屬於已妥善控管的設計",
+          "Dockerfile 中會從外部 git 倉庫(如 github.com/QwenLM/Qwen3-TTS.git)安裝 Python 套件,屬於一般 AI 專案常見的相依安裝方式,非特別可疑行為",
+          "未發現 curl|bash、iwr|iex 等安裝時執行外部腳本的模式,也未發現可疑的 base64/hex 大型負載或非常規網域"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質與文件完整度俱佳,且巧妙串接了 AI Agent 語音輸出的新興需求,值得關注;但留意 CI 尚未涵蓋後端測試執行。",
+      "verdict": "功能完整、程式碼組織與安全考量都在水準之上,對想要本機語音克隆與 agent 語音輸出的開發者相當值得一試,但仍是快速迭代中的早期專案(0.5.0),建議先用 Docker 或官方發行版試用,而非直接生產環境部署。",
       "_mode": "full"
     }
   },
@@ -5519,10 +5541,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-09-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5586,6 +5608,13 @@
         12,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
+      ],
+      "2026-09-17": [
+        95458,
+        658,
+        19,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-16",
@@ -5622,10 +5651,10 @@
   },
   "roboflow/supervision": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-08-06",
+    "last_seen": "2026-09-17",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-06": [
         48925,
@@ -5633,38 +5662,45 @@
         9,
         "We write your reusable computer vision tools. 💜",
         "Python"
+      ],
+      "2026-09-17": [
+        50597,
+        260,
+        12,
+        "We write your reusable computer vision tools. 💜",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-06",
+    "last_analyzed": "2026-09-17",
     "analysis": {
-      "one_liner": "與模型無關的電腦視覺工具箱,提供偵測、標註、資料集處理的即插即用元件",
-      "summary": "supervision 是 Roboflow 推出的開源 Python 套件,整合各種電腦視覺模型(YOLO、Ultralytics、Transformers、MMDetection、Inference 等)輸出的偵測結果,並提供統一的 Detections 物件、豐富的標註工具(annotators)以及 COCO/YOLO/Pascal VOC 資料集載入與轉換工具。目標是讓開發者專注在應用邏輯,而不必重複造輪子處理視覺化與資料格式轉換。",
+      "one_liner": "roboflow/supervision 是一套模型無關的電腦視覺工具箱,提供偵測、追蹤、標註、資料集轉換等可重用元件。",
+      "summary": "supervision 讓開發者不必重新造輪子,將任意分類/偵測/分割模型的輸出統一轉換成 sv.Detections 格式,再串接豐富的標註器、追蹤器與資料集工具(COCO、YOLO、Pascal VOC 互轉)。它定位為「模型與應用程式之間的黏著層」,而非另一套模型框架,主打與 Ultralytics、Transformers、MMDetection、Inference 等主流函式庫整合。",
       "category": "library",
       "highlights": [
-        "模型無關設計,可搭配 Ultralytics、Transformers、MMDetection、Inference、rfdetr 等多種偵測/分割模型",
-        "提供高度可自訂的 annotators(框、遮罩、標籤等)組合出各種視覺化效果",
-        "內建資料集工具,支援 COCO、YOLO、Pascal VOC 格式的載入、切分、合併與轉換",
-        "文件完整,含 Colab、Hugging Face Spaces 展示與教學影片,對新手友善",
-        "PyPI 套件成熟(有版本徽章、codecov、Snyk 安全掃描),MIT 授權"
+        "模型無關設計,可直接串接 Ultralytics、Hugging Face Transformers、MMDetection、Roboflow Inference 及 rfdetr 等多種模型輸出",
+        "提供大量高度可自訂的 Annotator(框、遮罩、追蹤軌跡等)用於快速視覺化偵測結果",
+        "內建資料集工具,支援 COCO / YOLO / Pascal VOC 格式的載入、切分、合併與互轉",
+        "社群與生態系成熟:有官方文件站、Colab/Hugging Face Spaces 示範、Discord 社群,並支援 Hacktoberfest",
+        "今日 GitHub trending 第 12 名,單日 +260 星,顯示近期關注度高,且累積已達 5 萬星等級的高人氣專案"
       ],
       "use_cases": [
-        "快速將任意偵測/分割模型的輸出視覺化(畫框、標籤、遮罩)",
-        "在零售、交通等場景做即時區域計數、停留時間分析、車輛測速等應用原型",
-        "資料集格式轉換與切分(COCO/YOLO/Pascal VOC 互轉)",
-        "教學或 PoC 專案中作為電腦視覺應用的通用工具層"
+        "快速將既有偵測/分割模型的輸出視覺化(框選、遮罩、標籤標註)",
+        "建置物件追蹤、區域計數、停留時間分析等即時影像串流應用",
+        "在 COCO、YOLO、Pascal VOC 等資料集格式間轉換、切分或合併訓練資料",
+        "作為教學/範例專案,學習如何串接不同物件偵測框架的統一介面設計"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 結構完整、範例豐富且有教學影片與文件連結,品質很高;codecov 徽章顯示有測試涵蓋,但因僅檢視 README 未實際檢視程式碼,測試評分僅能保守評估。專案持續有推送更新,今日登上 trending 榜且單日新增星數多,活躍度高。"
+        "comment": "README 結構完整,含目錄、安裝、快速上手範例、教學影片與貢獻指南,文件品質高;但本次僅為 README 層級審查,未檢視實際程式碼與測試檔案,故測試面向僅能給予基礎分數。專案最近一次推送為 2026-09-16,加上今日登上 trending 榜第 12 名且單日新增 260 星,活躍度與關注度都相當高。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 4,
-      "verdict": "成熟且維護良好的電腦視覺工具庫,對需要快速整合偵測模型與視覺化/資料集處理的開發者很值得加入工具箱。",
+      "star_rating": 5,
+      "verdict": "成熟穩定、生態系完整的電腦視覺工具箱,無論是實務串接模型或收錄進資源清單都值得優先關注。",
       "_mode": "light"
     }
   },
@@ -13284,10 +13320,10 @@
   },
   "NationalSecurityAgency/ghidra": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-09-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-29": [
         73340,
@@ -13307,6 +13343,13 @@
         76710,
         725,
         8,
+        "Ghidra is a software reverse engineering (SRE) framework",
+        "Java"
+      ],
+      "2026-09-17": [
+        77801,
+        1059,
+        10,
         "Ghidra is a software reverse engineering (SRE) framework",
         "Java"
       ]
@@ -13822,10 +13865,10 @@
   },
   "Lakr233/vphone-cli": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-08-31",
+    "last_seen": "2026-09-17",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-31": [
         9613,
@@ -13833,42 +13876,49 @@
         3,
         "",
         "Swift"
+      ],
+      "2026-09-17": [
+        13342,
+        547,
+        6,
+        "",
+        "Swift"
       ]
     },
-    "last_analyzed": "2026-08-31",
+    "last_analyzed": "2026-09-17",
     "analysis": {
+      "one_liner": "在 Apple Silicon Mac 上用 Virtualization.framework 開機一台「虛擬 iPhone」,並提供從韌體下載、開機鏈修補到越獄的全自動化 CLI 工具。",
+      "summary": "vphone-cli 利用 Apple 內部 PCC(Private Cloud Compute)研究 VM 基礎架構與私有 entitlement,在 Mac 上跑出一台可互動的虛擬 iPhone,涵蓋 IPSW 下載合併、iBoot/核心/TXM 二進位修補、DFU 還原到 CFW 安裝與越獄的完整流程。專案以 Swift 6 撰寫核心邏輯,搭配大量 Python 修補腳本與詳盡的逆向工程研究文件,是目前少見的公開「虛擬化越獄研究平台」。",
       "category": "security",
-      "one_liner": "在 Apple Silicon Mac 上,用 Virtualization.framework 開一台可以被完整越獄的虛擬 iPhone。",
-      "summary": "vphone-cli 是一套 Swift 寫成的 CLI 工具,利用蘋果私有的 PCC(Private Cloud Compute)研究型虛擬機基礎設施,把 iPhone 韌體(iBoot/kernel/TXM 等開機鏈)打上補丁後,在虛擬機裡完整跑出一台「虛擬 iPhone」,並提供從下載韌體、DFU 還原、CFW 安裝到開機的全自動流程。專案內附五種安全繞過強度不同的韌體變體(patchless 到含 Sileo/TrollStore 的完整越獄),並附有大量針對 kernel/AMFI/TXM 補丁的逆向研究文件。",
       "highlights": [
-        "提供 vm create 一鍵完成下載→補丁→DFU 還原→CFW 安裝→開機的全流程",
-        "自製 ARM64 反組譯/編碼器與超過 30 個 kernel jailbreak 補丁模組(AMFI、沙箱、TrustCache 等)",
-        "research/ 目錄下有大量詳實的逆向工程筆記,記錄各補丁的來源與驗證方式",
-        "提供主機控制 socket(screenshot/touch/clipboard)方便 AI 驅動的 E2E 測試整合(vphone-mcp)",
-        "測試涵蓋 Swift 單元測試 + 針對每個支援 kernel 版本實跑補丁的整合測試腳本"
+        "提供五種韌體修補變體(less/regular/dev/jb/exp),從單純開機到完整越獄、甚至反 VM 偵測研究補丁都有,補丁數量與階段在文件中列得非常清楚",
+        "自帶 ARM64 反組譯/組譯層(Capstone/Keystone 包裝)與核心修補框架,補丁邏輯以字串 xref、語意運算元比對定位,而非硬編位址,工程手法紮實",
+        "research/ 目錄下有數十份針對 iBoot、TXM、AMFI、Sandbox、核心 hook 等的詳細逆向筆記,對想理解 iOS 開機鏈與越獄機制的人是很好的學習材料",
+        "附完整 XCTest 單元測試與 shell/Python 整合測試腳本(跑遍多個 cloudOS 核心版本驗證補丁正確性)",
+        "暴露一個 host control socket 供程式化操作(截圖、觸控、剪貼簿等),可接給 AI agent 做 E2E 測試(如 vphone-mcp)"
       ],
       "use_cases": [
-        "iOS 安全研究人員需要無實體裝置即可測試越獄補丁與核心漏洞",
-        "行動應用開發者想在 CI 或本機跑一台可完整互動的虛擬 iPhone 做自動化 UI/AI 測試",
-        "越獄社群研究蘋果開機鏈(iBoot/TXM/AMFI)安全機制的教學與範例"
+        "iOS 越獄/安全研究人員在不碰實體裝置的情況下研究開機鏈、AMFI、沙盒等安全機制",
+        "逆向工程學習者參考 research/ 文件了解 iBoot、TXM、核心補丁的實作細節",
+        "需要大量可拋棄式 iPhone VM 做自動化 App 相容性或 UI 測試(搭配 vsock 控制介面與 AI agent)",
+        "研究 Apple 虛擬化框架私有 API 與 entitlement 使用方式的 Swift 開發者"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README、多語系文件與 research/ 逆向筆記都寫得非常詳盡;Swift 原始碼命名清楚、註解精簡且針對『為什麼』而非『做什麼』,搭配 Swift Testing 單元測試與整合測試腳本,工程成熟度明顯偏高。CI 僅設定 release 階段的打包發佈,未見 PR/push 時的自動化測試 workflow,活躍度則由近期 push 時間與大量 issue 引用可佐證。"
+        "comment": "文件品質極高:README、AGENTS.md、CLAUDE.md 與 research/ 下數十份技術筆記把架構、補丁清單、除錯注意事項都寫得非常清楚;程式碼有 XCTest 單元測試與涵蓋多核心版本的整合測試腳本,但 CI 只跑 release 建置、未見自動跑測試;抽樣的 Swift 原始碼(如 KernelJBPatchAmfiExecve、VPhoneProcessRunner)風格一致、註解精簡且切中要害,工程成熟度高。近期仍持續推送更新,GitHub trending 首日即獲大量star,活躍度高。"
       },
       "security": {
-        "risk_level": "medium",
+        "risk_level": "low",
         "findings": [
-          "此工具的核心用途就是繞過 iOS 安全機制(SIP/AMFI 停用、AMFI 私有權限放行、TXM/AMFI/沙箱 kernel 補丁),使用前需要在 Recovery 模式下關閉 SIP 或設定 AMFI boot-arg,這是專案設計目的而非隱藏行為,但使用者應了解這會大幅降低主機系統的安全防護",
-          "scripts/vphoned/signcert.p12 是一個已提交到版本庫的程式碼簽章憑證(用於對客端 daemon 做 ad-hoc 簽章),屬於越獄工具鏈常見做法,非外流的正式開發者憑證",
-          "建置流程會從多個外部 GitHub submodule(含非 Apple/非原作者帳號,如 zqxwce/vphone-cli-storage)拉取資源與工具原始碼並在本機編譯執行,使用前建議確認這些 submodule 來源與內容",
-          "安裝與建置腳本(setup_tools.sh、build.sh)使用 brew/git/clang 建置流程,未發現 curl|bash 式的匿名遠端執行或混淆程式碼"
+          "需要使用者關閉 SIP 並放寬 AMFI(csrutil disable / amfi_get_out_of_my_way=1)才能執行未經蘋果簽署的私有 entitlement 二進位,這會大幅降低主機系統的安全防護,使用者需自行評估風險",
+          "repo 內直接提交了一個 signcert.p12(scripts/vphoned/signcert.p12),用於 ldid 對客體內的守護程式與系統二進位做臨時簽章;這是越獄工具鏈常見做法(僅供本地/客體端簽章使用,非官方 Apple 憑證),但仍是提交在版本控制中的憑證檔案,使用前建議留意其用途範圍",
+          "cfw_install_host.sh 等腳本會以 sudo 重新執行並掛載/修改磁碟映像,屬於預期中的高權限操作,腳本內有明確提示與確認機制"
         ]
       },
-      "star_rating": 4,
-      "verdict": "工程品質與逆向研究深度都相當紮實,對 iOS 安全研究與越獄社群是值得關注的專案,但因其本質涉及大幅降低系統安全防護與依賴多方外部程式碼,一般開發者使用前應充分理解風險。",
+      "star_rating": 5,
+      "verdict": "工程與文件品質都相當出色,對 iOS 安全研究與逆向工程學習者而言是值得關注的稀有專案,但操作門檻高(需關閉主機安全機制),一般開發者應理解其研究/越獄性質再決定是否使用。",
       "_mode": "full"
     }
   },
@@ -16998,10 +17048,10 @@
   },
   "JustVugg/colibri": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-16",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-11": [
         27465,
@@ -17028,6 +17078,13 @@
         33843,
         2026,
         2,
+        "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "C"
+      ],
+      "2026-09-17": [
+        35034,
+        1546,
+        3,
         "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "C"
       ]
@@ -17533,10 +17590,10 @@
   },
   "alphaXiv/OpenResearch": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-12": [
         1277,
@@ -17556,6 +17613,13 @@
         3362,
         531,
         7,
+        "Turn your coding agents into research agents",
+        "Rust"
+      ],
+      "2026-09-17": [
+        4417,
+        1017,
+        13,
         "Turn your coding agents into research agents",
         "Rust"
       ]
@@ -17772,10 +17836,10 @@
   },
   "SnailSploit/Claude-Red": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-15",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-13": [
         3598,
@@ -17797,15 +17861,22 @@
         20,
         "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
         "Python"
+      ],
+      "2026-09-17": [
+        5769,
+        367,
+        17,
+        "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+        "Python"
       ]
     }
   },
   "multimodal-art-projection/YuE": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-15",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-13": [
         7291,
@@ -17825,6 +17896,13 @@
         8336,
         559,
         3,
+        "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "Python"
+      ],
+      "2026-09-17": [
+        9370,
+        332,
+        18,
         "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
         "Python"
       ]
@@ -17971,10 +18049,10 @@
   },
   "ever-co/ever-gauzy": {
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-16",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-17",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-14": [
         5082,
@@ -17994,6 +18072,13 @@
         6666,
         634,
         3,
+        "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
+        "TypeScript"
+      ],
+      "2026-09-17": [
+        7311,
+        778,
+        8,
         "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
         "TypeScript"
       ]
@@ -18302,15 +18387,22 @@
   },
   "rlaope/oh-my-hermes": {
     "first_seen": "2026-09-15",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-17",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-15": [
         2040,
         77,
         8,
+        "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+        "Python"
+      ],
+      "2026-09-17": [
+        2550,
+        80,
+        15,
         "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
         "Python"
       ]
@@ -18732,6 +18824,365 @@
       "star_rating": 5,
       "verdict": "工程紀律與文件品質在 AI 代理工具中屬前段班,supply-chain 與安全邊界說明清楚,值得研究其架構設計或作為編碼代理 CLI 的候選方案,但因無內建沙盒,正式使用時建議搭配容器化隔離。",
       "_mode": "full"
+    }
+  },
+  "cloudflare/security-audit-skill": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        7245,
+        927,
+        2,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-17",
+    "analysis": {
+      "one_liner": "Cloudflare 開源的「安全稽核」AI Agent Skill,把 coding agent 變成能跑六階段、可交叉驗證的滲透測試員",
+      "summary": "這是給 Claude Code 等 coding agent 使用的 Skill(以 Markdown prompt 為主),定義偵察、覆蓋率導向獵漏、候選驗證、結構化輸出、獨立驗證、報告產出六個階段的稽核流程,強調每個發現都要有明確信任邊界與可觀察結果,並用兩支零依賴的 Node.js 驗證腳本強制檢查 findings.json 與 coverage-ledger.json 的結構正確性。目的是解決 AI 抓漏報告常見的幻覺漏洞、無法驗證的散文式結論等問題。",
+      "category": "devtool",
+      "highlights": [
+        "六階段稽核流程(偵察、獵漏、驗證、結構化輸出、獨立覆核、報告),發現者與驗證者必須是不同 agent,避免自我背書",
+        "findings.json 與 coverage-ledger.json 皆有 JSON Schema 與對應的零依賴驗證器,流程強制跑過才算完成",
+        "文件明確定義沙箱執行規範,包含禁外部網路、唯讀原始碼、限資源、no-follow 開檔防符號連結攻擊等,對執行目標程式碼極度保守",
+        "嚴格區分 confirmed、needs_validation、rejected 三種結論,只有 confirmed 才給嚴重度分級,避免把不符最佳實踐誇大成漏洞",
+        "此 Skill 是 Cloudflare 內部漏洞獵漏系統的起始版本,有實戰背景"
+      ],
+      "use_cases": [
+        "讓 coding agent 對自家 codebase 進行結構化的自動化資安稽核,產出可交付的稽核報告",
+        "作為團隊導入 AI 輔助滲透測試或漏洞獵捕時,規範 agent 行為與輸出格式的範本",
+        "研究如何設計可驗證、機器可讀的 AI agent 輸出格式與反幻覺機制的參考案例",
+        "學習如何撰寫零依賴、具防禦性程式設計的 Node.js 驗證工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 3,
+        "comment": "README 與 SKILL.md 等說明文件寫得極其詳盡嚴謹,規則定義清楚到近乎規格書等級;兩支驗證腳本雖無 package.json 或 CI 設定,但用純 Node 內建模組寫成,並附有涵蓋大量邊界與惡意輸入情境的測試檔,程式碼品質相當高。倉庫本身是給 AI agent 讀的技能包而非傳統程式庫,活動記錄集中在單次推送,尚無長期迭代或 issue 追蹤可供判斷。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對於在用或評估 AI 輔助資安稽核工作流程的工程師,這是設計嚴謹且來自實戰(Cloudflare 自家漏洞獵捕系統)的公開範本,值得一讀甚至直接採用。",
+      "_mode": "full"
+    }
+  },
+  "abue-ammar/tinycast": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        5592,
+        1179,
+        4,
+        "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+        "Swift"
+      ]
+    },
+    "last_analyzed": "2026-09-17",
+    "analysis": {
+      "category": "app",
+      "one_liner": "Tinycast 是一款完全原生開發、記憶體佔用極低的 macOS 啟動器,整合快捷鍵、剪貼簿歷史與 Raycast 擴充功能相容層。",
+      "summary": "Tinycast 用 SwiftUI/AppKit 打造,零第三方依賴、無 Electron、無遙測,主打「一個熱鍵召喚一切」的應用啟動器體驗,涵蓋剪貼簿歷史、計算機、Quicklinks、視窗管理、行事曆整合等大量生產力功能。特別之處是能原生執行既有的 Raycast 擴充功能(透過內建的 JS runtime 轉譯為 SwiftUI),讓使用者不必放棄既有的擴充生態就能換用更輕量的原生替代品。",
+      "highlights": [
+        "零第三方依賴、純 SwiftUI/AppKit 實作,RAM 佔用宣稱低於 100MB",
+        "自建 Raycast Runtime(Scripts/raycast-runtime)讓既有 Raycast 擴充可原生執行",
+        "70+ 個測試檔案涵蓋幾乎每個功能模組(calc、clipboard、hotkey、AI chat 等),測試文化紮實",
+        "GitHub Actions release pipeline 具備簽章驗證、arm64/universal 架構斷言等嚴謹的發版檢查",
+        "AI 對話功能預設關閉、需使用者自備金鑰或已安裝的 AI 帳號,並有明確的資料保留政策(AIRetention)"
+      ],
+      "use_cases": [
+        "想要輕量、原生、無遙測的 macOS 啟動器/Raycast 替代品的使用者",
+        "已經在 Raycast 累積大量自訂擴充,想換工具但不想放棄擴充生態的人",
+        "研究 SwiftUI/AppKit 大型原生 App 架構與工程規範(CONTRIBUTING.md、AGENTS.md)的開發者",
+        "需要參考 macOS App 簽章、公證與 Homebrew Cask 自動發版流程的專案"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件相當完整,README、CONTRIBUTING、SECURITY、AGENTS/CLAUDE 等說明齊全且態度嚴謹(如強制先開 issue 才能送 PR);測試涵蓋幾乎所有功能模組,包含效能測試(performance test);CI/CD 針對簽章、架構、公證有多層自動化斷言,顯示工程成熟度高。原始碼風格清晰、模組化良好(App/DesignSystem/Features 分層明確),搭配 SwiftLint/swift-format 規範。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "安裝方式主要透過 Homebrew tap(brew tap + brew install --cask),官方 release workflow 使用自有簽章憑證(self-signed)簽署 DMG/ZIP,並非 Apple 公證(notarized),README 與 SECURITY.md 均有明確揭露此點,使用者透過 DMG 直接安裝時需手動清除 quarantine 標記(xattr -dr)",
+          "AI 對話等網路功能預設關閉,需使用者主動設定金鑰或連接既有帳號才會啟用,程式碼中有明確的資料保留(AIRetention)與同意機制設計",
+          "未在原始碼或安裝腳本中發現 curl|bash 式遠端執行、混淆程式碼、內嵌 base64 payload 或寫死的可疑網域"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試覆蓋度都在原生 macOS 開源專案中屬上乘,自簽章而非公證是唯一需要留意的取捨,值得對 macOS 生產力工具或原生 Swift 大型專案架構有興趣的人關注。",
+      "_mode": "full"
+    }
+  },
+  "anthropics/knowledge-work-plugins": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        24285,
+        110,
+        7,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-17",
+    "analysis": {
+      "one_liner": "Anthropic 官方開源的 Claude Cowork/Claude Code 外掛市集,收錄多個以角色為導向的知識工作外掛。",
+      "summary": "這個 repo 是 Anthropic 自家團隊打造並開源的 Claude 外掛集合(sales、legal、finance、data、bio-research 等),讓 Claude 針對特定職能具備技能(skills)、斜線指令(commands)與外部工具連結(MCP connectors)。整體以 Markdown + JSON 為主,幾乎「無程式碼、無建置流程」,唯一例外是 bio-research 外掛內含實際的 Python 腳本(如抓取 NCBI/GEO/SRA 資料、轉換儀器資料格式)。",
+      "category": "ai-ml",
+      "highlights": [
+        "官方出品,由 Anthropic 直接維護並用於自家內部工作流程,可信度高",
+        "涵蓋 sales、legal、finance、marketing、customer-support、data、bio-research 等 11+ 種角色,每個外掛結構一致(plugin.json + .mcp.json + commands/ + skills/)",
+        "擁有異常成熟的 CI 治理機制:scan-plugins.yml 會用 Claude 對外部提交的外掛做政策掃描(檢查隱藏 hook、未揭露的遙測、跨服務憑證外洩等),並有驗證快取、自動回退失敗提交等機制",
+        "bio-research 外掛內的 Python 工具(NCBI/GEO/SRA 擷取、ASM 格式轉換)程式碼結構清晰、有型別註記與例外處理,品質優於一般範例腳本",
+        "設計上鼓勵企業自行客製化(替換 MCP connector、加入公司術語與流程),而非直接套用預設值"
+      ],
+      "use_cases": [
+        "企業導入 Claude Cowork/Claude Code,想快速取得特定職能(業務、法務、財務、產品等)的最佳實踐工作流程範本",
+        "作為建立自家內部外掛的參考架構,學習 skills/commands/connectors 的標準寫法",
+        "生技/製藥研發團隊可直接使用 bio-research 外掛串接 PubMed、ClinicalTrials.gov、Benchling 等工具",
+        "研究 Anthropic 如何用 LLM 做外掛安全政策掃描(scan-plugins.yml + policy/prompt.md)作為自動化治理案例參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "文件品質極高,每個外掛都有清楚的 README、SKILL.md 與角色說明,頂層 README 也完整交代架構與客製化方式。多數外掛本身是宣告式的 Markdown/JSON,沒有傳統單元測試,但有一套自建的 CI 政策掃描(scan-plugins.yml)對每個外部提交的外掛做安全審查,某種程度取代了傳統測試的把關角色;bio-research 內的 Python 腳本則未見對應的 unit test。今日剛登上 trending 且最後推送時間為當日,活躍度非常高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "repo 內大多數外掛僅由 Markdown 與 JSON 組成,未發現 setup.py/postinstall/preinstall 等安裝期任意程式碼執行機制,也未發現 curl|bash 或 iwr|iex 型態的安裝腳本(grep 命中的檔案多為文件中引用第三方 API 的說明,如 Zoom SDK、Canva API 文件,非實際安裝流程)",
+          "bio-research 外掛內的 Python 腳本(如 ncbi_utils.py)會對 NCBI、ENA 等公開生醫資料庫發出 HTTPS 請求,屬於功能本身需要的正常網路存取,未見硬編碼異常網域或私有 IP",
+          ".github/workflows/scan-plugins.yml 會呼叫 Claude 對外部貢獻的外掛內容做政策掃描,並在 prompt.md 中明確要求檢查隱藏/未揭露的 hook、遙測與跨服務憑證外洩,顯示專案本身已將外掛安全風險的把關內建進 CI 流程"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "官方出品、文件完整、治理機制成熟,若團隊已在用 Claude Cowork/Code 值得直接安裝參考,但多數外掛屬宣告式範本而非程式碼庫,技術深度因人而異。",
+      "_mode": "full"
+    }
+  },
+  "ankitects/anki": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        30860,
+        58,
+        9,
+        "Anki is a smart spaced repetition flashcard program",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-17",
+    "analysis": {
+      "category": "app",
+      "one_liner": "Anki 是一套採用間隔重複演算法的桌面版記憶卡學習軟體,核心以 Rust 撰寫,搭配 Python/Qt 與 TypeScript 前端。",
+      "summary": "Anki 是知名的開源間隔重複(spaced repetition)記憶卡程式,已發展超過十年,擁有龐大使用者社群。此 repo 為桌面版原始碼,核心邏輯(排程演算法、資料庫、匯入匯出、同步)以 Rust 實作於 rslib,再透過 pyo3 綁定給 Python/Qt 前端與 TypeScript 網頁元件使用,是一個成熟的多語言混合架構專案。",
+      "highlights": [
+        "核心 rslib 以 Rust 撰寫,程式碼模組化清楚(collection、decks、scheduler、cloze 等各自獨立模組),風格一致且有適量文件註解",
+        "CI 涵蓋 Linux/macOS/Windows(含 ARM),整合 cargo-nextest、cargo-llvm-cov 覆蓋率、cargo-deny 依賴稽核、complexipy 複雜度檢查與 SonarCloud",
+        "測試涵蓋 Python(pylib/qt)、Rust、TypeScript e2e(Playwright)多層面,測試資料與 fixture 齊全",
+        "GitHub Actions 全面以 commit hash 而非版本標籤釘選第三方 action,屬於良好的供應鏈安全實務",
+        "採用 AGPL-3.0-or-later 授權,workspace 依賴管理清晰,亦有部分依賴直接釘選至特定 git commit 以確保可重現性"
+      ],
+      "use_cases": [
+        "想深入研究間隔重複演算法(FSRS)實作細節的學習者或研究者",
+        "欲學習大型 Rust + Python(PyO3)+ TypeScript 混合架構專案組織方式的工程師",
+        "需要參考成熟開源專案 CI/CD 安全實務(pinned actions、依賴稽核)的團隊",
+        "自行架設 Anki 同步伺服器(docs/syncserver)或客製化打包安裝的使用者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件、測試與 CI 三方面都相當完整:docs/ 目錄有開發與貢獻指南,pylib/qt/rslib/ts 各自有對應測試,CI 涵蓋六種平台並附覆蓋率回歸檢查與程式複雜度掃描,commit 歷史顯示幾乎每日都有推送,是维护活躍度極高的成熟專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "成熟、活躍且工程實務嚴謹的知名開源軟體,無論是想學習 Rust 大型專案架構或是單純使用記憶卡軟體都非常值得關注。",
+      "_mode": "full"
+    }
+  },
+  "anthropics/claude-code": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        145503,
+        165,
+        11,
+        "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-17",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "test",
+      "summary": "test summary text here for testing purposes only now",
+      "highlights": [
+        "a",
+        "b",
+        "c"
+      ],
+      "use_cases": [
+        "a",
+        "b"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "test"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "test verdict",
+      "_mode": "full"
+    }
+  },
+  "supabase/supabase": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        109730,
+        120,
+        14,
+        "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-17",
+    "analysis": {
+      "one_liner": "開源版 Firebase 替代方案,以 Postgres 為核心提供資料庫、驗證、即時訂閱、儲存與 AI 向量功能的一站式後端平台。",
+      "summary": "Supabase 是以開源工具組合打造的 Postgres 開發平台,整合資料庫、認證授權、自動生成 REST/GraphQL API、即時訂閱、Edge Functions、檔案儲存及 AI/向量嵌入工具,目標是提供類似 Firebase 的開發體驗但採用企業級開源技術。可選擇託管服務或自行架設本地開發環境。",
+      "category": "infra",
+      "highlights": [
+        "以 Postgres 為核心,結合 PostgREST、GoTrue、Realtime、Storage、pg_graphql 等多個開源專案組成完整後端平台",
+        "內建 AI + Vector/Embeddings 工具鏈,支援 pgvector,適合建構 RAG 或語意搜尋應用",
+        "官方與社群齊備的多語言客戶端函式庫(JS/TS、Flutter、Swift、Python、C#、Go、Java、Kotlin 等)",
+        "支援託管雲端服務與自架本地開發兩種模式,彈性高",
+        "Apache-2.0 授權,長期活躍且社群規模大(GitHub Discussions、Discord 皆有經營)"
+      ],
+      "use_cases": [
+        "需要快速建立後端(資料庫+驗證+API)的 Web/行動應用開發",
+        "作為 Firebase 的開源替代方案,避免廠商鎖定或需要自架環境",
+        "建構具備向量搜尋/embeddings 的 AI 應用(如 RAG 系統)",
+        "需要即時資料同步(websocket)功能的協作型應用"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚、功能清單與架構圖完整,並附上各語言客戶端函式庫對照表,文件品質高;測試部分因僅能看到 README,無法檢視實際程式碼與測試覆蓋率,此評分僅供參考。近期仍持續 push 且今日登上 trending 第 14 名、單日 +120 星,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "已是後端即服務領域的標竿專案,無論自架或雲端託管都值得投入學習與採用。",
+      "_mode": "light"
+    }
+  },
+  "Tencent/WeKnora": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        25295,
+        1197,
+        16,
+        "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-17",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "把文件變成可查詢知識庫的開源 LLM 平台,整合 RAG、自主推理 Agent 與自動生成 Wiki。",
+      "summary": "WeKnora 是騰訊開源的企業級知識平台,能將 PDF、Word、Excel 等原始文件轉換成可語意檢索的知識庫,支援 RAG 快速問答、ReAct 自主 Agent(含工具呼叫、沙箱程式碼執行、MCP、網頁搜尋)以及會自我維護、可回溯版本的 Wiki 知識圖譜模式。整體架構高度模組化,LLM、向量資料庫、儲存後端皆可替換,並提供多租戶 RBAC、審計日誌與多種 IM/資料來源整合,鎖定企業內部知識管理與客服問答場景。",
+      "highlights": [
+        "三種核心模式:RAG 問答、ReAct Agent(含 Docker/E2B/Cube 沙箱與技能市集)、自動生成/可編輯的 Wiki 知識圖譜",
+        "架構完全模組化,支援 20+ LLM 供應商、7 種向量資料庫、多種物件儲存與 10+ 種文件格式解析",
+        "企業級功能齊全:多租戶 RBAC(4 層角色)、審計日誌、AES-256-GCM 加密、SSRF 防護、scoped API key",
+        "測試覆蓋非常扎實,internal 目錄下近 900 個 *_test.go 檔案,涵蓋 agent、工具、沙箱等核心模組",
+        "CI 依模組拆分為多條 GitHub Actions workflow(app/frontend/docreader/cli/mcp-server 等各自獨立檢查)"
+      ],
+      "use_cases": [
+        "企業內部文件知識庫,結合 IM(WeCom/Feishu/Slack)做智慧客服問答",
+        "需要 Agent 自主檢索+沙箱執行程式碼(如資料分析、文件生成)的複雜任務場景",
+        "將零散文件持續整理成結構化、可追蹤版本的團隊 Wiki 與知識圖譜",
+        "需要資料主權、可私有化部署的 RAG 平台(取代雲端 SaaS 知識庫服務)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為詳盡(多語言 README、官方文件站涵蓋約 360 個 API 端點),CHANGELOG 記錄清晰且版本迭代頻繁(v0.1 到 v0.8 功能持續擴充)。抽樣讀取的核心程式碼(如 shell_exec 工具)註解品質高,清楚說明設計取捨與安全邊界,而非流水帳式描述。測試檔案數量龐大且分散在 agent、沙箱、工具等關鍵模組,CI 依子系統拆分,顯示工程紀律良好。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Agent 提供 shell_exec 等工具可在沙箱(Docker/E2B/Cube MicroVM)中執行任意命令,程式碼註解明確說明沙箱隔離才是真正的安全邊界,命令黑名單(rm -rf /、fork bomb、mkfs 等)僅為輔助防呆機制,屬設計上已知且有文件化的風險範圍",
+          "README 的安全提醒章節建議正式環境應部署在內網並避免直接暴露公網,顯示專案方對已知風險有主動揭露"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "功能完整度、工程品質與測試覆蓋都在同類開源 RAG/Agent 專案中名列前茅,值得立即關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "cline/cline": {
+    "first_seen": "2026-09-17",
+    "last_seen": "2026-09-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-17": [
+        68374,
+        112,
+        20,
+        "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+        "TypeScript"
+      ]
     }
   }
 }
