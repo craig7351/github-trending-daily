@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-18",
+    "analyzed": 6,
+    "cached": 14,
+    "deferred": 0,
+    "top_name": "cilium/cilium",
+    "top_rating": 5
+  },
+  {
     "date": "2026-09-17",
     "analyzed": 10,
     "cached": 9,

@@ -991,8 +991,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 4,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1037,6 +1037,13 @@
         1,
         "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-09-18": [
+        34745,
+        3286,
+        1,
+        "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
     "last_analyzed": "2026-09-14",
@@ -1074,8 +1081,8 @@
       "verdict": "工程成熟度與文件品質俱佳,搭配可驗證的效能基準與嚴謹 CI,值得台灣 AI/DevOps 團隊實際評估導入 CI pipeline。",
       "_mode": "full"
     },
-    "total_days_on_trending": 8,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 9,
+    "consecutive_days_on_trending": 5
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -1464,8 +1471,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1576,6 +1583,13 @@
         21,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-18": [
+        261173,
+        1171,
+        13,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-05",
@@ -1615,8 +1629,8 @@
       "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
       "_mode": "full"
     },
-    "total_days_on_trending": 17,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 18,
+    "consecutive_days_on_trending": 2
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -4915,10 +4929,10 @@
   },
   "jamiepine/voicebox": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-04": [
         48677,
@@ -4931,6 +4945,13 @@
         54383,
         417,
         5,
+        "The open-source AI voice studio. Clone, dictate, create.",
+        "TypeScript"
+      ],
+      "2026-09-18": [
+        54848,
+        667,
+        12,
         "The open-source AI voice studio. Clone, dictate, create.",
         "TypeScript"
       ]
@@ -5541,10 +5562,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5615,6 +5636,13 @@
         19,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
+      ],
+      "2026-09-18": [
+        95852,
+        680,
+        3,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-16",
@@ -5651,10 +5679,10 @@
   },
   "roboflow/supervision": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-06": [
         48925,
@@ -5667,6 +5695,13 @@
         50597,
         260,
         12,
+        "We write your reusable computer vision tools. 💜",
+        "Python"
+      ],
+      "2026-09-18": [
+        50802,
+        329,
+        14,
         "We write your reusable computer vision tools. 💜",
         "Python"
       ]
@@ -13320,10 +13355,10 @@
   },
   "NationalSecurityAgency/ghidra": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-29": [
         73340,
@@ -13350,6 +13385,13 @@
         77801,
         1059,
         10,
+        "Ghidra is a software reverse engineering (SRE) framework",
+        "Java"
+      ],
+      "2026-09-18": [
+        78485,
+        912,
+        7,
         "Ghidra is a software reverse engineering (SRE) framework",
         "Java"
       ]
@@ -17048,10 +17090,10 @@
   },
   "JustVugg/colibri": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-11": [
         27465,
@@ -17085,6 +17127,13 @@
         35034,
         1546,
         3,
+        "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "C"
+      ],
+      "2026-09-18": [
+        35742,
+        873,
+        15,
         "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
         "C"
       ]
@@ -17590,10 +17639,10 @@
   },
   "alphaXiv/OpenResearch": {
     "first_seen": "2026-09-12",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-12": [
         1277,
@@ -17620,6 +17669,13 @@
         4417,
         1017,
         13,
+        "Turn your coding agents into research agents",
+        "Rust"
+      ],
+      "2026-09-18": [
+        4951,
+        939,
+        5,
         "Turn your coding agents into research agents",
         "Rust"
       ]
@@ -18049,10 +18105,10 @@
   },
   "ever-co/ever-gauzy": {
     "first_seen": "2026-09-14",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-14": [
         5082,
@@ -18079,6 +18135,13 @@
         7311,
         778,
         8,
+        "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
+        "TypeScript"
+      ],
+      "2026-09-18": [
+        7541,
+        470,
+        17,
         "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) -https://gauzy.co",
         "TypeScript"
       ]
@@ -18828,14 +18891,21 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         7245,
         927,
+        2,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-09-18": [
+        10658,
+        3607,
         2,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
@@ -18876,15 +18946,22 @@
   },
   "abue-ammar/tinycast": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         5592,
         1179,
         4,
+        "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+        "Swift"
+      ],
+      "2026-09-18": [
+        6148,
+        739,
+        10,
         "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
         "Swift"
       ]
@@ -18928,15 +19005,22 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         24285,
         110,
         7,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ],
+      "2026-09-18": [
+        24563,
+        287,
+        8,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
       ]
@@ -19028,15 +19112,22 @@
   },
   "anthropics/claude-code": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         145503,
         165,
         11,
+        "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "TypeScript"
+      ],
+      "2026-09-18": [
+        145872,
+        538,
+        6,
         "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "TypeScript"
       ]
@@ -19120,15 +19211,22 @@
   },
   "Tencent/WeKnora": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         25295,
         1197,
         16,
+        "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+        "Go"
+      ],
+      "2026-09-18": [
+        26215,
+        1125,
+        9,
         "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
         "Go"
       ]
@@ -19171,10 +19269,10 @@
   },
   "cline/cline": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         68374,
@@ -19182,7 +19280,304 @@
         20,
         "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
         "TypeScript"
+      ],
+      "2026-09-18": [
+        68558,
+        380,
+        18,
+        "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+        "TypeScript"
       ]
+    },
+    "last_analyzed": "2026-09-18",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Cline 是一套開源自主編碼代理,提供 CLI、IDE 擴充套件、桌面應用與 SDK。",
+      "summary": "Cline 是可在終端機、VS Code、JetBrains、桌面應用中運作的自主編碼代理,核心引擎以 SDK 形式對外開放,支援跨檔案修改、執行指令、Plan/Act 模式,並可透過 MCP、外掛、多代理團隊與排程任務擴展。",
+      "highlights": [
+        "多形態整合(CLI/IDE/桌面/SDK)",
+        "Plan/Act 雙模式搭配人工核准機制",
+        "支援眾多模型供應商,不綁定單一廠商",
+        "內建 MCP、外掛系統與多代理團隊協作",
+        "可整合 Slack/Telegram 等聊天平台遠端操作"
+      ],
+      "use_cases": [
+        "在 IDE 中以自然語言驅動程式碼修改與除錯",
+        "CI/CD 流程中以 headless 模式自動跑測試、修 bug、審查 diff",
+        "設定 cron 排程自動產生 PR 摘要或依賴檢查報告",
+        "透過聊天平台遠端下指令操作程式碼代理"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,清楚列出各產品形態、安裝方式與功能矩陣;但本次僅為 README 層級審查,未檢視原始碼,測試涵蓋度無法評估。專案更新非常活躍(2026-09-18 剛推送),且正處於 GitHub trending 排名第 18、單日新增 380 星,動能強勁。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 npm 安裝(npm i -g cline、npm install @cline/sdk)及官方 Marketplace 連結安裝擴充套件,屬常見套件管理方式,未見 curl | bash 之類的高風險安裝指令",
+          "工具具備執行 Shell 指令、修改檔案、連接外部聊天平台等高權限能力,雖有人工核准與 auto-approve 開關等控制機制,使用時仍需留意授權範圍與自動核准設定的風險",
+          "僅基於 README 進行審視,未做原始碼層級的安全審查"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、多形態整合且動能強勁的開源編碼代理,值得追蹤與試用,但賦予其執行指令與檔案修改權限時建議謹慎設定核准機制。",
+      "_mode": "light"
+    }
+  },
+  "Tencent/BrowserSkill": {
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-18": [
+        4145,
+        1302,
+        4,
+        "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-18",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "讓 AI Agent 透過 CLI 操控你「已登入」的真實瀏覽器分頁,不打斷你原本的工作。",
+      "summary": "BrowserSkill 是 Tencent 開源的瀏覽器自動化工具,由 Rust 寫成的 bsk CLI/daemon 與瀏覽器擴充套件組成,讓 Cursor、Claude Code、Codex 等任何能呼叫 shell 的 AI Agent 借用使用者已登入的瀏覽器分頁執行任務,而不需要另外準備測試帳號或啟動無痕視窗。核心設計是「借用-歸還」機制與內建 human-in-loop:遇到驗證碼、登入或需要人工確認的步驟時,Agent 可請求使用者接手,完成後再繼續。",
+      "highlights": [
+        "採用 Cargo + pnpm 混合 monorepo,CLI/daemon 用 Rust 撰寫、擴充套件用 TypeScript + React + WXT 框架",
+        "borrow/return 分頁機制搭配可設定的「借用前確認」與「允許人工協助請求」開關,並有協定版本相容性設計(1.0–1.3)",
+        "CI 工作流涵蓋 Rust fmt/clippy/test、Windows daemon 與安裝程式測試、前端 lint/typecheck/build,測試檔案數量龐大(僅 bsk-cli 就有 30 多個整合測試)",
+        "額外提供 DeepSeek Harness 專用外掛(npm 套件),以及 evals/browser 目錄做跨 Agent 的瀏覽器能力基準測試",
+        "install.sh / install.ps1 從 GitHub Releases 下載二進位檔並以 sha256 檢查碼驗證後才安裝,而非直接執行遠端腳本內容"
+      ],
+      "use_cases": [
+        "讓程式碼助理類 Agent(Cursor、Claude Code、Codex 等)在測試網站或內部系統時直接沿用你目前登入的帳號狀態,不用另建測試帳號",
+        "需要人工介入處理登入、驗證碼等步驟的半自動化瀏覽器任務流程",
+        "透過 DeepSeek Harness 或其他 shell-capable agent 建置瀏覽器操作技能(skill)",
+        "評估/比較不同 Agent 框架在瀏覽器操作能力上的表現(evals/browser)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常詳盡(中英雙語 README、多個子模組 README、AGENT_INSTALL.md),原始碼註解清楚說明設計取捨與生命週期邊界情況(如 chromium-cdp.ts 對 MV3 service worker 被回收、多重 debugger attach 的處理)。測試涵蓋 Rust 端與前端 TypeScript 端,並有專門的 Windows 安裝程式測試與 CI 矩陣。最後推送時間為今日,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl | sh 與 irm | iex 的一行安裝指令,屬於業界常見但需要使用者留意來源信任的安裝方式;實際腳本內容(install.sh/install.ps1)會從 GitHub Releases 下載對應平台的二進位檔,並在有 sha256 資訊時進行檢查碼驗證後才安裝,未發現直接執行遠端任意程式碼或混淆內容",
+          "擴充套件透過 chrome.debugger API(CDP)取得分頁的完整除錯權限,並可代替使用者操作已登入的瀏覽器分頁,此為工具核心功能所需的權限範圍,使用者應理解安裝擴充套件後 Agent 具備的操作能力並留意借用分頁確認設定"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件完整度都在水準之上,借用真實登入分頁這個定位解決了 Agent 瀏覽器自動化的實際痛點,值得對接 AI Agent 工作流程的開發者關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "cilium/cilium": {
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-18": [
+        25265,
+        111,
+        11,
+        "eBPF-based Networking, Security, and Observability",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-18",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "基於 eBPF 的雲原生網路、安全與可觀測性解決方案,可完全取代 kube-proxy。",
+      "summary": "Cilium 是 CNCF 畢業專案,利用 eBPF 技術在 Kubernetes 環境中提供 L3-L7 網路連接、身分導向的安全政策、分散式負載平衡與服務網格功能。它整合 Hubble 提供即時流量觀測,並支援 Cluster Mesh 跨叢集連接與 Gateway API,解決傳統以 IP 為基礎的防火牆規則在大規模容器環境中難以擴展的問題。",
+      "highlights": [
+        "eBPF-based dataplane 取代傳統 iptables/kube-proxy,支援大規模高效能負載平衡",
+        "身分導向(identity-based)安全模型,支援 L3-L7 網路政策與 DNS-based 政策",
+        "內建 Hubble 可觀測性平台,提供即時服務地圖與流量診斷",
+        "支援 Cluster Mesh 多叢集連接與 Kubernetes Gateway API 相容的 Service Mesh",
+        "CNCF Graduated 專案,提供 SBOM 供應鏈安全資訊,並維護三個穩定版本分支"
+      ],
+      "use_cases": [
+        "需要高效能、可擴展的 Kubernetes CNI 網路方案",
+        "需要細粒度 L7 網路政策與零信任身分導向安全控管",
+        "多叢集/多雲環境需要統一服務發現與安全連接(Cluster Mesh)",
+        "需要深度網路可觀測性與流量除錯工具(Hubble)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 文件結構完整、功能說明清楚,並附官方文件連結;但僅能依 README 評估,未實際檢視原始碼與測試涵蓋率。專案為 CNCF 畢業等級,發布頻率穩定(多個版本並行維護),近期仍持續推送更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "CNCF 畢業級的成熟專案,對於 Kubernetes 網路、安全與可觀測性有實際生產需求者絕對值得深入研究。",
+      "_mode": "light"
+    }
+  },
+  "TencentCloud/Octop": {
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-18": [
+        3440,
+        367,
+        16,
+        "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-18",
+    "analysis": {
+      "one_liner": "Octop 是騰訊雲推出的自架式多使用者、多智能體 AI 助理平台,強調隱私本地優先與豐富的 IM/瀏覽器/終端整合。",
+      "summary": "Octop 是一個以 Python/FastAPI 打造的單一進程 AI 助理伺服器,整合 Web Dashboard、CLI、Feishu/DingTalk/QQ/Discord/WeCom 等 IM 通道與 cron 排程,所有資料預設存放於本機 SQLite(可選 PostgreSQL)。核心賣點是多使用者、多智能體(每位使用者可切換不同專家/MBTI 人格)、可攜式長期記憶(harness-memory)、知識庫 RAG,以及透過 ACP 協定雙向串接 OpenCode / Claude Code / Codex 等外部編碼代理。",
+      "category": "ai-ml",
+      "highlights": [
+        "單一進程架構(OctopServer)統一處理 Web UI、IM 通道與 cron,重啟時可從控制平面資料庫完整還原狀態",
+        "423 個以上的測試檔案涵蓋 unit/integration/live 三層,並有 Linux/Windows 雙平台 CI 加上 ruff+mypy strict 型別檢查與 CodeQL 掃描",
+        "支援 16 種 MBTI 人格模板、專家庫(expert library)、外掛系統與 OAuth+MCP 連接器生態",
+        "內建工具核准機制、PII 遮罩與可編輯的 shell 指令白名單/黑名單(tool_guard)做安全防護",
+        "提供 ACP 雙向整合,可作為 IDE 的 AI 代理伺服端,亦可委派任務給 Claude Code、Codex 等外部編碼代理"
+      ],
+      "use_cases": [
+        "個人/家庭自架 AI 助理,取代雲端 SaaS 方案以保留對話與工作區隱私",
+        "團隊透過 Feishu/DingTalk/WeCom 群組串接多個智能體協作處理任務",
+        "開發者透過 ACP 協定把 Octop 代理串進 IDE,或反向委派任務給 Claude Code/Codex",
+        "需要 RAG 知識庫、瀏覽器自動化、遠端桌面等擴充能力的自動化平台"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(README/README_CN、docs/architecture.md、ADR 文件、AGENTS.md 模組邊界說明),CI 涵蓋 lint、mypy strict、pytest(含 Linux/Windows 矩陣)與 CodeQL,測試檔案數量巨大且分層清晰(unit/integration/live),抽樣程式碼(middleware、launch.py)風格一致、有清楚的模組職責註解,整體工程成熟度高於一般剛上架的 trending 專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "官方安裝方式為 curl/irm 下載並直接執行 install.sh/install.ps1(來自騰訊雲 COS 網域 finnie-1258344699.cos.ap-guangzhou.myqcloud.com),這是常見的一鍵安裝模式,但使用前建議先檢視腳本內容或改用本地 clone 後執行 scripts/install.sh",
+          "install.sh 在缺少 uv 時會進一步從 astral.sh 與 sh.rustup.rs 下載官方安裝腳本並以 curl | sh 執行,屬於這些工具官方推薦的安裝方式,並非專案自訂的可疑網域",
+          "安裝腳本在 Linux 上可能以 root/免密 sudo 呼叫套件管理器(apt/dnf/yum/pacman/zypper)安裝編譯工具與 Playwright 系統依賴,屬於一般安裝腳本常見行為,腳本內邏輯清晰、皆有失敗容錯"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試覆蓋度在 trending 專案中相當突出,若有自架 AI 助理或多智能體協作需求值得深入評估,唯安裝時建議留意一鍵腳本的下載執行行為。",
+      "_mode": "full"
+    }
+  },
+  "coder/coder": {
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-18": [
+        14834,
+        145,
+        19,
+        "Secure environments for developers and their agents",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-18",
+    "analysis": {
+      "one_liner": "Coder 是一套自架式雲端開發環境平台,用 Terraform 定義工作空間,並支援在自有基礎設施上執行 AI 編碼代理。",
+      "summary": "Coder 讓團隊用 Terraform 定義開發環境(EC2、Kubernetes Pod、Docker 容器等),透過安全的 Wireguard 通道連線,並可在閒置時自動關機省成本。同時支援在控制平面執行 AI 編碼代理(如 Claude Code、Codex),不需在工作空間內存放 LLM 金鑰,並提供集中式模型治理與稽核記錄。",
+      "category": "devtool",
+      "highlights": [
+        "工作空間以 Terraform 宣告式定義,可部署於 EC2、K8s Pod、Docker 容器等多種基礎設施",
+        "內建 AI 編碼代理執行迴圈於控制平面,無需在工作空間內配置 API 金鑰,支援 Anthropic、OpenAI、Google、Bedrock 等多家模型",
+        "提供 VS Code、JetBrains Toolbox 官方外掛,以及 Dev Containers、GitHub Actions 等豐富整合生態",
+        "具備 OpenSSF Best Practices 與 Scorecard 徽章,顯示對安全開發實踐的重視",
+        "今日登上 GitHub trending 第 19 名,單日新增 145 顆星,顯示社群關注度正在上升"
+      ],
+      "use_cases": [
+        "企業自架雲端開發環境,取代個別開發者本機環境設定,加速新人 onboarding",
+        "需要集中管理與稽核 AI 編碼代理使用情況、避免 LLM 金鑰外流的團隊",
+        "希望用 IaC(Terraform)方式標準化並版控開發環境設定的 DevOps 團隊",
+        "需要在受限或 air-gapped 網路中提供私有擴充套件市集的組織"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋快速上手、文件連結、支援管道與整合生態,對新使用者相當友善;但本次評估僅基於 README,未檢視原始碼,測試品質無從得知。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl https://coder.com/install.sh | sh 的安裝方式,屬於常見的一鍵安裝腳本模式,使用前建議先檢視腳本內容",
+          "本次評估僅based on README與metadata,未進行原始碼層級的安全審查"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對於需要自架開發環境並整合 AI 代理治理的團隊,值得評估;純個人開發者則不一定有迫切需求。",
+      "_mode": "light"
+    }
+  },
+  "n8n-io/n8n": {
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-18": [
+        204994,
+        281,
+        20,
+        "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-18",
+    "analysis": {
+      "one_liner": "n8n 是一套結合視覺化畫布與程式碼彈性的 AI 工作流程自動化平台。",
+      "summary": "n8n 讓使用者透過拖拉式節點畫布搭配自訂 JavaScript/Python 程式碼建立自動化流程與 AI 代理,可自架或使用雲端服務,並提供 1500+ 整合套件與 9000+ 現成範本,鎖定從原型開發到正式上線的完整 AI 自動化情境。",
+      "category": "devtool",
+      "highlights": [
+        "AI 原生設計,支援 OpenAI、Anthropic、Google 等多家模型供應商,可自由切換不鎖定單一廠商",
+        "視覺化節點編輯與程式碼混合開發,適合從簡單流程到多步驟 AI 代理的漸進式建置",
+        "提供企業級功能如角色權限控管與稽核紀錄,支援自架部署處理敏感資料",
+        "生態系龐大,擁有 1500+ 整合與 9000+ 社群範本,降低重複造輪子的成本",
+        "目前在 GitHub trending 上榜(第 20 名,20 萬+ 星數,單日新增 281 顆星),社群活躍度高"
+      ],
+      "use_cases": [
+        "企業內部系統整合與跨平台資料流自動化(如 CRM、通知、報表串接)",
+        "建置具備工具呼叫與人工審核節點的多步驟 AI 代理工作流程",
+        "需要自架、注重資料隱私與合規性的自動化平台導入",
+        "作為低程式碼/無程式碼平台的教學或 PoC 快速驗證工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋快速上手、資源連結、授權說明與貢獻指南,對新使用者相當友善;測試品質部分僅能依 README 判斷,無法從中評估實際程式碼測試涵蓋率。專案本身推送紀錄顯示持續高頻更新,且正登上 GitHub trending,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 curl -fsSL https://get.n8n.io | sh 的一鍵安裝腳本,執行前建議先檢視腳本內容,避免不熟悉來源就直接管道執行",
+          "官方也提供標準 Docker 部署方式作為替代選項,風險相對較低且來源透明",
+          "未進行原始碼層級的安全審查,僅根據 README 內容評估"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "n8n 是成熟且社群活躍的 AI 自動化平台,功能完整且持續快速迭代,值得加入自動化與 AI 代理開發的工具清單中。",
+      "_mode": "light"
     }
   }
 }
