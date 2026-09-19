@@ -991,8 +991,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 5,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 6,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1044,6 +1044,13 @@
         1,
         "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-09-19": [
+        36678,
+        2704,
+        3,
+        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
     "last_analyzed": "2026-09-14",
@@ -1081,8 +1088,8 @@
       "verdict": "工程成熟度與文件品質俱佳,搭配可驗證的效能基準與嚴謹 CI,值得台灣 AI/DevOps 團隊實際評估導入 CI pipeline。",
       "_mode": "full"
     },
-    "total_days_on_trending": 9,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 10,
+    "consecutive_days_on_trending": 6
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -1471,8 +1478,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 2,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1590,47 +1597,52 @@
         13,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-09-19": [
+        262072,
+        958,
+        4,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-09-05",
+    "last_analyzed": "2026-09-19",
     "analysis": {
       "category": "devtool",
-      "one_liner": "一套巨型的 Claude Code / Codex 等 AI 編碼代理「操作系統」套件,把技能、代理、規則、hook、記憶體整合成一套標準化工作流程。",
-      "summary": "ECC(Engineering Command Center 一類的縮寫)是給 Claude Code、Codex、OpenCode、Cursor 等多種 AI 編碼代理使用的外掛/規則包,內含 68 個 agents、286 個 skills、94 個指令 shim,以及 hooks、rules、記憶體與 AgentShield 安全掃描系統,目的是把「先計劃、先寫測試、再實作、再審查、再驗證」這套工程流程標準化,讓代理不必每次從頭重建這套紀律。專案同時提供 npm 套件、GitHub App、Claude 外掛市集等多種安裝管道,並針對跨代理(Kimi、Codex、Cursor 等)做了適配層。",
+      "one_liner": "ECC 是一套為 Claude Code、Codex、OpenCode、Cursor 等 AI coding agent 打造的「代理工具鏈操作系統」,整合技能、記憶、安全掃描與研究優先的開發流程。",
+      "summary": "ECC 提供 68 個專用 subagent、292 個可載入的 workflow skills、94 個相容指令 shim,以及 hooks/rules/memory 執行環境,把「規劃→測試→實作→審查→驗證→記憶→改進」的完整工程流程包裝成可安裝的套件,讓 AI coding agent 在多種 harness(Claude Code、Codex、Cursor、OpenCode、Gemini CLI、Zed 等)上有一致且可重複使用的作業方式。專案同時提供 AgentShield 安全掃描能力,用來稽核 prompt、hooks、MCP 設定與權限。",
       "highlights": [
-        "涵蓋 68 個 agents、286 個 skills、94 個 legacy 指令,規模在同類專案中相當龐大",
-        "CI 相當扎實:跨 OS(Ubuntu/Windows/macOS)、跨 Node 版本、跨套件管理器(npm/pnpm/yarn/bun)矩陣測試,另有獨立的 lint、coverage、npm audit、supply-chain IOC 掃描 job",
-        "自建 AgentShield 掃描代理設定本身(prompts、hooks、MCP config、權限、密鑰)是否有風險,把『代理設定當攻擊面』的概念產品化",
-        "提供 Plan Canvas(本機 loopback 瀏覽器介面)讓使用者用點選方式審核代理產出的計畫,而非只能在終端機文字互動",
-        "README 明確警告『僅從官方管道安裝』,並列出多種安裝路徑互斥的注意事項,顯示作者對安裝混亂/供應鏈風險有一定意識"
+        "涵蓋 68 個 agent、292 個 skill、94 個指令 shim,規模與涵蓋語言(TS/Python/Go/Rust/Swift/PHP/Java/Kotlin 等)相當全面",
+        "跨 harness 支援矩陣清楚,並在 README 中明確標示各平台的功能對等程度與限制,避免使用者誤解",
+        "內建 322 個測試檔涵蓋 hooks、CI 驗證、supply-chain IOC 掃描、curl 密鑰外洩檢查等,顯示對安裝與腳本安全性的重視",
+        "README 明確警告只從官方管道安裝(GitHub repo、npm 套件、GitHub App、plugin slug),提醒第三方鏡像可能含惡意內容",
+        "採用 manifest 驅動的 install/uninstall/doctor/repair 機制,並以 install-state 追蹤自身安裝的檔案,避免覆蓋使用者既有設定"
       ],
       "use_cases": [
-        "長期使用 Claude Code / Codex 進行團隊開發,想統一 TDD、程式碼審查、安全掃描等流程規範",
-        "需要在多種 AI 編碼工具(Cursor、OpenCode、Kimi Code 等)之間共享相同的技能與記憶體格式",
-        "想要一套現成的『計畫 -> 測試 -> 實作 -> 審查 -> 驗證』代理工作流程範本,而非自己從零設計 prompt/hook",
-        "對代理設定本身的安全性(hooks、MCP、權限)有稽核需求"
+        "希望為 Claude Code 或 Codex 建立一致工程流程(TDD、code review、安全掃描)的團隊",
+        "多 AI coding agent 並行使用(Claude Code + Cursor + OpenCode 等)、想要共用同一套 skills/rules 的開發者",
+        "需要對 agent 設定(hooks、MCP、權限)做安全稽核的團隊,可搭配 AgentShield 掃描"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 極其詳盡(甚至到囉唆的程度),多語言翻譯齊全;有真正的 CI 矩陣測試、覆蓋率門檻(80%)、npm audit 與自製供應鏈 IOC 掃描,顯示工程紀律不弱。核心安裝腳本(scripts/ecc.js、install.sh)結構清晰、模組化。但專案本質上是「規則/提示詞/腳本」的大集合而非傳統應用程式,大部分內容是 Markdown skill 定義而非可獨立驗證邏輯正確性的程式碼,單一維護者(自述『single maintainer ships weekly』)長期可持續性與跨數百個 skill 的品質一致性仍是隱憂。"
+        "comment": "文件極為詳盡(README 長達兩千行以上,並附 13 種語言翻譯、平台支援矩陣、安裝/解除安裝/修復流程說明);package.json 未見 postinstall/preinstall 等生命週期腳本,install.sh 僅在本地執行 `npm install` 並轉呼叫 Node 安裝器,未發現遠端 curl|bash 執行模式。專案有 12 個 GitHub Actions workflow(含 supply-chain-watch、release 簽章)與 322 個測試檔,並有專門檢查 curl 密鑰外洩、IOC 掃描的 CI 測試,顯示維護者對安裝安全性有系統化把關。抽查的核心程式碼(scripts/lib/utils.js、scripts/ecc.js)風格清晰、跨平台處理仔細,品質良好。缺點是專案規模龐大(3700+ 檔案、以 markdown 定義的 skill 為主體),核心邏輯程式碼佔比相對小,單一維護者(Affaan Mustafa)獨力維護,長期可持續性需觀察。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 未使用 preinstall/postinstall/prepare 等 npm 生命週期腳本執行任意程式碼(僅有 prepack 呼叫內部 build 腳本)",
-          "install.sh 為單純的 Node 轉接殼層,不含 curl|bash 下載執行外部內容的行為",
-          "程式碼中出現的 IP 位址皆為 127.0.0.1/localhost,用於本機限定的 Plan Canvas 與 control-pane 伺服器(有專門的 loopback-guard 檢查 Host header),非對外連線的可疑網域",
-          "專案本身內建 scripts/ci/scan-supply-chain-iocs.js 與每週排程的 supply-chain-watch.yml workflow,顯示作者主動監控相依套件的供應鏈風險"
+          "package.json 未定義 preinstall/postinstall 生命週期腳本,僅有 prepack(執行本地 build:opencode 建置腳本)與 welcome 訊息腳本,未見遠端程式碼下載或執行",
+          "install.sh 僅呼叫本地 `npm install` 與轉派至 scripts/install-apply.js,未發現 curl|bash 或 iwr|iex 型態的遠端腳本執行",
+          "README 中出現的 curl 相關內容集中在安全指南與文件範例,並有專門測試(tests/ci/secret-curl-flags.test.js)檢查文件中的 curl 範例是否會在指令列參數中外洩憑證,屬於主動防範措施而非風險"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你已深度使用 Claude Code/Codex 等代理工具且想要一套現成、經過一定工程把關的工作流程規範,值得一試;但内容龐雜且由單一維護者主導,建議先用 minimal profile 小範圍試裝,不必照單全收。",
+      "verdict": "內容量與文件完整度在同類 AI agent 工具鏈專案中數一數二,安裝機制與 CI 安全把關也相對嚴謹,值得想強化 Claude Code/Codex 工作流程的開發者研究,但因規模龐大且高度依賴單一維護者,建議先用 minimal profile 小範圍試用再決定是否全面導入。",
       "_mode": "full"
     },
-    "total_days_on_trending": 18,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 19,
+    "consecutive_days_on_trending": 3
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -5562,10 +5574,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 11,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 12,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5641,6 +5653,13 @@
         95852,
         680,
         3,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-09-19": [
+        96407,
+        675,
+        6,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -12479,10 +12498,10 @@
   },
   "asciimoo/hister": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-26",
+    "last_seen": "2026-09-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-26": [
         2779,
@@ -12490,38 +12509,45 @@
         16,
         "Your own search engine",
         "Go"
+      ],
+      "2026-09-19": [
+        4965,
+        889,
+        17,
+        "Your own search engine",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-08-26",
+    "last_analyzed": "2026-09-19",
     "analysis": {
-      "one_liner": "自架的個人瀏覽紀錄與檔案全文搜尋引擎,支援網頁、終端機與 MCP 客戶端存取。",
-      "summary": "Hister 是一個注重隱私的自架搜尋引擎,會將使用者瀏覽過的網頁與本機檔案內容建立全文索引,讓使用者可透過網頁介面、TUI 或連接 AI 助理的 MCP 伺服器重新找回這些資訊。專案支援瀏覽器擴充套件自動索引、爬蟲匯入、可選的語意搜尋,以及多使用者共享部署。",
       "category": "app",
+      "one_liner": "Hister 是一套自架的個人全文搜尋引擎,把瀏覽紀錄與本機檔案都建成可搜尋的索引。",
+      "summary": "Hister 用 Go 打造,透過瀏覽器擴充功能自動擷取造訪過的網頁內容、匯入既有瀏覽紀錄或索引本機資料夾與檔案,建立可全文檢索的個人搜尋索引。使用者可透過網頁介面、終端機 TUI,或透過 MCP 協定讓 AI 助理(如 Claude Desktop)直接查詢自己的歷史紀錄與文件內容,主打隱私優先、無強制雲端服務。",
       "highlights": [
-        "以 Go 撰寫,程式碼組織清晰(cmd/client/server/indexer 分層明確),229 個 _test.go 檔案顯示測試覆蓋相當完整",
-        "CI 使用 go test -race -cover 執行測試,並有獨立的 lint、build、docker-publish、winget-publish 等多條 pipeline",
-        "MCP 相關程式碼特別針對「間接提示注入」撰寫測試(例如搜尋結果中夾帶 'ignore previous instructions' 或隱藏字元時的清洗與正規化),顯示作者對 AI 助理串接的安全性有意識地設計防禦",
-        "Dockerfile 將所有基礎映像都以 sha256 摘要鎖定版本,並對下載的 yt-dlp 執行 checksum 驗證,屬於良好的供應鏈安全實踐",
-        "支援豐富的第三方服務匯入(linkding、linkwarden、karakeep、readeck、wallabag、shaarli 等),生態整合度高"
+        "支援 MCP Streamable HTTP 協定,可讓 Claude Desktop 等 AI 助理直接搜尋個人索引,且程式碼中明確標註回傳內容為「不受信任來源」並提示 LLM 勿執行內含指令,展現對提示注入風險的防範意識",
+        "涵蓋 Bluesky、Reddit、HackerNews、GitHub、Mastodon、Wikipedia、YouTube(yt-dlp)等多種內容擷取器(extractors),功能廣度大",
+        "103 個 _test.go 測試檔案分佈在核心模組(indexer、model、extractor、oauth 等),搭配 go test -race -cover 的 PR CI 流程",
+        "Dockerfile 對所有基底映像使用 sha256 digest 鎖定版本,並對外部下載的 yt-dlp 二進位檔做 checksum 驗證,供應鏈安全處理得宜",
+        "支援瀏覽器擴充功能、TUI、Web 介面、Docker/Homebrew/Nix 多種安裝方式,且提供 Firefox/Chrome 擴充套件自動索引造訪頁面"
       ],
       "use_cases": [
-        "想要自架私人搜尋引擎,全文檢索自己瀏覽過的網頁與本機檔案",
-        "希望讓 AI 助理(透過 MCP)能查詢自己的瀏覽歷史與收藏內容,同時避免搜尋結果內容對 AI 助理造成提示注入風險",
-        "需要整合多個書籤/稍後閱讀服務(linkding、readeck、wallabag 等)並統一全文搜尋",
-        "團隊或家庭想要共享一台伺服器,但各使用者的文件與搜尋結果需要彼此隔離"
+        "想要建立個人可搜尋的瀏覽歷史與已讀文章資料庫,取代對第三方搜尋引擎或雲端書籤服務的依賴",
+        "希望讓 AI 助理(如 Claude)透過 MCP 存取自己過去瀏覽過的網頁與檔案內容以輔助回答問題",
+        "需要自架、可控管資料位置的個人知識庫/搜尋系統,對隱私與資料主權有要求的開發者或研究者",
+        "想整合多來源書籤/閱讀服務(Raindrop、Linkding、Wallabag、Readeck、Karakeep 等)的內容做統一全文搜尋"
       ],
       "quality": {
         "docs": 4,
-        "tests": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "README 簡潔但連結到完整的官方文件站(hister.org/docs),涵蓋 quickstart、隱私說明與設定細節。測試數量與涵蓋範圍在同類專案中相當突出,CI 有多條獨立 pipeline(test/lint/build/release/docker/winget),CHANGELOG 詳實且版本迭代快,近日仍持續 push,屬於活躍且工程紀律良好的專案。"
+        "comment": "README 清楚說明快速上手、隱私模型與功能;官網另有完整文件站。專案採用完整的 CI(Go test、lint、build、Docker publish、release)且測試檔案數量多、覆蓋核心索引/擷取/OAuth 等模組,程式碼註解精簡且在關鍵處(如 MCP 信任邊界)有清楚說明,屬於維護良好、發布頻繁的成熟專案。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "工程品質與測試紀律突出,且針對 MCP/AI 串接場景主動防範提示注入,值得對隱私自架工具或 MCP 生態感興趣的工程師關注。",
+      "verdict": "工程品質扎實、供應鏈與 MCP 信任邊界處理用心,對重視隱私又想結合 AI 助理查詢個人資料的開發者值得一看。",
       "_mode": "full"
     }
   },
@@ -18891,10 +18917,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -18907,6 +18933,13 @@
         10658,
         3607,
         2,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-09-19": [
+        13703,
+        3006,
+        1,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
       ]
@@ -19005,10 +19038,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -19021,6 +19054,13 @@
         24563,
         287,
         8,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ],
+      "2026-09-19": [
+        24887,
+        299,
+        10,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
       ]
@@ -19064,14 +19104,21 @@
   },
   "ankitects/anki": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
+    "last_seen": "2026-09-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         30860,
         58,
+        9,
+        "Anki is a smart spaced repetition flashcard program",
+        "Rust"
+      ],
+      "2026-09-19": [
+        31211,
+        174,
         9,
         "Anki is a smart spaced repetition flashcard program",
         "Rust"
@@ -19112,10 +19159,10 @@
   },
   "anthropics/claude-code": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-17": [
         145503,
@@ -19128,6 +19175,13 @@
         145872,
         538,
         6,
+        "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "TypeScript"
+      ],
+      "2026-09-19": [
+        146300,
+        444,
+        2,
         "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "TypeScript"
       ]
@@ -19163,13 +19217,20 @@
   },
   "supabase/supabase": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-17",
+    "last_seen": "2026-09-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-17": [
         109730,
+        120,
+        14,
+        "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+        "TypeScript"
+      ],
+      "2026-09-19": [
+        110154,
         120,
         14,
         "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
@@ -19328,15 +19389,22 @@
   },
   "Tencent/BrowserSkill": {
     "first_seen": "2026-09-18",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-18": [
         4145,
         1302,
         4,
+        "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+        "TypeScript"
+      ],
+      "2026-09-19": [
+        5305,
+        1306,
+        5,
         "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
         "TypeScript"
       ]
@@ -19427,15 +19495,22 @@
   },
   "TencentCloud/Octop": {
     "first_seen": "2026-09-18",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-18": [
         3440,
         367,
         16,
+        "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+        "Python"
+      ],
+      "2026-09-19": [
+        3959,
+        569,
+        7,
         "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
         "Python"
       ]
@@ -19479,15 +19554,22 @@
   },
   "coder/coder": {
     "first_seen": "2026-09-18",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-18": [
         14834,
         145,
         19,
+        "Secure environments for developers and their agents",
+        "Go"
+      ],
+      "2026-09-19": [
+        15293,
+        478,
+        15,
         "Secure environments for developers and their agents",
         "Go"
       ]
@@ -19578,6 +19660,254 @@
       "star_rating": 5,
       "verdict": "n8n 是成熟且社群活躍的 AI 自動化平台,功能完整且持續快速迭代,值得加入自動化與 AI 代理開發的工具清單中。",
       "_mode": "light"
+    }
+  },
+  "Fission-AI/OpenSpec": {
+    "first_seen": "2026-09-19",
+    "last_seen": "2026-09-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-19": [
+        69356,
+        296,
+        8,
+        "Spec-driven development (SDD) for AI coding assistants.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-19",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "OpenSpec 是一套讓 AI 編碼助理在寫程式碼前先產生並對齊規格文件的 CLI 工具,支援 30+ 種 AI 工具的斜線指令整合。",
+      "summary": "OpenSpec 針對「AI coding assistant 只靠聊天記錄理解需求、結果難以預測」的問題,提供一套輕量的 spec-driven development 流程:透過 `/opsx:explore`、`/opsx:propose`、`/opsx:apply`、`/opsx:archive` 等指令,讓人類與 AI 在動手寫程式前先對齊 proposal、specs、design、tasks 等文件,並以純 Markdown 儲存於 `openspec/` 目錄。近期新增的 Stores 功能(beta)則讓多個 repo 可以共用同一份規格來源,解決跨團隊、跨儲存庫功能協作的規劃問題。",
+      "highlights": [
+        "以純 Markdown 儲存 spec/proposal/design/tasks,不需要學習特殊語法,人類與 AI 都能直接讀寫",
+        "支援 30+ 種 AI 編碼工具(Claude, Cursor, Copilot, Codex, Amazon Q 等)的斜線指令自動生成",
+        "CI 涵蓋 Linux/macOS/Windows 三平台矩陣測試,另有獨立 Security workflow 做 dependency review 與 pnpm audit(含 pull_request、排程週掃)",
+        "測試量體大且涵蓋安全情境,例如 workflow-instructions-injection、update-skill-tamper、validate.name-guard.security 等專門測試提示注入與竄改防護",
+        "程式碼內附有大量『為什麼這樣設計』的說明註解,反映維護者對邊界案例與历史 issue 的重視"
+      ],
+      "use_cases": [
+        "個人或團隊在使用 AI 編碼助理開發功能前,想先產出可審查的規格與任務清單,避免『邊聊邊改』的失控感",
+        "多個 repo(API server、web app、共用 lib)需要共享同一份需求規格時,使用 Stores 功能做跨庫規劃",
+        "在既有(brownfield)專案中導入結構化的 AI 協作流程,取代純 prompt 驅動的開發方式",
+        "團隊想比較 Spec Kit / Kiro 等競品後,採用較輕量、不綁定特定 IDE 或模型的替代方案"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整(docs/ 內有十幾份分主題指南,README 也清楚說明流程與定位比較),測試檔案超過 200 個,涵蓋 CLI e2e、core 邏輯與多項安全情境測試,CI 有跨平台矩陣與獨立的 audit/dependency-review 流程。build.js 僅呼叫本地 tsc 編譯,npm scripts 中的 prepare/prepublishOnly 都是常規建置行為,程式碼可讀性高、註解著重解釋邊界案例的取捨原因,整體工程成熟度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試覆蓋度都相當紮實,若團隊已在用 AI 編碼助理且苦於需求對不齊,值得評估導入;但屬於流程工具而非技術突破,對單純觀望技術趨勢的人優先度中等。",
+      "_mode": "full"
+    }
+  },
+  "supermemoryai/supermemory": {
+    "first_seen": "2026-09-19",
+    "last_seen": "2026-09-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-19": [
+        30280,
+        140,
+        11,
+        "Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-19",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "為 AI 應用打造的記憶與上下文引擎,提供自動事實擷取、使用者畫像與混合搜尋的 Memory API,並可完全本地化執行。",
+      "summary": "Supermemory 是一套讓 AI 助理具備跨對話持久記憶能力的服務與開源套件,能自動從對話中萃取事實、維護使用者靜態/動態畫像、處理知識更新與矛盾、自動遺忘過期資訊,並將 RAG 檢索與個人化記憶結合成單一混合搜尋 API。專案以 TypeScript Turborepo монорепо 組成,包含雲端 API SDK、MCP 伺服器、多款 AI 工具外掛(Claude Code、Cursor、Codex 等)、本地端一鍵安裝的獨立伺服器,以及以 Cloudflare Workers/Postgres/Drizzle ORM 為底層的後端服務。",
+      "highlights": [
+        "自稱在 LongMemEval、LoCoMo、ConvoMem 三大記憶基準測試皆排名第一,並提供本地重現用的 MemoryBench 框架",
+        "支援本地離線執行(one binary、可搭配 Ollama),資料存放於本機目錄,亦可切換回雲端平台",
+        "生態系完整:提供 Claude Code、Cursor、Codex、OpenCode 等多款開源外掛與 MCP Server,並支援 Vercel AI SDK、LangChain、Mastra 等主流框架整合",
+        "CI 對 tools、ai-sdk、memory-graph 等子套件分別執行型別檢查與單元測試,並用 Biome 做格式與 lint 檢查,工程紀律良好",
+        "採用 Cloudflare Workers + Drizzle ORM + Postgres 的現代 Serverless 技術棧,搭配 Hono 與 zod-openapi 建構型別安全 API"
+      ],
+      "use_cases": [
+        "為 AI 聊天助理或 Coding Agent(如 Claude Code、Cursor)加裝跨對話記憶,記住使用者偏好與專案脈絡",
+        "在自建 AI 產品中以單一 API 取代自行搭建向量資料庫、embedding pipeline 與 chunking 邏輯",
+        "需要資料主權或離線需求的團隊,可用 Supermemory Local 在自己機器上跑完整記憶引擎(可搭配 Ollama 全離線)",
+        "串接 Google Drive、Gmail、Notion、GitHub 等外部資料源,自動同步並建立可搜尋的知識庫"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 apps/docs 下的文件相當完整,涵蓋概念、API 參考、connector 設定等;抽查的原始碼(如 memory-client.ts)具備清楚的型別定義與 JSDoc 註解,錯誤處理妥當。多個子套件(tools、ai-sdk、memory-graph)皆有獨立的單元測試與 CI 型別檢查/Biome lint 流程,但未見端對端或後端服務層級的整合測試。專案更新頻繁(最近一次 push 為分析當天),issue 與 workflow 數量顯示團隊活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 `curl -fsSL https://supermemory.ai/install | bash` 的一鍵安裝腳本,腳本內容託管在外部網域(supermemory.ai)而非倉庫內,使用前建議自行檢視腳本內容",
+          "倉庫內未發現 npm 生命週期腳本(preinstall/postinstall/prepare)注入可疑指令,也未見混淆程式碼或內嵌的長 base64/hex payload"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程與文件品質俱佳、生態系整合廣泛,若你在做 AI Agent 記憶層,值得一試,但基準測試領先的宣稱屬廠商自評,建議自行以 MemoryBench 驗證。",
+      "_mode": "full"
+    }
+  },
+  "tradesdontlie/tradingview-mcp": {
+    "first_seen": "2026-09-19",
+    "last_seen": "2026-09-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-19": [
+        6472,
+        79,
+        12,
+        "AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-19",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "透過 Chrome DevTools Protocol 讓 Claude Code 直接操作本機 TradingView Desktop 圖表的 MCP 伺服器與 CLI 工具。",
+      "summary": "此專案是一個 MCP(Model Context Protocol)橋接器,讓 AI 助理(如 Claude Code)能透過 CDP 連線本機執行的 TradingView Desktop,讀取圖表狀態、指標數值、Pine Script 繪圖物件,並可切換商品/時框、繪圖、下單模擬(回放模式)、管理警示與多面板佈局。同時提供對應的 `tv` CLI 指令,方便以 JSON 輸出串接 `jq` 等工具進行自動化工作流。",
+      "highlights": [
+        "提供 78+ 個 MCP 工具,涵蓋圖表讀取、Pine Script 開發編譯、繪圖、警示、回放交易練習與多面板佈局等完整功能面",
+        "CLAUDE.md 內建決策樹,讓 Claude 能依照自然語言指令自動選用對應工具鏈",
+        "程式碼對 CDP 注入做了明確防護(safeString()、requireFinite()),並有專門的 sanitization.test.js 測試涵蓋",
+        "CI 涵蓋 lint、單元測試(Node 20/22 矩陣)與 npm audit,工程紀律良好",
+        "內建 tv_update 自我更新工具,對 git fast-forward、乾淨工作區、分支等條件有嚴謹防呆檢查"
+      ],
+      "use_cases": [
+        "交易者想用自然語言指令(透過 Claude Code)快速切換圖表商品/時框、讀取指標數值或畫線做輔助分析",
+        "Pine Script 開發者想用 AI 輔助撰寫、注入、編譯與除錯指標/策略程式碼",
+        "研究人員想探討 LLM Agent 與有狀態桌面金融應用程式互動的可行性與限制(README 明確定位為研究專案)",
+        "個人化的圖表監控腳本,透過 tv stream 將本機圖表資料以 JSONL 串流供下游工具消費"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 與 CLAUDE.md 文件非常詳盡,清楚說明安裝、工具對照表、免責聲明與安全性設計理念;抽查的核心程式碼(connection.js、core/ui.js、core/update.js)風格一致、註解精準說明『為什麼』而非『做什麼』,並有針對 CDP 字串注入的專門防護與測試;CI 有 lint/test/audit 三道關卡。扣分點在於部分程式碼以字串拼接方式組出要在瀏覽器內執行的 JS(evaluate 呼叫),雖然值有做 JSON.stringify 逸出處理,仍屬較脆弱的模式;測試需要真實 TradingView 執行環境才能跑 e2e,單元測試涵蓋率尚可但非全面。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 未使用 preinstall/postinstall/prepare 等安裝期生命週期腳本,未發現遠端下載執行程式碼的安裝流程",
+          "src/core/update.js 提供 tv_update 工具,可由 AI 代理觸發 git fetch + merge --ff-only 及 npm ci,雖有分支、乾淨工作區、fast-forward 等多重防呆檢查,但使用者應留意此為可由對話觸發的自動更新機制",
+          "工具透過字串拼接方式產生要在 TradingView 頁面內執行的 JavaScript(Runtime.evaluate),專案有提供 safeString()/requireFinite() 做輸入逸出與型別驗證,並有對應測試(tests/sanitization.test.js)覆蓋常見注入手法",
+          "README 明確聲明僅與本機 127.0.0.1:9222 的 CDP 除錯埠通訊,不連線 TradingView 伺服器,且要求使用者需自行手動開啟除錯埠"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、文件完整且對安全風險有自覺說明,若你是 TradingView 重度使用者又想結合 Claude Code 做圖表自動化分析,值得一試;但因依賴未文件化的內部 API 與 Electron 除錯介面,穩定性可能隨 TradingView 更新而波動。",
+      "_mode": "full"
+    }
+  },
+  "rustfs/rustfs": {
+    "first_seen": "2026-09-19",
+    "last_seen": "2026-09-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-19": [
+        33166,
+        267,
+        13,
+        "RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-19",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "用 Rust 打造的分散式、S3 相容物件儲存系統,主打效能與記憶體安全,可作為 MinIO 的替代方案。",
+      "summary": "RustFS 是以 Rust 開發的高效能分散式物件儲存系統,提供廣泛的 S3 API 相容性、糾刪碼儲存、多租戶、IAM/OIDC、生命週期管理與複寫等企業級功能,並採用對商業更友善的 Apache 2.0 授權,鎖定資料湖、AI 與大數據場景做為 MinIO/Ceph 的替代品。專案目前已到 1.0.1 版,工程規模與 CI/測試基礎設施相當完整。",
+      "highlights": [
+        "功能覆蓋面廣:S3 核心 API、版本控制、Object Lock、SSE、KMS、生命週期、跨站複寫、Swift/Keystone、FTPS/SFTP/WebDAV 皆已標示為可用(Available)",
+        "工作區包含 50+ 個獨立 crate,模組化程度高(ecstore、heal、scanner、iam、kms、replication 等各自獨立),架構分層清晰",
+        "workspace 層級以 `unsafe_code = \"deny\"` 強制禁用 unsafe 程式碼,並開啟 clippy 全量警告,對記憶體安全與程式碼品質要求嚴格",
+        "CI/測試基礎設施非常龐大,.github/workflows 下有 50+ 個 workflow,涵蓋 e2e、複寫、healing、KMS、效能回歸、MinIO 互通性等專項測試",
+        "README 明確標示各功能的成熟度(✅ Available vs 🧪 Preview),對 MinIO 相容性等邊界情況也有清楚免責聲明"
+      ],
+      "use_cases": [
+        "需要 S3 相容儲存但想避開 MinIO AGPL 授權限制的商業/企業場景",
+        "資料湖、AI 訓練資料集或大數據管線的高吞吐物件儲存後端",
+        "邊緣或資源受限環境需要輕量、記憶體安全的物件儲存服務",
+        "需要多雲/混合雲遷移或與既有 S3/MinIO/Ceph 系統共存的儲存架構"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常詳盡(多語 README、架構文件、維運文件皆齊全),測試與 CI 基礎設施規模在同類專案中屬於頂尖水準,涵蓋單元、整合、e2e、效能與相容性測試;commit 節奏活躍(2026-09-18 仍有推送),且倉庫內附有大量給 AI 代理使用的開發規範文件(.agents/skills),顯示團隊對工程流程與可維護性投入很高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程成熟度與功能完整度都達到可正式評估導入的水準,值得 AI/大數據基礎設施團隊列入 MinIO 替代方案的候選名單。",
+      "_mode": "full"
+    }
+  },
+  "ahmedkhaleel2004/gitdiagram": {
+    "first_seen": "2026-09-19",
+    "last_seen": "2026-09-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-19": [
+        16468,
+        152,
+        16,
+        "Free, simple, fast interactive diagrams for any GitHub repository",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-19",
+    "analysis": {
+      "category": "web",
+      "one_liner": "用 AI 把任何 GitHub 專案自動轉成可互動的系統架構圖,把 GitHub 網址的 hub 換成 diagram 就能用。",
+      "summary": "GitDiagram 是一個 Next.js 16 應用,透過 GitHub API 抓取專案的檔案樹、README 與代表性原始碼片段,交給 OpenAI(或 OpenRouter)模型生成結構化圖譜,再以自製的確定性編譯器轉成 Mermaid 圖並在瀏覽器安全渲染。它解決的是「看不懂陌生 repo 架構」的痛點,讓開發者在幾秒內拿到帶原始碼連結的可視化架構圖。",
+      "highlights": [
+        "自建 AST 驗證 + 確定性編譯器,將 LLM 輸出轉成 Mermaid,避免模型幻覺出不存在的路徑或連結",
+        "前端對 Mermaid 原始碼、SVG 都做二次清理與連結白名單(僅允許 GitHub HTTPS 連結),防禦 XSS/連結釣魚",
+        "串流生成搭配 300 秒 Vercel 逾時預算、可取消、心跳機制與分散式鎖,工程細節相當成熟",
+        "測試覆蓋非常廣,近 80 支測試檔涵蓋 API route、串流、安全性、儲存層等關鍵路徑",
+        "CI 流程完整,包含 lint、typecheck、格式檢查、knip 死碼檢查、bun audit、build 與 Docker 建置驗證"
+      ],
+      "use_cases": [
+        "快速理解新加入專案或開源套件的整體架構,取代逐檔翻閱程式碼",
+        "技術文件/簡報中插入自動生成的系統架構圖",
+        "程式碼審查前先用圖譜掌握模組間的依賴與資料流向",
+        "團隊 onboarding 時作為新人熟悉既有系統的輔助工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件詳盡(README 清楚說明架構、生成流程、狀態管理,另有 docs/ 目錄補充部署與維運細節),測試覆蓋率高且涵蓋安全性與邊界情境,CI 檢查項目齊全(lint/typecheck/audit/knip/docker build),原始碼閱讀後結構清晰、錯誤處理與可觀測性(結構化日誌)做得相當到位,屬於工程成熟度偏高的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件都在水準之上,是少見兼具高星數成長與紮實實作的專案,值得研究其 AI 輸出驗證與串流架構設計。",
+      "_mode": "full"
     }
   }
 }
