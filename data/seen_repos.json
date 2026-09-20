@@ -5574,10 +5574,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-09-19",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 12,
+    "last_seen": "2026-09-20",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 13,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5660,6 +5660,13 @@
         96407,
         675,
         6,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-09-20": [
+        97036,
+        556,
+        3,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -8107,10 +8114,10 @@
   },
   "ZuodaoTech/everyone-can-use-english": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
+    "last_seen": "2026-09-20",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         36071,
@@ -8118,37 +8125,46 @@
         12,
         "人人都能用英语",
         "TypeScript"
+      ],
+      "2026-09-20": [
+        37791,
+        48,
+        12,
+        "人人都能用英语",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-13",
+    "last_analyzed": "2026-09-20",
     "analysis": {
-      "one_liner": "「人人都能用英語」— 一款以 AI 驅動、以「一千小時」學習法為核心的英語學習桌面應用與配套內容。",
-      "summary": "本專案是一個以 Electron 打造的桌面應用「Enjoy」,結合 AI(語音辨識、發音評估、GPT 對話練習)協助使用者依照作者提出的「一千小時」英語學習法進行聽說訓練。專案同時包含線上文件站(1000-hours,VitePress)、入口網站(1000h-portal)與桌面 App 三個 workspace,並附有 2010 年出版的《人人都能用英語》電子書內容。目前主力已轉向網頁版(enjoy.bot)與瀏覽器擴充功能,桌面版正在重構中。",
-      "category": "app",
+      "category": "learning-resource",
+      "one_liner": "結合 AI 語音辨識與一千小時英語訓練法的沉浸式英語學習應用與教材集。",
+      "summary": "此專案「人人都能用英语」以 AI 作為外語學習助教,提供網頁版應用(enjoy.bot)、瀏覽器插件(支援 YouTube / Netflix)以及即將推出的桌面版,並附上 2010 年與 2024 年兩套完整英語自學電子書教材。核心訴求是解決一般人缺乏語音回饋、無法有效精聽精讀的英語學習痛點。",
       "highlights": [
-        "整合 Whisper.cpp 語音辨識、Azure/Microsoft 語音服務發音評估、OpenAI/Ollama GPT 對話,打造沉浸式英語訓練閉環",
-        "使用 Electron Forge + Vite + Sequelize(SQLite)建構跨平台桌面應用,並用 electron-fuses 強化安全性設定(如關閉 RunAsNode)",
-        "CI 覆蓋 macOS/Windows/Ubuntu 多平台的 Playwright e2e 測試(main + renderer 雙軌),工程化程度高",
-        "內建完整的下載器/字典/YouTube-dr 等外部資源整合模組,並附上「一千小時」理論的完整電子書與訓練文件"
+        "累積 37,791 顆星,今日新增 48 顆並登上 Trending 第 12 名,顯示長期且持續的社群關注度",
+        "提供網頁版、瀏覽器插件(YouTube/Netflix 字幕輔助)與即將推出的桌面版三種使用形式",
+        "內附兩套完整教材:2010 年電子書《人人都能用英语》全八章,以及 2024 年「一千小時」訓練體系",
+        "CI 徽章顯示有自動化測試與部署流程(Test Enjoy App、Deploy 1000h website 等 GitHub Actions)",
+        "採用 GPL-3.0 授權,主語言為 TypeScript,技術棧偏向現代 Web/Electron 應用"
       ],
       "use_cases": [
-        "希望透過大量聽說輸入 + AI 回饋(發音評分、對話陪練)系統性練習英語口說的自學者",
-        "需要離線/桌面環境管理音檔、影片、電子書等英語學習素材並自動生成字幕/朗讀評分的使用者",
-        "對 Electron + AI 語音應用架構(主進程/渲染進程分離、Sequelize ORM、IPC handler 設計)感興趣的開發者參考"
+        "自學英語聽力與口語者,可透過網頁版或瀏覽器插件搭配 YouTube/Netflix 影片進行精聽訓練",
+        "尋找系統化英語自學方法論的學習者,可直接閱讀「一千小時」或 2010 年電子書教材",
+        "對 AI 輔助語言學習應用感興趣的開發者,可參考其網頁版/插件/桌面版的產品架構",
+        "教育類 side project 或 awesome list 想收錄中文語系 AI 學習工具時的候選項目"
       ],
       "quality": {
-        "docs": 4,
-        "tests": 4,
-        "activity": 4,
-        "comment": "文件豐富(README、1000-hours 文件站、FAQ、電子書全文),核心 db handler 程式碼結構清晰、有錯誤處理與 i18n;CI 設有跨平台 e2e 測試(Playwright)。但最近一次 push 是 2026-06-29,距今已一個多月,主力已轉向網頁版,桌面版程式庫可能進入維護/重構期而非高頻更新。"
+        "docs": 3,
+        "tests": 2,
+        "activity": 3,
+        "comment": "README 提供清楚的產品截圖、教材目錄與 CI 徽章,對使用者友善,但缺乏開發環境建置、貢獻指南等技術文件;測試與程式碼品質僅能從 CI 徽章推測,未實際檢視原始碼,屬 README-only 評估。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "工程品質紮實、AI 語音學習場景完整,若對英語自學或 Electron+AI 應用架構有興趣值得一看,但需留意桌面版已非開發重心,建議直接體驗網頁版 enjoy.bot。",
-      "_mode": "full"
+      "verdict": "星數與社群動能扎實、教材與應用形式完整,值得收錄進中文英語學習或 AI 應用相關資源清單,但技術文件偏薄,開發者若想貢獻程式碼需自行深入原始碼探索。",
+      "_mode": "light"
     }
   },
   "smicallef/spiderfoot": {
@@ -8344,10 +8360,10 @@
   },
   "cactus-compute/needle": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-17",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-13": [
         4224,
@@ -8383,41 +8399,49 @@
         7,
         "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
         "Python"
+      ],
+      "2026-09-20": [
+        11606,
+        234,
+        14,
+        "Automation foundation model for tiny devices: 2-bit, 8-29 MB, tool calls, structured extraction and embeddings on phones, wearables, smart homes, robots, cars and microcontrollers.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-14",
+    "last_analyzed": "2026-09-20",
     "analysis": {
       "category": "ai-ml",
-      "one_liner": "14MB、45M參數的端側工具呼叫小模型,單一二進位引擎搭配Python套件即可在手機、穿戴裝置上跑agent與結構化擷取。",
-      "summary": "Needle 2 是 Cactus Compute 推出的超輕量基礎模型,專為工具呼叫(tool calling)、裝置端操作與結構化資料擷取設計,將45M參數壓縮成2-bit量化、14MB的單一二進位引擎,執行期間僅需約28MB RAM。本repo是對應的Python套件,提供推論、LoRA微調與匯出(build成.cact檔)的完整流程,推論引擎本身以編譯後的C/C++核心透過ctypes載入,首次使用時自動從Hugging Face下載快取。",
+      "one_liner": "專為手機、穿戴裝置與微控制器打造的超輕量端側自動化基礎模型,8-29MB 大小即可支援工具呼叫、結構化擷取與文字嵌入。",
+      "summary": "Needle 是 Cactus Compute 團隊開發的端側基礎模型,採自研 Laddered Simple Attention Network 架構,用 2-bit 量化把整個模型壓進 8-29MB 二進位檔,鎖定手機、穿戴裝置、車機與微控制器等資源受限場景。核心賣點是以極小模型在工具呼叫(function calling)任務上打贏大 10 倍的模型,並支援結構化資料擷取與句子嵌入。",
       "highlights": [
-        "核心推論引擎為2-bit量化的45M參數模型,單檔14MB、執行期記憶體僅28MB,鎖定手機/穿戴/智慧家庭/機器人等資源受限裝置",
-        "採用自研Simple Attention Network架構(Hadamard MLP + GQA + engram KV記憶 + 多路hyper-connection),並有對應論文(arXiv:2607.18363)",
-        "byte-level grammar約束解碼確保工具呼叫輸出符合schema,並內建校準過的confidence分數與top-5工具檢索機制",
-        "支援LoRA微調後合併匯出成同一顆.cact引擎可直接執行,免重新編譯,並提供瀏覽器playground可視化測試",
-        "每日排程CI自動化版本號遞增、build、發佈到PyPI並打tag,發布流程頗為成熟"
+        "架構具原創性:結合 Monarch Hadamard MLP、GQA + causal conv、n-gram engram 記憶體與多線 hyper-connections,並訓練成 2-20 層皆可獨立部署的『階梯式』模型",
+        "支援 LoRA 微調與量化匯出流程(needle finetune / needle build),可針對特定工具集微調出更小的子網路",
+        "測試覆蓋面廣,tests/ 目錄有 16 個檔案涵蓋 build、finetune、inference、grounding、tools schema、playground 等模組",
+        "有每日自動發版的 GitHub Actions pipeline(release.yaml),含測試把關後才發布到 PyPI",
+        "內建結構化擷取的『grounding』驗證機制,會檢查模型輸出的數字/日期是否真的來自輸入文字,避免幻覺"
       ],
       "use_cases": [
-        "在手機、穿戴裝置或IoT/智慧家庭裝置上做離線的工具呼叫(function calling)agent,不依賴雲端LLM",
-        "從非結構化文字擷取結構化資料(搭配Pydantic schema),用於表單、發票等資訊抽取場景",
-        "針對特定工具集合做輕量LoRA微調,產出客製化的小型on-device agent模型",
-        "教育或研究用途,研究極小型Transformer架構(Simple Attention Network)在邊緣裝置的可行性"
+        "在手機 App 中做離線工具呼叫(function calling)代理,不依賴雲端 LLM API",
+        "從非結構化文字(如發票、通知、表單)擷取結構化欄位資料",
+        "智慧家庭、穿戴裝置或車用系統中的本地端語意路由與語音指令解析",
+        "資源受限的微控制器/邊緣裝置上做輕量語意搜尋與嵌入比對"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README與doc/apis.md、doc/finetuning.md說明詳盡,涵蓋API、微調流程與資料格式;tests目錄有針對推論、微調、LoRA、CLI渲染、工具schema等多支測試並用pytest標記區分slow/一般測試;CI設有每日自動release流程(build、twine check、發佈PyPI、打tag),搭配trending當日仍在活躍更新,整體工程成熟度偏高。唯一小瑕疵是LICENSE檔案為MIT,但pyproject.toml中宣告license為Apache-2.0,兩者不一致。"
+        "comment": "README 與官網文件非常完整,附架構圖、benchmark 圖表與多篇技術部落格連結;原始碼中的核心邏輯(agent/tools.py grounding 驗證、model/architecture.py)寫得清晰且有必要的註解說明設計取捨;tests/ 涵蓋面廣但實際模型訓練/建置類測試多標記為 slow 需額外環境才能跑;CI 有每日排程自動發版流程,commit 與 push 頻率高,屬於活躍維護中的專案。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "needle/__init__.py透過ctypes.CDLL載入的推論引擎(libneedle.so/.dylib/.dll)是首次使用時由needle/agent/fetch.py從Hugging Face(Cactus-Compute/needle2 repo)自動下載的預編譯二進位檔,並快取到本機~/.cache目錄;此二進位檔不在原始碼庫中,無法直接從Python原始碼審查其行為,屬於此類「小型二進位引擎」架構常見的作法,而非本repo安裝腳本本身的異常行為",
-          "needle/model/run.py與needle/model/finetune.py使用pickle.load讀取checkpoint與LoRA adapter檔案,若載入來路不明的.pkl檔案存在反序列化任意程式碼執行風險,建議僅從官方Hugging Face來源或信任的checkpoint載入"
+          "CLI 與 fetch.py 會從 Hugging Face Hub 下載預編譯的引擎執行檔(.so/.dll/.dylib)並在 Linux/macOS 上設定執行權限(chmod +x),這是此專案『下載預建引擎並執行』的核心運作方式,屬設計預期行為而非漏洞",
+          "套件內建匿名遙測(_telemetry.py),預設開啟並回傳到 Cactus 自家 Supabase endpoint,但只傳送事件名稱、版本、OS/arch 等匿名資訊,README 與程式碼註解都有揭露,且可用 NEEDLE_TELEMETRY=0 或 DO_NOT_TRACK=1 關閉",
+          "install 腳本(setup / setup.bat)僅用 pip 安裝本地套件,未發現 curl|bash 執行遠端腳本或其他可疑安裝行為"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質紮實、定位明確(邊緣裝置工具呼叫),適合關注on-device AI與小模型agent的開發者持續追蹤,但推論引擎為下載的閉源二進位檔,無法完整審查其原始碼。",
+      "verdict": "技術含量高、文件與測試都到位,是端側 LLM/工具呼叫領域值得關注的專案,但需注意其運作模式仰賴下載閉源預編譯引擎執行檔。",
       "_mode": "full"
     }
   },
@@ -12498,10 +12522,10 @@
   },
   "asciimoo/hister": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-09-19",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-20",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-26": [
         2779,
@@ -12514,6 +12538,13 @@
         4965,
         889,
         17,
+        "Your own search engine",
+        "Go"
+      ],
+      "2026-09-20": [
+        5227,
+        420,
+        10,
         "Your own search engine",
         "Go"
       ]
@@ -18917,10 +18948,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-19",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-20",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -18939,6 +18970,13 @@
       "2026-09-19": [
         13703,
         3006,
+        1,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-09-20": [
+        16346,
+        3155,
         1,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
@@ -19038,10 +19076,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-19",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-20",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -19061,6 +19099,13 @@
         24887,
         299,
         10,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ],
+      "2026-09-20": [
+        25127,
+        281,
+        13,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
       ]
@@ -19159,10 +19204,10 @@
   },
   "anthropics/claude-code": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-19",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-20",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-17": [
         145503,
@@ -19182,6 +19227,13 @@
         146300,
         444,
         2,
+        "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "TypeScript"
+      ],
+      "2026-09-20": [
+        146709,
+        483,
+        5,
         "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "TypeScript"
       ]
@@ -19554,10 +19606,10 @@
   },
   "coder/coder": {
     "first_seen": "2026-09-18",
-    "last_seen": "2026-09-19",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-20",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-18": [
         14834,
@@ -19570,6 +19622,13 @@
         15293,
         478,
         15,
+        "Secure environments for developers and their agents",
+        "Go"
+      ],
+      "2026-09-20": [
+        15620,
+        402,
+        4,
         "Secure environments for developers and their agents",
         "Go"
       ]
@@ -19907,6 +19966,354 @@
       },
       "star_rating": 5,
       "verdict": "工程品質與文件都在水準之上,是少見兼具高星數成長與紮實實作的專案,值得研究其 AI 輸出驗證與串流架構設計。",
+      "_mode": "full"
+    }
+  },
+  "trycua/cua": {
+    "first_seen": "2026-09-20",
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-20": [
+        24417,
+        859,
+        2,
+        "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+        "HTML"
+      ]
+    },
+    "last_analyzed": "2026-09-20",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "Cua 是一套讓 AI 代理人能夠操作真實電腦的開源框架,涵蓋雲端沙盒、桌面自動化驅動、本機 macOS VM 與評測基準。",
+      "summary": "trycua/cua 提供多個模組化元件,讓 AI agent 能在 macOS、Windows、Linux 上進行「computer-use」操作,包括 Cua Fleets(雲端隔離桌面)、Cua Driver(跨平台桌面/瀏覽器自動化驅動,支援 CLI、MCP、SDK)、Lume(Apple Silicon 上的本機 macOS/Linux 虛擬機)、CUA-S1(專用於表單決策的小型模型)以及 Cua Bench(建立任務、評測 agent、匯出訓練軌跡)。目標是解決 agent 在程式碼、API 與圖形介面間切換操作的整合問題。",
+      "highlights": [
+        "多元件生態系:雲端沙盒、桌面驅動、VM 管理、評測基準一次涵蓋",
+        "Cua Driver 支援背景操作,agent 執行動作時不必搶奪滑鼠焦點",
+        "CUA-S1 提出「System 1」小型專用決策模型概念,搭配 Hugging Face 釋出的模型權重",
+        "Cua Bench 可在不需要 VM 或 API key 的情況下建立模擬任務並驗證評分",
+        "MIT 授權為主,但部分第三方元件(如 OmniParser、ultralytics)採用不同授權需另行留意"
+      ],
+      "use_cases": [
+        "訓練或評測 computer-use agent 的效能與軌跡資料",
+        "在雲端或本機建立隔離桌面環境供 agent 安全地執行操作任務",
+        "整合 Claude Code、Codex 等既有 agent 到桌面自動化流程",
+        "研究小型專用模型在結構化介面決策(如表單填寫)上的應用"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清晰、教學連結完整,對每個元件都提供明確的「第一個結果」上手範例,文件品質高;但僅能依 README 評估,無法檢視原始碼中的測試涵蓋率,故僅供參考。今日以 rank #2、單日 +859 星登上 trending,且最後推送時間為今日,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 macOS/Linux 的 curl | bash 與 Windows 的 irm | iex 一鍵安裝指令,執行前建議先檢視腳本內容再執行,這是此類 CLI 工具常見但仍需留意的安裝模式",
+          "專案本身為 MIT 授權,但整合了 CC-BY-4.0(OmniParser)與選用套件 AGPL-3.0(ultralytics)等不同授權的第三方元件,商用時需個別確認授權條款",
+          "本評估僅根據 README 與 metadata 進行,未實際檢視原始碼或執行安裝腳本"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能範疇廣且文件完整,今日爆紅動能強勁,值得追蹤,但多元件架構的實際穩定度與程式碼品質仍待實測驗證。",
+      "_mode": "light"
+    }
+  },
+  "Open-Dev-Society/OpenStock": {
+    "first_seen": "2026-09-20",
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-20": [
+        16043,
+        472,
+        6,
+        "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-20",
+    "analysis": {
+      "category": "web",
+      "one_liner": "開源、永久免費的股市追蹤網頁應用,提供即時報價、個人化警示與公司基本面資訊。",
+      "summary": "OpenStock 是以 Next.js 15 + TypeScript 打造的股市儀表板,整合 Finnhub 即時報價、TradingView 圖表元件、Better Auth 帳號系統與 MongoDB 儲存,並用 Inngest 處理排程通知與 AI(Gemini)個人化歡迎信。目標是取代昂貴的商業看盤平台,由 Open Dev Society 社群開源維護。",
+      "highlights": [
+        "整合 Finnhub 股價/公司資料、TradingView 圖表元件與可選的多來源(Reddit/X/新聞/Polymarket)情緒分析卡片",
+        "使用 Better Auth + MongoDB 做帳號驗證,並以 Next.js middleware 保護路由",
+        "透過 Inngest 處理「使用者註冊後 AI 個人化歡迎信」與「每日新聞摘要」等背景排程任務",
+        "README 附完整的 Quick Start、Docker Compose 範例與環境變數說明,並額外提供 API_DOCS.md、MARKET_SUPPORT.md 補充文件",
+        "已有 vitest 單元測試涵蓋股票代碼轉換、市值格式化等工具函式,但缺少 GitHub Actions CI 設定"
+      ],
+      "use_cases": [
+        "想要一個不受付費看盤軟體限制、可自架的股票追蹤與警示系統",
+        "學習如何用 Next.js App Router + Better Auth + MongoDB + Inngest 打造全端 SaaS 型應用的參考範例",
+        "需要整合 TradingView 免費圖表元件與 Finnhub API 的專案起手式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 4,
+        "comment": "文件相當完整(README、API_DOCS.md、MARKET_SUPPORT.md 皆有),抽樣的 server actions(auth.actions.ts、finnhub.actions.ts)具備基本的錯誤處理與型別定義,程式碼可讀性尚可。已有 vitest 單元測試但主要集中在工具函式,缺乏對 server actions 或 API 路由的整合測試,也沒有找到 .github/workflows 之類的 CI 設定,持續整合面向仍薄弱。專案剛登上趨勢榜第一天,commit 與貢獻者活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "database/mongoose.ts 中會將 DNS 解析伺服器強制設定為 8.8.8.8(dns.setServers(['8.8.8.8'])),這會覆寫使用者/系統原本設定的 DNS,可能影響同一 Node 行程中其他模組的網域解析行為,使用者應留意此全域副作用",
+          "README 明確提示 NEXT_PUBLIC_FINNHUB_API_KEY 會被打包進前端、暴露給瀏覽器,這是文件已聲明的已知取捨而非隱藏行為",
+          "Dockerfile 與 package.json 未使用 curl|bash 安裝方式,也沒有 preinstall/postinstall 等生命週期腳本執行外部程式碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整且文件齊全的開源看盤網站範本,適合想自架股市工具或學習全端 SaaS 架構的開發者參考,但測試覆蓋與 CI 尚未成熟,生產環境部署前建議自行補強。",
+      "_mode": "full"
+    }
+  },
+  "higgsfield-ai/higgsfield": {
+    "first_seen": "2026-09-20",
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-20": [
+        4957,
+        196,
+        7,
+        "Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
+        "Jupyter Notebook"
+      ]
+    },
+    "last_analyzed": "2026-09-20",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "一套幫助團隊在自有 GPU 叢集上,以 FSDP/DeepSpeed 分散式訓練 LLaMA 等大型語言模型的開源編排框架與 CLI 工具。",
+      "summary": "Higgsfield 提供一個「higgsfield」CLI,協助使用者初始化專案、產生 GitHub Actions 部署流程,並透過 SSH 自動在自架的 GPU 節點上安裝 Docker、拉取訓練映像檔、佈署 GitHub Deploy Key,最終讓多節點 PyTorch FSDP/DeepSpeed 訓練透過 push-to-GitHub 的方式觸發。內建 LLaMA/Mistral 的 FSDP 封裝類別(Llama7b/13b/70b)與 checkpoint 存取工具,目標是簡化「上百張 GPU 訓練上兆參數模型」時的環境與設定管理痛點。",
+      "highlights": [
+        "提供 Llama7b/13b/70b、Mistral 的現成 FSDP 封裝類別,支援 ZeRO stage 0/2/3、bf16/fp16 混合精度、activation checkpointing",
+        "CLI 可一鍵 init 專案、產生 deploy key、build GitHub Actions workflow,並透過 asyncssh 自動對多台節點下指令安裝環境",
+        "架構訴求是『push to GitHub 即自動部署訓練任務』,把 CI/CD 概念搬進分散式訓練流程",
+        "README 文件完整,setup.md / tutorial.md 皆存在且對應到章節連結"
+      ],
+      "use_cases": [
+        "擁有自己 GPU 叢集(非雲端 K8s)、想用類似 CI/CD 流程觸發多節點 LLaMA 微調的團隊",
+        "需要快速套用 FSDP/DeepSpeed ZeRO-3 分片但不想手刻設定的研究人員",
+        "中小規模、Ubuntu + SSH 可控節點環境下的分散式訓練實驗管理"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 2,
+        "comment": "README、setup.md、tutorial.md 說明齊全,對安裝流程和訓練範例交代清楚;但整個 repo 找不到任何 tests/ 目錄或單元測試,唯一的 CI 是一個安裝後跑 higgsfield init 的 smoketest,對核心 FSDP/CLI 邏輯完全沒有自動化驗證。原始碼(llama.py、fsdp_checkpoint.py、cli.py)風格務實但偏早期雛型,例如硬編碼路徑操作、os.system 呼叫 chmod、缺乏例外處理與型別邊界檢查,版本號仍停留在 0.0.3,顯示專案仍屬早期階段。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "higgsfield/internal/ci/setup.py 中的 setup_nodes 流程,會透過 SSH 對使用者設定的遠端節點執行 `/bin/bash -c \"$(curl -fsSL https://gist.githubusercontent.com/arpanetus/.../install.sh)\"` 來安裝 Docker,此腳本來源是個人 GitHub Gist 而非官方 Docker 安裝管道,使用者應注意其可信度與內容穩定性",
+          "同一流程也會下載並以 sudo 權限安裝來自另一個獨立專案 `ml-doom/invoker` 的預編譯二進位檔(wget release tar.gz 後移到 /usr/bin),屬於第三方二進位執行,建議使用前確認其發布來源與雜湊",
+          "higgsfield/internal/init.py 會在 init 專案時於本機產生 Ed25519 GitHub Deploy Key,並用 os.system 呼叫 chmod 設定金鑰權限(非用 Python 原生 API),功能本身合理但屬於處理私鑰的路徑,建議留意檔案權限與金鑰保存位置"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "概念(GitHub push 觸發多節點分散式訓練)有趣且文件完整,但缺乏測試、版本仍在 0.0.x 早期階段,且節點安裝流程涉及 curl|bash 與第三方二進位下載,若要導入生產環境建議先審視這些安裝腳本內容,適合關注但暫不必急著採用。",
+      "_mode": "full"
+    }
+  },
+  "docling-project/docling": {
+    "first_seen": "2026-09-20",
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-20": [
+        67053,
+        129,
+        8,
+        "Get your documents ready for gen AI",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-20",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "將 PDF、DOCX、圖片等多種文件格式轉換為結構化 Markdown/JSON,專為生成式 AI 應用準備文件資料的工具",
+      "summary": "Docling 由 IBM Research 團隊發起、現隸屬 LF AI & Data 基金會,解決生成式 AI 應用中「文件前處理」的痛點,支援 PDF、DOCX、PPTX、XLSX、HTML、EPUB、圖片、音訊等數十種格式的解析與版面理解。它提供統一的 DoclingDocument 表示格式,並可匯出為 Markdown、JSON、DocTags 等格式,同時原生整合 LangChain、LlamaIndex、Haystack 等 RAG/Agent 框架。",
+      "highlights": [
+        "支援 PDF 進階版面理解(閱讀順序、表格結構、公式、圖表分類)",
+        "格式覆蓋極廣:PDF/DOCX/PPTX/XLSX/EPUB/Apple Pages/音訊/影片/XBRL 等",
+        "原生整合 LangChain、LlamaIndex、Crew AI、Haystack 等生成式 AI 生態系",
+        "支援本地執行,適合機敏資料與空氣間隙(air-gapped)環境",
+        "提供 MCP server 與 API server(docling-serve),可作為服務或連接任意 agent"
+      ],
+      "use_cases": [
+        "建置 RAG(檢索增強生成)系統前的文件前處理管線",
+        "將掃描版 PDF 或圖片透過 OCR 轉為結構化文字供 LLM 使用",
+        "企業內部機敏文件(合約、財報 XBRL、專利)的自動化解析與結構化",
+        "搭配 VLM(如 GraniteDocling)進行文件版面與圖表理解"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋功能列表、快速上手、CLI/Python 範例、文件連結與引用格式,文件品質高。專案有 arXiv 技術報告、OpenSSF Best Practices 徽章與 LF AI & Data 基金會背書,活躍度從每日推送與持續新增功能(影片、ODF、XBRL 解析)可見相當高。測試部分因僅檢視 README 未看原始碼,無法直接評估,僅供參考。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "功能完整、生態整合度高且持續快速迭代,是生成式 AI 文件前處理領域值得立即關注的專案。",
+      "_mode": "light"
+    }
+  },
+  "cloudflare/quiche": {
+    "first_seen": "2026-09-20",
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-20": [
+        12018,
+        31,
+        9,
+        "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-20",
+    "analysis": {
+      "category": "library",
+      "one_liner": "Cloudflare 開發的 QUIC 傳輸協定與 HTTP/3 的 Rust 實作函式庫",
+      "summary": "quiche 是 Cloudflare 用於支撐其邊緣網路 HTTP/3 服務的核心函式庫,提供處理 QUIC 封包與連線狀態的低階 API,並透過 C API 讓 C/C++(如 curl、Android DNS-over-HTTP/3)也能整合使用。專案採用 BoringSSL 做為 TLS 後端,涵蓋傳輸層、擁塞控制(含 Cubic 與 BBR2)、qlog、h3i 等多個子專案。",
+      "highlights": [
+        "生產級專案,實際支撐 Cloudflare 邊緣網路、Android DNS-over-HTTP/3 與 curl 的 HTTP/3 支援",
+        "測試涵蓋度高:原始碼中有 454 處 #[test] 分布於 37 個檔案,另有獨立的 fuzz 測試套件與大量 corpus 語料",
+        "CI 矩陣非常完整,涵蓋 Linux/macOS/Windows/iOS/Android 多平台建置、clippy 靜態檢查、cargo doc 測試與 Docker 映像建置",
+        "workspace 內含多個模組化子 crate(qlog、h3i、tokio-quiche、datagram-socket、buffer-pool 等),架構分層清晰",
+        "程式碼有完整的 rustdoc 文件與版權/授權標頭,API 設計附帶可執行的文件範例"
+      ],
+      "use_cases": [
+        "需要在 Rust 專案中實作 QUIC 傳輸層或 HTTP/3 用戶端/伺服器",
+        "透過 FFI 將 QUIC/HTTP/3 支援整合進既有 C/C++ 應用程式(如自建 curl 或代理伺服器)",
+        "研究或比較不同擁塞控制演算法(Cubic、BBR2)在 QUIC 上的實作",
+        "學習業界大廠(Cloudflare)如何以 Rust 打造高效能網路協定函式庫的工程實踐"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件方面 README 對 API 使用流程說明完整且附程式碼範例,原始碼內也有大量 rustdoc 註解;測試方面涵蓋單元測試、doc test、fuzz 測試與多平台 CI,是少見的高規格測試佈署;活躍度極高,近期仍持續有版本推送與功能開發(如 gcongestion/BBR2 模組)。整體是工程成熟度很高的專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "Cloudflare 維護、生產環境驗證過的 QUIC/HTTP-3 實作,工程品質與測試規格都屬上乘,值得 Rust 網路開發者關注與學習。",
+      "_mode": "full"
+    }
+  },
+  "ruanyf/weekly": {
+    "first_seen": "2026-09-20",
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-20": [
+        103129,
+        98,
+        11,
+        "科技爱好者周刊，每周五发布",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-09-20",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "阮一峰的科技爱好者周刊,每週五發布,彙整科技新聞、文章、工具、資源與觀點的中文電子報合集。",
+      "summary": "這是一份純內容型的 GitHub 專案,收錄阮一峰自 2018 年創刊以來每週發布的科技周刊全部歷史期數(目前已達第 413 期)。內容涵蓋科技新聞點評、值得一讀的文章推薦、開源工具與資源、圖片與名言摘錄,幫助讀者用最少時間掌握一週科技圈重點。專案本身沒有可執行程式碼,純粹是 Markdown 文件的知識庫。",
+      "highlights": [
+        "已連載超過 8 年、413 期不間斷,是華語圈最長壽且最具代表性的科技周刊之一",
+        "內容選材廣泛,涵蓋 AI、前端/軟體工程、硬體、產業趨勢與個人觀點,兼具時效性與思考深度",
+        "開放投稿機制(透過 GitHub issue),形成社群共同貢獻工具與資源條目的模式",
+        "今日新增 98 顆星、登上趨勢榜第 11 名,顯示長青內容型專案仍持續吸引新讀者訂閱式追蹤"
+      ],
+      "use_cases": [
+        "每週花幾分鐘快速掌握科技圈新聞、工具與觀點,作為資訊過濾與精選管道",
+        "尋找冷門但實用的開源工具、線上資源時,可翻閱歷史期數的「工具」「資源」單元",
+        "作為技術寫作或電子報經營者觀摩的範本,學習長期穩定產出優質內容的方法",
+        "中文使用者練習閱讀科技英文原文文章前,先透過周刊摘要建立背景知識"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 5,
+        "comment": "此專案本質是內容合集而非軟體專案,沒有原始碼、測試或 CI 也在預期之內,不應以一般軟體工程標準評分。README 索引結構清晰,每期周刊格式一致、圖文並茂,内容品質高且更新頻率穩定(每週五準時發布),8 年多從未間斷,是內容維運品質的典範。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "雖非程式碼專案,但作為長期穩定、內容紮實的科技資訊來源非常值得訂閱關注,尤其適合想快速篩選一週科技重點的讀者。",
+      "_mode": "full"
+    }
+  },
+  "yynxxxxx/Codex-X": {
+    "first_seen": "2026-09-20",
+    "last_seen": "2026-09-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-20": [
+        3394,
+        32,
+        15,
+        "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-20",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "用 Tauri 2 + React 打造的 OpenAI Codex 桌面/CLI 視覺化管理工具,整合 Provider 切換、會話同步與提示詞注入。",
+      "summary": "Codex-X 是一款跨平台桌面應用,把 Codex CLI/桌面端原本分散在多個設定檔中的操作(config.toml、auth.json、第三方 API Provider、會話記錄、Skills/MCP)整合成單一 GUI。同時內建可視化的「提示詞注入」系統,讓使用者管理、切換多套系統提示詞範本,並可從 GitHub 同步更多範本。",
+      "highlights": [
+        "Rust(Tauri 2)+ React/TypeScript 架構,原始碼模組化清晰(app_db、failover、providers、sessions、skills_mcp 等各自獨立模組)",
+        "release.yml 展現高規格發布流程:Apple 簽章/公證、Tauri updater 簽名驗證、發布後自動驗證 updater 端點,工程成熟度高",
+        "測試覆蓋範圍廣,原始碼中可找到約 600 處 #[test],涵蓋 failover、config 遷移、session 交易等關鍵模組",
+        "內建可視化提示詞範本庫,其中部分範本(如 gpt5.5-unrestricted.md)明確設計為停用 AI 安全防護與內容過濾指令",
+        "另提供獨立的「逆向 Skills 導航」頁面,收錄 Android APK / Windows EXE / Web 協議逆向相關技能連結"
+      ],
+      "use_cases": [
+        "同時使用 Codex 官方帳號與多個第三方中轉 API,需要頻繁切換 Provider 的使用者",
+        "想用可視化介面管理、備份、審查 config.toml 與 auth.json,避免手動改檔出錯",
+        "需要整理與清理大量本地 Codex 會話紀錄(依專案分組、搜尋、刪除)的重度使用者",
+        "想要一鍵套用/切換多套系統提示詞範本(含 Skills/MCP)的工作流使用者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 內容詳盡(含雙語版、功能表、截圖、CHANGELOG),原始碼組織良好且模組職責分明,Rust 端測試數量多。CI 僅有 release 與 star-history 兩個 workflow,缺少獨立於發版流程之外的 PR/push 觸發之 lint+test CI,是可以補強之處。最近一次 push 在 2026-09-18,提交頻率高,活躍度良好。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "repo 的 examples/ 目錄內建多份提示詞範本(如 gpt5.5-unrestricted.md、海鸥3.0破甲.md 等),內容為指示 AI 停用安全防護與內容過濾、不得拒絕請求;軟體會將使用者選用的範本寫入 Codex 的指令設定檔中生效,使用者應了解這類範本的用途與合規邊界(README 本身亦附有使用聲明,要求使用者於合法合規範圍內使用)",
+          "軟體提供獨立的『逆向 Skills 導航』頁面,收錄 APK/EXE/Web 協議逆向相關技能與安裝指令連結,屬於工具集合導覽性質,原始碼中未發現自動下載並執行未知程式碼的行為",
+          "未發現 npm/cargo 生命週期腳本執行任意外部程式碼、curl|bash 安裝手法、混淆程式碼或內嵌長字串 payload 等狀況;release 流程有簽章與 updater 端點驗證機制"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質紮實、功能完整的 Codex 管理工具,值得 Codex 重度使用者一試,但內建的『破甲/unrestricted』提示詞範本屬敏感內容,企業或合規環境使用前應先了解其性質。",
       "_mode": "full"
     }
   }
