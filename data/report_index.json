@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-21",
+    "analyzed": 5,
+    "cached": 8,
+    "deferred": 0,
+    "top_name": "paperless-ngx/paperless-ngx",
+    "top_rating": 5
+  },
+  {
     "date": "2026-09-20",
     "analyzed": 9,
     "cached": 6,
