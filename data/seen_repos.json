@@ -9679,10 +9679,10 @@
   },
   "akitaonrails/ai-memory": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-21",
+    "last_seen": "2026-09-22",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-18": [
         2063,
@@ -9704,42 +9704,47 @@
         7,
         "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "Rust"
+      ],
+      "2026-09-22": [
+        7677,
+        167,
+        4,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-08-18",
+    "last_analyzed": "2026-09-22",
     "analysis": {
-      "one_liner": "用 Rust 打造的跨代理長期記憶服務,讓 Claude Code、Codex、Cursor 等多種 AI coding CLI 能無縫交接同一份專案記憶。",
-      "summary": "ai-memory 透過生命週期 hook 擷取 prompt、工具呼叫與 session 邊界事件,彙整成純 Markdown wiki(可搭配 SQLite FTS5、實體索引與選用的向量檢索),讓使用者在不同 AI coding agent 之間切換時,新工作階段能自動拿到「交接摘要」而不必重新解釋架構、失敗嘗試與待解問題。同時提供 MCP server、Web 唯讀瀏覽介面、多使用者歸屬與 homelab 部署等進階功能。",
       "category": "devtool",
+      "one_liner": "用 Rust 打造的自架伺服器,把 git 版控的 Markdown wiki 變成可跨 AI coding agent(Claude Code、Codex、Cursor 等)共享的長期記憶與交接系統。",
+      "summary": "ai-memory 解決的問題是:各家 AI coding CLI(Claude Code、Codex、Cursor…)各自有獨立、無法跨工具延續的記憶功能。它透過 lifecycle hooks 靜默擷取 prompt、工具呼叫與 session 邊界,於 session 結束時整理成可讀的 Markdown wiki 頁面,並提供全文/實體/圖譜(可選向量)融合檢索,讓你中途從 Claude Code 切到 Codex 時能拿到明確的 handoff(交接紀錄)。預設零 LLM 呼叫也能運作,資料以 git 版控的純文字檔為真實來源,並支援多人、多機器共用一台伺服器。",
       "highlights": [
-        "支援 20 種以上 AI coding agent(Claude Code、Codex、Cursor、Gemini CLI、Kiro 等)的 MCP 設定與生命週期 hook 自動安裝",
-        "以純 Markdown + git 版本控管作為知識庫,無需額外向量資料庫也能用 FTS5 全文檢索",
-        "內建 Sanitizer 會在寫入前用正規表示式偵測並遮蔽常見金鑰/密碼格式(Bearer token、sk-、AWS AKIA、PEM 私鑰等)",
-        "CI 涵蓋 fmt/clippy/多平台測試/cargo-audit/cargo-deny/gitleaks 秘密掃描/Docker 映像 smoke test,工程紀律相當扎實",
-        "SECURITY.md 詳列威脅模型與範圍外事項(如非租戶隔離、資料未加密),對单机/homelab 使用情境誠實揭露限制"
+        "一個 Rust 二進位檔同時提供 MCP/HTTP 伺服器,支援 20+ 種 agent 整合(hooks + MCP),且用 CI 保證支援矩陣不失真",
+        "記憶來源是 git 版控的 Markdown wiki,資料庫只是可重建的衍生索引,不會被綁在專屬向量庫裡",
+        "跨 agent 的 handoff 協定是「型別化、單一擁有者、只能被 claim 一次」的正式協定,而非口頭約定",
+        "密碼雜湊用 Argon2id + 專屬 KDF semaphore 限流,且對不存在使用者做 dummy verify 以防時序攻擊,安全細節做得相當到位",
+        "CI 涵蓋 fmt/clippy/多平台測試/cargo-audit/cargo-deny/gitleaks 秘密掃描,外加對 4 種不同 awk 實作的 shell hook 測試矩陣"
       ],
       "use_cases": [
-        "個人或小型團隊在多種 AI coding CLI(如白天用 Claude Code、晚上換 Codex)之間切換,想保留專案脈絡與決策紀錄",
-        "為既有專案匯入歷史(git log、README、docs)做為 AI agent 的初始記憶種子",
-        "在 homelab/區網架設共用記憶伺服器,讓多台機器或多位開發者共享同一份專案 wiki",
-        "需要稽核 AI agent 寫入了哪些「永久筆記」或決策,並可回溯/還原單一頁面版本"
+        "個人在多台機器(桌機、筆電)或多個 AI coding CLI 之間切換時,希望專案脈絡、失敗嘗試與待辦問題能無縫接續",
+        "團隊共用一台記憶伺服器,讓不同成員的 agent session 學到的知識彼此可見,同時保留個人 handoff 隱私",
+        "不想依賴雲端記憶 API、希望資料以純文字 Markdown 形式留在自己掌控的機器或 git repo 中"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "README 長達千行、docs/ 目錄與 SECURITY.md 詳盡到近乎過度工程化,但確實逐項說明每個代理的相容細節與邊界情況;測試涵蓋每個 crate 且 CI 有多平台矩陣、cargo-audit、cargo-deny、gitleaks 全歷史掃描與 Docker smoke test;版本已到 1.28.0,趨勢當日仍有新版釋出,commit/changelog 紀律良好。"
+        "comment": "文件量極大且分工清楚(安裝、安全、多人協作、架構設計各自成篇),測試涵蓋每個 crate 並包含多平台(含 Windows 獨立 workflow)、多 awk 實作、cargo-audit/cargo-deny/gitleaks 等供應鏈與秘密掃描,CI 設計細緻(例如 release build 單獨跑、docker smoke test、changelog 格式檢查)。專案版本已到 2.3.2,commit 歷史顯示持續密集開發,是目前少見在工程嚴謹度上接近生產級標準的個人/小團隊 Rust 專案。"
       },
       "security": {
-        "risk_level": "none",
+        "risk_level": "low",
         "findings": [
-          "安裝腳本(bin/ai-memory wrapper 與 native binary 自我更新流程)在下載後一律驗證 SHA-256 checksum 才會覆蓋既有執行檔,未發現未經驗證即執行遠端內容的情形",
-          "docs/issues-mempalace.md 中作者主動記錄了「未來若專案走紅需防範安裝指令被仿冒(typosquatting)」的風險筆記,屬於安全意識紀錄而非實際問題",
-          "git 歷史掃描(.gitleaksignore)中列出的皆為 sanitizer 測試用假樣本(正規表示式測試字串),並非真實外洩憑證"
+          "bin/ai-memory 這支包裝腳本會用 curl 從 GitHub Releases 下載執行檔與 wrapper 腳本,但下載後都會用 SHA256 checksum 驗證後才執行,且會檢查腳本開頭 shebang 是否符合預期,屬於相對嚴謹的下載驗證流程,並非未驗證的 curl|bash",
+          "Docker quick-start 預設伺服器只綁定 127.0.0.1 且無驗證機制;README 與 docs/security.md 有明確說明何時需要加上 bearer token,使用者若要對外(LAN/公網)開放需自行留意這個預設值"
         ]
       },
-      "star_rating": 4,
-      "verdict": "工程品質與文件完整度都在同類專案中名列前茅,是解決「AI coding agent 之間記憶斷層」這個真實痛點的成熟方案,值得有多工具使用習慣的開發者關注與試用。",
+      "star_rating": 5,
+      "verdict": "工程品質與文件完整度都在個人專案中名列前茅,若你日常在多個 AI coding CLI 間切換或想要可控、可版控的長期記憶方案,非常值得一試。",
       "_mode": "full"
     }
   },
@@ -18628,15 +18633,22 @@
   },
   "Crosstalk-Solutions/project-nomad": {
     "first_seen": "2026-09-15",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-22",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-15": [
         36906,
         40,
         17,
+        "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+        "TypeScript"
+      ],
+      "2026-09-22": [
+        37861,
+        394,
+        11,
         "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
         "TypeScript"
       ]
@@ -19634,10 +19646,10 @@
   },
   "coder/coder": {
     "first_seen": "2026-09-18",
-    "last_seen": "2026-09-21",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-22",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-18": [
         14834,
@@ -19664,6 +19676,13 @@
         16059,
         379,
         11,
+        "Secure environments for developers and their agents",
+        "Go"
+      ],
+      "2026-09-22": [
+        16422,
+        460,
+        5,
         "Secure environments for developers and their agents",
         "Go"
       ]
@@ -20006,10 +20025,10 @@
   },
   "trycua/cua": {
     "first_seen": "2026-09-20",
-    "last_seen": "2026-09-21",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-22",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-20": [
         24417,
@@ -20022,6 +20041,13 @@
         25151,
         1018,
         4,
+        "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+        "HTML"
+      ],
+      "2026-09-22": [
+        25697,
+        609,
+        2,
         "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
         "HTML"
       ]
@@ -20065,10 +20091,10 @@
   },
   "Open-Dev-Society/OpenStock": {
     "first_seen": "2026-09-20",
-    "last_seen": "2026-09-21",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-22",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-20": [
         16043,
@@ -20081,6 +20107,13 @@
         16826,
         755,
         10,
+        "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+        "TypeScript"
+      ],
+      "2026-09-22": [
+        17732,
+        844,
+        3,
         "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "TypeScript"
       ]
@@ -20228,15 +20261,22 @@
   },
   "cloudflare/quiche": {
     "first_seen": "2026-09-20",
-    "last_seen": "2026-09-20",
+    "last_seen": "2026-09-22",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-20": [
         12018,
         31,
         9,
+        "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+        "Rust"
+      ],
+      "2026-09-22": [
+        12353,
+        32,
+        7,
         "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
         "Rust"
       ]
@@ -20276,15 +20316,22 @@
   },
   "ruanyf/weekly": {
     "first_seen": "2026-09-20",
-    "last_seen": "2026-09-20",
+    "last_seen": "2026-09-22",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-20": [
         103129,
         98,
         11,
+        "科技爱好者周刊，每周五发布",
+        ""
+      ],
+      "2026-09-22": [
+        103932,
+        182,
+        10,
         "科技爱好者周刊，每周五发布",
         ""
       ]
@@ -20323,15 +20370,22 @@
   },
   "yynxxxxx/Codex-X": {
     "first_seen": "2026-09-20",
-    "last_seen": "2026-09-20",
+    "last_seen": "2026-09-22",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-20": [
         3394,
         32,
         15,
+        "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+        "Rust"
+      ],
+      "2026-09-22": [
+        3684,
+        50,
+        12,
         "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
         "Rust"
       ]
@@ -20375,15 +20429,22 @@
   },
   "BuilderIO/agent-native": {
     "first_seen": "2026-09-21",
-    "last_seen": "2026-09-21",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-22",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-21": [
         5215,
         98,
         2,
+        "A framework for building agentic apps",
+        "TypeScript"
+      ],
+      "2026-09-22": [
+        5905,
+        607,
+        1,
         "A framework for building agentic apps",
         "TypeScript"
       ]
@@ -20427,15 +20488,22 @@
   },
   "anthropics/financial-services": {
     "first_seen": "2026-09-21",
-    "last_seen": "2026-09-21",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-22",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-21": [
         35368,
         260,
         5,
+        "",
+        "Python"
+      ],
+      "2026-09-22": [
+        35833,
+        424,
+        6,
         "",
         "Python"
       ]
@@ -20619,6 +20687,101 @@
       },
       "star_rating": 5,
       "verdict": "對任何在做 AI 生成介面(Generative UI)的團隊來說,這是目前生態系最完整、架構最嚴謹的解法之一,值得立即關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "mvt-project/mvt": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-22": [
+        13593,
+        169,
+        8,
+        "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-22",
+    "analysis": {
+      "one_liner": "由國際特赦組織開發的行動裝置鑑識工具,協助專家排查 Android/iOS 裝置是否遭 Pegasus 等間諜軟體入侵。",
+      "summary": "MVT(Mobile Verification Toolkit)是一套命令列鑑識工具集,可分析 Android 備份/bugreport 與 iOS 備份/sysdiagnose 等資料,比對公開的入侵指標(IOC)以找出間諜軟體感染痕跡。專案由 Amnesty International Security Lab 於 2021 年 Pegasus Project 調查中發布,目前仍由該組織與社群持續維護。",
+      "category": "security",
+      "highlights": [
+        "由 Amnesty International Security Lab 主導開發,曾用於 Pegasus 間諜軟體調查",
+        "同時支援 Android(adb/backup/bugreport/androidqf)與 iOS(備份/檔案系統/sysdiagnose)多種鑑識來源",
+        "支援公開 IOC 比對機制,可擴充外部指標來源與第三方 plugin 模組",
+        "測試覆蓋極廣(近百支測試檔涵蓋 android/ios/common 各模組),CI 涵蓋 Python 3.10–3.14 多版本矩陣",
+        "提供官方 Docker image,內建 libimobiledevice 等原生工具鏈,方便直接上手鑑識環境"
+      ],
+      "use_cases": [
+        "資安研究人員或人權組織對高風險目標(記者、社運人士)裝置進行合意鑑識,排查是否遭商用間諜軟體(如 Pegasus)入侵",
+        "企業或個人資安團隊比對公開 IOC,快速篩檢裝置備份中的可疑痕跡",
+        "行動裝置鑑識教學或研究,學習 Android/iOS 備份格式解析與指標比對方法論",
+        "開發者透過 plugin 機制擴充自訂鑑識模組或 CLI 指令"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼品質相當高:函式皆有清楚 docstring 說明用途與邊界條件,對 subprocess/shlex 呼叫都附上安全性考量註解(例如以 shlex.quote 避免指令注入、ssh 走 BatchMode 避免互動卡住)。測試套件涵蓋 android/ios/common 各模組且在 CI 中執行多個 Python 版本並產生覆蓋率報告,另有獨立的 ruff、mypy 檢查工作流程,工程紀律良好。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "出自 Amnesty International 且長期活躍維護的專業鑑識工具,測試與 CI 紀律扎實,對資安/鑑識領域工程師而言值得立即關注與收藏。",
+      "_mode": "full"
+    }
+  },
+  "zhouxiaoka/autoclip": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-22": [
+        8235,
+        250,
+        9,
+        "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-22",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "用 AI 分析長影片字幕、自動找出高光片段並剪出成片的開源二創工具,支援桌面版、Docker 與 CLI/MCP 三種形態。",
+      "summary": "AutoClip 針對訪談、播客、課程等內容,透過 LLM 分析字幕產生大綱、時間線與精彩度評分,自動剪出片段和合集,並提供抖音/小紅書/YouTube Shorts 等平台的匯出預設。支援通義千問、OpenAI 相容介面、Gemini、硅基流動以及 Ollama/LM Studio 本地模型,可作為桌面應用、Docker Web 服務或 CLI/MCP 工具使用。",
+      "highlights": [
+        "前後端分離架構(FastAPI + React + Tauri 桌面殼),pipeline 拆成 6 個明確步驟(大綱/時間線/評分/標題/聚類/剪輯),模組化程度高",
+        "同時支援雲端多家 LLM 供應商與本地 Ollama/LM Studio,且有針對桌面/Docker/CLI 三種部署路徑的完整文件",
+        "CI 涵蓋後端 pytest + ruff lint、前端 lint/typecheck/build,還有一個少見的 Docker Compose 端到端 smoke test(針對 issue #88 修復後補上的回歸測試)",
+        "程式碼註解會記錄「為什麼」而非「做什麼」,例如解釋設定頁參數過去沒被 pipeline 讀取的歷史 bug,顯示維護者對真實問題有追蹤與修復",
+        "README 提供八種語言版本,文件量豐富(安裝指南、FAQ、隱私說明、CLI/MCP 指南等)"
+      ],
+      "use_cases": [
+        "把訪談、播客或直播回放批次剪成短影音精華,發布到抖音/小紅書/YouTube Shorts/B站",
+        "作為 CLI 或 MCP 工具接入既有自動化流程或 AI agent,批次處理多支影片",
+        "自架 Docker Web 服務,搭配本地 Ollama 模型做內容分析,避免把字幕傳到雲端"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整度高(多國語言 README、安裝/FAQ/隱私/CLI 指南齊全),測試涵蓋後端多個模組與前端契約測試,CI 有 lint/typecheck/單元測試外加少見的 Docker Compose 端到端煙霧測試,顯示對真實部署路徑的重視。近期提交頻繁(最後推送於 2026-09-21),issue 修復有對應回歸測試(如 #88、#11、#45),屬於維護積極的專案。抽查的核心程式碼(scoring pipeline、LLM manager)結構清晰、有防禦性處理與有意義的註解,但作者自述為個人業餘維護,不提供即時支援。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "文件、測試與 CI 三方面都做得比一般個人專案扎實,是值得關注的實用二創剪輯工具,適合想批次做短影音精華或串接 AI agent 流程的開發者。",
       "_mode": "full"
     }
   }
