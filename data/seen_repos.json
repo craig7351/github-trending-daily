@@ -5364,10 +5364,10 @@
   },
   "browser-use/video-use": {
     "first_seen": "2026-08-05",
-    "last_seen": "2026-09-02",
+    "last_seen": "2026-09-23",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-05": [
         19331,
@@ -5382,40 +5382,48 @@
         8,
         "Edit videos with coding agents",
         "Python"
+      ],
+      "2026-09-23": [
+        25843,
+        191,
+        8,
+        "Edit videos with coding agents",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-02",
+    "last_analyzed": "2026-09-23",
     "analysis": {
-      "category": "ai-ml",
-      "one_liner": "讓 Claude Code / Codex 等具備 shell 存取權的編碼代理人,透過對話幫你剪輯影片的開源 skill 套件。",
-      "summary": "video-use 是 browser-use 團隊推出的「AI 代理人影片編輯 skill」:使用者把毛片丟進資料夾、跟 Claude Code 對話,代理人呼叫 ElevenLabs Scribe 做逐字稿+說話者分離,轉成極精簡的文字表示讓 LLM「讀」影片而非「看」影片,再用 ffmpeg 依 EDL 執行剪接、調色、字幕燒錄與動畫疊加,並在算圖後自我檢查每個剪接點。核心賣點是把「30000 幀 × 1500 tokens」的暴力視覺輸入,壓縮成一份 12KB 的文字逐字稿加上按需產生的縮圖合成圖,類似 browser-use 給 LLM 結構化 DOM 而非截圖的思路。",
+      "category": "devtool",
+      "one_liner": "讓 Claude Code 等具備 shell 的 AI 代理人透過對話剪輯影片,自動去除贅字、上字幕、調色並輸出成品。",
+      "summary": "video-use 是 browser-use 團隊推出的「AI 代理人剪輯技能包」,把原始影片素材丟進資料夾,由 Claude Code / Codex 等 agent 讀取逐字稿與時間軸視覺化資訊來決定剪點,呼叫 ffmpeg 完成剪接、調色、字幕燒錄與音量標準化,最終產出 final.mp4。核心設計理念是讓 LLM「讀」影片(文字逐字稿 + 按需產生的縮圖/波形合成圖)而非逐幀「看」影片,大幅降低 token 消耗。",
       "highlights": [
-        "以文字逐字稿+按需視覺合成圖取代逐幀餵圖,大幅降低 token 成本,設計思路承襲自 browser-use 的 DOM-over-screenshot 理念",
-        "render.py 對 HDR 轉 SDR tone-mapping、直向影片偵測、fps 有理數解析等邊角案例都有實際處理,不是玩具程式碼",
-        "SKILL.md 把 12 條「Hard Rules」(字幕最後套用、30ms 音訊淡入淡出、逐段擷取後無損 concat 等)寫得非常明確,降低代理人自由發揮出錯的機率",
-        "install.md 設計成給代理人自動執行的安裝腳本,涵蓋 clone、依賴安裝、skill 註冊、API 金鑰存放的完整流程"
+        "以 ElevenLabs Scribe 產生逐字稿(含詞級時間戳、語者分離、笑聲/掌聲標記)作為 LLM 主要閱讀介面,只有在需要時才產生畫面合成圖,大幅節省 token",
+        "render.py 對 HDR 轉 SDR、直式/橫式偵測、可變畫格率、兩段式響度標準化(-14 LUFS)等實務細節處理得相當細緻,附有解釋性註解",
+        "有自我評估迴圈:每個剪點都會在算繪後重新檢視畫面與音訊斷點,最多重跑 3 次才交給使用者",
+        "設計成可安裝為 Claude Code / Codex 的 Skill(SKILL.md + install.md),支援讓 agent 自主完成 clone、裝依賴、寫入 API 金鑰等安裝流程",
+        "支援多種動畫引擎(HyperFrames、Remotion、Manim、PIL)產生疊加動畫,並平行以子代理人各自負責一個動畫片段"
       ],
       "use_cases": [
-        "個人開發者或內容創作者想用對話方式快速剪出訪談、教學、旅拍等影片的初剪",
-        "已在用 Claude Code / Codex 等代理人工作流的使用者,想把影片後製也納入代理人自動化範圍",
-        "需要研究「LLM 如何用結構化文字表示取代逐幀視覺輸入」這類 token 節省設計模式的工程師"
+        "個人 YouTuber / 內容創作者想用對話方式快速剪出訪談、教學或旅遊影片,不想學剪輯軟體",
+        "團隊想在 CI 或自動化流程中,用 AI agent 批次處理大量原始素材(去除口頭禪、加字幕、統一調色)",
+        "研究如何把「LLM 讀取結構化資料而非逐幀畫面」的 browser-use 理念延伸到影片理解與編輯場景"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
-        "activity": 4,
-        "comment": "README、SKILL.md、install.md 文件詳盡到近乎規格書等級,對 production-correctness 規則寫得極清楚;core render.py 程式碼品質紮實,有處理 HDR tone-map、直向影片、fps 有理數等真實邊角案例。但測試只涵蓋 render.py 的 fps/orientation 邏輯,transcribe.py、grade.py、timeline_view.py、pack_transcripts.py 皆無測試,且未見任何 CI workflow(無 .github/workflows),品質把關主要仰賴人工與代理人自我檢查(self-eval loop)而非自動化測試。"
+        "activity": 3,
+        "comment": "README、SKILL.md、install.md 撰寫詳盡且分工清楚,程式碼(如 render.py)有大量說明「為什麼」的註解,顯示作者對 ffmpeg/HDR/字幕安全區等實務細節理解深入。但測試覆蓋僅限 tests/test_render_fps.py 與 test_render_orientation.py 兩支,只測了 render.py 的 FPS 解析與方向偵測等輔助函式,尚未涵蓋 transcribe、grade、timeline_view 等模組,也沒有找到 .github/workflows CI 設定。專案剛建立、star 數在一天內暴增,長期維護狀況仍待觀察。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "install.md 是設計給編碼代理人自動執行的安裝腳本,內容包含 git clone、brew/apt/pip 安裝依賴、以及用 npx --yes 執行第三方套件(hyperframes、create-video)等指令,使用者授權代理人執行後,實際安裝的套件與版本由代理人在當下自行決定,而非鎖定於 lockfile。",
-          "ElevenLabs API 金鑰是以明文寫入專案根目錄的 .env 檔(install.md 有提醒設定 chmod 600、且 .env 已列在 .gitignore),屬常見作法,但仍建議使用者留意金鑰檔案的存取權限與備份範圍。",
-          "未發現混淆程式碼、base64/hex 大型payload、寫死的可疑 IP 或網域,transcribe.py 呼叫的外部端點僅為官方 api.elevenlabs.io。"
+          "install.md 是設計給 AI 代理人(Claude Code、Codex 等)在使用者機器上自主執行的安裝腳本,內容包含 clone repo、brew/apt 安裝套件、將使用者貼上的 ElevenLabs API 金鑰寫入本機 .env 檔等操作;这属于「讓 agent 自主執行系統指令」的常見設計模式,但使用者應留意自己等於授權 agent 在本機執行安裝與寫檔操作。",
+          "install.md 中有一段對 https://api.elevenlabs.io/v1/user 的 curl 健康檢查,用來驗證使用者貼上的 API 金鑰是否有效,屬正常用途,未發現外部下載並執行程式碼(curl|bash)的模式。",
+          "helpers/ 內的 ffmpeg/ffprobe 呼叫皆使用 subprocess 的 list 參數形式(未使用 shell=True),未發現明顯的命令注入風險。"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念新穎且程式碼紮實,是觀察「AI 代理人 + 結構化文字表示」設計模式的好案例,但測試覆蓋率與 CI 尚未跟上其爆紅速度,生產環境重度使用前建議先自行驗證剪接品質。",
+      "verdict": "概念新穎且程式碼細節扎實,若你已在用 Claude Code / Codex 這類 agent 且有剪片需求,值得一試,但測試覆蓋與長期維護狀況仍待觀察。",
       "_mode": "full"
     }
   },
@@ -10550,10 +10558,10 @@
   },
   "agent-substrate/substrate": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-08-21",
+    "last_seen": "2026-09-23",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-21": [
         1396,
@@ -10561,41 +10569,44 @@
         9,
         "Agent Substrate: the core system",
         "Go"
+      ],
+      "2026-09-23": [
+        2977,
+        245,
+        2,
+        "Agent Substrate: the core system",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-08-21",
+    "last_analyzed": "2026-09-23",
     "analysis": {
       "category": "infra",
-      "one_liner": "Google 團隊開源的 AI Agent 沙箱調度控制平面,讓大量 AI agent 以極低延遲在共用 Kubernetes 資源上多工執行。",
-      "summary": "Agent Substrate 是一套建構在 Kubernetes 之上的「Agent 專用控制平面」,解決 AI agent 類工作負載大多時間閒置、卻又需要沙箱隔離所帶來的資源浪費與延遲問題。它透過 gVisor 或 microVM 對 actor(agent 實例)做次秒級 suspend/resume,將大量 actor 多工映射到少量常駐 worker pod 上,並提供對應的路由、快照儲存與生命週期管理機制。",
+      "one_liner": "Google 主導的開源專案,提供高密度、安全隔離的 AI Agent 沙箱執行環境,建構於 Kubernetes 之上。",
+      "summary": "Agent Substrate 是一套 Agent 執行期基礎設施,將大量「actor」(如 AI agent 實例)動態多工到少量常駐的「worker」Pod 上,支援 gVisor 與 microVM 兩種沙箱技術,強調毫秒級 suspend/resume 與零信任的網路/核心隔離。它不是 agent 開發 SDK,而是讓 agent 類應用(多為閒置、需要狀態保存)能以遠高於一般容器 runtime 的密度大規模運行的控制平面與資料平面系統。",
       "highlights": [
-        "支援 gVisor 與 microVM(Kata+Cloud Hypervisor)兩種沙箱技術,對 actor 做次秒級 checkpoint/restore",
-        "以 Envoy ext_proc + 自訂 DNS 實現 agent 專屬的按需喚醒路由(atenet-router / atunnel)",
-        "提供完整的 CRD(WorkerPool、ActorTemplate)與 gRPC 控制平面(ate-api-server、atelet、ateom)",
-        "文件齊全,包含專屬的 Threat Model 文件,列出 40+ 項威脅與對應緩解措施",
-        "CI 涵蓋單元測試(go test -race)、需要 root/KVM 的整合測試,以及在 kind 叢集跑 gVisor 與 microVM 雙軌 E2E 測試"
+        "由 Google 團隊主導(程式碼版權為 Google LLC),但明確聲明非官方支援產品、不適用漏洞獎勵計畫",
+        "架構完整:控制平面(ateapi/atecontroller)、節點代理(atelet)、網路層(atenet + Envoy ext_proc)、沙箱執行(ateom-gvisor/ateom-microvm)分工清晰",
+        "隨附正式的威脅模型文件(docs/threat-model.md),逐項列出 Critical/High/Medium 風險與緩解建議,對早期專案而言相當罕見",
+        "CI 涵蓋單機與 kind 叢集的完整 E2E 測試,包含 gVisor 與 microVM 雙沙箱路徑、MITM egress 攔截等進階情境",
+        "microVM 資產(cloud-hypervisor、virtiofsd、rootfs)以版本號與 sha256 校驗和方式釘選下載,而非直接打包二進位檔"
       ],
       "use_cases": [
-        "大規模部署 AI coding agent(如 Claude Code)或 LLM agent,需要在有限硬體上高密度多工執行大量閒置中的 agent 實例",
-        "需要對 agent 沙箱做狀態保存(檔案系統+記憶體)並在請求到來時快速喚醒的場景",
-        "已有 Kubernetes 基礎設施、想在其上疊加 agent 專用排程與路由層,而非重新造一套基礎設施",
-        "研究/評估 agent 沙箱化執行的安全威脅模型與隔離設計"
+        "需要大規模、低成本地同時運行成千上萬個 AI agent/coding agent 實例(如 Claude Code、CodeX)的基礎設施團隊",
+        "在 Kubernetes 上構建支援 suspend/resume 與狀態持久化的多租戶 agent 執行平台",
+        "研究零信任網路隔離、gVisor/microVM 沙箱排程與高密度多工架構的工程師"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件非常完整(架構文件、API guide、glossary、threat model、roadmap 皆備),原始碼中的註解精簡且聚焦在非顯而易見的設計取捨(如快取失效、鎖定順序)。測試檔案超過 190 個,涵蓋單元測試、contract test、functional test 與需要 root/KVM 權限的整合測試,CI 另外跑真實 kind 叢集的 gVisor 與 microVM 雙軌 E2E 測試,並有每週排程的 govulncheck 掃描。專案由 Google 團隊維護,commit 訊息與 workflow 註解顯示工程紀律成熟,但專案本身仍處於早期階段,API 隨時可能變動。"
+        "comment": "文件品質極高,除 README 外還有架構圖、API 指南、詞彙表、威脅模型、升級手冊等完整文件;測試涵蓋單元測試、functional test 與跨兩種沙箱技術的 E2E 測試,CI 設定嚴謹(含 root 權限測試、shellcheck、授權檢查等多道 verify 腳本);commit 與 issue 活躍度高,屬於快速迭代中的早期專案。"
       },
       "security": {
-        "risk_level": "low",
-        "findings": [
-          "hack/microvm-assets/assemble.sh 會用 curl 下載 kata-static、cloud-hypervisor、virtiofsd 等 microVM 執行元件,下載後用於建置沙箱資產;下載對象為固定版本的發行檔案而非執行安裝腳本,且此腳本僅在使用者主動執行 microVM demo 建置流程時才會被呼叫",
-          "README 與 threat-model.md 明確聲明專案「早期開發階段、尚無安全強化,不適合生產環境使用」,且非 Google 官方支援產品,也不在 Google OSS 漏洞獎金計畫範圍內"
-        ]
+        "risk_level": "none",
+        "findings": []
       },
       "star_rating": 4,
-      "verdict": "工程品質與文件成熟度在早期專案中相當罕見,適合關注 agent 基礎設施方向的工程師持續追蹤,但專案本身仍聲明未達生產可用階段,短期內不建議直接上線使用。",
+      "verdict": "工程嚴謹、文件與威脅建模完善的 Google 出品基礎設施專案,但官方明言仍處早期階段、API 隨時可能大改,適合追蹤與實驗,尚不建議直接用於生產環境。",
       "_mode": "full"
     }
   },
@@ -20488,10 +20499,10 @@
   },
   "anthropics/financial-services": {
     "first_seen": "2026-09-21",
-    "last_seen": "2026-09-22",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-23",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-21": [
         35368,
@@ -20504,6 +20515,13 @@
         35833,
         424,
         6,
+        "",
+        "Python"
+      ],
+      "2026-09-23": [
+        36341,
+        438,
+        1,
         "",
         "Python"
       ]
@@ -20692,15 +20710,22 @@
   },
   "mvt-project/mvt": {
     "first_seen": "2026-09-22",
-    "last_seen": "2026-09-22",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-23",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-22": [
         13593,
         169,
         8,
+        "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+        "Python"
+      ],
+      "2026-09-23": [
+        14111,
+        441,
+        6,
         "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "Python"
       ]
@@ -20782,6 +20807,204 @@
       },
       "star_rating": 4,
       "verdict": "文件、測試與 CI 三方面都做得比一般個人專案扎實,是值得關注的實用二創剪輯工具,適合想批次做短影音精華或串接 AI agent 流程的開發者。",
+      "_mode": "full"
+    }
+  },
+  "dream-num/univer": {
+    "first_seen": "2026-09-23",
+    "last_seen": "2026-09-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-23": [
+        15403,
+        255,
+        3,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-23",
+    "analysis": {
+      "one_liner": "開源 Office SDK,可在瀏覽器與 Node.js 中嵌入試算表、文件、簡報等辦公應用,並專為 AI Agent 操作設計。",
+      "summary": "Univer 是一套以外掛架構打造的 Office 生產力 SDK,提供 Canvas 渲染引擎、公式引擎與統一的 Facade API,讓開發者能在自家產品中嵌入試算表、文件、簡報等編輯體驗,同時支援瀏覽器與 Headless Node.js 執行環境。此開源版本鎖定核心編輯能力,協作、匯入匯出、圖表等進階功能則屬於商業版 Univer Pro。",
+      "category": "framework",
+      "highlights": [
+        "Plugin-first 架構,功能可依需求組合、替換或延遲載入,並提供 Preset Mode 快速上手",
+        "Isomorphic 設計,同一套邏輯可在瀏覽器 UI 與 Node.js Headless 環境執行,便於伺服器端自動化處理",
+        "明確區分 OSS 與 Pro 商業層,README 清楚列出功能邊界(協作、匯入匯出、圖表等屬付費 Pro)",
+        "測試覆蓋相當扎實,單是 packages/core 就有 167+ 個 .spec.ts 測試檔,CI 以 4 個 shard 分散跑測試並回報 Codecov",
+        "另設有 Semgrep 資安掃描工作流程(security-semgrep.yml)與正式 Security Policy"
+      ],
+      "use_cases": [
+        "在 SaaS 產品、內部工具或 BI 系統中嵌入可客製化的試算表/文件編輯功能",
+        "建置 AI Agent 可程式化讀寫、驗證的辦公文件工作流程(如自動化報表生成、文件審閱)",
+        "在 Node.js 伺服器端進行無 UI 的公式運算與工作表批次處理"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件詳盡(多語系 README、架構筆記、API 穩定性政策、貢獻指南),測試數量龐大且 CI 涵蓋 lint、typecheck、分片測試與覆蓋率回報,commit 與 release 節奏頻繁(近期每日皆有更新),整體工程成熟度高,是大型、長期維運的 monorepo。抽樣核心程式碼(command.service.ts 等)註解完整、型別定義清晰,程式碼品質良好。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件完整度俱佳的成熟 Office SDK,若有嵌入式文件編輯或 AI Agent 操作辦公文件的需求,非常值得深入評估。",
+      "_mode": "full"
+    }
+  },
+  "davila7/claude-code-templates": {
+    "first_seen": "2026-09-23",
+    "last_seen": "2026-09-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-23": [
+        31127,
+        64,
+        4,
+        "CLI tool for configuring and monitoring Claude Code",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-23",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "一套龐大的 Claude Code 範本市集與 CLI 工具,讓開發者一行指令安裝 AI agent、slash command、hook、MCP 與 skill。",
+      "summary": "claude-code-templates 提供超過百種現成的 Claude Code 元件(agents、commands、MCP 整合、settings、hooks、skills),透過 npx CLI 一鍵安裝到專案中,並附帶對話監控、健康檢查、分析儀表板等維運工具。倉庫同時包含網站 aitmpl.com 的原始碼、Cloudflare Workers、Rust CLI 分支等多個子專案。",
+      "highlights": [
+        "內建 Analytics/Chats/Plugin/Skill 多個即時儀表板,可監控 Claude Code 使用狀況",
+        "以 npx 指令組合式安裝 agent/command/mcp/hook/skill,元件庫超過百種且分類完整",
+        "CI 對社群貢獻的 skill 元件跑 NVIDIA SkillSpector 靜態分析,高風險分數會擋下 PR",
+        "cli-tool 有完整 jest 單元/整合/驗證測試,並用 .npmrc 的 ignore-scripts=true 阻擋相依套件的安裝腳本",
+        "遙測預設開啟但可用環境變數關閉,錯誤回報則預設關閉需使用者主動開啟"
+      ],
+      "use_cases": [
+        "快速為新專案套用一致的 Claude Code agent/command/hook/MCP 設定",
+        "團隊想要監控多個開發者的 Claude Code 使用情況與工作階段分析",
+        "尋找現成的 Skill(如 PDF 處理、Excel 自動化、資安檢測範本)加速客製化工作流"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整(README、CONTRIBUTING、TESTING.md、ARCHITECTURE.md 皆齊全),cli-tool 核心有分層良好的 jest 測試(unit/integration/validation);但整個 repo 高達近萬檔案、以社群貢獻的範本內容為主,程式碼品質參差不齊,核心 CLI 部分維護扎實,附屬的範本/skill 內容則各異。近期每日都有提交且工作流眾多,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "預設會將元件安裝事件(component_download)以匿名方式送到 Supabase 做下載統計,可用 CCT_NO_TRACKING/CCT_NO_ANALYTICS 環境變數關閉,屬於揭露且可選退的遙測,非隱藏行為",
+          "CLI 內建錯誤回報功能會將錯誤送到硬編碼的 Sentry DSN(僅送出用途),但預設關閉,需使用者設定 CCT_ERROR_REPORTING=true 才會啟用",
+          "工具的核心用途就是透過 npx 下載並套用社群貢獻的 agent/command/skill 內容到使用者專案,其中部分 skill 分類(如滲透測試、紅隊工具)內容本身涉及攻擊性資安主題,但屬於教學/範本文件而非安裝流程中的可執行惡意程式碼,且有 CI(SkillSpector)靜態掃描把關",
+          "未發現 preinstall/postinstall 生命週期腳本、curl|bash 型安裝手法、混淆程式碼或內嵌的長 base64/hex payload"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "如果你已在用 Claude Code 且想少寫重複設定,這個範本市集值得加入書籤,但因規模龐大且內容多為社群貢獻,建議安裝前先看清楚要裝的元件內容。",
+      "_mode": "full"
+    }
+  },
+  "google/ax": {
+    "first_seen": "2026-09-23",
+    "last_seen": "2026-09-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-23": [
+        7603,
+        2305,
+        5,
+        "Google's open agentic orchestration runtime",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-23",
+    "analysis": {
+      "category": "infra",
+      "one_liner": "Google 開源的宣告式 Agent 編排執行環境,用 Kubernetes 風格的 YAML 大規模跑沙箱化的自主 Agent 工作負載。",
+      "summary": "AX 是一個高吞吐的宣告式編排器,讓使用者用類似 kubectl 的介面(Task/Workspace/Gateway/Model 四個原語)在叢集中管理數十億個 Agent 任務。它建構在 Google 的 Agent Substrate 沙箱執行層之上,負責把 Git 倉庫、MCP 伺服器、網路白名單、LLM 憑證等一次性宣告完成,並提供 suspend/resume、ssh 進沙箱等維運能力,解決「Agent 是一種新型工作負載」帶來的隔離、狀態管理與成本控管問題。",
+      "highlights": [
+        "以 Task/Workspace/Gateway/Model 四個 CRD 風格原語,提供類 kubectl 的宣告式 Agent 編排體驗",
+        "內建 suspend/resume 檢查點機制與 ax ssh 直接進入沙箱除錯,對長時間執行的 Agent 任務很實用",
+        "Gateway 原語可將沙箱出網流量鎖定在明確的 host allowlist,對「Agent 亂打外部 API」有基本防護",
+        "程式碼採 Go 撰寫,controller/server/store/workspace 等模組分層清楚,並有對應的 _test.go 單元測試",
+        "CI 使用 GitHub Actions 且第三方 action 都釘死到 commit SHA,另有專門的 workflow 檢查 PR 是否誤提交二進位檔"
+      ],
+      "use_cases": [
+        "企業或研究團隊需要在 Kubernetes 叢集上大規模、隔離地跑自主 coding agent 或工具型 agent 工作負載",
+        "需要對 Agent 的網路存取、檔案系統、執行時間做集中治理與稽核的平台團隊",
+        "想用 GitOps/YAML 宣告方式管理 Agent 生命週期(建立、暫停、恢復、刪除)的 MLOps/DevOps 場景",
+        "需要在沙箱中安全執行「不受信任的 agent 產生程式碼」並限制其副作用範圍的場景"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 與 docs/ 目錄(concepts、manifests、sandbox、runner、networking、DESIGN.md)寫得相當完整,對架構與 CLI 用法說明清楚;core 模組(controller、server、workspace、store)都附有對應的 _test.go,測試覆蓋率看起來中等而非全面。專案明確標示為 pre-stable(README 開頭警告會有重大 breaking change),屬於剛開源、仍在快速迭代的早期專案,commit 記錄與今日的 last push 顯示活動度高,但整體成熟度仍待觀察。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "Google 官方背書、架構設計清晰且文件完整,雖標示為 pre-stable 且需搭配私有的 Agent Substrate 執行層,仍值得 AI 平台/MLOps 工程師持續追蹤。",
+      "_mode": "full"
+    }
+  },
+  "superdesigndev/treg": {
+    "first_seen": "2026-09-23",
+    "last_seen": "2026-09-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-23": [
+        2222,
+        230,
+        7,
+        "OpenRouter for agent tools. Join community here:https://discord.gg/6mQYYfFMAn",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-23",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "把「呼叫任何 API 工具」變成像 OpenRouter 呼叫模型一樣簡單的憑證代理註冊表。",
+      "summary": "treg 是一個 FastAPI 架構的「工具版 OpenRouter」:提供單一 base URL + token,agent 就能呼叫 3,000+ 個第三方 API endpoint(SEO、社群、資料 enrichment、廣告等),按次計費且免各家平台自行申請帳號;同時也能讓團隊把自己的 API key、CLI 憑證、Skill 集中託管,由伺服器端注入憑證後轉發,呼叫端永遠拿不到明文密鑰。核心賣點是一個「忠實轉發代理」(relay),只改必要的 header/憑證,其餘原封不動地轉送給上游 API。",
+      "highlights": [
+        "核心 relay.py 對忠實轉發(faithful relay)的邊界案例寫得極細:hop-by-hop header 剝離、SSRF 防護(呼叫當下重新解析上游主機、擋內網位址)、防止 treg 自家 session cookie 外洩上游、對回應加 nosniff+CSP sandbox 防止反射式 XSS",
+        "測試量體驚人:167 個測試檔、約 3,398 個測試函式,並拆出獨立的 test_ssrf_public_addresses.py、test_security_round2/3/4.py 等安全回歸測試",
+        "CI 內建 gitleaks 全歷史秘密掃描並設為必要檢查(reviewers 曾因流程調整不慎跳過,後來補回並在註解中記錄教訓)",
+        "架構上用 import-linter 強制分層邊界(輕量 CLI 不得引入伺服器端重量依賴、domain 層不得依賴外層),顯示對長期可維護性的重視",
+        "License 為 Apache 2.0 附加條款:允許商用與自架,但禁止未經授權轉售成競品的託管服務"
+      ],
+      "use_cases": [
+        "需要讓 AI agent 一次性、低成本地呼叫多家 SaaS API(SEO、enrichment、廣告數據等),而不想逐一申請帳號、管理各家金鑰",
+        "團隊想要集中管理內部 API key / OAuth 連線 / CLI 憑證,讓多個開發者的 agent 共用同一份憑證但彼此看不到明文",
+        "想在自己的產品內整合 Claude/MCP 工具呼叫,但需要伺服器端代理憑證注入與呼叫稽核紀錄"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件（README、USAGE.md、docs/context 設計片段）非常完整且誠實地記錄過去踩過的坑；測試覆蓋率與安全回歸測試數量遠超一般開源專案；CI 設有 Postgres 整合測試、import-linter 分層檢查、gitleaks 全歷史掃描並列為必要檢查；commit 節奏顯示每日皆有推送，屬於高活躍度的商業維運型專案。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install.sh 提供 curl | sh 一鍵安裝流程，會依序嘗試 uv/pipx/pip 從 PyPI 安裝 tools-registry 套件（非直接 curl|bash 執行遠端腳本內的任意程式碼，屬常見且合理的 CLI 安裝手法），使用者應留意其會安裝可執行檔並寫入 shell 設定",
+          "此專案的本質是「憑證代理伺服器」：伺服器端會解密並持有使用者/團隊的 API 金鑰、OAuth token，若自架則需妥善保管 TREG_SECRET_KEY（Fernet 金鑰）與資料庫，官方文件本身也明確提醒遺失金鑰會導致所有已存憑證不可回復——這是此類架構固有的信任前提，非程式碼缺陷",
+          "未發現混淆程式碼、可疑硬編碼網域/IP，或不明的 base64/hex 大型負載"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與安全意識都在開源專案中名列前茅，適合正在幫 agent 接第三方 API 或想自架憑證代理的團隊評估，但因其核心功能涉及集中託管使用者密鑰，導入前務必先理解其信任模型與自架時的金鑰備份責任。",
       "_mode": "full"
     }
   }
