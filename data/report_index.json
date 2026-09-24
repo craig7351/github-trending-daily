@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-24",
+    "analyzed": 7,
+    "cached": 10,
+    "deferred": 0,
+    "top_name": "strands-agents/harness-sdk",
+    "top_rating": 5
+  },
+  {
     "date": "2026-09-23",
     "analyzed": 6,
     "cached": 2,

@@ -1142,8 +1142,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 4,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1229,46 +1229,53 @@
         9,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-24": [
+        290686,
+        474,
+        5,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-09-04",
+    "last_analyzed": "2026-09-24",
     "analysis": {
       "category": "devtool",
-      "one_liner": "一套讓 Claude Code、Codex、Gemini CLI 等多種 AI 編碼助手都能套用的「軟體開發方法論」外掛,透過可組合的 Skills 強制執行 TDD、系統化除錯與 subagent 協作流程。",
-      "summary": "Superpowers 不是傳統程式庫,而是一組給 AI 編碼代理人使用的「技能(Skills)」框架,內容以 Markdown 定義的流程規範(brainstorming → 寫計畫 → subagent-driven-development → TDD → code review → 收尾)串成一套完整的軟體開發 SOP。它同時支援十幾種主流 coding agent(Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Devin、Hermes 等),各自有對應的外掛安裝方式與相容層,目的是讓代理人在寫程式前先想清楚需求、用測試驅動開發、並以可審核的小任務逐步推進,而不是一次性亂槍打鳥式產出程式碼。",
+      "one_liner": "給 AI 編程代理人(Claude Code、Codex、Cursor 等)使用的「軟體開發方法論」外掛,以一套可組合的 Skill 文件強制執行需求訪談、TDD、程式碼審查等流程。",
+      "summary": "Superpowers 並非傳統程式庫,而是一組結構化的 Markdown「Skill」提示詞,搭配各家 coding agent(Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Pi、Devin 等)的外掛/hook 機制,在 AI 開始寫程式前自動觸發腦力激盪、寫規格、拆解任務、TDD 紅綠燈循環、程式碼審查等步驟,目的是讓代理人的自主開發更可控、更少偷工減料。倉庫同時附上大量跨平台整合腳本與測試,確保同一套 Skill 能在十餘種不同 AI 工具上以一致方式運作。",
       "highlights": [
-        "涵蓋 10+ 種 coding agent 的安裝與相容層(Claude Code plugin、Codex、Cursor、Gemini CLI、OpenCode、Devin、Hermes、Pi 等),移植文件齊全(docs/porting-to-a-new-harness.md)",
-        "以 Markdown SKILL.md 定義的方法論非常詳盡,例如 systematic-debugging 明確規定「無根因分析不得修 bug」的四階段流程,並列出常見藉口與反制方式",
-        "內建一個從零開始手刻的 WebSocket 伺服器(brainstorming/scripts/server.cjs)用於視覺化腦力激盪companion,程式碼有做 timing-safe token 比對、CSP、Origin 檢查等安全細節,品質高於一般玩具腳本",
-        "tests/ 目錄涵蓋各家 agent 平台的整合測試(shell script + JS + Python),測試面向廣但未接上 GitHub Actions CI",
-        "選配的視覺腦力激盪功能會從外部網址載入 Prime Radiant 品牌 Logo 並回傳版本號作為使用量遙測,預設開啟但可用環境變數關閉"
+        "核心是 15 個 SKILL.md 文件(brainstorming、test-driven-development、subagent-driven-development 等),定義強制性工作流程與『硬性關卡』(如未經人類核准不得寫程式碼)",
+        "同時支援 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Pi、Devin、Kimi、Hermes、Muse 等十餘種 AI 編程工具,各自有獨立的外掛/bridge 程式碼",
+        "OpenCode 外掛(.opencode/plugins/superpowers.js)展示了扎實的工程細節:frontmatter 手動解析、bootstrap 內容快取、子 session 偵測避免重複注入、fail-open 錯誤處理",
+        "測試涵蓋面廣,涉及多個 harness 的整合測試(bash + node + python),另有 diagnosing-superpowers skill 用於除錯代理人行為異常",
+        "內建可選的『visual companion』遙測(載入公司 logo 並回報版本號),可用環境變數關閉,且行為在 README 中揭露透明"
       ],
       "use_cases": [
-        "想在 Claude Code / Codex / Cursor 等 AI 編碼助手上,強制導入 TDD 與系統化除錯流程的團隊",
-        "需要讓多個 subagent 分工完成大型重構或功能開發,並要求逐任務審查(spec compliance + code quality)的工作流",
-        "想參考別人如何設計「給 LLM 遵循的流程規範」(Skill 撰寫最佳實踐)以自製類似框架的開發者",
-        "需要跨多種 AI coding agent 平台維護一致開發方法論的團隊(一次寫 Skill,多平台相容)"
+        "希望讓 Claude Code / Cursor 等 AI 編程代理人在寫程式前先做需求澄清與設計審查,避免代理人『先斬後奏』",
+        "團隊想導入 subagent-driven-development 或嚴格 TDD 流程,但不想手寫大量 prompt 規範",
+        "同時使用多種 AI coding CLI/工具,需要一套可攜的方法論與 skill 定義跨工具共用",
+        "研究如何用 Markdown + hooks 的方式為 LLM agent 建立『軟約束』流程控制機制"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
-        "activity": 4,
-        "comment": "文件量極為豐富,README、AGENTS.md、CLAUDE.md、docs/ 下大量設計文件(specs/plans)完整記錄每次功能演進的思路與紅綠測試結果,對於一個「方法論框架」型專案來說相當罕見地嚴謹。測試涵蓋多平台整合腳本與 JS 單元測試,brainstorm-server 的程式碼品質也看得出對安全與邊界情況的用心(timing-safe 比較、CSP、路徑穿越防護)。扣分點是找不到 .github/workflows,沒有自動化 CI 把關,測試需仰賴手動執行 run-*.sh 或 npm test。"
+        "activity": 5,
+        "comment": "README 與各 Skill 文件寫得極為詳盡,對每種整合工具都有清楚安裝說明;tests/ 目錄涵蓋十餘個子系統的 shell/node/python 測試,但屬於整合與行為測試而非傳統單元測試覆蓋率量化;近期提交頻繁(最後 push 為 2026-09-22),docs/plans 與 docs/specs 顯示持續有設計變更被記錄與追蹤,專案維護活躍度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "skills/brainstorming 的視覺化 companion 功能預設會從 https://primeradiant.com 載入品牌 Logo 圖檔,並在請求中夾帶版本號作為使用量統計,官方稱不含專案內容或提示詞,可用 SUPERPOWERS_DISABLE_TELEMETRY 等環境變數關閉",
-          "package.json 與各平台外掛 manifest(.claude-plugin、.codex-plugin、.devin-plugin 等)均未定義 postinstall/preinstall/prepare 等安裝期自動執行腳本",
-          "OpenCode 安裝文件要求代理人「Fetch and follow instructions from」一個 raw.githubusercontent.com 上的 INSTALL.md,實際內容為一般安裝步驟說明,未見可疑指令"
+          "hooks/run-hook.cmd 是一個 polyglot 腳本(同時是有效的 .cmd 與 bash script),在 Windows 上會呼叫 Git for Windows 內建的 bash.exe 來執行 hooks/session-start,這是專案自身用來注入啟動情境(bootstrap)給 AI 代理人的機制,並非下載外部內容執行,僅本機腳本互相呼叫",
+          "README 中的『Visual companion telemetry』段落揭露:brainstorming 功能的可選視覺化元件會從官方網站載入 logo 並附帶 Superpowers 版本號,官方聲明不收集專案內容或提示詞,並提供 SUPERPOWERS_DISABLE_TELEMETRY 環境變數可關閉,此為文件中主動揭露的行為,非隱藏行為",
+          "未發現 npm/pip 生命週期腳本(pre/postinstall)執行任意程式碼,也未發現 curl|bash 或 iwr|iex 之類的遠端下載執行安裝模式,package.json 沒有 scripts 欄位"
         ]
       },
       "star_rating": 4,
-      "verdict": "如果你正在用多種 AI coding agent 且想要一套可落地的「代理人開發 SOP」,這個專案的方法論設計與跨平台相容工程值得研究,但因缺乏自動化 CI,大規模採用前建議自行驗證各平台外掛的實際行為。",
+      "verdict": "如果你的日常工作是用 Claude Code 之類的代理人自主寫程式,這套「流程即提示詞」框架值得一試;但它是方法論/提示詞集合而非可執行程式庫,價值取決於你是否認同其強制流程哲學。",
       "_mode": "full"
     },
-    "total_days_on_trending": 13,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 14,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1761,8 +1768,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-07-28",
-    "days_on_trending": 2,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -1771,46 +1778,52 @@
       "2026-07-28": [
         51667,
         847
+      ],
+      "2026-09-24": [
+        70338,
+        304,
+        12,
+        "The design language that makes your AI harness better at design.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-09-24",
     "analysis": {
-      "one_liner": "一套讓 AI coding agent(Claude Code、Cursor、Codex 等)產出更精緻前端設計的技能包,內建 23 個設計指令與 60 條可判定規則。",
-      "summary": "Impeccable 是針對 AI 生成前端設計「千篇一律」問題(Inter 字體、紫藍漸層、卡片疊卡片等)所設計的指引系統,透過 /impeccable init 建立專案設計語境(PRODUCT.md/DESIGN.md),再用 audit、critique、polish、harden 等 23 個指令搭配 60 條無需 LLM 的確定性規則來檢測與修正設計問題。支援 Claude Code、Cursor、Gemini CLI、Codex、Grok Build 等幾乎所有主流 AI coding 工具,並可透過 CLI、Git submodule、外掛市集或直接複製檔案等多種方式安裝。",
+      "one_liner": "一套讓 AI coding agent(如 Claude Code、Cursor、Codex)產出前端設計更有質感的技能包與規則集。",
+      "summary": "Impeccable 是針對 AI coding agent 設計的「設計語言」套件,提供 1 個 skill、24 個指令與 61 條確定性(非 LLM)偵測規則,用來對抗 AI 生成前端常見的「千篇一律」問題(如過度使用 Inter 字體、紫藍漸層、卡片疊卡片等)。它透過 PRODUCT.md/DESIGN.md 紀錄產品脈絡,並提供 audit、critique、polish 等指令供多種 AI 開發工具串接使用。",
       "category": "devtool",
       "highlights": [
-        "23 個指令涵蓋設計流程全階段:從 shape(規劃)、craft(建構)到 polish(收尾)、harden(邊界情境)一應俱全",
-        "60 條確定性檢測規則可在無 LLM、無 API key 的情況下由 CLI 或瀏覽器擴充執行,降低成本與不確定性",
-        "明確列出反樣式清單(過度使用的字體、卡片疊卡片、彈跳緩動等),直接對症 AI 生成設計的常見毛病",
-        "跨工具支援廣,Claude Code、Cursor、Codex、Grok Build、Gemini CLI 等主流 AI 開發工具幾乎都涵蓋",
-        "提供 live 瀏覽器即時迭代模式與 before/after 案例研究,展示實際效果而非空談"
+        "提供 24 個設計相關指令(polish、audit、critique、animate 等)與 61 條確定性偵測規則,CLI 與瀏覽器擴充功能可在無 LLM/API key 下執行檢查",
+        "支援眾多 AI coding 工具:Claude Code、Cursor、Codex CLI、Gemini CLI、Grok Build、GitHub Copilot 等,安裝方式多元(CLI installer、Git submodule、外掛市集、手動複製)",
+        "明確列出常見 AI 生成設計的反模式(過度使用 Inter 字體、紫藍漸層、卡片疊卡片、彈跳緩動等)作為設計指引",
+        "GitHub 累積星數高達 7 萬顆,今日再新增 304 顆,顯示社群關注度持續攀升",
+        "透過 PRODUCT.md/DESIGN.md 分離「產品長期事實」與「視覺風格」,設計上有一定的架構思考"
       ],
       "use_cases": [
-        "團隊使用 AI coding agent 開發前端產品時,統一設計語彙與品質標準",
-        "個人開發者想避免 AI 生成介面「SaaS 樣板臉」,快速提升視覺質感",
-        "在 CI 或本地流程中加入無 LLM 的確定性設計規則檢測,做基本 a11y/一致性把關",
-        "已使用 Claude Code、Cursor 等工具的專案,想擴充設計技能與指令集"
+        "使用 Claude Code、Cursor 等 AI coding agent 開發前端介面時,套用一致的設計語言避免「AI 味」設計",
+        "團隊想標準化 AI 產生 UI 的品質查核流程(a11y、效能、響應式等技術審查)",
+        "個人或新專案想快速套用一套設計原則、動畫與配色指引,加速從雛形到可上線的視覺打磨"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 撰寫非常完整,涵蓋動機、指令表、安裝方式與各工具差異,文件品質優秀;但僅能從 README 判斷,無法檢視實際程式碼與測試涵蓋範圍,故測試面向評分僅供參考。專案活躍度高,今日剛推送更新且為 GitHub trending 第 7 名、單日增長近 850 星。"
+        "comment": "README 內容詳盡,涵蓋多種工具的安裝步驟與指令說明,但因未檢視原始碼,測試品質僅能以 README 描述為準,無法確認實際測試涵蓋率;專案於 2026-09-24 有推送紀錄,且今日仍在 trending 榜單上,活躍度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "安裝方式包含 npx impeccable install 執行遠端 npm 套件程式碼,屬常見 npm 生態風險,建議安裝前確認套件來源可信",
-          "會在各 AI 工具(Codex、Grok Build 等)寫入自動執行的 hook 腳本,並要求使用者手動核准信任,提醒需留意 hook 內容再授權",
-          "未見 curl | bash 之類的高風險安裝手法,整體安裝流程透明且有版本更新機制"
+          "README 說明安裝流程會下載一個獨立執行檔(binary)至 ~/.impeccable/bin/ 並於首次執行時啟動,屬於執行外部下載程式碼的行為",
+          "多個整合對象(如 Codex、Grok Build)在 README 中被明確要求使用者需手動核准/信任 hook 才能執行,顯示該工具會安裝可自動觸發的 hook 腳本,使用前建議依官方文件確認信任範圍",
+          "僅根據 README 進行評估,未檢視原始碼或執行檔內容,無法進一步驗證實際行為"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你的團隊大量仰賴 AI coding agent 產出前端介面,這是目前少見針對「AI 設計同質化」問題提出系統性解法的工具,值得一試;但仍需留意其安裝的 hook 腳本執行權限。",
+      "verdict": "若團隊大量使用 AI coding agent 產出前端介面,這套工具值得一試,但安裝時牽涉下載執行檔與自動 hook,建議先讀懂信任機制再上線。",
       "_mode": "light"
     },
-    "total_days_on_trending": 2,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 3,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -5364,10 +5377,10 @@
   },
   "browser-use/video-use": {
     "first_seen": "2026-08-05",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-05": [
         19331,
@@ -5387,6 +5400,13 @@
         25843,
         191,
         8,
+        "Edit videos with coding agents",
+        "Python"
+      ],
+      "2026-09-24": [
+        26492,
+        746,
+        16,
         "Edit videos with coding agents",
         "Python"
       ]
@@ -9368,10 +9388,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-08-16",
+    "last_seen": "2026-09-24",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -9379,41 +9399,49 @@
         12,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
+      ],
+      "2026-09-24": [
+        49928,
+        57,
+        10,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-16",
+    "last_analyzed": "2026-09-24",
     "analysis": {
-      "one_liner": "用一個 AI 代理指令,把任何有原始碼的軟體自動生成成結構化、可被 AI 代理操作的 CLI 工具",
-      "summary": "CLI-Anything 是 HKUDS 團隊打造的超大型 monorepo,提供 Claude Code / Pi / OpenClaw / Codex 等多種 AI 代理平台的外掛與技能,透過七階段流程(分析、設計、實作、測試規劃、寫測試、文件、發布)自動把任意軟體(GIMP、Blender、LibreOffice、QGIS 等)轉換成具備 JSON 輸出、REPL、undo/redo 的 Click CLI。專案同時提供 CLI-Hub 套件管理器(pip install cli-anything-hub),讓使用者與代理可以瀏覽、安裝、更新社群貢獻的 CLI 封裝。",
       "category": "devtool",
+      "one_liner": "用 AI Agent 自動幫任何軟體(GIMP、Blender、LibreOffice 等)產生完整、可測試的 CLI 操作介面。",
+      "summary": "CLI-Anything 是一套「7 階段」的自動化流程,搭配 Claude Code / Cursor / Codex 等 AI 編碼代理,分析目標軟體的原始碼或 API,自動設計、實作、測試並打包出一支可安裝的 Python CLI(以 Click 撰寫、支援 JSON 輸出與 REPL)。專案同時提供 CLI-Hub 套件管理器,讓使用者或 Agent 用一行指令瀏覽、安裝、更新社群已產生的 CLI,目標是解決「AI 擅長推理卻不會操作真實專業軟體」的落差。",
       "highlights": [
-        "涵蓋 GIMP、Blender、LibreOffice、QGIS、FreeCAD、Godot 等 40 幾種軟體的獨立 agent-harness,每個都有自己的 Click CLI、README 與測試",
-        "README 宣稱累積 2,461+ 測試通過,實際 repo 內確實可找到數千個 test_ 函式,分散在各軟體子目錄的 tests/ 資料夾",
-        "CLI-Hub 提供跨代理平台的 meta-skill(npx skills add),讓 AI 代理自主發現、安裝、使用對應軟體的 CLI",
-        "採用 Claude Code plugin marketplace、Pi extension、OpenCode commands、Codex/Hermes/Reasonix skill 等多種代理整合方式,一套方法論適配多平台",
-        "近期紀錄顯示持續有安全強化紀錄(路徑穿越修補、defusedxml 導入防 XML 攻擊、SQLCipher 寫入保護),顯示維護者重視程式碼安全性"
+        "monorepo 內已收錄 60 多款軟體的 harness(GIMP、Blender、LibreOffice、QGIS、FreeCAD、Zoom、n8n 等),每款都附完整 README/SKILL.md/TEST.md",
+        "每個 harness 都是標準 pip 套件(setup.py + console_scripts entry point),用 Click 實作,支援 --json 輸出與互動 REPL,設計一致性高",
+        "同時支援多種 Agent 平台(Claude Code plugin、Cursor plugin、OpenClaw skill、Codex skill、Hermes、Reasonix 等),安裝方式各自獨立成腳本",
+        "CLI-Hub(pip install cli-anything-hub)提供 install/update/uninstall 的套件管理體驗,並有 public_registry.json 收錄第三方 CLI 資訊",
+        "測試覆蓋量體很大(單一 GIMP harness 就有 78 個測試案例,README 宣稱全專案 2,461+ 測試通過),但 CI 目前只驗證 skill/plugin 結構,未見統一跑全部 harness 測試套件的 workflow"
       ],
       "use_cases": [
-        "想讓 Claude Code / OpenClaw 等 AI 代理直接操控 GIMP、Blender、LibreOffice 等桌面軟體,而非用截圖點擊的 UI 自動化",
-        "團隊有內部工具或舊系統想快速包裝成 CLI,讓代理可用結構化 JSON 指令操作,取代脆弱的 API 拼接",
-        "研究如何用 7 階段方法論(分析→設計→實作→測試→文件→發布)自動生成 production-ready 的 CLI 封裝",
-        "透過 CLI-Hub 直接安裝社群已完成的軟體 CLI(如 Zotero、Joplin、n8n),不必自己重新生成"
+        "需要讓 AI Agent 操作沒有官方 API 的桌面/GUI 軟體(如 Blender、GIMP、LibreOffice)時,用生成的 CLI 取代脆弱的 GUI 自動化",
+        "想把一堆分散的第三方 Web API/SDK 統一包裝成單一、有狀態的 CLI 給 Agent 使用",
+        "透過 CLI-Hub 快速安裝社群已經做好的軟體 CLI,不必自己重新產生 harness",
+        "研究「AI 生成可維護 CLI 工具」的方法論與 7 階段流程(HARNESS.md)當作團隊內部工具鏈參考"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "文件極為詳盡(多語系 README、每個子專案有獨立 md 文件),測試覆蓋率高且分層(unit + E2E),抽樣的原始碼(如 3MF parser)具備型別註記、dataclass、清楚的 docstring,品質整齊。GitHub Actions 涵蓋 skill 驗證、PR labeler 測試、CLI-Hub 自動發布,活躍度非常高(每日多筆更新、社群 PR 持續合併)。"
+        "comment": "文件量極其豐富(多語系 README、每個 harness 各自的 README/SKILL.md/TEST.md、HARNESS.md 方法論文件),對開發者與 Agent 都友善。測試方面每個 harness 都內建 unit + e2e 測試(單一模組即有 70~200 多個案例),但目前 CI workflow 只驗證 skill 檔案結構與外掛設定,並未見到會實際跑遍所有 harness pytest 套件的自動化流程,測試證據多半仰賴 PR 描述與人工檢查。專案活躍度非常高,commit/News 幾乎每日更新,結構龐大且仍在快速擴張中。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "部分子專案(如 quietshrink)的錯誤訊息會引導使用者執行第三方 install.sh(curl | bash 模式)來安裝外部依賴軟體,這是常見的第三方安裝說明模式,並非本專案自身執行的程式碼",
-          "各平台 skill 安裝腳本(pi-extension/install.sh、codex-skill/scripts/install.sh 等)會將檔案複製到使用者家目錄下的代理設定資料夾,屬正常的本地安裝流程,未發現對外連線或可疑網域"
+          "cli-hub 套件管理器(cli-hub/cli_hub/installer.py)在安裝流程中,若 registry 條目的 install_cmd 含有管線字元(如 |、&&、;)就會以 subprocess shell=True 直接執行整段字串;程式註解表示指令「來自可信任的 registry」,但 registry.json / public_registry.json 是可透過社群 PR 新增條目的檔案",
+          "public_registry.json 與部分 harness(如 quietshrink)的錯誤提示訊息中,包含要求使用者手動執行 curl | bash 或 PowerShell iwr | iex 來安裝第三方上游工具(如 Android CLI、jimeng CLI、quietshrink)的指令,這些是文件建議動作,並非本專案自動執行",
+          "本專案自身的 setup.py / install.sh 只做標準的檔案複製與 pip 套件安裝,未發現 npm 生命週期腳本或安裝時下載執行外部程式碼的行為"
         ]
       },
-      "star_rating": 5,
-      "verdict": "巨大且高度活躍的社群專案,方法論成熟、測試紮實、文件完整,對想讓 AI 代理操控真實軟體的開發者非常值得關注與試用。",
+      "star_rating": 4,
+      "verdict": "概念新穎、文件與規模都做得很扎實,若你需要讓 AI Agent 操作沒有 API 的桌面軟體,值得研究其 harness 設計與 CLI-Hub 生態,但透過 cli-hub 安裝第三方 CLI 時建議先檢視該條目的 install_cmd 內容再執行。",
       "_mode": "full"
     }
   },
@@ -10558,10 +10586,10 @@
   },
   "agent-substrate/substrate": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-21": [
         1396,
@@ -10574,6 +10602,13 @@
         2977,
         245,
         2,
+        "Agent Substrate: the core system",
+        "Go"
+      ],
+      "2026-09-24": [
+        3495,
+        558,
+        8,
         "Agent Substrate: the core system",
         "Go"
       ]
@@ -20102,10 +20137,10 @@
   },
   "Open-Dev-Society/OpenStock": {
     "first_seen": "2026-09-20",
-    "last_seen": "2026-09-22",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-20": [
         16043,
@@ -20125,6 +20160,13 @@
         17732,
         844,
         3,
+        "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+        "TypeScript"
+      ],
+      "2026-09-24": [
+        18825,
+        344,
+        7,
         "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
         "TypeScript"
       ]
@@ -20440,10 +20482,10 @@
   },
   "BuilderIO/agent-native": {
     "first_seen": "2026-09-21",
-    "last_seen": "2026-09-22",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-21": [
         5215,
@@ -20456,6 +20498,13 @@
         5905,
         607,
         1,
+        "A framework for building agentic apps",
+        "TypeScript"
+      ],
+      "2026-09-24": [
+        6545,
+        87,
+        4,
         "A framework for building agentic apps",
         "TypeScript"
       ]
@@ -20499,10 +20548,10 @@
   },
   "anthropics/financial-services": {
     "first_seen": "2026-09-21",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-21": [
         35368,
@@ -20521,6 +20570,13 @@
       "2026-09-23": [
         36341,
         438,
+        1,
+        "",
+        "Python"
+      ],
+      "2026-09-24": [
+        36940,
+        664,
         1,
         "",
         "Python"
@@ -20710,10 +20766,10 @@
   },
   "mvt-project/mvt": {
     "first_seen": "2026-09-22",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-22": [
         13593,
@@ -20726,6 +20782,13 @@
         14111,
         441,
         6,
+        "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+        "Python"
+      ],
+      "2026-09-24": [
+        14481,
+        543,
+        13,
         "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "Python"
       ]
@@ -20812,15 +20875,22 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-23": [
         15403,
         255,
         3,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ],
+      "2026-09-24": [
+        16327,
+        1142,
+        6,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
       ]
@@ -20859,15 +20929,22 @@
   },
   "davila7/claude-code-templates": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-23": [
         31127,
         64,
         4,
+        "CLI tool for configuring and monitoring Claude Code",
+        "Python"
+      ],
+      "2026-09-24": [
+        31498,
+        389,
+        3,
         "CLI tool for configuring and monitoring Claude Code",
         "Python"
       ]
@@ -20911,15 +20988,22 @@
   },
   "google/ax": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-23": [
         7603,
         2305,
         5,
+        "Google's open agentic orchestration runtime",
+        "Go"
+      ],
+      "2026-09-24": [
+        9055,
+        1543,
+        2,
         "Google's open agentic orchestration runtime",
         "Go"
       ]
@@ -20959,15 +21043,22 @@
   },
   "superdesigndev/treg": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-23": [
         2222,
         230,
         7,
+        "OpenRouter for agent tools. Join community here:https://discord.gg/6mQYYfFMAn",
+        "Python"
+      ],
+      "2026-09-24": [
+        2718,
+        506,
+        11,
         "OpenRouter for agent tools. Join community here:https://discord.gg/6mQYYfFMAn",
         "Python"
       ]
@@ -21005,6 +21096,209 @@
       },
       "star_rating": 4,
       "verdict": "工程品質與安全意識都在開源專案中名列前茅，適合正在幫 agent 接第三方 API 或想自架憑證代理的團隊評估，但因其核心功能涉及集中託管使用者密鑰，導入前務必先理解其信任模型與自架時的金鑰備份責任。",
+      "_mode": "full"
+    }
+  },
+  "strands-agents/harness-sdk": {
+    "first_seen": "2026-09-24",
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-24": [
+        7843,
+        115,
+        9,
+        "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-24",
+    "analysis": {
+      "one_liner": "AWS Strands 團隊維護的正式生產級 AI Agent SDK,提供 Python/TypeScript 雙語言支援與「開箱即用」的 harness 封裝。",
+      "summary": "strands-agents/harness-sdk 是一個 monorepo,包含 Strands Agents 的核心 SDK(Python 與 TypeScript)以及封裝好的「harness」(create_harness() / createHarness()),讓開發者只需一行程式碼就能取得具備模型無關、工具呼叫、記憶、Session、MCP、多代理協作與可觀測性(tracing)等能力的生產級 Agent。目標是取代開發者自行手刻的 agent loop,同時保留深入客製化的彈性。",
+      "category": "ai-ml",
+      "highlights": [
+        "由 AWS 主導開發,對 Amazon Bedrock、Anthropic、OpenAI、Gemini 等多家模型廠商提供第一級支援",
+        "harness 概念將『組裝好的最佳實踐 Agent』與『可自行掌控的底層 SDK』分層,兼顧易用性與彈性",
+        "內建 sandbox(本機/Docker/SSH)、guardrails、hooks、middleware 等生產環境所需的安全與治理機制,且對 SSH 選項有明確的白名單防護(拒絕 ProxyCommand、Include 等危險選項)",
+        "CI/CD 高度成熟,含 50+ GitHub Actions workflow,針對 Python、TypeScript、CLI、MCP 皆各自設有 test-lint、integration-test、security-audit 等獨立流程",
+        "同時支援 MCP(Model Context Protocol)與 A2A(Agent-to-Agent)協作模式,並附有官方 CLI 與文件站原始碼"
+      ],
+      "use_cases": [
+        "需要快速建立具備生產級預設值(context 管理、重試、限流、tracing)的 AI Agent,而不想從零打造 agent loop",
+        "多模型雲端部署場景,需要在 Bedrock、Anthropic、OpenAI、Gemini 間切換或路由",
+        "需要多代理協作(swarm/graph)、MCP 工具整合或 Agent 沙盒執行(Docker/SSH)的進階應用",
+        "希望有現成 CLI 可在終端機直接與 Agent 互動、進行原型驗證的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整,除了根目錄 README 外,site/ 下有完整的 Astro/Starlight 文件站與大量範例;程式碼採嚴格型別(mypy strict、TypeScript strict)與 Google 風格 docstring,ruff/eslint 規則齊備。測試涵蓋 unit 與 integration(兩種語言皆有),並搭配 pytest-xdist、vitest、coverage 報表。專案每日都有 commit,PR 與 release 流程高度自動化(自動化 PR 標籤、複雜度分析、changelog 同步),屬於維運非常活躍的成熟專案。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "AWS 官方背書、工程成熟度極高的生產級 Agent SDK,無論是想要開箱即用的 harness 或想深度客製的底層 SDK,都值得立即關注與嘗試。",
+      "_mode": "full"
+    }
+  },
+  "DeusData/codebase-memory-mcp": {
+    "first_seen": "2026-09-24",
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-24": [
+        44565,
+        190,
+        14,
+        "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-09-24",
+    "analysis": {
+      "one_liner": "用純 C 打造的高效能程式碼知識圖譜 MCP 伺服器,讓 AI coding agent 用結構化查詢取代大量 grep/read,大幅省 token。",
+      "summary": "codebase-memory-mcp 是一個零依賴的原生執行檔,透過 tree-sitter 解析 162 種語言的原始碼,建立函式、類別、呼叫鏈、HTTP 路由等的持久化知識圖譜,並以 17 個 MCP 工具供 Claude Code、Codex、Cursor 等 45 種 AI 編碼代理查詢。它解決的問題是 AI agent 探索大型程式庫時需要大量檔案讀取與 grep 造成的 token 浪費(官方數據宣稱減少 99% token),並額外提供 Hybrid LSP 語意型別解析、死碼偵測、Cypher 查詢、3D 圖形化 UI 等進階功能。",
+      "category": "devtool",
+      "highlights": [
+        "純 C 實作、單一靜態執行檔、無語言執行環境依賴,支援 macOS/Linux/Windows,並可透過 npm/PyPI/Homebrew/Scoop/AUR/Nix 等多種通路安裝",
+        "支援 162 種 tree-sitter 語言文法,並為 Python、TS/JS、PHP、C#、Go、C/C++、Java、Kotlin、Rust、Perl 提供自建的 Hybrid LSP 語意型別解析層",
+        "17 個 MCP 工具涵蓋結構搜尋、語意搜尋(內建 Nomic embedding)、Cypher 查詢、git diff 影響分析、死碼偵測、跨服務 HTTP/gRPC/GraphQL 連結等",
+        "自動偵測並設定 45 種 AI 代理用戶端(Claude Code、Codex、Cursor、Windsurf 等),並提供分層 Scout/Verify/Auditor 權限模型",
+        "發布流程含 VirusTotal 掃描、SLSA Level 3 build provenance、Sigstore 簽章、SHA-256 checksum、CodeQL 掃描等多層驗證",
+        "README 極長且細節龐雜(近千行),部分描述(如 arXiv 論文、8060 測試、精確效能數字)缺乏第三方獨立驗證來源"
+      ],
+      "use_cases": [
+        "AI coding agent(如 Claude Code、Cursor)在大型/超大型程式庫中做架構理解、函式呼叫鏈追蹤,減少逐檔讀取成本",
+        "團隊想在多語言(單一 repo 含多種語言)專案中做跨檔案、跨服務(HTTP/gRPC/GraphQL)呼叫關係分析與死碼偵測",
+        "需要對程式碼變更做風險評估(git diff 影響範圍分析)以輔助 code review 或自動化測試決策",
+        "研究或評估 LLM 輔助程式碼探索的 token 效率與工具調用次數優化方案"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極其詳盡(README 近 900 行 + docs/ 目錄下多份專題文件),測試涵蓋 125+ 個 C 測試檔案並含 fuzz corpus,CI 流程齊全(CodeQL、smoke、soak、release、scorecard 等),原始碼有清楚的模組化架構(src/store、src/cypher、src/daemon 等)與精細的邊界情況註解,顯示成熟的工程實踐;抽樣的 store.c、install.js 程式碼風格一致、命名清楚,對安全與併發情境處理得相當仔細。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "npm 套件的 package.json 含 postinstall 腳本(node install.js),會於安裝時從 GitHub Releases 下載平台對應的原生執行檔;這是原生二進位 npm 套件的常見做法(類似 esbuild),install.js 內有 HTTPS-only 限制、SHA-256 checksum 校驗、tar/zip 內容白名單檢查、路徑穿越防護、原子性檔案替換等多重防護機制,程式碼品質良好",
+          "README 提供的 curl | bash 與 PowerShell irm | iex 一鍵安裝指令為業界常見模式,官方也同時提供手動下載 + 校驗 checksums.txt 的替代做法,並建議 Windows 使用者先用 notepad 檢視腳本內容再執行",
+          "README 提及 Windows Defender 可能將發布的執行檔誤判為 Trojan:Script/Wacatac.B!ml,專案聲稱這是已知的誤判且提供 VirusTotal 掃描結果佐證,此為官方自述,未獨立驗證"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與安全實踐在 GitHub trending 專案中相當突出,若工作流程涉及大型多語言程式庫的 AI agent 輔助開發,值得一試;但部分行銷性質的效能與研究宣稱建議自行實測驗證。",
+      "_mode": "full"
+    }
+  },
+  "harry7557558/spirula-studio": {
+    "first_seen": "2026-09-24",
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-24": [
+        739,
+        69,
+        15,
+        "Cross-vendor 3D Gaussian Splatting trainer - video to splat to mesh, Vulkan or CUDA.",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-09-24",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "跨廠牌(NVIDIA/AMD/Intel/Apple)GPU 皆可跑的 3D Gaussian Splatting 訓練器,從影片到 splat 到網格一條龍,單一執行檔搞定。",
+      "summary": "Spirula Studio 是一個以純 C++ 打造的 3D Gaussian Splatting 全流程工具,涵蓋影片抽幀、AI 遮罩、內建 SfM(結構重建)、訓練、量化、以及網格化輸出,提供 Vulkan(跨廠牌)與 CUDA(NVIDIA 專用)兩種後端。它拿掉了 Nerfstudio/gsplat/PyTorch 依賴,把整個管線改寫成單一自足的執行檔,不需要另外安裝 Python 或 COLMAP。",
+      "highlights": [
+        "雙後端(Vulkan/CUDA)並行維護,每個 kernel 變更都要求同時有 CUDA 實作、Slang(Vulkan)實作、以及對照測試,避免兩邊行為分歧",
+        "自帶結構重建(SfM)、AI 分割遮罩(SAM2/SAM3)、ALIKED/LoMa 特徵匹配、Metric3D/MoGe 深度模型,全部原生整合不假手 Python",
+        "文件與工程規範極度詳盡(AGENTS.md 近700行),包含註解長度預算、i18n(13種語言)強制檢查、生成檔案不可手改等自動化 lint",
+        "測試覆蓋廣泛,超過70個 C++ 測試檔涵蓋 SfM、渲染、量化、mesh 等子系統,CI 涵蓋 Linux/macOS/Windows 三平台實際編譯+冒煙測試",
+        "作者主動揭露 GPLv3 授權下的專利風險(H.264/H.265/AV1 解碼),預設關閉並清楚說明開啟後的法律責任"
+      ],
+      "use_cases": [
+        "需要在非NVIDIA顯卡(AMD/Intel/Apple Silicon)上訓練3DGS模型的研究者或愛好者",
+        "想要一條龍(影片→重建→訓練→網格)而不想搭建 COLMAP+PyTorch 環境的使用者",
+        "在低VRAM(8GB)環境下訓練大規模高品質splat場景的應用",
+        "遠端/雲端GPU訓練並透過瀏覽器檢視進度的CLI使用情境"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與工程紀律在 GitHub 專案中屬於少見的高水準,AGENTS.md、docs/notes/ 大量記錄了設計取捨與踩過的坑;測試涵蓋核心運算與跨後端對照;CI 在三平台上實際建置並冒煙測試而非僅語法檢查;近一個月內持續有功能更新(metric scale、LoMa支援等),活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "GUI 在使用者同意授權條款後,會於執行期間從 Hugging Face(huggingface.co)下載 SAM2/SAM3 分割模型權重,此為常見的 ML 工具作法且有明確授權提示,非安裝腳本自動觸發",
+          "建置選項 SS_ENABLE_PATENTED 預設關閉,若使用者手動開啟會編譯 H.264/H.265/AV1 相關解碼器,專案文件已明確揭露其專利風險並要求使用者自行評估轄區合規性"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "工程品質與文件紀律在同類開源專案中名列前茅,對做3DGS或想理解大型C++跨後端GPU專案架構的工程師都非常值得研究。",
+      "_mode": "full"
+    }
+  },
+  "TNT-Likely/PanWatch": {
+    "first_seen": "2026-09-24",
+    "last_seen": "2026-09-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-24": [
+        1504,
+        95,
+        17,
+        "盯盘侠 PanWatch · 自托管 AI 盯盘助手，集成 TradingAgents 多 Agent 投资决策 | A股/港股/美股实时监控、持仓管理、智能分析、全渠道推送",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-24",
+    "analysis": {
+      "one_liner": "自托管的 AI 盯盤助手,整合 TradingAgents 多 Agent 框架,提供 A股/港股/美股即時監控與智能投研決策。",
+      "summary": "PanWatch(盯盤俠)是一個 FastAPI + React 打造的自托管股票監控系統,核心賣點是接入開源的 TradingAgents(76k+ star)多 Agent 投研框架,在持倉頁一鍵觸發「技術/情緒/新聞/基本面分析師 → 多空辯論 → 風控審查 → PM 決策」的完整推理鏈,並支援多市場、多帳戶管理與全渠道通知推送。專案結構清晰,拆分為主應用與多個可獨立發布的內部套件(marketdata、pan-agent-runtime 等),測試覆蓋相當完整。",
+      "category": "ai-ml",
+      "highlights": [
+        "深度整合 TradingAgents 多 Agent 決策框架,提供辯論式 AI 投研分析而非單純技術指標堆疊",
+        "採 monorepo 架構,將行情資料層(marketdata)、Agent 執行期(pan-agent-runtime)拆成獨立套件,各自附完整單元測試",
+        "支援 A股/港股/美股多市場、多券商帳戶,並整合超過十種免費行情/資訊資料源做自動容錯備援",
+        "全渠道通知(Telegram/企業微信/釘釘/飛書/Bark/Webhook)與可選 OpenTelemetry 可觀測性導出",
+        "CI 在每次 push/tag 都會跑主專案與 marketdata 套件的 pytest,並自動建置多架構 Docker 映像發布"
+      ],
+      "use_cases": [
+        "個人投資者想要自架、資料不外流的 AI 盯盤與選股輔助工具",
+        "想要研究如何用 LangGraph/TradingAgents 打造多 Agent 辯論式投資決策系統的開發者",
+        "需要示範 FastAPI + APScheduler + 多資料源容錯架構的實務參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 詳盡(含架構說明、環境變數表、OTel 導出教學),CONTRIBUTING/AGENTS.md 齊全;tests/ 目錄下有 150+ 測試檔涵蓋認證、Agent 排程、資料源容錯、PDF 匯出等場景,子套件(marketdata、pan-agent-runtime)也各自有測試,CI 於 push/tag 時執行 pytest。近期(2026-09-21)仍在持續發布,活躍度高。扣分點在於未見覆蓋率報告或 lint/type-check 的 CI 步驟。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "認證模組使用未加鹽的 SHA-256 對密碼做雜湊(src/modules/administration/api/auth.py),而非 bcrypt/argon2 等專用密碼雜湊演算法,若資料庫外洩則較容易被暴力破解或查表還原",
+          "requirements.txt 內的核心依賴 tradingagents 透過 git+https 直接指向外部 GitHub 倉庫的特定 tag(非 PyPI 套件),安裝時會執行該倉庫的程式碼,使用者需自行信任該上游來源",
+          "Docker 容器首次啟動時會自動下載安裝 Playwright Chromium 瀏覽器(README 已明確說明此行為,並提供 PLAYWRIGHT_SKIP_BROWSER_INSTALL 環境變數可關閉)"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試覆蓋在同類自托管量化/AI盯盤專案中屬上乘,結合 TradingAgents 的多 Agent 投研辯論是明確差異化賣點,值得對 AI 選股/自架金融工具有興趣的工程師關注與試用。",
       "_mode": "full"
     }
   }
