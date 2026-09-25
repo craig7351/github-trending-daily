@@ -1142,8 +1142,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 1,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1236,6 +1236,13 @@
         5,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-25": [
+        291233,
+        611,
+        10,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-24",
@@ -1274,8 +1281,8 @@
       "verdict": "如果你的日常工作是用 Claude Code 之類的代理人自主寫程式,這套「流程即提示詞」框架值得一試;但它是方法論/提示詞集合而非可執行程式庫,價值取決於你是否認同其強制流程哲學。",
       "_mode": "full"
     },
-    "total_days_on_trending": 14,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 15,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -9388,10 +9395,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -9404,6 +9411,13 @@
         49928,
         57,
         10,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ],
+      "2026-09-25": [
+        50331,
+        413,
+        8,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
       ]
@@ -12129,10 +12143,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-09-10",
+    "last_seen": "2026-09-25",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -12175,38 +12189,45 @@
         11,
         "Learn it. Build it. Ship it for others.",
         "Python"
+      ],
+      "2026-09-25": [
+        56557,
+        347,
+        1,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-10",
+    "last_analyzed": "2026-09-25",
     "analysis": {
+      "one_liner": "一套從數學基礎打底、手刻到 LLM 與多智能體系統的超大型 AI 工程教學課程,共 20 個階段、523 堂課。",
+      "summary": "此專案是一套結構完整的自學課程,涵蓋線性代數、機器學習、深度學習、電腦視覺、NLP、Transformer、生成式 AI、LLM 從零打造、多模態、工具協定(MCP)、智能體工程、多智能體/群體系統到生產維運與倫理安全,共 20 個階段、523 堂課,提供 Python、TypeScript、Rust、Julia 四種語言實作。每堂課採「先手刻演算法、再用正式框架」的固定架構,並產出可直接使用的 prompt、skill、agent 或 MCP server 作為成果物。",
       "category": "learning-resource",
-      "one_liner": "一套從數學基礎到自主 AI 代理都親手實作的超大型 AI 工程課程,含 523 堂課、20 個階段。",
-      "summary": "此專案是一套結構化的 AI 工程學習曲線,涵蓋線性代數、機器學習、深度學習、電腦視覺、NLP、Transformer、LLM、多代理系統到正式上線基礎設施共 20 個階段、523 堂課,每堂課都要求「先手刻演算法、再用正式框架」並產出可重複使用的成品(prompt、skill、agent、MCP server)。內容以 Python 為主,搭配 TypeScript、Rust、Julia,並整合 Claude Code / Codex 等 AI 代理作為互動式家教,同時提供多國語系 README 與可下載的 EPUB/PDF 書籍。",
       "highlights": [
-        "20 個階段、523 堂課,從線性代數一路涵蓋到多代理群、強化學習與正式上線維運",
-        "每堂課都要求先手刻演算法(Build It)再對照正式函式庫(Use It),並產出實際可用的 prompt/skill/agent/MCP artifact",
-        "透過 `npx skills add` 可把課程包裝成 Claude Code、Codex 等 AI 代理可直接呼叫的技能,做為互動家教使用",
-        "CI 相當完整,涵蓋教材一致性稽核、各課程程式的單元測試、靜態網站建置、翻譯同步、題庫去偏誤等多項自動化檢查",
-        "抽查的核心程式碼(如 Phase 14 的 agent loop 範例)風格乾淨、型別標註完整、附帶對應單元測試"
+        "規模驚人:523 堂課涵蓋從線性代數到多智能體群體系統的完整 AI 工程學習路徑,並附六冊電子書(EPUB/PDF)由 CI 自動建置",
+        "「Build It / Use It」教學骨架清晰:每課先用純 Python 手刻演算法(如 Agent Loop、Backprop、Attention),再對照 PyTorch/sklearn 等正式框架實作,教學設計扎實",
+        "CI 流程相當完整:包含課程內容一致性稽核、多語系翻譯同步、測驗去偏、SEO 路由測試、技能包裝驗證等十幾項自動化檢查,並有機器人自動同步 README 統計與網站資料",
+        "支援作為 AI 教學助理直接安裝(npx skills add),可整合進 Claude Code、Codex 等具技能系統的 Coding Agent 中互動式教學",
+        "抽樣程式碼品質良好:型別註記完整、使用 dataclass、錯誤處理清楚,且多數課程(尤其 Phase 13/14/19)附有對應單元測試"
       ],
       "use_cases": [
-        "想系統性地把 AI/ML 從數學基礎補到 LLM 與 Agent 工程的自學者",
-        "想要在 Claude Code / Codex 等工具中安裝互動式 AI 家教技能,邊做邊學的工程師",
-        "需要一套教材範例來規劃內部 AI 工程訓練課程或工作坊的講師",
-        "準備 Claude 官方認證考試,尋找對應練習題與實作 lab 的考生"
+        "想系統性地從數學與經典 ML 打底,一路學到 LLM、Agent、MCP 協定與多智能體架構的自學者或團隊教育訓練",
+        "希望搭配 Claude Code / Codex 等 Coding Agent,以互動式技能(skill)模式邊做邊學的工程師",
+        "準備 Claude 官方認證考試(Associate/Developer/Architect Foundations 等)的考生,可用內建的認證學習路徑",
+        "需要快速查找特定主題(如 attention、agent loop、RAG、量化)可運行範例程式碼作為參考實作的開發者"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "文件品質極高,每堂課都附有敘事文件、程式碼、輸出成品與測驗,README 結構清楚且有多國語系版本。抽查的多個課程資料夾都附帶對應的 unit test(unittest/tsx --test),CI 流程涵蓋教材稽核、測試執行、網站建置與題庫去偏誤等,自動化程度相當高。近期仍持續有推送(2026-09-07),活躍度高。扣分點在於部分課程的『測試』偏向驗證資料結構而非深度邏輯覆蓋,且如此龐大的內容量難以保證每堂課品質一致。"
+        "comment": "文件極為完整,README 提供 12 種語言版本,每堂課皆有 docs/en.md 教學文本、code 範例與 outputs 產出物。測試涵蓋率高但非百分之百,Phase 13(MCP)、Phase 14 後段與 Phase 19(Capstone)幾乎每課都有 tests/,CI 亦會針對 stdlib 課程實際執行測試;抽樣的 agent_loop.py 程式碼風格乾淨、型別完整。專案活躍度極高,最後推送為今日,CI 內含十餘項自動化稽核與機器人自我修復流程(README 統計同步、網站資料重建)。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 4,
-      "verdict": "內容量與工程紀律都相當紮實,對想系統性補齊 AI 工程知識的人值得一看,但 523 堂課規模龐大,建議先用內建的分級測驗找到適合自己的起點,而非從頭看到尾。",
+      "star_rating": 5,
+      "verdict": "內容扎實、結構嚴謹且持續高頻更新的 AI 工程百科全書式教材,值得收藏並實際跟著動手做。",
       "_mode": "full"
     }
   },
@@ -20548,10 +20569,10 @@
   },
   "anthropics/financial-services": {
     "first_seen": "2026-09-21",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-21": [
         35368,
@@ -20578,6 +20599,13 @@
         36940,
         664,
         1,
+        "",
+        "Python"
+      ],
+      "2026-09-25": [
+        37356,
+        509,
+        7,
         "",
         "Python"
       ]
@@ -20766,10 +20794,10 @@
   },
   "mvt-project/mvt": {
     "first_seen": "2026-09-22",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-22": [
         13593,
@@ -20789,6 +20817,13 @@
         14481,
         543,
         13,
+        "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+        "Python"
+      ],
+      "2026-09-25": [
+        14731,
+        272,
+        9,
         "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
         "Python"
       ]
@@ -20875,10 +20910,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -20891,6 +20926,13 @@
         16327,
         1142,
         6,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ],
+      "2026-09-25": [
+        17644,
+        1082,
+        3,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
       ]
@@ -20988,10 +21030,10 @@
   },
   "google/ax": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-23": [
         7603,
@@ -21004,6 +21046,13 @@
         9055,
         1543,
         2,
+        "Google's open agentic orchestration runtime",
+        "Go"
+      ],
+      "2026-09-25": [
+        10445,
+        1373,
+        4,
         "Google's open agentic orchestration runtime",
         "Go"
       ]
@@ -21043,10 +21092,10 @@
   },
   "superdesigndev/treg": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-23": [
         2222,
@@ -21059,6 +21108,13 @@
         2718,
         506,
         11,
+        "OpenRouter for agent tools. Join community here:https://discord.gg/6mQYYfFMAn",
+        "Python"
+      ],
+      "2026-09-25": [
+        3162,
+        468,
+        13,
         "OpenRouter for agent tools. Join community here:https://discord.gg/6mQYYfFMAn",
         "Python"
       ]
@@ -21101,15 +21157,22 @@
   },
   "strands-agents/harness-sdk": {
     "first_seen": "2026-09-24",
-    "last_seen": "2026-09-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-24": [
         7843,
         115,
         9,
+        "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+        "Python"
+      ],
+      "2026-09-25": [
+        8259,
+        455,
+        11,
         "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
         "Python"
       ]
@@ -21299,6 +21362,247 @@
       },
       "star_rating": 4,
       "verdict": "工程品質與測試覆蓋在同類自托管量化/AI盯盤專案中屬上乘,結合 TradingAgents 的多 Agent 投研辯論是明確差異化賣點,值得對 AI 選股/自架金融工具有興趣的工程師關注與試用。",
+      "_mode": "full"
+    }
+  },
+  "vectorize-io/hindsight": {
+    "first_seen": "2026-09-25",
+    "last_seen": "2026-09-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-25": [
+        27782,
+        1668,
+        2,
+        "Hindsight: Agent Memory That Learns",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-25",
+    "analysis": {
+      "one_liner": "Hindsight 是一套讓 AI Agent 具備「學習型記憶」而非單純對話紀錄回溯的記憶系統。",
+      "summary": "Hindsight 主打取代傳統 RAG 與知識圖譜做法,透過 Retain(存入)、Recall(檢索)、Reflect(反思生成)三大操作,讓 Agent 能從互動中持續學習並累積「心智模型」。專案宣稱在 LongMemEval 長期記憶基準測試上取得業界最佳表現,並提供 Docker、pip、Helm、內嵌式 Python 等多種部署方式,搭配 Python/Node.js/Go/CLI 多語言 SDK 與 60 多種第三方整合(含 Claude Code、Cursor、LangChain 等)。",
+      "category": "ai-ml",
+      "highlights": [
+        "三段式記憶架構 Retain / Recall / Reflect,強調「學習」而非單純記憶檢索",
+        "宣稱在 LongMemEval 基準測試上達 SOTA,且由 Virginia Tech Sanghani Center 與 Washington Post 獨立驗證重現",
+        "部署選項齊全:Docker、pip、Helm/Kubernetes、內嵌式 Python(無需伺服器)、託管雲端服務皆支援",
+        "支援 25+ LLM 供應商與 60+ 整合,包含主流 coding agent(Claude Code、Cursor、Copilot)與 agent 框架(LangChain、LlamaIndex、CrewAI)",
+        "今日登上 GitHub Trending 第 2 名,單日新增 1668 星,聲量成長非常快速"
+      ],
+      "use_cases": [
+        "為既有 LLM 應用或 Agent 快速加上長期記憶能力(透過 LLM Wrapper 兩行程式碼整合)",
+        "需要跨對話、跨 session 持續學習使用者偏好與背景資訊的個人化助理",
+        "企業內部自架記憶服務(PostgreSQL / Oracle AI Database),或直接串接 Hindsight Cloud 託管方案",
+        "比較不同記憶系統(RAG、知識圖譜、Hindsight)效能與成本的研究/評估用途"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,含目錄、快速上手、多平台部署表格、基準測試連結與論文引用,文件品質相當高;測試部分僅能依 README 判斷,未檢視原始碼,無法確認實際測試覆蓋率。近期持續有 release 且今日剛推送更新,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "CLI 安裝方式包含 curl 直接 pipe 到 bash 的指令(curl -fsSL https://hindsight.vectorize.io/get-cli | bash),使用前建議先檢視腳本內容",
+          "Docker 執行需掛載資料卷並傳入 LLM API Key 環境變數,屬正常自架流程,未見異常權限需求"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "文件完整、部署方式多元且有第三方基準驗證背書,加上今日爆量成長,值得列入 Agent 記憶系統相關資源清單追蹤。",
+      "_mode": "light"
+    }
+  },
+  "NVIDIA/Model-Optimizer": {
+    "first_seen": "2026-09-25",
+    "last_seen": "2026-09-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-25": [
+        4079,
+        44,
+        5,
+        "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-25",
+    "analysis": {
+      "one_liner": "test",
+      "summary": "test summary",
+      "category": "ai-ml",
+      "highlights": [
+        "a",
+        "b",
+        "c"
+      ],
+      "use_cases": [
+        "a",
+        "b"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "test"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "test verdict",
+      "_mode": "full"
+    }
+  },
+  "FxEmbed/FxEmbed": {
+    "first_seen": "2026-09-25",
+    "last_seen": "2026-09-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-25": [
+        5364,
+        182,
+        6,
+        "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-25",
+    "analysis": {
+      "category": "web",
+      "one_liner": "將 X/Twitter、Bluesky、Instagram、TikTok 等貼文連結轉換成 Discord/Telegram 可完整預覽的嵌入服務。",
+      "summary": "FxEmbed(前身 FxTwitter/FixupX)是一個部署在 Cloudflare Workers 上的嵌入代理服務,透過改寫網域(如 fxtwitter.com、fxbsky.app)讓 Discord、Telegram 等平台能正確顯示多圖、影片、投票與翻譯內容。專案以 TypeScript + Hono 框架撰寫,同時支援自架(Docker/Wrangler)與官方託管服務。",
+      "highlights": [
+        "採用 Hono 框架搭配自訂『realm』路由機制,同時代理 Twitter/X、Bluesky、Instagram、TikTok、Mastodon、Threads 等多平台",
+        "測試覆蓋非常完整,test/ 目錄下有超過 50 個 vitest 測試檔案,涵蓋各平台的 API、認證流程與邊界案例",
+        "CI 設有獨立的 build、tests、eslint、deploy workflow,持續整合成熟",
+        "提供完整 Docker 化自架方案,並清楚說明 CREDENTIAL_KEY 等執行期密鑰的注入方式",
+        "有專屬文件站(docs.fxembed.com)與 API Reference,文件相對完整"
+      ],
+      "use_cases": [
+        "需要在 Discord/Telegram 群組正確預覽 X、Bluesky、Instagram、TikTok 貼文(含多圖、影片、投票)",
+        "想要自架私有的社群媒體嵌入代理服務以避免依賴公用服務",
+        "學習如何用 Cloudflare Workers + Hono 打造多租戶網域路由與多平台代理服務的架構參考"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼組織清晰,依 realms/providers/helpers 分層,型別使用 TypeScript 嚴謹;測試數量與涵蓋範圍在同類專案中屬上乘;CI 有 build/test/lint/deploy 四條 pipeline,近期(2026-09-24)仍持續提交,活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "工程實作紮實、測試完善且持續維護,對需要社群媒體嵌入或想學習 Cloudflare Workers 多平台代理架構的工程師值得一看。",
+      "_mode": "full"
+    }
+  },
+  "julyx10/lap": {
+    "first_seen": "2026-09-25",
+    "last_seen": "2026-09-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-25": [
+        2874,
+        122,
+        12,
+        "An offline-first photo manager for large local libraries",
+        "Vue"
+      ]
+    },
+    "last_analyzed": "2026-09-25",
+    "analysis": {
+      "category": "app",
+      "one_liner": "用 Tauri + Rust + Vue 打造的離線優先本機相片管理工具,主打隱私與大型相片庫效能。",
+      "summary": "Lap 是一款跨平台(macOS/Windows/Linux)的桌面相片管理應用,強調「資料夾優先」而非把照片匯入封閉資料庫,並在本機執行 AI 搜尋、相似圖片偵測、人臉聚類等功能,不需上傳雲端。核心用 Rust + Tauri 撰寫,前端為 Vue3 + Vite + Tailwind,資料庫用 SQLite,整合 LibRaw、libheif、FFmpeg、ONNX Runtime、CLIP、InsightFace 等函式庫處理各種相片/RAW/影片格式與 AI 推論。",
+      "highlights": [
+        "資料夾優先架構,不強制匯入照片到封閉資料庫,原始檔案維持在使用者自己的資料夾中",
+        "本機執行 AI 搜尋(CLIP)、相似度比對、人臉聚類(InsightFace),不需雲端帳號",
+        "支援 60+ 種相片/RAW/影片格式,RAW+JPEG 配對顯示、Live Photo/Motion Photo 播放",
+        "重複相片偵測與清理、四窗格比對工具、地圖檢視等進階整理功能",
+        "Rust 後端程式碼結構清晰,關鍵模組(t_sqlite、t_tag_groups、t_migration 等)附有 #[cfg(test)] 單元測試"
+      ],
+      "use_cases": [
+        "家庭或個人大型相片庫(10萬張以上)的離線瀏覽、整理與重複檔案清理",
+        "注重隱私、不想把照片上傳雲端服務的使用者做 AI 智慧搜尋與人臉分類",
+        "需要匯入/管理 RAW+JPEG 配對檔案的攝影愛好者",
+        "跨平台(macOS/Windows/Linux)桌面環境下的相片庫遷移與備份管理"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 與官方文件站(VitePress)內容完整,涵蓋安裝、解除安裝、資料存放位置、隱私政策等細節,說明度高。Rust 後端有多個模組附帶單元測試(t_sqlite.rs、t_tag_groups.rs、t_migration.rs 等),但覆蓋率有限且前端 Vue 部分未見測試檔案;CI 只跑建置流程(cargo build/tauri build),沒有獨立跑 `cargo test` 或前端 lint/test 的步驟。專案活躍度高,有完整的 release/PR-build/Homebrew 發版流程與頻繁的版本迭代(release notes 到 v0.3.2)。t_sqlite.rs 單一檔案超過萬行,屬於程式碼組織上可改進之處。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "原始碼建置流程中,scripts/download_models.sh 與 download_ffmpeg_sidecar.ps1/.sh 會在建置或開發階段從 Hugging Face 與作者自建的 GitHub Release(julyx10/lap-binaries)下載 ONNX 模型與 FFmpeg/ffprobe 執行檔,這些下載目標明確且可驗證,非來路不明的網域,但使用者若自行從原始碼建置,應留意這些外部下載行為",
+          "GitHub Actions 發版流程涉及 Apple 簽章/公證與 Tauri updater 簽章金鑰等多項機密(secrets),屬常見的正式發版流程,未發現異常或外洩痕跡"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "在隱私相片管理這個利基市場中,Lap 功能完整度與程式碼品質都在水準之上,值得關注,但測試覆蓋與前端測試的缺口是後續觀察重點。",
+      "_mode": "full"
+    }
+  },
+  "leejet/stable-diffusion.cpp": {
+    "first_seen": "2026-09-25",
+    "last_seen": "2026-09-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-25": [
+        7244,
+        36,
+        14,
+        "Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-09-25",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "用純 C/C++ 實作的 Stable Diffusion / Flux / Qwen-Image 等多種擴散模型推論引擎,基於 ggml,無外部依賴、可跨平台輕量部署。",
+      "summary": "stable-diffusion.cpp 是 llama.cpp 同系作者打造的擴散模型推論框架,支援從 SD1.x 到最新的 Flux.2、Qwen-Image、Wan 影片模型等數十種架構,並提供 CPU/CUDA/Vulkan/Metal/OpenCL/SYCL 多後端與 GGUF 量化,讓使用者在無 Python/PyTorch 環境下也能跑圖像與影片生成。專案更新極為頻繁,幾乎每週追加新模型支援,是目前最活躍的 C++ 擴散模型推論專案之一。",
+      "highlights": [
+        "純 C/C++ 實作、無外部依賴,可編譯成單一執行檔在 CPU/GPU 上跑擴散模型推論",
+        "支援模型種類極廣:SD1/2/3、Flux.1/Flux.2、Qwen-Image、Wan、LTX-2 影片模型、ControlNet、LoRA、PhotoMaker、IP-Adapter 等",
+        "支援 GGUF/Safetensors/PyTorch 權重格式與量化轉換,方便在低顯存裝置部署",
+        "CI 涵蓋 Linux/macOS/Windows,並針對 CUDA、Vulkan、ROCm、SYCL、MUSA 等多後端建置與 Docker 映像發布",
+        "程式碼組織清晰,模組化拆分(tokenizers、model_io、pipeline、runtime 等),核心工具程式碼可讀性佳"
+      ],
+      "use_cases": [
+        "在無 Python/CUDA 完整環境的邊緣裝置或伺服器上部署輕量級圖像生成服務",
+        "需要用 C/C++ 直接整合擴散模型推論到既有應用(遊戲引擎、桌面軟體、行動裝置)",
+        "透過 GGUF 量化降低顯存需求,在消費級顯卡或 CPU-only 機器上跑 SDXL/Flux 等大模型",
+        "作為其他語言(Go、Rust、C#、Python、Dart)綁定的底層推論後端"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "文件非常完整,針對每個支援模型都有獨立的 docs/*.md 說明,README 也持續更新;CI 涵蓋多平台與多後端建置並自動打包發布,活躍度極高(幾乎每日提交、頻繁支援新模型)。但倉庫中未見到獨立的 tests/ 目錄或單元測試檔案,對這種涉及數值計算與多種模型架構轉換的專案而言,自動化測試覆蓋率明顯不足,正確性主要仰賴建置成功與人工驗證。抽查的核心程式碼(如 core/util.cpp)風格一致、模組化程度高,可讀性良好。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "對需要純 C/C++ 部署擴散模型推論的開發者而言是目前最值得關注的專案之一,更新速度與模型覆蓋率領先,但缺乏自動化測試是唯一的隱憂。",
       "_mode": "full"
     }
   }
