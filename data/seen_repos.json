@@ -702,8 +702,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 5,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -789,41 +789,48 @@
         2,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-09-26": [
+        269728,
+        583,
+        5,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-09-07",
+    "last_analyzed": "2026-09-26",
     "analysis": {
       "category": "devtool",
-      "one_liner": "Matt Pocock 為 AI 編碼代理人(Claude Code、Codex 等)打造的一套「技能」提示詞集合,取代單純的 vibe coding。",
-      "summary": "這個專案不是傳統程式庫,而是一組結構化的 Markdown「SKILL.md」文件,教導 AI 編碼助理如何進行需求釐清(grill-me)、測試驅動開發(tdd)、程式碼審查(code-review)、架構改善(improve-codebase-architecture)等工程實踐。目的是修正 AI 輔助開發常見的三大失敗模式:需求誤解、輸出冗長、程式碼品質低落。透過 Claude Code 外掛市集或 npx 安裝器把這些技能複製或連結到使用者專案中。",
+      "one_liner": "Matt Pocock 整理的一套 AI 編碼代理(Claude Code、Codex 等)技能包,把「grilling 訪談、TDD、程式碼審查、規格轉票券」等工程紀律封裝成可安裝的 Skill。",
+      "summary": "這個專案不是傳統程式碼庫,而是一組給 AI 編碼代理使用的 Markdown「Skill」定義(SKILL.md + 輔助文件),涵蓋需求釐清(grill-me)、規格轉票券(to-spec/to-tickets)、TDD、程式碼審查、架構治理、合併衝突處理等日常工程流程。可透過 Claude Code plugin 或 `npx skills@latest add` 安裝到任何代理環境中,目的是讓 AI 產出更貼近使用者意圖、可維護的程式碼,而非「vibe coding」。",
       "highlights": [
-        "以 SKILL.md + YAML frontmatter 的規範格式定義每個技能,並區分「使用者觸發」與「模型觸發」兩類,設計相當有條理",
-        "涵蓋完整工程流程:grill-with-docs(需求訪談建立 CONTEXT.md/ADR)、tdd(紅綠重構)、code-review(雙軸標準+規格審查)、resolving-merge-conflicts 等",
-        "提供兩種安裝路徑:Claude Code 官方外掛市集(唯讀訂閱制)或 skills.sh/npx 安裝器(可編輯複製),安裝機制皆非本機執行的可疑腳本",
-        "使用 Changesets 做版本管理,並有簡單的 GitHub Actions release workflow",
-        "作者累積數十年工程經驗與 60,000+ 訂閱者的電子報基礎,內容經過反覆打磨"
+        "以 SKILL.md 為核心的可組合技能設計,明確區分 user-invoked(如 /grill-me)與 model-invoked(如 tdd、code-review)兩種呼叫方式",
+        "grill-with-docs / domain-modeling 等技能會同步維護 CONTEXT.md 與 ADR,建立專案共享詞彙,減少代理產出冗長或誤解的程式碼",
+        "透過 Changesets + GitHub Actions 自動化版本管理,並用 scripts/sync-plugin-version.mjs 確保 package.json 與 Claude plugin 版本同步",
+        "同時支援 Claude Code 官方 marketplace 安裝與 skills.sh 的可編輯拷貝安裝兩種哲學,並在 CLAUDE.md 中明訂嚴謹的貢獻規範(如禁用 em-dash、技能分桶規則)"
       ],
       "use_cases": [
-        "在既有專案中導入結構化的 AI 代理人工作流程,減少需求誤解與程式碼品質下滑",
-        "團隊想標準化 AI 輔助的 TDD、程式碼審查、架構健檢流程",
-        "個人開發者希望讓 Claude Code / Codex 更貼近真實軟體工程實踐,而非單純聊天式編碼"
+        "在既有專案中加入標準化的 AI 協作流程,強制代理先釐清需求(grill-me/grill-with-docs)再動工",
+        "導入 TDD 紅綠燈循環與 code-review 雙軸(標準/規格)審查,提升代理產出程式碼品質",
+        "大型工作拆解為可追蹤的票券(to-tickets/wayfinder),搭配 GitHub、Linear 或本機檔案作為 issue tracker",
+        "團隊想維護一份對齊的網域詞彙(CONTEXT.md/ADR),降低代理與人類溝通落差"
       ],
       "quality": {
         "docs": 5,
         "tests": 1,
-        "activity": 4,
-        "comment": "文件品質極高,README 與各 SKILL.md 撰寫細膩、邏輯清晰,附有 ADR 記錄設計決策;但本質是提示詞/文件集合而非程式邏輯,因此沒有傳統單元測試,quality.tests 偏低屬合理現象。開發活動穩定,使用 Changesets 管理版本並有自動化 release workflow,但議題與 PR 治理狀況無法從原始碼判斷。"
+        "activity": 5,
+        "comment": "文件品質極高,README、CLAUDE.md、AGENTS.md、各 SKILL.md 與 docs/ 目錄互相對應,規範清楚且有 ADR 記錄設計決策;但本質是 Markdown 提示詞與少量 Shell 腳本,沒有自動化測試套件(不適用傳統單元測試,scripts 也僅是簡單檔案操作);專案有 GitHub Actions 自動化版本發布與大量 changesets,顯示維護活躍。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "若你已在用 Claude Code 或 Codex 做真實工程開發,這套結構化技能集值得一試,能顯著改善 AI 代理人的需求對齊與程式碼品質,但不是傳統意義上的「程式庫」,評估時應以文件品質而非程式碼測試涵蓋率為準。",
+      "verdict": "若你日常使用 Claude Code 或其他 AI 編碼代理,這套技能包能有效補上「需求對齊、測試紀律、程式碼審查」的流程缺口,值得安裝試用,但本質是提示工程集合而非傳統軟體庫,程式碼量與測試皆非重點。",
       "_mode": "full"
     },
-    "total_days_on_trending": 13,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 14,
+    "consecutive_days_on_trending": 1
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1142,8 +1149,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-25",
-    "days_on_trending": 2,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1243,6 +1250,13 @@
         10,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-09-26": [
+        291664,
+        468,
+        4,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-24",
@@ -1281,8 +1295,8 @@
       "verdict": "如果你的日常工作是用 Claude Code 之類的代理人自主寫程式,這套「流程即提示詞」框架值得一試;但它是方法論/提示詞集合而非可執行程式庫,價值取決於你是否認同其強制流程哲學。",
       "_mode": "full"
     },
-    "total_days_on_trending": 15,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 16,
+    "consecutive_days_on_trending": 3
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1775,7 +1789,7 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-09-24",
+    "last_seen": "2026-09-26",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
@@ -1790,6 +1804,13 @@
         70338,
         304,
         12,
+        "The design language that makes your AI harness better at design.",
+        "JavaScript"
+      ],
+      "2026-09-26": [
+        71201,
+        306,
+        15,
         "The design language that makes your AI harness better at design.",
         "JavaScript"
       ]
@@ -1829,7 +1850,7 @@
       "verdict": "若團隊大量使用 AI coding agent 產出前端介面,這套工具值得一試,但安裝時牽涉下載執行檔與自動 hook,建議先讀懂信任機制再上線。",
       "_mode": "light"
     },
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat-android": {
@@ -7068,10 +7089,10 @@
   },
   "paperclipai/paperclip": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-11": [
         76484,
@@ -7093,42 +7114,48 @@
         10,
         "The open-source app everyone uses to manage agents at work",
         "TypeScript"
+      ],
+      "2026-09-26": [
+        84962,
+        2109,
+        1,
+        "The open-source app everyone uses to manage agents at work",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-11",
+    "last_analyzed": "2026-09-26",
     "analysis": {
-      "category": "infra",
-      "one_liner": "開源的 AI 代理人「公司」編排平台,把一堆 Claude Code / Codex / OpenClaw 等 agent 組織成有組織架構、預算與治理機制的虛擬團隊。",
-      "summary": "Paperclip 是一個 Node.js 伺服器 + React UI 組成的自架平台,讓使用者把多個 AI agent(Claude Code、Codex、OpenClaw、CLI/HTTP bot 等)組織成具有組織圖、任務系統、心跳排程、預算控管與審批治理的「公司」,解決多開多個 agent 終端機、失去上下文、超支失控等痛點。專案定位不是 agent 框架或聊天機器人,而是「管理一群 agent 的公司」控制平面,附帶 multi-tenant 隔離、憑證管理、外掛系統與完整審計軌跡。",
+      "one_liner": "Paperclip 是一套開源的「AI 代理人管理公司」平台,讓你把多個 AI Agent 組成有組織架構、預算與治理的團隊來運作事業。",
+      "summary": "Paperclip 是一個 Node.js 伺服器 + React UI,用來統籌一整組 AI 代理人(Claude Code、Codex、OpenClaw、Cursor 等)完成商業目標,而不只是單一任務。它提供組織圖、任務票證系統、預算控管、心跳排程與治理審批流程,把「管理一堆各自為政的 agent script」的痛點,變成像用任務管理工具般直覺的體驗。",
+      "category": "ai-ml",
       "highlights": [
-        "功能極廣:org chart、任務/工單系統、心跳排程、預算硬停、審批治理、密鑰管理、外掛系統、公司匯出入(portability)一應俱全",
-        "程式碼品質紮實:TypeScript 型別定義完整(如 authorization.ts 對 actor/action/resource 有嚴謹的聯合型別),服務層邏輯清晰",
-        "測試涵蓋非常大量:光 server/src/__tests__ 就有 800+ 支測試檔,且明確要求用 embedded-postgres 而非 mock DB 測授權/服務邏輯",
-        "CI/CD 完整:10 條 GitHub Actions workflow,涵蓋 PR 檢查、e2e、release-verify、docker build、storybook 視覺回歸",
-        "安裝腳本注重供應鏈安全:install.sh 對第三方下載(Homebrew installer、NodeSource repo)使用固定 commit + SHA256 校驗,而非直接 curl|bash 執行任意內容"
+        "架構完整:身分權限、任務系統、心跳執行、治理審批、預算控管、外掛系統、密鑰管理等模組一應俱全,而非單純的 wrapper",
+        "支援多種 agent runtime(Claude Code、Codex、CLI agent、HTTP/webhook bot),並可自行擴充 adapter",
+        "內建成本控管與硬性預算上限,避免 agent 迴圈失控燒爆 token 費用",
+        "公司(組織)可完整匯出/匯入,支援多組織資料隔離,一套部署可跑多間虛擬公司",
+        "文件與 Quickstart 對 curl | bash 安裝腳本的風險有主動說明,透明度高於一般專案"
       ],
       "use_cases": [
-        "同時操控大量 Claude Code / Codex / OpenClaw 等 agent,需要任務指派、進度追蹤與跨重開機的 session 持久化",
-        "需要對多個 AI agent 的花費做預算控管與硬停機制,避免 token 超支",
-        "想建立多間「虛擬公司」(專案/客戶隔離),用同一套部署管理不同團隊或業務線的 agent",
-        "需要治理與審批流程(人審核 agent 產出、暫停/終止 agent)的企業或工作室場景"
+        "需要同時操控大量 Claude Code / Codex 終端機,想要統一追蹤任務與對話紀錄的開發者",
+        "想建立自動化的「AI 員工組織」,依角色分工並設定審批與預算上限的團隊",
+        "需要排程性重複工作(客服、社群、報表)並讓 agent 依心跳自動執行的場景",
+        "想用手機隨時監控與管理自架 AI 代理人事業的個人開發者/創業者"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件量與涵蓋面極高(doc/ 下有 100+ 份規格、安裝、部署、遙測文件),README 對安裝腳本的安全限制也誠實揭露。測試數量龐大且用真實 embedded Postgres 而非全面 mock,授權服務等核心程式碼型別嚴謹、模組化良好。CI 覆蓋 PR 檢查、e2e、release 驗證等多層次。整體是少見的、工程成熟度很高的開源專案。"
+        "comment": "README 與 doc/ 目錄非常詳盡,還附帶大量 .agents/skills 文件說明各種維運流程;測試涵蓋 Vitest 單元測試、Playwright e2e、release-smoke、storybook 視覺回歸等多層次,server/src 內幾乎每個服務模組都有對應 .test.ts;CI workflow 多達近 20 個,涵蓋 docker build、e2e、release 驗證等,顯示工程紀律成熟。抽樣程式碼(native-run-finalizer.ts 等)型別定義清楚、模組職責分明,品質頗高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 的 postinstall 會執行 scripts/link-plugin-dev-sdk.mjs,但內容僅在repo 內部符號連結 workspace 外掛套件到本地 SDK,且註解明確說明此舉是為了避免這段 lifecycle script 被打包進發布的 npm tarball 中,不涉及外部下載或執行",
-          "README 提供的 install.sh 快速安裝流程含 curl 下載並執行 shell script 的模式(附帶 sha256 校驗),但作者在文件中已誠實註明:校驗檔與腳本同源,建議需要獨立信任來源時改用鎖定 release tag/commit 的 GitHub 副本",
-          "install.sh 內部對第三方下載(Homebrew installer、NodeSource 套件庫)採用固定 commit hash 搭配 SHA256 雜湊比對,屬於較嚴謹的供應鏈驗證作法"
+          "README 提供的快速安裝方式使用 curl 下載 install.sh 並以 bash 執行(curl | bash 模式),雖附上 sha256 校驗檔,但校驗檔與腳本來自同一來源網域,官方文件本身也明確提醒此限制並建議需要獨立驗證來源時改用鎖定版本/commit 的 GitHub 副本",
+          "根目錄 package.json 定義了 postinstall 腳本(node scripts/link-plugin-dev-sdk.mjs),但檢視內容後確認僅用於開發環境內把本地 monorepo 的 plugin-sdk 套件連結進被排除在 workspace 外的外掛目錄,程式碼註解也明確說明此腳本不會被發佈到 npm tarball 中,不會在使用者安裝已發佈套件時執行"
         ]
       },
-      "star_rating": 4,
-      "verdict": "工程成熟度遠超一般新興 AI 專案,測試與文件扎實,若你在管理多個 coding agent 的團隊協作與治理,值得認真評估。",
+      "star_rating": 5,
+      "verdict": "工程完整度與活躍度都在水準之上,若你正被多個 AI coding agent 搞得難以管理,這是目前最值得評估的開源代理人管理平台之一。",
       "_mode": "full"
     }
   },
@@ -7343,10 +7370,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-09-06",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -7382,38 +7409,44 @@
         6,
         "Public repository for Agent Skills",
         "Python"
+      ],
+      "2026-09-26": [
+        178318,
+        189,
+        7,
+        "Public repository for Agent Skills",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-04",
+    "last_analyzed": "2026-09-26",
     "analysis": {
       "category": "ai-ml",
-      "one_liner": "Anthropic 官方發布的 Agent Skills 範例集,教 Claude 如何用「資料夾+SKILL.md」的形式學會特定任務。",
-      "summary": "此repo收錄了一系列「Skill」——每個都是一個包含 SKILL.md(YAML frontmatter+指令說明)以及輔助腳本/範本的資料夾,讓 Claude 在對話中動態載入以完成特定任務,涵蓋創意設計(algorithmic-art、canvas-design)、企業溝通(internal-comms、brand-guidelines)、技術工具(mcp-builder、webapp-testing)及文件處理(docx/pdf/pptx/xlsx)。文件處理系列是 Claude.ai 實際生產環境功能背後的原始碼(source-available,非開源),其餘多數採 Apache 2.0 授權。同時提供 Claude Code 外掛市集(marketplace.json)可一鍵安裝這些 Skill 組合。",
+      "one_liner": "Anthropic 官方釋出的 Claude Agent Skills 範例集,教 Claude 如何用「技能資料夾」完成特定任務。",
+      "summary": "這是 Anthropic 官方倉庫,收錄一系列「Skill」——每個都是包含 SKILL.md 指令與輔助腳本/資源的資料夾,讓 Claude(Claude Code、Claude.ai、API)動態載入以提升特定任務的表現。內容涵蓋創意設計(算圖藝術、品牌規範、Canvas 設計)、技術任務(MCP server 產生器、網頁測試)到企業工作流程(內部溝通),並附上支撐 Claude 文件功能的 docx/pdf/pptx/xlsx 技能原始碼作為參考。",
       "highlights": [
-        "定義了 Agent Skills 標準規格(spec/agent-skills-spec.md),並提供 template-skill 供使用者快速建立自訂 Skill",
-        "docx/pdf/pptx/xlsx 四個 Skill 是 Claude.ai 文件功能背後實際使用的程式碼,含完整 OOXML XSD schema 驗證邏輯,程式品質紮實(如使用 defusedxml 防範 XML 攻擊、lxml schema 驗證、關聯性 ID 完整性檢查)",
-        "可透過 /plugin marketplace add 直接註冊為 Claude Code 外掛市集,一鍵安裝 document-skills 或 example-skills 套件",
-        "canvas-design 等 Skill 內附大量開源字型(OFL 授權)與範本檔案,展示 Skill 可攜帶完整資源而非只是文字指令",
-        "mcp-builder Skill 附帶 MCP Server 最佳實踐文件與評估腳本,可指導使用者建立自己的 MCP Server"
+        "18 個技能各自獨立成資料夾,結構一致(SKILL.md + scripts + LICENSE),可直接當作 Claude Code Plugin marketplace 安裝",
+        "docx/pdf/pptx/xlsx 技能是 Claude 文件產生功能背後的實際實作,原始碼可供參考(source-available,非開源)",
+        "sample 到的 merge_runs.py 等腳本品質高:使用 defusedxml 防止 XML 炸彈、明確處理符號連結等不受信任輸入、註解清楚說明非顯而易見的邊界情況",
+        "多數技能採用 Apache 2.0 授權,可作為自建 Skill 的範本(repo 內附 template/SKILL.md)",
+        "當日 GitHub trending 第 7 名,單日 +189 星,顯示 Agent Skills 生態系正快速被開發者關注"
       ],
       "use_cases": [
-        "為 Claude(Claude.ai / Claude Code / API)客製化特定領域工作流程,例如套用公司品牌規範產生文件",
-        "參考官方 Skill 寫法與 SKILL.md 規格,設計自己的 Agent Skill",
-        "直接安裝 document-skills 外掛,取得 Word/PDF/PPT/Excel 的產生與編輯能力",
-        "研究 Agent Skills 標準(agentskills.io)及其與 Claude 工具生態的整合方式"
+        "想了解 Claude Skills 機制、學習如何撰寫自訂 Skill 的開發者",
+        "需要在 Claude Code / Claude.ai / API 中啟用文件處理(Word/PDF/PPT/Excel)、網頁測試、MCP server 產生等能力的使用者",
+        "尋找 Agent Skill 設計模式與最佳實踐(如 XML 安全處理、任務分解指令撰寫)的工程師"
       ],
       "quality": {
         "docs": 5,
         "tests": 1,
-        "activity": 5,
-        "comment": "文件說明極為完整(README、spec 規格文件、每個 Skill 自帶 SKILL.md),但整個repo未見 tests/ 目錄或 .github/workflows CI 設定——這符合其「內容/範例集」而非傳統軟體套件的定位。抽查 docx skill 的 XML 驗證程式碼(office/validators/base.py)品質良好,妥善使用 defusedxml 與 lxml 做安全的 XML 解析與 schema 驗證,邏輯清晰且有例外處理。因是 Anthropic 官方倉庫且今日新上 trending、star 數暴增(+281),活躍度極高。"
+        "activity": 4,
+        "comment": "文件品質極高,每個 SKILL.md 都詳細說明使用時機、注意事項與常見陷阱;抽樣的 Python 腳本(如 merge_runs.py)註解精煉、只解釋『為什麼』而非『做什麼』,且對不受信任輸入(如第三方 docx 檔案)有防範意識。但整個 repo 沒有 tests/ 目錄、CI workflow 或任何測試框架,因為本質上是內容/指令集合而非傳統程式庫,傳統 tests/CI 指標不完全適用,但仍缺乏自動化驗證機制。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 5,
-      "verdict": "Anthropic 官方出品、文件完整且可直接安裝使用,對想客製化 Claude Skill 或了解 Agent Skills 標準的開發者非常值得一看。",
+      "star_rating": 4,
+      "verdict": "官方出品、文件與程式碼品質皆佳,是學習 Agent Skills 設計模式的絕佳參考,值得收藏但非日常必用工具。",
       "_mode": "full"
     }
   },
@@ -12143,10 +12176,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-09-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -12194,6 +12227,13 @@
         56557,
         347,
         1,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-09-26": [
+        57503,
+        1177,
+        11,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -12528,10 +12568,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -12567,42 +12607,47 @@
         14,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
+      ],
+      "2026-09-26": [
+        36937,
+        83,
+        2,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-26",
+    "last_analyzed": "2026-09-26",
     "analysis": {
-      "one_liner": "Anthropic 官方維護的 Claude Code 外掛(plugin)目錄與市集,收錄開發工具、MCP 整合與生產力外掛。",
-      "summary": "這是 Anthropic 官方的 Claude Code 外掛市集(marketplace),透過單一 marketplace.json 索引數百個內部與第三方外掛,涵蓋安全掃描、程式碼現代化、MCP 伺服器整合(GitHub、Discord、Asana 等)。專案本身以 Python/JS 撰寫的 CI 自動化腳本為核心,負責驗證外掛結構、定期同步上游 SHA、並用 Claude 模型對每個外部外掛進行安全政策掃描,解決「如何安全地聚合第三方 AI 代理擴充套件」的信任與治理問題。",
+      "one_liner": "Anthropic 官方維護的 Claude Code 外掛(plugin)目錄與市集,收錄開發工具、生產力外掛與 MCP 整合。",
+      "summary": "這是 Claude Code 的官方外掛市集倉庫,分為 Anthropic 自維護的 `/plugins` 與第三方合作夥伴/社群提供的 `/external_plugins` 兩大類,透過 `.claude-plugin/marketplace.json` 統一索引數百個外掛(含 SHA pin 版本控管)。倉庫本身不是傳統程式庫,而是「目錄 + 治理機制」:用 GitHub Actions 自動驗證外掛結構、授權條款、MCP URL 有效性,並用 Claude 本身對每個新增/變更的外部外掛跑政策掃描(隱私、資料外洩、憑證濫用等)才能合併。",
       "category": "devtool",
       "highlights": [
-        "自建 AI 驅動的外掛安全掃描流程(scan-plugins.yml),對每個第三方外掛的原始碼、hooks、skills 逐一審查隱私與濫用風險,並有詳細的審查 prompt 規範跨服務憑證外洩等情境",
-        "verdict cache 機制精心設計,以 (plugin, sha) 為 key 避免每晚重複掃描,並在政策更新時自動失效重掃,工程細節相當成熟",
-        "涵蓋 490+ 個外掛檔案,含 42Crunch、Adobe、GitHub、Discord、Asana 等官方與第三方整合",
-        "內部 Python 程式碼(如 claude-security 外掛的 finding.py)型別註解完整、註解聚焦在「為什麼」而非「做什麼」,程式碼品質高",
-        "外掛名稱不可變更(immutable slug)與 renames 遷移機制設計嚴謹,避免破壞既有使用者安裝"
+        "採用「用 Claude 審查 Claude 外掛」的自動化安全掃描流程(scan-plugins.yml),對照 Anthropic 軟體目錄政策逐一檢查每個第三方外掛的原始碼、hooks、skills,並將裁決結果快取、公布在 PR 留言",
+        "外部依賴以 commit SHA 精確釘選(pin),並有每日自動偵測上游更新、產生 bump PR 的排程機制(discover_bumps.py),失敗的 bump 會被自動回退,避免壞版本卡住整條流水線",
+        "marketplace.json 提供 renames 機制處理外掛改名相容性,plugin 目錄結構(commands/agents/skills/.mcp.json)有清楚的規範文件與 example-plugin 參考實作",
+        "已收錄 Adobe、Asana、Discord、GitHub、GitLab、Linear、Playwright 等主流服務的官方或合作夥伴外掛,涵蓋開發、通訊、生產力等多種類別"
       ],
       "use_cases": [
-        "尋找官方認證的 Claude Code 外掛來擴充開發流程(程式碼審查、安全掃描、MCP 整合等)",
-        "想了解如何為自己的工具建立 Claude Code plugin marketplace 條目",
-        "研究如何用 CI + LLM 對第三方擴充套件做自動化安全政策審查",
-        "評估要不要提交自己的工具作為官方或第三方外掛"
+        "想快速安裝現成的 Claude Code 外掛(如 GitHub/Linear/Discord 整合、程式碼現代化、安全掃描)以擴充工作流程",
+        "想學習如何撰寫、包裝並發布自己的 Claude Code plugin(可參考 example-plugin 與各外掛的 skills/agents 結構)",
+        "想借鏡其「AI 審查 AI 外掛」的自動化供應鏈安全治理模式,應用在自家的插件/擴充套件市集"
       ],
       "quality": {
-        "docs": 5,
-        "tests": 2,
+        "docs": 4,
+        "tests": 3,
         "activity": 5,
-        "comment": "文件品質極高,README 清楚說明結構、安裝與貢獻流程,CI workflow 內附大量「為什麼這樣設計」的說明性註解。此倉庫本身沒有傳統單元測試目錄,但以 schema 驗證 + AI 安全掃描取代測試角色,對這種以 JSON/Markdown 為主體的市集倉庫而言是合理做法。活躍度極高,最後推送在分析當日,且有多條每日/每次 PR 觸發的自動化 workflow。"
+        "comment": "這是目錄型倉庫而非傳統程式庫,沒有典型的單元測試套件覆蓋全部 460 多個外掛(多數為指向外部 repo 的 vendored 條目),但以結構驗證、授權檢查、MCP URL 檢查、AI 政策掃描等多層 CI 取代傳統測試,治理成熟度高於一般開源專案。文件方面主 README 與各外掛 README 清楚說明結構與安裝方式,workflow 檔案中大量以註解記錄設計決策與踩過的坑,可讀性高。活躍度極高,幾乎每日都有 SHA bump 或新外掛合併紀錄。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "這是一個外掛「目錄/市集」倉庫,實際風險主要來自其收錄的第三方外掛(external_plugins/*)本身,而非本倉庫程式碼;README 已明確警告使用者需自行評估信任外掛",
-          "部分外掛(如 discord、imessage 等)的 package.json start 腳本會執行 bun install 並啟動本地 MCP server,屬 MCP 整合常見模式,未發現生命週期腳本(postinstall/preinstall)藏有可疑外部下載或執行",
-          "搜尋倉庫內未發現 curl|bash 或 iwr|iex 式的一鍵執行安裝腳本用於本倉庫自身建置流程,少數 curl 出現在外掛文件中屬第三方工具安裝說明"
+          "README 明確提醒:Anthropic 不對外部 plugin 內含的 MCP server、檔案或程式碼進行完全控管與功能保證,使用前需自行評估信任(此為官方主動揭露的既有風險,非本次分析新發現的漏洞)",
+          "抽樣檢視的 external_plugins/discord/server.ts 等第三方 MCP server 原始碼會讀取本機憑證檔(如 .env 內的 bot token)並設定檔案權限為 0o600,屬正常的憑證管理作法,未見跨服務外洩行為",
+          "倉庫內建 scan-plugins.yml 會對每個變更的外部外掛執行 Claude 政策掃描(檢查憑證竊取、隱私侵犯、prompt injection 等),抽樣程式碼與該掃描機制本身均未發現惡意程式碼跡象"
         ]
       },
       "star_rating": 4,
-      "verdict": "官方出品、治理機制成熟,值得追蹤;若要安裝其中的第三方外掛仍需依 README 提醒自行評估個別外掛的信任度。",
+      "verdict": "若你在用 Claude Code,這是官方外掛生態的入口,治理機制(尤其是 AI 自動安全審查)做得比多數第三方套件市集扎實,值得追蹤與試用,但安裝任何第三方外掛前仍建議自行檢查其原始碼。",
       "_mode": "full"
     }
   },
@@ -20910,10 +20955,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-25",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -20933,6 +20978,13 @@
         17644,
         1082,
         3,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ],
+      "2026-09-26": [
+        18439,
+        1050,
+        6,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
       ]
@@ -21030,10 +21082,10 @@
   },
   "google/ax": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-25",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-23": [
         7603,
@@ -21053,6 +21105,13 @@
         10445,
         1373,
         4,
+        "Google's open agentic orchestration runtime",
+        "Go"
+      ],
+      "2026-09-26": [
+        11504,
+        1379,
+        13,
         "Google's open agentic orchestration runtime",
         "Go"
       ]
@@ -21367,15 +21426,22 @@
   },
   "vectorize-io/hindsight": {
     "first_seen": "2026-09-25",
-    "last_seen": "2026-09-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-25": [
         27782,
         1668,
         2,
+        "Hindsight: Agent Memory That Learns",
+        "Python"
+      ],
+      "2026-09-26": [
+        29801,
+        1653,
+        3,
         "Hindsight: Agent Memory That Learns",
         "Python"
       ]
@@ -21418,15 +21484,22 @@
   },
   "NVIDIA/Model-Optimizer": {
     "first_seen": "2026-09-25",
-    "last_seen": "2026-09-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-25": [
         4079,
         44,
         5,
+        "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+        "Python"
+      ],
+      "2026-09-26": [
+        4472,
+        359,
+        14,
         "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
         "Python"
       ]
@@ -21604,6 +21677,259 @@
       "star_rating": 4,
       "verdict": "對需要純 C/C++ 部署擴散模型推論的開發者而言是目前最值得關注的專案之一,更新速度與模型覆蓋率領先,但缺乏自動化測試是唯一的隱憂。",
       "_mode": "full"
+    }
+  },
+  "androoAGI/starnet": {
+    "first_seen": "2026-09-26",
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-26": [
+        476,
+        93,
+        8,
+        "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-26",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "用像素風太空站介面即時呈現多個 AI agent 真實執行狀態的本機優先桌面應用程式。",
+      "summary": "StarNet 是一個 local-first 的桌面 agent harness,讓使用者建立、組織多個 AI agent 並以像素風太空站視覺化呈現其真實執行狀態(房間代表能力範圍團隊、走廊代表交接通道)。它支援 BYOK 串接 OpenRouter、Anthropic、OpenAI、Google 或本機 Ollama 模型,並可透過 Telegram、Discord、Slack 等管道遠端操作 agent。",
+      "highlights": [
+        "核心設計理念是介面必須忠實反映 harness 可證明的真實狀態,不模擬營收、進度或花費",
+        "支援多 agent 同時執行,各自擁有獨立 workspace、權限與傳輸紀錄",
+        "可用 OpenRouter/Anthropic/OpenAI/Google 金鑰或免費本機 Ollama 模型,金鑰存於 OS 金鑰圈而非前端",
+        "可整合 Telegram、Discord、Slack、Signal、Matrix 等通訊工具遠端操控 agent,並支援 MCP 連接器擴充能力",
+        "提供 Night Shift(離線持續運作並記錄每個行動)與 Task Briefs(遇模糊需求主動詢問)等實用機制"
+      ],
+      "use_cases": [
+        "想以視覺化方式同時管理、監控多個並行執行的 AI agent 任務",
+        "重視資料留在本機、自帶金鑰(BYOK)的隱私敏感開發情境",
+        "希望透過 Telegram/Discord 等聊天工具遠端下達或查看 agent 工作進度",
+        "探索 multi-agent harness 產品設計與能力範圍(capability-scoped)概念的參考案例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋功能表、架構表、測試指令與資料流說明,文件品質良好;測試與程式碼品質僅能從 README 描述(如 test:fast、qa:ready)推測,未實際檢視程式碼,故評分保守。近期(2026-09-23)有推送且今日登上 trending 第一天即獲 93 顆星,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "此工具會實際呼叫模型並執行真實工具動作、產生真實花費,而非模擬,使用前應留意權限授予與預算設定",
+          "安裝方式為下載官方簽章/公證過的桌面安裝檔或以 npm ci 建置原始碼,README 未見 curl 直接執行等高風險安裝手法,但本評估僅based於 README,未實際檢視原始碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對多 agent 協作與 agent harness 產品設計有興趣的開發者值得一看,產品概念與文件完整度佳,但屬早期專案(macOS 支援度尚淺),建議先觀察後續穩定度。",
+      "_mode": "light"
+    }
+  },
+  "derv82/wifit3": {
+    "first_seen": "2026-09-26",
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-26": [
+        922,
+        183,
+        9,
+        "Wifite but USB-only & cross-platform.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-26",
+    "analysis": {
+      "category": "security",
+      "one_liner": "wifit3 是純 Python、跨平台(Linux/macOS/Windows)、USB-only 的 Wi-Fi 安全稽核工具,以使用者空間驅動繞過作業系統原生無線協定堆疊,不依賴 aircrack-ng 或 reaver。",
+      "summary": "這是知名工具 wifite2 的精神後繼者,自行以 Python 移植了多款 USB Wi-Fi 晶片(Atheros AR9271、MediaTek MT76xx、Realtek RTLxxxx、Ralink RTxxxx)的 Linux 核心驅動邏輯,直接透過 USB bulk/control transfer 操作硬體暫存器,達成監聽模式與封包注入,藉此避開 Windows NDIS 限制與 Linux 核心驅動版本地獄。功能涵蓋 WPA/WPA2 握手擷取、PMKID 收集、EvilTwin WPA3 降級攻擊、WPS PixieDust/PBC/PIN 暴力破解,以及 WEP 完整攻擊套件。專案文件與程式碼組織皆展現高度工程成熟度,附有大量針對各晶片的逆向工程輔助腳本與硬體對照測試。",
+      "highlights": [
+        "純 Python 重寫多款 USB Wi-Fi 晶片的核心驅動邏輯(chips/ar9271_v2、mt76x0u、mt76x2u、rtl88xx 等),完全繞過作業系統無線堆疊",
+        "功能完整的攻擊模組:WPA/WPA2 握手、PMKID 主動收集、EvilTwin WPA3 降級、WPS PixieDust/PBC/PIN、WEP 全套攻擊",
+        "測試覆蓋率高,tests/ 下針對每個晶片與攻擊流程皆有對應單元測試(超過 300 個測試檔),CI 以 mocked USB 執行",
+        "跨平台安裝流程設計嚴謹:Linux 端 udev/modprobe 權限提升腳本以 shlex.quote 逐一跳脫參數,並提供完整解除安裝與模組參照計數邏輯",
+        "提供 PyInstaller 預建執行檔(Windows/macOS/Linux x64/arm64),並透過 GitHub Actions Release workflow 自動化建置與發佈"
+      ],
+      "use_cases": [
+        "已獲授權的無線網路滲透測試與紅隊演練,尤其是需要在無 Linux 相容網卡驅動的環境(如 Windows 筆電)直接進行無線稽核",
+        "資安研究人員學習 USB Wi-Fi 晶片韌體/暫存器層級行為與 802.11 封包注入技術的參考實作",
+        "CTF 或無線安全教學場景中示範 WPA/WPS/WEP 各類已知弱點攻擊手法",
+        "需要跨平台(不依賴 aircrack-ng)無線稽核工具的自動化稽核腳本整合"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與程式碼品質在同類專案中屬上乘:README、docs/ 目錄(含硬體支援表、韌體授權、Linux 權限說明)、CLAUDE.md/AGENTS.md 皆完整;程式碼註解著重解釋「為什麼」而非「做什麼」,對邊界情境(如共用核心模組、藍牙共存晶片)有細膩處理;CI 涵蓋 lint + 大量 mocked 單元測試 + import smoke test;近期持續每日提交,活躍度高。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "這是雙用途(dual-use)無線安全稽核/攻擊工具,內建 WPA/WPS/WEP 破解與 EvilTwin 偽造熱點功能,若用於未經授權的網路將構成違法行為;README 已明確聲明僅限用於自有或已獲授權稽核的網路與設備",
+          "Linux 安裝流程(src/wifit3/setup/linux.py)會透過 pkexec/sudo 取得提權,寫入 /etc/modprobe.d 與 /etc/udev/rules.d 規則並封鎖對應核心模組,讓網卡完全脫離作業系統原生 Wi-Fi 堆疊控制;程式碼對特權指令字串有逐一 shlex.quote 跳脫處理,未發現明顯指令注入疑慮",
+          "Windows 端透過 UAC 提示安裝 WinUSB 驅動綁定,同樣屬於系統層級變更,使用前應了解其可逆性(專案提供對應解除安裝流程)",
+          "專案內含多款無線網卡的原廠韌體二進位檔(位於 chips/*/assets/*.bin/*.fw),並附上對應廠商授權文件(FIRMWARE.md),屬於逐字重新散布韌體,而非未說明來源的不明二進位檔"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試覆蓋率在無線安全工具中相當突出,值得資安研究者與滲透測試人員關注,但屬於典型雙用途攻擊工具,使用前務必確認已取得目標網路的合法授權。",
+      "_mode": "full"
+    }
+  },
+  "kelseyhightower/kubernetes-the-hard-way": {
+    "first_seen": "2026-09-26",
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-26": [
+        50123,
+        119,
+        10,
+        "Bootstrap Kubernetes the hard way. No scripts.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-09-26",
+    "analysis": {
+      "category": "learning-resource",
+      "one_liner": "一步步手動搭建 Kubernetes 叢集的經典教學,不靠任何自動化腳本,逼你搞懂每個元件。",
+      "summary": "這是 Kelsey Hightower 撰寫的知名教學文件,以純手動指令(openssl、systemd unit、kubectl 等)引導讀者從零建立一個最小可用的 Kubernetes 叢集,涵蓋 CA 憑證、etcd、控制平面、worker node 到 Pod 網路的完整流程。內容以 13 篇 Markdown 文件加上少量設定檔(systemd unit、containerd/kubelet 設定、憑證設定)組成,完全沒有自動化腳本或程式碼,目的是教學而非提供可直接部署的工具。",
+      "highlights": [
+        "純文件教學,無任何 install.sh 或自動化腳本,強調『No scripts』理念,讀者需親手輸入每條指令",
+        "涵蓋完整叢集自建流程:CA 憑證簽發、etcd、kube-apiserver/scheduler/controller-manager、containerd、CNI、kubelet 等 systemd unit 設定一應俱全",
+        "版本更新到 Kubernetes v1.32.x、containerd v2.1.x、etcd v3.6.x,內容與時俱進",
+        "長年被視為學習 Kubernetes 底層機制的標竿教材,社群知名度高、star 數龐大",
+        "license 為 Apache-2.0(README 內另標示教學內容採 CC BY-NC-SA 4.0,兩者適用範圍不同,使用前需留意)"
+      ],
+      "use_cases": [
+        "想深入理解 Kubernetes 控制平面與元件互動細節的工程師自我進修",
+        "作為教學/內訓教材,帶新人從底層認識憑證、etcd、API Server 等如何串接",
+        "面試前複習 Kubernetes 核心原理",
+        "對照官方文件,學習如何用 openssl 手動建立 PKI 體系"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 4,
+        "comment": "文件品質極高、步驟清晰且持續更新版本號,是教學型專案的標竿;但本質上不是程式庫,沒有自動化測試或 CI 也在預期之內,不應以一般軟體專案標準扣分過重。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "若目標是紮實理解 Kubernetes 底層原理而非快速上線工具,這是少數值得投入時間、反覆重讀的經典教材。",
+      "_mode": "full"
+    }
+  },
+  "shy3130/tick-stock-panel": {
+    "first_seen": "2026-09-26",
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-26": [
+        5129,
+        44,
+        12,
+        "TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-26",
+    "analysis": {
+      "category": "app",
+      "one_liner": "自托管、零運維的 A 股量化工作台,整合選股、回測、監控與 AI 對話助手於單一 Docker 容器。",
+      "summary": "TSP 是一個以 Python(FastAPI + Polars)與 React 打造的 A 股量化分析平台,提供選股引擎、因子與策略回測、盤中異動監控、市場情緒周期識別,以及可選的 LLM 對話助手,主打「資料源插件化 + 能力路由」讓使用者能自由切換資料供應商而不改變下游口徑。整體設計以本地 Parquet/DuckDB 儲存搭配 Docker 單容器部署為核心賣點,強調可自架、免雲端資料外流。",
+      "highlights": [
+        "能力路由矩陣:6 類資料集依來源能力獨立路由,換資料源不需改寫指標/回測口徑",
+        "回測引擎採 Polars/NumPy 原生實作(非 pandas),支援 T+1、手續費、滑點、分鐘級回放與蒙地卡羅回撤",
+        "270+ 個 pytest 測試檔涵蓋回測、資料完整性、AI 助手、擴充機制等,測試覆蓋面在個人開源專案中相當罕見",
+        "AI 對話助手採「完全解耦擴充」架構(後端 app/custom + 前端 src/custom),刪除目錄即可整體卸載,且未設 Key 時 fail-closed",
+        "Docker 多階段建置註解詳盡,對 stock-sdk 插件的合規風險（可能牴觸第三方網站服務條款）與預設停用選項有清楚說明"
+      ],
+      "use_cases": [
+        "想自架本地量化選股/回測工作台、不想依賴雲端付費終端的個人量化研究者",
+        "需要多資料源可插拔架構(TickFlow SDK、同花順 REST、自訂 YAML 源)做 A 股資料整合的開發者",
+        "想在既有行情資料上疊加 LLM 對話式查詢/復盤能力的量化愛好者",
+        "學習 Polars + FastAPI + 分鐘級回測引擎架構設計的工程師參考範例"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 docs/ 目錄文件非常詳盡(部署、設定、策略、因子挖掘、二次開發皆有專篇),原始碼註解說明「為什麼」而非「做什麼」,品質高於一般個人專案;測試檔案數量龐大(270+)、涵蓋核心回測與資料管線邏輯;CI 僅有 Docker 建置與發版工作流,未見獨立的 lint/單元測試 CI job,故測試分數未給滿分;近期每日皆有提交(至 2026-09-25),活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 會依 USE_CN_MIRROR 參數改寫 apt/npm/pip 的來源為國內鏡像站(阿里雲、清華、npmmirror),屬建置期換源而非執行期外連,專案已在註解中明確說明原因",
+          "選配的 stock-sdk 插件(backend/app/plugins/stocksdk)會透過 Node bridge 抓取第三方財經網站行情資料,專案文件與 Dockerfile 註解已主動指出此舉可能涉及版權/服務條款風險,並預設(INCLUDE_STOCKSDK=0)不打包,需使用者顯式開啟",
+          "dev.sh 的相依安裝提示中包含官方 uv 專案的 curl | sh 安裝指令,屬文件提示文字而非腳本自動執行,是 uv 官方推薦的標準安裝方式",
+          "鏡像內建 Codex CLI 並會唯讀掛載主機 ~/.codex 登入憑證,文件已提醒僅應在受信任本機環境啟用,無憑證外傳或寫入鏡像的跡象"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與文件透明度在個人開源量化專案中屬上乘之作,插件化架構與測試覆蓋率值得參考,值得量化愛好者一試,但需留意其為個人維護、非機構級合規產品。",
+      "_mode": "full"
+    }
+  },
+  "openbao/openbao": {
+    "first_seen": "2026-09-26",
+    "last_seen": "2026-09-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-26": [
+        7731,
+        49,
+        16,
+        "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-26",
+    "analysis": {
+      "category": "security",
+      "one_liner": "OpenBao 是 HashiCorp Vault 的開源分支,提供密鑰、憑證與敏感資料的集中管理方案。",
+      "summary": "OpenBao 由 Linux Foundation / OpenSSF 社群主導,以開放治理模式延續 Vault 的核心功能,包含加密儲存、動態密鑰產生、租約續期與撤銷機制。專案採 MPL-2.0 授權,提供 Go 語言撰寫的 CLI(`bao`)、api/sdk 函式庫以及 Web UI,適合需要自建密鑰管理系統又想避開商業授權限制的團隊。",
+      "highlights": [
+        "社群主導的開放治理模式,由 Linux Foundation/OpenSSF 支持",
+        "涵蓋密鑰儲存、動態密鑰、加密即服務、租約與撤銷等完整功能",
+        "提供 OpenSSF Scorecard 與 Best Practices 徽章,顯示對供應鏈安全的重視",
+        "同時提供 api/v2、sdk/v2 函式庫供其他專案整合",
+        "今日新上榜即獲得 +49 星,顯示社群關注度正在快速上升"
+      ],
+      "use_cases": [
+        "企業內部需要集中管理資料庫憑證、API 金鑰等敏感資訊",
+        "微服務架構中動態產生並自動撤銷雲端服務(如 AWS)臨時憑證",
+        "需要對敏感資料做加密即服務(encryption as a service)而不落地明文儲存",
+        "尋找 HashiCorp Vault 商業授權替代方案的團隊"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,涵蓋功能說明、開發指引與治理連結,但未附測試涵蓋率或 CI 徽章說明;僅憑 README 評估,無法確認實際程式碼品質。最後推送時間為 2026-09-24,且今日剛登上 trending 並獲得 49 顆星,顯示活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若在尋找開源、社群治理的密鑰管理方案,OpenBao 值得列入評估清單,但實際導入前建議進一步查閱原始碼與安全稽核紀錄。",
+      "_mode": "light"
     }
   }
 }
