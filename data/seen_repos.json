@@ -1,7 +1,7 @@
 {
   "block/buzz": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-24",
+    "last_seen": "2026-09-27",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -22,45 +22,49 @@
         6,
         "A hive mind communication platform",
         "Rust"
+      ],
+      "2026-09-27": [
+        34831,
+        339,
+        8,
+        "A hive mind communication platform",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-08-24",
+    "last_analyzed": "2026-09-27",
     "analysis": {
+      "one_liner": "由 Block 開發的自架式協作平台,讓人類與 AI Agent 在同一個 Nostr relay 事件日誌中共同工作",
+      "summary": "Buzz 是一個可自架的工作空間,將聊天頻道、程式碼審查、CI 工作流程、媒體留言等全部建模為同一個 Nostr relay 上的簽章事件,讓人類與 AI Agent(如 Goose、Codex、Claude Code)以相同的身分模型與稽核軌跡並肩協作。核心賣點是「一個社群、一個身分模型、一個事件日誌」取代目前團隊拼湊聊天工具、Git 平台、CI 儀表板、搜尋索引等多套系統的做法。",
       "category": "devtool",
-      "one_liner": "Buzz 是 Block 公司開源的「人機協作工作空間」,把聊天、程式碼協作、工作流程與 AI agent 全部整合在同一個以 Nostr relay 為基礎的事件紀錄系統中。",
-      "summary": "Buzz 是一個可自架的協作平台,核心概念是用單一 Nostr relay 事件日誌統一記錄訊息、反應、程式碼變更(NIP-34)、工作流程執行與審核核准,不論作者是人類或 AI agent 都用同一套身分模型與稽核軌跡。目標是取代團隊目前拼湊聊天工具、程式碼託管、CI 儀表板、發版工具與搜尋索引的多工具現況,讓 AI agent 能以「成員」而非「機器人」的身分實際參與頻道、審查程式碼、執行工作流程。",
       "highlights": [
-        "採用 Nostr 協定作為底層事件模型,所有訊息、程式碼提交、工作流程與審核都是同一種簽名事件",
-        "AI agent 擁有獨立金鑰與頻道成員資格,權限透過身分而非權限旗標控管",
-        "支援分支即頻道(branch as room)概念,把 PR 討論、CI 結果、審查決策整合在同一空間",
-        "提供 buzz-cli(JSON in/out)與 ACP 介面串接 Goose、Codex、Claude Code 等 agent 工具",
-        "README 明確標示功能完成度(已完成/建置中/構想階段),透明度高"
+        "以 Nostr 協議(NIP-01/NIP-34/NIP-42)作為統一事件日誌,訊息、Git patch、CI 結果、審批動作都是同一種簽章事件",
+        "Agent 被視為頻道成員而非機器人,擁有自己的金鑰與稽核軌跡,可執行審查、發 patch、跑工作流程、開語音",
+        "提供 buzz-cli(JSON in / JSON out)與 ACP harness,方便串接 Goose、Codex、Claude Code 等 Agent",
+        "支援桌面應用(Tauri + React)、Docker Compose 自架與 Railway 一鍵部署 relay"
       ],
       "use_cases": [
-        "需要讓 AI agent 深度參與日常開發流程(審查 PR、觸發工作流程)的團隊",
-        "希望自架、資料主權可控的團隊協作平台,取代 Slack/GitHub/CI 儀表板等多套工具",
-        "想串接多種 AI coding agent(Claude Code、Codex 等)到同一協作空間的開發團隊",
-        "對 Nostr 協定或去中心化身分事件模型有興趣的研究/實驗用途"
+        "團隊想要一個自架、支援人類與 AI Agent 共同協作的工作空間,取代 Slack/GitHub/CI 儀表板的拼湊組合",
+        "需要讓 AI Agent 以「有身分、有稽核軌跡」的方式參與程式碼審查與發布流程的研發團隊",
+        "想串接 Goose、Codex、Claude Code 等 Agent 進行自動化事件觸發(訊息/排程/webhook)工作流程的場景"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 撰寫完整,附架構圖、crate 對照表、多種安裝路徑與功能完成度表,文件品質高;但僅能依 README 評估,未檢視原始碼與測試涵蓋率。專案剛上榜當日即有大量星數成長,推送時間為當天,活躍度高。"
+        "comment": "README 結構完整,附架構圖、功能矩陣與多種安裝路徑說明,文件品質良好;但僅能依 README 判斷,未檢視實際程式碼與測試涵蓋率,今日新上榜且單日增加 339 星,顯示動能強勁。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供多種安裝方式,包含官方發布頁下載打包執行檔、Docker/Hermit 建置流程,以及一鍵部署到 Railway 的按鈕,未見 curl 直接執行遠端腳本的模式",
-          "Windows 版安裝檔案未經程式碼簽署,官方在文件中提醒會觸發 SmartScreen 警告",
-          "僅基於 README 進行評估,未實際檢視原始碼或相依套件的安全性"
+          "提供的 Windows 版安裝檔未經程式碼簽署,README 說明 SmartScreen 可能跳出警告,需使用者手動選擇「仍要執行」",
+          "支援透過 Railway 一鍵部署 relay,以及使用 Docker Compose 自架生產環境,屬於標準自架流程,未見可疑安裝指令"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念新穎且來自 Block 官方支持,整合 AI agent 與協作工具的野心值得關注,但仍屬早期階段(多項功能標示為建置中或構想),適合觀察後續發展而非立即導入生產環境。",
+      "verdict": "概念新穎且執行完整度高,值得追蹤,但屬早期專案(部分功能標示為「開發中」或「尚無程式碼」),適合先觀察或小規模試用而非直接生產導入。",
       "_mode": "light"
     },
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "consecutive_days_on_trending": 1
   },
   "koala73/worldmonitor": {
@@ -3534,10 +3538,10 @@
   },
   "zhaoxuya520/reverse-skill": {
     "first_seen": "2026-08-01",
-    "last_seen": "2026-09-01",
+    "last_seen": "2026-09-27",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-01": [
         10725,
@@ -3580,42 +3584,46 @@
         9,
         "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
         "PowerShell"
+      ],
+      "2026-09-27": [
+        38011,
+        361,
+        10,
+        "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "PowerShell"
       ]
     },
-    "last_analyzed": "2026-09-01",
+    "last_analyzed": "2026-09-27",
     "analysis": {
+      "one_liner": "給 AI coding agent 用的「逆向工程/滲透測試技能路由包」,依任務關鍵字自動導向對應方法論、工具鏈與腳本。",
+      "summary": "reverse-skill 是一套給 Claude Code、Cursor、Codex 等 AI 客戶端使用的技能路由系統:輸入一句任務描述(如「這是一個 APK,幫我分析」),就會依照 routing.json 的規則庫匹配到對應的技能模組(APK 逆向、二進位逆向、JS 逆向、CTF、滲透測試等 40+ 領域),並附上工具鏈自舉腳本與案例證據鏈管理流程。目的是解決 AI agent 面對逆向/資安任務時「不知道該用 jadx 還是 IDA、亂猜指令」的問題。",
       "category": "security",
-      "one_liner": "給 AI coding agent(Claude Code、Cursor、Codex 等)用的逆向工程/滲透測試技能路由包,依任務類型自動分派到對應方法論與工具鏈。",
-      "summary": "reverse-skill 不是一般的工具集合,而是一套「Skill Router」規則與腳本系統:當 AI agent 遇到 APK、二進位檔、前端 JS 加密、CTF 題目或滲透測試任務時,先透過 routing.json 規則比對決定進入哪個方法論(skills/ 下 44 個模組 + CTF-Sandbox-Orchestrator 42 個競賽子技能),再視情況自舉安裝對應工具鏈(jadx、frida、radare2、IDA MCP 等),並要求先建立 case scope(需 auth.status=granted)才能對真實目標動手。專案同時附帶 173 條路由回歸測試與 Windows+Ubuntu 雙平台 CI。",
       "highlights": [
-        "路由邏輯集中在單一 routing.json(43 條規則 R0–R44),並有 173 案例的回歸測試防止路由漂移",
-        "工具自舉腳本(BootstrapSupplyChain.ps1)對 git-clone 安裝做了 commit pinning、checkout 乾淨度驗證、CI 有 supply-chain pin gate 檔案不能是未鎖版本",
-        "明確的授權閘門設計(precedent-auth.md + scope.md 的 auth.status=granted)禁止 AI 把「使用者提到網域/IP」當成已授權,對真實外網目標動手前有硬性擋點",
-        "README_AI.md 內含一份專門寫給 AI agent 的『自動配置』指令與 agent-obedience-engineering.md,目的是讓 agent 確實照著工作流步驟做、不要偷跳步驟或用藉口省略操作",
-        "CHANGELOG 記錄詳盡、CI 涵蓋 Windows/Ubuntu 雙平台、PowerShell 編碼相容性等實務細節,顯示持續維護且非一次性拋出"
+        "路由核心以單一 JSON 設定檔(routing.json,R0–R45 共 44 條規則)驅動,並有 175 案例的回歸測試集,CI 在 Windows + Ubuntu 雙平台跑",
+        "自舉工具鏈(jadx、apktool、frida、ida-pro-mcp 等)全部在 bootstrap-manifest.json 中以 SHA256/pinned commit/pinned version 釘選版本,並有 CI gate 擋掉未釘選的自動安裝來源",
+        "專案維護者對 2026-09-03 一次 GitHub Issue 回報的 Defender 誤判(waf-bypass.md 中的教學用 PHP webshell 片段)寫了完整的 Evidence→Finding→Path 調查報告並公開在 docs/ 下,同時補強了執行/被動資料的邊界檢查腳本",
+        "涵蓋 APK、iOS、二進位、.NET、前端 JS、韌體、Pwn、EDR bypass、CTF(42 個子技能)等 40+ 逆向與滲透測試領域,並整合 case-review 的證據鏈與時間軸流程"
       ],
       "use_cases": [
-        "授權滲透測試/紅隊演練中,讓 AI coding agent 依任務自動路由到正確的偵察、逆向或攻擊鏈方法論",
-        "CTF 競賽時用 CTF-Sandbox-Orchestrator 的 42 個子技能加速解題流程",
-        "APK/二進位/前端 JS 逆向工程時,統一管理 jadx、apktool、frida、IDA MCP 等工具的安裝與呼叫順序",
-        "團隊要把分散在不同機器上的逆向/滲透工具鏈與經驗知識庫(field-journal)標準化、可攜化"
+        "讓 AI coding agent 在處理 APK/二進位/JS 逆向任務時自動選對工具鏈與方法論,減少人工下指令的來回",
+        "CTF 比賽時作為快速路由到對應子技能(如 AD 憑證濫用、韌體佈局分析、JWT claim 混淆等)的知識庫",
+        "授權滲透測試流程中用來規範案件範圍(scope)、證據鏈與報告產出的標準作業程序"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "文件量極大且分層清楚(README/README_AI/RULES/AGENTS 各司其職),有 173 條路由回歸測試、smoke test、結構一致性檢查與雙平台 CI,PowerShell 腳本品質偏高(有 pinned commit 驗證、乾淨度檢查等防呆設計)。缺點是專案規模龐大(620+ 檔案)、幾乎全是 Markdown 規則文件與 PowerShell/Bash 腳本膠水,核心邏輯的『真正代碼』佔比不高,品質高度依賴使用者所連的 AI agent 是否確實遵循規則。"
+        "comment": "文件與工程紀律遠超一般個人專案等級:有 CHANGELOG、AGENTS.md、多份安全審查文件,CI 跑路由回歸測試、結構一致性、供應鏈釘選 gate、shell/PowerShell 語法檢查、洩漏掃描等多個 job,且對社群回報的誤判事件有公開透明的調查流程。程式本體多為 PowerShell/Bash 路由腳本與大量 Markdown 技能手冊,屬於「知識庫 + 路由邏輯」而非傳統應用程式,程式碼複雜度不高但結構嚴謹。"
       },
       "security": {
-        "risk_level": "medium",
+        "risk_level": "low",
         "findings": [
-          "README_AI.md 包含一段專門寫給 AI agent 的指令,要求 agent 讀完後『立即自動執行』設定流程、安裝工具、並且不要因猶豫或免責聲明而停下(skills/llm-security/references/agent-obedience-engineering.md 詳述了如何用強制性語言與『藉口反駁表』讓 agent 不中途卡關)。這類技巧會讓連接此專案的 AI agent 傾向自動執行安裝與滲透相關腳本,而非停下來與使用者確認,使用前建議先審閱該檔案內容。",
-          "工具自舉腳本(bootstrap-reverse.ps1、BootstrapSupplyChain.ps1)會從 GitHub Releases API 與官方套件源(npm/pnpm)下載並安裝二進位檔或原始碼,雖然對 git-clone 安裝做了 commit pinning 與 checkout 驗證,但仍屬於『代理程式自動下載執行外部程式碼』模式,建議在隔離或可控環境中首次執行",
-          "專案本身設計了授權閘門(precedent-auth.md 明確禁止把使用者提及的網域/IP 當成已授權,要求 case-init 產生 scope.md 且 auth.status=granted 才能對目標動手),顯示作者有意識地限制未授權濫用,這點降低了整體風險"
+          "skills/pentest-tools/src-hunter/references/payloader/ 目錄下含有作為滲透測試參考資料的 webshell/繞過 WAF 範例(含 PHP eval(base64_decode()) 片段),曾被 Microsoft Defender 標記為 Backdoor:PHP/ImagePHPBackdoor.A;專案方已提供公開調查報告,確認該內容為被動文件資料,未被任何自舉或路由腳本引用執行",
+          "工具自舉流程(bootstrap-manifest.json)會從 GitHub Releases / pip / winget 等來源下載並安裝第三方逆向工具(jadx、apktool、frida、ida-pro-mcp 等),但均採用版本或 commit 釘選並搭配 SHA256 校驗,CI 另有 gate 檢查未釘選的自動安裝設定"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程完整度遠超一般「prompt 包」專案,對已經在做授權滲透測試/CTF/逆向工作的 AI agent 使用者很有參考價值,但其刻意設計的『讓 agent 不要停下來確認』機制值得先讀懂再接入自己的工作流。",
+      "verdict": "對於用 AI agent 做授權滲透測試/逆向工程/CTF 的工程師,這是目前少見在工程紀律與供應鏈安全上都下足功夫的技能路由包,值得關注與試用。",
       "_mode": "full"
     }
   },
@@ -5837,10 +5845,10 @@
   },
   "vercel/next.js": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-08-06",
+    "last_seen": "2026-09-27",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-06": [
         141550,
@@ -5848,38 +5856,45 @@
         10,
         "The React Framework",
         "JavaScript"
+      ],
+      "2026-09-27": [
+        142636,
+        54,
+        15,
+        "The React Framework",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-06",
+    "last_analyzed": "2026-09-27",
     "analysis": {
-      "one_liner": "Vercel 打造的 React 全端框架,提供 SSR/SSG 與現代化開發體驗。",
-      "summary": "Next.js 是業界最主流的 React 框架之一,結合伺服器渲染、靜態網站生成與 Rust 工具鏈以達到最快建置速度。被眾多大型企業採用於正式產品環境,生態系與社群資源相當成熟。",
       "category": "framework",
+      "one_liner": "Next.js 是基於 React 的全端網頁框架,由 Vercel 主導開發與維護。",
+      "summary": "Next.js 讓開發者能以 React 為基礎打造全端網頁應用,整合了伺服器渲染、靜態網站生成等多種渲染模式,並搭配 Rust 技術強化的 JavaScript 建置工具鏈以提升建置速度。作為業界知名的大型企業廣泛採用的框架,它解決了純 React 在路由、SSR/SSG、效能優化等方面需要額外整合的痛點。",
       "highlights": [
-        "延伸 React 最新特性,支援 SSR、SSG 等多種渲染模式",
-        "整合 Rust-based JavaScript 工具鏈,建置速度快",
-        "官方文件、Learn 課程與 Showcase 資源完整",
-        "已被眾多大型企業於正式產品中採用,生態系成熟",
-        "設有 Bug Bounty 資安揭露計畫"
+        "支援 SSR、SSG 等多種混合渲染策略,滿足不同頁面的效能與 SEO 需求",
+        "採用 Rust 為基礎的工具鏈以加速建置流程",
+        "由 Vercel 官方維護,生態系與文件成熟,並有 Learn Next.js 教學課程",
+        "MIT 授權,社群活躍,設有 GitHub Discussions 與 Discord 供交流",
+        "設有正式的 Bug Bounty 漏洞回報機制"
       ],
       "use_cases": [
-        "建立全端 React 應用,需要 SSR/SSG 混合渲染",
-        "打造 SEO 友善的內容型網站或部落格",
-        "企業級產品前端框架選型",
-        "學習現代 React 生態系與最佳實踐"
+        "建置需要 SEO 與快速首屏載入的內容型網站(部落格、電商)",
+        "開發全端應用,前後端邏輯整合在同一專案中",
+        "需要靜態網站生成(SSG)搭配動態資料的混合式網站",
+        "作為 React 專案的路由與建置工具升級選項"
       ],
       "quality": {
         "docs": 4,
-        "tests": 2,
+        "tests": 1,
         "activity": 5,
-        "comment": "README 本身資訊精簡但連結導向完整官方文件與課程,說明清楚;僅憑 README 無法評估程式碼測試涵蓋率,此處僅依 README 內容評估;專案更新頻繁(最後推送即為今日),且正處於 trending 榜,活躍度極高。"
+        "comment": "README 本身偏重導覽性質(連結至官方文件、教學與社群管道),未包含 API 細節或安裝指令,但涵蓋文件、貢獻指南與安全政策等基本要素;測試部分無法從 README 判斷,資源彙整類,測試不適用;近期持續有 commit 推送且今日新增 54 顆星,活躍度高。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 5,
-      "verdict": "身為 React 全端框架的業界標竿,值得持續關注與學習。",
+      "star_rating": 4,
+      "verdict": "身為 React 生態系最主流的全端框架之一,長期活躍且文件與社群資源完整,值得持續關注與投入學習。",
       "_mode": "light"
     }
   },
@@ -7089,10 +7104,10 @@
   },
   "paperclipai/paperclip": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-09-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-11": [
         76484,
@@ -7118,6 +7133,13 @@
       "2026-09-26": [
         84962,
         2109,
+        1,
+        "The open-source app everyone uses to manage agents at work",
+        "TypeScript"
+      ],
+      "2026-09-27": [
+        87335,
+        2608,
         1,
         "The open-source app everyone uses to manage agents at work",
         "TypeScript"
@@ -12176,10 +12198,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-09-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-09-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -12234,6 +12256,13 @@
         57503,
         1177,
         11,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-09-27": [
+        58382,
+        827,
+        6,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -16088,10 +16117,10 @@
   },
   "llvm/llvm-project": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-07",
+    "last_seen": "2026-09-27",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-07": [
         40212,
@@ -16099,37 +16128,45 @@
         8,
         "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
         "LLVM"
+      ],
+      "2026-09-27": [
+        40749,
+        41,
+        11,
+        "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+        "LLVM"
       ]
     },
-    "last_analyzed": "2026-09-07",
+    "last_analyzed": "2026-09-27",
     "analysis": {
       "category": "devtool",
-      "one_liner": "LLVM 是業界標準的模組化編譯器與工具鏈基礎設施,支援 Clang、libc++、LLD 等眾多子專案。",
-      "summary": "LLVM 專案是一套可重用的編譯器與工具鏈技術集合,核心提供中介表示(IR)處理、最佳化與程式碼產生能力,並衍生出 Clang(C/C++/Objective-C 前端)、libc++(C++ 標準函式庫)、LLD(連結器)等眾多子專案。這是全球最重要的開源編譯器基礎設施之一,廣泛應用於語言前端開發、程式碼最佳化、JIT 編譯與硬體後端支援。",
+      "one_liner": "LLVM 官方原始碼庫,涵蓋核心編譯器基礎設施、Clang 前端、libc++ 標準函式庫與 LLD 連結器等模組化工具鏈技術。",
+      "summary": "LLVM Project 是業界最重要的模組化編譯器與工具鏈基礎設施之一,提供中介表示(IR)處理、最佳化與物件碼產生等核心功能。專案整合了 Clang(C/C++/Objective-C 前端)、libc++、LLD 連結器等多個子專案,廣泛用於各類程式語言編譯器與開發工具的底層建構。",
       "highlights": [
-        "模組化架構,核心 LLVM 與 Clang、libc++、LLD 等子專案可獨立使用或組合",
-        "業界標準編譯器基礎設施,支援多種語言前端與硬體後端",
-        "具備 OpenSSF Scorecard 與 Best Practices 徽章,顯示專案治理成熟度高",
-        "社群溝通管道完整,包含 Discourse 論壇、Discord、定期 Office Hours"
+        "業界標準的編譯器基礎設施,被 Clang、Rust、Swift 等眾多語言工具鏈採用",
+        "模組化設計,核心 LLVM 與 Clang、libc++、LLD 等子專案可獨立運用",
+        "具備 OpenSSF Scorecard 與 Best Practices 認證徽章,顯示專案治理成熟",
+        "社群管道完整,包含 Discourse 論壇、Discord、定期 Office Hours 與線上同步會議",
+        "40749 顆星且持續有高頻更新,顯示專案活躍度極高"
       ],
       "use_cases": [
-        "開發自訂程式語言的編譯器前端(基於 LLVM IR 進行最佳化與程式碼產生)",
-        "研究或客製化 C/C++/Objective-C 編譯流程(透過 Clang)",
-        "嵌入式或特定硬體平台的程式碼產生與最佳化工具鏈開發",
-        "學術界與業界的編譯器技術教學與研究"
+        "開發自訂程式語言的編譯器後端或最佳化器",
+        "研究或擴充 C/C++/Objective-C 的編譯流程(透過 Clang)",
+        "需要跨平台連結器(LLD)或 C++ 標準函式庫(libc++)實作的專案",
+        "編譯器與程式語言相關的學術研究或教學參考"
       ],
       "quality": {
         "docs": 3,
         "tests": 2,
         "activity": 5,
-        "comment": "README 簡潔但僅提供高層次概覽與外部文件連結,實際建置與貢獻細節需查閱官方文件;僅能依 README 評估,測試品質無法從此檢視。專案本身推送頻繁(最後推送於 2026-09-06),且長期為業界核心基礎設施,活躍度極高。"
+        "comment": "README 僅提供入門導覽與外部文件連結,實際建置與貢獻說明皆導向官方文件站,本身資訊量偏簡略;測試品質僅能以 README 為準無法評估實際程式碼;活動度極高,最後推送時間接近評測當下且持續登上 trending。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "LLVM 是編譯器領域無可取代的基礎設施,任何從事語言設計、編譯最佳化或工具鏈開發的工程師都值得深入研究。",
+      "verdict": "LLVM 是編譯器領域的基石級專案,對任何從事程式語言、編譯器或底層工具鏈開發的工程師都是必看的核心資源。",
       "_mode": "light"
     }
   },
@@ -20955,10 +20992,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-26",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-27",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -20985,6 +21022,13 @@
         18439,
         1050,
         6,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ],
+      "2026-09-27": [
+        19225,
+        849,
+        4,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
       ]
@@ -21426,10 +21470,10 @@
   },
   "vectorize-io/hindsight": {
     "first_seen": "2026-09-25",
-    "last_seen": "2026-09-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-25": [
         27782,
@@ -21442,6 +21486,13 @@
         29801,
         1653,
         3,
+        "Hindsight: Agent Memory That Learns",
+        "Python"
+      ],
+      "2026-09-27": [
+        32206,
+        2147,
+        2,
         "Hindsight: Agent Memory That Learns",
         "Python"
       ]
@@ -21484,10 +21535,10 @@
   },
   "NVIDIA/Model-Optimizer": {
     "first_seen": "2026-09-25",
-    "last_seen": "2026-09-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-25": [
         4079,
@@ -21500,6 +21551,13 @@
         4472,
         359,
         14,
+        "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+        "Python"
+      ],
+      "2026-09-27": [
+        4753,
+        357,
+        3,
         "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
         "Python"
       ]
@@ -21886,15 +21944,22 @@
   },
   "openbao/openbao": {
     "first_seen": "2026-09-26",
-    "last_seen": "2026-09-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-26": [
         7731,
         49,
         16,
+        "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+        "Go"
+      ],
+      "2026-09-27": [
+        8007,
+        364,
+        7,
         "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
         "Go"
       ]
@@ -21930,6 +21995,254 @@
       "star_rating": 4,
       "verdict": "若在尋找開源、社群治理的密鑰管理方案,OpenBao 值得列入評估清單,但實際導入前建議進一步查閱原始碼與安全稽核紀錄。",
       "_mode": "light"
+    }
+  },
+  "tensorflow/tensorflow": {
+    "first_seen": "2026-09-27",
+    "last_seen": "2026-09-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-27": [
+        200455,
+        46,
+        5,
+        "An Open Source Machine Learning Framework for Everyone",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-09-27",
+    "analysis": {
+      "file_path": "",
+      "one_liner": "Google 主導的開源機器學習框架,支援從研究到生產部署的完整生態系。",
+      "summary": "TensorFlow 是一個端到端的開源機器學習平台,提供穩定的 Python 與 C++ API,涵蓋深度學習、分散式訓練等應用場景。由 Google Brain 團隊發起,目前已發展出龐大的工具與社群生態,是業界最主流的 ML 框架之一。",
+      "category": "ai-ml",
+      "highlights": [
+        "20 萬顆星星、Apache-2.0 授權的頂級開源專案,產業採用度極高",
+        "支援 CPU/GPU/Docker 多種安裝方式,並涵蓋 Linux、macOS、Windows、Android、樹莓派等多平台建置",
+        "具備 OpenSSF Scorecard、OSS-Fuzz 模糊測試、CII Best Practices 等安全與工程實踐認證",
+        "官方文件、教學、白皮書、YouTube 頻道等資源齊全,學習資源豐富",
+        "今日 GitHub trending 第 5 名,單日新增 46 顆星,顯示持續活躍"
+      ],
+      "use_cases": [
+        "建立深度學習模型進行研究或生產部署",
+        "需要跨平台(CPU/GPU/行動裝置)ML 推論與訓練的專案",
+        "作為教學或課程中機器學習框架的教材"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 文件完整,涵蓋安裝、貢獻指南、建置狀態與資源連結;僅憑 README 評估,未實際檢視程式碼與測試涵蓋率,最後推送時間為 2026-09-27,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "業界標竿級 ML 框架,長期穩定活躍,絕對值得收錄與關注。",
+      "_mode": "light"
+    }
+  },
+  "microsoft/vscode": {
+    "first_seen": "2026-09-27",
+    "last_seen": "2026-09-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-27": [
+        193074,
+        95,
+        9,
+        "Visual Studio Code",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-27",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "微軟開源的程式碼編輯器 VS Code(Code - OSS)原始碼庫,全球最主流的開發工具之一。",
+      "summary": "這是 Visual Studio Code 的開源核心「Code - OSS」倉庫,由 Microsoft 與社群共同開發。README 主要說明專案定位、貢獻方式、開發容器設定與相關資源連結,而非技術實作細節,因為此專案本身即是廣為人知的成熟產品。",
+      "highlights": [
+        "長期由 Microsoft 官方維護,近 20 萬顆星,是目前最受歡迎的程式碼編輯器之一",
+        "提供完整的貢獻指南、開發容器(Dev Containers/Codespaces)與建置流程說明",
+        "採用 MIT 授權,原始碼完全開放",
+        "今日登上 GitHub trending 第 9 名,單日新增 95 顆星,顯示持續高關注度",
+        "內建豐富的擴充套件系統與語言支援(如 json-language-features)"
+      ],
+      "use_cases": [
+        "作為日常開發的程式碼編輯器使用",
+        "研究大型 TypeScript/Electron 專案的架構與工程實踐",
+        "參與開源貢獻,學習大型專案的協作流程與程式碼規範",
+        "透過 Dev Container 快速建立一致的開發環境"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 文件結構清晰,涵蓋貢獻方式、回饋管道、相關專案與開發容器設定,但本身偏向專案入口導覽而非技術深入說明;測試品質僅能依 README 判斷,無法看到實際程式碼與測試涵蓋率。最後推送時間為 2026-09-27,近乎每日更新,活躍度極高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "身為全球最主流的開源編輯器核心,技術價值與社群影響力毋庸置疑,絕對值得持續關注。",
+      "_mode": "light"
+    }
+  },
+  "anthropics/claude-code-action": {
+    "first_seen": "2026-09-27",
+    "last_seen": "2026-09-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-27": [
+        9091,
+        31,
+        12,
+        "",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-27",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Anthropic 官方推出的 GitHub Action,讓 Claude Code 可以自動回覆 PR/Issue、進行程式碼審查並直接實作修改。",
+      "summary": "這是一個可放進 GitHub workflow 的 composite action,能依據事件類型(@claude 提及、issue 指派、標籤觸發等)自動偵測執行模式,呼叫 Claude Code SDK 在使用者自己的 runner 上執行程式碼審查、問答或實作修改,並將結果以留言、分支、結構化輸出等形式回寫到 GitHub。支援 Anthropic 原生 API、AWS Bedrock、Google Vertex AI、Microsoft Foundry 等多種驗證後端。",
+      "highlights": [
+        "官方(Anthropic)維護,程式碼結構清晰,採 TypeScript + Bun,模組化程度高(entrypoints/github/mcp/modes 分層明確)",
+        "測試涵蓋面廣,test/ 目錄有 45+ 個測試檔涵蓋權限檢查、sanitizer、token、路徑驗證等安全相關邏輯",
+        "內建多層安全機制:寫入權限檢查(checkWritePermissions)、PR 分支的 .claude/.mcp.json 設定會從 base branch 還原以防止攻擊者透過 PR 注入設定、輸出內容會做 secrets redaction",
+        "CI workflow 數量多(ci.yml、release.yml、多個 test-*.yml),顯示持續整合與多情境測試被認真對待",
+        "文件完整,README 連結多份專屆文件(setup、security、faq、cloud-providers 等),並提供 v0.x 升級指南"
+      ],
+      "use_cases": [
+        "在企業或個人 repo 中設定 @claude 觸發,讓 Claude 自動回答 issue/PR 討論或提出修改建議",
+        "建立自動化 PR Code Review 流程,依路徑或標籤觸發客製化審查規則",
+        "串接 AWS Bedrock / Google Vertex / Microsoft Foundry,在企業合規要求下使用 Claude 進行 GitHub 自動化",
+        "Issue Triage 與自動標籤、排程維護等 DIY 自動化腳本"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件與測試都非常完整,程式碼分層清楚且有大量針對安全情境(權限繞過、路徑注入、secrets 洩漏)的專門測試與防護邏輯,反映出對供應鏈與 prompt injection 風險的高度重視。action.yml 內也有大量註解說明各種邊界情況與已知 issue 的因應方式,工程成熟度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "action.yml 與 src/entrypoints/run.ts 中會執行 `curl -fsSL https://claude.ai/install.sh | bash` 來安裝 Claude Code CLI,屬於常見的官方安裝腳本模式,但使用者應留意這代表 workflow 執行時會從外部網址下載並執行安裝腳本",
+          "action 支援 `allowed_non_write_users` 與 `allowed_bots` 設定為 '*' 以繞過寫入權限檢查,文件與程式碼中都有明確標示 SECURITY WARNING,若使用者誤設為 '*' 且套用於公開 repo,可能讓無寫入權限的外部使用者或任意 bot 觸發此 action"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "官方維護、工程品質與安全考量都在水準之上,對於想在 GitHub 流程中導入 Claude Code 自動化的團隊,是值得立即嘗試的首選工具。",
+      "_mode": "full"
+    }
+  },
+  "actions/runner-images": {
+    "first_seen": "2026-09-27",
+    "last_seen": "2026-09-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-27": [
+        13300,
+        19,
+        13,
+        "GitHub Actions runner images",
+        "PowerShell"
+      ]
+    },
+    "last_analyzed": "2026-09-27",
+    "analysis": {
+      "one_liner": "GitHub 官方維護的 Actions/Azure Pipelines 代管執行環境映像檔建置原始碼(Ubuntu/Windows/macOS)。",
+      "summary": "此專案是 GitHub 用來產生 GitHub-hosted runners 與 Azure DevOps Microsoft-hosted agents VM 映像檔的原始碼庫,內含各作業系統(Ubuntu、Windows、macOS)的 Packer 範本、PowerShell/Bash 安裝腳本與軟體版本報表工具。開發者可參考或自行修改這些腳本來建置自訂的 self-hosted runner 映像檔。",
+      "category": "devtool",
+      "highlights": [
+        "涵蓋 Ubuntu 22/24/26、Windows Server 2022/2025、macOS 14/15/26 等十餘種官方執行環境的完整建置腳本",
+        "多支安裝腳本(如 kubernetes-tools)內建 SHA256 checksum 驗證與 GPG 金鑰驗證等供應鏈安全措施",
+        "自訂 SoftwareReport PowerShell 模組搭配 Pester 單元測試與 E2E 測試,用於產生/比對映像軟體清單",
+        "CI 完整涵蓋 CodeQL 掃描、JSON schema 驗證、pinned 版本檢查、多作業系統映像建置流程",
+        "文件詳盡,README 明確說明 Beta/GA 生命週期、版本淘汰政策與第三方套件庫使用情況"
+      ],
+      "use_cases": [
+        "需要打造與 GitHub-hosted runner 內容一致的 self-hosted runner 映像檔",
+        "研究/複製 CI 執行環境中預裝軟體與版本策略,以除錯 workflow 相容性問題",
+        "學習大型專案如何用 PowerShell 撰寫跨平台軟體報表與比對工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整(README、CONTRIBUTING、多份 docs),PowerShell 核心模組有 Pester 單元/E2E 測試,但大量 Bash/PowerShell 安裝腳本本身缺乏自動化測試覆蓋,主要靠映像建置後的驗證腳本(invoke_tests)把關。CI 活動非常活躍,每週有多平台映像建置與版本更新,顯示專案為官方持續維護的核心基礎設施。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "部分建置腳本(如 install-nvm.sh、install-kubernetes-tools.sh 的 helm 安裝)採用 curl | bash 模式從官方上游(nvm-sh、helm)下載並執行安裝腳本,這是映像建置流程中常見手法,非專案特有異常行為",
+          "多數第三方二進位下載(kind、minikube、kustomize)已搭配官方發布的 SHA256 checksum 進行驗證,顯示有基本的供應鏈完整性把關"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對於需要理解或客製化 GitHub Actions/Azure Pipelines 執行環境的工程師來說是極具參考價值的官方一手資料,值得加星關注,但一般應用開發者日常未必需要深入研讀。",
+      "_mode": "full"
+    }
+  },
+  "mobile-next/mobile-mcp": {
+    "first_seen": "2026-09-27",
+    "last_seen": "2026-09-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-27": [
+        7351,
+        168,
+        14,
+        "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-27",
+    "analysis": {
+      "one_liner": "跨平台 MCP 伺服器,讓 AI Agent 能透過無障礙樹或座標點擊自動操作真實/模擬的 iOS 與 Android 裝置。",
+      "summary": "mobile-mcp 是 Mobile Next 團隊開發的 Model Context Protocol 伺服器,提供統一 API 讓 LLM/Agent 控制 iOS 模擬器、Android 模擬器與實體裝置,解決過去需分別學習 XCUITest / Espresso 才能自動化行動裝置的問題。它優先透過原生無障礙樹讀取畫面元素(比純截圖辨識省 token、更精準),並提供點擊、滑動、輸入、App 安裝、日誌擷取等完整工具集,底層由同團隊的 mobilecli 驅動。",
+      "category": "devtool",
+      "highlights": [
+        "以無障礙樹為主、截圖為輔的互動策略,降低視覺模型 token 成本並提升點擊精確度",
+        "單一 MCP 工具集同時涵蓋 iOS/Android 模擬器與實體裝置,並可延伸至雲端裝置農場(Mobile Next Cloud)",
+        "支援 stdio 與 Streamable HTTP 兩種傳輸模式,HTTP 模式可設定 Bearer Token 驗證與 DNS rebinding 防護",
+        "CI 流程包含真正在自架 runner 上跑 Android/iOS 模擬器的端對端測試,而非只有單元測試",
+        "程式碼中執行外部指令一律使用 execFileSync(非 shell 字串拼接),降低指令注入風險"
+      ],
+      "use_cases": [
+        "讓 Claude Code / Cursor / Copilot 等 AI Agent 自動操作 App 執行多步驟使用者流程測試",
+        "行動 App 的資料填寫、表單測試或迴歸驗證自動化,無需手寫 XCUITest/Espresso 腳本",
+        "透過雲端真機農場大規模平行執行 Agent 驅動的 App 探索或資料擷取任務"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 與 wiki 文件非常完整(含多語版本、架構圖、逐工具說明),CONTRIBUTING/SECURITY/ROADMAP 齊全。測試涵蓋單元測試(mocha/c8)及在自架 runner 上跑真實模擬器的端對端測試,但核心平台互動邏輯(android.ts/ios.ts)仍多依賴外部裝置環境,較難做到高覆蓋率的隔離單元測試。專案活躍度高,近期持續發版與功能擴充(雲端裝置、批次指令等),CI 有完整的 lint/audit/build/publish 流程。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "HTTP 監聽模式(--listen)預設不需驗證即可連線,若未設定 MOBILEMCP_AUTH 環境變數會以警告訊息接受未驗證連線,使用者需自行注意在公開網路環境下啟用此模式的風險",
+          "mobile_open_url 工具預設會阻擋非標準 URL scheme,需明確設定 MOBILEMCP_ALLOW_UNSAFE_URLS=1 才會放行,屬於刻意設計的保護機制且預設關閉",
+          "專案會透過 PostHog/Scarf 收集匿名使用遙測,可用 MOBILEMCP_DISABLE_TELEMETRY 關閉,此為文件中明確揭露的行為"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "文件完整、架構清晰、CI 具備真實裝置端對端測試,是目前少數成熟度較高的行動裝置 MCP 伺服器,值得行動測試/Agent 自動化場景關注,但需注意 HTTP 模式預設無驗證這點。",
+      "_mode": "full"
     }
   }
 }
