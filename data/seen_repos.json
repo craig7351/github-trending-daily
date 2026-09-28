@@ -7104,10 +7104,10 @@
   },
   "paperclipai/paperclip": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-09-27",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-28",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-11": [
         76484,
@@ -7140,6 +7140,13 @@
       "2026-09-27": [
         87335,
         2608,
+        1,
+        "The open-source app everyone uses to manage agents at work",
+        "TypeScript"
+      ],
+      "2026-09-28": [
+        89895,
+        2401,
         1,
         "The open-source app everyone uses to manage agents at work",
         "TypeScript"
@@ -12198,10 +12205,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-09-27",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-09-28",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -12263,6 +12270,13 @@
         58382,
         827,
         6,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-09-28": [
+        59294,
+        790,
+        4,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -15091,10 +15105,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-16",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15137,42 +15151,48 @@
         4,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
+      ],
+      "2026-09-28": [
+        40165,
+        3086,
+        3,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-03",
+    "last_analyzed": "2026-09-28",
     "analysis": {
-      "category": "app",
-      "one_liner": "完全本地端執行的開源語音工作站,涵蓋語音克隆、配音、聽寫、轉錄與有聲書製作,主打「本地優先」的 ElevenLabs 替代方案。",
-      "summary": "VoiceStudio(前身 OmniVoice-Studio)是以 Tauri + React 前端搭配 FastAPI 後端打造的桌面應用,整合 16 種 TTS 引擎與 11 種 ASR 引擎,支援語音克隆、語音設計、影片配音、聽寫、轉錄與有聲書製作等工作流程,涵蓋 646 種語言。核心賣點是所有運算預設在本機執行(CUDA/MPS/ROCm/CPU),不需帳號、API key 或訂閱費用,並提供與 OpenAI 相容的本地 API 及 MCP Server 介面。",
+      "category": "ai-ml",
+      "one_liner": "完全在本機執行的開源 ElevenLabs 替代品,涵蓋語音克隆、配音、聽寫與有聲書製作。",
+      "summary": "VoiceStudio 是一套以 Electron 桌面應用包裝、FastAPI 為後端的本機語音工具箱,整合多種開源 TTS/STT 引擎(預設 k2-fsa/OmniVoice),支援語音克隆、聲音設計、影片配音(含翻譯與時間軸對齊)、聽寫與 646 種語言的轉錄/有聲書生成。專案強調「local-first」,可選接遠端 worker,並提供本機 API 與 MCP 介面供 agent 整合。",
       "highlights": [
-        "架構完整:Tauri(Rust)桌面殼層 + React/Vite 前端 + FastAPI 後端,並有清楚的分層文件(desktop/frontend/API/services/engines/worker)",
-        "測試與 CI 規格極高:近 500 個測試檔,涵蓋 backend、frontend(Vitest)、Tauri Rust 單元測試、跨平台(macOS/Windows/Linux)smoke matrix,並有 production bundle 的白屏回歸測試",
-        "安全治理成熟:CI 內建 gitleaks(阻擋合併的秘密掃描)、CodeQL(Python+JS/TS SAST)、bandit、pip-audit、bun audit,權限採最小化原則",
-        "認證機制設計謹慎:auth.py 具備失敗嘗試速率限制、CSRF 檢查、secure/httponly/samesite cookie、loopback 與遠端 API 分權",
-        "安裝腳本預設走「下載官方發行版 + SHA256 校驗」路徑,原始碼建置模式才會呼叫 brew/apt 或下載 uv/bun 安裝腳本(先存檔再執行,而非直接 curl|sh)"
+        "單一引擎架構支援多達 646 種語言,並可切換多套 TTS/STT 引擎(OmniVoice、IndexTTS、PocketTTS 等)",
+        "CI 涵蓋 macOS/Windows/Linux 三平台矩陣測試,並針對過去實際踩過的雷(如 Windows POSIX-only API 崩潰、路徑分隔符錯誤)寫了大量迴歸測試與說明性註解",
+        "後端程式碼對安全邊界處理細緻,例如 cookie 匯出僅限本機/loopback 傳輸、檔案大小限制、暫存檔案權限設為 0o600",
+        "提供 Local API、MCP 整合與 agent skill(npx skills add),方便串接自動化工作流",
+        "AGPL-3.0 授權,對商業使用與模型授權有明確提醒"
       ],
       "use_cases": [
-        "需要離線、隱私敏感的語音克隆與有聲書/播客製作,不想把音檔上傳雲端服務",
-        "影片配音在地化(多語言翻譯 + 保留說話者聲紋 + 匯出成品)",
-        "開發者想要一個本機可跑、與 OpenAI Audio API 相容的 TTS/ASR 端點,整合進既有工具鏈或 Agent(MCP)",
-        "系統層級的聽寫/語音輸入工具,含本地 LLM 文字潤飾"
+        "需要完全離線、不上傳雲端的語音克隆與內容配音的個人或團隊工作流",
+        "影片在地化/翻譯配音專案,需要時間軸對齊與批次處理",
+        "開發者將本機 TTS/STT 能力整合進 agent 或自動化流程(透過 MCP/Local API)",
+        "有聲書或播客內容製作,需要多語言、大量文本轉語音"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件品質相當高,README 結構清晰且附有比較表、FAQ、架構圖與各引擎授權說明;測試覆蓋範圍廣(單元、整合、跨平台 smoke、prod bundle 回歸),CI pipeline 設計成熟並附有大量說明性註解記錄過往踩坑經驗;commit/release 節奏活躍(最後推送於 2026-09-02),issue 模板與貢獻指南齊全。"
+        "comment": "文件完整(README、多份 docs、繁簡雙語),測試涵蓋後端 pytest、前端 node test、Electron smoke test、跨平台矩陣與 eval 測試,CI 設定中大量保留「為什麼這樣做」的歷史脈絡註解,顯示團隊對穩定性與可維護性非常重視;抽樣的後端路由程式碼命名清楚、有適當的安全防護與型別提示,整體工程品質偏高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "scripts/install.sh 預設(binary 模式)會從 GitHub Releases 下載打包好的應用程式,並用發行版附帶的 SHA256SUMS 檔案做校驗後才安裝,流程透明",
-          "scripts/install.sh 的 --source 模式(需使用者主動指定)會呼叫 brew/apt-get/dnf/pacman 安裝系統套件,並下載 uv、bun 官方安裝腳本到暫存檔後以 sh 執行(而非直接 curl|sh 管線),屬於常見的開發環境建置手法,使用者若在意可先檢視暫存腳本內容",
-          "後端具備遠端管理 API(/api/auth/session 等),但預設僅監聽 loopback,遠端存取需額外設定 API key 或分享 PIN,且有失敗嘗試速率限制與 CSRF 防護"
+          "README 提供的一鍵安裝方式為 curl -fsSL https://voicestudio.sh/install | sh,屬於常見但需使用者留意的安裝模式;實際檢視 scripts/install.sh 內容顯示該腳本有版本字串格式驗證、拒絕安裝到符號連結、要求先關閉執行中的應用等防護性設計,未發現明顯的危險或混淆行為",
+          "package.json 未見 preinstall/postinstall 等生命週期腳本挾帶額外程式碼執行"
         ]
       },
       "star_rating": 5,
-      "verdict": "工程品質與安全治理水準遠超一般熱門專案,是想要本地化語音生成/配音方案的開發者值得立即關注並嘗試的專案。",
+      "verdict": "工程紀律與測試覆蓋度在同類開源專案中相當突出,值得 AI 語音/本機優先應用的開發者關注與試用。",
       "_mode": "full"
     }
   },
@@ -20992,10 +21012,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-27",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-28",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -21029,6 +21049,13 @@
         19225,
         849,
         4,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ],
+      "2026-09-28": [
+        20199,
+        895,
+        8,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
       ]
@@ -21470,10 +21497,10 @@
   },
   "vectorize-io/hindsight": {
     "first_seen": "2026-09-25",
-    "last_seen": "2026-09-27",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-09-28",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-25": [
         27782,
@@ -21492,6 +21519,13 @@
       "2026-09-27": [
         32206,
         2147,
+        2,
+        "Hindsight: Agent Memory That Learns",
+        "Python"
+      ],
+      "2026-09-28": [
+        37313,
+        4520,
         2,
         "Hindsight: Agent Memory That Learns",
         "Python"
@@ -22242,6 +22276,205 @@
       },
       "star_rating": 4,
       "verdict": "文件完整、架構清晰、CI 具備真實裝置端對端測試,是目前少數成熟度較高的行動裝置 MCP 伺服器,值得行動測試/Agent 自動化場景關注,但需注意 HTTP 模式預設無驗證這點。",
+      "_mode": "full"
+    }
+  },
+  "InfinityLoop1308/PipePipe": {
+    "first_seen": "2026-09-28",
+    "last_seen": "2026-09-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-28": [
+        6572,
+        242,
+        5,
+        "An open-source Android app to let you browse YouTube and other services freely.",
+        "Shell"
+      ]
+    },
+    "last_analyzed": "2026-09-28",
+    "analysis": {
+      "category": "app",
+      "one_liner": "NewPipe 的高頻更新硬分支,主打 SponsorBlock、彈幕、進階過濾與登入解鎖限制內容的 Android YouTube 客戶端。",
+      "summary": "PipePipe 是 2022 年從 NewPipe 分岔出來的獨立專案,不再與上游同步,而是自行快速迭代新功能。它整合了 SponsorBlock 跳過贊助段落、ReturnYouTubeDislike、彈幕風格直播聊天疊加、AV1/VP9 解碼、進階搜尋過濾與本地播放清單管理等增強功能,鎖定重度 YouTube/B站使用者。這個 GitHub 上的主庫本身其實是「殼」倉庫,實際 App 原始碼(PipePipeClient、PipePipeExtractor)以 git submodule 形式託管在 Codeberg 與另外的 GitHub repo。",
+      "highlights": [
+        "核心程式碼透過 submodule 拆分到 PipePipeClient 與 PipePipeExtractor(鏡像於 Codeberg 與 GitHub),本倉庫僅含 README、CI、fastlane 商店素材與 release.sh 發布腳本",
+        "CI 使用 Java 25 + Gradle 建置 debug APK 並上傳 artifact,另有獨立 workflow 自動建置客製 ffmpeg-kit(LTS,含 gmp/openssl)供播放器使用",
+        "功能對比 NewPipe 大幅擴充:SponsorBlock、YouTube 點踩還原、原始未在地化標題、Cookie 登入解鎖限制內容、彈幕疊加、關鍵字/頻道過濾、Shorts 與付費影片封鎖等",
+        "fastlane changelog 目錄已累積 1000~1049+ 個版本紀錄,顯示釋出頻率非常高,近期(2026-09-26)仍持續推送"
+      ],
+      "use_cases": [
+        "想要跳過 YouTube 贊助置入、看回讚踩數與原始標題的重度觀影使用者",
+        "需要背景音樂播放模式、進階播放清單下載與排序的行動裝置使用者",
+        "研究 NewPipe/PipePipe 生態或 Android 影音串流客戶端架構的開發者(需另外取得 PipePipeClient/PipePipeExtractor submodule 原始碼才能看到實際實作)"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 1,
+        "activity": 5,
+        "comment": "本倉庫層級的文件(README、TRANSLATION.md)清楚說明功能差異與登入 Cookie 使用範圍,但屬於「殼倉庫」性質——實際 Java/Kotlin 原始碼與測試都在外部 submodule(PipePipeClient、PipePipeExtractor)中,本次僅能檢視此層級可見內容,因此無法評估核心程式碼品質或測試覆蓋率。CI 設定完整(Gradle build + lint + APK artifact 上傳),changelog 數量顯示發布非常頻繁,專案維護活躍度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "功能豐富、更新頻繁,值得重度 YouTube 使用者關注,但若想評估程式碼品質需另外檢視 PipePipeClient/PipePipeExtractor 兩個 submodule 倉庫,本倉庫本身只是發布殼。",
+      "_mode": "full"
+    }
+  },
+  "vercel-labs/scriptc": {
+    "first_seen": "2026-09-28",
+    "last_seen": "2026-09-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-28": [
+        5402,
+        102,
+        6,
+        "TypeScript-to-Native Compiler",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-28",
+    "analysis": {
+      "one_liner": "將 TypeScript/JavaScript 編譯成原生執行檔的實驗性編譯器,不需 Node 或 JS 引擎即可執行。",
+      "summary": "scriptc 使用 TypeScript 編譯器做語法解析與型別檢查,再將程式碼轉換成型別化 IR,並可進一步輸出成 C、LLVM IR、組語/目的檔、原生執行檔或 WebAssembly 模組。對於無法靜態編譯的動態程式碼(如 npm 套件或 any 型別),可透過 --dynamic 內嵌 quickjs-ng 引擎執行,目標是讓 TS/JS 也能產出小巧、快速、免依賴 Node 的原生二進位檔。",
+      "category": "devtool",
+      "highlights": [
+        "由 Vercel Labs 開發,提供多層次輸出(IR/C/LLVM/組語/目的檔/原生執行檔/WASM),方便逐層除錯",
+        "支援大量 Node.js API 編譯成原生執行檔(如 node:http),並提供 `scriptc coverage` 顯示靜態編譯覆蓋率",
+        "CI 涵蓋 macOS(含 ASan)、Linux(glibc/musl)、Windows(MSVC)與 WASI 多平台,並用差異測試比對 Node 與原生輸出是否逐位元組一致",
+        "測試語料庫(tests/corpus)規模驚人,超過 3000 個獨立 .ts 測試案例,涵蓋 JSON、async、正規表達式、FFI、TypedArray 等各種語言特性",
+        "原生程式碼產生器內含詳盡的參照計數(RC)所有權規則註解,顯示編譯器內部設計嚴謹"
+      ],
+      "use_cases": [
+        "需要把 TypeScript CLI 工具打包成單一原生執行檔、免安裝 Node 環境即可分發",
+        "在資源受限或啟動時間敏感的場景(如邊緣運算、WASI 沙盒)以 TS 撰寫邏輯並編譯成原生/WASM",
+        "評估專案的 TS 程式碼有多少比例可以靜態編譯(scriptc coverage),作為效能優化或型別收斂的參考",
+        "對 LLVM/C 後端編譯管線、參照計數 GC 或 TS-to-native 技術有研究興趣的工程師"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 與獨立文件站(docs/)內容完整,涵蓋安裝、CLI、FFI、平台支援與限制說明;測試方面極為紮實,3000+ 筆語料庫用例搭配跨平台差異測試與 ASan/RC 稽核,CI matrix 涵蓋六種以上平台組合;專案在今日仍有推送紀錄,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "packages/cli 的 package.json 有 postinstall 腳本(warm-cache.mjs),會在支援的平台上預熱原生編譯快取;程式內建有失敗即略過的防護邏輯,不會影響安裝流程本身",
+          "scripts/install-zig.sh 會從 ziglang.org 下載並執行安裝 Zig 工具鏈,但下載後有驗證 HTTPS、SHA256 雜湊與檔案大小,屬於謹慎的下載驗證作法",
+          "CI 設定與 Dockerfile.sandbox 會從 LLVM 官方 GitHub Releases 與 nodejs.org 下載預編譯工具鏈(附 checksum 驗證),為建置原生後端所需的正常流程"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "由 Vercel Labs 出品、工程嚴謹度高(巨量測試、多平台 CI、謹慎的下載驗證),對關注 TS-to-native 編譯技術或需要打包免 Node 執行檔的工程師值得一看,但專案仍標示為實驗性(experimental),生產環境採用前應留意其限制與相容性邊界。",
+      "_mode": "full"
+    }
+  },
+  "mvschwarz/openrig": {
+    "first_seen": "2026-09-28",
+    "last_seen": "2026-09-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-28": [
+        976,
+        114,
+        7,
+        "Multi-agent harness that runs Claude Code and Codex together as one system",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-28",
+    "analysis": {
+      "one_liner": "用 YAML 定義多代理團隊,一鍵在 tmux 上同時開跑 Claude Code 與 Codex 的本地控制平面。",
+      "summary": "OpenRig 是一個本地 daemon + CLI + TUI + MCP server,把散落的 AI coding agent 終端機工作階段組織成可定義、可快照/還原、可跨代理溝通的「rig(團隊)」。使用者以 RigSpec YAML 描述 pods、seats 與拓樸,`rig up` 一次啟動所有 tmux 工作階段、寫入 provider hook 與 workspace trust 設定,並可用 TUI 或 CLI 觀察、傳訊、擴縮團隊規模。",
+      "category": "devtool",
+      "highlights": [
+        "README 罕見地詳盡揭露「安裝與啟動會在你機器上寫入哪些檔案」(tmux.conf、~/.claude.json、Codex config.toml、trust hash 等),透明度高於一般專案",
+        "928 個 TypeScript 原始檔搭配超過 1,186 個測試檔(vitest),測試覆蓋度在同類專案中相當突出",
+        "內建 gate-lane、substance-gate、internal-leak-guard 等自訂品質關卡腳本,顯示團隊有紮實的發布流程與內部品質紀律",
+        "同時支援 Claude Code 與 Codex 兩種 provider 在同一團隊中協作,並提供 MCP 工具讓 agent 自我管理拓樸",
+        "CHANGELOG 詳列每版變更、鳴謝回報者與對應 issue/PR,社群互動記錄清楚"
+      ],
+      "use_cases": [
+        "需要同時操作多個 Claude Code / Codex 終端機工作階段,並想要有組織地追蹤、下指令、回收結果",
+        "想建立「Lead agent 分派任務給多個專家 agent」的多代理協作團隊,並在重開機後可還原狀態",
+        "需要以 YAML 宣告式定義可重複部署的 agent 拓樸(RigSpec/AgentSpec),並在多台機器間分享(RigBundle)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件詳盡到近乎公告等級,README 對安裝與啟動的副作用有主動揭露;測試檔案數量驚人且涵蓋各層(CLI 指令、daemon 介面、跨主機、認證等);程式碼有清楚的追蹤代號(如 OPR.x.x.x)對應內部規格,顯示嚴謹的開發流程;近日仍持續發版(0.5.17),CI 有 portability-report 把關,但未見到跑單元測試的 GitHub Actions workflow。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "packages/cli 的 npm postinstall 僅執行 scripts/check-abi.mjs,用途是檢查 better-sqlite3 原生模組與目前 Node 版本是否相容,不涉及下載或執行外部內容",
+          "repo 根目錄下的 scripts/bootstrap-product-factory-vps.sh 內含 curl | sh(安裝 Tailscale)與 curl | bash(安裝 Node 22 via NodeSource)語法,但這是一支需使用者主動執行、用於設定遠端 VPS 的維運腳本,並非隨 npm install 自動觸發",
+          "README 明確說明 rig setup 與代理程式啟動時會寫入 tmux.conf、Claude/Codex 的 trust 設定與 hook 腳本(包含可執行內容),使用者應在執行前詳閱「What OpenRig changes on your machine」章節並備份相關設定檔"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與透明度在 AI agent 工具類專案中屬上乘,若你已在用多個 Claude Code / Codex 工作階段管理協作,值得一試;但涉及寫入系統設定與 trust hook,務必先讀完安裝副作用說明再上手。",
+      "_mode": "full"
+    }
+  },
+  "willfaust/Madeira": {
+    "first_seen": "2026-09-28",
+    "last_seen": "2026-09-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-28": [
+        814,
+        83,
+        9,
+        "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-09-28",
+    "analysis": {
+      "one_liner": "在未越獄的 iPhone 上,透過 FEX-Emu + Wine + DXMT 組成的翻譯層執行 x86-64 Windows PC 遊戲的研究型專案。",
+      "summary": "Madeira 是一個實驗性研究專案,把 Wine(ARM64EC 版)、FEX-Emu(x86-64→ARM64 JIT 翻譯)與 DXMT(D3D11→Metal)整合成單一 Mach process,在非越獄 iOS 裝置上執行 Windows PC 遊戲。專案透過 debugger attach(StikDebug/StikJIT)取得 JIT 能力來繞過 iOS 的 W^X 限制,目前已有少數幾款遊戲可玩,但作者明確定調為研究專案而非產品。",
+      "category": "infra",
+      "highlights": [
+        "結合三個大型開源專案(Wine、FEX-Emu、DXMT)的 fork,針對 iOS 的記憶體模型與程序模型做深度移植",
+        "JITAllocator.c 等核心檔案展示了對 iOS Mach VM API(dual-mapping、no-footprint ledger、TXM/BRK JIT 授權)的深入研究與大量除錯紀錄",
+        "README 與 ARCHITECTURE_ANALYSIS.md 對可行性、各家 DX/GL/VK→Metal 路徑做了完整的技術評估與路線圖",
+        "授權設計嚴謹:GPL-3.0 為主,另外針對 Apple 專有的 Metal Shader Converter 加了『Madeira Converter Exception』附加授權",
+        "原始碼中大量以 ml編號 記錄的除錯日誌式註解,呈現出高強度、迭代式的除錯過程"
+      ],
+      "use_cases": [
+        "對 iOS JIT / W^X 繞過機制、Mach VM 記憶體管理有研究興趣的系統工程師",
+        "關注 Wine/FEX-Emu/DXMT 等模擬與轉譯層在非傳統平台(iOS)上移植的技術愛好者",
+        "想了解如何在受限沙盒環境下處理 Windows 相容層(登錄檔、AppData、wineserver)疑難雜症的開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 4,
+        "comment": "文件非常完整(README、ARCHITECTURE_ANALYSIS.md、CONTRIBUTING.md、THIRD-PARTY-NOTICES.md 皆詳實),原始碼註解也罕見地詳盡,記錄了大量除錯過程與根因分析,顯示作者對細節的掌握度很高。但沒有自動化測試套件或 CI 工作流程,research/madeira-d3d12/tests 下僅有離線/手動驗證用的小工具,測試覆蓋偏薄弱,這在此類需要實體 iOS 裝置才能驗證的專案中可以理解,但也代表變更的自動回歸保護有限。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "app/Madeira/aarch64-windows/ 目錄下直接提交了大量 ARM64EC Windows DLL/EXE 二進位檔(如 advapi32.dll、cmd.exe 等),這些是 Wine 執行期所需的系統元件建置產物,而非以原始碼形式提供,使用者若要完整稽核這些二進位內容會較困難",
+          "README 明確聲明 Microsoft Visual C++ Runtime DLL 未隨專案提供,需使用者自行取得(tools/fetch-vcruntime.md),未發現專案自帶下載並執行外部腳本的安裝流程"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "技術深度與文件品質都相當出色,是少見的高強度系統移植研究專案,適合對 iOS 底層機制或模擬器技術有興趣的人深入研讀,但仍屬實驗性質、無自動化測試,不適合期待穩定可用軟體的一般使用者。",
       "_mode": "full"
     }
   }
