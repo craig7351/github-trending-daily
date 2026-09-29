@@ -7104,10 +7104,10 @@
   },
   "paperclipai/paperclip": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-09-28",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-29",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-11": [
         76484,
@@ -7148,6 +7148,13 @@
         89895,
         2401,
         1,
+        "The open-source app everyone uses to manage agents at work",
+        "TypeScript"
+      ],
+      "2026-09-29": [
+        92813,
+        3197,
+        2,
         "The open-source app everyone uses to manage agents at work",
         "TypeScript"
       ]
@@ -10356,10 +10363,10 @@
   },
   "NawfalMotii79/PLFM_RADAR": {
     "first_seen": "2026-08-19",
-    "last_seen": "2026-08-19",
+    "last_seen": "2026-09-29",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-19": [
         24307,
@@ -10367,38 +10374,44 @@
         9,
         "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
         "PLSQL"
+      ],
+      "2026-09-29": [
+        25760,
+        158,
+        4,
+        "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+        "PLSQL"
       ]
     },
-    "last_analyzed": "2026-08-19",
+    "last_analyzed": "2026-09-29",
     "analysis": {
-      "one_liner": "AERIS-10:一套完全開源、可自製的 10.5GHz 相位陣列 PLFM 雷達系統,涵蓋硬體、韌體與軟體全棧。",
-      "summary": "此專案提供完整的相位陣列雷達解決方案,包含 PCB 電路設計與 Gerber 生產檔、STM32 韌體、Xilinx FPGA 訊號處理(脈衝壓縮、都卜勒 FFT、CFAR)、以及 Python GUI,目標是讓研究人員與玩家能以低成本重現軍規等級的雷達技術。專案提供兩種型號(3km / 20km 探測距離),並附完整電子束控與訊號處理鏈設計。",
+      "one_liner": "AERIS-10:一套完全開源、低成本的 10.5 GHz 相位陣列脈衝線性調頻(PLFM)雷達系統,涵蓋硬體、韌體與軟體全棧設計。",
+      "summary": "此專案提供一套可自行組裝的相控陣列雷達,包含完整 PCB 電路圖、Gerber 生產檔、FPGA(Verilog)訊號處理管線、STM32 韌體與 Python GUI,分為 3km(貼片天線)與 20km(介質波導陣列)兩種版本,目標是讓研究人員、無人機開發者與 SDR 玩家能以低成本探索相控陣列雷達技術。",
       "category": "infra",
       "highlights": [
-        "橫跨硬體(Eagle 原理圖/PCB/Gerber)、FPGA(Verilog)、MCU(C/C++)、GUI(Python)的完整全棧開源雷達系統",
-        "FPGA 端具備 SymbiYosys 形式驗證(formal verification)搭配 iverilog 回歸測試,並自建「Vivado-class」靜態 lint 檢查,工程嚴謹度高於一般業餘專案",
-        "CI 涵蓋四大面向:Python 單元測試/ruff lint、MCU 韌體測試(20 個)、FPGA 回歸(25+ testbench)、以及跨層(Python↔Verilog↔C)契約測試,確保 opcode/封包格式一致",
-        "硬體採 CERN-OHL-P、軟體採 MIT 雙授權,並附完整 BOM/CPL/Gerber 生產檔案,可直接送廠打樣",
-        "文件齊全,GitHub Pages 提供架構說明、開發日誌、Bring-up 指南與測試報告"
+        "硬體、韌體、軟體三層全部開源:PCB 排版/Gerber、FPGA RTL(脈衝壓縮、Doppler FFT、MTI、CFAR)、STM32 韌體與 PyQt/Tk GUI 一應俱全",
+        "CI 設定紮實:同時涵蓋 Python lint/單元測試、MCU 韌體測試(20 項含 bug 回歸與安全測試)、FPGA regression(25 個 testbench + lint),以及跨層(FPGA↔Python↔C)協定一致性測試",
+        "FPGA 端另有 formal verification testbench(fv_cdc_*、fv_doppler_processor 等),對時脈跨域(CDC)與關鍵模組做形式化驗證,超出一般愛好者專案水準",
+        "文件詳實:README 清楚說明系統架構、規格表、授權分離(硬體 CERN-OHL-P、軟體 MIT)與檔案存放規範,並有 GitHub Pages 文件站",
+        "核心 Verilog 模組(如 cfar_ca.v)附有詳盡的演算法、時序與資源使用說明註解,顯示作者對硬體實作細節掌握度高"
       ],
       "use_cases": [
-        "大學或研究機構做相位陣列雷達與波束成形演算法教學實驗平台",
-        "無人機開發者自製低成本探測/避障雷達",
-        "SDR / RF 愛好者學習 FMCW/PLFM 雷達訊號鏈與 FPGA 數位訊號處理實作",
-        "FPGA/嵌入式工程師參考其測試方法論(形式驗證 + 回歸測試 + 跨層契約測試)"
+        "大學/研究單位想低成本自建相控陣列雷達平台,進行波束成形、都卜勒處理或目標追蹤研究",
+        "無人機偵測新創或愛好者想參考一套完整開源 RF 前端 + FPGA 訊號處理鏈的設計範例",
+        "FPGA/嵌入式工程師想學習雷達訊號處理(脈衝壓縮、CFAR、MTI)在 Verilog 中的實際硬體實作方式"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 4,
         "activity": 4,
-        "comment": "文件與測試的完整度遠超一般硬體開源專案:README 詳列系統架構與各板功能,docs/ 另有 GitHub Pages 說明頁;測試面涵蓋 FPGA 形式驗證、iverilog 回歸、MCU 單元測試與跨層契約測試,CI 全部串接。最近一次 push 為 2026-06-17,距今約兩個月,活躍度仍佳但非每日更新。"
+        "comment": "文件與測試涵蓋度遠超一般硬體開源專案:README 結構完整、有獨立文件站,CI 涵蓋 Python/MCU/FPGA/跨層四大面向且包含 formal verification,顯示工程嚴謹度高;唯一保留分是專案標示為 Alpha 狀態且功能持續開發中,尚非成熟穩定版本。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 5,
-      "verdict": "少見的高完成度開源硬體項目,軟硬體與測試工程都做得紮實,值得雷達/FPGA/RF 領域工程師關注與參考其測試方法論。",
+      "star_rating": 4,
+      "verdict": "對硬體/RF/FPGA 愛好者而言是少見的高完成度開源雷達全棧專案,值得關注與學習,但仍屬 Alpha 階段,實際組裝門檻與成本不低。",
       "_mode": "full"
     }
   },
@@ -15105,10 +15118,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-09-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15156,6 +15169,13 @@
         40165,
         3086,
         3,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-09-29": [
+        44105,
+        3221,
+        1,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -21012,10 +21032,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-28",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-09-29",
+    "days_on_trending": 7,
+    "consecutive_days_on_trending": 7,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -21055,6 +21075,13 @@
       "2026-09-28": [
         20199,
         895,
+        8,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ],
+      "2026-09-29": [
+        21261,
+        1099,
         8,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
@@ -21497,10 +21524,10 @@
   },
   "vectorize-io/hindsight": {
     "first_seen": "2026-09-25",
-    "last_seen": "2026-09-28",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-09-29",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-25": [
         27782,
@@ -21527,6 +21554,13 @@
         37313,
         4520,
         2,
+        "Hindsight: Agent Memory That Learns",
+        "Python"
+      ],
+      "2026-09-29": [
+        40986,
+        4561,
+        3,
         "Hindsight: Agent Memory That Learns",
         "Python"
       ]
@@ -22379,14 +22413,21 @@
   },
   "mvschwarz/openrig": {
     "first_seen": "2026-09-28",
-    "last_seen": "2026-09-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-28": [
         976,
         114,
+        7,
+        "Multi-agent harness that runs Claude Code and Codex together as one system",
+        "TypeScript"
+      ],
+      "2026-09-29": [
+        1722,
+        734,
         7,
         "Multi-agent harness that runs Claude Code and Codex together as one system",
         "TypeScript"
@@ -22475,6 +22516,111 @@
       },
       "star_rating": 4,
       "verdict": "技術深度與文件品質都相當出色,是少見的高強度系統移植研究專案,適合對 iOS 底層機制或模擬器技術有興趣的人深入研讀,但仍屬實驗性質、無自動化測試,不適合期待穩定可用軟體的一般使用者。",
+      "_mode": "full"
+    }
+  },
+  "cs341-illinois/coursebook": {
+    "first_seen": "2026-09-29",
+    "last_seen": "2026-09-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-29": [
+        2513,
+        195,
+        5,
+        "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+        "TeX"
+      ]
+    },
+    "last_analyzed": "2026-09-29",
+    "analysis": {
+      "one_liner": "伊利諾大學 CS 341 系統程式設計課程使用的開源 LaTeX 教科書,以 C 語言講解 Linux/POSIX 系統程式設計。",
+      "summary": "Coursebook 是 UIUC CS 341 課程的開源入門系統程式設計教科書,承襲 Angrave 的 wikibook 實驗,補上引用、註腳、延伸閱讀與詞彙表。內容以 LaTeX 撰寫,透過 GitHub Actions 自動建置並輸出 PDF、EPUB、HTML 與 Wiki 版本。",
+      "category": "learning-resource",
+      "highlights": [
+        "內容涵蓋系統程式設計主題,例如死結(deadlock)等章節,並附大量自繪圖(eps/png/svg)",
+        "單一 LaTeX 原始碼可輸出 PDF、EPUB、HTML 與 GitHub Wiki 多種格式",
+        "CI 以矩陣方式分別建置 WIKI/EPUB/PDF,關閉 fail-fast 並設有 concurrency 取消舊任務",
+        "有 CONTRIBUTING、CODE_OF_CONDUCT、issue/PR 範本與 typo 回報範本,適合社群協作",
+        "近期仍持續更新(最後推送 2026-09-26)"
+      ],
+      "use_cases": [
+        "修習或自學作業系統、系統程式設計的學生作為參考教材",
+        "教師或助教取用、改編為課程講義",
+        "想學 C 語言搭配 Linux/POSIX 的工程師複習",
+        "參考其 LaTeX + pandoc + GitHub Actions 的多格式出版流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 4,
+        "comment": "README 簡潔,另有 CONTRIBUTING、CHANGELOG、AUTHORS 與授權說明資料夾。專案為書籍而非程式碼,沒有單元測試,品質靠 PR 觸發的多格式建置 CI 把關。近期仍有推送,維護狀態良好。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "_scripts/install.sh 在 WIKI/EPUB 建置時會從 GitHub releases 下載 pandoc 2.7 的 .deb 並以 sudo dpkg -i 安裝,屬於 CI 環境的建置步驟,使用者在本機執行前應留意",
+          "_scripts/install.sh 的 PDF 建置會以 sudo apt-get 安裝 texlive 相關套件",
+          "_scripts/deploy.sh 會將 GITHUB_TOKEN 暫時寫入 git remote URL 以推送 pdf_deploy/epub_deploy 分支,推送後會還原;此腳本為 CI 內使用,且會執行 rm -rf * 清除工作目錄,不宜在本機貿然執行",
+          "repo 未標示 GitHub 授權,但 LICENSE 資料夾內有 code、original、output 三份授權檔,使用前建議閱讀"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "系統程式設計學習者值得收藏的高品質開源教材,且多格式自動出版流程也值得借鑑。",
+      "_mode": "full"
+    }
+  },
+  "byoungd/up": {
+    "first_seen": "2026-09-29",
+    "last_seen": "2026-09-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-29": [
+        64679,
+        327,
+        6,
+        "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-09-29",
+    "analysis": {
+      "one_liner": "以 VitePress 建置的中文開源書稿《人生進階指南》,涵蓋英語學習、AI 學習與真實專案實踐。",
+      "summary": "這是韓先凱(筆名「離譜」)持續更新的書稿專案,從 2017 年的英語學習指南擴展到 AI 時代的終身學習、AI 專案開發、創業復盤與家庭學習。內容以 Markdown 撰寫,透過 VitePress 部署成網站,並提供中英文 EPUB/PDF 下載。它本質上是內容型專案,不是軟體工具。",
+      "category": "learning-resource",
+      "highlights": [
+        "中英雙語書稿,提供 EPUB、PDF 下載與 VitePress 線上閱讀站",
+        "區分「研究結論 / 個人經驗 / 待驗證假設」三類資訊,並強調以作品與證據檢驗學習成果",
+        "內容涵蓋英語、寫作、AI 輔助學習、AI 專案與資源層創業、家庭學習與人生復盤",
+        "工程化程度高:內容檢查、導覽同步、markdownlint、Playwright 冒煙測試,以及 CI、部署與連結檢查工作流程",
+        "授權分為程式碼與正文(CC BY-NC 4.0)兩份,並附有 ATTRIBUTIONS、SECURITY 等治理文件"
+      ],
+      "use_cases": [
+        "想系統性規劃英語與 AI 學習路徑的中文讀者",
+        "需要範本(學習狀態、讀者實踐回條)來建立自己的學習證據紀錄",
+        "參考如何用 VitePress 搭配自動化檢查與 EPUB/PDF 建置流程維護開源書稿",
+        "關注中文圈 AI 時代終身學習議題的讀者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 4,
+        "comment": "文件與治理檔案完整(CONTRIBUTING、MAINTENANCE、ISSUE_TRIAGE、CHANGELOG 等),有 CI、部署與連結檢查工作流程,並以腳本檢查內容一致性與建置大小。測試僅有一份 Playwright 站台冒煙測試,以內容專案而言算合理。最後推送為 2026-09-20,仍在維護。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "package.json 未定義 preinstall / postinstall / prepare 等安裝期生命週期腳本,相依套件為 vitepress、playwright、markdownlint-cli2、sharp,皆為常見工具",
+          "README 的「第三方資源」區段列出外部服務(biezou.com AI 中轉、Telegram 頻道),文中已註明不代表背書;若要註冊或提供 API 金鑰,建議自行核對其條款與隱私",
+          "倉庫包含字型檔(.ttf)與預建的 EPUB/PDF 等二進位資產,屬書稿發佈所需"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "若你讀中文且關心 AI 時代的學習方法,這是一本值得瀏覽的開源書稿;若期待技術工具或程式碼則不適用。",
       "_mode": "full"
     }
   }
