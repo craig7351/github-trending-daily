@@ -7104,10 +7104,10 @@
   },
   "paperclipai/paperclip": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-09-29",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-09-30",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-11": [
         76484,
@@ -7155,6 +7155,13 @@
         92813,
         3197,
         2,
+        "The open-source app everyone uses to manage agents at work",
+        "TypeScript"
+      ],
+      "2026-09-30": [
+        94471,
+        2458,
+        4,
         "The open-source app everyone uses to manage agents at work",
         "TypeScript"
       ]
@@ -12218,10 +12225,10 @@
   },
   "rohitg00/ai-engineering-from-scratch": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-09-28",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-09-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-25": [
         48282,
@@ -12290,6 +12297,13 @@
         59294,
         790,
         4,
+        "Learn it. Build it. Ship it for others.",
+        "Python"
+      ],
+      "2026-09-30": [
+        61381,
+        786,
+        10,
         "Learn it. Build it. Ship it for others.",
         "Python"
       ]
@@ -14929,10 +14943,10 @@
   },
   "averygan/reclip": {
     "first_seen": "2026-09-02",
-    "last_seen": "2026-09-04",
+    "last_seen": "2026-09-30",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-02": [
         7652,
@@ -14947,41 +14961,50 @@
         10,
         "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
         "HTML"
+      ],
+      "2026-09-30": [
+        10102,
+        113,
+        8,
+        "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+        "HTML"
       ]
     },
-    "last_analyzed": "2026-09-02",
+    "last_analyzed": "2026-09-30",
     "analysis": {
-      "category": "web",
-      "one_liner": "用 yt-dlp 包成的自架影音下載器,附一個乾淨的網頁介面。",
-      "summary": "ReClip 是一個單檔 Flask 後端(約 150 行)搭配純 HTML/CSS/JS 前端的自架服務,讓使用者貼上網址就能透過 yt-dlp 下載 YouTube、TikTok、Instagram 等上千個網站的影片或音訊,並可選擇畫質或轉成 MP3。定位是輕量、無框架、無建置步驟的個人工具,方便一鍵用 Docker 或 shell script 跑起來。",
+      "one_liner": "以 yt-dlp 與 ffmpeg 為核心、附乾淨網頁介面的輕量自架影音下載器。",
+      "summary": "ReClip 是一個自架的影音下載工具,後端只有一支約 200 行的 Flask 程式,前端是單一 HTML 檔,不需要建置步驟。貼上連結後可選擇 MP4 或 MP3 與解析度,支援批次下載,實際下載由 yt-dlp 處理,可涵蓋上千個網站。它解決的是在本機或內網快速下載影音、又不想使用充滿廣告的線上下載站的需求。",
+      "category": "app",
       "highlights": [
-        "後端僅約 150 行 Python,搭配 yt-dlp + ffmpeg 完成核心下載邏輯,程式碼精簡易讀",
-        "前端為純手刻 HTML/CSS/JS,無框架、無建置流程",
-        "支援批次貼上多網址、自動去重、畫質挑選、MP4/MP3 雙輸出",
-        "容器啟動時會自動 pip install -U yt-dlp 以因應各網站爬蟲規則常態性失效的問題",
-        "提供 Docker、docker-compose、以及一鍵 shell script 三種啟動方式"
+        "極簡架構:單一 app.py 加單一 index.html,依賴只有 Flask 與 yt-dlp,容易閱讀與修改",
+        "支援 MP4/MP3、解析度挑選、多網址批次與自動去重",
+        "提供 Dockerfile 與 docker-compose,容器以非 root 使用者執行並用 gunicorn 啟動",
+        "啟動時自動更新 yt-dlp,以應對各網站擷取器經常失效的問題",
+        "直接執行 app.py 時預設只綁定 127.0.0.1,降低意外對外暴露的風險"
       ],
       "use_cases": [
-        "個人在家用 NAS 或小型伺服器上自架影音下載服務",
-        "需要批次備份自己上傳到社群平台影片的使用者",
-        "想要一個輕量、無需資料庫與帳號系統的單人工具"
+        "在本機或家用伺服器自架個人影音下載服務",
+        "把 yt-dlp 包成網頁介面,讓不熟悉命令列的家人或同事使用",
+        "快速擷取影片中的音訊(MP3)做為研究或素材整理",
+        "作為小型 Flask 加 subprocess 工具的學習範例"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 3,
         "tests": 1,
-        "activity": 2,
-        "comment": "README 清楚說明安裝、使用方式與技術棧,對小工具而言文件足夠;但完全沒有測試(tests/ 目錄或 CI 皆不存在),程式碼品質仰賴少量核心檔案的可讀性維持,長期維護性有待觀察。專案最後一次推送是在 2026-07,屬於單人維護的小型專案,活躍度中等偏低。"
+        "activity": 3,
+        "comment": "程式碼短小清楚,README 涵蓋快速開始、用法與 Docker,足以上手。倉庫沒有任何測試與 CI 設定。工作狀態存在記憶體字典,下載檔案沒有清理機制,依賴也未鎖定版本,屬於個人工具等級的成熟度。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "app.py 呼叫 subprocess.run 時皆以參數陣列(非 shell=True)傳遞使用者輸入的 URL/format_id,未發現明顯的命令注入手法",
-          "Docker 容器與本機啟動腳本(docker-entrypoint.sh、reclip.sh)在啟動時都會執行 pip install -U yt-dlp 從 PyPI 更新套件,屬於維持爬蟲規則有效性的常見作法,而非從不明來源下載執行程式碼",
-          "服務本身未內建任何身份驗證機制,若使用者將 8899 埠直接對外公開(而非僅供內網或本機使用),任何能連上該服務的人都可以透過它對外發送下載請求,等同於讓伺服器代為存取使用者指定的任意網址"
+          "reclip.sh 與 docker-entrypoint.sh 每次啟動都會執行 pip install -U yt-dlp,從 PyPI 下載最新版本,依賴未鎖定版本,使用者應留意這項執行期的外部下載行為。",
+          "app.py 的 /api/info、/api/playlist、/api/download 會把使用者提交的網址直接傳給 yt-dlp 子程序(以參數列表呼叫,未經 shell),但沒有驗證網址,也沒有身分驗證。若把服務綁定到 0.0.0.0(Docker 預設如此)並暴露在公開網路,任何人都能讓伺服器下載任意網址,可能造成 SSRF 或資源濫用。",
+          "下載的檔案存放在 downloads 目錄且不會自動刪除,jobs 狀態存在記憶體中,長期運行需自行管理磁碟空間。",
+          "未發現 npm 生命週期腳本、curl | bash 模式、混淆程式碼、內嵌的大段編碼內容或已提交的可執行檔(assets 內僅有預覽圖片與影片)。"
         ]
       },
       "star_rating": 3,
-      "verdict": "功能單純、程式碼精簡好讀的自架下載工具,適合個人輕量使用,但缺乏測試與存取控制,不建議直接公開部署在公網上。",
+      "verdict": "適合想在自己機器上快速架一個 yt-dlp 網頁介面的人,程式小而好懂;但缺少測試與存取控制,請只在本機或受信任的內網使用。",
       "_mode": "full"
     }
   },
@@ -15118,10 +15141,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-09-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15175,6 +15198,13 @@
       "2026-09-29": [
         44105,
         3221,
+        1,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-09-30": [
+        48134,
+        4758,
         1,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
@@ -21032,10 +21062,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-29",
-    "days_on_trending": 7,
-    "consecutive_days_on_trending": 7,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-09-30",
+    "days_on_trending": 8,
+    "consecutive_days_on_trending": 8,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -21083,6 +21113,13 @@
         21261,
         1099,
         8,
+        "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "TypeScript"
+      ],
+      "2026-09-30": [
+        21858,
+        696,
+        13,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
       ]
@@ -21524,10 +21561,10 @@
   },
   "vectorize-io/hindsight": {
     "first_seen": "2026-09-25",
-    "last_seen": "2026-09-29",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-09-30",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-25": [
         27782,
@@ -21560,6 +21597,13 @@
       "2026-09-29": [
         40986,
         4561,
+        3,
+        "Hindsight: Agent Memory That Learns",
+        "Python"
+      ],
+      "2026-09-30": [
+        42848,
+        2575,
         3,
         "Hindsight: Agent Memory That Learns",
         "Python"
@@ -22413,10 +22457,10 @@
   },
   "mvschwarz/openrig": {
     "first_seen": "2026-09-28",
-    "last_seen": "2026-09-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-09-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-28": [
         976,
@@ -22429,6 +22473,13 @@
         1722,
         734,
         7,
+        "Multi-agent harness that runs Claude Code and Codex together as one system",
+        "TypeScript"
+      ],
+      "2026-09-30": [
+        2442,
+        737,
+        6,
         "Multi-agent harness that runs Claude Code and Codex together as one system",
         "TypeScript"
       ]
@@ -22471,15 +22522,22 @@
   },
   "willfaust/Madeira": {
     "first_seen": "2026-09-28",
-    "last_seen": "2026-09-28",
+    "last_seen": "2026-09-30",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-28": [
         814,
         83,
         9,
+        "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+        "C"
+      ],
+      "2026-09-30": [
+        1098,
+        81,
+        12,
         "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
         "C"
       ]
@@ -22521,15 +22579,22 @@
   },
   "cs341-illinois/coursebook": {
     "first_seen": "2026-09-29",
-    "last_seen": "2026-09-29",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-09-30",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-29": [
         2513,
         195,
         5,
+        "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+        "TeX"
+      ],
+      "2026-09-30": [
+        3104,
+        572,
+        9,
         "Open Source Introductory Systems Programming Textbook for the University of Illinois",
         "TeX"
       ]
@@ -22621,6 +22686,270 @@
       },
       "star_rating": 3,
       "verdict": "若你讀中文且關心 AI 時代的學習方法,這是一本值得瀏覽的開源書稿;若期待技術工具或程式碼則不適用。",
+      "_mode": "full"
+    }
+  },
+  "NVIDIA/OpenShell": {
+    "first_seen": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-30": [
+        10615,
+        990,
+        2,
+        "OpenShell is the safe, private runtime for autonomous AI agents.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-30",
+    "analysis": {
+      "one_liner": "NVIDIA 推出的 Rust 自主 AI 代理沙箱執行環境,以核心層級政策強制執行,並用形式驗證審查政策變更。",
+      "summary": "OpenShell 為自主 AI 代理提供隔離沙箱,讓代理能讀檔、裝套件、呼叫 API 與使用憑證,同時以宣告式政策限制檔案、系統呼叫與網路存取。代理看不到真實憑證,憑證只會在送往核准端點的請求中由系統注入。政策變更可經形式驗證(prover)標示風險,再交由人工審查。專案包含 CLI、閘道(gateway)、Helm/Kubernetes 部署,以及 Python、TypeScript、Go、Rust SDK。",
+      "category": "infra",
+      "highlights": [
+        "核心層級強制執行:檔案存取、系統呼叫與網路連線都要經過政策檢查",
+        "憑證隔離:代理看不到真實密鑰,只在送往核准端點的請求中注入",
+        "以形式驗證(prover)與 advisor 審查政策變更,高風險授權需人工核准",
+        "支援 Docker、Podman、VM、Kubernetes(Helm)與 GPU,並提供四種語言的 SDK",
+        "工程流程完整:數十個 CI workflow(CodeQL、Trivy、cargo-deny、多種 e2e),crates 中有逾七千個測試標記"
+      ],
+      "use_cases": [
+        "在受控環境中執行 coding agent(如 OpenCode),限制其可存取的主機與資料",
+        "企業內部部署多代理叢集,集中管理網路與憑證政策",
+        "為代理應用建立可稽核的安全邊界與推論路由",
+        "研究代理沙箱、政策驗證與 Kubernetes 上的隔離方案"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,有官方文件站、架構說明、教學與升級指南。多 crate 的 Rust 專案含逾七千個測試標記與多種 e2e,CI 涵蓋建置、安全掃描、發佈與套件打包。近日仍持續推送,整體工程品質高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的快速上手使用 `curl ... install.sh | sh` 從 GitHub raw 網址下載並執行安裝腳本。install.sh 也提供先下載再執行的用法,腳本本身會從 GitHub release 下載 deb/rpm 套件或 Homebrew formula,並有 checksums 檔案名稱設定。",
+          "README 說明專案會收集匿名遙測,限於操作類別與計數。可設定 OPENSHELL_TELEMETRY_ENABLED=false 關閉,也可在編譯時移除。",
+          "本身是沙箱與權限管控工具,執行時需要 Docker/Podman/虛擬化等較高的系統權限,部署前建議先閱讀其政策與威脅模型文件。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "由 NVIDIA 維護、切中代理安全痛點且工程紀律完整,值得立即關注,適合評估作為代理執行的安全基礎設施。",
+      "_mode": "full"
+    }
+  },
+  "t8y2/dbx": {
+    "first_seen": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-30": [
+        22012,
+        232,
+        5,
+        "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-09-30",
+    "analysis": {
+      "one_liner": "以 Rust + Tauri 打造、約 25 MB 的輕量跨平台資料庫客戶端,支援 100+ 種資料庫,內建 AI 助手、MCP Server 與 CLI。",
+      "summary": "DBX 是以 Tauri(Rust 後端 + Vue 前端)開發的桌面資料庫管理工具,同時提供 Docker、CLI 與獨立的 MCP Server。涵蓋 MySQL、PostgreSQL、Redis、MongoDB、ClickHouse 與達夢等國產資料庫,並有 JDBC 外掛機制。內建 AI 助手可整合多種 CLI Agent,讓 AI 編碼代理能透過 DBX 已設定的連線查詢資料庫。",
+      "category": "devtool",
+      "highlights": [
+        "安裝包約 25 MB,不需 Java、Python 或內建 Chromium,比 DBeaver 等工具更輕量",
+        "支援 100+ 資料庫,含達夢、openGauss、KingbaseES 等國產資料庫,並可用 JDBC 外掛擴充",
+        "提供獨立的 Rust MCP Server 與 CLI,並附官方 Agent Skill(dbx agent setup),方便 AI 代理操作資料庫",
+        "內建 AI 助手可串接 Claude Code、Codex、Cursor、OpenCode 等 CLI Agent,並有 MCP 執行政策(mcp_policy)與正式環境安全檢查",
+        "工程化完整:30 餘個 CI workflow、Vitest 與 Rust 測試、Windows 程式碼簽章、多通路發佈(brew/scoop/winget/flatpak/Docker)"
+      ],
+      "use_cases": [
+        "以單一輕量工具管理多種關聯式、NoSQL 與時序資料庫",
+        "讓 Claude Code 等 AI 編碼代理透過 MCP 或 CLI 查詢資料庫",
+        "需要連接達夢、openGauss 等國產資料庫的企業環境",
+        "以 Docker 部署網頁版資料庫管理介面供團隊使用"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 內容豐富且有中英文版本,另有 crates/ARCHITECTURE.md 與文件站。專案為多 crate 的 Rust workspace,程式碼風格一致。倉庫內有大量測試(Vitest、Rust、CI 腳本測試)與 30 餘個 GitHub Actions workflow,最近一次推送在 2026-09-29,更新非常頻繁。README 中贊助商區塊與徽章偏多,略顯雜亂。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝方式為 brew、scoop、winget、flatpak 與 npm 套件,未發現 curl|bash 類型的安裝指令",
+          "根目錄 package.json 有 prepare 腳本(husky),屬開發者安裝依賴時執行的 git hook 設定,為常見做法",
+          "工具本身會保存資料庫連線憑證,並提供 AI 助手與 MCP Server 供外部 AI 代理以這些連線執行查詢,使用者應留意 MCP 執行政策設定,並避免對正式環境開放寫入權限",
+          "專案支援下載並安裝外掛(JDBC 驅動與外掛套件),README 表示外掛套件會經簽章驗證後才安裝",
+          "本次僅抽樣檢視 README、package.json 與部分 Rust 原始碼,未逐一審查全部程式碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "值得關注:輕量、功能完整、維護積極,且原生支援 MCP 與 CLI,對需要讓 AI 代理操作資料庫的開發者特別實用。",
+      "_mode": "full"
+    }
+  },
+  "oblien/openship": {
+    "first_seen": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-30": [
+        13831,
+        437,
+        7,
+        "Self-hosted deployment platform",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-09-30",
+    "analysis": {
+      "one_liner": "開源、可自架的部署平台:指向 repo 就能自動建置、發佈、路由並簽發 TLS,支援桌面 App、Web 儀表板、CLI 與 MCP。",
+      "summary": "Openship 是以 TypeScript(Bun + Turbo monorepo)實作的自架部署平台,內建 CI/CD:自動偵測技術棧、建置成 Docker 映像或 bare release、以容器執行,並透過 OpenResty edge 設定反向代理與 Let's Encrypt 憑證。提供桌面 App、Web 儀表板、CLI、JS/TS SDK、REST API 與供 AI agent 使用的 MCP 端點,定位為 Vercel/Coolify 類的自架替代方案。",
+      "category": "infra",
+      "highlights": [
+        "多種執行模式:桌面 App(單人)、`openship up` 自架伺服器(Linux+Docker 走 Compose,其餘為 bare 模式)、或 Openship Cloud",
+        "完整部署管線:偵測、建置、執行、路由/TLS、GitHub webhook 推送即部署,設定快照確保重部署與回滾一致",
+        "提供 MCP 端點給 AI agent,僅開放明確 opt-in 的路由,每次呼叫重新檢查權限,憑證類路由不可成為工具",
+        "測試量大(API 內有上千個 *.test.ts),CI 另有 release-gate、scaling-e2e 等多個 workflow",
+        "文件完整,含 SECURITY.md、SECURITY_GUIDE.md、CONTRIBUTING、CHANGELOG 與九種語言 README"
+      ],
+      "use_cases": [
+        "團隊自架 PaaS,對自家主機進行 push-to-deploy,取代 Vercel/Heroku",
+        "個人透過桌面 App 以 SSH 管理並部署到自己的 VPS",
+        "讓 AI agent 透過 MCP/SDK 自動化部署與資源管理",
+        "在單台 Linux 主機上以 Compose 一併託管資料庫、網域與 SSL"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "專案規模大且結構成熟:monorepo 分 api/cli/desktop/dashboard 等 app,測試檔數量龐大且涵蓋部署、回滾、路由、計費等核心邏輯;CI 與發佈流程齊全,近期仍持續推送。README 詳盡,但官方文件站仍在補齊(README 自述)。專案很新且趨勢熱度高,穩定性仍待時間驗證。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 建議以 `curl -fsSL https://get.openship.io | sh` 安裝,以及 dev 版 `curl -fsSL https://get.openship.io/dev | sh`,會從外部網址下載並執行腳本;這是常見的安裝方式,使用者可先檢視腳本內容再執行。",
+          "根目錄 package.json 的 `prepare` 腳本會執行 `git config core.hooksPath .githooks`(改變本機 git hooks 路徑);apps/email 的 `postinstall` 會在子目錄執行 `bun install`。",
+          "自架 Docker Compose 的 api 容器會掛載主機 Docker socket,README 自述其具備主機層級權限,建議只在受信任的主機上執行。",
+          "儲存庫內含 GeoLite2-Country.mmdb 二進位資料檔(GeoIP 資料庫),另有 apps/api/.env.migtest 環境檔,建議使用者留意其內容是否含敏感設定。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質與測試覆蓋都相當紮實、且原生支援 MCP/AI agent 的自架部署平台,想自架 PaaS 或整合 agent 自動部署的人值得關注;安裝前留意 curl|sh 與 Docker socket 權限即可。",
+      "_mode": "full"
+    }
+  },
+  "VectifyAI/PageIndex": {
+    "first_seen": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-30": [
+        37383,
+        835,
+        11,
+        "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-09-30",
+    "analysis": {
+      "one_liner": "以階層樹狀索引加 LLM 推理取代向量資料庫的「無向量」RAG 引擎,主打長篇專業文件檢索。",
+      "summary": "PageIndex 為每份長文件(如財報、法規、教科書)產生階層式樹狀索引,再由 LLM 沿著樹推理式地檢索相關章節,不需向量資料庫也不需切塊(chunking)。新版 SDK 提供本機模式(自帶 LLM 金鑰)與雲端模式,內建 Flash 快速索引(以 PDF 版面解析取出結構)、引用標記、MCP 橋接,並附 OpenAI Agents、Claude Agent SDK、Anthropic SDK 整合。",
+      "category": "ai-ml",
+      "highlights": [
+        "以樹狀索引加 LLM 推理取代向量相似度檢索,結果可追溯到明確頁碼/區塊引用",
+        "SDK 同時支援本機模式(自帶 LLM 金鑰)與 PageIndex Cloud,介面一致",
+        "Flash 索引直接從 PDF 版面抽取結構,LLM 只負責摘要與修飾,README 標示約每頁 0.001 美元",
+        "提供 OpenAI Agents、Claude Agent SDK、Anthropic SDK 與 MCP 整合,並附 cookbook notebooks",
+        "公開基準測試 repo(PageIndex-OSS-Benchmark)與成本/準確度圖表"
+      ],
+      "use_cases": [
+        "對財報、法規文件、技術手冊等長篇專業 PDF 做問答與檢索",
+        "在不想維運向量資料庫的情況下建立可解釋、可引用出處的 RAG",
+        "為自建 agent(OpenAI Agents / Claude Agent SDK)加入文件檢索工具",
+        "研究推理式檢索與傳統向量 RAG 的準確度與成本取捨"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 清楚,含快速上手、基準測試與外部完整文件、多份 cookbook。tests/ 有 10 餘個測試檔,CI 以 Python 3.10/3.13、有無 agent 框架、pdfium 4/5 多組合矩陣執行,並有 CodeQL、dependency-review、dependabot,Action 皆以 commit SHA 固定。程式碼有型別標註與詳細註解,模組化明確。最近才推送,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "pageindex/agent_tools.py 約第 1449 行使用 exec() 依工具 JSON schema 動態合成函式簽章;程式先檢查參數名稱為合法識別字且非關鍵字,預設值以 repr 內嵌,屬框架整合常見做法,但使用者需知道 schema 屬性名稱會進入 exec 字串",
+          "未發現 setup.py 或安裝時腳本,沒有 curl|bash 類安裝指令,亦未見混淆程式碼或硬編碼 IP",
+          "使用雲端模式時文件內容會送往 PageIndex Cloud;本機模式則會將文件內容送往使用者自行設定的 LLM API,處理機敏文件時需留意",
+          "repo 內含範例 PDF 與圖片等二進位資產,屬文件/範例用途"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想在長篇專業文件上試試不靠向量庫的推理式 RAG,值得優先關注與實測;工程品質與文件都相當紮實。",
+      "_mode": "full"
+    }
+  },
+  "rakyll/hey": {
+    "first_seen": "2026-09-30",
+    "last_seen": "2026-09-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-09-30": [
+        20477,
+        34,
+        14,
+        "HTTP load generator, ApacheBench (ab) replacement",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-09-30",
+    "analysis": {
+      "one_liner": "以 Go 撰寫的輕量 HTTP 壓力測試工具,定位為 ApacheBench (ab) 的替代品。",
+      "summary": "hey 是單一執行檔的 HTTP 負載產生器,可指定請求數、並行數、QPS 限制與測試時長,並輸出延遲分布等統計摘要或 CSV。支援 HTTP/2、自訂標頭、Basic 認證、Proxy 等選項,原名 boom。",
+      "category": "cli",
+      "highlights": [
+        "單一 Go 執行檔,無外部執行環境依賴,跨平台(Linux/macOS/Windows)",
+        "參數簡潔:-n、-c、-q、-z 即可快速壓測,並支援 -h2 測試 HTTP/2",
+        "輸出延遲分布,並以 httptrace 量測 DNS/連線/請求/回應各階段耗時,亦可輸出 CSV",
+        "程式碼結構清晰,核心邏輯獨立於 requester 套件",
+        "Apache-2.0 授權,累積逾兩萬星,社群採用度高"
+      ],
+      "use_cases": [
+        "API 或網站上線前的快速並行壓力測試",
+        "CI 流程中對服務做簡單的效能冒煙測試",
+        "比較不同設定(keep-alive、壓縮、HTTP/2)下的延遲表現",
+        "取代 ab 進行現代 HTTP 端點的基準測試"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 3,
+        "activity": 2,
+        "comment": "README 簡短但涵蓋所有參數與範例;有 hey_test.go 與 requester_test.go 單元測試,並有 GitHub Actions 進行建置與測試。專案功能成熟穩定,近期更新不頻繁(最後推送 2026-01),Dockerfile 使用較舊的 golang:1.15 基底映像。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝說明提供從 storage.googleapis.com/hey-releases 直接下載預編譯二進位檔的連結,使用者需自行判斷是否信任該來源,也可選擇自行從原始碼編譯。",
+          "Dockerfile 在建置階段執行 go get github.com/rakyll/hey 拉取遠端最新程式碼,而非使用本地已複製的原始碼,且基底映像 golang:1.15 已較舊。",
+          "未發現 install 生命週期腳本、curl|bash 安裝、混淆程式碼或內嵌的大型編碼酬載。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "經典、穩定且實用的 HTTP 壓測小工具,適合放進工具箱;雖更新不頻繁,但功能已成熟,值得關注與使用。",
       "_mode": "full"
     }
   }
