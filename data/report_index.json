@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-01",
+    "analyzed": 9,
+    "cached": 8,
+    "deferred": 0,
+    "top_name": "mksglu/context-mode",
+    "top_rating": 4
+  },
+  {
     "date": "2026-09-30",
     "analyzed": 6,
     "cached": 8,

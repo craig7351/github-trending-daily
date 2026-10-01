@@ -118,7 +118,7 @@
   },
   "ComposioHQ/awesome-claude-skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-30",
+    "last_seen": "2026-10-01",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -142,42 +142,52 @@
         9,
         "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
         "Python"
+      ],
+      "2026-10-01": [
+        76128,
+        123,
+        8,
+        "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-28",
+    "last_analyzed": "2026-10-01",
     "analysis": {
-      "one_liner": "由 Composio 維護的 Claude Skills 精選清單,收錄上千個可用於 Claude 與其他 AI 編碼代理的技能與外掛。",
-      "summary": "這是一個 awesome-list 風格的資源彙整專案,分類整理超過千個 Claude Skills(SKILL.md 格式的可重用指令包),涵蓋文件處理、開發工具、資料分析、行銷溝通等領域,並支援 Claude Code、Claude.ai、Codex、Cursor、Gemini CLI 等多種代理平台。README 同時說明 Skills 的技術原理(漸進式載入、與 MCP/工具的分工),並置入 Composio 自家 MCP Gateway 與 connect-apps 外掛的安裝導引與推廣連結。",
+      "one_liner": "由 Composio 維護、收錄上千個 Claude Skills 與外掛的 awesome 清單,橫跨 Claude Code、Codex、Cursor、Gemini CLI 等代理工具。",
+      "summary": "這是一份依用途分類(文件處理、開發工具、資料分析、行銷、安全等)整理的 Claude Skills 精選清單,並說明 SKILL.md 格式與漸進式載入機制。同時推廣 Composio 的 connect-apps 外掛與 MCP Gateway,讓技能能實際串接 1000+ 個 SaaS 應用。",
       "category": "learning-resource",
       "highlights": [
-        "收錄超過 1000 個第三方貢獻的 Claude Skills,依用途分成 10 大類別方便查找",
-        "清楚解說 Skills 格式的起源(2025/10 由 Anthropic 推出,2025/12 開源標準化)及與 MCP、工具層的差異",
-        "提供 Composio connect-apps 外掛的安裝與 API 金鑰設定教學,讓 Claude 串接 1000+ 應用程式",
-        "README 結構完整、目錄清晰,但明顯帶有 Composio 商業產品的行銷內容"
+        "依用途分成十個類別,方便快速找到需要的技能",
+        "清楚說明 Skills、MCP、Tools 三層的差異與搭配方式",
+        "涵蓋 Claude Code 以外的 Codex、Cursor、Gemini CLI、Antigravity 等代理工具",
+        "附 connect-apps 外掛快速上手,可串接 1000+ 應用",
+        "社群貢獻者眾多,收錄項目附作者署名與連結"
       ],
       "use_cases": [
-        "快速尋找適合特定任務(如文件處理、程式碼審查、資料分析)的現成 Claude Skill",
-        "學習如何撰寫自己的 SKILL.md 及技能封裝結構",
-        "探索將 Claude 與外部 SaaS 應用(Gmail、Slack、GitHub 等)串接自動化的作法"
+        "尋找現成的 Claude Skills 加速日常開發與文件處理",
+        "學習撰寫 SKILL.md 與設計技能的參考範例",
+        "評估 MCP Gateway 與 SaaS 自動化整合方案",
+        "追蹤 agent skills 生態系的新工具"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 1,
         "activity": 4,
-        "comment": "資源彙整類,測試不適用。README 撰寫完整、分類清楚、更新頻率高(近期即有推送),且今日登上 GitHub trending 並單日增加 130+ 星,顯示社群關注度高;但內容夾雜大量 Composio 產品推廣段落,實用資訊與商業行銷比例需留意。"
+        "comment": "資源彙整類,測試不適用。README 結構清楚、分類完整,並有概念說明與快速上手。最後推送為 2026-09-18,仍在趨勢榜上,熱度穩定。部分內容帶有 Composio 的產品推廣性質,且 GitHub 未標示授權,但 README 徽章寫 Apache-2.0。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供的 connect-apps 外掛安裝步驟需貼上 Composio 平台的 API 金鑰才能運作,使用前應了解該金鑰的用途與授權範圍,並確認信任 Composio 這個第三方服務",
-          "本評估僅根據 README 內容,未檢視原始碼,無法確認清單內各外部連結技能的實際安全性"
+          "僅依 README 評估,未做原始碼審查。",
+          "快速上手需用 `claude --plugin-dir` 載入外掛,並貼上 Composio API key,該外掛會代為存取 Gmail、Slack、GitHub 等第三方帳號,使用前宜確認授權範圍。",
+          "清單中的技能多來自第三方社群作者,安裝前建議自行檢視各技能內容。"
         ]
       },
-      "star_rating": 4,
-      "verdict": "作為尋找與學習 Claude Skills 的入口清單相當實用且收錄豐富,但需自行辨別其中夾雜的 Composio 商業推廣內容。",
+      "star_rating": 3,
+      "verdict": "想找現成 Claude Skills 的人值得收藏當入口,但它是清單而非工具,第三方技能請自行審查後再用。",
       "_mode": "light"
     },
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "consecutive_days_on_trending": 1
   },
   "Pumpkin-MC/Pumpkin": {
@@ -706,7 +716,7 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-09-26",
+    "last_seen": "2026-10-01",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -800,6 +810,13 @@
         5,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-01": [
+        273008,
+        876,
+        9,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-26",
@@ -833,7 +850,7 @@
       "verdict": "若你日常使用 Claude Code 或其他 AI 編碼代理,這套技能包能有效補上「需求對齊、測試紀律、程式碼審查」的流程缺口,值得安裝試用,但本質是提示工程集合而非傳統軟體庫,程式碼量與測試皆非重點。",
       "_mode": "full"
     },
-    "total_days_on_trending": 14,
+    "total_days_on_trending": 15,
     "consecutive_days_on_trending": 1
   },
   "Lordog/dive-into-llms": {
@@ -9623,10 +9640,10 @@
   },
   "harry0703/MoneyPrinterTurbo": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-08-22",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-18": [
         106041,
@@ -9662,38 +9679,49 @@
         3,
         "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "Python"
+      ],
+      "2026-10-01": [
+        127565,
+        431,
+        6,
+        "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-18",
+    "last_analyzed": "2026-10-01",
     "analysis": {
+      "one_liner": "輸入主題或關鍵字,即可一鍵自動產生腳本、配音、素材、字幕與配樂,並合成高清短影音的開源工具。",
+      "summary": "MoneyPrinterTurbo 是一套 Python 開源專案,串接多種大型語言模型與 TTS,從主題自動完成短影音的腳本、素材匹配、字幕、背景音樂與剪輯合成。提供 AI Agent、WebUI、API 與 CLI 四種使用方式,可批次生成並接入自動化流程,降低短影音製作門檻。",
       "category": "ai-ml",
-      "one_liner": "只要輸入主題或關鍵字,就能透過 AI 大模型自動生成腳本、素材、字幕與配樂,一鍵合成高清短影音的開源工具。",
-      "summary": "MoneyPrinterTurbo 是一套一站式 AI 短影音生成工具,使用者提供主題或關鍵字後,系統會自動呼叫大型語言模型撰寫腳本、比對素材關鍵字、生成字幕與背景音樂,最終合成高清短影片。專案同時提供 WebUI、API、CLI 與 AI Agent 四種操作介面,並支援將成片一鍵發布到 TikTok、Instagram、YouTube Shorts 等平台。",
       "highlights": [
-        "整合多家 LLM(Kimi、OpenAI、Gemini、DeepSeek、通義千問、Azure OpenAI、火山方舟、Grok、MiniMax 等)與多種聚合閘道(Ollama、LiteLLM、OneAPI 等)",
-        "支援多種 TTS 服務(Edge TTS、Azure Speech、ElevenLabs、Gemini、Chatterbox 等)並可即時試聽",
-        "支援 9:16 直式與 16:9 橫式高清影片、批量生成、片段時長調整、多語言腳本",
-        "字幕樣式(字型、顏色、位置、描邊)與背景音樂皆可自訂,並可用本地素材或 Pexels/Pixabay/Coverr 免費素材庫",
-        "支援一鍵跨平台發布至 TikTok、Instagram、YouTube Shorts"
+        "一站式流程:腳本、配音、素材、字幕、配樂、剪輯全自動,也可在各環節使用自訂內容",
+        "支援 Kimi、OpenAI、Claude、Gemini、DeepSeek、通義千問等大量模型,並相容 OpenRouter、Ollama、OneAPI 等閘道",
+        "提供 WebUI、API、CLI 與 AI Agent 四種入口,容易整合進自動化流程",
+        "支援批次生成多支成片、任務歷史記錄,以及設定與 API Key 的匯入匯出",
+        "跨平台(Windows/macOS/Linux)、MIT 授權,星數超過 12.7 萬且社群活躍"
       ],
       "use_cases": [
-        "自媒體/短影音創作者想快速批量產出多支候選影片後挑選最佳版本",
-        "行銷團隊需要依關鍵字自動產生多語言短影音素材",
-        "開發者想串接自有 LLM/TTS 服務,客製化影片生成工作流",
-        "學習如何用 Python 串接 LLM + TTS + FFmpeg 打造自動化內容生成 pipeline"
+        "自媒體量產 TikTok、YouTube Shorts、Reels 等短影音",
+        "把 LLM 與影音合成整合進自動化內容工作流",
+        "研究多模型 API 串接與影片生成管線的實作",
+        "為不熟剪輯的人快速產出口播或資訊型影片"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 內容詳實,功能清單、介面截圖與實際生成作品範例齊全,說明品質高;但受限於僅檢視 README、未檢視原始碼,測試覆蓋率與程式碼品質無法評估,僅能給予基本分數。專案昨日剛推送更新,今日以 106k+ star、單日新增近 1200 star 登上 GitHub Trending 第一名,活躍度非常高。"
+        "comment": "README 提供多語版本、功能清單與介面截圖,內容完整,但前半篇幅多為贊助商資訊。測試部分僅憑 README 評估,無法確認。最後推送於 2026-09-30,近期持續提交,且正在趨勢榜上。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "僅檢視 README,未做原始碼層級審查;所見內容中沒有 curl | bash 之類的安裝指令(README 已截斷)。",
+          "使用時需填入多家 LLM 服務的 API Key,README 提到設定可匯出匯入,建議妥善保管金鑰。",
+          "README 含多個贊助商推廣連結,使用前請自行判斷。"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "功能完整、更新活躍且熱度爆棚的 AI 短影音生成工具,值得立即關注與試用。",
+      "star_rating": 4,
+      "verdict": "短影音自動化領域的熱門專案,功能完整、模型支援廣,想做 AI 影片工作流的人值得關注與試用。",
       "_mode": "light"
     }
   },
@@ -10370,10 +10398,10 @@
   },
   "NawfalMotii79/PLFM_RADAR": {
     "first_seen": "2026-08-19",
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-01",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-19": [
         24307,
@@ -10386,6 +10414,13 @@
         25760,
         158,
         4,
+        "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+        "PLSQL"
+      ],
+      "2026-10-01": [
+        26422,
+        263,
+        16,
         "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
         "PLSQL"
       ]
@@ -12105,10 +12140,10 @@
   },
   "openclaw/openclaw": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-25",
+    "last_seen": "2026-10-01",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-25": [
         387439,
@@ -12116,42 +12151,50 @@
         11,
         "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
         "TypeScript"
+      ],
+      "2026-10-01": [
+        390992,
+        136,
+        7,
+        "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-25",
+    "last_analyzed": "2026-10-01",
     "analysis": {
+      "one_liner": "跑在自己裝置上的開源個人 AI 助理,透過 Discord、Telegram、WhatsApp 等 20 多個聊天管道與你互動。",
+      "summary": "OpenClaw 是以 TypeScript 開發的開源 AI 助理。它透過單一 Gateway 作為控制平面,管理 session、工具、事件與各聊天平台的連線。狀態、記憶與憑證都存放在自己的硬體上。模型與 agent harness(Claude、Codex、本地模型)以外掛形式提供,可自由替換。專案由 OpenClaw Foundation(501(c)(3))管理,README 稱沒有付費層、託管服務或代幣。",
       "category": "ai-ml",
-      "one_liner": "OpenClaw 是一款可安裝在自己裝置上、透過既有聊天軟體(WhatsApp、Slack、Discord 等)互動的個人 AI 助理。",
-      "summary": "OpenClaw 提供一個本機 Gateway 作為控制中樞,串接各家 LLM 供應商、工具/技能/外掛系統,並透過多種訊息平台與裝置端 App(語音、Canvas、相機、螢幕)讓使用者在日常使用的通訊軟體中操作個人 AI 助理。專案由非營利的 OpenClaw Foundation 維護,主打「own-your-data」的自架部署模式。",
       "highlights": [
-        "提供跨平台一鍵安裝腳本(macOS/Linux/WSL2/Windows),並支援 npm/Docker/Nix 等多種部署方式",
-        "透過 Gateway 架構整合模型供應商、工具、技能、外掛,並可連接 WhatsApp、Telegram、Slack、Discord、Signal、iMessage 等多種通訊管道",
-        "README 內附完整安全性說明章節,提及訊息配對驗證、工具預設在 host 上執行、沙盒化指南等",
-        "獲 OpenAI、GitHub、NVIDIA、Vercel 等知名企業贊助,社群活躍(Discord、ClawHub 外掛市集)",
-        "今日登上 GitHub Trending 第 11 名,單日新增 173 顆星,顯示話題熱度高"
+        "支援 Discord、iMessage、Slack、Teams、Telegram、WhatsApp 等 20 多個管道,並提供 macOS、iOS、Android、Windows、Linux 原生 App",
+        "資料、記憶與憑證留在自己的裝置;README 稱預設只做每日版本檢查,匿名統計需自行開啟",
+        "模型與 agent harness 可插拔,並有 plugin SDK 與 ClawHub 擴充生態",
+        "同一個 Gateway 可當個人助理,也可當團隊共用部署,差別只在設定",
+        "安全預設:DM 管道預設要配對未知寄件者,並提供沙箱化與暴露面的操作指南"
       ],
       "use_cases": [
-        "想在自己裝置上自架、掌控資料的個人 AI 助理,而非依賴雲端服務",
-        "需要讓 AI 助理直接串接既有聊天工具(如 Slack、Discord、WhatsApp)進行操作或通知",
-        "開發者想透過 Plugin SDK 擴充工具/技能,建立客製化的 AI 代理應用",
-        "研究多通道、多模型的 AI Gateway 架構設計"
+        "在自己的筆電或伺服器上架設跨聊天平台的私人 AI 助理",
+        "為團隊部署共用的聊天機器人,並串接內部工具與技能",
+        "開發 plugin 或 skill 擴充 agent 能力,再發佈到 ClawHub",
+        "研究自架 agent Gateway 架構與多管道整合的參考"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 文件結構完整,涵蓋安裝、快速上手、架構、安全性、開發與社群連結,對外部文件站的引導也很清楚;但僅能透過 README 評估,未實際檢視原始碼與測試涵蓋率,此評分僅供參考。"
+        "comment": "README 結構清楚,涵蓋安裝、快速開始、架構、安全、文件導覽與治理,並連到完整的官方文件站。測試品質僅從 README 判斷,README 顯示有 CI 徽章,但未檢視程式碼。最近一次推送在 2026-10-01,星數近 39 萬,社群與贊助方規模大,維護相當活躍。"
       },
       "security": {
-        "risk_level": "low",
+        "risk_level": "medium",
         "findings": [
-          "安裝方式包含 curl | bash 與 PowerShell iwr | iex 直接執行遠端腳本,使用前建議先確認腳本來源與內容",
-          "README 自述工具預設會在主要 session 的主機上執行,除非另外設定沙盒化,使用前應閱讀官方安全性與沙盒化指南",
-          "README 提及 DM 類型的通訊管道預設會對未知寄件者進行配對驗證機制,顯示專案有意識地處理未受信任輸入的風險"
+          "README 的安裝方式包含 `curl -fsSL https://openclaw.ai/install.sh | bash` 與 `iwr -useb https://openclaw.ai/install.ps1 | iex`,屬於直接執行遠端腳本;建議先檢視腳本內容,或改用 npm 安裝。",
+          "README 說明,主 session 的工具預設在主機上執行,除非另外設定沙箱;連接其他使用者或對外暴露 Gateway 前,應先閱讀官方安全指南。",
+          "README 提到入站訊息應視為不可信輸入,且 DM 管道預設會要求配對。",
+          "此評估僅依 README 與 metadata,未對原始碼做安全審查。"
         ]
       },
       "star_rating": 4,
-      "verdict": "文件完整、社群與贊助陣容堅強,且今日於 Trending 榜快速竄升,值得關注,但因涉及在自己裝置上執行且預設無沙盒化,導入前應詳讀官方安全性文件。",
+      "verdict": "若想自架多管道 AI 助理,這個專案值得關注。文件完整、生態與社群活躍,但工具預設跑在主機上,部署時要妥善處理沙箱與暴露面。",
       "_mode": "light"
     }
   },
@@ -12531,10 +12574,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -12598,41 +12641,51 @@
         9,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
+      ],
+      "2026-10-01": [
+        149187,
+        743,
+        5,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-26",
+    "last_analyzed": "2026-10-01",
     "analysis": {
-      "one_liner": "一套讓 AI coding agent(Claude Code、Codex、Cursor 等近 20 種工具)在寫程式時「先想清楚再少寫程式碼」的規則/技能套件。",
-      "summary": "Ponytail 不是傳統函式庫,而是一組給 AI agent 使用的 prompt/skill 規則檔(YAGNI 分級決策梯:先問要不要做、能不能重用既有程式碼、標準庫/原生功能/既有套件能不能解決,最後才寫最少必要程式碼),透過 hooks 在每次對話開頭把規則注入 agent 的 system context。專案同時附上可重現的 benchmark(比較有無此 skill 時 agent 產出的程式碼量、token、成本、時間),並針對 20 種常見 agent host(Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode 等)各自提供對應的安裝格式與規則檔。",
-      "category": "devtool",
+      "one_liner": "讓 AI 程式代理人像「最懶的資深工程師」一樣思考:能不寫就不寫,先用內建、標準庫與既有程式碼。",
+      "summary": "Ponytail 是一組跨代理人的規則與技能(skill)包,透過 Claude Code、Codex、Cursor 等約 20 種代理人的 plugin 或規則檔,讓代理人在寫程式前依「梯子」順序判斷:是否需要、能否重用、標準庫、原生平台功能、已安裝相依套件,最後才寫最少的程式碼。目標是減少過度設計造成的程式碼膨脹,同時保留驗證、錯誤處理、安全與無障礙等防護。",
+      "category": "ai-ml",
       "highlights": [
-        "核心是「決策梯」提示工程:YAGNI→重用→標準庫→原生功能→既有依賴→單行→最小實作,且明確保留輸入驗證、錯誤處理、安全性、無障礙等「不可偷懶」項目",
-        "附完整可重現 benchmark(agentic 與 single-shot 兩種),用真實 FastAPI+React repo 的 diff 量化 LOC/token/成本/時間節省幅度,並誠實揭露先前測量方法的偏誤與修正",
-        "同時支援 Claude Code、Codex、Copilot CLI、Gemini/Antigravity CLI、OpenCode、Qoder、Devin、Grok、Hermes、Swival、Cursor/Windsurf/Cline 等近 20 種 agent host,各自對應規則檔或 plugin 格式",
-        "package.json 無 preinstall/postinstall 生命週期腳本,repo 內找不到 curl|bash 或 obfuscated/base64 payload;CI(GitHub Actions)跑 node --test 涵蓋十餘個測試檔,含跨平台 hooks、各 agent plugin 格式的一致性檢查",
-        "採用 markdown 規則檔 + 少量 Node.js hook 腳本的極簡架構,程式碼本身(如 uninstall.js)有清楚的邊界處理註解,符合專案自身標榜的極簡風格(dogfooding)"
+        "一套規則同時支援 Claude Code、Codex、Cursor、Windsurf、Cline、Kiro、Qoder、OpenCode、Copilot 等約 20 種代理人",
+        "七階「懶惰梯子」決策流程,並明確保留信任邊界驗證、安全與無障礙,不為求短而犧牲正確性",
+        "附 agentic 基準測試(FastAPI+React 真實 repo、12 項任務),宣稱平均減少約 54% 程式碼、成本降約 20%,且作者公開承認舊版單次測試的基線偏差",
+        "提供 /ponytail-review、audit、debt、gain 等指令與狀態列徽章,並以 SessionStart / UserPromptSubmit hooks 維持常駐模式",
+        "測試涵蓋 hooks、Windows、各代理人外掛與解除安裝腳本,CI 另檢查規則副本與版本一致性"
       ],
       "use_cases": [
-        "希望 AI coding agent(Claude Code/Codex/Copilot CLI 等)減少過度工程化、亂裝套件或寫冗長樣板碼的團隊",
-        "需要一套可攜式規則(AGENTS.md/rules 檔)跨多種 agent host 統一「少寫程式碼」行為準則的開發者",
-        "對「AI agent 產出程式碼量/成本/速度」量化評估有興趣,想參考其 benchmark 方法論的研究者"
+        "在 Claude Code 或 Cursor 中抑制代理人過度工程化(例如不必要的套件、包裝元件)",
+        "團隊統一多種 AI 編輯器的程式碼風格與 YAGNI 原則",
+        "作為 prompt engineering / agent skill 的設計參考與基準測試方法範例",
+        "用 review / audit 指令檢視既有程式碼中可刪減的部分"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
-        "activity": 5,
-        "comment": "文件非常完整(多語 README、docs/agent-portability.md、benchmarks/README 附方法論與限制說明),對各 agent host 的差異描述極其詳細。測試涵蓋各 plugin 格式與跨平台 hooks,CI 有版本一致性與規則副本一致性檢查,顯示維護嚴謹;測試以行為/整合測試為主,核心邏輯是 markdown 提示文字而非傳統演算法,較難用單元測試竭盡「規則有沒有生效」。近期仍有 push(2026-08-07)且短時間內衝上 trending 第14名、star 數暴增,活躍度高但暴增幅度值得留意。"
+        "activity": 4,
+        "comment": "文件完整(含西、韓文版本與基準測試方法說明),作者對測量方法的批評有公開修正,態度誠實。tests/ 下有十餘個 node 測試檔,CI 會跑規則副本與版本檢查。hooks 程式碼小而清楚,錯誤皆採靜默失敗以免阻斷工作階段。最後推送為 2026-09-14,維護仍屬活躍。核心屬 prompt 內容,效果是否普遍成立仍需自行驗證。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 未使用 preinstall/postinstall 等 npm 生命週期腳本執行任意程式碼",
-          "repo 內未發現 curl|bash 式安裝腳本、明顯混淆或 base64 長字串 payload",
-          "唯一涉及子行程執行的程式碼(benchmarks/correctness.js 使用 execSync)僅用於本地 benchmark 產物驗證(執行受測產生的 node/python 檔案),非安裝流程的一部分"
+          "Claude Code / Codex plugin 會註冊 SessionStart、SubagentStart、UserPromptSubmit 三個 Node.js 生命週期 hook,每次工作階段與每次送出提示都會執行本機 node 腳本(hooks/*.js),安裝前建議先審閱並信任這些 hook",
+          "ponytail-activate.js 會在 Claude 設定目錄寫入旗標檔(.ponytail-active、.ponytail-statusline-nudged),並讀取 settings.json 偵測是否已設定狀態列",
+          "首次啟動時會向代理人注入「STATUSLINE SETUP NEEDED」提示,內含 powershell -ExecutionPolicy Bypass -File 或 bash 指令片段,並要求代理人主動向使用者提議寫入 settings.json;需由使用者同意才會生效,但使用者應留意此指令內容",
+          "在已檢視的 hooks 檔案中未發現網路請求、child_process 或外部網址呼叫;package.json 未見 preinstall / postinstall / prepare 腳本",
+          "README 提及的安裝方式為 Claude Code / Codex 官方 plugin marketplace 指令,未見 curl|bash 形式的安裝器"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念新穎且執行嚴謹(有實測 benchmark 佐證、跨平台支援齊全、無安裝期風險程式碼),但本質是一組提示工程規則檔而非傳統程式庫,效果高度依賴底層模型是否確實遵循指令,值得關注但不必神化其量化數字。",
+      "verdict": "想約束 AI 代理人過度設計的人值得一試,跨工具支援與誠實的基準測試是亮點,但效益數據請以自己的專案實測為準。",
       "_mode": "full"
     }
   },
@@ -15141,10 +15194,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-30",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15206,6 +15259,13 @@
         48134,
         4758,
         1,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-01": [
+        50445,
+        3483,
+        2,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -16522,10 +16582,10 @@
   },
   "heygen-com/hyperframes": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-08": [
         45946,
@@ -16540,41 +16600,48 @@
         5,
         "Write HTML. Render video. Built for agents.",
         "TypeScript"
+      ],
+      "2026-10-01": [
+        54737,
+        349,
+        10,
+        "Write HTML. Render video. Built for agents.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-08",
+    "last_analyzed": "2026-10-01",
     "analysis": {
-      "category": "framework",
-      "one_liner": "用 HTML/CSS 寫腳本、輸出確定性 MP4 影片的開源渲染框架,專為 AI 程式代理設計。",
-      "summary": "HyperFrames 由 HeyGen 開源,讓開發者(或 AI 代理)用 HTML、CSS、媒體素材與可尋軌動畫來產生可重現的 MP4 影片,底層結合 ffmpeg 與 puppeteer 進行渲染、GSAP 等處理動畫。它提供 CLI 本機使用方式,也內建一套 20 個「skills」模組,可直接整合進 Claude Code、Cursor、Gemini CLI、Codex 等 AI 編碼代理,讓代理依照產品發表片、解說影片、字幕、簡報等不同情境自動選擇對應工作流程來產生影片。",
+      "one_liner": "HeyGen 開源的「寫 HTML 就能渲染成確定性 MP4」影片框架,專為 AI 代理設計。",
+      "summary": "HyperFrames 將 HTML、CSS、媒體與可 seek 的動畫(GSAP、Lottie、Three.js 等)轉為可重現的 MP4 影片。它提供 CLI,並附 21 個 agent skills,讓 Claude Code、Codex、Cursor、Gemini CLI 等程式代理能完成規劃、撰寫、lint、預覽與渲染的完整流程。解決了讓 AI 代理以熟悉的網頁技術程式化產出影片的問題。",
+      "category": "ai-ml",
       "highlights": [
-        "用 HTML/CSS 取代傳統影片編輯軟體或 React(如 Remotion)來描述動畫與排版,學習成本對前端工程師較低",
-        "內建 20 種 skills,涵蓋產品發表、講解影片、PR 轉影片、字幕、簡報等多種情境,並有 /hyperframes 路由器自動挑選工作流程",
-        "同時支援本機 CLI 與多種主流 AI 編碼代理(Claude Code、Cursor、Gemini CLI、Codex)整合",
-        "由 HeyGen(知名 AI 影片新創)開源釋出,今日 GitHub Trending 排名第一、單日新增近 500 顆星,聲量成長迅速",
-        "採用 Apache-2.0 授權,對商業與個人專案使用限制較少"
+        "以 HTML/CSS 作為合成格式,LLM 天生熟悉,代理易於產生與修改",
+        "提供 21 個 skills,涵蓋產品發表、PR 轉影片、字幕、音樂節拍同步、簡報等工作流",
+        "支援 Claude Code plugin marketplace 與 npx skills 安裝,跨多種代理工具",
+        "強調確定性渲染與 seek-safe 動畫,支援多種動畫執行環境",
+        "附 Remotion 移植 skill,Apache-2.0 授權,Node 需 22 以上"
       ],
       "use_cases": [
-        "AI 代理自動化生成行銷短片、產品發表影片或社群素材",
-        "把既有網站/產品截圖與文案快速轉成 30-90 秒宣傳影片",
-        "為既有訪談或 Podcast 影片自動加上字幕、圖表疊加或下三分之一字卡",
-        "將 GitHub PR 內容自動轉成變更說明或功能介紹影片"
+        "讓 AI 代理自動將 GitHub PR 或產品網址製作成說明/宣傳影片",
+        "以程式化方式批次產生資料圖表或動態圖形影片",
+        "為既有訪談或 Podcast 影片加上字幕與圖形疊層",
+        "將既有 Remotion 專案遷移到 HTML 工作流"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 內容詳實,對 skills 架構、安裝方式與各工作流程用途都有清楚表格說明,文件品質高;但測試相關資訊未在 README 呈現,此評估僅基於 README,無法驗證程式碼實際測試涵蓋率。專案剛推送(2026-09-08)且為 GitHub Trending 第一名、單日暴增近 500 星,活躍度相當高。"
+        "comment": "README 結構完整,含快速開始、skills 表格、文件站、Playground 與社群連結,但 skills 安裝說明稍嫌冗長。測試品質僅憑 README 無法評估。最近才推送且登上趨勢榜,星數很高,活躍度極佳。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "安裝與更新皆透過 npx 執行 npm 套件(如 npx skills add、npx hyperframes skills update),屬於標準 npm 生態系操作,而非 curl | bash 之類的高風險安裝方式",
-          "README 提及 skills 套件解析自 skills.sh 註冊表,內容可能落後於 main 分支數小時,使用者若需要最新版本需改用 update 指令,此為版本同步議題而非安全疑慮"
+          "README 的安裝方式為 claude plugin、npx skills add 與 npx hyperframes,屬標準套件管理流程,未見 curl | bash。",
+          "skills 會被載入代理並影響其行為,安裝前建議先檢視內容與來源;本評估僅依 README,未做原始碼審查。"
         ]
       },
-      "star_rating": 5,
-      "verdict": "來自 HeyGen 的新穎影片生成框架,結合 HTML 渲染與 AI 代理工作流程,文件完整且聲量爆發中,值得立即關注與試用。",
+      "star_rating": 4,
+      "verdict": "想讓 AI 代理程式化產出影片的工程師值得優先試用,概念清晰、生態完整且更新活躍。",
       "_mode": "light"
     }
   },
@@ -16635,10 +16702,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -16653,41 +16720,51 @@
         13,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
+      ],
+      "2026-10-01": [
+        24492,
+        90,
+        4,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-08",
+    "last_analyzed": "2026-10-01",
     "analysis": {
-      "one_liner": "一個 MCP 伺服器,透過沙盒化工具輸出、持久化 session 記憶與跨平台強制路由,大幅減少 AI coding agent 的 context window 消耗。",
-      "summary": "context-mode 針對「MCP 工具呼叫把大量原始資料塞進 context window」的問題提出解法:把 Bash/Read/WebFetch 等大輸出工具攔截並在沙盒中執行,只回傳精簡結果(號稱 98% 縮減),同時用 SQLite + FTS5/BM25 持久化 session 事件,讓對話 compact 後仍能恢復進度。它透過 hooks(PreToolUse/PostToolUse/SessionStart/PreCompact 等)在 17 種 AI coding 平台(Claude Code、Gemini CLI、Cursor、Codex、OpenCode 等)上強制路由,而非只靠模型自律。",
       "category": "devtool",
+      "one_liner": "為 AI 程式碼代理優化 context window 的 MCP 外掛:沙箱化工具輸出、以 SQLite FTS5 保存工作階段記憶,並透過 hooks 強制路由。",
+      "summary": "context-mode 是 MCP server 加 hooks 的組合,支援 Claude Code、Gemini CLI、Codex、Cursor、Copilot、Kiro、Zed 等十多個平台。它在沙箱中執行程式碼、只回傳結果,避免大量原始輸出(如 Playwright 快照、日誌)塞滿 context(作者自述約 98% 減量)。同時把工作階段事件寫入 SQLite FTS5,對話壓縮後以 BM25 檢索還原進度。",
       "highlights": [
-        "支援 17 種平台的 adapter 架構(src/adapters/ 下每個平台獨立資料夾),並用 hooks 機制做強制路由而非僅靠 prompt 建議",
-        "security.ts 內建相當細膩的命令權限引擎:能正確處理 shell chain 分割、subshell/backtick 巢狀擷取、符號連結逃逸防護、專案邊界防護(對應 GitHub Issue #852),並有多語言(Python/JS/Go/PHP/Ruby/Rust)shell-escape 偵測",
-        "測試覆蓋度高,tests/ 目錄下有 210+ 個測試檔,涵蓋各 adapter、hooks、CLI upgrade、security 等,且 CI 在 ubuntu/macos/windows 三平台矩陣跑測試",
-        "postinstall.mjs 雖然邏輯複雜(多層 self-heal),但每個步驟都有詳細註解說明修的是哪個 GitHub Issue,且明確標示「best effort、never block install」,並有 isGlobalInstall() 防呆避免誤改開發者本機設定",
-        "採用 Elastic License 2.0(非 OSI 標準開源授權),原始碼公開但限制以此打造競爭性的託管服務"
+        "沙箱工具(ctx_execute、ctx_batch_execute、ctx_fetch_and_index 等)讓原始資料不進 context,README 宣稱 315 KB 降為 5.4 KB",
+        "以 SQLite + FTS5 + BM25 持久化檔案編輯、git 操作、任務與錯誤,compaction 後只取回相關片段",
+        "「Think in Code」理念:讓 LLM 寫腳本做分析,只輸出結果",
+        "涵蓋 Claude Code、Gemini CLI、Codex、Cursor、Copilot、Kiro、Zed、OpenClaw、Pi 等多平台 adapter 與 hooks 設定",
+        "測試檔超過 200 個,涵蓋各 adapter、hooks、executor、search,並有 5 個 CI workflow"
       ],
       "use_cases": [
-        "長時間、多工具呼叫的 AI coding agent session,需要避免 context window 被大量工具輸出(如瀏覽器快照、日誌、API 回應)迅速耗盡",
-        "使用 Claude Code / Cursor / Codex 等多種 agent 工具的團隊,想要統一的 session 記憶與跨平台路由治理",
-        "需要對 agent 執行的 Bash 指令做細粒度 allow/deny/ask 權限控管的場景"
+        "長時間使用 Claude Code 或 Codex 進行大型專案開發,避免 context 被工具輸出耗盡",
+        "需要在對話壓縮後保留工作進度與決策的 agent 工作流程",
+        "同時使用多種 AI 編程工具的團隊,想統一 context 管理與路由規則",
+        "研究 MCP 與 hooks 架構及跨平台 adapter 設計"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 5,
         "activity": 5,
-        "comment": "README 極為詳盡(逐平台安裝步驟、原理說明),原始碼中大量保留「為何這樣寫」的註解並對應具體 Issue 編號,顯示長期迭代與真實使用者回報修正的痕跡。測試檔案數量龐大且 CI 涵蓋三大作業系統,活躍度高(最近一次推送即當天)。整體工程成熟度明顯高於一般 trending 專案。"
+        "comment": "README 詳盡,含各平台安裝步驟與指令說明,另有 BENCHMARK 與 CONTRIBUTING。測試目錄有 200 多個 test 檔,涵蓋 adapters、hooks、core,CI 有 5 個 workflow(含 e2e smoke)。版本已到 1.0.169,近期持續推送,迭代密集。減量數據與「微軟、Google 等團隊使用」屬作者自述,未經獨立驗證。授權為 Elastic-2.0,非標準開源授權。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 含 postinstall 生命週期腳本(scripts/postinstall.mjs),會在全域安裝時執行檔案系統修復操作(建立 Windows junction、修補 Claude Code 外掛登錄檔、修復 better-sqlite3 原生綁定等),邏輯複雜但程式碼有詳盡註解說明每個分支對應的問題,且對 cmd.exe 路徑插入做了字元過濾防護",
-          "README 中 OpenClaw 安裝段落建議在無法用 Node 22.5 時透過官方 bun.sh 的 curl|bash 安裝 Bun(非 context-mode 自身的安裝方式,屬於第三方常見作法)",
-          "採用 Elastic License 2.0 而非標準 OSI 開源授權,商業使用前建議確認授權條款是否符合需求"
+          "package.json 定義 postinstall 腳本(scripts/postinstall.mjs),僅在全域安裝(npm install -g)時會讀寫使用者家目錄下的 ~/.claude/plugins/installed_plugins.json 與 ~/.claude/settings.json 以修復外掛註冊,並改寫 hooks 設定",
+          "postinstall 在 Windows 全域安裝時會以 cmd.exe 執行 mklink 建立目錄 junction,並可能改寫 npm 產生的 context-mode.cmd shim;腳本已對路徑做特殊字元檢查",
+          "postinstall 僅在 Linux 且 Node 版本低於 22.5 時顯示含 curl | bash 的 Bun 安裝建議,為輸出文字,並非腳本自動執行",
+          "發佈檔含 server.bundle.mjs、cli.bundle.mjs 等 esbuild --minify 的打包檔,為建置產物,原始碼在 src/ 中可對照",
+          "本質上是讓 agent 在沙箱執行任意程式碼並攔截 hooks 的工具,且 README 提及 ctx_insight 會開啟外部託管儀表板,使用前建議了解其權限範圍"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質與測試紀律遠超一般 trending 專案,若你的團隊深受 AI agent context window 爆掉之苦,值得評估導入;但授權為 Elastic License 2.0 而非標準開源,商業託管使用前需先確認條款。",
+      "verdict": "針對 agent context 浪費這個真實痛點,實作完整、測試與平台涵蓋面都很扎實,值得 AI 編程工具重度使用者關注;安裝時留意 postinstall 會修改家目錄設定,並注意 Elastic-2.0 授權限制。",
       "_mode": "full"
     }
   },
@@ -22457,10 +22534,10 @@
   },
   "mvschwarz/openrig": {
     "first_seen": "2026-09-28",
-    "last_seen": "2026-09-30",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-28": [
         976,
@@ -22480,6 +22557,13 @@
         2442,
         737,
         6,
+        "Multi-agent harness that runs Claude Code and Codex together as one system",
+        "TypeScript"
+      ],
+      "2026-10-01": [
+        3029,
+        624,
+        3,
         "Multi-agent harness that runs Claude Code and Codex together as one system",
         "TypeScript"
       ]
@@ -22639,15 +22723,22 @@
   },
   "byoungd/up": {
     "first_seen": "2026-09-29",
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-01",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-29": [
         64679,
         327,
         6,
+        "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
+        "JavaScript"
+      ],
+      "2026-10-01": [
+        66391,
+        743,
+        13,
         "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
         "JavaScript"
       ]
@@ -22691,15 +22782,22 @@
   },
   "NVIDIA/OpenShell": {
     "first_seen": "2026-09-30",
-    "last_seen": "2026-09-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-30": [
         10615,
         990,
         2,
+        "OpenShell is the safe, private runtime for autonomous AI agents.",
+        "Rust"
+      ],
+      "2026-10-01": [
+        12678,
+        1281,
+        1,
         "OpenShell is the safe, private runtime for autonomous AI agents.",
         "Rust"
       ]
@@ -22743,15 +22841,22 @@
   },
   "t8y2/dbx": {
     "first_seen": "2026-09-30",
-    "last_seen": "2026-09-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-30": [
         22012,
         232,
         5,
+        "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+        "Rust"
+      ],
+      "2026-10-01": [
+        23191,
+        1138,
+        15,
         "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
         "Rust"
       ]
@@ -22850,15 +22955,22 @@
   },
   "VectifyAI/PageIndex": {
     "first_seen": "2026-09-30",
-    "last_seen": "2026-09-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-30": [
         37383,
         835,
         11,
+        "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+        "Python"
+      ],
+      "2026-10-01": [
+        38126,
+        1097,
+        17,
         "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
         "Python"
       ]
@@ -22950,6 +23062,165 @@
       },
       "star_rating": 4,
       "verdict": "經典、穩定且實用的 HTTP 壓測小工具,適合放進工具箱;雖更新不頻繁,但功能已成熟,值得關注與使用。",
+      "_mode": "full"
+    }
+  },
+  "firebase/firebase-ios-sdk": {
+    "first_seen": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-01": [
+        6766,
+        8,
+        11,
+        "Firebase SDK for Apple App Development",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-10-01",
+    "analysis": {
+      "one_liner": "Google 官方的 Firebase Apple 平台開源 SDK,涵蓋 Auth、Firestore、Messaging、Crashlytics 與 Firebase AI Logic(Gemini)等。",
+      "summary": "此儲存庫包含除 FirebaseAnalytics 外所有 Apple 平台 Firebase 函式庫的原始碼,可透過 Swift Package Manager 或 CocoaPods 安裝。它讓 iOS、macOS、tvOS、watchOS 開發者以統一 SDK 整合驗證、資料庫、儲存、推播、崩潰回報與 Gemini 生成式 AI 等後端服務。",
+      "category": "library",
+      "highlights": [
+        "涵蓋 AI Logic、Auth、Firestore、Functions、Messaging、Crashlytics、Remote Config 等完整 Firebase 產品線",
+        "支援 Swift Package Manager、CocoaPods 與實驗性 Carthage 等多種安裝方式",
+        "每個 SDK 皆有獨立的 GitHub Actions 工作流程,另有 CodeQL、API diff、Danger 等基礎設施檢查",
+        "FirebaseAuth 等模組附有大量單元測試",
+        "新增 Firebase AI Logic 與 Gemini Foundation Models 預覽整合,並含 .agents 技能與審查指引"
+      ],
+      "use_cases": [
+        "在 iOS/macOS App 中整合登入驗證、Firestore 即時資料庫與雲端儲存",
+        "實作推播通知、Remote Config 與崩潰回報",
+        "在 Apple 平台 App 中透過 Firebase AI Logic 呼叫 Gemini 模型",
+        "研讀大型官方 SDK 的架構、測試與 CI 實務"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "官方維護、持續推送(最近一次推送為 2026-09-30),CI 工作流程完整且依 SDK 拆分,單元測試覆蓋廣。README 清楚,詳細文件則放在 Firebase 官網。注意 README 警告:2026 年 10 月後新版本不再發佈至 CocoaPods。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Package.swift 以 binaryTarget 從 dl.google.com 下載預編譯的 FirebaseAnalytics.zip,並附有 checksum 驗證;README 也說明 Analytics 為非開源的預編譯二進位檔",
+          "未在檔案中發現 curl | bash 之類的安裝流程"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若開發 Apple 平台 App 並使用 Firebase,這是必備的官方 SDK;品質與維護狀況都很好,但對其他類型的開發者而言用途有限。",
+      "_mode": "full"
+    }
+  },
+  "modelcontextprotocol/servers": {
+    "first_seen": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-01": [
+        90815,
+        50,
+        12,
+        "Model Context Protocol Servers",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-01",
+    "analysis": {
+      "one_liner": "MCP 官方維護的參考伺服器集合,涵蓋 Filesystem、Git、Memory、Fetch、Time、Sequential Thinking、Everything 等範例實作。",
+      "summary": "這是 Model Context Protocol 指導小組維護的參考實作倉庫,用 TypeScript 與 Python 示範如何用各語言 MCP SDK 打造伺服器,讓 LLM 以受控方式存取檔案、Git、記憶圖譜等資源。README 明確聲明這些伺服器是教學範例,並非可直接用於正式環境的方案。",
+      "category": "framework",
+      "highlights": [
+        "官方出品,涵蓋 7 個參考伺服器(Everything、Fetch、Filesystem、Git、Memory、Sequential Thinking、Time)",
+        "可用 npx / uvx 一行啟動,並附 Claude Desktop 設定範例(含 Windows 的 cmd /c 寫法)",
+        "Memory 伺服器以知識圖譜與 JSONL 持久化,並用 mutation queue 序列化寫入以避免競態",
+        "Everything 伺服器完整展示 prompts、resources、tools、訂閱、日誌等 MCP 功能,適合作為學習與測試用",
+        "採用 npm workspaces 管理多個套件,並有 TypeScript、Python、release 等 CI 工作流程"
+      ],
+      "use_cases": [
+        "學習如何用 MCP SDK 實作自己的 MCP 伺服器",
+        "快速為 Claude Desktop 等 MCP 客戶端接上檔案系統、Git、記憶功能",
+        "作為 MCP 客戶端開發時的測試與相容性驗證對象(Everything 伺服器)",
+        "參考其路徑驗證與存取控制的寫法,設計安全的工具伺服器"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整,有 README、CONTRIBUTING、SECURITY、RELEASING 與各伺服器專屬文件。Filesystem、Memory、Sequential Thinking、Everything 皆有 vitest 測試,Filesystem 測試涵蓋路徑驗證與 Unicode 路徑。CI 工作流程齊全,近期仍持續推送。程式碼註解清楚,會引用 issue 說明修正原因。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "子套件 src/filesystem/package.json 含 `prepare` 腳本(執行 npm run build),從原始碼安裝時會觸發 tsc 編譯;這是 TypeScript 套件的常見做法",
+          "README 建議以 `npx -y` 與 `uvx` 直接執行 npm / PyPI 上的套件,使用者需信任發佈來源與版本",
+          "Filesystem、Git 等伺服器本身會讓 LLM 讀寫本機檔案或操作儲存庫,README 亦聲明為參考實作而非正式環境方案,使用時應限制可存取目錄並自行評估威脅模型",
+          "未在檢視範圍內發現 curl | bash 安裝方式、混淆程式碼或嵌入的 base64 內容"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想學 MCP 伺服器實作或需要官方範例的人,值得收藏並熟讀;但它定位為教學參考,正式環境使用前須自行做安全評估。",
+      "_mode": "full"
+    }
+  },
+  "colbymchenry/codegraph": {
+    "first_seen": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-01": [
+        72597,
+        118,
+        14,
+        "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-10-01",
+    "analysis": {
+      "one_liner": "為 AI 程式碼代理預先建立本機程式碼知識圖譜,自動同步,減少 token 與工具呼叫次數。",
+      "summary": "CodeGraph 會在專案內建立 .codegraph/ 本機索引,以 tree-sitter 抽取多語言的結構與跨檔呼叫關係,再透過 MCP 伺服器提供給 Claude Code、Cursor、Codex、Gemini、Kiro、Copilot 等代理。它會監聽檔案變更並自動同步索引,讓代理少讀檔、少呼叫工具。README 稱核心為 Rust,主體以 TypeScript 實作,提供獨立 bundle 與 npm 兩種安裝方式。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援 9 種以上代理(Claude Code、Cursor、Codex、Gemini、Kiro、Copilot 等),`codegraph install` 可自動寫入各自的 MCP 設定",
+        "檔案變更時自動增量同步索引,索引不會過期",
+        "支援 20 種以上語言,含框架路由與 iOS/React Native 橋接等跨語言解析",
+        "__tests__ 下有數百個測試檔,另有評估語料與 agent-eval 技能",
+        "發佈流程標示 npm provenance 與簽章/attestation,並有 TELEMETRY.md 詳列遙測欄位與關閉方式"
+      ],
+      "use_cases": [
+        "在大型程式碼庫中讓 AI 代理以更少 token 取得精準上下文",
+        "同時使用多種 AI 編碼工具,共用同一份本機程式碼索引",
+        "分析跨檔呼叫關係與變更影響範圍(affected tests)",
+        "需要資料不離開本機的企業或離線開發環境"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,含 README、CHANGELOG、BUNDLING、TELEMETRY 與 AGENTS/CLAUDE 指引。測試檔數量龐大,涵蓋 CLI、各語言解析與解析器合成。release workflow 活躍,最近仍有推送。GitHub 標示主要語言為 C,與 README 所述 Rust/TypeScript 不一致,這部分未逐一核對。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 建議以 `curl ... install.sh | sh` 與 `irm ... install.ps1 | iex` 安裝,屬常見做法,執行前可先檢視腳本",
+          "install.sh 會從 GitHub Releases 下載含內建 Node 執行環境的 tar.gz 並解壓到 ~/.codegraph,再將啟動器連結到 ~/.local/bin;已讀到的部分未見其他網域",
+          "package.json 有 preuninstall 腳本(node dist/bin/uninstall.js),未見 preinstall/postinstall",
+          "`codegraph install` 會修改各代理的 MCP 設定、指令與權限;`codegraph uninstall` 可還原",
+          "依 TELEMETRY.md,預設會傳送匿名使用統計(隨機 machine_id、版本、OS、指令與語言統計),可用 `codegraph telemetry off`、CODEGRAPH_TELEMETRY=0 或 DO_NOT_TRACK=1 關閉",
+          "MCP 伺服器每日最多一次向 GitHub 查詢新版本,可用 CODEGRAPH_NO_UPDATE_CHECK=1 關閉"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "做法成熟、測試與文件扎實,對重度使用 AI 編碼代理的人很值得試用;安裝前留意 curl|sh 與預設開啟的匿名遙測。",
       "_mode": "full"
     }
   }
