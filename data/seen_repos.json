@@ -716,8 +716,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -817,6 +817,13 @@
         9,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-02": [
+        273898,
+        883,
+        2,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-26",
@@ -850,8 +857,8 @@
       "verdict": "若你日常使用 Claude Code 或其他 AI 編碼代理,這套技能包能有效補上「需求對齊、測試紀律、程式碼審查」的流程缺口,值得安裝試用,但本質是提示工程集合而非傳統軟體庫,程式碼量與測試皆非重點。",
       "_mode": "full"
     },
-    "total_days_on_trending": 15,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 16,
+    "consecutive_days_on_trending": 2
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1170,8 +1177,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-26",
-    "days_on_trending": 3,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1278,6 +1285,13 @@
         4,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-02": [
+        293975,
+        455,
+        7,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-24",
@@ -1316,8 +1330,8 @@
       "verdict": "如果你的日常工作是用 Claude Code 之類的代理人自主寫程式,這套「流程即提示詞」框架值得一試;但它是方法論/提示詞集合而非可執行程式庫,價值取決於你是否認同其強制流程哲學。",
       "_mode": "full"
     },
-    "total_days_on_trending": 16,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 17,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1810,7 +1824,7 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-09-26",
+    "last_seen": "2026-10-02",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
@@ -1832,6 +1846,13 @@
         71201,
         306,
         15,
+        "The design language that makes your AI harness better at design.",
+        "JavaScript"
+      ],
+      "2026-10-02": [
+        73677,
+        495,
+        14,
         "The design language that makes your AI harness better at design.",
         "JavaScript"
       ]
@@ -1871,7 +1892,7 @@
       "verdict": "若團隊大量使用 AI coding agent 產出前端介面,這套工具值得一試,但安裝時牽涉下載執行檔與自動 hook,建議先讀懂信任機制再上線。",
       "_mode": "light"
     },
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat-android": {
@@ -9009,10 +9030,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-02",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -9048,38 +9069,50 @@
         9,
         "Cursor plugin specification and official plugins",
         "TypeScript"
+      ],
+      "2026-10-02": [
+        9322,
+        150,
+        6,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-29",
+    "last_analyzed": "2026-10-02",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "Cursor 官方外掛(plugin)規範與市集(marketplace)倉庫,收錄開發工具、框架規則與大量第三方 SaaS 整合外掛。",
-      "summary": "這是 Cursor 編輯器官方的多外掛市集倉庫,定義了 plugin.json / marketplace.json 規範,並內建多個開發者工具外掛(如 continual-learning、orchestrate、cursor-team-kit)以及數十個第三方服務整合外掛(Gmail、Salesforce、GitHub、HubSpot 等)。目的是讓使用者能透過標準化的 skills/rules/agents/hooks 元件擴充 Cursor Agent 的能力。",
+      "one_liner": "Cursor 官方外掛市集倉庫,收錄外掛規格與近百個官方/第三方整合外掛(skills、hooks、MCP、rules)。",
+      "summary": "cursor/plugins 是 Cursor 的外掛規格與官方外掛集合。每個外掛是獨立目錄,含 .cursor-plugin/plugin.json 資訊清單,根目錄的 marketplace.json 統一列出。內容涵蓋開發工作流(advisor、orchestrate、continual-learning、pstack、thermos)與大量 SaaS 整合(Gmail、GitHub、Salesforce、券商/金融等),透過 skills、agents、rules、hooks 與 MCP 設定擴充 Cursor agent。",
+      "category": "framework",
       "highlights": [
-        "單一倉庫收錄 60+ 個外掛,涵蓋開發工具與第三方 SaaS 整合(Gmail、Salesforce、GitHub 等)",
-        "有明確的 plugin.json/marketplace.json JSON Schema,並用 GitHub Actions + ajv 在 PR 時自動驗證外掛定義",
-        "orchestrate、pstack 等外掛內含完整 TypeScript 原始碼與對應的 bun:test 單元測試(如 redact-body、slack-adapter 等)",
-        "continual-learning 的 stop hook 程式碼撰寫嚴謹,對輸入做型別檢查與防禦性解析,無明顯風險",
-        "以 skills/agents/rules 為主要載體,是 Cursor Agent 能力擴充的標準化範例"
+        "提供清楚的外掛目錄結構規範(skills/rules/hooks/mcp.json/agents),可作為自製外掛的範本",
+        "含 create-plugin 外掛,可建立並檢查新外掛的骨架與品質",
+        "orchestrate 外掛附有 TypeScript 腳本與近 30 個測試檔,支援平行雲端 agent 調度",
+        "continual-learning 以 stop hook 依輪數與時間門檻增量更新 AGENTS.md,實作簡潔且防禦性佳",
+        "第三方整合涵蓋 70 餘個 SaaS,生態完整"
       ],
       "use_cases": [
-        "想替 Cursor 開發自訂外掛(skill/rule/agent/hook)時參考官方規範與 scaffold 流程",
-        "需要串接 Gmail、Salesforce、GitHub 等 SaaS 服務到 Cursor Agent 工作流",
-        "研究如何設計可讓 Coding Agent 可靠呼叫的 CLI 或 Stop Hook 邏輯",
-        "打造團隊內部的多外掛市集(marketplace)倉庫結構"
+        "開發 Cursor 外掛或 MCP 整合時參考官方規格與範例",
+        "在 Cursor 中安裝現成工作流,如程式碼審查、平行 agent 調度、持續學習記憶",
+        "研究 agent hooks 與 skills 的設計模式,應用到自家 agent 工具",
+        "團隊建立內部外掛市集時參考 marketplace.json 結構"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 3,
         "activity": 5,
-        "comment": "文件品質很高,每個外掛都有獨立 README/CHANGELOG/LICENSE,且有 JSON Schema 與 CI 驗證機制。核心工具型外掛(orchestrate、pstack)有實際 TypeScript 邏輯與對應單元測試,但多數外掛本質是 Markdown 形式的 skill/agent 提示詞,並非傳統程式邏輯,故整體測試覆蓋率中等。倉庫剛登上 trending 且持續更新(最後 push 為今日),活躍度高。"
+        "comment": "根 README 有完整外掛清單與結構說明,各外掛多附 README、CHANGELOG、LICENSE。CI 僅在 PR 時以 ajv 驗證 plugin.json 與 marketplace 格式;測試集中在 orchestrate 與 pstack 的腳本,多數外掛以 markdown 與設定為主,沒有測試。近期仍有推送,維護活躍。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "多個外掛包含 hooks(如 advisor 的 shell 腳本、continual-learning 的 bun TypeScript 腳本),安裝後會在 agent 停止事件時於本機執行,並讀寫 .cursor/hooks/state 下的狀態檔,使用前建議先檢視",
+          "第三方整合外掛(金融、券商、Gmail 等)透過 MCP 連接外部服務並涉及帳號授權,建議留意授予的權限範圍",
+          "orchestrate 腳本依賴 @cursor/sdk、@slack/web-api 等套件,需自行 bun install;未發現 preinstall/postinstall 生命週期腳本或 curl|bash 安裝模式",
+          "README 未標示授權於 GitHub metadata,但 README 聲明為 MIT"
+        ]
       },
       "star_rating": 4,
-      "verdict": "若你在使用或想擴充 Cursor Agent,這是了解官方外掛規範與現成整合範例的絕佳參考,值得關注。",
+      "verdict": "想了解或開發 Cursor 外掛生態的人值得關注,可當作官方規格與範例庫;一般使用者則挑需要的外掛安裝即可。",
       "_mode": "full"
     }
   },
@@ -12574,10 +12607,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -12646,6 +12679,13 @@
         149187,
         743,
         5,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-10-02": [
+        150514,
+        1194,
+        1,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -16582,10 +16622,10 @@
   },
   "heygen-com/hyperframes": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-08": [
         45946,
@@ -16605,6 +16645,13 @@
         54737,
         349,
         10,
+        "Write HTML. Render video. Built for agents.",
+        "TypeScript"
+      ],
+      "2026-10-02": [
+        55346,
+        627,
+        9,
         "Write HTML. Render video. Built for agents.",
         "TypeScript"
       ]
@@ -16702,10 +16749,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -16725,6 +16772,13 @@
         24492,
         90,
         4,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-10-02": [
+        24781,
+        362,
+        8,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -19218,10 +19272,10 @@
   },
   "earendil-works/pi": {
     "first_seen": "2026-09-16",
-    "last_seen": "2026-09-16",
+    "last_seen": "2026-10-02",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-16": [
         105712,
@@ -19229,42 +19283,51 @@
         14,
         "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
         "TypeScript"
+      ],
+      "2026-10-02": [
+        111227,
+        298,
+        10,
+        "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-16",
+    "last_analyzed": "2026-10-02",
     "analysis": {
-      "one_liner": "Pi 是一套 TypeScript 打造的 AI 代理工具箱,整合統一 LLM API、代理執行迴圈、終端機 UI 與可自我擴充的編碼代理 CLI。",
-      "summary": "Pi 由多個模組化 npm 套件組成(pi-ai、pi-agent-core、pi-tui、pi-coding-agent 等),提供跨 OpenAI/Anthropic/Google 等供應商的統一 LLM 呼叫介面,以及具備工具呼叫、狀態管理、可持久化 session 的代理執行框架。核心產品是一款互動式編碼代理 CLI,強調可自我擴充(extensions/skills)並附有詳盡的容器化沙盒指引。",
+      "one_liner": "Pi 是一套 TypeScript 的 AI Agent 工具組,包含統一多供應商 LLM API、Agent 執行迴圈、終端 TUI 與可自行擴充的 coding agent CLI。",
+      "summary": "這是一個 monorepo,包含 pi-ai(統一的多供應商 LLM API)、pi-agent-core(工具呼叫與狀態管理的 agent runtime)、pi-tui(差分渲染的終端 UI)和 pi-coding-agent(互動式 coding agent CLI),另有 chord、durable、telemetry、mcp、codemode 等周邊套件。它要解決的問題是:讓開發者用一套可擴充、可自行組裝的 harness 打造自己的 coding agent,不被單一模型供應商綁住。",
       "category": "ai-ml",
       "highlights": [
-        "Monorepo 拆分為 6+ 個獨立套件(ai、agent、tui、coding-agent、chord、telemetry),邊界清晰、各自有 README 與 CHANGELOG",
-        "測試覆蓋非常完整,僅 agent 套件底下就有 50+ 個 .test.ts,涵蓋 session 儲存、compaction、branch 分支、telemetry 等子系統,並有 conformance 測試套件",
-        "README 明確列出「Supply-chain hardening」章節:鎖定 exact 版本、min-release-age=2、lockfile 變更需明確授權、CI 用 --ignore-scripts 安裝並定期跑 npm audit / audit signatures",
-        "SECURITY.md 清楚界定信任邊界(本機使用者權限 = Pi 權限),對 prompt injection、惡意 extension/skill 等風險有明確說明,而非含糊帶過",
-        "CI 使用 SHA 釘選 GitHub Actions 版本,並有自動關閉新貢獻者 issue/PR 的治理流程"
+        "分層清楚的 monorepo:LLM API、agent core、TUI、coding agent 各自獨立發佈為 npm 套件,可單獨取用",
+        "agent-loop 在 LLM 呼叫邊界才轉換訊息格式,型別完整,並有 abort signal 與 continue/retry 的防呆檢查",
+        "供應鏈強化做得認真:依賴鎖定精確版本、min-release-age=2、CI 使用 npm ci --ignore-scripts、排程 npm audit,並對生命週期腳本設有允許清單",
+        "支援擴充機制(extensions、skills、prompts)與 MCP,並提供 Gondolin、Docker、OpenShell 三種容器化隔離方案",
+        "CI 與 issue/PR gate 工作流齊全,附有 AGENTS.md 與貢獻規範,維護紀律嚴謹"
       ],
       "use_cases": [
-        "需要統一介面呼叫多家 LLM 供應商(OpenAI/Anthropic/Google)的應用開發",
-        "想建構具工具呼叫、狀態持久化能力的自訂 AI 代理系統",
-        "尋找可自我擴充、支援 extension/skill 機制的終端機編碼代理 CLI",
-        "研究代理框架的 session 管理、compaction、可恢復性等工程實作範例"
+        "自行打造客製化 coding agent 或內部開發助理,並可切換不同 LLM 供應商",
+        "在 TypeScript 專案中使用 pi-ai 作為統一的多模型呼叫層",
+        "用 pi-tui 開發需要差分渲染的終端互動介面",
+        "研究 agent loop、工具呼叫與擴充機制的實作作為參考"
       ],
       "quality": {
-        "docs": 5,
-        "tests": 5,
+        "docs": 4,
+        "tests": 4,
         "activity": 5,
-        "comment": "README、SECURITY.md、per-package 文件與 work-package 設計文件都相當完整;測試數量與涵蓋面在同類專案中屬上乘;CI 流程(build/check/test)齊全且用 SHA 釘選 action 版本,今日仍有推送,活躍度高。抽樣的 agent-loop.ts 程式碼型別定義清楚、函式職責單一,整體工程品質偏向嚴謹。"
+        "comment": "文件完整:根 README、各套件 README 與 CHANGELOG、AGENTS.md、CONTRIBUTING.md、SECURITY.md 都有。各套件附 vitest 測試(含 e2e),另有 scripts 測試與 MCP conformance 測試。CI 工作流多達 10 個,最後推送時間為近日,活躍度高。抽樣的 agent-loop.ts 結構清楚、註解合理。版本號仍是 0.0.3,API 可能還會變動。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "根套件 package.json 未發現 preinstall/postinstall 生命週期腳本執行任意程式碼",
-          "packages/coding-agent/README.md 提供 `curl -fsSL https://pi.dev/install.sh | sh` 的替代安裝方式(獨立執行檔安裝),此為常見的 CLI 安裝模式,腳本託管於專案自有網域,建議使用前自行檢視該腳本內容",
-          "SECURITY.md 明確將「使用者主動安裝的不受信任 extension/skill」、「prompt injection」列為不在漏洞回報範疇內,反映此工具設計上假設使用者需自行把關本機安全邊界,而非有沙盒保護"
+          "README 明確說明 Pi 沒有內建權限系統,預設以啟動它的使用者權限執行,可存取檔案系統、程序、網路與憑證;文件建議自行以容器或沙箱隔離",
+          "作為 coding agent,它會執行模型產生的指令與工具呼叫,使用者應留意其行為",
+          "在 packages 下的 package.json 未發現 preinstall/postinstall 安裝腳本;根目錄僅有 prepare: husky(安裝 git hook)",
+          "README 建議以 npm install --ignore-scripts 安裝,並說明 CI 與 pi update --self 也使用 --ignore-scripts",
+          "本次抽樣未發現混淆程式碼或內嵌的長 base64 內容"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程紀律與文件品質在 AI 代理工具中屬前段班,supply-chain 與安全邊界說明清楚,值得研究其架構設計或作為編碼代理 CLI 的候選方案,但因無內建沙盒,正式使用時建議搭配容器化隔離。",
+      "star_rating": 4,
+      "verdict": "架構紮實、維護活躍且供應鏈意識強,是少數可擴充、不綁定供應商的 coding agent 基礎設施,值得 AI 研發工程師關注;但仍處早期版本(0.0.x),且需自行做沙箱隔離。",
       "_mode": "full"
     }
   },
@@ -22534,10 +22597,10 @@
   },
   "mvschwarz/openrig": {
     "first_seen": "2026-09-28",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-28": [
         976,
@@ -22565,6 +22628,13 @@
         624,
         3,
         "Multi-agent harness that runs Claude Code and Codex together as one system",
+        "TypeScript"
+      ],
+      "2026-10-02": [
+        3728,
+        642,
+        5,
+        "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
         "TypeScript"
       ]
     },
@@ -22782,10 +22852,10 @@
   },
   "NVIDIA/OpenShell": {
     "first_seen": "2026-09-30",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-30": [
         10615,
@@ -22798,6 +22868,13 @@
         12678,
         1281,
         1,
+        "OpenShell is the safe, private runtime for autonomous AI agents.",
+        "Rust"
+      ],
+      "2026-10-02": [
+        14016,
+        2456,
+        3,
         "OpenShell is the safe, private runtime for autonomous AI agents.",
         "Rust"
       ]
@@ -23067,15 +23144,22 @@
   },
   "firebase/firebase-ios-sdk": {
     "first_seen": "2026-10-01",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-01": [
         6766,
         8,
         11,
+        "Firebase SDK for Apple App Development",
+        "C++"
+      ],
+      "2026-10-02": [
+        6859,
+        112,
+        4,
         "Firebase SDK for Apple App Development",
         "C++"
       ]
@@ -23221,6 +23305,220 @@
       },
       "star_rating": 4,
       "verdict": "做法成熟、測試與文件扎實,對重度使用 AI 編碼代理的人很值得試用;安裝前留意 curl|sh 與預設開啟的匿名遙測。",
+      "_mode": "full"
+    }
+  },
+  "tile-ai/tilelang": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-02": [
+        8112,
+        163,
+        11,
+        "Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-02",
+    "analysis": {
+      "one_liner": "以 Python 語法撰寫高效能 GPU/CPU/NPU 核心(kernel)的 DSL,底層以 TVM 為編譯基礎。",
+      "summary": "TileLang 是由 tile-ai 維護的 tile 層級程式語言與編譯器,用 Pythonic 語法描述 GEMM、FlashAttention、Dequant GEMM 等核心,再編譯成 CUDA、HIP、Metal、LLVM CPU 與 Ascend 等後端程式碼。它想解決手寫底層 kernel 太費工的問題,同時保留接近手寫的效能。專案活躍,近期新增 Ascend 950 後端、LSP 與多項 Blackwell/Metal 支援。",
+      "category": "framework",
+      "highlights": [
+        "Pythonic DSL 搭配 TVM 編譯基礎設施,支援 NVIDIA(含 Blackwell SM100/SM120)、AMD ROCm、Apple Metal、LLVM CPU 與華為 Ascend 950 等多後端",
+        "內建除錯與分析工具:Pass Visualizer、Pass Diff、IR Lower Trace、編譯 pass 計時與 layout 視覺化",
+        "範例涵蓋 DeepSeek V3.2 稀疏 MLA、FlashAttention、MXFP4/MXFP8 區塊縮放 GEMM 等真實 LLM 工作負載",
+        "提供 autotuner、kernel 快取與跨主機 CUDA 二進位快取,並有 Linux/Windows/macOS 預建 wheel",
+        "附有 .agents/.claude skills,方便 AI 程式助理協助貢獻;另有 TileLang Puzzles 與 LSP 等學習和開發生態"
+      ],
+      "use_cases": [
+        "撰寫並調校 LLM 推論/訓練所需的自訂 GPU kernel(如 attention、MLA、grouped GEMM)",
+        "跨 NVIDIA、AMD、Apple、Ascend 硬體以同一套 DSL 移植 kernel",
+        "研究 tile 層級編譯器、TVM IR 與 lowering pass 的設計",
+        "替新的加速器晶片整合後端(有後端註冊機制與整合指南)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,有官網、教學、詳細新聞與發行說明。testing/python 下有數百個測試檔(至少 382 個),涵蓋 AMD、CUDA、CPU、autotune、cache、debug 等,CI 另有 dist、文件發佈與 PR bot 等多條 workflow。最後推送為 2026-09-30,開發非常活躍。受限於只讀檔分析,我沒有深入核對核心原始碼內容,也沒有執行測試。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "專案透過 scikit-build-core 建置,並使用 git submodule(3rdparty/cutlass 來自 NVIDIA/cutlass,3rdparty/tvm 來自 TileLang/tvm),從原始碼安裝時會編譯 C++ 並拉取外部程式碼",
+          "pyproject 在 Windows 的 nvcc extra 指定使用 download.pytorch.org 的額外套件索引,屬 PyTorch 官方來源",
+          "倉庫內含大量第三方 HIP 標頭檔(3rdparty/hip-headers),屬已知的供應商標頭",
+          "在 .md、.sh、.yml、.py、.toml 檔中搜尋 curl|bash、iex 等管線安裝模式,未發現相符內容"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "做 AI kernel 開發或關注 GPU 編譯器的工程師值得持續關注,近期的多後端與 Ascend 支援尤其值得留意。",
+      "_mode": "full"
+    }
+  },
+  "pablostanley/yoinks": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-02": [
+        2937,
+        361,
+        12,
+        "yoink any video from your terminal. no shady ads.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-02",
+    "analysis": {
+      "one_liner": "以 Ink 打造的終端機 TUI 影片下載器,底層包裝 yt-dlp,貼上網址、選解析度即可下載。",
+      "summary": "yoinks 是用 TypeScript 與 Ink(終端機版 React)寫成的 CLI,可從 YouTube、X、Instagram、TikTok 等 1,800 多個網站下載影片或抽取 mp3。它會偵測系統上的 yt-dlp 與 ffmpeg,找不到時,首次執行會下載 yt-dlp 獨立執行檔,並以 ffmpeg-static 作為備援。介面是全螢幕 TUI,支援鍵盤、滑鼠與主題切換。",
+      "category": "cli",
+      "highlights": [
+        "全螢幕 Ink TUI,支援 ↑/↓、j/k、數字鍵與滑鼠點擊,可切換 auto/light/dark 主題",
+        "自動處理 yt-dlp 與 ffmpeg 相依:優先用系統安裝,否則下載獨立執行檔或使用 ffmpeg-static",
+        "先用 yt-dlp -J 探測格式,再以 --load-info-json 重用結果,下載啟動較快;格式選單會顯示預估檔案大小",
+        "取消下載時會清除 .part、.ytdl 等殘留檔案",
+        "以 spawn 搭配參數陣列呼叫 yt-dlp,不經 shell 拼接字串"
+      ],
+      "use_cases": [
+        "在終端機中快速下載公開影片供個人存檔",
+        "從影片中抽取最高音質的 mp3",
+        "作為 Ink/React TUI 與子程序進度解析的參考範例",
+        "取代充滿廣告的線上影片下載網站"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 3,
+        "comment": "README 清楚,涵蓋安裝、用法、運作原理、路線圖與合理使用聲明。程式碼結構乾淨,註解說明了設計理由。測試只有 args 與 panel 兩個測試檔,核心的 ytdlp.ts 沒有測試。倉庫沒有 .github/workflows,也就沒有 CI。專案仍處於早期(v0.3.1),許多功能列在路線圖上尚未完成。最後推送為 2026-07-17,今天才登上 trending。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 沒有 preinstall、postinstall、prepare 等安裝期腳本,僅有 prepublishOnly,只在發佈時執行。",
+          "首次執行時,若系統與 ~/.yoinks/bin 都找不到 yt-dlp,程式會從 GitHub 的 yt-dlp releases/latest 下載可執行檔,存到 ~/.yoinks/bin 並設為可執行。程式碼中沒有校驗碼或簽章驗證,且使用 latest 版本。使用者應留意這項執行期下載行為。",
+          "依賴 ffmpeg-static,該套件在安裝時會下載 ffmpeg 二進位檔。這是常見做法,但使用者應知道它屬於第三方二進位檔。",
+          "yt-dlp 以 spawn 搭配參數陣列呼叫,沒有 shell 字串拼接。使用者提供的網址直接作為 yt-dlp 的參數。",
+          "程式會把影片資訊 JSON 暫存到系統暫存目錄(yoinks-info-*.json)。未發現混淆程式碼、內嵌 base64 載荷、寫死的 IP,也沒有提交二進位檔。",
+          "README 提醒下載內容可能違反平台服務條款,使用者需自行注意版權與合理使用。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "這是一個 UX 做得不錯的 yt-dlp TUI 外殼。程式碼整潔,適合想要簡潔下載體驗的人,也可以拿來參考 Ink 的用法。但它的價值主要來自 yt-dlp,專案本身偏早期,測試也很少,算是不錯但非必看。",
+      "_mode": "full"
+    }
+  },
+  "HunxByts/GhostTrack": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-02": [
+        16401,
+        368,
+        13,
+        "Useful tool to track location or mobile number",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-02",
+    "analysis": {
+      "one_liner": "以 Python 寫成的互動式 OSINT 小工具,可查詢 IP 地理位置、電話號碼資訊與社群帳號名稱是否存在。",
+      "summary": "GhostTrack 是單一檔案(GhostTR.py)的終端機選單工具,提供 IP 追蹤(呼叫 ipwho.is)、顯示本機公網 IP(ipify)、電話號碼解析(phonenumbers 離線資料庫)與 24 個社群平台的使用者名稱檢查。主要面向 Linux 與 Termux 使用者,作為資訊蒐集的入門工具。功能淺顯,實際上只是對公開 API 與函式庫的薄封裝。",
+      "category": "security",
+      "highlights": [
+        "單一檔案、僅依賴 requests 與 phonenumbers,結構簡單易懂",
+        "IP 追蹤輸出欄位豐富(國家、城市、經緯度、ASN、ISP、時區等)並附 Google Maps 連結",
+        "電話號碼功能使用 phonenumbers 離線解析,可得地區、電信業者、號碼格式與類型",
+        "支援 Termux,適合手機端快速使用",
+        "趨勢熱度高(16k+ stars),但程式碼本身技術含量有限"
+      ],
+      "use_cases": [
+        "OSINT 入門學習與教學示範",
+        "資安演練中快速查詢 IP 的大致地理與 ISP 資訊",
+        "初步檢查某使用者名稱是否在多個社群平台註冊",
+        "在 Termux 手機環境下做簡易資訊蒐集"
+      ],
+      "quality": {
+        "docs": 2,
+        "tests": 1,
+        "activity": 2,
+        "comment": "README 簡短,僅有安裝與截圖說明,無參數或限制說明。沒有測試與 CI,最後推送為 2024-01。程式碼可用但粗糙:裝飾器 wrapper 未回傳值、requests 無 timeout、缺乏錯誤處理(API 失敗或輸入錯誤號碼會直接拋例外)、經緯度以 int 截斷使地圖連結精度低、使用者名稱檢查只看 HTTP 200 容易誤判、main 與 execute_option 以遞迴方式回到選單。未標示授權條款。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未發現 setup.py、安裝腳本、生命週期腳本、curl|bash 模式、混淆程式碼或內嵌 payload;相依套件僅 requests 與 phonenumbers,皆為常見套件。",
+          "執行時會把使用者輸入的 IP 以明文 HTTP(http://ipwho.is/)傳送給第三方服務,並將輸入的使用者名稱對 24 個社群網站發出請求;使用者應留意這些查詢內容會被外部服務看到。",
+          "工具用途為查詢他人 IP、電話與帳號資訊,使用時請確認符合當地法規並取得合法授權;專案未標示授權條款。"
+        ]
+      },
+      "star_rating": 2,
+      "verdict": "熱度高但內容單薄,適合作為 OSINT 入門範例參考;若需實務用途,建議改用更完整成熟的工具(如 Sherlock、PhoneInfoga)。",
+      "_mode": "full"
+    }
+  },
+  "Friedrich-M/UniMate": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-02": [
+        1079,
+        217,
+        15,
+        "[SIGGRAPH Asia 2026] UniMate: One Unified Model to Animate Diverse Skeletons",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-02",
+    "analysis": {
+      "one_liner": "SIGGRAPH Asia 2026 論文官方實作:單一文字驅動動畫模型,可為任意骨架(人形、四足、鳥、蛇、物件)生成動作。",
+      "summary": "UniMate 以 flow matching 訓練單一模型,輸入文字提示與目標骨架的 T-pose 及拓撲,即可為不同骨架生成動作,不需針對每種骨架重新訓練,也不需測試時最佳化。專案包含訓練與推論程式碼、UniML3D 資料集(13,006 段文字配對動作)的完整處理管線,以及放在 HuggingFace 的預覽版權重。同一模型還能做動作補間、文字引導編輯與動作串接。",
+      "category": "ai-ml",
+      "highlights": [
+        "單一模型支援拓撲各異的骨架,以圖距離/邊類型偏置的時空注意力,把骨架結構注入 attention",
+        "提供 graph+adaLN 與 full+cross-attn 兩種架構,共 8 份 JSON 設定檔,涵蓋 Mixamo、Truebones、Objaverse 與完整 UniML3D",
+        "不需額外訓練即可做 in-betweening、文字編輯與動作擴展(replacement-style 取樣)",
+        "資料處理管線完整(下載、匯出、渲染、VLM 標註、關節標註、特徵萃取、網格動畫),並附 bash 啟動腳本",
+        "README 詳盡,含訓練細節、疑難排解與 CLI 旗標說明,並釋出預覽權重與互動 demo"
+      ],
+      "use_cases": [
+        "研究任意骨架(含動物、奇幻生物、物件)的文字轉動作生成",
+        "遊戲或動畫流程中為不同角色綁定快速生成動作草稿,並匯出 GLB/FBX",
+        "以 UniML3D 與資料處理管線為基礎,擴充自己的多骨架動作資料集",
+        "作為 flow matching 結合圖結構 Transformer 的參考實作"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 1,
+        "activity": 4,
+        "comment": "文件品質很好(主 README 與 data_process/README 皆詳細),程式碼分層清楚(configs、dataset、models、training、inference),docstring 具說明性。但未發現 tests/ 目錄或 .github/workflows CI,屬典型學術釋出的缺口。近期仍持續推送,作者也標註 OOD 骨架前處理尚在 TODO。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "requirements.txt 含兩項直接從 GitHub 安裝的相依套件(openai/CLIP 與 inbar-2344/Motion,未固定 commit),另有一個從 GitHub releases 下載的 spaCy 模型 wheel;安裝時會從這些外部來源取得並執行 setup 程式碼,建議留意其版本是否固定。",
+          "requirements.txt 額外指定 PyTorch cu124 與 download.blender.org 兩個 extra-index-url,屬官方來源,但使用者應知悉套件會從多個索引解析。",
+          "data_process/scripts/run_download.sh 在提示訊息中建議以 curl 管線到 bash 方式安裝 HuggingFace CLI(hf.co/cli/install.sh),此僅為提示字串,並非腳本自動執行。",
+          "資料處理腳本會讀取 OPENAI_API_KEY、GOOGLE_API_KEY、DEEPSEEK_API_KEY 環境變數,並將渲染影格送往外部 LLM/VLM API;金鑰來自使用者環境,未見寫死的金鑰。",
+          "未發現 setup.py 安裝時腳本、混淆程式碼或內嵌的長 base64 酬載;程式中的 base64 僅用於影像編碼。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "研究品質高、文件完整的跨骨架動作生成實作,對動畫/生成式 AI 研究者值得收藏;缺少測試與 CI,且需大量 GPU 與資料準備,屬研究導向而非即用工具。",
       "_mode": "full"
     }
   }
