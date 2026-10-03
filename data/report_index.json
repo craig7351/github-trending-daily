@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-03",
+    "analyzed": 6,
+    "cached": 11,
+    "deferred": 0,
+    "top_name": "Effect-TS/effect",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-02",
     "analyzed": 6,
     "cached": 9,

@@ -716,8 +716,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -824,6 +824,13 @@
         2,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-03": [
+        274709,
+        955,
+        6,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-26",
@@ -857,8 +864,8 @@
       "verdict": "若你日常使用 Claude Code 或其他 AI 編碼代理,這套技能包能有效補上「需求對齊、測試紀律、程式碼審查」的流程缺口,值得安裝試用,但本質是提示工程集合而非傳統軟體庫,程式碼量與測試皆非重點。",
       "_mode": "full"
     },
-    "total_days_on_trending": 16,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 17,
+    "consecutive_days_on_trending": 3
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1177,8 +1184,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1292,6 +1299,13 @@
         7,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-03": [
+        294467,
+        556,
+        3,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-24",
@@ -1330,8 +1344,8 @@
       "verdict": "如果你的日常工作是用 Claude Code 之類的代理人自主寫程式,這套「流程即提示詞」框架值得一試;但它是方法論/提示詞集合而非可執行程式庫,價值取決於你是否認同其強制流程哲學。",
       "_mode": "full"
     },
-    "total_days_on_trending": 17,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 18,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1824,8 +1838,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -1853,6 +1867,13 @@
         73677,
         495,
         14,
+        "The design language that makes your AI harness better at design.",
+        "JavaScript"
+      ],
+      "2026-10-03": [
+        74327,
+        722,
+        5,
         "The design language that makes your AI harness better at design.",
         "JavaScript"
       ]
@@ -1892,8 +1913,8 @@
       "verdict": "若團隊大量使用 AI coding agent 產出前端介面,這套工具值得一試,但安裝時牽涉下載執行檔與自動 hook,建議先讀懂信任機制再上線。",
       "_mode": "light"
     },
-    "total_days_on_trending": 5,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 6,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -4503,10 +4524,10 @@
   },
   "Panniantong/Agent-Reach": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-10-03",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-03": [
         64702,
@@ -4528,40 +4549,51 @@
         6,
         "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "Python"
+      ],
+      "2026-10-03": [
+        88640,
+        696,
+        1,
+        "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-15",
+    "last_analyzed": "2026-10-03",
     "analysis": {
+      "one_liner": "一個 Python CLI,把 Twitter、Reddit、YouTube、GitHub、B站、小紅書等十多個平台包成 AI Agent 可呼叫的讀取與搜尋通道,並附診斷指令。",
+      "summary": "Agent Reach 是 Python 寫的 CLI 與 skill 工具集,替 Claude Code、Cursor、OpenClaw 等 Agent 挑選、安裝並檢查各平台的上游工具,例如 twitter-cli、bili-cli、OpenCLI、yt-dlp、mcporter。每個平台採「首選加備選」多後端路由,`agent-reach doctor` 會回報哪些通道可用、哪些需要設定。它解決的是 Agent 上網時 API 收費、IP 被封、必須登入的整合麻煩。",
       "category": "ai-ml",
-      "one_liner": "讓 AI Agent 一鍵接上 Twitter、Reddit、YouTube、B站、小紅書等十多個平台的 CLI 能力層,不寫爬蟲、零 API 費用。",
-      "summary": "Agent Reach 本身不做內容抓取,而是扮演「選型 + 安裝 + 體檢 + 路由」的能力層:為每個平台維護「首選後端 + 備選後端」清單(如 Twitter 走 twitter-cli 備選 OpenCLI,B站走 bili-cli 備選搜索 API),讓 AI Agent(Claude Code、Cursor、OpenClaw 等)透過一句安裝指令,自動偵測環境並串接對應的上游開源工具。當某個平台的接入方式失效(如反爬升級),維護者只需調整後端順序,使用者無感知升級。",
       "highlights": [
-        "「首選+備選」多後端路由設計,平台反爬/API 變動時只需換路由順序,不必重寫程式碼",
-        "安裝流程預設唯讀檢查(不動系統),要明確加 --system 才會安裝依賴或寫入設定,並提供 --dry-run 預覽",
-        "Cookie/Token 只存在本機 config.yaml(權限 600),且程式碼中有 scrub_url_credentials、atomic 私有寫入、防 symlink 讀取等具體安全實作",
-        "32 個測試檔涵蓋 cookie 安全、憑證邊界、doctor 診斷等面向,CI 含 Linux/Windows 矩陣測試與 wheel 打包驗證",
-        "README 明確提醒 Cookie 登入類平台有封號風險,建議用小號而非主帳號"
+        "涵蓋網頁、YouTube、RSS、GitHub、Twitter/X、B站、Reddit、小紅書、LinkedIn、V2EX、雪球、小宇宙等十多個通道",
+        "每個通道有多後端優先序並自動降級,例如 Twitter 依序嘗試 twitter-cli、OpenCLI、bird CLI,後端失效時使用者不用改設定",
+        "內建 `agent-reach doctor` 診斷指令,另有 MCP server 整合(`integrations/mcp_server.py`)與 SKILL.md 技能檔",
+        "安全面設計用心:Cookie 只存本機、採最小權限逐平台擷取,並有 cookie_security、url_security、scrub_credentials 等專門測試",
+        "MIT 授權,tests 目錄有 30 多個測試檔,並有 pytest CI workflow"
       ],
       "use_cases": [
-        "讓 Claude Code / Cursor / OpenClaw 等 Agent 具備讀取 Twitter、Reddit、YouTube 字幕、GitHub Issue 等內容的能力,免去手動申請付費 API",
-        "需要定期監控多平台輿情或內容更新(如產品口碑、技術討論)但不想自建爬蟲維護成本的個人開發者",
-        "在伺服器或無桌面環境上,搭配 OpenCLI/MCP 後端讀取需要登入態的平台內容"
+        "讓 Claude Code 或 Cursor 讀取 YouTube 字幕、網頁內容與 RSS,用於研究與摘要",
+        "為 Agent 建立跨平台輿情搜尋,涵蓋 Twitter、Reddit、B站、小紅書",
+        "在自建 Agent 環境中,用 doctor 檢查各種外部 CLI 工具的安裝與登入狀態",
+        "參考它的多後端路由與通道抽象,設計自己的 Agent 工具層"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 4,
-        "activity": 5,
-        "comment": "README 與 install.md 文件詳盡,明確列出安裝步驟、安全邊界與可選渠道;測試涵蓋憑證安全、路徑處理、各渠道行為等面向,CI 有多平台矩陣與 wheel 驗證;抽查的 core.py、cookie_extract.py、cli.py 程式碼結構清晰、有型別註記,對敏感操作(cookie 擷取、私有檔案寫入)有明確的安全考量。近期仍持續推送(2026-09-01)。"
+        "activity": 4,
+        "comment": "README 完整且有英、日、韓版本,內容偏行銷風格,贊助商區塊佔不少篇幅。程式結構清楚,有 Channel 基底類別、通道契約測試與型別標註,pyproject 設有 ruff 與 mypy。測試涵蓋廣,包含憑證處理與家目錄隔離。最後推送為 2026-09-15,有 CHANGELOG 與 CI。專案依賴許多第三方抓取工具,上游變動會影響穩定度。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "安裝流程設計為由 AI Agent 依 docs/install.md 的指示執行 shell 指令(pip/pipx 安裝、寫入 ~/.agent-reach/ 設定、依使用者同意安裝瀏覽器擴充功能等),屬於「文件驅動 Agent 執行指令」而非傳統的 curl|bash 一鍵腳本,但使用者應理解安裝過程涉及 Agent 自動執行多項系統指令",
-          "文件中出現從 GitHub 特定 commit 安裝第三方套件的指令(如 rdt-cli 透過 pip install git+https://... @commit_hash),屬於固定版本依賴,非官方 PyPI 套件來源"
+          "README 的主要安裝方式,是請 Agent 讀取 raw.githubusercontent.com 上的 docs/install.md 並照著執行,Agent 會因此執行 pip install 等 shell 指令。使用者可先自行閱讀該文件再決定是否交給 Agent 執行。",
+          "專案有 cookie_extract.py,可從本機 Chrome、Firefox、Edge、Brave、Opera 的 profile 讀取指定平台的 Cookie(Twitter 的 auth_token 與 ct0、B站的 SESSDATA、雪球的 xq_a_token 等)。程式碼採逐平台最小權限擷取,Twitter 與小紅書限定手動匯出;使用前仍應留意這項敏感操作。",
+          "憑證(Twitter token、ct0 等)會存在本機設定檔,並可作為子行程的環境變數傳入;測試中有針對檔案權限與憑證清除的案例。",
+          "會依賴並呼叫多個第三方外部工具(twitter-cli、OpenCLI、rdt-cli、mcporter、yt-dlp 等),其供應鏈與權限不在本專案控制範圍。",
+          "setup 使用 hatchling,未見 npm lifecycle 腳本、混淆程式碼或內嵌 base64 payload;依賴套件名稱皆為常見套件。"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程實作嚴謹、安全意識明確、文件與測試完整,是目前少見把「多平台資料存取」做成可維護能力層的專案,值得关注與嘗試。",
+      "verdict": "對需要讓 Agent 上網的工程師很實用,工程品質與安全設計都高於一般同類專案,值得關注。使用前建議先審閱 install.md,並留意 Cookie 的處理方式。",
       "_mode": "full"
     }
   },
@@ -6288,10 +6320,10 @@
   },
   "google/skills": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-08-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-09": [
         16924,
@@ -6306,38 +6338,52 @@
         9,
         "Agent Skills for Google products and technologies",
         "Python"
+      ],
+      "2026-10-03": [
+        20748,
+        39,
+        11,
+        "Agent Skills for Google products and technologies",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-09",
+    "last_analyzed": "2026-10-03",
     "analysis": {
+      "one_liner": "Google 官方的 Agent Skills 集合,涵蓋 Google Cloud、GKE、BigQuery、Gemini、Ads 等產品,可用 npx skills add 一鍵安裝。",
+      "summary": "google/skills 是 Google 維護的 Agent Skills(SKILL.md 格式)倉庫,內含數百個針對 Google 產品與技術的技能,包括 GKE 疑難排解、BigQuery 最佳化、Gemini/Agent Platform、Genkit、Well-Architected Framework、Google Ads API 與行動廣告 SDK 等。它解決的是 AI 編碼代理對 gcloud 語法與 Google 產品細節容易過時或幻覺的問題,提供經過驗證的流程、參考文件與輔助腳本。另提供 Claude、Codex、Gemini CLI 的 plugin 與 marketplace 設定。",
       "category": "ai-ml",
-      "one_liner": "Google 官方釋出的「Agent Skills」技能庫,讓 Claude Code、Gemini CLI 等 AI Coding Agent 具備操作 Google Cloud / Ads / Analytics 各項產品的專業知識與腳本。",
-      "summary": "此專案以 Markdown 格式的 SKILL.md 搭配輔助 Python/Shell 腳本,將 GKE、BigQuery、Vertex AI Agent Platform、Google Ads API 等上百項 Google 產品的最佳實踐、故障排除流程與範例整理成可安裝的「技能包」。使用者可透過 `npx skills add google/skills` 或 Claude Code / Codex 的 plugin marketplace 安裝,讓 AI Agent 在執行雲端維運、廣告投放、資料分析等任務時有標準化的操作指南可循。同時也透過 git submodule 整合多個 gemini-cli-extensions 的資料庫連接外掛(AlloyDB、Spanner、BigQuery 等)。",
       "highlights": [
-        "涵蓋 Cloud(GKE、BigQuery、Vertex AI Agent Platform)、Ads、Analytics 三大類、超過 100 個技能模組",
-        "多數技能附帶可執行的 Python 腳本與對應 *_test.py 單元測試(如 config_utils.py / config_utils_test.py),而非純文件",
-        "透過 .claude-plugin/marketplace.json 與 git submodule 串接多個官方 gemini-cli-extensions 資料庫外掛(AlloyDB、Spanner、Cloud SQL 等)",
-        "SKILL.md 內建「安全分級」設計,將唯讀操作與會產生費用/資源異動的操作分開,要求後者需使用者明確確認才執行",
-        "支援 Claude Code、Codex、Antigravity CLI 等多種 Agent Harness 的安裝方式"
+        "官方出品,涵蓋雲端、資料庫、GKE、AI/ML、廣告等數百個技能,分類清楚",
+        "支援多代理生態:有 .claude-plugin、.codex-plugin、gemini-extension 與 marketplace.json",
+        "gcloud 技能強制先執行 gcloud help 驗證葉層指令語法,並保留使用者旗標,可降低幻覺與誤操作",
+        "許多技能附帶 Python/Shell 輔助腳本,部分腳本附有單元測試(*_test.py),例如 alert-configuration、monitoring chart 生成",
+        "透過 skills.sh 的 npx skills add google/skills 即可選擇性安裝個別技能"
       ],
       "use_cases": [
-        "在 Claude Code / Gemini CLI 中安裝技能包,讓 AI Agent 依循官方最佳實踐操作 GKE、BigQuery、Vertex AI 等 Google Cloud 服務",
-        "廣告工程師需要 AI Agent 協助串接 Google Ads API、Data Manager API 或 Mobile Ads SDK 時作為知識庫",
-        "維運團隊建立告警規則、成本分析、資安稽核等自動化腳本(如 audit_cluster.sh、analyze_traffic.py)的參考範本",
-        "學習 Google Cloud 各項服務(GKE、AlloyDB、Bigtable 等)標準操作流程與常見陷阱"
+        "讓 Claude Code、Codex、Gemini CLI 等代理更準確地操作 GCP(gcloud、GKE、BigQuery)",
+        "團隊建立內部雲端維運代理時,參考官方技能的結構與撰寫方式",
+        "GKE/BigQuery 疑難排解與成本最佳化的標準化流程",
+        "學習如何設計高品質的 SKILL.md 與 plugin 結構"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 3,
         "activity": 5,
-        "comment": "文件品質極高,每個技能都有結構化的 SKILL.md 與多語言 references;部分核心腳本(如 alert-configuration、chart-generation)備有對應單元測試,但整體上仍有相當比例的 scripts 目錄缺乏測試,且沒有發現 .github/workflows CI 設定來自動執行這些測試。專案本身無版本號、屬於 Google 官方主動維護中的活躍專案(當日剛推送更新)。"
+        "comment": "內容以 Markdown 技能為主,README 有完整分類索引與安裝說明,另有 CONTRIBUTING.md。部分 Python 腳本附單元測試,但測試覆蓋不均,多數技能無測試。本次檢視未在倉庫中找到 .github/workflows 的 CI 設定。最近推送為 2026-10-02,維護活躍。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "主要安裝方式為 npx skills add google/skills,會透過 npm 生態系的第三方工具下載技能,建議使用前先確認來源。",
+          "plugins/cloud/google-cloud-developer/.mcp.json 設定了遠端 MCP 伺服器 https://developerknowledge.googleapis.com/mcp,並需要自行提供環境變數 DEVELOPERKNOWLEDGE_API_KEY,屬於 Google 官方網域。",
+          ".gitmodules 引用多個外部子模組(gemini-cli-extensions、GoogleCloudPlatform 組織下的倉庫),內容不在本倉庫中,需另行檢視。",
+          "skills 目錄內含 Python 與 Shell 輔助腳本(如 config_gcloud_cli.sh、bulk_translate_via_gcloud.py),會呼叫 gcloud 等工具操作雲端資源,執行前應確認專案與權限範圍。",
+          "技能被代理載入後可能引導代理執行 gcloud 等會變更雲端資源的指令,建議在權限受限的帳號下使用,並搭配 --dry-run 或人工確認。",
+          "本次檢視未發現 curl | bash、混淆程式碼、內嵌長 base64 載荷或 npm 生命週期腳本。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "若你正在用 Claude Code / Gemini CLI 操作 Google Cloud 或 Google Ads 相關工作,這是官方維護、內容扎實的技能庫,值得安裝試用;若與 Google 生態系無關則參考價值有限。",
+      "verdict": "想讓 AI 代理穩定操作 Google Cloud 的人很值得關注,也是學習 SKILL.md 與 plugin 設計的官方範本;若不使用 GCP 則參考價值較有限。",
       "_mode": "full"
     }
   },
@@ -9030,10 +9076,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -9074,6 +9120,13 @@
         9322,
         150,
         6,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ],
+      "2026-10-03": [
+        9502,
+        163,
+        14,
         "Cursor plugin specification and official plugins",
         "TypeScript"
       ]
@@ -10931,10 +10984,10 @@
   },
   "JuliusBrussee/caveman": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-09-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-21": [
         99638,
@@ -10963,42 +11016,50 @@
         8,
         "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
         "Go"
+      ],
+      "2026-10-03": [
+        109105,
+        209,
+        2,
+        "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-09-04",
+    "last_analyzed": "2026-10-03",
     "analysis": {
+      "one_liner": "讓 AI 編碼代理用「原始人口吻」講話並壓縮工具輸出,宣稱可省下約 65% token 的 Skill + 本機 proxy + middleware 組合。",
+      "summary": "Caveman 起初是讓 Claude Code 等代理以極簡口吻回答的規則檔(skill),後來擴充為三層:skill 縮短代理「說」的內容、Go 寫成的本機 proxy/engine 壓縮代理「讀」的 log、測試輸出、JSON、diff,以及可嵌入 LangChain、Vercel AI SDK、OpenAI、Anthropic 呼叫的 TypeScript/Python middleware。壓縮前的原文會備份在本機,代理可隨時取回。支援 30+ 代理,並有 10 種原生 wrap profile。",
       "category": "devtool",
-      "one_liner": "讓 AI coding agent 少講廢話、少讀廢話的 Claude Code Skill + 本地代理伺服器,靠壓縮輸出/輸入省下大量 token。",
-      "summary": "Caveman 提供兩層方案:一個是免費的「skill」規則檔,讓 Claude Code / Codex / Gemini 等 30+ agent 用「穴居人式」精簡口吻回答,平均省下 65% 輸出 token;另一個是本地代理(proxy),攔截 agent 讀進來的 JSON/log/diff/搜尋結果等內容,依內容型態做安全分類的無損/可回溯壓縮,平均省下約 33% 輸入 token。核心賣點是「省錢但不犧牲正確性」,並提供可回溯機制(CCR store)保證原始內容隨時可取回。",
       "highlights": [
-        "採 fail-closed 設計:偵測不到型別、無法確認可回溯、壓縮後沒有變小,一律直接原樣放行,不會硬壓縮犧牲正確性",
-        "engine 目錄有數百個 *_test.go,含 adversarial probe 測試與跨平台(Windows/macOS/Linux)CI matrix,測試文化紮實",
-        "install.sh/install.js 明確 pin 到固定 release tag(非 main 分支),並在註解中解釋是為了修過去的安全事故(issue #249、#261)",
-        "誠實揭露效益上限:README 明講 65% 只算輸出 token,並附 docs/HONEST-NUMBERS.md 說明何時可能反而更貴",
-        "License 採 MIT(skill/CLI)+ BSL-1.1(engine/proxy)雙軌,四年後轉 Apache-2.0,商業自架收費模式寫得清楚"
+        "三層架構:skill(少說)、proxy(少讀)、middleware(嵌入自家應用),可疊加使用",
+        "Go 實作的壓縮引擎含 log、JSON、HTML、程式碼、axtree、TOON 等多種壓縮器,另有 CCR 備份與取回機制",
+        "附 caveman learn、caveman trial A/B 試驗與 stats,讓使用者能在自己的工作流上實測節省量",
+        "一行安裝 npx skills add JuliusBrussee/caveman -g,相容 Claude Code、Codex、Gemini、Cursor 等 30+ 代理",
+        "README 引用第三方數據(JetBrains 測試、Adobe Research 論文)並標明來源,同時揭露數字較差的項目"
       ],
       "use_cases": [
-        "用 Claude Code / Codex / Gemini CLI 等工具時想降低 API 帳單,尤其是輸出冗長解說的場景",
-        "agent 需要頻繁讀取大型 log、JSON、diff、搜尋結果時,想在丟給模型前先做內容感知壓縮",
-        "想觀察自己過去 agent session 的 token 花費分布,找出最浪費 token 的操作模式",
-        "需要把同一個壓縮/包裝機制套用到多種 agent(用 baseURL 換源接 Vercel AI SDK、LangChain、LiteLLM 等)"
+        "在 Claude Code/Codex 日常開發中降低輸出與工具讀取的 token 成本",
+        "對長時間跑測試、讀大量 log 的代理工作流做輸入端壓縮",
+        "在自建 agent 應用中以 middleware 縮短工具結果並保留原文可取回",
+        "用 trial 功能量測 token 壓縮對自己任務的實際效益"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件非常完整(README、INSTALL.md、CLAUDE.md、docs/HONEST-NUMBERS.md 等),誠實揭露效益侷限而非誇大宣傳。測試覆蓋面廣,Go 引擎有大量單元測試與逆向測試(adversarial probe),CI 涵蓋 Ubuntu/Windows/macOS 三平台且 GitHub Actions 全部 pin 到 commit SHA,近期仍持續 push(2026-09-04),是相當成熟的專案。"
+        "comment": "專案規模大且工程化程度高:Go 測試檔超過 300 個(涵蓋 engine、ccr、pixel、compressors、mcp、mem、proxy,並含對抗性與競態測試),CI 有十餘個 workflow(CodeQL、Scorecard、supply-chain、conformance、release),另有 SECURITY.md、INSTALL.md、CONTRIBUTING 與 dependabot。README 行銷色彩濃,但資料來源標示清楚。最近仍持續推送。本次分析未實際執行程式,節省比例為專案自行宣稱。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "安裝方式包含 curl | bash 與 irm | iex 兩種常見遠端腳本執行模式,但腳本內容有 pin 到固定 release tag(非可變的 main 分支),並在註解中說明此設計是為了防止過去發生的供應鏈相關問題(issue #249、#261),屬於較嚴謹的做法",
-          "package.json 未使用 preinstall/postinstall/prepare 等生命週期腳本執行任意程式碼",
-          "CLI 預設會回傳匿名使用統計(執行了哪些指令、token 節省數字),README 與 SECURITY.md 有明確說明範圍並提供 `caveman telemetry off` 關閉方式,不涉及程式碼或檔案路徑外洩"
+          "README 提供 `curl -fsSL .../install.sh | bash` 與 `irm .../install.ps1 | iex` 安裝方式(固定在 v3.1.0 tag),執行前建議先檢視腳本內容",
+          "完整安裝器會修改 Claude Code hooks、statusline 及各代理設定檔,並可透過 `npx -y github:JuliusBrussee/caveman` 直接從 GitHub 執行;根目錄 package.json 未發現 preinstall/postinstall/prepare 等生命週期腳本",
+          "proxy 位於代理與模型供應商之間,轉送的請求內容與供應商憑證都會經過它;SECURITY.md 說明本機模式的原文備份保存在本機 CCR 儲存",
+          "SECURITY.md 揭露 CLI 預設啟用(可退出)的去識別化使用量遙測,會連同 IP 傳送至 Caveman,可用 `caveman telemetry off` 或 `DO_NOT_TRACK=1` 關閉;另有選用的託管 gateway 模式,請求會經過 Caveman Cloud,並會附帶 repo 名稱與分支名稱標籤"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質與文件誠實度都在水準之上,若你重度使用 Claude Code / Codex 等 agent 又在意 token 帳單,值得一試,但記得先讀 HONEST-NUMBERS.md 校正自己的期待值。",
+      "verdict": "以玩笑起家但已發展成工程完整、測試與文件紮實的 token 優化工具鏈,值得 AI 開發者關注並實測;安裝時留意遙測預設開啟與 proxy 經手憑證這兩點即可。",
       "_mode": "full"
     }
   },
@@ -12607,10 +12668,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 11,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 12,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -12686,6 +12747,13 @@
         150514,
         1194,
         1,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-10-03": [
+        151808,
+        1435,
+        4,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -16342,10 +16410,10 @@
   },
   "coreyhaines31/marketingskills": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-09",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-07": [
         47518,
@@ -16367,41 +16435,51 @@
         6,
         "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
         "JavaScript"
+      ],
+      "2026-10-03": [
+        52420,
+        140,
+        8,
+        "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-09-07",
+    "last_analyzed": "2026-10-03",
     "analysis": {
+      "one_liner": "一套給 Claude Code、Codex 等 AI agent 使用的行銷技能庫,涵蓋 CRO、文案、SEO、分析與成長工程。",
+      "summary": "marketingskills 是由 Corey Haines 維護的 Agent Skills 集合,包含約 40 多個以 Markdown 撰寫的行銷技能(如 cro、copywriting、seo-audit、ads、pricing 等),並以 product-marketing 技能作為共用上下文。專案另附 60 多個無外部依賴的 Node.js CLI,整合 GA4、Ahrefs、Klaviyo、Resend 等行銷工具 API,可透過 npx skills 或 Claude Code plugin 安裝。目的是讓 AI agent 在行銷任務中套用成熟的框架與工作流程。",
       "category": "ai-ml",
-      "one_liner": "給 Claude Code、Codex 等 AI 程式代理使用的行銷技能包,涵蓋 CRO、文案、SEO、廣告投放到成長工程近 50 種主題。",
-      "summary": "這個專案不是傳統程式庫,而是一套結構化的 Markdown「Skill」文件集合(每個技能含 SKILL.md、references 參考資料、evals.json 評測案例),讓 AI coding agent 在使用者提出行銷相關需求時,能套用對應的框架與最佳實務。目標使用者是想用 AI 代理處理轉換優化、文案撰寫、SEO 稽核、數據追蹤與成長行銷等任務的技術行銷人員或創辦人。倉庫同時提供 Claude Code 外掛市集、npx CLI、Git submodule 等多種安裝方式。",
       "highlights": [
-        "近 50 個涵蓋 CRO、SEO、廣告、Email、定價、RevOps 等主題的技能模組,並附上技能間交叉引用的依賴圖",
-        "每個技能都附 evals.json(提示詞+預期輸出斷言),作為 LLM 行為驗證,而非傳統單元測試",
-        "CI 以第三方 GitHub Action 在每次 PR/push 時驗證變更的 SKILL.md 格式,並有自動化腳本同步 README、marketplace.json、plugin 版本號",
-        "支援 npx CLI、Claude Code 外掛市集、git submodule、SkillKit 等六種安裝方式,並有清楚的 v1→v2 升級遷移指南",
-        "v2.0 做了大規模技能改名與整併(如 page-cro/form-cro 合併為 cro),顯示維護者持續在打磨資訊架構"
+        "技能覆蓋面廣:SEO、CRO、文案、廣告、定價、郵件、外展、PR 等,技能之間透過 Related Skills 互相引用",
+        "product-marketing 作為共用基礎上下文,其他技能執行前會先讀取,輸出較貼近產品定位",
+        "每個技能附有 references 與 evals/evals.json 評測資料,不只是單純提示詞",
+        "tools/clis 下提供 60 多個零依賴 Node CLI,支援 --dry-run,可讓 agent 直接呼叫行銷 API",
+        "相容多種 agent:Claude Code plugin、npx skills、Codex、Cursor、Windsurf,採 MIT 授權"
       ],
       "use_cases": [
-        "在 Claude Code 或 Cursor 專案中安裝技能包,讓 AI 代理協助撰寫落地頁文案、診斷轉換率問題",
-        "行銷團隊用 AI 代理快速產出 GA4/GTM 事件追蹤規劃、A/B 測試方案或 SEO 稽核報告",
-        "作為 Agent Skills 規格的參考範例,學習如何設計結構化、可交叉引用的技能文件與評測案例",
-        "獨立創辦人或小型團隊用來補齊行銷專業知識,把 AI 代理當作臨時 CRO/文案顧問"
+        "讓 Claude Code 審查並優化落地頁、定價頁與註冊流程的轉換率",
+        "建立 SEO / AI SEO(AEO)稽核、程式化 SEO 與內容策略的 agent 工作流程",
+        "技術型創辦人或小團隊用 agent 撰寫 cold email、郵件序列與廣告素材",
+        "參考其 SKILL.md 結構與 evals 作法,設計自己的 Agent Skills 庫"
       ],
       "quality": {
         "docs": 5,
         "tests": 3,
         "activity": 5,
-        "comment": "文件品質非常高:README 結構清晰、每個技能都有一致的 SKILL.md 格式加上詳細 references,並有 CONTRIBUTING.md 和 VERSIONS.md 記錄變更。抽查的兩支自動化腳本(sync-skills.js、sync-partners.mjs)程式碼簡潔、職責單一、無危險操作。測試方面採用 evals.json 這種 LLM 行為斷言取代傳統單元測試,適合這類內容型專案但無法用一般 CI 執行結果驗證正確性,故評分中等。活動度很高:近日仍持續推送、有自動化 release 流程與 PR 驗證流程,顯示維護活躍。"
+        "comment": "README 清楚,含技能總表、依賴關係圖、多種安裝方式與貢獻指南,並有 PR/Issue 範本。CI 包含技能驗證、版本檢查、同步與發佈流程,並對 CLI 做語法檢查及約 27 個 contract 測試(node --test);但 60 多個 CLI 只有部分有測試,技能內容本身以 evals.json 評測而非自動執行。最近一次推送為 2026-10-03,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "倉庫本身沒有 postinstall/preinstall 等 npm 生命週期腳本,也沒有 package.json;審查過的兩支 JS 腳本(.github/scripts/sync-skills.js、scripts/sync-partners.mjs)僅操作本機檔案(讀寫 README、marketplace.json 等),未發現外部網路請求、混淆程式碼或可疑內嵌資料",
-          "README 提供的安裝方式之一是透過 npx skills / npx skillkit 執行第三方 npm 套件來安裝技能,這是常見的 CLI 安裝模式,但使用者應留意 npx 會下載並執行未經此倉庫審查的外部套件程式碼"
+          "未發現 package.json 或 npm 生命週期腳本(preinstall/postinstall),也未在文件或腳本中發現 curl | bash 之類的安裝模式",
+          "tools/clis 下的 CLI 會讀取環境變數中的 API 金鑰(例如 RESEND_API_KEY),並以 fetch 呼叫對應服務的官方 API;使用者應只提供必要權限的金鑰,並留意 agent 執行這些指令時會對外部服務發出請求",
+          "README 建議以 npx skills add 安裝,該指令會從第三方套件下載並寫入 .claude/skills,屬常見做法,使用者可先檢視技能內容",
+          "scripts/check-versions.mjs 使用 child_process 的 execFileSync,屬開發維護用途,與使用者安裝流程無關",
+          "README 含有合作夥伴與作者商業服務的推廣連結(帶 ref 參數),屬公開揭露的內容"
         ]
       },
       "star_rating": 4,
-      "verdict": "如果你有在用 Claude Code 或類似 AI 代理處理行銷工作,這是一套值得安裝的高品質技能庫;但若你是找程式碼庫或框架,這裡幾乎全是 Markdown 提示詞內容,沒有太多工程含量可看。",
+      "verdict": "內容紮實、結構完整且維護活躍,是目前最完整的行銷類 Agent Skills 庫之一;對需要用 AI agent 做行銷的人值得收藏,也可作為設計技能庫的參考範本。",
       "_mode": "full"
     }
   },
@@ -16622,10 +16700,10 @@
   },
   "heygen-com/hyperframes": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-08": [
         45946,
@@ -16651,6 +16729,13 @@
       "2026-10-02": [
         55346,
         627,
+        9,
+        "Write HTML. Render video. Built for agents.",
+        "TypeScript"
+      ],
+      "2026-10-03": [
+        55903,
+        580,
         9,
         "Write HTML. Render video. Built for agents.",
         "TypeScript"
@@ -16749,10 +16834,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -16779,6 +16864,13 @@
         24781,
         362,
         8,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-10-03": [
+        25039,
+        282,
+        10,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -22597,10 +22689,10 @@
   },
   "mvschwarz/openrig": {
     "first_seen": "2026-09-28",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-28": [
         976,
@@ -22634,6 +22726,13 @@
         3728,
         642,
         5,
+        "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+        "TypeScript"
+      ],
+      "2026-10-03": [
+        4311,
+        683,
+        15,
         "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
         "TypeScript"
       ]
@@ -22852,10 +22951,10 @@
   },
   "NVIDIA/OpenShell": {
     "first_seen": "2026-09-30",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-30": [
         10615,
@@ -22875,6 +22974,13 @@
         14016,
         2456,
         3,
+        "OpenShell is the safe, private runtime for autonomous AI agents.",
+        "Rust"
+      ],
+      "2026-10-03": [
+        14431,
+        594,
+        7,
         "OpenShell is the safe, private runtime for autonomous AI agents.",
         "Rust"
       ]
@@ -23255,15 +23361,22 @@
   },
   "colbymchenry/codegraph": {
     "first_seen": "2026-10-01",
-    "last_seen": "2026-10-01",
+    "last_seen": "2026-10-03",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-01": [
         72597,
         118,
         14,
+        "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+        "C"
+      ],
+      "2026-10-03": [
+        72962,
+        98,
+        13,
         "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
         "C"
       ]
@@ -23363,15 +23476,22 @@
   },
   "pablostanley/yoinks": {
     "first_seen": "2026-10-02",
-    "last_seen": "2026-10-02",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-03",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-02": [
         2937,
         361,
         12,
+        "yoink any video from your terminal. no shady ads.",
+        "TypeScript"
+      ],
+      "2026-10-03": [
+        3505,
+        623,
+        17,
         "yoink any video from your terminal. no shady ads.",
         "TypeScript"
       ]
@@ -23519,6 +23639,105 @@
       },
       "star_rating": 4,
       "verdict": "研究品質高、文件完整的跨骨架動作生成實作,對動畫/生成式 AI 研究者值得收藏;缺少測試與 CI,且需大量 GPU 與資料準備,屬研究導向而非即用工具。",
+      "_mode": "full"
+    }
+  },
+  "getsentry/sentry": {
+    "first_seen": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-03": [
+        45032,
+        16,
+        12,
+        "Developer-first error tracking and performance monitoring",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-03",
+    "analysis": {
+      "one_liner": "開發者優先的錯誤追蹤與效能監控平台,支援自架與多語言 SDK。",
+      "summary": "Sentry 是以 Python/Django 為主的除錯平台,協助開發者偵測、追蹤並修復程式錯誤與效能問題。功能涵蓋 Issue 詳情、追蹤(Traces)、Session Replay、Logs、Uptime 與 AI 輔助的 Seer。官方提供涵蓋 20 多種語言與框架的 SDK。",
+      "category": "infra",
+      "highlights": [
+        "錯誤追蹤、效能監控、Replay、Logs、Uptime 一站整合",
+        "官方 SDK 涵蓋 JavaScript、Python、Go、Rust、Java、Swift、Unity、Godot 等 20 多種平台",
+        "具備 Seer 等 AI 輔助除錯功能",
+        "採 Fair Source 授權,可自架也有 SaaS 版本",
+        "GitHub 星數逾 4.5 萬,社群與文件資源完整"
+      ],
+      "use_cases": [
+        "為生產環境的 Web/行動應用建立錯誤告警與崩潰回報",
+        "以分散式追蹤分析後端效能瓶頸",
+        "企業內部自架監控平台,保留資料自主權",
+        "跨多語言微服務統一彙整錯誤與日誌"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 簡潔,以功能截圖、SDK 清單與資源連結為主,詳細文件在官方站。最近推送為 2026-10-03,維護非常活躍。測試品質僅憑 README 無法評估,未檢視原始碼。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "成熟且廣泛使用的開源錯誤監控平台,若需要自架或整合多語言錯誤追蹤,值得關注;授權為 Fair Source,使用前請確認條款。",
+      "_mode": "light"
+    }
+  },
+  "Effect-TS/effect": {
+    "first_seen": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-03": [
+        16552,
+        80,
+        16,
+        "Build production-ready applications in TypeScript",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-03",
+    "analysis": {
+      "one_liner": "以 TypeScript 打造生產級應用的 Effect 4.x 生態系:型別化錯誤、依賴注入、結構化並行、Schema、可觀測性與叢集。",
+      "summary": "Effect 是一套 TypeScript 函式庫與 monorepo,包含核心 effect 套件,以及 platform(Node/Bun/Deno/瀏覽器)、多種 SQL 用戶端、AI provider(含 Anthropic)、cluster、RPC、MCP 等整合套件。它解決大型 TS 應用中錯誤處理、資源管理、並行、排程、追蹤與驗證零散的問題。目前 4.x 為 LTS 版本,並提供從 3.x 遷移的指南。",
+      "category": "framework",
+      "highlights": [
+        "型別化錯誤、Layer 依賴注入、結構化並行與 Schedule 排程整合於一體",
+        "Monorepo 含 platform、SQL(PG/MySQL/SQLite/ClickHouse 等)、AI、cluster、RPC 等同版號套件",
+        "Effect 4.x 明確提供 LTS 承諾:至少三年支援,並說明安全修補期限",
+        "核心套件每個模組皆有對應的 *.test.ts,另有型別測試(tstyche)與效能基準",
+        "使用 changesets、多組 GitHub Actions 與 .agents 技能文件,維護流程成熟"
+      ],
+      "use_cases": [
+        "建構需要嚴謹錯誤處理與資源安全的後端服務",
+        "以 Schema 統一驗證、序列化與 OpenAPI/JSON Schema 產生",
+        "分散式工作流程與 cluster 場景的 TypeScript 實作",
+        "整合 OpenTelemetry 的可觀測性,以及搭配 Anthropic 等 LLM 的 AI 應用"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件含 README、MIGRATION、官方網站與 API 參考;核心套件測試涵蓋廣,並有型別測試與 cluster 整合測試。最近推送時間為 2026-10-03,changeset 條目多,CI 工作流程完整(check、cluster、release、snapshot 等),維護非常活躍。學習曲線陡峭是主要門檻。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "根目錄 package.json 的 prepare 腳本會執行 node scripts/setup-agents.mjs 與 effect-tsgo patch;前者僅在缺少 AGENTS.md 時建立指向 .agents/AGENTS.md 的符號連結,僅影響開發者本機 clone 後的安裝流程,不影響使用 npm 安裝 effect 的使用者",
+          "未發現 curl|bash 安裝模式、混淆程式碼或內嵌的長 base64 內容"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "TypeScript 後端與全端開發者非常值得關注的成熟框架,有 LTS 承諾與高活躍度;但學習成本高,需評估團隊是否願意採用其函式式風格。",
       "_mode": "full"
     }
   }
