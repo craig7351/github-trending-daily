@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-05",
+    "analyzed": 7,
+    "cached": 9,
+    "deferred": 0,
+    "top_name": "caddyserver/caddy",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-04",
     "analyzed": 9,
     "cached": 10,
