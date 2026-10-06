@@ -1754,8 +1754,8 @@
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-27": [
         15052,
@@ -1786,6 +1786,13 @@
         25174,
         490,
         9,
+        "",
+        "TypeScript"
+      ],
+      "2026-10-06": [
+        25617,
+        485,
+        4,
         "",
         "TypeScript"
       ]
@@ -1826,8 +1833,8 @@
       "verdict": "想用手機或單一介面統一操控多家 coding agent 的開發者值得關注;專案仍早期且不收外部貢獻,適合先試用、觀察再導入。",
       "_mode": "light"
     },
-    "total_days_on_trending": 5,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 6,
+    "consecutive_days_on_trending": 3
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
@@ -4576,10 +4583,10 @@
   },
   "Panniantong/Agent-Reach": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-03": [
         64702,
@@ -4619,6 +4626,13 @@
       "2026-10-05": [
         90886,
         980,
+        6,
+        "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "Python"
+      ],
+      "2026-10-06": [
+        91890,
+        1155,
         6,
         "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "Python"
@@ -6853,10 +6867,10 @@
   },
   "msitarzewski/agency-agents": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-14",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-10": [
         140680,
@@ -6892,37 +6906,50 @@
         14,
         "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "Shell"
+      ],
+      "2026-10-06": [
+        157262,
+        744,
+        12,
+        "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-08-10",
+    "last_analyzed": "2026-10-06",
     "analysis": {
-      "one_liner": "一個涵蓋近400個「人格化」AI代理提示詞模板的超大型集合,可一鍵安裝進Claude Code、Cursor、Copilot等各種AI開發工具。",
-      "summary": "agency-agents是一套以Markdown撰寫的AI Agent人格/角色提示詞資料庫,涵蓋工程、設計、行銷、銷售、遊戲開發、法律、財務等19個「部門」、373+個檔案。每個agent檔案都有YAML frontmatter(name/description/color)加上詳細的身份設定、工作流程與程式碼範例,搭配一組Bash腳本(install.sh/convert.sh)把這些提示詞轉換並安裝到Claude Code、Cursor、Copilot、Gemini CLI、OpenCode等十幾種AI工具的對應設定目錄。專案本身不含可執行的應用程式邏輯,核心價值在於提示詞內容與跨工具安裝/轉換的自動化。",
+      "one_liner": "一套涵蓋工程、設計、行銷、安全等多部門的 AI 代理人角色提示詞庫,並附多工具一鍵轉換與安裝腳本。",
+      "summary": "The Agency 是以 Markdown 撰寫的專業 AI 代理人(agent)人設集合,每個檔案含身分、流程、交付物與成功指標,分佈在 engineering、design、marketing、security 等數十個部門資料夾(約 400 個檔案)。專案提供 convert.sh 與 install.sh,可把角色轉成 Claude Code、Cursor、Copilot、Gemini CLI、Codex、Hermes 等十多種工具的格式並安裝,另有桌面 App 可一鍵安裝。",
       "category": "ai-ml",
       "highlights": [
-        "373+個角色化Agent提示詞,分成工程、設計、行銷、銷售、遊戲開發(含Unity/Unreal/Godot)、法律、財務、學術等19個部門",
-        "install.sh/convert.sh支援一鍵安裝到Claude Code、Cursor、Copilot、Gemini CLI、OpenCode、Codex等15+種AI工具,可依部門或單一agent篩選安裝",
-        "備有官方桌面App(agencyagents.app)提供圖形化安裝,不需clone repo或跑腳本",
-        "CI有lint-agents.sh、check-divisions.sh、check-runbooks.sh、check-tools.sh四道自動檢查,確保frontmatter格式、部門分類與工具清單一致",
-        "純Bash腳本(bash 3.2+相容,無外部依賴),邏輯清晰、有防禦性檢查(如CRLF偵測)"
+        "角色數量龐大:數十個部門、近 300 個專業代理人,每個都有人格、流程與可交付成果",
+        "支援 16 種以上工具(Claude Code、Cursor、Codex、Gemini CLI、OpenCode、Hermes 等)的轉換與安裝",
+        "install.sh 支援 --division、--agent、--agents-file、--dry-run、--link,可只安裝需要的團隊",
+        "divisions.json 作為單一資料來源,並有 runbook 團隊名單可直接批次安裝",
+        "CI 內含 frontmatter 檢查、原創性檢查、安裝測試等多個工作流程,維護嚴謹"
       ],
       "use_cases": [
-        "想在Claude Code/Cursor等AI編碼工具中快速套用「有個性、有流程」的專業角色提示詞,而非自己從零寫system prompt",
-        "團隊想建立跨職能(工程/設計/行銷/銷售/法務)的AI協作代理範本作為起點,再自行客製化",
-        "研究或收藏各類AI agent提示詞設計手法,作為prompt engineering的參考素材"
+        "為 Claude Code 或 Cursor 快速擴充一批專業子代理人(code reviewer、架構師、SRE 等)",
+        "作為撰寫自家 agent 系統提示詞的參考範本",
+        "依 runbook 組出特定任務團隊(例如 startup MVP)並批次安裝",
+        "跨多個 AI 編碼工具統一管理同一套角色設定"
       ],
       "quality": {
-        "docs": 4,
-        "tests": 2,
+        "docs": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "README詳盡但單檔案超長(1121行);沒有傳統單元測試,但有針對內容格式的自動化lint/一致性檢查(lint-agents.sh、check-divisions.sh等)透過GitHub Actions執行,對「提示詞集合」這種專案類型算是務實的品質保障方式。腳本本身寫得乾淨,有註解說明設計取捨與歷史bug修復脈絡,近期仍持續有push(2026-08-06),活躍度高。"
+        "comment": "README 完整,有名冊表格、安裝選項與貢獻指南(含簡體中文版)。scripts/ 下有三十多個 shell/python 測試腳本,涵蓋安裝、轉換與 frontmatter,並有 6 個 GitHub Actions 工作流程。最後推送為 2026-10-04,維護活躍。內容本質是提示詞文件,實際程式碼主要是 Shell 工具鏈,整體品質整齊。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "install.sh 會把檔案寫入使用者家目錄下各工具的設定資料夾(如 ~/.claude/agents/、~/.codex/agents/),Hermes 選項還會複製外掛並啟用,執行前建議先用 --dry-run 檢視計畫。",
+          "安裝的代理人檔案屬於會影響 AI 行為的系統提示詞,建議在啟用前先抽閱內容。",
+          "在 scripts/ 中未發現 curl|bash、base64 酬載或寫死 IP;唯一的 eval 出現在測試腳本中,用於載入 install.sh 內的函式。",
+          "README 建議的 Homebrew cask 與桌面 App 下載來自另一個 repo(agency-agents-app),不在本次檢視範圍內。"
+        ]
       },
-      "star_rating": 3,
-      "verdict": "內容量龐大且維護紮實,適合當提示詞範本庫收藏或速覽,但對已經熟悉prompt engineering的工程師來說並非非看不可的技術突破。",
+      "star_rating": 4,
+      "verdict": "對使用 Claude Code、Cursor 等工具的開發者而言是值得收藏的現成代理人資源庫,安裝腳本與 CI 品質良好;但內容以提示詞為主,技術深度有限,建議按需挑選安裝。",
       "_mode": "full"
     }
   },
@@ -7953,10 +7980,10 @@
   },
   "calesthio/OpenMontage": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-12": [
         47342,
@@ -7997,6 +8024,13 @@
         63225,
         245,
         8,
+        "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "Python"
+      ],
+      "2026-10-06": [
+        64037,
+        742,
+        7,
         "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
         "Python"
       ]
@@ -13579,10 +13613,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -13602,6 +13636,13 @@
         96133,
         628,
         13,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-10-06": [
+        96634,
+        534,
+        2,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
       ]
@@ -16815,10 +16856,10 @@
   },
   "Stremio/stremio-web": {
     "first_seen": "2026-09-07",
-    "last_seen": "2026-09-07",
+    "last_seen": "2026-10-06",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-07": [
         13475,
@@ -16826,41 +16867,48 @@
         18,
         "Stremio - Freedom to Stream",
         "JavaScript"
+      ],
+      "2026-10-06": [
+        14296,
+        111,
+        11,
+        "Stremio - Freedom to Stream",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-09-07",
+    "last_analyzed": "2026-10-06",
     "analysis": {
-      "one_liner": "Stremio 官方網頁版 UI,結合 Rust/WASM 核心引擎打造的開源串流媒體中心前端。",
-      "summary": "Stremio Web 是 Stremio 媒體中心的官方網頁 UI,以 React 撰寫,實際運算邏輯則交由 stremio-core(Rust 編譯成 WASM,於 Web Worker 執行)處理,播放則透過 stremio-video 抽象層挑選合適的播放器。專案解決的是跨裝置串流媒體管理與播放的問題,支援 addon 生態系、雲端同步、字幕、多語系等功能。",
-      "category": "web",
+      "one_liner": "Stremio 官方 Web 介面:以 React 呈現、核心由 Rust 編譯成 WASM 的串流媒體中心前端。",
+      "summary": "stremio-web 是 Stremio 媒體中心的官方網頁 UI,採用 React 開發,狀態運算交由 stremio-core(Rust 編譯為 WebAssembly,在 Web Worker 中執行),播放則透過 stremio-video 抽象層。它透過 addon 提供影音目錄,支援帳號同步、Chromecast、字幕與 PWA 安裝。",
+      "category": "app",
       "highlights": [
-        "採用 React UI + Rust/WASM 核心的混合架構,邏輯與畫面分離",
-        "支援跨裝置同步(收藏庫、繼續觀看)與 Chromecast 投放",
-        "透過 addon 機制擴充內容來源,並提供 SDK 讓開發者自建 addon",
-        "支援 50+ 語言的社群翻譯,並可安裝為 PWA",
-        "提供官方線上版本可直接體驗(web.stremio.com)"
+        "UI 與核心分離:React 負責渲染,Rust→WASM 的 stremio-core 在 Web Worker 計算狀態,架構值得參考",
+        "Addon 驅動的內容目錄,並提供 addon SDK 讓開發者自行擴充",
+        "支援帳號同步、Chromecast、自訂字幕樣式與鍵盤優先的播放器",
+        "50 種以上社群翻譯,並可安裝為 PWA",
+        "README 附有 mermaid 架構圖、指令表與 Docker 啟動方式,上手門檻低"
       ],
       "use_cases": [
-        "想架設或自訂串流媒體中心前端的開發者",
-        "研究 Rust/WASM 與 React 混合架構設計的工程師",
-        "想開發 Stremio addon 串接自有內容來源的團隊",
-        "尋找開源多媒體播放器 UI 專案作為學習或改造範本"
+        "學習 React 搭配 Rust/WASM 與 Web Worker 的大型前端架構",
+        "自行建置或客製化 Stremio 網頁用戶端",
+        "開發 Stremio addon 並在網頁端測試",
+        "參與開源貢獻或翻譯"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 結構完整,涵蓋功能、架構圖、開發指令與生態系說明,文件品質不錯;但僅能從 README 得知有 pnpm test 指令,無法實際檢視測試覆蓋率,此評分僅基於 README 觀察。專案近期(2026-09-06)仍持續推送且正在 GitHub trending 上升,活躍度高。"
+        "comment": "README 結構完整,涵蓋功能、架構圖、安裝指令、生態系與貢獻指引。測試品質僅憑 README 評估,README 提到有 pnpm test 與 lint 指令,但未檢視程式碼。最後推送為 2026-10-05,維護活躍,且登上今日 trending。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供的安裝方式為標準 pnpm install / pnpm start 及 Docker build/run,未見來源不明的 curl | bash 類指令",
-          "本次評估僅根據 README 內容,未進行原始碼層級的安全審查"
+          "README 的安裝方式為 pnpm install / pnpm start 與 Docker build,未見 curl | bash 之類的指令。",
+          "本評估僅依據 README,未進行原始碼層級審查;一般前端專案仍建議留意相依套件。"
         ]
       },
       "star_rating": 4,
-      "verdict": "Stremio 官方維護、架構設計有特色(React + Rust/WASM),搭配今日上榜熱度,值得關注與研究其架構,但一般開發者需求則視是否使用 Stremio 生態系而定。",
+      "verdict": "官方維護、架構清晰的 React + Rust/WASM 串流前端,對想了解此類架構或接觸 Stremio 生態的人值得關注。",
       "_mode": "light"
     }
   },
@@ -17487,10 +17535,10 @@
   },
   "earthtojake/text-to-cad": {
     "first_seen": "2026-09-10",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-10": [
         15032,
@@ -17503,6 +17551,13 @@
         16866,
         83,
         5,
+        "Give your agent CAD superpowers.",
+        "Python"
+      ],
+      "2026-10-06": [
+        17415,
+        437,
+        3,
         "Give your agent CAD superpowers.",
         "Python"
       ]
@@ -23977,15 +24032,22 @@
   },
   "cloudflare/cloudflare-os": {
     "first_seen": "2026-10-04",
-    "last_seen": "2026-10-04",
+    "last_seen": "2026-10-06",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-04": [
         10569,
         85,
         9,
+        "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+        "TypeScript"
+      ],
+      "2026-10-06": [
+        11013,
+        101,
+        10,
         "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
         "TypeScript"
       ]
@@ -24134,14 +24196,21 @@
   },
   "tester-army/e2e": {
     "first_seen": "2026-10-05",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-05": [
         3116,
         345,
+        1,
+        "Next generation e2e testing framework for web and mobile apps.",
+        "TypeScript"
+      ],
+      "2026-10-06": [
+        4802,
+        1398,
         1,
         "Next generation e2e testing framework for web and mobile apps.",
         "TypeScript"
@@ -24187,15 +24256,22 @@
   },
   "caddyserver/caddy": {
     "first_seen": "2026-10-05",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-05": [
         76567,
         24,
         10,
+        "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+        "Go"
+      ],
+      "2026-10-06": [
+        77120,
+        515,
+        8,
         "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
         "Go"
       ]
@@ -24338,6 +24414,169 @@
       },
       "star_rating": 4,
       "verdict": "工程化程度很高、測試與 CI 完整的 Claude Code 技能框架,值得有在用 Claude Code 的團隊試用或借鏡其設計,但體量大、需先審視安裝腳本與自動更新行為。",
+      "_mode": "full"
+    }
+  },
+  "boykopovar/AnyPS5": {
+    "first_seen": "2026-10-06",
+    "last_seen": "2026-10-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-06": [
+        4963,
+        997,
+        5,
+        "Tool for automatic PS5 executables porting to Linux and Windows",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-10-06",
+    "analysis": {
+      "one_liner": "把 PS5 可執行檔重新連結成 Linux/Windows 原生格式的移植工具,不需要模擬器或獨立 runtime 程序",
+      "summary": "AnyPS5 內含 relinker 與 PS5 系統 PRX 函式庫的重新實作。relinker 會把 PS5 的 ELF 轉成 Linux ELF 或 Windows PE,再與重實作的函式庫動態連結,以原生方式執行遊戲。專案另含 GCN 到 SPIR-V 的 shader 重編譯器、Vulkan 渲染、圖片與音訊解碼等模組。",
+      "category": "devtool",
+      "highlights": [
+        "採「重新連結」而非模擬,不需要獨立 runtime 程序,同時支援 Linux 與 Windows 輸出",
+        "內含 shader 重編譯器,產出 SPIR-V 並可用 SPIRV-Tools 驗證,渲染走 Vulkan",
+        "程式碼拆分清楚,包含 relinker、codegen(把 AMD64 專屬指令降階為通用指令)、elfpatcher、NID 計算與修補,以及大量 PRX 函式庫",
+        "README 有進度徽章與相容遊戲清單,並說明 Dreaming Sarah 在 GTX 1050 Ti 上可穩定 60fps",
+        "CI 以 Linux(lavapipe 軟體 Vulkan)與 Windows(MinGW)雙平台建置並跑 ctest"
+      ],
+      "use_cases": [
+        "研究主機執行檔格式與 NID 符號機制、二進位重新連結技術",
+        "學習 GPU shader 重編譯成 SPIR-V 與 Vulkan 渲染管線的實作",
+        "在合法取得遊戲檔案的前提下,做互通性與保存目的的相容性實驗",
+        "參考大型 C++20 專案如何以 CMake 與 CI 組織跨平台建置與測試"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 有指向使用、建置、慣例、技術債與相容性清單的文件連結,並附進度徽章。測試分散在 Decoder、relinker、codegen、elfpatcher、io 等模組,CI 在 Linux 與 Windows 兩邊執行 ctest 並重複 3 次以偵測不穩定。專案有 dependabot、標籤、PR 重疊偵測等自動化,最近推送在 2026-10-06,維護活躍。程式碼風格一致,錯誤處理採明確 throw。專案仍在早期,相容性有限。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "專案本身是二進位轉換與修補工具,執行時會讀取使用者提供的 PS5 可執行檔並改寫成可執行的 ELF/PE,這類輸入應視為不受信任,請在自己信任的環境中使用。",
+          "依賴以 git submodule 引入,包含 SDL、Vulkan、glslang、SPIRV-Tools、freetype、stb,以及 shadps4-emu/ext-LibAtrac9 與 KytyPS5/ext-ffmpeg-core 等第三方 fork,建置前建議自行確認這些來源。",
+          "Windows CI 流程會用 curl 從 brechtsanders/winlibs_mingw 的 GitHub release 下載 MinGW 工具鏈壓縮檔並解壓,僅影響 CI,沒有看到校驗碼驗證。",
+          "NidCompute.cpp 中的常數是 NID 雜湊用的 16 位元組後綴與 Base64 字母表,屬於演算法常數。測試中的位元組陣列是小型 PNG 測試資料。這兩處都沒有發現混淆或可疑的內嵌載荷。",
+          "本次分析範圍內沒有看到 npm 生命週期腳本或 curl|bash 安裝流程。專案聲明不含也不散布受版權保護的軟體、韌體或金鑰,但使用者仍須自行確認取得遊戲檔案的合法性。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "技術含量高、結構與測試完整的 PS5 移植/重新連結專案,對系統底層與 Vulkan 感興趣的人值得關注。專案仍在早期,使用時請留意法律與版權責任。",
+      "_mode": "full"
+    }
+  },
+  "DuarteSantos8/openGym": {
+    "first_seen": "2026-10-06",
+    "last_seen": "2026-10-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-06": [
+        4224,
+        1433,
+        9,
+        "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-10-06",
+    "analysis": {
+      "one_liner": "自架式健身與體重追蹤 PWA,支援 Passkey 登入、匯入 FitNotes/Strong/Hevy,並提供選用的 AI 教練與 MCP 伺服器。",
+      "summary": "openGym 是以 Node.js 後端加 React/Vite 前端組成的自架健身記錄應用。功能包含每週課表規劃、超級組與熱身組、肌群恢復熱圖、1RM 估算,以及 1,324 個動作的資料庫。資料存放在使用者自己的伺服器,`docker compose up` 即可啟動,可取代需訂閱、資料放在雲端的健身 App。",
+      "category": "app",
+      "highlights": [
+        "以 Passkey(WebAuthn)為主要登入方式,可選密碼登入,並支援一次性代碼或 QR 配對新裝置",
+        "可匯入 FitNotes、Strong、Hevy(CSV 或 API key)與 Apple Health 體重資料,也能整包匯出 JSON",
+        "選用的 AI 教練支援 Anthropic、OpenAI、Gemini、相容端點與 Ollama,所有變更須由使用者核准",
+        "選用的 MCP 伺服器唯讀且在本機執行,讓 Claude Desktop 等助理查詢訓練歷史",
+        "測試與 CI 完整:API 與前端共有數百個測試檔,同時有 GitHub、GitLab、Gitea 三套流程,並提供 amd64 與 arm64 映像檔"
+      ],
+      "use_cases": [
+        "想自架、掌握自己訓練資料的健身愛好者",
+        "從 Strong、Hevy、FitNotes 遷移並保留歷史紀錄",
+        "在家用伺服器或 NAS 上跑的 PWA 範例,可學習 Passkey 與同步合併的實作",
+        "實驗以 MCP 讓 AI 助理分析個人訓練資料"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 完整,另有自架、Kubernetes、HTTPS 指南,以及 CHANGELOG、ROADMAP、SECURITY 等文件。測試檔在 API 端約 50 個、前端超過 300 個,CI 涵蓋多個平台。程式碼註解詳細,密碼雜湊(scrypt 加並行上限)與子行程隔離的設計相當嚴謹。專案最近仍在推送,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "根目錄與 api、frontend、mcp 的 package.json 中,未發現 preinstall、postinstall、prepare 等安裝期腳本。",
+          "api/Dockerfile 的 coach 目標會以 `npm install -g @openai/codex` 安裝外部 CLI。這是選用目標,預設映像不含。",
+          "選用的 AI 教練會以子行程執行供應商 CLI(api/coach/adapters/spawn.js)。程式碼不使用 shell、環境變數從空白建立,並在 Linux 上降權為 `coach` 使用者,且無法降權時拒絕執行。",
+          "AI 教練需要使用者自行提供第三方供應商的 API 金鑰,啟用後訓練資料會送往所選的供應商。預設為關閉。",
+          "在 api、frontend、mcp 的 package.json 中未發現 install 類生命週期腳本;原始碼抽樣檢查也未見混淆程式碼或內嵌的長 payload。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、文件與測試都扎實的自架健身追蹤器,想自架或參考 Passkey 與 MCP 整合的人值得關注。",
+      "_mode": "full"
+    }
+  },
+  "M-Abozaid/esp32-c3-adblock": {
+    "first_seen": "2026-10-06",
+    "last_seen": "2026-10-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-06": [
+        1346,
+        196,
+        13,
+        "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard.https://youtube.com/shorts/RaxszOUMi8E?feature=share",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-10-06",
+    "analysis": {
+      "one_liner": "在 2 美元的 ESP32-C3(無 PSRAM)上跑 Pi-hole 等級的 DNS 廣告攔截器,把數十萬網域存成 40-bit FNV-1a 雜湊放在 flash 中二分搜尋。",
+      "summary": "這是一個 C++/Arduino/PlatformIO 韌體,在 ESP32-C3 上運作 UDP DNS sinkhole:命中黑名單就回 0.0.0.0,否則轉發到上游解析器。黑名單以排序好的 5 byte 雜湊存放在 flash,用二分搜尋比對,只需約 50KB RAM、不需 PSRAM。專案另附網頁儀表板、captive portal 設定 WiFi、韌體與黑名單的 OTA 更新,以及每週由 GitHub Actions 重建黑名單的流程。",
+      "category": "devtool",
+      "highlights": [
+        "把網域字串改成 40-bit 雜湊存在 flash,約 18 次 flash 讀取完成查詢,RAM 只用約 50KB,README 並附碰撞機率與分區取捨的分析",
+        "功能完整:網頁儀表板、各用戶端統計、封鎖用戶端、自訂網域、mDNS、captive portal 設定 WiFi、韌體與黑名單 OTA",
+        "tools/build_blocklist.py 支援 hosts、純網域清單與 AdGuard 規則,來源下載失敗時會中止建置,而非產生縮水的清單",
+        "GitHub Actions 每週一自動重建預設黑名單並發佈到固定的 release URL,裝置可定期自動拉取",
+        "README 的 Security 章節對 Basic Auth、X-Requested-With 防 CSRF、HTML 跳脫與純 HTTP 的限制都有說明;另附可 3D 列印的外殼 STL"
+      ],
+      "use_cases": [
+        "在路由器 USB 埠上放一顆低成本 DNS 廣告攔截器,供家用網路使用",
+        "學習在極少 RAM 的 MCU 上,用 flash 雜湊表加二分搜尋做大型查表",
+        "當作現有 DNS 的次要解析器,或作為 IoT 與嵌入式 DNS 服務的參考實作",
+        "參考 ESP32 上 OTA、captive portal 與簡易 Web 管理介面的寫法"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 4,
+        "comment": "README 詳盡,涵蓋設計原理、硬體、建置、OTA、安全模型與踩坑紀錄,另有日文版。CI 有 c3 與 esp32dev 的編譯矩陣,以及黑名單工具的簡單 smoke test,但沒有針對 DNS 解析或雜湊查詢的單元測試。最近仍有推送。我只讀了 main.cpp 的部分片段,程式碼品質的判斷主要來自 README 與 CI。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "docs/ 目錄內有已編譯的 firmware.bin、bootloader.bin、littlefs.bin 等二進位檔(供網頁安裝器使用),這些預編譯韌體無法在此與原始碼逐一比對,建議自行從原始碼編譯",
+          "儀表板為純 HTTP:80,Basic Auth 憑證僅以 base64 傳送;README 已說明這是區網信任邊界的控制,並非加密",
+          "secrets.example.h 內有公開的預設密碼佔位值;若使用者未修改,裝置仍會啟動,只會在序列埠與儀表板顯示警告",
+          "遠端黑名單下載使用 WiFiClientSecure 搭配 setInsecure()(不驗證憑證),程式碼註解說明原因是黑名單不是機密;不過這代表下載內容未經 TLS 身分驗證",
+          "WiFi 設定用的 captive portal 存取點(C3-AdBlock-XXXX)為開放式網路,README 已列為已知限制",
+          "build.yml 與 blocklist.yml 未發現 curl|bash 或安裝時執行的腳本;blocklist.yml 具 contents: write 權限,用於發佈 release"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想法精巧、文件完整、功能齊全的嵌入式 DNS 攔截專案,值得 IoT 與嵌入式開發者關注;缺少單元測試,而且 docs/ 內的預編譯韌體需自行留意。",
       "_mode": "full"
     }
   }
