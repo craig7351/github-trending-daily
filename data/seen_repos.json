@@ -716,8 +716,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-04",
-    "days_on_trending": 4,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -838,6 +838,13 @@
         12,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-07": [
+        278294,
+        889,
+        2,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-26",
@@ -871,8 +878,8 @@
       "verdict": "若你日常使用 Claude Code 或其他 AI 編碼代理,這套技能包能有效補上「需求對齊、測試紀律、程式碼審查」的流程缺口,值得安裝試用,但本質是提示工程集合而非傳統軟體庫,程式碼量與測試皆非重點。",
       "_mode": "full"
     },
-    "total_days_on_trending": 18,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 19,
+    "consecutive_days_on_trending": 1
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1883,8 +1890,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 4,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -1935,6 +1942,13 @@
         2,
         "The design language that makes your AI harness better at design.",
         "JavaScript"
+      ],
+      "2026-10-07": [
+        77790,
+        616,
+        5,
+        "The design language that makes your AI harness better at design.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-09-24",
@@ -1972,8 +1986,8 @@
       "verdict": "若團隊大量使用 AI coding agent 產出前端介面,這套工具值得一試,但安裝時牽涉下載執行檔與自動 hook,建議先讀懂信任機制再上線。",
       "_mode": "light"
     },
-    "total_days_on_trending": 8,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 9,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -6867,10 +6881,10 @@
   },
   "msitarzewski/agency-agents": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-10": [
         140680,
@@ -6911,6 +6925,13 @@
         157262,
         744,
         12,
+        "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "Shell"
+      ],
+      "2026-10-07": [
+        157910,
+        623,
+        10,
         "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "Shell"
       ]
@@ -8124,10 +8145,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -8198,37 +8219,51 @@
         8,
         "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
+      ],
+      "2026-10-07": [
+        44135,
+        228,
+        12,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
       ]
     },
-    "last_analyzed": "2026-09-05",
+    "last_analyzed": "2026-10-07",
     "analysis": {
       "category": "devtool",
-      "one_liner": "為 Claude Code、Codex 等 AI Agent 打造的「編輯設計感」圖表產生技能包,一次提供 39 種自成一體的 HTML+SVG 圖表類型。",
-      "summary": "這是一個 Agent Skill / Plugin,讓 Claude Code、Codex、Factory Droid、Pi 等 AI coding agent 能依照品牌色調與字型,產生 39 種「編輯感」風格的靜態 HTML+SVG 圖表(架構圖、流程圖、ER 圖、甘特圖等),取代 AI 常見的通用圓角方框或 Mermaid 樣式。同時支援從 draw.io / Mermaid 來源重繪圖表,並可依格式、尺寸、細節、受眾四個維度輸出。",
+      "one_liner": "為 Claude Code、Codex、Copilot 等 AI 代理打造的編輯級圖表技能包:42 種圖表類型,輸出自包含 HTML + SVG。",
+      "summary": "diagram-design 是一組代理技能(Agent Skill / 外掛),讓 AI 編輯器產出風格一致、無陰影、不落俗套的 HTML+SVG 圖表,涵蓋架構、流程、序列、Sankey、Wardley、熱圖等 42 種類型。它也能把 draw.io、Mermaid、Excalidraw 來源重繪成統一風格,並可讀取網站自動套用品牌色與字體。解決的是 AI 生成圖表千篇一律的「圓角方塊」問題。",
       "highlights": [
-        "39 種圖表類型,每種都有 minimal light / minimal dark / full-editorial 三種靜態變體,開瀏覽器即可看、無需建置流程",
-        "CI 極為嚴謹:超過 40 個獨立的 verify-*.py / test-verify-*.py 幾何與內容校驗腳本(標籤幾何、樹狀圖面積保真度、Sankey 流量守恆、無障礙 SVG 名稱等),並用 headless Chromium 做實際渲染檢查",
-        "draw.io/Mermaid 匯入解析器對輸入做了明確的安全防護:拒絕 DTD/ENTITY 宣告(防 XXE)、限制解壓縮後的檔案大小上限(防 zip bomb)",
-        "文件完整度高,包含架構說明、9 篇 ADR(設計決策紀錄)、cookbook 操作手冊、貢獻指南與安全政策",
-        "支援品牌自動擷取(讀取使用者網站配色與字型)並自動做 WCAG AA 對比檢查"
+        "42 種圖表類型,每種皆有淺色、深色與完整編輯版三種靜態變體,可直接用瀏覽器開啟,無需建置、JS 或外部圖片",
+        "支援 Claude Code、Codex、Factory Droid、Pi、Copilot 等多個宿主,並提供各自的 plugin/marketplace manifest",
+        "可匯入 draw.io、Mermaid、Excalidraw 並重繪,另有 doctor、profile、export-diagram 等指令",
+        "有大量腳本式驗證器(Sankey 流量守恆、treemap 面積比例、標籤幾何、a11y、Playwright 像素渲染檢查),重視圖表數值正確性",
+        "附 ADR 設計決策文件,預設靜態輸出,動態僅限受控的 reveal 動畫"
       ],
       "use_cases": [
-        "技術寫作者或部落客需要快速產生與網站風格一致、非「AI 感」的架構圖或流程圖插圖",
-        "在 Claude Code / Codex 等 agent 工作流中,讓 AI 自動選擇合適的圖表類型並產生可直接發佈的靜態 HTML/SVG",
-        "需要將既有 draw.io 或 Mermaid 圖表重新排版成適合投影片、社群圖卡或列印用途的場景"
+        "讓 AI 代理為技術文章、部落格或簡報產生風格統一的架構圖與流程圖",
+        "把既有 Mermaid / draw.io / Excalidraw 圖表轉成符合品牌風格的 SVG",
+        "資料平台、IT 現況盤點、資料庫 schema、部署拓樸等企業文件圖表",
+        "在團隊內以外掛形式統一多個 AI 編碼工具的圖表輸出規範"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件與 ADR 齊全,CI 涵蓋幾何、無障礙、內容保真度等多面向的自動化驗證,遠超一般前端專案水準;version 2.6.12 且有自動化版本升版流程,顯示持續活躍維護。純 HTML/SVG + Python 校驗腳本,程式碼可讀性高、風格一致。"
+        "comment": "文件完整(README、PRIVACY、SECURITY、CONTRIBUTING、ADR、各類型參考文件)。scripts/ 下有數十組 test-* 與 verify-* 腳本,CI 在 Linux/Windows/macOS 與多個 Python 版本上執行,並含 Playwright 渲染檢查與版本閘門。版本號已到 2.6.x,近期仍持續推送,維護積極。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "未發現 package.json 或 preinstall/postinstall 等安裝時生命週期腳本;安裝方式為各宿主的 plugin marketplace 指令",
+          "產生的 HTML/SVG 預設會從 Google Fonts(fonts.googleapis.com、fonts.gstatic.com)載入字型,瀏覽器開啟時會對 Google 發出請求;PRIVACY.md 對此有明確說明,且可移除連結改用系統字型",
+          "品牌導入功能在使用者要求時,會由代理抓取指定網站頁面;PRIVACY.md 說明未要求時不會抓取",
+          "CI 使用 npx 下載指定版本的 @anthropic-ai/claude-code,並以 pip 安裝固定版本的 playwright、Pillow,屬於維護者端的 CI 流程,版本皆已固定",
+          "scripts/vendor/ 內含第三方 SVG 圖示(Tabler、Simple Icons、Devicon 等),並附 THIRD_PARTY_LICENSES.md"
+        ]
       },
       "star_rating": 4,
-      "verdict": "工程嚴謹度與文件品質在同類 Agent Skill 專案中相當突出,若你常用 Claude Code/Codex 產圖表,值得一試,但實際價值高度取決於個人對其「編輯感」設計美學的喜好。",
+      "verdict": "若你常讓 AI 代理畫架構圖或資料圖表,這是目前少見工程化程度高的圖表技能包,值得安裝試用;主要限制是需要相容的代理宿主,且輸出偏向特定的編輯風格。",
       "_mode": "full"
     }
   },
@@ -13613,10 +13648,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -13643,6 +13678,13 @@
         96634,
         534,
         2,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-10-07": [
+        97247,
+        534,
+        6,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
       ]
@@ -17301,10 +17343,10 @@
   },
   "ayghri/i-have-adhd": {
     "first_seen": "2026-09-09",
-    "last_seen": "2026-09-12",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-09": [
         30467,
@@ -17333,41 +17375,50 @@
         1,
         "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
         "Python"
+      ],
+      "2026-10-07": [
+        54495,
+        326,
+        7,
+        "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-09",
+    "last_analyzed": "2026-10-07",
     "analysis": {
-      "one_liner": "一份讓 AI coding agent(Claude Code、Codex、Gemini CLI 等)輸出「行動優先、不廢話」的 Skill/Plugin,對應各家 agent 平台的整合方式。",
-      "summary": "i-have-adhd 是一組定義好的輸出風格規則(10 條規則,寫在 SKILL.md),用來強迫 coding agent 回答時先給出可執行的下一步、把多步驟工作編號、限制離題與贅字,解決「AI 廢話太多、答案被埋起來」的痛點。專案本身不是傳統應用程式,而是針對十幾種 agent 平台(Claude Code、Codex、Gemini CLI、OpenCode、Pi、Copilot、Zed、Cursor、Kimi 等)分別提供對應的 plugin/extension/hook 轉接層,核心邏輯只是讀取並注入同一份 Markdown 規則文字。",
-      "category": "devtool",
+      "one_liner": "一個跨多種 coding agent 的 ADHD 友善輸出風格 skill,強制「先給行動、步驟編號、結尾只留一個下一步」。",
+      "summary": "i-have-adhd 本質上是一份 SKILL.md 提示詞規則(10 條),要求 AI 編程助理先講下一步行動、用編號列步驟、每輪重述進度、給具體時間估計,並禁止開場白與結語。專案同時提供 Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen、Kimi、pi 等多平台的外掛封裝、SessionStart 常駐 hook,以及評測腳本與案例。",
+      "category": "ai-ml",
       "highlights": [
-        "核心價值是一份精心撰寫的 SKILL.md 規則文件(10 條規則加例外情境),而非複雜程式邏輯",
-        "同時支援十多種 AI agent 平台的原生整合方式,工程量集中在跨平台相容層",
-        "SessionStart hook 採用防禦性寫法,任何例外都直接結束不阻擋 agent 啟動,以 opt-in 旗標檔案控制是否常駐啟用",
-        "備有多語系文件與完整評測框架驗證規則有效性",
-        "測試涵蓋 node、sh、PowerShell 三種 hook runtime 的行為一致性"
+        "10 條規則清楚:先給行動、編號步驟、單一下一步、每輪重述狀態、禁止開場白與結語",
+        "一份 SKILL.md 搭配各平台 manifest,涵蓋 Claude Code、Codex、Cursor、Gemini、OpenCode 等",
+        "含 SessionStart 常駐 hook,有 Node、sh、PowerShell 三種版本,失敗時一律安全退出",
+        "附 evals 與盲測 judge 腳本(scripts/judge.py),能量化比較有無 skill 的差異",
+        "README 與安裝文件有多語版本,並附前後對照範例"
       ],
       "use_cases": [
-        "想讓 Claude Code、Codex、Gemini CLI 等 agent 回答更直接、少廢話的日常開發使用",
-        "團隊統一 coding agent 輸出風格,避免冗長解釋掩蓋實際操作步驟",
-        "想客製化輸出規則的使用者可以 fork 後修改規則檔套用自己的風格準則",
-        "研究如何為多種不同 agent runtime 撰寫相容的 plugin 或 extension 的參考範例"
+        "讓 Claude Code 等助理的回覆更精簡、可立即執行,降低閱讀負擔",
+        "對注意力容易分散的開發者,把長回覆改成編號步驟與單一下一步",
+        "參考它的寫法,為團隊自訂輸出風格 skill 或跨平台外掛"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "文件非常完整,包含多語系 README 與 INSTALL、AGENTS.md 導覽、CONTRIBUTING;測試涵蓋跨平台 hook 行為與 opencode、pi 擴充邏輯;CI 使用標準 claude-code-action 且僅在留言標記時觸發、權限最小化。程式碼量不大但結構清晰,TypeScript extension 有型別與邊界情況處理。"
+        "comment": "文件完整且多語,有 INSTALL 與貢獻指南。tests/ 內有 hook、安裝文件、judge、omp 套件的 Python 測試,另有 4 個 CI workflow(外掛載入檢查、pi 載入檢查等)。judge.py 的型別標註與 docstring 品質良好。核心價值是提示詞,而非複雜程式碼。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "INSTALL.md 中多處安裝指令使用 curl 下載檔案寫入本機設定目錄,屬於一般 CLI 工具常見的安裝模式,並非執行遠端腳本,且目標網址均為此專案自身的 GitHub raw 內容",
-          "SessionStart hook 會讀取外部環境變數來定位並執行 node 指令,但實際載入的規則檔路徑是相對於腳本自身位置解析,並非直接信任該環境變數作為程式碼來源"
+          "hooks/hooks.json 在 SessionStart 時執行 node 單行指令載入 hooks/always-on.mjs;只有使用者自行建立旗標檔 .i-have-adhd-always 才會注入 SKILL.md 內容",
+          "hooks 與 extensions 目錄中未發現網路請求、child_process 或 eval 呼叫",
+          "INSTALL.md 的 Gemini 安裝步驟使用 curl 從 raw.githubusercontent.com 下載 gemini.toml,為官方倉庫網址,並非 curl | bash",
+          "README 建議把安裝指令貼進 AI 助理,由助理依 AGENTS.md 執行安裝;使用者應先自行檢視 AGENTS.md 與安裝步驟",
+          "倉庫內有 logo.png 這類圖片,未見其他二進位檔"
         ]
       },
-      "star_rating": 4,
-      "verdict": "概念單純但執行到位,適合想讓 AI coding agent 少廢話、多行動的開發者直接安裝試用,程式碼與安全面均無疑慮。",
+      "star_rating": 3,
+      "verdict": "概念簡單但實用,封裝與評測做得扎實,值得 Claude Code 使用者試用或參考其跨平台 skill 寫法,不必當作必看專案。",
       "_mode": "full"
     }
   },
@@ -17535,10 +17586,10 @@
   },
   "earthtojake/text-to-cad": {
     "first_seen": "2026-09-10",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-10": [
         15032,
@@ -17557,6 +17608,13 @@
       "2026-10-06": [
         17415,
         437,
+        3,
+        "Give your agent CAD superpowers.",
+        "Python"
+      ],
+      "2026-10-07": [
+        18055,
+        619,
         3,
         "Give your agent CAD superpowers.",
         "Python"
@@ -24196,10 +24254,10 @@
   },
   "tester-army/e2e": {
     "first_seen": "2026-10-05",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-05": [
         3116,
@@ -24211,6 +24269,13 @@
       "2026-10-06": [
         4802,
         1398,
+        1,
+        "Next generation e2e testing framework for web and mobile apps.",
+        "TypeScript"
+      ],
+      "2026-10-07": [
+        6500,
+        1725,
         1,
         "Next generation e2e testing framework for web and mobile apps.",
         "TypeScript"
@@ -24419,15 +24484,22 @@
   },
   "boykopovar/AnyPS5": {
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-06": [
         4963,
         997,
         5,
+        "Tool for automatic PS5 executables porting to Linux and Windows",
+        "C++"
+      ],
+      "2026-10-07": [
+        6813,
+        949,
+        4,
         "Tool for automatic PS5 executables porting to Linux and Windows",
         "C++"
       ]
@@ -24473,15 +24545,22 @@
   },
   "DuarteSantos8/openGym": {
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-07",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-06": [
         4224,
         1433,
         9,
+        "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+        "JavaScript"
+      ],
+      "2026-10-07": [
+        5883,
+        1419,
+        11,
         "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
         "JavaScript"
       ]
@@ -24577,6 +24656,115 @@
       },
       "star_rating": 4,
       "verdict": "想法精巧、文件完整、功能齊全的嵌入式 DNS 攔截專案,值得 IoT 與嵌入式開發者關注;缺少單元測試,而且 docs/ 內的預編譯韌體需自行留意。",
+      "_mode": "full"
+    }
+  },
+  "morluto/rea": {
+    "first_seen": "2026-10-07",
+    "last_seen": "2026-10-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-07": [
+        10019,
+        2956,
+        8,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-07",
+    "analysis": {
+      "one_liner": "讓 AI agent 透過單一 MCP/CLI 逆向工程原生二進位、Electron/JS 應用、.NET、APK 與網站行為的工具集。",
+      "summary": "REA(rea-agents)是以 TypeScript 撰寫的 MCP server 與 CLI,把 Hopper、Ghidra、IDA、JADX、Binwalk/Unblob、Playwright 等逆向分析工具整合給 coding agent 使用。分析在本機執行,結果附帶證據、限制與未知項目;setup 精靈可自動註冊到 Claude Code、Cursor、Codex 等十餘種 agent,並附工作流程 skill。",
+      "category": "ai-ml",
+      "highlights": [
+        "涵蓋面廣:原生二進位、JS/Electron、.NET 託管程式碼、APK、韌體、瀏覽器執行期觀察",
+        "支援 Hopper、Ghidra(含 Windows 與 NativeAOT 擴充)、IDA 多種後端 provider",
+        "`npx rea-agents setup` 會先顯示變更、備份既有設定並經使用者同意後才套用",
+        "靜態 JS 分析無需外部引擎,也不執行目標應用程式",
+        "工程化完整:ADR 文件、自動產生的工具目錄、五語 README、多條真實工具的 CI 驗證流程"
+      ],
+      "use_cases": [
+        "讓 agent 輔助分析 Electron/JS 應用的行為與模組關係圖",
+        "CTF 或原生二進位的反組譯、反編譯與函式分析",
+        "Android APK 靜態分析與韌體解包檢視",
+        "研究競品功能的實作方式並產出重建參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為完整(安裝、各 provider 指南、ADR、錯誤契約 schema、五種語言 README)。測試規模龐大,約 254 個測試檔,涵蓋 domain、boundary、MCP、acceptance、conformance 等多層,並有 7 條 CI workflow 含真實 Hopper/Ghidra/瀏覽器驗證。推送頻繁、以 release-please 自動發版。專案很新、星數成長極快,介面仍可能變動。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 `curl -fsSL https://raw.githubusercontent.com/morluto/rea/main/install.sh | bash` 安裝方式;實際檢視 install.sh,內容為檢查 Node/npm 版本、向 GitHub API 查詢最新 release、再執行 `npm install --global rea-agents@版本`,並支援 --dry-run,使用者可先檢視。",
+          "package.json 的 prepare 腳本(scripts/prepare.mjs)僅在原始碼環境且 husky 存在時安裝 git hook,未見網路下載或任意程式執行。",
+          "npm 套件 files 中包含預編譯的 native/windows/build/rea-windows-x64.node 二進位檔,並有 verify-windows-native-artifact 腳本驗證;使用者若在意可自行檢查來源。",
+          "setup 會修改各 agent 的設定檔並可選擇安裝 Hopper(macOS/Linux 可能需系統授權);文件說明會先顯示變更並備份。",
+          "此工具本質上提供 agent 分析二進位與執行相關工具的能力,建議在隔離環境中分析不受信任的目標檔案。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對想讓 AI agent 做逆向工程的研發人員很值得關注:整合面廣、工程品質與測試紮實、文件完整;但專案極新且仰賴外部商用/第三方引擎,導入前宜先在隔離環境試用。",
+      "_mode": "full"
+    }
+  },
+  "deepseek-ai/DeepGEMM": {
+    "first_seen": "2026-10-07",
+    "last_seen": "2026-10-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-07": [
+        8749,
+        199,
+        9,
+        "DeepGEMM: clean and efficient BLAS kernel library on GPU",
+        "Cuda"
+      ]
+    },
+    "last_analyzed": "2026-10-07",
+    "analysis": {
+      "one_liner": "DeepSeek 官方開源的 GPU Tensor Core 核心庫,涵蓋 FP8/FP4/BF16 GEMM、Mega MoE、MQA indexer 等 LLM 關鍵運算,並以執行期 JIT 編譯。",
+      "summary": "DeepGEMM 是 DeepSeek 推出的統一 CUDA 核心庫,針對 NVIDIA SM90/SM100 GPU 提供 FP8、FP4、BF16 GEMM、分組 GEMM(contiguous/masked)、融合 EP 通訊的 Mega MoE、V3.2 lightning indexer 的 MQA logits 與 HyperConnection 等核心。所有 kernel 透過 DeepJIT 於執行期編譯,安裝時不需 CUDA 編譯,程式碼精簡,也適合作為學習 GPU kernel 優化的教材。",
+      "category": "ai-ml",
+      "highlights": [
+        "涵蓋 FP8/FP4/BF16 GEMM、分組 GEMM、Mega MoE(融合 dispatch、兩層線性、SwiGLU、combine 並重疊 NVLink 通訊)與 MQA indexer 等 LLM 核心運算",
+        "同時支援 Hopper (SM90) 與 Blackwell (SM100),含 UE8M0 打包 scaling factor、PDL、locality domain 等特性",
+        "以 DeepJIT 於執行期編譯 kernel,提供豐富的 DG_JIT_* 環境變數用於除錯、PTX/SASS dump 與快取控制",
+        "不重度依賴 CUTLASS 模板,程式結構清晰,適合閱讀學習 GPU kernel 優化",
+        "更新頻繁(README 記錄至 2026.09.30),另有 Ascend 版本與完整 tests 目錄"
+      ],
+      "use_cases": [
+        "在 H100/H800/B200 上部署 DeepSeek V3/V3.2 類模型的推論或訓練,取得高效 FP8/FP4 GEMM",
+        "MoE 模型的專家並行(EP)融合 kernel 與通訊重疊研究與整合",
+        "學習與參考 Hopper/Blackwell 的 TMA、WGMMA、tcgen05 等 kernel 實作",
+        "作為自研推論引擎的底層算子來源"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 清楚說明需求、API、環境變數與 Mega MoE 範例,另有 docs/scaling-factor-format.md。tests/ 涵蓋 attention、bf16、fp8_fp4、mega_moe、layout、sanitizer 等多項測試,但需實體 SM90/SM100 GPU 才能執行,且 CI 主要為 wheel 建置而非 GPU 測試。近期仍有持續推送,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "setup.py 在非本地版本模式(DG_USE_LOCAL_VERSION=0 且未設 DG_FORCE_BUILD)時,bdist_wheel 會嘗試從 GitHub Releases 下載預編譯 wheel(來源為 github.com/DeepSeek-AI/DeepGEMM),失敗才改為本地編譯;預設值為本地版本,故預設走本地建置",
+          "install.sh 與 build.sh 會執行 rm -rf build dist、python setup.py bdist_wheel,install.sh 並以 pip 安裝產出的 wheel;setup.py 建置過程會執行 git 指令並複製 csrc/docs 進套件",
+          "專案透過 git submodule 引入 NVIDIA/cutlass 與 deepseek-ai/DeepJIT,需使用 --recursive 取得,使用者宜留意第三方子模組內容",
+          "核心 kernel 於執行期以 nvcc 即時編譯並快取於 $HOME/.dj,執行環境需具備 CUDA 工具鏈",
+          "未發現 curl|bash、混淆程式碼或內嵌 base64 載荷",
+          "publish.yml 在打 tag 時會建置 wheel 並以 secrets 內的 PyPI token 發布,屬一般發佈流程"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "做 LLM 推論/訓練底層算子的工程師必看:DeepSeek 官方維護、涵蓋 Hopper/Blackwell 最新核心,兼具實用性與學習價值。",
       "_mode": "full"
     }
   }

@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-07",
+    "analyzed": 4,
+    "cached": 8,
+    "deferred": 0,
+    "top_name": "deepseek-ai/DeepGEMM",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-06",
     "analyzed": 5,
     "cached": 8,
