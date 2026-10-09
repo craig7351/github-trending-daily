@@ -716,8 +716,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-08",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -852,6 +852,13 @@
         2,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-09": [
+        281088,
+        1774,
+        4,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-09-26",
@@ -885,8 +892,8 @@
       "verdict": "若你日常使用 Claude Code 或其他 AI 編碼代理,這套技能包能有效補上「需求對齊、測試紀律、程式碼審查」的流程缺口,值得安裝試用,但本質是提示工程集合而非傳統軟體庫,程式碼量與測試皆非重點。",
       "_mode": "full"
     },
-    "total_days_on_trending": 20,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 21,
+    "consecutive_days_on_trending": 3
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -8159,10 +8166,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-08",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 12,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 13,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -8245,6 +8252,13 @@
         44974,
         825,
         5,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-10-09": [
+        46364,
+        1160,
+        2,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -13669,10 +13683,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-08",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -13713,6 +13727,13 @@
         97725,
         578,
         8,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-10-09": [
+        98476,
+        670,
+        5,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
       ]
@@ -17696,10 +17717,10 @@
   },
   "liquidslr/system-design-notes": {
     "first_seen": "2026-09-10",
-    "last_seen": "2026-09-11",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-10": [
         18001,
@@ -17714,36 +17735,45 @@
         7,
         "Notes of the book System Desgin Interview - An Insider's Guide",
         ""
+      ],
+      "2026-10-09": [
+        24619,
+        393,
+        9,
+        "Notes of the book System Desgin Interview - An Insider's Guide",
+        ""
       ]
     },
-    "last_analyzed": "2026-09-10",
+    "last_analyzed": "2026-10-09",
     "analysis": {
+      "one_liner": "《System Design Interview》第一、二冊的章節筆記整理,涵蓋 28 個經典系統設計題目與延伸閱讀。",
+      "summary": "這是針對 Alex Xu《System Design Interview - An Insider's Guide》Vol 1 與 Vol 2 所做的章節筆記,依章節分資料夾,從擴展架構、限流器、一致性雜湊到支付系統、股票交易所共 28 章。README 另附各主題的論文、工程部落格與影片等延伸資源,作者註明筆記仍在持續更新。",
       "category": "learning-resource",
-      "one_liner": "彙整《System Design Interview》(Vol 1、2)書籍內容的系統設計讀書筆記",
-      "summary": "此專案是根據 Alex Xu 所著《System Design Interview - An Insider's Guide》第一、二冊整理的讀書筆記,涵蓋 28 個經典系統設計主題(如速率限制器、一致性雜湊、URL 縮短服務、聊天系統、YouTube、Google Drive 等),每章附有延伸閱讀資源連結,方便讀者快速複習系統設計面試常考主題。",
       "highlights": [
-        "涵蓋 28 個章節,對應書籍完整目錄結構,方便對照原書複習",
-        "每個主題附上延伸閱讀資源(如 Amazon Dynamo、Google BigTable、Discord 架構文等一手技術文獻)",
-        "另有外部平台 pagefy.io 提供更完整的筆記閱讀體驗",
-        "作為系統設計面試準備的輔助資源,對求職者有實用價值"
+        "涵蓋兩冊共 28 章,從基礎擴展到支付、錢包、股票交易所等進階題目",
+        "每章獨立資料夾,結構清楚,方便按需查閱",
+        "附 Dynamo、Bigtable、Snowflake、Discord 等經典論文與工程文章連結",
+        "提供線上閱讀版本(pagefy.io)",
+        "GitHub 星數逾 2.4 萬,今日仍有 +393 的成長"
       ],
       "use_cases": [
-        "準備系統設計面試(尤其對照 Alex Xu 書籍複習)的工程師",
-        "想快速瀏覽系統設計經典主題摘要與延伸資源的學習者",
-        "作為 awesome list 或面試準備資源清單的補充連結"
+        "準備系統設計面試時快速複習各章重點",
+        "作為閱讀原書前後的摘要與速查筆記",
+        "依延伸資源深入研究分散式系統核心論文",
+        "AI 工程師補強後端架構與大規模系統設計背景"
       ],
       "quality": {
         "docs": 3,
         "tests": 1,
         "activity": 3,
-        "comment": "資源彙整類,測試不適用。README 結構清楚,章節目錄完整,但作者自述「仍在整理中」,部分章節內容深度未知(僅有目錄連結,無法從 README 判斷實際筆記品質)。最後推送時間為 2026-08-12,約一個月前,更新頻率中等。"
+        "comment": "資源彙整類,測試不適用。README 目錄與延伸資源整理清楚,但標示為進行中,且未標示授權;內容為依書所做的筆記,最後推送為 2026-08-12,更新頻率偏低,但熱度持續。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 3,
-      "verdict": "對準備系統設計面試者是實用的複習索引與資源清單,但屬於筆記彙整而非原創技術內容,建議搭配原書或作者的 pagefy.io 網站一起使用。",
+      "verdict": "系統設計面試備考的實用速查筆記,內容以原書為底,適合搭配原書使用;不需安裝,值得收藏但非必看。",
       "_mode": "light"
     }
   },
@@ -19911,10 +19941,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-20",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -19943,42 +19973,50 @@
         13,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
+      ],
+      "2026-10-09": [
+        27567,
+        392,
+        7,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-17",
+    "last_analyzed": "2026-10-09",
     "analysis": {
-      "one_liner": "Anthropic 官方開源的 Claude Cowork/Claude Code 外掛市集,收錄多個以角色為導向的知識工作外掛。",
-      "summary": "這個 repo 是 Anthropic 自家團隊打造並開源的 Claude 外掛集合(sales、legal、finance、data、bio-research 等),讓 Claude 針對特定職能具備技能(skills)、斜線指令(commands)與外部工具連結(MCP connectors)。整體以 Markdown + JSON 為主,幾乎「無程式碼、無建置流程」,唯一例外是 bio-research 外掛內含實際的 Python 腳本(如抓取 NCBI/GEO/SRA 資料、轉換儀器資料格式)。",
+      "one_liner": "Anthropic 官方開源的角色型外掛集合,以 Markdown 與 JSON 為 Claude Cowork / Claude Code 提供銷售、法務、財務、資料等職能的技能、斜線指令與 MCP 連接器。",
+      "summary": "這是 Anthropic 官方的 Claude 外掛市集,內含 11 個外掛(productivity、sales、legal、finance、data、bio-research 等)。每個外掛由 skills、commands 與 .mcp.json 連接器組成,主體是 Markdown 與 JSON,不需要建置步驟。使用者可用 `claude plugin marketplace add` 安裝,再依公司流程客製。",
       "category": "ai-ml",
       "highlights": [
-        "官方出品,由 Anthropic 直接維護並用於自家內部工作流程,可信度高",
-        "涵蓋 sales、legal、finance、marketing、customer-support、data、bio-research 等 11+ 種角色,每個外掛結構一致(plugin.json + .mcp.json + commands/ + skills/)",
-        "擁有異常成熟的 CI 治理機制:scan-plugins.yml 會用 Claude 對外部提交的外掛做政策掃描(檢查隱藏 hook、未揭露的遙測、跨服務憑證外洩等),並有驗證快取、自動回退失敗提交等機制",
-        "bio-research 外掛內的 Python 工具(NCBI/GEO/SRA 擷取、ASM 格式轉換)程式碼結構清晰、有型別註記與例外處理,品質優於一般範例腳本",
-        "設計上鼓勵企業自行客製化(替換 MCP connector、加入公司術語與流程),而非直接套用預設值"
+        "官方出品,涵蓋 11 種職能,並提供 cowork-plugin-management 外掛協助建立自訂外掛",
+        "結構統一(.claude-plugin/plugin.json、.mcp.json、commands/、skills/),純檔案式,容易閱讀與改寫",
+        "透過 MCP 串接 Slack、HubSpot、Snowflake、PubMed 等數十種外部工具",
+        "bio-research 附有 nextflow、scvi-tools、單細胞 QC 等含 Python 腳本的深度技能",
+        "CI 內建以 Claude 做政策掃描(scan-plugins),並有外部 PR 範圍守門與 MCP URL 檢查"
       ],
       "use_cases": [
-        "企業導入 Claude Cowork/Claude Code,想快速取得特定職能(業務、法務、財務、產品等)的最佳實踐工作流程範本",
-        "作為建立自家內部外掛的參考架構,學習 skills/commands/connectors 的標準寫法",
-        "生技/製藥研發團隊可直接使用 bio-research 外掛串接 PubMed、ClinicalTrials.gov、Benchling 等工具",
-        "研究 Anthropic 如何用 LLM 做外掛安全政策掃描(scan-plugins.yml + policy/prompt.md)作為自動化治理案例參考"
+        "企業團隊以官方範本客製出符合自家流程的 Claude 外掛",
+        "學習如何撰寫 SKILL.md、斜線指令與 MCP 設定",
+        "生醫或資料團隊直接使用 bio-research、data 外掛輔助分析工作",
+        "自行建立內部外掛市集時參考 marketplace.json 與 CI 治理做法"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "文件品質極高,每個外掛都有清楚的 README、SKILL.md 與角色說明,頂層 README 也完整交代架構與客製化方式。多數外掛本身是宣告式的 Markdown/JSON,沒有傳統單元測試,但有一套自建的 CI 政策掃描(scan-plugins.yml)對每個外部提交的外掛做安全審查,某種程度取代了傳統測試的把關角色;bio-research 內的 Python 腳本則未見對應的 unit test。今日剛登上 trending 且最後推送時間為當日,活躍度非常高。"
+        "comment": "README 清楚,各外掛另有 README 與 CONNECTORS.md。主體是內容檔案,所以沒有傳統單元測試;品質控管靠 CI,包括政策掃描、MCP URL 檢查與 PR 範圍守門。Python 腳本(例如 check_environment.py)使用 dataclass 與型別標註,風格整潔。最近一次推送在 2026-10-08,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "repo 內大多數外掛僅由 Markdown 與 JSON 組成,未發現 setup.py/postinstall/preinstall 等安裝期任意程式碼執行機制,也未發現 curl|bash 或 iwr|iex 型態的安裝腳本(grep 命中的檔案多為文件中引用第三方 API 的說明,如 Zoom SDK、Canva API 文件,非實際安裝流程)",
-          "bio-research 外掛內的 Python 腳本(如 ncbi_utils.py)會對 NCBI、ENA 等公開生醫資料庫發出 HTTPS 請求,屬於功能本身需要的正常網路存取,未見硬編碼異常網域或私有 IP",
-          ".github/workflows/scan-plugins.yml 會呼叫 Claude 對外部貢獻的外掛內容做政策掃描,並在 prompt.md 中明確要求檢查隱藏/未揭露的 hook、遙測與跨服務憑證外洩,顯示專案本身已將外掛安全風險的把關內建進 CI 流程"
+          "外掛本身以 Markdown 與 JSON 為主,未見 npm 生命週期腳本、curl|bash 安裝器或混淆程式碼。",
+          "各外掛的 .mcp.json 會連線至第三方遠端 MCP 伺服器(如 pubmed.mcp.claude.com、mcp.consensus.app、mcp.k.owkin.com 等),安裝後資料會經由這些服務,使用者宜自行確認信任範圍與授權權限。",
+          "bio-research 等外掛附有 Python 腳本(如 check_environment.py 會呼叫 docker、nextflow 等本機指令),由 Claude 代為執行時應留意其行為。",
+          "CI 工作流程 scan-plugins.yml 使用 OIDC 聯合驗證,並在檔案中寫有組織與服務帳號識別碼,屬 CI 設定常見做法,不含長期金鑰。"
         ]
       },
       "star_rating": 4,
-      "verdict": "官方出品、文件完整、治理機制成熟,若團隊已在用 Claude Cowork/Code 值得直接安裝參考,但多數外掛屬宣告式範本而非程式碼庫,技術深度因人而異。",
+      "verdict": "想了解 Claude 外掛與技能的官方寫法,或要替團隊客製角色型工作流程,這個專案值得收藏;若期待可執行的程式碼框架則不太適合。",
       "_mode": "full"
     }
   },
@@ -24541,10 +24579,10 @@
   },
   "boykopovar/AnyPS5": {
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-08",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-06": [
         4963,
@@ -24564,6 +24602,13 @@
         10618,
         2716,
         3,
+        "Tool for automatic PS5 executables porting to Linux and Windows",
+        "C++"
+      ],
+      "2026-10-09": [
+        15778,
+        4669,
+        1,
         "Tool for automatic PS5 executables porting to Linux and Windows",
         "C++"
       ]
@@ -24732,10 +24777,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-08",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -24748,6 +24793,13 @@
         15170,
         4655,
         1,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-09": [
+        26543,
+        7738,
+        3,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
       ]
@@ -24848,15 +24900,22 @@
   },
   "EpicGames/raddebugger": {
     "first_seen": "2026-10-08",
-    "last_seen": "2026-10-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-08": [
         7860,
         90,
         7,
+        "A native, user-mode, multi-process, graphical debugger.",
+        "C"
+      ],
+      "2026-10-09": [
+        8109,
+        279,
+        6,
         "A native, user-mode, multi-process, graphical debugger.",
         "C"
       ]
@@ -24948,6 +25007,58 @@
       },
       "star_rating": 4,
       "verdict": "若你在 macOS 上大量並行使用 AI 編碼代理,cmux 值得立即試用;非 macOS 使用者則無法使用。",
+      "_mode": "light"
+    }
+  },
+  "storytold/artcraft": {
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-09": [
+        7962,
+        2103,
+        8,
+        "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-10-09",
+    "analysis": {
+      "one_liner": "面向藝術家與影像創作者的「AI 創作 IDE」,以 Rust 打造,結合 2D/3D 場景編排與多家影像/影片模型。",
+      "summary": "ArtCraft 是一套桌面端 AI 影像與影片創作工具,主張把「下 prompt」變成「先搭場景再生成」:先在 2D 畫布與 3D 場景中安排構圖、角色姿勢與鏡頭,再交給模型生成。它整合 ArtCraft 自家模型目錄(README 稱共 62 個)以及 Grok、Midjourney、Sora、World Labs 等供應商,試圖解決純文字提示難以精準控制構圖與角色一致性的問題。",
+      "category": "app",
+      "highlights": [
+        "以 3D 場景編排(角色姿勢、相機位置、Kitbashing)引導生成,提升構圖與角色一致性的可控性",
+        "支援 Image to 3D Mesh、Image to Location、2D/3D 合成、去背與 inpainting 等完整創作流程",
+        "聚合多家模型:Nano Banana、GPT Image、FLUX、Seedream、Seedance、Kling、Veo、Sora、Midjourney、Marble 等",
+        "Rust 開發,提供桌面版下載與從原始碼建置文件",
+        "單日 +2103 星,趨勢動能強,README 附大量 demo 預覽"
+      ],
+      "use_cases": [
+        "影視/分鏡前期視覺化:先 blocking 場景與鏡頭再生成鏡頭畫面",
+        "設計師需要角色身分一致、多鏡頭同場景的 AI 影像製作",
+        "比較與切換多家影像/影片生成模型的統一工作台",
+        "研究 Rust 桌面應用整合 3D 場景與生成式 AI 的架構"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 排版完整、功能展示以 demo 預覽呈現,模型清單詳盡;內容偏產品行銷。測試部分僅憑 README 無法評估。最近推送為 2026-10-07,且正處於趨勢榜高峰,活躍度高。授權標示為「Other」,商用前需自行確認條款。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供官網桌面版下載、GitHub releases 與從原始碼建置三種取得方式,未見 curl | bash 類安裝指令。",
+          "產品會串接多家第三方模型供應商,使用時可能涉及帳號或 API 憑證與雲端上傳,建議留意資料與費用設定。",
+          "本次僅閱讀 README,未對原始碼進行審查。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想用「場景編排」取代純 prompt 的 AI 影像/影片創作者值得關注;授權為「Other」,商用前請先確認條款。",
       "_mode": "light"
     }
   }
