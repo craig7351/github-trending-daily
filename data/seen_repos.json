@@ -716,8 +716,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-09",
-    "days_on_trending": 3,
+    "last_seen": "2026-10-10",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -859,41 +859,56 @@
         4,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-10": [
+        282710,
+        1687,
+        3,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-09-26",
+    "last_analyzed": "2026-10-10",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "Matt Pocock 整理的一套 AI 編碼代理(Claude Code、Codex 等)技能包,把「grilling 訪談、TDD、程式碼審查、規格轉票券」等工程紀律封裝成可安裝的 Skill。",
-      "summary": "這個專案不是傳統程式碼庫,而是一組給 AI 編碼代理使用的 Markdown「Skill」定義(SKILL.md + 輔助文件),涵蓋需求釐清(grill-me)、規格轉票券(to-spec/to-tickets)、TDD、程式碼審查、架構治理、合併衝突處理等日常工程流程。可透過 Claude Code plugin 或 `npx skills@latest add` 安裝到任何代理環境中,目的是讓 AI 產出更貼近使用者意圖、可維護的程式碼,而非「vibe coding」。",
+      "category": "ai-ml",
+      "one_liner": "Matt Pocock 每天實際使用的 agent skills 集合,以小而可組合的方式取代 GSD、BMAD 等重流程框架。",
+      "summary": "這是一組以 Markdown(SKILL.md)撰寫的 coding agent 技能,涵蓋 grilling 訪談、領域建模(GLOSSARY/ADR)、TDD、除錯、任務拆解、code review 與 PR 等工程流程。可透過 Claude Code、Codex、Copilot、Gemini CLI 的 plugin 機制或 npx skills 安裝,再用 /setup-matt-pocock-skills 設定 issue tracker 與標籤。主打讓開發者保有流程控制權,而非被整套方法論綁住。",
       "highlights": [
-        "以 SKILL.md 為核心的可組合技能設計,明確區分 user-invoked(如 /grill-me)與 model-invoked(如 tdd、code-review)兩種呼叫方式",
-        "grill-with-docs / domain-modeling 等技能會同步維護 CONTEXT.md 與 ADR,建立專案共享詞彙,減少代理產出冗長或誤解的程式碼",
-        "透過 Changesets + GitHub Actions 自動化版本管理,並用 scripts/sync-plugin-version.mjs 確保 package.json 與 Claude plugin 版本同步",
-        "同時支援 Claude Code 官方 marketplace 安裝與 skills.sh 的可編輯拷貝安裝兩種哲學,並在 CLAUDE.md 中明訂嚴謹的貢獻規範(如禁用 em-dash、技能分桶規則)"
+        "以 grill-me / grill-with-docs 先對齊需求,並同步累積 GLOSSARY.md 與 ADR,降低 agent 囉嗦與誤解",
+        "tdd 技能強調預先約定 seam、垂直切片與反模式(tautological、實作耦合),規範具體可行",
+        "skills 分為使用者觸發與模型觸發兩類,規則清楚且可組合(implement、implement-spec、wayfinder 等)",
+        "同時支援 Claude Code、Codex、Copilot、Gemini 等多種 agent,並附 openai.yaml 設定",
+        "以 changesets 管理版本與 CHANGELOG,並有 ADR 與 out-of-scope 文件記錄設計取捨"
       ],
       "use_cases": [
-        "在既有專案中加入標準化的 AI 協作流程,強制代理先釐清需求(grill-me/grill-with-docs)再動工",
-        "導入 TDD 紅綠燈循環與 code-review 雙軸(標準/規格)審查,提升代理產出程式碼品質",
-        "大型工作拆解為可追蹤的票券(to-tickets/wayfinder),搭配 GitHub、Linear 或本機檔案作為 issue tracker",
-        "團隊想維護一份對齊的網域詞彙(CONTEXT.md/ADR),降低代理與人類溝通落差"
+        "為 Claude Code / Codex 團隊建立一致的需求對齊與 TDD 工作流程",
+        "在既有專案導入共用術語表(GLOSSARY)與 ADR,減少 agent 的冗長輸出",
+        "參考其技能撰寫方式,學習如何為 agent 設計小而可組合的 SKILL.md",
+        "以 triage、to-tickets、implement-spec 串接 issue tracker 進行規格到實作的流程"
       ],
       "quality": {
         "docs": 5,
-        "tests": 1,
+        "tests": 2,
         "activity": 5,
-        "comment": "文件品質極高,README、CLAUDE.md、AGENTS.md、各 SKILL.md 與 docs/ 目錄互相對應,規範清楚且有 ADR 記錄設計決策;但本質是 Markdown 提示詞與少量 Shell 腳本,沒有自動化測試套件(不適用傳統單元測試,scripts 也僅是簡單檔案操作);專案有 GitHub Actions 自動化版本發布與大量 changesets,顯示維護活躍。"
+        "comment": "README 清楚說明動機、安裝與每個技能用途,docs/ 下另有各技能文件、ADR、SCOPE 與 GLOSSARY。內容主要是提示詞文件而非程式碼,因此沒有傳統單元測試,僅有 release 與 issue 分流的 GitHub Actions 及版本同步檢查腳本。最後推送時間為 2026-10-09,changeset 與 commit 紀錄顯示維護頻繁。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "package.json 只有 changeset 相關 scripts,沒有 preinstall/postinstall 等生命週期腳本,devDependencies 僅為 @changesets 官方套件",
+          "README 的安裝方式是 claude plugin install、codex plugin add,以及 npx skills@latest add,屬於從外部來源取得並安裝內容,使用者可自行評估來源",
+          "scripts/link-skills.sh 為維護者開發用腳本,會在 ~/.claude/skills 與 ~/.agents/skills 建立符號連結,若目標已存在且非符號連結則以 rm -rf 刪除,執行前需留意",
+          "skills/misc/git-guardrails-claude-code 內的 block-dangerous-git.sh 為 hook,會封鎖 git push、reset --hard 等指令,屬於防護用途",
+          "這些 SKILL.md 會成為 agent 的指令內容,安裝後會影響 agent 行為(例如可呼叫子代理、發佈到 issue tracker),建議先閱讀再啟用",
+          "未發現混淆程式碼、內嵌 base64 載荷、寫死 IP 或已提交的二進位檔"
+        ]
       },
       "star_rating": 4,
-      "verdict": "若你日常使用 Claude Code 或其他 AI 編碼代理,這套技能包能有效補上「需求對齊、測試紀律、程式碼審查」的流程缺口,值得安裝試用,但本質是提示工程集合而非傳統軟體庫,程式碼量與測試皆非重點。",
+      "verdict": "想用 Claude Code 或 Codex 做嚴謹工程開發的人值得關注與參考,其 grilling、領域語言與 TDD 技能設計成熟且可自由改造,但內容屬提示詞性質,效果取決於個人工作流程。",
       "_mode": "full"
     },
-    "total_days_on_trending": 21,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 22,
+    "consecutive_days_on_trending": 4
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1061,8 +1076,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-09-19",
-    "days_on_trending": 6,
+    "last_seen": "2026-10-10",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1121,45 +1136,54 @@
         3,
         "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-10-10": [
+        45220,
+        326,
+        5,
+        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-09-14",
+    "last_analyzed": "2026-10-10",
     "analysis": {
       "category": "devtool",
-      "one_liner": "阿里巴巴內部驗證兩年、服務數萬名工程師後開源的 AI 程式碼審查 CLI 工具",
-      "summary": "Open Code Review 結合「確定性工程 pipeline」與「LLM Agent」的混合架構,讀取 Git diff 後交給可設定的 LLM 進行逐行精準審查,內建多語言規則集(NPE、執行緒安全、XSS、SQL injection 等)。相較於用 Claude Code 之類的通用 Agent 做 code review,官方基準測試顯示其在同模型下有更高的 Precision/F1,且 token 消耗僅約 1/9。",
+      "one_liner": "阿里巴巴開源的 AI 程式碼審查 CLI,以確定性工程流程搭配 LLM Agent,產出精準到行的審查意見。",
+      "summary": "Open Code Review(ocr)源自阿里內部的 AI Code Review 助手,以 Go 撰寫。它讀取 Git diff,由確定性邏輯負責選檔、檔案分組、規則比對,再交給具備工具呼叫能力的 Agent 審查,並由獨立的定位與反思模組修正行號與內容。主要解決通用 Agent 審查時覆蓋不全、行號漂移、品質不穩的問題。",
       "highlights": [
-        "核心用 Go 撰寫,搭配確定性檔案篩選、smart bundling、規則比對等工程手段,減少純語言驅動 Agent 的不穩定性",
-        "提供 50 個開源專案、200 個真實 PR、1505 筆人工標註的 AACR-Bench 基準資料集(公開於 Hugging Face)佐證效果",
-        "CI 非常嚴謹:gofmt 檢查、go vet、govulncheck、race detector、90% 覆蓋率門檻、跨平台交叉編譯與 Windows 原生測試皆納入",
-        "支援多種整合方式:CLI、GitHub Actions、GitLab/Gerrit/Bitbucket CI、VSCode 外掛,以及 Claude Code / Codex / Cursor 的 plugin 與 delegation 模式",
-        "release 二進位檔使用 Sigstore/GitHub Artifact Attestations 簽章,並附 SHA256 checksum 供驗證"
+        "混合架構:選檔、分組、規則比對由工程邏輯保證,Agent 只負責動態決策與上下文檢索",
+        "README 宣稱在 AACR-Bench(200 個 PR、10 種語言)上,相同模型下 Precision 與 F1 高於 Claude Code,token 用量約 1/9,但 Recall 較低(官方宣稱,未經本次驗證)",
+        "支援 review、scan(全檔掃描)、session 續跑,以及 delegation 模式(由 Claude Code、Codex、Cursor、Kimi 等自身 LLM 審查,無須另設 API key)",
+        "提供 GitHub Action、GitLab CI、Gerrit 整合,並輸出 JSON 與 SARIF",
+        "支援 OpenAI 與 Anthropic 相容端點及 MCP 擴充,文件網站為多語系"
       ],
       "use_cases": [
-        "在 CI/CD pipeline 中自動化 PR 審查,減少人工 code review 負擔",
-        "審查未熟悉的大型程式碼庫或無明顯 diff 的目錄(ocr scan 全檔案掃描模式)",
-        "已使用 Claude Code / Cursor / Codex 的團隊,想要更精準、token 成本更低的專用審查 Agent",
-        "需要內建 NPE、執行緒安全、XSS、SQL injection 等規則的多語言靜態審查輔助"
+        "在 CI/PR 流程中自動做行級程式碼審查",
+        "審查不熟悉的程式庫或沒有 diff 的目錄(ocr scan)",
+        "在 Claude Code、Codex、Cursor 等 AI 編碼助手中,以外掛或技能形式加入審查指令",
+        "團隊以自訂規則(如 NPE、執行緒安全、XSS、SQL injection)統一審查標準"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件非常完整(多語系 README、CLI Reference、CONTRIBUTING 多國語言版本),原始碼中的 Go 檔案註解清楚說明邊界條件與設計取捨而非贅述表面邏輯。測試覆蓋率在 CI 中強制門檻 90%,並有 237+ 個 _test.go 檔案,涵蓋 agent、diff、llm、viewer 等模組;CI 另包含 gofmt、go vet、govulncheck、race detector、跨平台交叉編譯與 Windows 原生測試,工程嚴謹度在開源專案中屬上乘。最近一次推送為 2026-09-12,活躍度高。"
+        "comment": "README 內容完整,另有文件網站、多語系翻譯、CONTRIBUTING、GOVERNANCE、SECURITY 與 ASSURANCE_CASE。Go 與 Node 測試檔多達 237 個,涵蓋 cmd 與 internal 各模組。CI 工作流程齊全,包含 CodeQL、action 與 plugin 契約檢查、release;README 標示 OpenSSF Gold 徽章(未查證)。最近一次推送為 2026-10-10,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "npm 套件的 postinstall 會執行 scripts/install.js,從 GitHub Releases 下載對應平台的預編譯二進位檔;程式碼中已限制僅接受 https 網址(拒絕非 HTTPS 來源),並在下載後以 SHA256 checksum 驗證完整性,驗證失敗會刪除檔案並報錯",
-          "官方 release 二進位檔與 checksum 另以 Sigstore(GitHub Artifact Attestations)簽章,SECURITY.md 提供 gh attestation verify 指令供使用者自行驗證"
+          "根目錄 package.json 設有 postinstall(node scripts/install.js),安裝 npm 套件時會執行此腳本;腳本會依平台從 GitHub Releases 下載 Go 二進位檔,程式中有拒絕非 HTTPS 下載的檢查,package.json 亦設定了 sha256sum.txt 的 checksum 網址",
+          "npm 套件另列 optionalDependencies 的平台專屬套件(@alibaba-group/ocr-*),屬常見的二進位發佈做法",
+          "文件與 install.sh 提供 curl -fsSL https://open-codereview.ai/install.sh | sh 的安裝方式,使用者可自行先下載檢視內容再執行",
+          "工具需要設定 LLM API key,並會將變更的程式碼內容送往所設定的模型端點,用於私有程式碼時需留意資料外送範圍"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程成熟度與文件品質俱佳,搭配可驗證的效能基準與嚴謹 CI,值得台灣 AI/DevOps 團隊實際評估導入 CI pipeline。",
+      "star_rating": 4,
+      "verdict": "架構設計務實、測試與工程化程度高,是目前值得關注的 AI Code Review 工具,尤其適合想把審查流程放進 CI 或與 AI 編碼助手整合的團隊。",
       "_mode": "full"
     },
-    "total_days_on_trending": 10,
-    "consecutive_days_on_trending": 6
+    "total_days_on_trending": 11,
+    "consecutive_days_on_trending": 1
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -5835,10 +5859,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-10",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 17,
+    "total_days_on_trending": 18,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -5956,6 +5980,13 @@
         102817,
         677,
         6,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-10-10": [
+        103995,
+        436,
+        8,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -8166,10 +8197,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-09",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 13,
+    "last_seen": "2026-10-10",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 14,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -8259,6 +8290,13 @@
         46364,
         1160,
         2,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-10-10": [
+        47872,
+        1739,
+        4,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -19941,10 +19979,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -19978,6 +20016,13 @@
         27567,
         392,
         7,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ],
+      "2026-10-10": [
+        28262,
+        709,
+        6,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
       ]
@@ -24579,10 +24624,10 @@
   },
   "boykopovar/AnyPS5": {
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-09",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-10",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-06": [
         4963,
@@ -24609,6 +24654,13 @@
         15778,
         4669,
         1,
+        "Tool for automatic PS5 executables porting to Linux and Windows",
+        "C++"
+      ],
+      "2026-10-10": [
+        22396,
+        5868,
+        2,
         "Tool for automatic PS5 executables porting to Linux and Windows",
         "C++"
       ]
@@ -24777,10 +24829,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-09",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-10",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -24800,6 +24852,13 @@
         26543,
         7738,
         3,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-10": [
+        46358,
+        14927,
+        1,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
       ]
@@ -25012,15 +25071,22 @@
   },
   "storytold/artcraft": {
     "first_seen": "2026-10-09",
-    "last_seen": "2026-10-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-09": [
         7962,
         2103,
         8,
+        "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "Rust"
+      ],
+      "2026-10-10": [
+        11522,
+        3752,
+        9,
         "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "Rust"
       ]
@@ -25060,6 +25126,158 @@
       "star_rating": 4,
       "verdict": "想用「場景編排」取代純 prompt 的 AI 影像/影片創作者值得關注;授權為「Other」,商用前請先確認條款。",
       "_mode": "light"
+    }
+  },
+  "BerriAI/litellm": {
+    "first_seen": "2026-10-10",
+    "last_seen": "2026-10-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-10": [
+        60668,
+        95,
+        7,
+        "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-10",
+    "analysis": {
+      "one_liner": "開源 AI Gateway,以 OpenAI 格式統一呼叫 100+ LLM,提供 Python SDK 與 Proxy 伺服器,含成本追蹤、護欄與負載平衡。",
+      "summary": "LiteLLM 是 BerriAI 維護的開源 AI Gateway,可用單一 OpenAI 相容介面呼叫 OpenAI、Anthropic、Bedrock、Azure、Vertex AI 等上百種模型。既能當 Python SDK 嵌入程式,也能部署成 Proxy 伺服器供團隊集中管理,提供虛擬金鑰、花費追蹤、護欄、負載平衡與管理後台。近期更涵蓋 A2A 代理協定與 MCP Gateway,並以 Rust 核心強化效能。",
+      "category": "infra",
+      "highlights": [
+        "OpenAI 相容格式統一 100+ LLM 供應商,切換模型無需改寫程式碼",
+        "同時提供 Python SDK 與 Proxy Gateway,支援虛擬金鑰、花費追蹤、護欄、負載平衡",
+        "內建 MCP Gateway 與 A2A 代理協定支援,可接入 Cursor 等工具",
+        "README 宣稱 1k RPS 下 P95 延遲 8ms,並導入 Rust 核心",
+        "提供 Render、Railway、AWS、GCP 一鍵部署,並列出 Stripe、Netflix、OpenHands 等採用者"
+      ],
+      "use_cases": [
+        "企業內部集中管理多家 LLM API 金鑰、預算與用量",
+        "在應用程式中快速切換或備援不同模型供應商",
+        "為 Agent 或 IDE 提供統一的 MCP 工具閘道",
+        "自架 OpenAI 相容代理以接入 vLLM、NIM 等自有模型"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚、範例豐富並連結完整文件站;測試僅憑 README 評估,無法檢視程式碼。專案極活躍,最近推送為 2026-10-10,星數逾 6 萬。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 以 uv/pip 安裝套件,未見 curl | bash 類安裝方式",
+          "Proxy 會集中保管多家供應商金鑰與 master key,部署時應妥善設定存取控制與金鑰管理",
+          "僅審閱 README,未進行原始碼層級檢查"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "多模型 LLM 應用幾乎必備的閘道層,成熟且活躍,值得 AI 研發工程師持續關注與採用。",
+      "_mode": "light"
+    }
+  },
+  "Robbyant/lingbot-map": {
+    "first_seen": "2026-10-10",
+    "last_seen": "2026-10-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-10": [
+        17700,
+        110,
+        10,
+        "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-10",
+    "analysis": {
+      "one_liner": "Robbyant 推出的串流式 3D 重建前饋基礎模型,標示為 ECCV 2026 最佳論文候選。",
+      "summary": "LingBot-Map 提出 Geometric Context Transformer,以錨點上下文、姿態參考視窗與軌跡記憶,在單一串流框架中統一座標定錨、稠密幾何線索與長程漂移修正。搭配 paged KV cache 注意力,README 稱可在 518×378 解析度下以約 20 FPS 處理超過 10,000 幀的長序列。專案釋出模型權重、互動式 demo、離線渲染管線與評測腳本。",
+      "category": "ai-ml",
+      "highlights": [
+        "前饋式串流 3D 重建,結合 paged KV cache(FlashInfer),README 稱可處理逾 10,000 幀,並示範約 25,000 幀的長影片案例",
+        "Geometric Context Transformer 設計:錨點上下文、姿態參考視窗、軌跡記憶,用於抑制長序列漂移",
+        "權重同步發佈於 HuggingFace 與 ModelScope,授權為 Apache-2.0",
+        "提供 viser 互動 demo、windowed 長序列模式、天空遮罩與離線批次渲染,並釋出 KITTI、Oxford Spires 等資料集評測腳本",
+        "近期持續修正 KV cache 錯誤並加入 --compile 加速"
+      ],
+      "use_cases": [
+        "機器人/自駕的單目影片即時位姿與點雲重建研究",
+        "長影片(室內漫遊、空拍)的 3D 場景重建與視覺化",
+        "作為串流 3D 重建方法(如 VGGT 系列)的基準對照與評測",
+        "SLAM 替代方案的前饋式模型實驗"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 4,
+        "comment": "README 結構完整,涵蓋安裝、模型下載、多種 demo 與長序列參數說明、新聞更新與評測;僅憑 README 判斷,未檢視程式碼與測試。最後推送為 2026-10-06,維護頻繁,趨勢熱度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 安裝流程為 conda、pip install -e . 與 pip 安裝 flashinfer-python(執行時 JIT 編譯 CUDA kernel),未見 curl | bash 類指令",
+          "天空遮罩功能在首次使用時會自動從 HuggingFace 下載 skyseg.onnx;模型權重亦需從外部下載,建議確認來源",
+          "僅依 README 評估,未進行原始碼層級審查"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想研究串流式 3D 重建、長序列漂移修正的工程師值得關注:權重與評測皆開放、授權寬鬆,但需 CUDA GPU 環境。",
+      "_mode": "light"
+    }
+  },
+  "twostraws/SwiftUI-Agent-Skill": {
+    "first_seen": "2026-10-10",
+    "last_seen": "2026-10-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-10": [
+        5431,
+        65,
+        11,
+        "SwiftUI agent skill for Claude Code, Codex, and other AI tools.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-10-10",
+    "analysis": {
+      "one_liner": "Paul Hudson 製作的 SwiftUI Agent Skill,讓 Claude Code、Codex、Gemini 等 AI 工具寫出更現代、更無障礙、效能更好的 SwiftUI 程式碼",
+      "summary": "這是一組採用 Agent Skills 格式的 Markdown 規則,內容是 SwiftUI 程式碼審查與撰寫的最佳實踐。規則針對 LLM 常犯的錯誤,例如使用軟性棄用的 API、讓按鈕對 VoiceOver 隱形、造成效能問題等。專案本身沒有可執行程式碼,只有 SKILL.md 加上 11 份分主題的參考文件,並附 Claude Code plugin marketplace 設定。",
+      "category": "ai-ml",
+      "highlights": [
+        "規則針對 LLM 會犯的實際錯誤,例如 foregroundColor、cornerRadius、tabItem、單參數 onChange 等軟性棄用 API,內容具體、可操作",
+        "採用漸進式載入設計:SKILL.md 只放流程與輸出格式,再依需求載入 api、data、navigation、accessibility 等參考檔,可節省 token",
+        "涵蓋 iOS 26/27、Swift 6.4、iPhone Duo 摺疊螢幕、ToolbarOverflowMenu 等較新的主題,並提醒要依部署目標與 Xcode 版本判斷",
+        "支援多種安裝方式:`npx skills add`、Claude Code `/plugin marketplace add`,或直接複製;並附 openai.yaml 供 Codex 使用",
+        "作者是 Hacking with Swift 的 Paul Hudson,另有 SwiftData、Swift Concurrency、Swift Testing 等姊妹 skill"
+      ],
+      "use_cases": [
+        "在 Claude Code 或 Codex 中用 /swiftui-pro 審查現有 SwiftUI 專案,找出棄用 API 與無障礙問題",
+        "讓 AI 在開發新功能時遵循現代 SwiftUI 慣例,減少產出過時寫法",
+        "針對特定面向做局部審查,例如只檢查效能、導航或在地化",
+        "作為撰寫團隊內部 Agent Skill 的範本,參考其結構與 token 預算控管方式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 清楚,涵蓋安裝、使用方式與貢獻規範(強調精簡以節省 token)。規則內容具體、有細節與版本條件。專案沒有測試或 CI,這類純文件型 skill 的規則是否有效無法自動驗證。最後推送時間為 2026-10-07,版本 2.0.0,近期仍在維護。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "如果你用 AI 輔助開發 SwiftUI,這是值得安裝的高品質規則集。規則實用、結構精簡,但缺少自動化驗證,對非 Apple 平台開發者沒有價值。",
+      "_mode": "full"
     }
   }
 }

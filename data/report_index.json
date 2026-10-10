@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-10",
+    "analyzed": 5,
+    "cached": 6,
+    "deferred": 0,
+    "top_name": "BerriAI/litellm",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-09",
     "analyzed": 3,
     "cached": 6,
