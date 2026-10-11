@@ -716,8 +716,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-10",
-    "days_on_trending": 4,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -866,6 +866,13 @@
         3,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-11": [
+        284506,
+        1736,
+        6,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-10",
@@ -907,8 +914,8 @@
       "verdict": "想用 Claude Code 或 Codex 做嚴謹工程開發的人值得關注與參考,其 grilling、領域語言與 TDD 技能設計成熟且可自由改造,但內容屬提示詞性質,效果取決於個人工作流程。",
       "_mode": "full"
     },
-    "total_days_on_trending": 22,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 23,
+    "consecutive_days_on_trending": 5
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -7944,10 +7951,10 @@
   },
   "huggingface/transformers": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-09-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-12": [
         163808,
@@ -7969,38 +7976,47 @@
         15,
         "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
         "Python"
+      ],
+      "2026-10-11": [
+        167264,
+        96,
+        11,
+        "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-14",
+    "last_analyzed": "2026-10-11",
     "analysis": {
-      "one_liner": "Hugging Face Transformers:橫跨文字、視覺、音訊與多模態的模型定義框架,支援推論與訓練。",
-      "summary": "Transformers 提供統一的高階 API(如 Pipeline),讓使用者能快速使用 Hugging Face Hub 上超過百萬個預訓練模型 checkpoint。它作為「模型定義」的中樞,讓同一個模型定義能相容於多種訓練框架(Axolotl、DeepSpeed、PyTorch-Lightning)與推論引擎(vLLM、SGLang、TGI 等),降低跨生態系整合成本。",
-      "category": "ai-ml",
+      "one_liner": "Hugging Face 出品的模型定義框架,統一文字、視覺、音訊與多模態 SOTA 模型,涵蓋推論與訓練。",
+      "summary": "Transformers 是機器學習生態系的模型定義中樞,提供 pipeline 高階 API 與統一介面,支援 Hub 上超過 100 萬個預訓練檢查點。其模型定義被 vLLM、SGLang、TGI、Axolotl、Unsloth、DeepSpeed、llama.cpp、mlx 等訓練與推論框架共同採用,降低新模型的整合成本。",
+      "category": "framework",
       "highlights": [
-        "作為模型定義中樞,同時相容多種訓練框架與推論引擎(vLLM、SGLang、TGI、llama.cpp 等)",
-        "Pipeline API 三行程式碼即可完成文字生成、語音辨識、圖像分類、視覺問答等多模態任務",
-        "支援 1M+ 預訓練模型 checkpoint,涵蓋 Qwen、DeepSeek、Gemma、GLM 等主流 LLM/VLM",
-        "提供 CLI 工具(如 transformers chat/serve)方便本機互動測試模型",
-        "README 明確標示不適用場景(非通用神經網路建構工具箱、範例腳本僅供參考),降低誤用風險"
+        "作為生態系的模型定義標準,下游訓練與推論引擎皆沿用其定義",
+        "Pipeline API 以幾行程式碼涵蓋文字、語音、影像、VQA 等任務",
+        "Hub 上有超過 100 萬個相容檢查點,涵蓋 Qwen、Gemma、GLM、DeepSeek 等主流模型",
+        "模型檔刻意少抽象、可獨立使用,利於研究者快速修改實驗",
+        "提供 transformers serve 與 transformers chat 命令列工具,並有多國語言 README"
       ],
       "use_cases": [
-        "快速載入並推論 Hugging Face Hub 上的預訓練模型(文字生成、語音辨識、影像分類等)",
-        "作為訓練框架(DeepSpeed、FSDP、Axolotl)與推論引擎(vLLM、TGI)之間共通的模型定義層",
-        "研究人員快速實驗、複現論文模型架構",
-        "企業或開發者建置聊天機器人、多模態應用的模型後端"
+        "快速以預訓練模型做 LLM、ASR、影像分類等推論原型",
+        "微調與訓練開源模型,搭配 DeepSpeed、FSDP、Unsloth 等工具",
+        "研究者閱讀、修改模型實作以進行架構實驗",
+        "為 vLLM 等推論引擎或自家服務對接新模型定義"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 結構完整、範例豐富、多語言支援齊全,文件品質極佳;但本次評估僅based於README與metadata,未檢視程式碼與測試,故測試分數僅供參考;最後推送時間為2026-09-13,且今日仍在trending清單上,活躍度高。"
+        "comment": "README 結構完整,含安裝、快速上手、多模態範例、適用與不適用情境及多語系版本。測試僅依 README 判斷(有 CircleCI 徽章),未檢視程式碼。最近一次推送為 2026-10-11,維護極為活躍,累積星數逾 16 萬。"
       },
       "security": {
         "risk_level": "none",
-        "findings": []
+        "findings": [
+          "README 僅列出 pip / uv 安裝與從原始碼安裝的標準方式,未見 curl | bash 之類的指令;本次僅依 README 評估,未進行原始碼層級審查。"
+        ]
       },
       "star_rating": 5,
-      "verdict": "生態系地位穩固、文件與範例齊全、持續高度活躍,是 AI/ML 工程師必看且值得長期關注的核心專案。",
+      "verdict": "AI 研發工程師的基礎設施級必備函式庫,生態影響力極大且維護活躍,值得長期關注與熟悉。",
       "_mode": "light"
     }
   },
@@ -8197,10 +8213,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-10",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 14,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 15,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -8298,6 +8314,13 @@
         1739,
         4,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-10-11": [
+        48956,
+        1190,
+        4,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
     },
@@ -8404,10 +8427,10 @@
   },
   "hugohe3/ppt-master": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-13",
+    "last_seen": "2026-10-11",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-13": [
         45575,
@@ -8415,42 +8438,54 @@
         8,
         "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
         "Python"
+      ],
+      "2026-10-11": [
+        59461,
+        461,
+        9,
+        "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-13",
+    "last_analyzed": "2026-10-11",
     "analysis": {
+      "one_liner": "一套能在任何 agent 型 AI 工具內執行的 skill,把文件或主題轉成可在 PowerPoint 中繼續編輯的原生 .pptx,包含原生圖表、動畫與旁白。",
+      "summary": "PPT Master 是以 Python 腳本與提示詞組成的工作流程(skill),由 AI agent 驅動:先整理論點,再產生 SVG,最後轉成原生 DrawingML 形狀、圖表、表格、母片、轉場與動畫。它想解決 AI 簡報常見的問題:輸出被壓成圖片或文字方塊,無法再編輯。專案也支援套用自己的 .pptx 範本、用 edge-tts 從講者備註產生旁白,以及多家圖片生成後端。",
       "category": "ai-ml",
-      "one_liner": "用 AI 把文件或主題直接轉成原生 PowerPoint 簡報,而不只是套版填字。",
-      "summary": "PPT Master 是一個 Python 專案,讓 AI Agent 讀取來源文件或主題後,產出具備原生投影片母片、形狀、圖表/表格、轉場與動畫的可編輯 .pptx 檔案,還能將講者備忘稿轉成語音旁白,並支援套用使用者自訂的 PowerPoint 範本。整個流程在本機執行,資料不上傳雲端平台,訴求「原生深度」勝過單純的排版美化。",
       "highlights": [
-        "產出真正的原生 PowerPoint 物件(圖表、表格、母片),而非純文字方塊拼版",
-        "支援講者備忘稿自動轉語音旁白,甚至可生成影片",
-        "可套用使用者自有的 .pptx 範本延續原有設計語言",
-        "以 Agent 工作流形式運作於任意具 Agent 能力的 AI 工具中,資料留在本機,不綁定特定平台或模型",
-        "上線第一天即衝上 GitHub trending 第 8 名,單日新增 476 顆星,成長動能強勁"
+        "輸出原生 PowerPoint 物件,包含形狀、連接線、資料驅動的圖表與表格、slide master/layout 繼承,而不是圖片或文字方塊",
+        "同一套流程可做新稿生成、範本萃取與套用、既有 pptx 內容替換,以及加入轉場、動畫與旁白",
+        "可接 Claude、GPT、Gemini、Kimi 等任何支援 agent 的 AI IDE,流程在本機執行,資料不經第三方平台(模型呼叫除外)",
+        "整合 16 種以上圖片生成後端與多個圖庫來源(Pexels、Pixabay、Wikimedia 等)",
+        "scripts/tests 下有 50 多個測試檔,涵蓋原生圖表保真度、範本流程、文字量測與本機伺服器安全"
       ],
       "use_cases": [
-        "需要快速將研究報告、Word/PDF 文件轉成可編輯簡報草稿的知識工作者",
-        "希望簡報維持公司範本風格,但由 AI 自動填充內容與圖表的企業用戶",
-        "製作教學或會議用有聲旁白簡報(如論文導讀)的場景",
-        "作為 AI Agent 工具鏈中「文件轉簡報」的整合元件,供開發者串接自動化流程"
+        "把 PDF、Word、網頁或 Excel 資料整理成可再編輯的簡報初稿",
+        "套用企業既有 pptx 範本,批次產出符合品牌規範的報告",
+        "替既有簡報補上原生轉場、動畫,並從講者備註產生旁白音訊",
+        "研究或財務人員把論文、財報轉成含原生圖表的投影片"
       ],
       "quality": {
-        "docs": 4,
-        "tests": 2,
+        "docs": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "README 結構完整,提供 Live Demo、範例、FAQ、Roadmap 等連結,說明產品定位清楚,但內容中夾雜大量贊助商聯盟連結(如 Kimi、PackyCode 等 API 中繼服務),稀釋了技術說明密度。測試與程式碼品質無法從 README 判斷,僅能就文件本身評分;近期持續有推送更新,活躍度高。"
+        "comment": "文件非常完整,有中英文 README、getting-started、技術設計、PowerPoint↔SVG 對照、FAQ、roadmap 與貢獻規範。scripts/tests 下有 50 多個測試檔,但沒有 .github/workflows,看不到自動化 CI。最後推送在 2026-10-08,近期每天都有提交,維護活躍。程式碼模組化,依功能分成 pptx_ooxml、pptx_shapes、svg_to_pptx、image_backends 等目錄。核心邏輯大量依賴提示詞與 agent 流程,成果品質取決於所用模型。"
       },
       "security": {
-        "risk_level": "none",
+        "risk_level": "low",
         "findings": [
-          "README 中包含多個贊助商(Kimi、PackyCode、APIKEY.FUN、RunAPI、又雲智算)的聯盟推廣連結,屬於第三方付費 API 中繼服務廣告,使用前建議自行評估其服務條款與費用,與本專案安全性無直接關聯",
-          "README 截斷部分未見任何 curl | bash 或一鍵安裝腳本,無法評估完整安裝流程"
+          "未發現 package.json、setup.py 或安裝時自動執行的腳本,依賴只透過 pip install -r requirements.txt 安裝。",
+          "skills/ppt-master/scripts 下多個腳本會使用 subprocess(例如 update_repo.py、video_sound_mix.py、slice_images.py),用來呼叫 git、ffmpeg 等外部程式,屬於這類工具的一般做法。",
+          "web_to_md.py 與圖片後端會連到外部網路(任意網頁、各家圖片 API 與圖庫),需要使用者自行提供 API 金鑰(見 .env.example),建議不要把金鑰提交進版本庫。",
+          "svg_editor、confirm_ui、spec_review 會啟動本機 Flask/HTTP 伺服器,專案有 test_local_server_security.py 與 test_web_to_md_security.py 針對這部分測試。",
+          "narration.py 內嵌一小段 base64 PNG(48px 音訊標記圖示),用途明確,沒有看到其他長串編碼 payload。",
+          "依賴包含 PyMuPDF(AGPL-3.0),若要再散布含此依賴的套件,需先確認授權條款;requirements.txt 內已有說明。",
+          "README 內有多個贊助商的推廣連結(API 中轉服務),屬於贊助揭露;使用第三方 API 中轉服務時,請自行評估金鑰與資料外流風險。"
         ]
       },
       "star_rating": 4,
-      "verdict": "在「AI 生成 PPT」這個擁擠賽道中,強調原生 PowerPoint 深度與本機資料留存是差異化亮點,加上上線首日即快速攀升熱門榜,值得追蹤,但實際輸出品質仍需自行下載範例 .pptx 驗證。",
-      "_mode": "light"
+      "verdict": "針對「AI 產簡報但要保留原生可編輯性」這個需求,完成度與文件品質都很高,功能涵蓋範本、動畫與旁白。缺點是沒有 CI,而且品質依賴大型模型。做簡報自動化或 agent skill 設計的人很值得研究與試用。",
+      "_mode": "full"
     }
   },
   "infiniflow/ragflow": {
@@ -12446,10 +12481,10 @@
   },
   "multica-ai/andrej-karpathy-skills": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-09-09",
+    "last_seen": "2026-10-11",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-25": [
         206514,
@@ -12471,36 +12506,44 @@
         8,
         "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
         ""
+      ],
+      "2026-10-11": [
+        218282,
+        278,
+        13,
+        "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        ""
       ]
     },
-    "last_analyzed": "2026-09-09",
+    "last_analyzed": "2026-10-11",
     "analysis": {
-      "category": "other",
-      "one_liner": "一份濃縮成單一 CLAUDE.md 的行為準則文件,教 Claude Code 避免常見的 LLM 寫程式壞習慣。",
-      "summary": "這個專案不含任何原始碼,核心是一份根據 Andrej Karpathy 對 LLM 寫程式問題的觀察所整理出的行為準則(CLAUDE.md),涵蓋「先思考再動手」「簡潔優先」「精準修改」「目標導向執行」四大原則。專案同時提供 Claude Code Plugin、Cursor Rule 等多種安裝方式,讓使用者能在不同 AI 編碼工具中套用相同準則。",
+      "one_liner": "一份源自 Karpathy 對 LLM 寫程式缺點觀察的 CLAUDE.md,用四條原則約束 Claude Code 的行為。",
+      "summary": "這個專案本質上是一份純文字行為準則,包含 CLAUDE.md、Claude Code plugin/skill 定義與 Cursor 規則檔,沒有可執行程式碼。它針對 LLM 常見毛病(默默做假設、過度設計、順手改無關程式碼、缺少驗證目標),提出「先想再寫、簡單優先、精準修改、目標驅動」四條原則。可用 plugin 指令安裝,或直接複製到各專案的 CLAUDE.md。",
+      "category": "devtool",
       "highlights": [
-        "內容濃縮成一份 CLAUDE.md,四大原則對應 Karpathy 提到的 LLM 常見問題(亂猜假設、過度工程化、動到不該動的程式碼)",
-        "同時支援 Claude Code Plugin 與 Cursor Rule 兩種安裝方式,涵蓋主流 AI 編碼工具",
-        "README 提供具體可驗證的成效指標(diff 減少、返工減少、提問提前),而非空泛口號",
-        "upstream 為 forrestchang/andrej-karpathy-skills,本 fork/鏡像帶有作者自家產品 Multica 的推廣連結"
+        "四條原則簡潔明確:Think Before Coding、Simplicity First、Surgical Changes、Goal-Driven Execution",
+        "同一套內容提供多種載體:CLAUDE.md、Claude Code plugin(含 marketplace.json)、SKILL.md 與 Cursor .mdc 規則",
+        "附 EXAMPLES.md、CURSOR.md 與簡體中文 README,說明如何套用與判斷是否生效",
+        "零依賴、零建置,可直接複製貼上或以 plugin 指令安裝,導入成本極低",
+        "「每一行修改都應能對應到使用者需求」的判準,容易在 code review 中檢驗"
       ],
       "use_cases": [
-        "想套用一套現成、經驗證的 prompt 準則來減少 Claude Code / Cursor 產生過度複雜或牽連過廣程式碼的團隊",
-        "希望在多個專案間共用一致 AI 編碼行為準則,而不想每個專案重寫 CLAUDE.md 的開發者",
-        "對「如何寫出讓 LLM 更聽話的指令文件」感興趣、想參考範例結構的人"
+        "放進團隊專案的 CLAUDE.md,降低 AI 產生冗長 diff 與順手重構的情形",
+        "作為自訂 CLAUDE.md 或 Cursor 規則的基底,再合併專案專屬規範",
+        "教學用途:向團隊說明如何以提示規範約束 coding agent 的行為"
       ],
       "quality": {
         "docs": 4,
         "tests": 1,
-        "activity": 2,
-        "comment": "文件內容清楚扎實、結構完整,但整個專案本質上就是文件,沒有原始碼、沒有測試、也沒有 CI 流程可供評估工程品質;README 標示 last pushed 為 2026-04-20,近期沒有更動,活躍度偏低。"
+        "activity": 3,
+        "comment": "文件清楚、結構完整,並有中英文版本與範例。專案只是提示詞文件,沒有測試與 CI,也無法量化成效;最後推送為 2026-04-20,維護頻率低,但內容本來就變動不大。star 數極高,主要反映話題熱度而非技術複雜度。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 2,
-      "verdict": "內容濃縮實用,值得花五分鐘讀完拿去套用,但沒有程式碼與持續維護,不必長期關注這個 repo 本身。",
+      "star_rating": 3,
+      "verdict": "內容精簡實用、導入成本近乎為零,適合直接參考或採用;但它只是一份提示詞,價值取決於你自己的調整,不必期待技術深度。",
       "_mode": "full"
     }
   },
@@ -17177,10 +17220,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-04",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -17221,6 +17264,13 @@
         25250,
         256,
         13,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-10-11": [
+        26319,
+        178,
+        5,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -19979,10 +20029,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -20023,6 +20073,13 @@
         28262,
         709,
         6,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ],
+      "2026-10-11": [
+        28822,
+        625,
+        12,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
       ]
@@ -22802,10 +22859,10 @@
   },
   "tensorflow/tensorflow": {
     "first_seen": "2026-09-27",
-    "last_seen": "2026-09-27",
+    "last_seen": "2026-10-11",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-27": [
         200455,
@@ -22813,38 +22870,49 @@
         5,
         "An Open Source Machine Learning Framework for Everyone",
         "C++"
+      ],
+      "2026-10-11": [
+        200730,
+        26,
+        8,
+        "An Open Source Machine Learning Framework for Everyone",
+        "C++"
       ]
     },
-    "last_analyzed": "2026-09-27",
+    "last_analyzed": "2026-10-11",
     "analysis": {
-      "file_path": "",
-      "one_liner": "Google 主導的開源機器學習框架,支援從研究到生產部署的完整生態系。",
-      "summary": "TensorFlow 是一個端到端的開源機器學習平台,提供穩定的 Python 與 C++ API,涵蓋深度學習、分散式訓練等應用場景。由 Google Brain 團隊發起,目前已發展出龐大的工具與社群生態,是業界最主流的 ML 框架之一。",
-      "category": "ai-ml",
+      "one_liner": "Google 主導的端到端開源機器學習框架,提供 Python/C++ API 與完整的訓練到部署生態系。",
+      "summary": "TensorFlow 是源自 Google Brain 的開源機器學習平台,涵蓋研究、訓練到部署的完整工具鏈。支援 CPU 與 CUDA GPU,並可透過 Device Plugin 支援 DirectX 與 macOS Metal,行動裝置則可用 LiteRT 部署。README 簡潔,主要導向官方文件、教學與社群資源。",
+      "category": "framework",
       "highlights": [
-        "20 萬顆星星、Apache-2.0 授權的頂級開源專案,產業採用度極高",
-        "支援 CPU/GPU/Docker 多種安裝方式,並涵蓋 Linux、macOS、Windows、Android、樹莓派等多平台建置",
-        "具備 OpenSSF Scorecard、OSS-Fuzz 模糊測試、CII Best Practices 等安全與工程實踐認證",
-        "官方文件、教學、白皮書、YouTube 頻道等資源齊全,學習資源豐富",
-        "今日 GitHub trending 第 5 名,單日新增 46 顆星,顯示持續活躍"
+        "端到端 ML 平台,涵蓋研究、訓練到生產部署",
+        "提供穩定的 Python 與 C++ API,另有其他語言的非保證相容 API",
+        "支援 CUDA GPU、tensorflow-cpu 精簡版、Metal/DirectX 外掛與 LiteRT 行動端",
+        "README 列有 OpenSSF Scorecard、OSS-Fuzz、CII Best Practices 等徽章",
+        "提供修補舊版本的明確指引(切換版本分支、cherry-pick 後自行建置)"
       ],
       "use_cases": [
-        "建立深度學習模型進行研究或生產部署",
-        "需要跨平台(CPU/GPU/行動裝置)ML 推論與訓練的專案",
-        "作為教學或課程中機器學習框架的教材"
+        "建構與訓練深度學習模型並部署到生產環境",
+        "在行動或邊緣裝置上以 LiteRT 執行推論",
+        "維護既有 TensorFlow 專案,或依版本分支修補安全漏洞",
+        "學習機器學習的教學與課程資源"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 文件完整,涵蓋安裝、貢獻指南、建置狀態與資源連結;僅憑 README 評估,未實際檢視程式碼與測試涵蓋率,最後推送時間為 2026-09-27,活躍度極高。"
+        "comment": "README 結構清楚,安裝、範例、貢獻與修補指南齊全,細節則導向官方網站。測試品質僅依 README 判斷(有 OSS-Fuzz 等徽章),未檢視原始碼。最近一天仍有推送,維護活躍。另外 README 的 Raspberry Pi 建置連結指向舊版 1.10,內容略顯過時。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "README 安裝方式為標準 pip install tensorflow / tensorflow-cpu,未見 curl | bash 之類的指令。",
+          "僅根據 README 評估,未進行原始碼層級審查。",
+          "README 提到可訂閱 announce 郵件列表取得安全更新,並提供修補舊版本的流程。"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "業界標竿級 ML 框架,長期穩定活躍,絕對值得收錄與關注。",
+      "star_rating": 4,
+      "verdict": "主流且成熟的 ML 框架,仍持續維護,是 AI 工程師必備的基礎知識,但今日上榜只是常態熱度,並非新動向。",
       "_mode": "light"
     }
   },
@@ -24624,10 +24692,10 @@
   },
   "boykopovar/AnyPS5": {
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-10",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-10-06": [
         4963,
@@ -24660,6 +24728,13 @@
       "2026-10-10": [
         22396,
         5868,
+        2,
+        "Tool for automatic PS5 executables porting to Linux and Windows",
+        "C++"
+      ],
+      "2026-10-11": [
+        26879,
+        5805,
         2,
         "Tool for automatic PS5 executables porting to Linux and Windows",
         "C++"
@@ -24829,10 +24904,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-10",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -24858,6 +24933,13 @@
       "2026-10-10": [
         46358,
         14927,
+        1,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-11": [
+        72843,
+        25793,
         1,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
@@ -25071,10 +25153,10 @@
   },
   "storytold/artcraft": {
     "first_seen": "2026-10-09",
-    "last_seen": "2026-10-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-09": [
         7962,
@@ -25087,6 +25169,13 @@
         11522,
         3752,
         9,
+        "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "Rust"
+      ],
+      "2026-10-11": [
+        14520,
+        3222,
+        3,
         "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "Rust"
       ]
@@ -25278,6 +25367,109 @@
       "star_rating": 4,
       "verdict": "如果你用 AI 輔助開發 SwiftUI,這是值得安裝的高品質規則集。規則實用、結構精簡,但缺少自動化驗證,對非 Apple 平台開發者沒有價值。",
       "_mode": "full"
+    }
+  },
+  "flutter/flutter": {
+    "first_seen": "2026-10-11",
+    "last_seen": "2026-10-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-11": [
+        179523,
+        88,
+        7,
+        "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+        "Dart"
+      ]
+    },
+    "last_analyzed": "2026-10-11",
+    "analysis": {
+      "one_liner": "Google 推出的跨平台 UI SDK,以單一 Dart 程式碼庫打造行動、網頁與桌面應用。",
+      "summary": "Flutter 是 Google 開源的 UI 工具包,使用 Dart 語言,並透過 Skia 與 Impeller 進行硬體加速渲染,可從單一程式碼庫編譯到 iOS、Android、Web、Windows、macOS 與 Linux。它處理跨平台開發中視覺一致性、效能與開發效率難以兼顧的問題,並提供有狀態熱重載與龐大的套件生態。",
+      "category": "framework",
+      "highlights": [
+        "單一程式碼庫涵蓋行動、網頁與桌面六大平台",
+        "自繪渲染架構,搭配 Skia 與 Impeller 提供流暢的圖形效能",
+        "有狀態熱重載可大幅加快開發迭代",
+        "內建 Material 與 Cupertino 元件庫,並支援各平台 FFI 與 platform channels 串接原生程式碼",
+        "pub.dev 有數以萬計的套件,並有 VS Code 與 IntelliJ 外掛支援"
+      ],
+      "use_cases": [
+        "以單一團隊同時開發 iOS 與 Android 應用",
+        "為既有產品快速擴展至 Web 與桌面版本",
+        "需要高度客製化、動畫豐富的 UI 產品",
+        "將 AI 功能(如聊天或推論前端)包裝成跨平台行動應用"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 簡潔清楚,連結完整的官方文件、貢獻指南與開發 wiki,另有 CI 狀態、CII 最佳實務與 LFX 健康分數徽章。測試部分僅依 README 評估,未檢視原始碼。最近推送為 2026-10-11,專案維護極為活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 說明 Flutter 工具首次執行或升級時,會從 Google 伺服器下載 Dart SDK 等資源,使用即表示同意 Google 服務條款。",
+          "README 未列出 curl | bash 之類的安裝指令,安裝方式導向官方文件;本評估僅依 README,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟且被廣泛採用的跨平台 UI 框架,若有跨平台應用開發需求值得持續關注;今日上榜屬長期累積的高星專案,而非新興亮點。",
+      "_mode": "light"
+    }
+  },
+  "pytorch/pytorch": {
+    "first_seen": "2026-10-11",
+    "last_seen": "2026-10-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-11": [
+        104144,
+        84,
+        10,
+        "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-11",
+    "analysis": {
+      "one_liner": "以 Python 為核心、具強大 GPU 加速與動態計算圖(tape-based autograd)的深度學習框架。",
+      "summary": "PyTorch 提供類似 NumPy 的張量運算並支援 GPU 加速,同時以 tape-based 自動微分建構動態神經網路。它解決了靜態圖框架難以彈性調整、除錯困難的問題,是目前學術研究與產業界最主流的深度學習框架之一。",
+      "category": "framework",
+      "highlights": [
+        "動態計算圖與反向模式自動微分,模型行為可隨時更改且除錯直覺",
+        "Python 優先設計,可與 NumPy、SciPy、Cython、Numba 無縫整合",
+        "支援 NVIDIA CUDA、AMD ROCm、Intel GPU 與 Jetson 等多種硬體後端",
+        "整合 MKL、cuDNN、NCCL 並有自訂 GPU 記憶體配置器,效能與記憶體效率佳",
+        "提供 C++ 擴充 API,並有 torch.nn、multiprocessing、DataLoader 等完整元件"
+      ],
+      "use_cases": [
+        "深度學習模型研究與原型開發",
+        "大型模型訓練與多 GPU 分散式運算",
+        "以 GPU 取代 NumPy 進行科學計算",
+        "自訂神經網路層或 C++/CUDA 運算子擴充"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋特色、安裝、原始碼編譯與資源連結,另有公開 CI 儀表板(hud.pytorch.org)。測試分數僅能從 README 推斷,未檢視原始碼。最後推送時間為 2026-10-11,維護極為活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 conda/pip 預編譯套件與從原始碼編譯兩種安裝方式,未見 curl | bash 類指令。",
+          "從原始碼編譯需下載依賴並執行本機建置流程,建議使用隔離環境並從官方來源取得。",
+          "本次僅依 README 評估,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "深度學習領域的基礎框架,生態與維護都屬頂級,AI 研發工程師必備、值得長期關注。",
+      "_mode": "light"
     }
   }
 }
