@@ -671,47 +671,54 @@
   },
   "chrislgarry/Apollo-11": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-07-25",
+    "last_seen": "2026-10-12",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         71406,
         409
+      ],
+      "2026-10-12": [
+        74260,
+        466,
+        8,
+        "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+        "Assembly"
       ]
     },
-    "last_analyzed": "2026-07-25",
+    "last_analyzed": "2026-10-12",
     "analysis": {
-      "one_liner": "阿波羅11號登月任務中,指揮艙(Comanche055)與登月艙(Luminary099)導航電腦(AGC)的原始組合語言原始碼典藏庫。",
-      "summary": "此專案將NASA阿波羅導航電腦(AGC)當年的紙本列印稿,由Virtual AGC與MIT博物館數位化後轉錄成文字檔案並公開典藏。內容包含指揮艙Colossus 2A與登月艙Luminary 1A的完整組合語言原始碼,附有大量歷史性註解、頁碼對應與程式背景說明。這不是一個可執行的軟體專案,而是航太史與電腦科學史的一手史料保存計畫。",
+      "one_liner": "NASA 阿波羅 11 號指令艙與登月艙導引電腦(AGC)的原始組合語言原始碼歷史存檔",
+      "summary": "此倉庫收錄 Apollo 11 任務中指令艙(Comanche055,Colossus 2A)與登月艙(Luminary099,Luminary 1A)的 AGC 原始碼,由 Virtual AGC 與 MIT Museum 的掃描影像轉錄而成。內容為 yaYUL 組合語言(.agc),涵蓋 Executive 排程、Waitlist、中斷處理、導引、姿態控制與登月著陸程式等。它是軟體工程史上的重要文物,並非可直接建置的現代專案。",
       "category": "learning-resource",
       "highlights": [
-        "原始碼逐字轉錄自MIT博物館的紙本掃描件,並保留頁碼對應(如# pp. 1208-1220),方便對照原始文件校對",
-        "CONTRIBUTING.md訂有極為嚴謹的轉錄校對規範,包括逐字比對排版錯誤、空格規則(單/雙/三倍空格代表不同語意)、換行規則等",
-        "README與CONTRIBUTING提供超過30種語言翻譯,社群參與度高,對Hacktoberfest友善",
-        "公有領域(Public domain)授權,任何人皆可自由取用、研究與教學使用",
-        "程式碼本身即是電腦科學史文物——由Margaret Hamilton領軍的Colossus團隊所寫,具極高教育與紀念價值"
+        "包含 Comanche055 與 Luminary099 兩套完整 AGC 程式,檔案按功能模組拆分(EXECUTIVE、WAITLIST、THE_LUNAR_LANDING 等)",
+        "保留原始註解與標頭,含 Margaret Hamilton 領導之 Colossus 專案核准紀錄,歷史價值高",
+        "EXECUTIVE.agc 展現早期優先權排程、VAC 區域配置與 bank 切換的即時作業系統設計",
+        "README 提供 30 多種語言翻譯,並連結 Virtual AGC 作為組譯與模擬環境",
+        "著作權標示為公有領域,並由 Software Heritage 存檔"
       ],
       "use_cases": [
-        "電腦科學史或嵌入式系統史教學,展示1960年代即時系統設計思維",
-        "結合Virtual AGC專案進行AGC組合語言組譯與模擬器實作研究",
-        "校對/考古愛好者參與轉錄勘誤,對照原始掃描件修正PR",
-        "作為軟體工程史、可靠性設計(如中斷處理、Executive排程)的案例研究素材"
+        "研究早期嵌入式即時系統、排程器與中斷設計",
+        "軟體工程史、太空工程教學與科普素材",
+        "搭配 Virtual AGC 的 yaYUL 組譯器與模擬器學習 AGC 組合語言",
+        "對照原始掃描檔校對轉錄內容"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 3,
         "tests": 1,
-        "activity": 3,
-        "comment": "文件品質極高(README、CONTRIBUTING、多國語言翻譯、PR/Issue模板一應俱全),但本質是史料轉錄庫而非可執行軟體,沒有傳統意義上的單元測試,正確性靠社群人工比對掃描件把關;CI僅有markdownlint與labeler,活躍度來自持續的勘誤PR而非功能開發,長期穩定但更新頻率不高。"
+        "activity": 2,
+        "comment": "README 簡潔,有多語翻譯與貢獻指南,但沒有建置說明,需到 Virtual AGC 取得組譯工具。沒有程式測試,CI 僅有 markdownlint 與自動標籤。內容是歷史存檔,更新以校對修正為主,最近一次推送為 2026-07。原始碼註解完整、結構清楚,忠實呈現原稿。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "非典型但極具價值的專案:雖非工具或框架,但作為阿波羅任務導航電腦原始碼的公開典藏與教育資源相當值得收藏與瀏覽,尤其對電腦史或嵌入式系統有興趣的工程師。",
+      "verdict": "不是實用工具,但作為航太軟體史與嵌入式系統的第一手資料非常值得瀏覽;對 AI/軟體工程師而言是很好的歷史與教學參考。",
       "_mode": "full"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "mattpocock/skills": {
@@ -4526,10 +4533,10 @@
   },
   "lyogavin/airllm": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-08-06",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-03": [
         25661,
@@ -4558,37 +4565,51 @@
         13,
         "AirLLM 70B inference with single 4GB GPU",
         "Jupyter Notebook"
+      ],
+      "2026-10-12": [
+        36495,
+        548,
+        7,
+        "AirLLM 70B inference with single 4GB GPU",
+        "Jupyter Notebook"
       ]
     },
-    "last_analyzed": "2026-08-03",
+    "last_analyzed": "2026-10-12",
     "analysis": {
+      "one_liner": "AirLLM 透過逐層從磁碟串流權重到 GPU,讓 70B 乃至數千億參數的 LLM 能在 4GB 左右 VRAM 上推論,並新增小 VRAM 的 LoRA 訓練支援。",
+      "summary": "AirLLM 是 Python 套件(PyPI: airllm),把 Hugging Face 模型切成逐層分片存在磁碟,實際模型以 meta device 建立,再用 forward hook 在每層執行前載入權重、執行後釋放,並以背景執行緒預取下一層。因此不需量化、蒸餾或剪枝,即可在極小 VRAM 上跑超大模型;README 宣稱 Kimi K3 2.8T 約 3.72GB、DeepSeek-V3 671B 約 12GB,最新版也加入逐層串流的 LoRA 訓練。",
       "category": "ai-ml",
-      "one_liner": "讓單張 4GB GPU 也能跑 70B、甚至 671B 大型語言模型推論的分層串流框架。",
-      "summary": "AirLLM 透過將模型逐層(甚至逐一 MoE 專家)拆分並在推論時即時從硬碟串流進 GPU、算完立刻釋放,大幅降低推論所需顯存。使用者只需 `AutoModel.from_pretrained(repo_id)` 一行程式碼,就能在消費級顯卡上跑 Llama 70B、405B,甚至 DeepSeek-V3(671B)、Kimi K3(2.8T)這類旗艦級開源模型,不需量化、蒸餾或剪枝。",
       "highlights": [
-        "核心機制是把 HuggingFace transformers 的 forward pass 掛上 hook,每層算完就丟回 meta device 釋放顯存,並用背景執行緒預取下一層以隱藏磁碟 I/O 延遲",
-        "2026/07 新增 Kimi K3(2.8T 參數)支援,採用逐專家(per-expert)串流而非整層載入,實測單卡 3.72GB 即可運行",
-        "支援 4bit/8bit 區塊量化進一步加速 3 倍,也支援 FP8、compressed-tensors 等新式量化格式的相容處理",
-        "程式碼中對每個相容性補丁(如 transformers 5.0 API 搬遷、attention 實作 fallback、tied embedding 處理)都寫了清楚的成因註解,顯示維護者對邊界情況掌握度高",
-        "近一年內持續有版本更新跟進最新模型(Qwen3、Llama4、DeepSeek-V3 等),反應速度快"
+        "以 forward hook 加 meta device 實現逐層串流,推論邏輯交給 transformers 本身,新架構只要 transformers 支援即可使用",
+        "單一 AutoModel.from_pretrained 介面,涵蓋 Qwen3/3.8、Llama 3.x/4、DeepSeek V2/V3、Kimi K3、Mixtral、ChatGLM、Baichuan 等",
+        "支援 4bit/8bit 區塊量化壓縮(需 bitsandbytes),README 宣稱最多加速 3 倍;另有 MLX 後端支援 macOS",
+        "近期新增訓練支援:凍結權重逐層串流、adapter 留在 GPU,宣稱 Qwen3.8-Flash-Next 125B 可在 6GB 內訓練",
+        "備有預取、CPU 推論、MoE 專家級串流等優化,更新頻繁(最後推送 2026-10-11)"
       ],
       "use_cases": [
-        "個人開發者或研究者想在消費級單張 GPU(甚至 MacBook)上跑超大型開源模型做實驗或推論,不想花錢租多卡伺服器",
-        "需要快速嘗試/評測剛發布的旗艦開源模型(如新版 Qwen、DeepSeek、Kimi)但硬體資源有限的場景",
-        "教學或展示大型語言模型架構與記憶體管理技巧的參考實作"
+        "在消費級或低 VRAM GPU 上試跑 70B 以上大模型,做離線評估或原型驗證",
+        "在 Apple Silicon Mac 上跑大型模型的實驗",
+        "在小 VRAM 環境對大型模型做 LoRA 微調研究",
+        "研究逐層串流與 MoE 專家按需載入的 offloading 實作"
       ],
       "quality": {
         "docs": 4,
-        "tests": 2,
-        "activity": 4,
-        "comment": "README 與程式內註解品質頗高,對每個相容性補丁都說明了「為什麼」,顯示維護者對邊界情況掌握扎實;但測試僅有少量 unit test(多為對照表比對)與幾份範例 notebook,缺乏针对串流載入正確性、量化精度等核心邏輯的自動化測試,也沒有 CI 執行測試的 workflow(僅有發布到 PyPI 與 star-history 兩個 workflow),對於高速迭代新模型支援的專案而言測試覆蓋率偏薄弱。"
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 內容詳盡(快速開始、設定、macOS、範例 notebook、FAQ、更新紀錄),另有日文版。核心程式有清楚的 docstring 與註解,架構分層合理(base、各模型子類、persist、utils)。tests 目錄含多個 pytest 單元測試(切分、LoRA 資料、串流 GPU 等)與驗證用 notebook,但 CI 只有發佈 PyPI 與 star history 工作流程,沒有自動跑測試。專案近期仍活躍。速度取決於磁碟 I/O,逐層載入使吞吐量偏低,適合實驗而非高吞吐生產環境。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "setup.py 為單純的 setuptools 設定,未見安裝時執行外部指令或下載內容的行為;依賴為常見套件(torch、transformers、accelerate、safetensors 等)。",
+          "程式碼多處(auto_model.py、airllm_base.py、tokenizer 載入等)使用 trust_remote_code=True,或在原生載入失敗時回退到此選項,載入模型時可能執行模型倉庫內附的 Python 程式碼,使用者應只載入信任的模型來源。",
+          "首次推論會下載並在本機磁碟切分模型,README 提醒需預留大量空間(例如 Qwen3.8-Flash-Next 約 360GB);delete_original=True 選項會刪除原始下載的 checkpoint,使用前請確認路徑。",
+          "部分模型需另外安裝特定版本或來自 GitHub 的依賴(如 pip install git+https://github.com/huggingface/transformers.git),屬文件中的手動安裝步驟。",
+          "發佈流程使用 PyPI Trusted Publishing(OIDC),未見硬編碼的金鑰;未發現混淆程式碼、內嵌 base64 載荷或 curl|bash 安裝模式。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "技術上解決真實痛點(單卡跑超大模型)且持續跟進最新開源模型,值得關注與嘗試,但正式導入生產環境前建議自行補強測試覆蓋。",
+      "verdict": "對想在小 VRAM 上試跑或微調超大模型的人很有價值,實作思路紮實且維護活躍;速度受磁碟限制,適合實驗用途,值得關注。",
       "_mode": "full"
     }
   },
@@ -8213,10 +8234,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-11",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 15,
+    "last_seen": "2026-10-12",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 16,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -8319,6 +8340,13 @@
       "2026-10-11": [
         48956,
         1190,
+        4,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-10-12": [
+        50370,
+        1083,
         4,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
@@ -13560,10 +13588,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -13613,41 +13641,51 @@
         3,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
+      ],
+      "2026-10-12": [
+        51703,
+        886,
+        5,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-09-11",
+    "last_analyzed": "2026-10-12",
     "analysis": {
-      "one_liner": "在瀏覽器裡打造一顆可即時互動的 3D 地球,整合航班、船舶、衛星、地震、監視器等公開資料,模擬「間諜衛星視角」。",
-      "summary": "God's Eye View 是一個以 CesiumJS 打造的開源專案,將 OpenSky、AISStream、CelesTrak、USGS、NASA FIRMS 等多種公開即時資料源整合到一個照片級真實感的 3D 地球介面上,讓使用者可以追蹤飛機、船隻、衛星、野火、地震與公共監視器畫面。專案還內建 OpenAI Realtime API 驅動的語音控制代理,可用自然語言操作鏡頭、繪製標註、查詢即時圖層狀態。所有需要私密金鑰的 API 呼叫都經由伺服器端代理處理,瀏覽器端僅接觸 Google Maps 與 Cesium ion 金鑰。",
-      "category": "web",
+      "one_liner": "在瀏覽器中運行的「間諜衛星模擬器」:以 Cesium 打造擬真 3D 地球,疊加即時航班、船舶、衛星、地震與公共攝影機等真實開源資料,並支援語音 AI 控制。",
+      "summary": "God's Eye View(前身 WorldView)是一個開源空間情報主控台,把航班應答機、船舶信標、軌道根數、地震儀、公共 CCTV、天氣、無線電等公開訊號整合在同一顆 3D 地球上。使用者可點選追蹤目標、進入駕駛艙視角、套用 FLIR/夜視等 GLSL 感測風格,並透過 OpenAI Realtime 語音代理以聲音操作。免 API key 即可啟動,選配 Cesium ion 或 Google Maps 金鑰可取得照片級 3D 圖磚。",
+      "category": "app",
       "highlights": [
-        "整合 13 種即時/近即時資料圖層(航班、船舶、衛星、地震、CCTV、電台、共享單車等),其中 11 種完全免金鑰即可使用",
-        "OpenAI Realtime API 驅動的語音代理,提供 28 種語音工具,可用口語操作鏡頭運鏡、繪製地理標註、查詢實體資訊",
-        "程式碼與測試幾乎 1:1 對應,168+ 個 *.test.mjs 檔案涵蓋資料轉換、幾何運算、UI 策略等核心邏輯",
-        "CI 涵蓋 Linux 與 Windows 雙平台、多個 Node 版本矩陣,並有專門的 Pinokio 安裝路徑測試",
-        "明確劃出倫理界線:專案聲明不支援具名人物搜尋或臉部辨識等追蹤個人的功能"
+        "整合航班、軍機、船舶、衛星、地震、野火、交通、CCTV、無線電、海底電纜等數十種即時圖層,每個圖層為獨立模組",
+        "語音白板與語音查詢(衛星過境、計數/排名分析),以 OpenAI Realtime 驅動;另提供 MCP server 供代理工具使用",
+        "GLSL 感測風格(CRT、夜視、FLIR、Noir)、駕駛艙視角、偵測框疊加與 Director 場景錄製/分享",
+        "免帳號、免金鑰即可啟動(Esri 影像加無金鑰地形),另提供 Pinokio 一鍵安裝路徑",
+        "工程紀律佳:鎖定相依版本、套件邊界檢查、格式檢查、跨平台 CI(含 Windows 上手流程與瀏覽器 QA 閘門)"
       ],
       "use_cases": [
-        "學習如何將多個公開地理空間資料源(ADS-B、AIS、TLE 衛星軌道、USGS 地震)整合進 CesiumJS 3D 地球",
-        "研究如何安全地在前端應用中代理需要私密金鑰的第三方 API 呼叫(SSRF 防護、金鑰不落地瀏覽器)",
-        "作為 OSINT / GEOINT 教學或展示工具,理解開源公開資料能拼湊出多少即時態勢感知",
-        "參考如何用 OpenAI Realtime API 打造具備場景感知能力的語音互動代理"
+        "OSINT / 地理空間情報的視覺化探索與教學展示",
+        "製作即時空間資料的電影感 demo、影片與場景導覽",
+        "研究如何以語音代理(Realtime API)控制複雜 3D 應用",
+        "作為 Cesium 多資料源圖層架構與 ADS-B/AIS/衛星追蹤整合的參考實作"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "文件非常詳盡(README、SECURITY.md、DATA_SOURCES.md、CURRENT-STATE.md 分工清楚),測試檔案數量與原始碼模組幾乎一一對應,CI 涵蓋跨平台與多 Node 版本並包含 Pinokio 安裝流程驗證,顯示工程紀律良好;抽樣程式碼可讀性高、函式職責單一且附有恰當的 JSDoc 註解。"
+        "comment": "文件非常完整(README、DATA_SOURCES、SECURITY、CONTRIBUTING、TESTING 及 docs/ 下大量架構文件)。專案含 *.test.* 單元測試與上百支 qa-*.mjs 瀏覽器 QA 腳本,CI 涵蓋 Node 24/26、Windows 上手流程、Puppeteer 瀏覽器閘門,且 GitHub Actions 皆以 commit SHA 固定。最後推送為 2026-10-10,維護活躍。扣分點:程式與目錄規模龐大,學習成本較高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "repo 內含 pinokio/install.js,會執行 node scripts/pinokio-install.mjs 並將多組 API 金鑰(OpenAI、Google Maps、AISStream 等)以環境變數形式轉發給子行程,屬於一鍵安裝器常見模式,金鑰仍由使用者自行輸入且不會外傳至第三方伺服器",
-          "README 與 SECURITY.md 明確說明:若將開發伺服器以 --host 0.0.0.0 分享到區網,會讓區網內任何人都能透過你的伺服器代理去消耗你設定的付費 API 金鑰,專案本身有提示使用者設定流量限制與帳單警示,但這屬於使用者需自行注意的部署風險,而非程式碼缺陷"
+          "package.json 未定義 preinstall / postinstall / prepare 等生命週期腳本;安裝以 npm ci 完成,CI 中亦設定 PUPPETEER_SKIP_DOWNLOAD。",
+          "提供 Pinokio 安裝路徑(scripts/pinokio-install.mjs),會以 spawnSync 執行 npm ci 並寫入 pinokio/.installed;屬透明的本地安裝流程,未發現 curl|bash 或遠端腳本直接執行的模式。",
+          "執行時會連線多個第三方資料源(如 OSM Overpass、Esri、Nominatim 等),並可由使用者選填 Cesium ion、Google Maps、OpenAI 等金鑰;使用者應留意金鑰保管與 API 費用,README 另有 Keys & Costs 說明。",
+          "授權資訊:LICENSE 為 MIT,但明確註明僅涵蓋原始碼,內建資料集(src/data/local_data/)與執行時第三方資料各有其授權,部分為非商用,商用前宜先查閱 DATA_SOURCES.md。",
+          "功能涉及 CCTV、ALPR 攝影機位置等公開資料彙整,使用時應自行評估當地法規與隱私面向。"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程品質與文件完整度在同類「一人打造的爆紅專案」中相當罕見,值得花時間研究其資料整合架構與測試策略。",
+      "star_rating": 4,
+      "verdict": "視覺震撼且工程品質扎實的開源空間情報專案,對 OSINT、Cesium 與語音代理整合有興趣者值得關注並實際跑一次;商用前請留意資料授權。",
       "_mode": "full"
     }
   },
@@ -24692,10 +24730,10 @@
   },
   "boykopovar/AnyPS5": {
     "first_seen": "2026-10-06",
-    "last_seen": "2026-10-11",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-12",
+    "days_on_trending": 7,
+    "consecutive_days_on_trending": 7,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-10-06": [
         4963,
@@ -24735,6 +24773,13 @@
       "2026-10-11": [
         26879,
         5805,
+        2,
+        "Tool for automatic PS5 executables porting to Linux and Windows",
+        "C++"
+      ],
+      "2026-10-12": [
+        30152,
+        3952,
         2,
         "Tool for automatic PS5 executables porting to Linux and Windows",
         "C++"
@@ -24904,10 +24949,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-11",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-12",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -24940,6 +24985,13 @@
       "2026-10-11": [
         72843,
         25793,
+        1,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-12": [
+        105116,
+        25599,
         1,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
@@ -25153,10 +25205,10 @@
   },
   "storytold/artcraft": {
     "first_seen": "2026-10-09",
-    "last_seen": "2026-10-11",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-12",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-09": [
         7962,
@@ -25175,6 +25227,13 @@
       "2026-10-11": [
         14520,
         3222,
+        3,
+        "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "Rust"
+      ],
+      "2026-10-12": [
+        17943,
+        2957,
         3,
         "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "Rust"
@@ -25422,15 +25481,22 @@
   },
   "pytorch/pytorch": {
     "first_seen": "2026-10-11",
-    "last_seen": "2026-10-11",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-12",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-11": [
         104144,
         84,
         10,
+        "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+        "Python"
+      ],
+      "2026-10-12": [
+        104497,
+        315,
+        6,
         "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
         "Python"
       ]
