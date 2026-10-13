@@ -4533,10 +4533,10 @@
   },
   "lyogavin/airllm": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-10-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-03": [
         25661,
@@ -4571,6 +4571,13 @@
         548,
         7,
         "AirLLM 70B inference with single 4GB GPU",
+        "Jupyter Notebook"
+      ],
+      "2026-10-13": [
+        37543,
+        879,
+        7,
+        "AirLLM 2.8T LLM inference with single 4GB GPU",
         "Jupyter Notebook"
       ]
     },
@@ -5097,10 +5104,10 @@
   },
   "Alishahryar1/free-claude-code": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-08-27",
+    "last_seen": "2026-10-13",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-04": [
         44046,
@@ -5129,42 +5136,50 @@
         4,
         "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
         "Python"
+      ],
+      "2026-10-13": [
+        59123,
+        626,
+        9,
+        "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-24",
+    "last_analyzed": "2026-10-13",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "本地代理伺服器,讓 Claude Code、Codex、Pi、OpenCode 等 9 種編碼代理都能改接 49 家免費/付費 AI 供應商模型,不必綁死 Anthropic 官方帳號。",
-      "summary": "Free Claude Code(FCC)是一個以 Python/FastAPI 打造的本地反向代理,把 Anthropic Messages API、OpenAI Responses API 等格式互相轉換,讓使用者能用 NVIDIA NIM、OpenRouter、Groq、Ollama 等 49 家供應商的免費或付費模型,驅動 Claude Code、Codex、Pi、OpenCode、Cline、Hermes 等多款終端編碼代理。專案內建 Admin UI 做供應商設定與驗證、多模型 fallback、語音輸入、Discord/Telegram 整合等功能。",
+      "one_liner": "本機代理伺服器,讓 Claude Code、Codex、OpenCode 等 11 種編碼代理透過統一模型目錄接上 61 家供應商的免費或付費模型。",
+      "summary": "Free Claude Code(FCC)是以 Python/FastAPI 寫成的本機代理,把各家編碼代理(Claude Code、Codex、Pi、OpenCode、Cline、Hermes、Aider 等)的請求轉接到 NVIDIA NIM 等 OpenAI 相容供應商。它提供 Admin 網頁介面管理金鑰、模型與備援模型,並支援瀏覽器原生 Codex 會話、Discord/Telegram 遠端操作與語音轉文字。專案要解決的是沒有官方訂閱時,仍能用熟悉的代理工具搭配免費額度模型的問題。",
+      "category": "ai-ml",
       "highlights": [
-        "支援 9 種編碼代理(Claude Code、Codex、Pi、OpenCode、Cline、Hermes 等)與 49 家模型供應商的統一路由層",
-        "架構分層清晰(api / application / config / core / cli),搭配 ModelRouter、reasoning policy、fallback 機制等抽象設計良好",
-        "CI 極為嚴格:禁止 `# type: ignore` 與 legacy `from __future__ import annotations`,並跑 ruff format/check、ty 型別檢查、pytest、Playwright e2e",
-        "測試量體龐大(208+ 測試檔涵蓋 api/application/cli/config/core/messaging/contracts),另有獨立 smoke 測試套件驗證真實服務",
-        "安裝腳本支援跨平台(sh/PowerShell)、可讀性高且提供 --dry-run 選項,RTK 二進位下載有做 SHA-256 校驗"
+        "一個模型目錄對應 11 種編碼代理,並提供 fcc-claude、fcc-codex 等啟動器",
+        "支援多把 API 金鑰排序,以及供應商故障時自動切換到下一個備援模型",
+        "Admin UI 可設定供應商、自訂 OpenAI 相容端點,也能在瀏覽器中執行 Codex 會話",
+        "可選用 RTK 與 Headroom 壓縮指令輸出與工具結果,以降低 token 用量",
+        "支援 Discord/Telegram 遠端操作,以及本機 Whisper 或 NVIDIA NIM 語音輸入"
       ],
       "use_cases": [
-        "想用 Claude Code / Codex 等代理但不想用完官方訂閱額度,改接免費或更便宜供應商的開發者",
-        "需要在多個 AI 供應商之間做自動故障轉移(fallback),避免因單一供應商限流而中斷開發",
-        "想透過語音、Discord、Telegram 遠端操控編碼代理進行程式開發的使用者",
-        "研究如何把 Anthropic/OpenAI 不同 API 協定互相轉換的架構設計參考"
+        "沒有付費訂閱時,以免費額度模型驅動 Claude Code 或 Codex 做日常開發",
+        "在單一入口切換多家模型供應商,並設定備援以避免服務中斷",
+        "透過手機或 Discord/Telegram 遠端指揮本機的編碼代理",
+        "自架相容 Anthropic/OpenAI 協定的閘道,統一管理團隊的金鑰與模型"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 5,
         "activity": 5,
-        "comment": "文件(README、ARCHITECTURE.md、CONTRIBUTING.md)完整詳盡,程式碼分層乾淨、型別標註嚴謹;測試覆蓋廣泛且 CI 規則嚴格(禁用 type: ignore、強制 ruff/ty/pytest/e2e 全過),版本號已迭代到 5.13.10,顯示為持續高頻維護的成熟專案。"
+        "comment": "README 結構完整,含安裝、供應商設定與截圖。專案同時有 tests/ 單元測試與 e2e/ Playwright 端對端測試,CI 在 Linux、Windows、macOS 執行 ruff、ty 與 pytest。CI 還禁止 type: ignore 並使用 dependabot,工程紀律不錯。最近有每日提交,維護活躍。依賴很多(torch 為選配),要求 Python 嚴格釘在 3.14.7,安裝門檻較高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "install.sh / install.ps1 會用 curl|bash 或 PowerShell 管線方式,從各官方網域(claude.ai、chatgpt.com、opencode.ai、hermes-agent.nousresearch.com、x.ai、dev.meta.ai 等)下載並執行對應編碼代理的官方安裝程式,屬於聚合多個第三方 CLI 安裝流程的常見做法,腳本本身可在執行前公開審閱",
-          "RTK 選用元件的下載有做 SHA-256 雜湊校驗後才安裝,其餘官方安裝程式則依賴各官方來源本身的信任",
-          "本專案自身安裝 free-claude-code 套件是透過 `uv tool install` 走 PyPI/GitHub 封裝機制,未發現混淆程式碼、內嵌 base64 payload 或硬編碼可疑網域"
+          "README 的安裝方式為 curl 取得 install.sh 後以 sh 執行(macOS/Linux),Windows 則以 irm 取得 install.ps1 並執行;文件有提醒可先檢視腳本,建議使用者先行閱讀再執行。",
+          "install.sh 會再從外部網址下載並執行其他工具的安裝腳本,例如 claude.ai、chatgpt.com/codex、pi.dev、opencode.ai、x.ai、dev.meta.ai、astral.sh/uv 等,並可選擇安裝 RTK 與 headroom-ai;DeepSeek Harness 套件則使用 @latest 版本,未固定版本。",
+          "程式為本機代理,會保管多家供應商的 API 金鑰與 OAuth 登入資訊,並以 subprocess 啟動 Codex 等外部程式;建議啟用 Admin 的 Proxy Authentication,且不要將服務暴露到公開網路。",
+          "原始碼中未發現混淆程式碼、內嵌長 base64 負載或 eval/exec 動態執行;pyproject.toml 未見安裝時執行任意程式的設定,依賴名稱看起來屬正常套件。"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質與測試紀律在同類專案中相當突出,若你常用 Claude Code/Codex 且在意額度或想串接多家免費模型,值得一試,但安裝流程涉及多個第三方官方安裝腳本,建議先讀過腳本內容再執行。",
+      "verdict": "功能完整、測試與 CI 紮實且維護活躍,值得關注;安裝前請先檢視安裝腳本,並留意金鑰保管與供應商服務條款。",
       "_mode": "full"
     }
   },
@@ -8234,10 +8249,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-12",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 16,
+    "last_seen": "2026-10-13",
+    "days_on_trending": 7,
+    "consecutive_days_on_trending": 7,
+    "total_days_on_trending": 17,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -8348,6 +8363,13 @@
         50370,
         1083,
         4,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-10-13": [
+        52624,
+        2081,
+        6,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -13588,10 +13610,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -13646,6 +13668,13 @@
         51703,
         886,
         5,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ],
+      "2026-10-13": [
+        53686,
+        1895,
+        2,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
       ]
@@ -17258,10 +17287,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-11",
+    "last_seen": "2026-10-13",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -17309,6 +17338,13 @@
         26319,
         178,
         5,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-10-13": [
+        27294,
+        246,
+        3,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -24949,10 +24985,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-12",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-13",
+    "days_on_trending": 7,
+    "consecutive_days_on_trending": 7,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -24992,6 +25028,13 @@
       "2026-10-12": [
         105116,
         25599,
+        1,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-13": [
+        157625,
+        45327,
         1,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
@@ -25205,10 +25248,10 @@
   },
   "storytold/artcraft": {
     "first_seen": "2026-10-09",
-    "last_seen": "2026-10-12",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-13",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-09": [
         7962,
@@ -25235,6 +25278,13 @@
         17943,
         2957,
         3,
+        "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "Rust"
+      ],
+      "2026-10-13": [
+        22058,
+        4095,
+        4,
         "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "Rust"
       ]
@@ -25536,6 +25586,112 @@
       "star_rating": 5,
       "verdict": "深度學習領域的基礎框架,生態與維護都屬頂級,AI 研發工程師必備、值得長期關注。",
       "_mode": "light"
+    }
+  },
+  "open-webui/open-webui": {
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-13": [
+        155007,
+        157,
+        5,
+        "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-13",
+    "analysis": {
+      "one_liner": "功能完整、可自架且可離線運作的 AI 平台,支援 Ollama 與 OpenAI 相容 API。",
+      "summary": "Open WebUI 是自架式 AI 介面,可連接 Ollama 與任何 OpenAI 相容服務(vLLM、OpenRouter、LMStudio 等)。內建 RAG、網頁搜尋、語音/視訊通話、圖像生成、RBAC、外掛(Filters/Pipes/Tools/MCP)等功能,並提供企業級驗證與可擴展部署,解決統一管理多模型、團隊協作與私有化部署的需求。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援 Ollama 與 OpenAI 相容 API,可混用本地與雲端模型",
+        "RAG 支援 9 種向量資料庫、混合搜尋(BM25+向量)與多種文件擷取引擎",
+        "外掛體系完整:Filters、Actions、Pipes、Tools、Skills,並支援 MCP/MCPO/OpenAPI 工具伺服器",
+        "企業功能:RBAC、LDAP/SSO、SCIM 2.0、OpenTelemetry、Redis 水平擴展",
+        "生態系豐富:Open Terminal、桌面 App、oikb 知識庫同步,內建行事曆與自動化排程"
+      ],
+      "use_cases": [
+        "在企業內網或離線環境部署私有 ChatGPT 式平台",
+        "為團隊統一接入多個 LLM 供應商並做權限管理",
+        "建立本地知識庫 RAG 問答系統",
+        "搭配 MCP/工具建構自訂代理與工作流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 功能說明詳盡、安裝方式多元(pip、Docker、Kubernetes)並有獨立文件站。最後推送為 2026-10-12,仍高度活躍,star 數超過 15 萬。測試品質僅依 README 判斷,未檢視原始碼。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 安裝方式為 pip install 與 docker run,未見 curl | bash 類型的指令。",
+          "Docker 範例使用 --add-host=host.docker.internal:host-gateway 並掛載資料卷;自架服務具備外掛、工具與終端執行等能力,部署時建議留意權限與網路暴露範圍。",
+          "本評估僅依 README,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "自架 LLM 介面的事實標準,功能廣、更新勤、生態完整,對 AI 研發工程師值得持續關注與實際部署。",
+      "_mode": "light"
+    }
+  },
+  "microsoft/BitNet": {
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-13": [
+        40911,
+        97,
+        8,
+        "Official inference framework for 1-bit LLMs",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-10-13",
+    "analysis": {
+      "one_liner": "微軟官方的 1-bit LLM(BitNet b1.58)推理框架 bitnet.cpp,讓三元權重模型能在 CPU/GPU 上快速且無損地執行。",
+      "summary": "bitnet.cpp 是微軟基於 llama.cpp 修改而成的 1-bit LLM 推理框架,提供 I2_S、TL1、TL2 等最佳化 kernel,支援 x86 與 ARM CPU,並附有 CUDA GPU kernel。依官方報告,CPU 上可達 1.37x–6.17x 加速,能耗降低 55%–82%,並可在單顆 CPU 上跑 100B 模型。近期新增 BitNet embedding 模型(0.6B/270M)與 I2_S 轉換指南。",
+      "category": "ai-ml",
+      "highlights": [
+        "微軟官方出品,對應 BitNet b1.58 系列論文與 2B-4T 官方模型,並有 arXiv 技術報告支撐",
+        "提供 I2_S / TL1 / TL2 多種 LUT 與 MAD kernel,涵蓋 x86 (AVX2) 與 ARM (NEON/dotprod)",
+        "含官方 CUDA GPU kernel(gpu/ 目錄),不只限於 CPU",
+        "setup_env.py 與 run_inference.py 讓下載模型、轉 GGUF、量化、推理流程一條龍",
+        "最新新增 1-bit embedding 模型與 VibeASR.cpp 語音辨識應用,持續擴展使用情境"
+      ],
+      "use_cases": [
+        "在沒有 GPU 的邊緣裝置或筆電上本地執行 LLM",
+        "研究 1.58-bit 量化與 LUT kernel 的低位元推理最佳化",
+        "以 1-bit embedding 模型在 CPU 上做高效向量檢索前處理",
+        "評估低功耗、低記憶體的本地推理部署"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 4,
+        "comment": "README 完整,含新聞時間軸、支援模型矩陣、效能圖表與 docs/ 下的專題指南,另有 GPU 與 src 的專屬 README。但本地檢出中未見 .github/workflows 或系統化測試,僅有 gpu/test.py 這類 benchmark/驗證腳本;核心依賴 llama.cpp 子模組。最近仍有推送且新增 embedding 與 ASR 相關內容,活躍度良好。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "setup_env.py 會呼叫 huggingface-cli 從 Hugging Face 下載模型,並以 subprocess 執行轉檔、量化腳本與建置流程,使用者需留意會下載並處理外部模型檔。",
+          ".gitmodules 的 3rdparty/llama.cpp 子模組指向第三方 fork(isHuangXin/llama.cpp,分支 release-bitnet-embedding-0.6b-270m),而非 ggml-org 官方倉庫;使用者建置前可自行檢視該子模組內容。",
+          "倉庫內含預先產生的 preset_kernels/*.h 大型標頭檔、gpu/tokenizer.model 與 media/demo.mp4 等資源檔,屬 kernel 與模型相關內容,未觀察到混淆程式碼。",
+          "gpu/test.py 以 ctypes 載入本地編譯的 libbitnet.so,需先執行 gpu/bitnet_kernels/compile.sh 編譯;未發現 curl|bash 安裝模式或 npm 生命週期腳本。",
+          "run_inference_server.py 預設綁定 127.0.0.1,若改用 --host 0.0.0.0 對外開放需自行注意存取控制。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想在 CPU 上跑低位元 LLM 或研究 1.58-bit 推理最佳化的人,這是官方首選且值得持續關注;但缺少 CI 與系統化測試,且依賴第三方 llama.cpp fork,正式上線前需自行驗證。",
+      "_mode": "full"
     }
   }
 }
