@@ -4533,10 +4533,10 @@
   },
   "lyogavin/airllm": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-10-13",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-14",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-03": [
         25661,
@@ -4576,6 +4576,13 @@
       "2026-10-13": [
         37543,
         879,
+        7,
+        "AirLLM 2.8T LLM inference with single 4GB GPU",
+        "Jupyter Notebook"
+      ],
+      "2026-10-14": [
+        38333,
+        1001,
         7,
         "AirLLM 2.8T LLM inference with single 4GB GPU",
         "Jupyter Notebook"
@@ -8249,10 +8256,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-13",
-    "days_on_trending": 7,
-    "consecutive_days_on_trending": 7,
-    "total_days_on_trending": 17,
+    "last_seen": "2026-10-14",
+    "days_on_trending": 8,
+    "consecutive_days_on_trending": 8,
+    "total_days_on_trending": 18,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -8370,6 +8377,13 @@
         52624,
         2081,
         6,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-10-14": [
+        54135,
+        1815,
+        5,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
       ]
@@ -13610,10 +13624,10 @@
   },
   "bilawalsidhu/gods-eye-view": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-13",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-14",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-28": [
         8077,
@@ -13674,6 +13688,13 @@
       "2026-10-13": [
         53686,
         1895,
+        2,
+        "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "JavaScript"
+      ],
+      "2026-10-14": [
+        55401,
+        1961,
         2,
         "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
         "JavaScript"
@@ -15741,10 +15762,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-01",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-10-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15815,41 +15836,51 @@
         2,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
+      ],
+      "2026-10-14": [
+        63301,
+        1748,
+        3,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-28",
+    "last_analyzed": "2026-10-14",
     "analysis": {
+      "one_liner": "開源、本機優先的 ElevenLabs 替代方案:語音複製、語音設計、影片配音、聽寫、轉錄與有聲書,支援 646 種語言。",
+      "summary": "VoiceStudio 是以 Electron 桌面應用搭配 Python(FastAPI)後端組成的本機語音 AI 工作室,預設引擎為 k2-fsa/OmniVoice,也可切換其他 TTS/ASR 引擎。支援 CUDA、Apple Silicon(MPS/MLX)與純 CPU,並提供本機 API 與 MCP 供 agent 整合,讓使用者不必依賴雲端付費服務即可完成語音生成與配音流程。",
       "category": "ai-ml",
-      "one_liner": "完全在本機執行的開源 ElevenLabs 替代品,涵蓋語音克隆、配音、聽寫與有聲書製作。",
-      "summary": "VoiceStudio 是一套以 Electron 桌面應用包裝、FastAPI 為後端的本機語音工具箱,整合多種開源 TTS/STT 引擎(預設 k2-fsa/OmniVoice),支援語音克隆、聲音設計、影片配音(含翻譯與時間軸對齊)、聽寫與 646 種語言的轉錄/有聲書生成。專案強調「local-first」,可選接遠端 worker,並提供本機 API 與 MCP 介面供 agent 整合。",
       "highlights": [
-        "單一引擎架構支援多達 646 種語言,並可切換多套 TTS/STT 引擎(OmniVoice、IndexTTS、PocketTTS 等)",
-        "CI 涵蓋 macOS/Windows/Linux 三平台矩陣測試,並針對過去實際踩過的雷(如 Windows POSIX-only API 崩潰、路徑分隔符錯誤)寫了大量迴歸測試與說明性註解",
-        "後端程式碼對安全邊界處理細緻,例如 cookie 匯出僅限本機/loopback 傳輸、檔案大小限制、暫存檔案權限設為 0o600",
-        "提供 Local API、MCP 整合與 agent skill(npx skills add),方便串接自動化工作流",
-        "AGPL-3.0 授權,對商業使用與模型授權有明確提醒"
+        "功能涵蓋完整:語音複製、語音設計、影片配音、浮動視窗聽寫、有聲書與批次任務",
+        "本機執行並支援 CUDA / Apple Silicon / CPU,雲端服務為選用,使用分析需使用者同意",
+        "提供本機 API 與 MCP、可重用 recipes 與監看資料夾,方便與 AI agent 及自動化流程整合",
+        "測試規模龐大(backend/tests 與 tests/ 合計數百個測試檔,含 probe、evals、fuzz)",
+        "CI 完善:多個 workflow 涵蓋 ci、security、install-smoke、docker、多平台打包與商店發佈,另有 gitleaks 與 dependabot"
       ],
       "use_cases": [
-        "需要完全離線、不上傳雲端的語音克隆與內容配音的個人或團隊工作流",
-        "影片在地化/翻譯配音專案,需要時間軸對齊與批次處理",
-        "開發者將本機 TTS/STT 能力整合進 agent 或自動化流程(透過 MCP/Local API)",
-        "有聲書或播客內容製作,需要多語言、大量文本轉語音"
+        "以本機方式為影片做多語系配音,避免上傳敏感素材至雲端",
+        "將書籍或長文轉成有聲書,或批次生成旁白",
+        "在個人電腦上做語音聽寫與會議轉錄",
+        "透過 MCP / 本機 API 讓 coding agent 或自動化流程呼叫 TTS 與 ASR 能力"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 5,
         "activity": 5,
-        "comment": "文件完整(README、多份 docs、繁簡雙語),測試涵蓋後端 pytest、前端 node test、Electron smoke test、跨平台矩陣與 eval 測試,CI 設定中大量保留「為什麼這樣做」的歷史脈絡註解,顯示團隊對穩定性與可維護性非常重視;抽樣的後端路由程式碼命名清楚、有適當的安全防護與型別提示,整體工程品質偏高。"
+        "comment": "README 結構清楚,附安裝指南(macOS/Linux/Windows/Docker)、引擎文件、授權說明與多語系 README。測試與 CI 規模很大,commit 與推送非常頻繁。本次未逐一深入閱讀核心原始碼,品質判斷主要依據專案結構、測試與 CI 配置。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供的一鍵安裝方式為 curl -fsSL https://voicestudio.sh/install | sh,屬於常見但需使用者留意的安裝模式;實際檢視 scripts/install.sh 內容顯示該腳本有版本字串格式驗證、拒絕安裝到符號連結、要求先關閉執行中的應用等防護性設計,未發現明顯的危險或混淆行為",
-          "package.json 未見 preinstall/postinstall 等生命週期腳本挾帶額外程式碼執行"
+          "README 提供 `curl -fsSL https://voicestudio.sh/install | sh`(macOS/Linux)與 `irm https://voicestudio.sh/install | iex`(Windows)的一行安裝方式,會從外部網址下載並執行腳本,建議使用者先檢視腳本內容再執行",
+          "scripts/install.sh 對下載使用強制 https,並在安裝前比對發佈的 SHA256SUMS.txt,校驗失敗或缺少 SHA-256 工具時會拒絕安裝",
+          "根目錄 package.json 未發現 preinstall / postinstall / prepare 等生命週期腳本",
+          "`--main` 模式會在本機從原始碼建置(需 Git、Node.js、Bun、Rust),執行前請留意其下載與編譯行為",
+          "應用會下載大型模型權重,模型與生成內容的授權條件獨立於 AGPL-3.0,商用前需自行確認;語音複製請取得本人同意"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程紀律與測試覆蓋度在同類開源專案中相當突出,值得 AI 語音/本機優先應用的開發者關注與試用。",
+      "star_rating": 4,
+      "verdict": "功能完整、工程紀律良好的本機語音 AI 工作室,對需要離線配音與 TTS 的工程師很值得關注;安裝前留意 curl|sh 安裝方式與模型授權。",
       "_mode": "full"
     }
   },
@@ -17287,10 +17318,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-13",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-14",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -17345,6 +17376,13 @@
         27294,
         246,
         3,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-10-14": [
+        28247,
+        969,
+        4,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -18274,10 +18312,10 @@
   },
   "vercel-labs/skills": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-09-11",
+    "last_seen": "2026-10-14",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-11": [
         31146,
@@ -18285,41 +18323,52 @@
         15,
         "The open agent skills tool - npx skills",
         "TypeScript"
+      ],
+      "2026-10-14": [
+        34510,
+        190,
+        6,
+        "The open agent skills tool - npx skills",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-11",
+    "last_analyzed": "2026-10-14",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "一個讓 AI coding agent(Claude Code、Cursor、Codex 等 80+ 種)可以共用「Agent Skills」的 CLI 安裝工具。",
-      "summary": "skills 是 Vercel Labs 推出的 CLI(npx skills),用來從 GitHub/GitLab/任意 Git repo 或直接下載連結安裝、列出、更新、移除「SKILL.md」格式的 agent 技能包,並自動偵測本機已安裝的 AI coding agent(Claude Code、Cursor、Codex、OpenCode 等)並將技能安裝到對應目錄。目的是解決目前各家 coding agent 各自定義技能格式、沒有統一分發機制的問題,讓開發者寫一次技能就能在多個 agent 間共用。",
+      "one_liner": "Vercel Labs 推出的開放 Agent Skills 通用 CLI,一行 npx skills add 即可把技能安裝到 80 多種 AI 編碼代理。",
+      "summary": "skills 是 Vercel Labs 維護的 TypeScript 命令列工具,負責從 GitHub、GitLab、Azure Repos、任意 git URL、本機路徑或下載連結取得 SKILL.md 技能,並安裝到 Claude Code、Codex、Cursor、OpenCode 等 80 多種代理的對應目錄。它預設以符號連結指向單一正本(也可選擇複製),解決技能散落各代理、難以統一管理與更新的問題,另提供 use、list、find、remove、update 等指令。",
+      "category": "cli",
       "highlights": [
-        "支援 80 幾種 coding agent(Claude Code、Cursor、Codex、OpenCode、GitHub Copilot 等)的技能安裝路徑對照表,維護量頗大",
-        "下載/解壓縮流程有明確的防護:限制下載大小(10MiB)、解壓大小(25MiB)、檔案數(1000),並對 zip/tar 做路徑穿越(path traversal)檢查",
-        "有獨立的 sanitize.ts 模組專門過濾終端機逃脫序列,防止惡意 SKILL.md 內容偽造終端輸出或執行 CWE-150 攻擊",
-        "src 底下每個核心模組幾乎都有對應的 *.test.ts,CI 在 ubuntu/windows 三種 Node 版本上跑測試、型別檢查與 prettier 格式檢查",
-        "內建可選的匿名遙測與第三方「安全稽核」API 呼叫,且都可用環境變數關閉"
+        "支援 80 多種編碼代理(Claude Code、Codex、Cursor、OpenCode 等),一套指令通用",
+        "來源格式廣泛:GitHub 簡寫、GitLab、Azure DevOps、SSH git、本機路徑、zip/tar 下載連結",
+        "預設以符號連結指向單一正本,易於更新;也可用 --copy 改為複製",
+        "`skills use` 可不安裝、直接產生單一技能的 prompt 並導給代理",
+        "壓縮檔下載有大小與檔案數上限(預設 10 MiB / 25 MiB / 1000 檔),並自行實作 zip 解析與邊界檢查"
       ],
       "use_cases": [
-        "團隊要在多種 AI coding agent(Claude Code、Cursor、Codex 等)之間共用同一套自訂技能/prompt 指令集",
-        "想從 GitHub 上的技能倉庫(如 vercel-labs/agent-skills)一鍵安裝特定技能到專案或全域目錄",
-        "需要在 CI/CD 中非互動式安裝、更新特定 agent 的技能組合"
+        "團隊跨多種 AI 代理共用並同步同一批技能",
+        "在 CI/CD 以 -y 參數非互動地佈署技能到專案或全域",
+        "快速試用他人技能而不汙染本機設定(skills use)",
+        "為自己的代理或內部技能庫建立可安裝、可搜尋的發佈流程"
       ],
       "quality": {
-        "docs": 5,
-        "tests": 5,
+        "docs": 4,
+        "tests": 4,
         "activity": 5,
-        "comment": "README 非常詳盡,涵蓋安裝、來源格式、私有倉庫認證、環境變數、相容性表格等;src 目錄幾乎每個模組都配有對應測試檔,CI 在多作業系統與多 Node 版本上執行測試、型別檢查與格式檢查,近期(2026-09-08)仍持續 push,活躍度高。"
+        "comment": "README 涵蓋來源格式、私有倉庫驗證、選項與安裝範圍,說明清楚。src 下有大量 vitest 測試(add、source-parser、git、use、update 等),CI 在 Ubuntu 與 Windows、三個 Node 版本上執行建置、格式檢查與測試,另有型別檢查。專案持續更新(最近推送 2026-10-09),版本 1.7.2,並有 husky、prettier 與 issue 範本。程式碼結構清楚,對邊界條件處理謹慎。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 有 prepare: husky 這個 npm lifecycle script,但僅在開發者 clone 倉庫貢獻程式碼時觸發,一般透過 npx skills 安裝使用不會執行",
-          "CLI 預設會傳送匿名遙測資料(如安裝的技能來源、agent 名稱)到 add-skill.vercel.sh,可用 DISABLE_TELEMETRY 或 DO_NOT_TRACK 關閉,README 有明確說明",
-          "當使用 skills add 安裝來自任意 GitHub/GitLab/直接下載連結的技能時,本質上是取用第三方撰寫的 SKILL.md 指令內容餵給 coding agent,使用者需自行評估來源技能內容是否可信(此為功能設計本身而非程式碼漏洞)"
+          "src/telemetry.ts 預設會把匿名使用事件(安裝來源、技能名稱、代理名稱、CLI 版本、是否在 CI 等)以 GET 請求送到 https://www.skills.sh/tele/t;設定 DISABLE_TELEMETRY 或 DO_NOT_TRACK 環境變數即可關閉",
+          "安裝時會向 https://www.skills.sh/tele/audit 查詢技能的安全稽核結果(逾時 3 秒,失敗不影響安裝);關閉遙測時也不會查詢",
+          "package.json 的 prepare 為 husky(僅開發端 git hook),prepublishOnly 為建置;沒有 preinstall 或 postinstall 腳本,執行時依賴僅 tar 與 yaml",
+          "此工具的功能本質是從外部來源下載技能並寫入各代理的技能目錄,技能內容會成為代理的指令,使用者應自行審查來源是否可信",
+          "README 說明處理 GitHub 驗證時不會讀取或複製 gh CLI 的憑證;可選用 GITHUB_TOKEN / GH_TOKEN 環境變數存取私有倉庫",
+          "未發現混淆程式碼、內嵌長 base64 payload 或已提交的二進位檔"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質紮實、對供應鏈風險（下載/解壓、終端逃脫序列）有明確防護意識,若你已在用多種 AI coding agent 且想統一管理技能,值得一試。",
+      "verdict": "想在多種 AI 代理間統一管理技能的人值得關注:官方維護、測試與 CI 完整、更新積極,安裝前記得留意預設遙測並審查技能來源。",
       "_mode": "full"
     }
   },
@@ -24985,10 +25034,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-13",
-    "days_on_trending": 7,
-    "consecutive_days_on_trending": 7,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-14",
+    "days_on_trending": 8,
+    "consecutive_days_on_trending": 8,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -25035,6 +25084,13 @@
       "2026-10-13": [
         157625,
         45327,
+        1,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-14": [
+        207627,
+        54679,
         1,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
@@ -25248,10 +25304,10 @@
   },
   "storytold/artcraft": {
     "first_seen": "2026-10-09",
-    "last_seen": "2026-10-13",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-14",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-10-09": [
         7962,
@@ -25285,6 +25341,13 @@
         22058,
         4095,
         4,
+        "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "Rust"
+      ],
+      "2026-10-14": [
+        25684,
+        4081,
+        8,
         "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
         "Rust"
       ]
@@ -25691,6 +25754,59 @@
       },
       "star_rating": 4,
       "verdict": "想在 CPU 上跑低位元 LLM 或研究 1.58-bit 推理最佳化的人,這是官方首選且值得持續關注;但缺少 CI 與系統化測試,且依賴第三方 llama.cpp fork,正式上線前需自行驗證。",
+      "_mode": "full"
+    }
+  },
+  "xtool-org/xtool": {
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-14": [
+        9376,
+        1198,
+        9,
+        "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
+        "Swift"
+      ]
+    },
+    "last_analyzed": "2026-10-14",
+    "analysis": {
+      "one_liner": "跨平台的 Xcode 替代方案:在 Linux、Windows(WSL)、macOS 上用 SwiftPM 建置、簽署並部署 iOS App。",
+      "summary": "xtool 是以 Swift 撰寫的命令列工具與函式庫(XKit),能在非 macOS 環境把 SwiftPM 專案打包成 iOS App、簽署並安裝到裝置,也能以程式方式存取 Apple Developer Services。它讓 Linux/Windows 開發者不需要 Mac,也能開發 iOS App。",
+      "category": "devtool",
+      "highlights": [
+        "子指令完整:setup、auth、sdk、new、dev、ds、devices、install、uninstall、launch,涵蓋從建立專案到裝置部署的流程",
+        "同時提供 XKit 函式庫(可作為 SwiftPM 依賴),能整合 Apple Developer Services 與裝置互動",
+        "模組切分清楚(PackLib、XKit、XToolSupport、DeveloperAPI 等),DeveloperAPI 以 OpenAPI 產生",
+        "CI 涵蓋 Linux(x86_64/aarch64)、macOS 與 iOS 建置,CI 中將警告視為錯誤,並使用 SwiftLint",
+        "文件完整:DocC 文件、互動式教學、範例專案(Examples),另有 AGENTS.md 與 CONTRIBUTING"
+      ],
+      "use_cases": [
+        "在 Linux 或 WSL 上以 VSCode 開發 iOS App,不需要 Mac",
+        "在 CI 環境中以 SwiftPM 建置並簽署 iOS App",
+        "在自己的 Swift 工具中透過 XKit 操作 Apple Developer Services 與 iOS 裝置",
+        "想用 SwiftPM 取代 Xcode 專案流程的 Swift 開發者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "專案結構成熟,文件與教學完整,CI 含多平台矩陣與 lint,近期仍持續推送。測試集中在 PackLib、Xcode、DarwinSDK、Matcher 等,規模中等,對簽署與裝置安裝等核心流程的自動化測試覆蓋有限(依檔案清單推估,未逐一檢視測試內容)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "此工具會處理 Apple ID 認證並簽署 App,使用者在 auth 流程中輸入的憑證與產生的簽署資料屬敏感資訊,建議自行確認來源與儲存位置",
+          "Dockerfile 在建置時從 GitHub 下載 libimobiledevice 相關原始碼並編譯,其中 libimobiledevice 使用 master 分支而非固定版本,屬於建置時需留意的外部依賴",
+          "安裝文件的 Linux 流程會用 curl 下載 Xcode 等外部資源(須登入 Apple ID),屬於此類工具的常見做法",
+          "未發現 npm 生命週期腳本、curl | bash 安裝器、混淆程式碼或內嵌的長 base64 內容;本次僅檢視 README、Dockerfile、build.yml、Package.swift 與目錄結構,未逐檔審查原始碼"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對想在 Linux/Windows 上開發 iOS App 的 Swift 開發者很有價值,專案成熟且持續維護,值得關注;使用前留意 Apple ID 認證與簽署資料的處理即可。",
       "_mode": "full"
     }
   }
