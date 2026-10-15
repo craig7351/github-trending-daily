@@ -7687,10 +7687,10 @@
   },
   "nvm-sh/nvm": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-09-06",
+    "last_seen": "2026-10-15",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-12": [
         94488,
@@ -7704,6 +7704,13 @@
         22,
         16,
         "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions. $nvm: 3ArcxqLtXMmBnWbbtfwQgVL3MNnDsggzgGDtXMnjpump",
+        "Shell"
+      ],
+      "2026-10-15": [
+        95456,
+        52,
+        4,
+        "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
         "Shell"
       ]
     },
@@ -9938,10 +9945,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-09-25",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -9963,42 +9970,50 @@
         8,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
+      ],
+      "2026-10-15": [
+        52503,
+        103,
+        6,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-24",
+    "last_analyzed": "2026-10-15",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "用 AI Agent 自動幫任何軟體(GIMP、Blender、LibreOffice 等)產生完整、可測試的 CLI 操作介面。",
-      "summary": "CLI-Anything 是一套「7 階段」的自動化流程,搭配 Claude Code / Cursor / Codex 等 AI 編碼代理,分析目標軟體的原始碼或 API,自動設計、實作、測試並打包出一支可安裝的 Python CLI(以 Click 撰寫、支援 JSON 輸出與 REPL)。專案同時提供 CLI-Hub 套件管理器,讓使用者或 Agent 用一行指令瀏覽、安裝、更新社群已產生的 CLI,目標是解決「AI 擅長推理卻不會操作真實專業軟體」的落差。",
+      "one_liner": "以 Claude Code 等 agent 為對象、把任意軟體包成 CLI harness 的框架,並附 CLI-Hub 社群註冊中心。",
+      "summary": "CLI-Anything 提供一套方法(HARNESS.md、/cli-anything 指令與 SKILL.md 產生器),讓 AI agent 為既有軟體(Blender、QGIS、FreeCAD、Obsidian、n8n 等)產生以 Click 為基礎、支援 JSON 輸出與 REPL 的命令列介面。倉庫內已有大量社群貢獻的 harness,並有 cli-anything-hub 套件(PyPI)可用 `cli-hub install` 搜尋、安裝與更新這些 CLI。目標是解決 agent 難以直接操作 GUI 軟體的問題。",
+      "category": "ai-ml",
       "highlights": [
-        "monorepo 內已收錄 60 多款軟體的 harness(GIMP、Blender、LibreOffice、QGIS、FreeCAD、Zoom、n8n 等),每款都附完整 README/SKILL.md/TEST.md",
-        "每個 harness 都是標準 pip 套件(setup.py + console_scripts entry point),用 Click 實作,支援 --json 輸出與互動 REPL,設計一致性高",
-        "同時支援多種 Agent 平台(Claude Code plugin、Cursor plugin、OpenClaw skill、Codex skill、Hermes、Reasonix 等),安裝方式各自獨立成腳本",
-        "CLI-Hub(pip install cli-anything-hub)提供 install/update/uninstall 的套件管理體驗,並有 public_registry.json 收錄第三方 CLI 資訊",
-        "測試覆蓋量體很大(單一 GIMP harness 就有 78 個測試案例,README 宣稱全專案 2,461+ 測試通過),但 CI 目前只驗證 skill/plugin 結構,未見統一跑全部 harness 測試套件的 workflow"
+        "統一的 harness 規範(HARNESS.md、guides/、SKILL.md),可套用到幾乎任何軟體並產生 agent 可探索的技能描述",
+        "倉庫內已有數十個社群貢獻的 CLI(3MF、QGIS、Calibre、Rekordbox、Obsidian、Godot 等),各自附單元測試與 E2E 測試",
+        "CLI-Hub 套件管理器支援 pip、npm、brew 等多種安裝來源,並以 GitHub Actions 自動發佈到 PyPI(trusted publishing)",
+        "支援 Claude Code、Cursor、Pi、Codex 等多種 agent 平台的外掛與 marketplace 設定",
+        "近期有以 defusedxml 處理不受信任 XML、修補路徑穿越等安全強化紀錄"
       ],
       "use_cases": [
-        "需要讓 AI Agent 操作沒有官方 API 的桌面/GUI 軟體(如 Blender、GIMP、LibreOffice)時,用生成的 CLI 取代脆弱的 GUI 自動化",
-        "想把一堆分散的第三方 Web API/SDK 統一包裝成單一、有狀態的 CLI 給 Agent 使用",
-        "透過 CLI-Hub 快速安裝社群已經做好的軟體 CLI,不必自己重新產生 harness",
-        "研究「AI 生成可維護 CLI 工具」的方法論與 7 階段流程(HARNESS.md)當作團隊內部工具鏈參考"
+        "讓 Claude Code 或 Cursor 等 agent 以指令列操作 CAD、GIS、影音編輯等專業軟體",
+        "為公司內部使用的桌面或服務軟體快速產生 agent 友善的 CLI 與 SKILL.md",
+        "透過 CLI-Hub 搜尋並安裝社群已建好的 CLI,供 agent 自主發現工具",
+        "研究 agent-native 軟體介面的設計模式與 harness 方法論"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "文件量極其豐富(多語系 README、每個 harness 各自的 README/SKILL.md/TEST.md、HARNESS.md 方法論文件),對開發者與 Agent 都友善。測試方面每個 harness 都內建 unit + e2e 測試(單一模組即有 70~200 多個案例),但目前 CI workflow 只驗證 skill 檔案結構與外掛設定,並未見到會實際跑遍所有 harness pytest 套件的自動化流程,測試證據多半仰賴 PR 描述與人工檢查。專案活躍度非常高,commit/News 幾乎每日更新,結構龐大且仍在快速擴張中。"
+        "comment": "README 內容詳盡(含多語系、新聞紀錄、貢獻指南與技術報告連結)。各 harness 多附 test_core.py 與 E2E 測試,cli-hub 另有測試;根目錄 CI 主要檢查技能檔、外掛與 PR 標籤,各 harness 的測試是否在 CI 執行未逐一確認。更新頻繁且社群貢獻者多。單一 harness 程式碼風格一致,屬於結構清晰的 Click 實作;各 harness 品質仍取決於個別貢獻者。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "cli-hub 套件管理器(cli-hub/cli_hub/installer.py)在安裝流程中,若 registry 條目的 install_cmd 含有管線字元(如 |、&&、;)就會以 subprocess shell=True 直接執行整段字串;程式註解表示指令「來自可信任的 registry」,但 registry.json / public_registry.json 是可透過社群 PR 新增條目的檔案",
-          "public_registry.json 與部分 harness(如 quietshrink)的錯誤提示訊息中,包含要求使用者手動執行 curl | bash 或 PowerShell iwr | iex 來安裝第三方上游工具(如 Android CLI、jimeng CLI、quietshrink)的指令,這些是文件建議動作,並非本專案自動執行",
-          "本專案自身的 setup.py / install.sh 只做標準的檔案複製與 pip 套件安裝,未發現 npm 生命週期腳本或安裝時下載執行外部程式碼的行為"
+          "cli-hub 套件(cli_hub/analytics.py)預設啟用使用統計,透過 PostHog(us.i.posthog.com)回報;可用環境變數 CLI_HUB_NO_ANALYTICS=1 關閉。程式碼會檢查環境變數與 Linux 上的父行程命令列(/proc)以判斷呼叫端是否為 agent 工具,並在 ~/.cli-hub 寫入匿名識別檔。使用前建議自行確認並視需求關閉。",
+          "cli-hub 的 installer.py 會呼叫 subprocess 執行 registry 中定義的安裝指令(pip、npm、brew 等),且在指令含管線或 && 等運算子時使用 shell=True。實際安裝內容取決於社群提交的 registry 項目,安裝第三方 CLI 前宜先檢視其來源。",
+          ".pi-extension/cli-anything/install.sh 僅從本機倉庫複製檔案到 ~/.pi/agent/extensions,未見從外部網址下載或 curl|bash 的行為。",
+          "已檢視的檔案中未見混淆程式碼、內嵌的大型 base64 負載或可疑相依套件名稱;PostHog 專案 token 為寫在原始碼中的公開型金鑰。本次僅抽樣檢視,未涵蓋倉庫內全部 harness。"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念新穎、文件與規模都做得很扎實,若你需要讓 AI Agent 操作沒有 API 的桌面軟體,值得研究其 harness 設計與 CLI-Hub 生態,但透過 cli-hub 安裝第三方 CLI 時建議先檢視該條目的 install_cmd 內容再執行。",
+      "verdict": "想讓 agent 操作各類軟體的人值得關注:方法論完整、社群活躍、生態成長快;採用 CLI-Hub 安裝第三方 CLI 時,請留意預設啟用的使用統計與社群提交的安裝指令。",
       "_mode": "full"
     }
   },
@@ -13529,10 +13544,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-09-02",
-    "days_on_trending": 7,
-    "consecutive_days_on_trending": 7,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -13582,44 +13597,50 @@
         9,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
+      ],
+      "2026-10-15": [
+        49340,
+        163,
+        5,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-27",
+    "last_analyzed": "2026-10-15",
     "analysis": {
-      "one_liner": "一個收錄 163 個「Agent Skills」的科學研究技能庫,讓 Claude Code、Cursor、Codex 等 AI agent 秒變具備生物、化學、醫學、藥物開發等領域專業知識的「AI 科學家」。",
-      "summary": "此專案將 163 個經過驗證的科學計算技能(涵蓋生物資訊、化學資訊、蛋白質工程、臨床研究、材料科學等)與 100+ 個科學資料庫查詢介面打包成標準化的 Agent Skills / Agent Plugins 套件,讓支援該標準的 AI 編碼代理人可直接載入使用,省去自行摸索各科學套件 API 與資料庫端點的時間。每個技能都附有 SKILL.md 文件、程式範例與(若含腳本)對應測試套件,並由 CI 強制執行結構化契約檢查。",
+      "one_liner": "K-Dense 推出的科學研究 Agent Skills 函式庫,含 177 個技能與 100+ 科學資料庫,讓 AI agent 變身 AI Scientist。",
+      "summary": "這是一套遵循開放 Agent Skills 標準的科學技能集合,涵蓋生物資訊、化學資訊、藥物開發、臨床研究、材料、物理、地理空間與科學寫作等領域。每個技能提供特定套件、資料庫或工作流程的指引、科學慣例與驗證檢查,可用於 Cursor、Claude Code、Codex、Antigravity 等,也能當作 Agent Plugins 套件載入。",
       "category": "ai-ml",
       "highlights": [
-        "163 個技能對應 RDKit、Scanpy、BioPython、AlphaFold、DiffDock 等 70+ 科學 Python 套件,以及 78 個公開資料庫(PubChem、ChEMBL、ClinicalTrials.gov 等)的統一查詢介面",
-        "同時支援 Agent Skills 與 Agent Plugins 兩種開放標準,相容 Claude Code、Cursor、Codex、Gemini CLI、Google Antigravity 等多種 agent host",
-        "CI 設有『結構化契約』測試(tests/_meta),強制規定含 scripts/ 的技能必須有對應測試套件,並檢查 frontmatter、連結、腳本可解析性等",
-        "每週用 Cisco AI Defense Skill Scanner 對全部技能做 LLM 安全掃描,結果公開發布於 docs/security-report.md,展現高度透明度",
-        "README 中明確列出安全免責聲明,提醒使用者技能可執行任意程式碼、安裝套件、發出網路請求,務必自行審查再安裝"
+        "177 個技能涵蓋 70+ Python 套件(RDKit、Scanpy、pymatgen 等)與 9 個平台整合(Benchling、Opentrons 等)",
+        "Database Lookup 技能整合 80 個資料庫(PubChem、ChEMBL、UniProt、ClinicalTrials.gov 等),含端點選擇、分頁與來源追溯",
+        "跨 agent 相容,同時符合 Agent Skills 與 Agent Plugins 標準",
+        "有 arXiv 論文、CI 安全掃描與技能測試工作流程徽章,版本 2.72.0 持續迭代",
+        "臨床與醫療類技能明確標註僅限研究用途,不做診斷或治療決策"
       ],
       "use_cases": [
-        "讓 AI coding agent 快速執行藥物篩選、分子對接、ADMET 預測等藥物開發多步驟工作流",
-        "單細胞 RNA-seq、多體學(multi-omics)資料整合分析與生物標記發現",
-        "快速串接 78 個科學/財經資料庫(基因、化合物、臨床試驗、專利等)做可追溯的資料查詢",
-        "科學文獻回顧、證據可追溯的論文寫作與圖表/簡報產出"
+        "讓 Claude Code 或 Cursor 執行單細胞 RNA-seq、變異註解等生資分析",
+        "藥物探索流程:虛擬篩選、ADMET、分子對接",
+        "文獻回顧、假說生成與科學論文/海報撰寫",
+        "參考其 SKILL.md 結構,自行開發領域專用 agent skill"
       ],
       "quality": {
-        "docs": 5,
-        "tests": 4,
+        "docs": 4,
+        "tests": 2,
         "activity": 5,
-        "comment": "文件品質極高,README 逐一列出安裝方式、安全注意事項、163 個技能分類與範例,抽查的 SKILL.md 與 scripts(如 genomic-coordinates/convert_coords.py)程式風格清楚、型別註記完整、docstring 精確不冗長。測試方面有 tests/_meta 結構契約測試 + 215+ 個技能專屬測試檔,CI 對每個 PR 強制跑契約檢查與標準庫技能測試套件,但完整的 --isolated 全量測試(含需 GPU/CUDA/MATLAB 的技能)僅排程執行、不在每次 PR 跑。活躍度極高,2026-08-24 最新推送,近期提交密集,並持續發布 blog 深度剖析與基準測試。"
+        "comment": "README 分類清楚,附教學影片、技能目錄與論文,但行銷與宣傳內容偏多。測試僅從徽章看到有 skill-tests 與 security-scan 工作流程,未檢視程式碼,屬 README 層級評估。近期仍有推送且為熱門榜單。「250,000+ 科學家使用」等數字為專案自述,未經驗證。"
       },
       "security": {
-        "risk_level": "medium",
+        "risk_level": "low",
         "findings": [
-          "README 的『Security Disclaimer』章節明確指出:Agent Skills 可指示 AI agent 執行任意程式碼、安裝套件、發出網路請求、修改檔案,官方建議使用者只安裝實際需要的技能並自行審查 SKILL.md",
-          "專案每週用 LLM-based 掃描器(Cisco AI Defense Skill Scanner)掃描全部技能並公開發布結果(docs/security-report.md);截至 2026-08-24 的報告顯示 163 個技能中有 11 個被標記 CRITICAL、5 個 HIGH,例如 autoskill 技能因『讀取環境變數並發出網路呼叫』被掃描器標記為潛在資料外洩模式(該行為對照原始碼看似是呼叫 LLM API 時使用環境變數中的 API 金鑰,屬於此類工具常見的正常用法,但掃描器仍將其列為需人工複核的高風險模式)",
-          "README 中提供的是官方 uv 套件管理器安裝指令(curl | sh 與 irm | iex),來源為 astral.sh 官方網域,非本專案自建的安裝腳本"
-        ],
-        "risk_level_reason": null
+          "僅檢視 README,未做原始碼層級審查。",
+          "技能內容會指引 agent 呼叫外部 API 與執行 Python 套件,使用前建議檢視 SKILL.md 並在隔離環境執行。",
+          "README 提及 K-Dense BYOK 需自備 API 金鑰,並可選用 Modal 雲端運算,請注意金鑰與資料外送範圍。"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "文件、測試、CI 與安全透明度都做到業界少見的水準,是目前最完整的科學 AI Agent Skills 集合,值得科學/生醫 AI 研發工程師立即嘗試,但因技能本身具備任意程式碼執行能力,建議依官方建議只裝需要的子集並逐一檢視 SKILL.md。",
-      "_mode": "full"
+      "star_rating": 4,
+      "verdict": "想讓 AI agent 做科學研究的人值得收藏,涵蓋面廣、維護活躍;技能品質仍需依自身領域實際試用驗證。",
+      "_mode": "light"
     }
   },
   "bilawalsidhu/gods-eye-view": {
@@ -14234,10 +14255,10 @@
   },
   "NationalSecurityAgency/ghidra": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-09-18",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-29": [
         73340,
@@ -14273,42 +14294,50 @@
         7,
         "Ghidra is a software reverse engineering (SRE) framework",
         "Java"
+      ],
+      "2026-10-15": [
+        87515,
+        1008,
+        12,
+        "Ghidra is a software reverse engineering (SRE) framework",
+        "Java"
       ]
     },
-    "last_analyzed": "2026-09-16",
+    "last_analyzed": "2026-10-15",
     "analysis": {
+      "one_liner": "NSA 開源的軟體逆向工程框架 Ghidra,提供反組譯、反編譯、圖形化與腳本化分析能力。",
+      "summary": "Ghidra 是由美國國家安全局研究部門建立並維護的軟體逆向工程(SRE)框架,支援 Windows、macOS、Linux,涵蓋反組譯、組譯、反編譯、圖形化與腳本等功能。它支援多種處理器指令集與執行檔格式,可互動使用或自動化執行,並能以 Java 或 Python 開發擴充與腳本,用於惡意程式分析與漏洞研究。",
       "category": "security",
-      "one_liner": "NSA 開發的開源軟體逆向工程框架,提供反組譯、反編譯、圖形化分析等完整功能。",
-      "summary": "Ghidra 是由美國國家安全局研究部門開發並維護的軟體逆向工程(SRE)框架,支援多種處理器指令集與執行檔格式,可在 Windows、macOS、Linux 上分析編譯後的程式碼。它整合反組譯、組譯、反編譯、圖形化與腳本擴充等能力,可用互動或自動化模式運作,並支援 Java 與 Python 撰寫擴充套件。",
       "highlights": [
-        "由 NSA 官方開發並維護,長期用於惡意程式分析與漏洞研究",
-        "支援多平台(Windows/macOS/Linux)與多種處理器架構、執行檔格式",
-        "具備反組譯、反編譯、圖形化分析、腳本擴充等完整逆向工程功能",
-        "可透過 Java 或 Python(PyGhidra)開發自訂擴充套件與腳本",
-        "採用 Apache-2.0 授權,原始碼與建置流程公開透明"
+        "內建反組譯、反編譯、組譯、圖形化與腳本等完整逆向工程工具鏈",
+        "支援多種處理器指令集與執行檔格式,可跨平台運作",
+        "可用 Java 或 Python(PyGhidra)開發擴充與腳本,並整合 Eclipse、VS Code",
+        "支援互動與自動化模式,適合團隊協作與大規模分析",
+        "Apache-2.0 授權,GitHub 星數約 8.7 萬,社群與生態成熟"
       ],
       "use_cases": [
-        "惡意程式分析與資安事件調查",
-        "軟體漏洞研究與弱點挖掘",
-        "二進位檔案逆向工程教學與研究",
-        "客製化 SRE 擴充工具或腳本開發"
+        "惡意程式與韌體的逆向分析",
+        "軟體漏洞研究與安全稽核",
+        "開發自訂分析外掛或自動化批次分析腳本",
+        "逆向工程教學與 CTF 練習"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 對安裝、建置、開發流程說明清楚且結構完整,但屬於 README-only 評估,未檢視原始碼與測試涵蓋率;專案本身推送頻繁、目前正在 GitHub trending 上升中,活躍度高。"
+        "comment": "README 結構完整,涵蓋安裝、建置、開發與貢獻流程,並連結開發者指南與入門文件。測試品質僅依 README 評估,無法看到程式碼,故保守評分。最近一次推送為 2026-10-13,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 明確提醒使用者存在已知安全性弱點(Security Advisories),建議安裝前先行閱讀相關公告",
-          "安裝方式為下載官方 release 壓縮檔或自行建置原始碼,並未使用 curl | bash 之類的一鍵執行腳本",
-          "本評估僅根據 README 內容,未實際檢視原始碼或執行安裝流程"
+          "README 明確提醒:特定版本的 Ghidra 存在已知安全漏洞,使用前應閱讀官方 Security Advisories。",
+          "安裝方式為從 Releases 下載官方發行 zip 並解壓執行,README 中未見 curl | bash 之類的安裝模式。",
+          "建置流程會透過 gradle 下載相依套件,需要網路連線。",
+          "本評估僅依據 README,未進行原始碼層級審查。"
         ]
       },
       "star_rating": 5,
-      "verdict": "業界知名且持續活躍的逆向工程框架,對資安研究與惡意程式分析工作者而言絕對值得關注與收藏。",
+      "verdict": "逆向工程與資安領域的標竿開源工具,成熟、活躍且文件完整,值得收藏並實際上手。",
       "_mode": "light"
     }
   },
@@ -15762,10 +15791,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 11,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 12,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15841,6 +15870,13 @@
         63301,
         1748,
         3,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-15": [
+        66369,
+        3538,
+        2,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -17318,10 +17354,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -17385,44 +17421,52 @@
         4,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
+      ],
+      "2026-10-15": [
+        29129,
+        947,
+        3,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-10-01",
+    "last_analyzed": "2026-10-15",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "為 AI 程式碼代理優化 context window 的 MCP 外掛:沙箱化工具輸出、以 SQLite FTS5 保存工作階段記憶,並透過 hooks 強制路由。",
-      "summary": "context-mode 是 MCP server 加 hooks 的組合,支援 Claude Code、Gemini CLI、Codex、Cursor、Copilot、Kiro、Zed 等十多個平台。它在沙箱中執行程式碼、只回傳結果,避免大量原始輸出(如 Playwright 快照、日誌)塞滿 context(作者自述約 98% 減量)。同時把工作階段事件寫入 SQLite FTS5,對話壓縮後以 BM25 檢索還原進度。",
+      "one_liner": "為 17 種 AI coding agent 提供的 MCP 外掛,將工具輸出沙盒化、以 SQLite FTS5 保存工作階段記憶,號稱省下 98% context。",
+      "summary": "context-mode 是 MCP server 加 hooks 的組合,把 Playwright 快照、GitHub issue、log 等大量原始輸出留在沙盒內,只回傳摘要或查詢結果。它也把檔案編輯、git 操作、任務等事件記進 SQLite,在對話 compact 後用 FTS5/BM25 取回相關內容,並透過 hooks 強制路由,鼓勵「用程式碼分析」而非把資料讀進 context。",
+      "category": "ai-ml",
       "highlights": [
-        "沙箱工具(ctx_execute、ctx_batch_execute、ctx_fetch_and_index 等)讓原始資料不進 context,README 宣稱 315 KB 降為 5.4 KB",
-        "以 SQLite + FTS5 + BM25 持久化檔案編輯、git 操作、任務與錯誤,compaction 後只取回相關片段",
-        "「Think in Code」理念:讓 LLM 寫腳本做分析,只輸出結果",
-        "涵蓋 Claude Code、Gemini CLI、Codex、Cursor、Copilot、Kiro、Zed、OpenClaw、Pi 等多平台 adapter 與 hooks 設定",
-        "測試檔超過 200 個,涵蓋各 adapter、hooks、executor、search,並有 5 個 CI workflow"
+        "支援 Claude Code、Gemini CLI、Codex、Cursor、Copilot、Kiro、OpenCode、OpenClaw、Zed 等 17 個平台,各有對應 adapter 與設定檔",
+        "提供 11 個 MCP 工具(ctx_execute、ctx_batch_execute、ctx_search、ctx_fetch_and_index 等)與 PreToolUse/PostToolUse/PreCompact/SessionStart 等 hooks",
+        "工作階段事件寫入 SQLite,compact 後以 FTS5 + BM25 取回,而非把整份記錄塞回 context",
+        "「Think in Code」理念:讓 LLM 寫腳本做統計,只輸出結果,一個腳本取代多次 Read",
+        "測試相當完整,約 210 個測試檔,CI 在 Ubuntu/macOS/Windows 矩陣上執行"
       ],
       "use_cases": [
-        "長時間使用 Claude Code 或 Codex 進行大型專案開發,避免 context 被工具輸出耗盡",
-        "需要在對話壓縮後保留工作進度與決策的 agent 工作流程",
-        "同時使用多種 AI 編程工具的團隊,想統一 context 管理與路由規則",
-        "研究 MCP 與 hooks 架構及跨平台 adapter 設計"
+        "長時間使用 Claude Code 或 Codex 處理大型 repo,避免 context 被工具輸出占滿",
+        "需要在 compact 後保留工作狀態與任務連續性的 agent 工作流",
+        "同時使用多種 AI coding 工具的團隊,希望用統一的路由與記憶機制",
+        "分析大型 log、網頁或 MCP 工具輸出時降低 token 成本"
       ],
       "quality": {
         "docs": 4,
         "tests": 5,
         "activity": 5,
-        "comment": "README 詳盡,含各平台安裝步驟與指令說明,另有 BENCHMARK 與 CONTRIBUTING。測試目錄有 200 多個 test 檔,涵蓋 adapters、hooks、core,CI 有 5 個 workflow(含 e2e smoke)。版本已到 1.0.169,近期持續推送,迭代密集。減量數據與「微軟、Google 等團隊使用」屬作者自述,未經獨立驗證。授權為 Elastic-2.0,非標準開源授權。"
+        "comment": "README 內容豐富,涵蓋各平台安裝說明、指令與原理,另有 BENCHMARK、CONTRIBUTING。tests/ 下約 210 個測試檔,涵蓋 adapters、hooks、executor、routing 等。CI 為跨三平台矩陣,並有 e2e 工作流。版本號已到 1.0.169,近日仍有推送,迭代頻繁。授權為 Elastic-2.0(非 OSI 開源授權),商用或再散布前需確認條款。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 定義 postinstall 腳本(scripts/postinstall.mjs),僅在全域安裝(npm install -g)時會讀寫使用者家目錄下的 ~/.claude/plugins/installed_plugins.json 與 ~/.claude/settings.json 以修復外掛註冊,並改寫 hooks 設定",
-          "postinstall 在 Windows 全域安裝時會以 cmd.exe 執行 mklink 建立目錄 junction,並可能改寫 npm 產生的 context-mode.cmd shim;腳本已對路徑做特殊字元檢查",
-          "postinstall 僅在 Linux 且 Node 版本低於 22.5 時顯示含 curl | bash 的 Bun 安裝建議,為輸出文字,並非腳本自動執行",
-          "發佈檔含 server.bundle.mjs、cli.bundle.mjs 等 esbuild --minify 的打包檔,為建置產物,原始碼在 src/ 中可對照",
-          "本質上是讓 agent 在沙箱執行任意程式碼並攔截 hooks 的工具,且 README 提及 ctx_insight 會開啟外部託管儀表板,使用前建議了解其權限範圍"
+          "package.json 設有 postinstall(scripts/postinstall.mjs)。僅在全域安裝(npm install -g)時,會讀寫 ~/.claude/plugins/installed_plugins.json 與 ~/.claude/settings.json 以修復外掛註冊,並改寫外掛的 hooks 設定;安裝前建議先了解此行為。",
+          "postinstall 在 Windows 全域安裝時,會透過 execSync 呼叫 npm config、where 與 mklink /J 建立目錄連結,並可能改寫既有的 context-mode.cmd shim;程式有檢查路徑中的 shell 特殊字元。",
+          "postinstall 還會嘗試修復 better-sqlite3 原生綁定(heal-better-sqlite3),屬於安裝時的原生模組處理。",
+          "此工具設計上會註冊 hooks,攔截並改寫 agent 的 Bash/Read/WebFetch 等工具呼叫(例如阻擋 curl/wget),並在本機 SQLite 保存工作階段事件(檔案編輯、git 操作、使用者決策);使用者應知道這些資料會被持久化。",
+          "發行檔含 minified 的 server.bundle.mjs、cli.bundle.mjs 與 hooks/*.bundle.mjs,由 esbuild 從 src 建置而來,審查時應對照 TypeScript 原始碼。",
+          "ctx_insight 會開啟外部託管的儀表板(https://context-mode.com/insight);在 src 中該 URL 用於開啟瀏覽器。postinstall 中的 curl | bash 僅出現在錯誤提示文字(引導安裝 Bun),並非自動執行。"
         ]
       },
       "star_rating": 4,
-      "verdict": "針對 agent context 浪費這個真實痛點,實作完整、測試與平台涵蓋面都很扎實,值得 AI 編程工具重度使用者關注;安裝時留意 postinstall 會修改家目錄設定,並注意 Elastic-2.0 授權限制。",
+      "verdict": "想在長 session 中節省 context、需要跨 compact 記憶的 agent 使用者,值得試用;安裝前請留意 postinstall 會修改 ~/.claude 設定,以及 Elastic-2.0 授權。",
       "_mode": "full"
     }
   },
@@ -19141,10 +19185,10 @@
   },
   "vxcontrol/pentagi": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-14",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-13": [
         23454,
@@ -19159,43 +19203,51 @@
         8,
         "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
         "Go"
+      ],
+      "2026-10-15": [
+        29478,
+        1025,
+        8,
+        "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-09-13",
+    "last_analyzed": "2026-10-15",
     "analysis": {
+      "one_liner": "開源、可自架的多代理自主滲透測試平台,以 Go 後端搭配 React 前端,在 Docker 沙盒中驅動 nmap、Metasploit、sqlmap 等 20 多種工具。",
+      "summary": "PentAGI 是由 VXControl 開發的自主滲透測試系統。使用者以自然語言描述目標與任務,由多個專職 AI 代理(研究、開發、基礎設施)規劃,並在隔離的 Docker 容器內執行安全工具。結果存入 PostgreSQL + pgvector,可選配 Neo4j/Graphiti 知識圖譜,最後產出報告。支援 10 多家 LLM 供應商與 Ollama、vLLM 等本地模型,並提供 REST 與 GraphQL API。",
       "category": "security",
-      "one_liner": "PentAGI 是一套以多代理 AI 系統自動執行滲透測試任務的自架平台,整合 20+ 專業資安工具與沙箱化 Docker 執行環境。",
-      "summary": "PentAGI 讓 AI Agent(研究員、開發者、執行者等分工角色)在隔離的 Docker 容器中自動規劃並執行滲透測試流程,支援 10+ 種 LLM 供應商(OpenAI、Anthropic、Bedrock、Ollama 等)與多種搜尋引擎整合。系統提供完整的記憶系統(向量存儲、知識圖譜)、監控堆疊(Grafana/Prometheus/Langfuse)以及 REST/GraphQL API,目標是解決資安研究人員需要可擴展、可自動化滲透測試流程的痛點。",
       "highlights": [
-        "多代理架構(Orchestrator/Researcher/Developer/Executor)搭配長短期記憶與知識圖譜(Graphiti+Neo4j)",
-        "內建執行監控與智慧任務規劃機制,官方以 Qwen3.5-27B-FP8 實測聲稱能讓小模型結果品質提升 2 倍",
-        "README 對 Docker socket 掛載風險有清楚的技術性說明,並提供 dind+TLS 的安全替代方案",
-        "CI 涵蓋前端 lint/type-check/test/Playwright e2e 視覺回歸測試,以及後端 go test 與跨平台建置",
-        "支援多租戶(TENANT_ID)部署與雙節點(worker node)隔離架構,考量到生產環境安全邊界"
+        "多代理分工架構,含執行監控與任務規劃,可輔助較小的開源模型穩定運作",
+        "支援 OpenAI、Anthropic、Gemini、Bedrock、Ollama、DeepSeek 等 10 多家供應商及任何 OpenAI 相容端點,並附 vLLM 本地部署指南",
+        "完整可觀測性:Langfuse、Grafana、Prometheus、Jaeger、Loki 與 OpenTelemetry",
+        "提供終端機 TUI 互動式安裝器(Linux/macOS/Windows),並附 ctester、ftester、etester 測試工具",
+        "長期記憶使用 pgvector,可選 Graphiti/Neo4j 知識圖譜;提供 REST 與 GraphQL API 方便自動化"
       ],
       "use_cases": [
-        "資安團隊需要自動化、可重複執行的滲透測試流程之自架方案",
-        "研究人員評估多代理 LLM 系統在攻防場景下的任務分解與工具調用能力",
-        "企業想在隔離網路環境(air-gapped)中用本地 LLM(如 Ollama/vLLM)進行合規的紅隊演練",
-        "教學或 CTF 場景中觀察 AI Agent 如何自主使用 nmap、sqlmap、metasploit 等工具"
+        "在授權範圍內,對自有系統或客戶系統做自動化滲透測試與弱點驗證",
+        "紅隊或資安研究人員自架 AI 輔助的偵察與攻擊鏈探索",
+        "研究多代理 LLM 系統架構、工具呼叫與可觀測性設計的參考實作",
+        "比較不同 LLM(含本地模型)在資安任務上的表現"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "文件非常詳盡,README 逾 4000 行涵蓋架構圖、環境變數、安全注意事項與多場景部署指南;後端有大量 _test.go 單元測試,前端具備 Playwright e2e 與視覺回歸測試,CI 涵蓋 lint/type-check/test/跨平台建置;近期提交頻繁(最新推送於 2026-09-10),維護活躍。"
+        "comment": "README 內容完整,含架構圖、各供應商設定與進階部署說明,另有 CLAUDE.md、CONTRIBUTING 及 backend/docs。後端約有 258 個 Go 測試檔,涵蓋 installer、controller、docker、database、graph 等模組,部分為需要資料庫的 live 測試。CI 含 ci.yml 與多個 e2e workflow,最後推送於 2026-10-09,維護活躍。"
       },
       "security": {
-        "risk_level": "low",
+        "risk_level": "medium",
         "findings": [
-          "專案本質為攻擊性資安工具,設計上會在沙箱容器內執行滲透測試指令(nmap、sqlmap、metasploit 等),此為其核心功能而非缺陷,但使用者需注意授權範圍與網路隔離",
-          "README 明確警告直接掛載 host 的 Docker socket(DOCKER_SOCKET)會讓自主 Agent 取得 host Docker API 進而可能危及整個節點,並建議改用具 TLS 的獨立 dind 架構,屬於作者主動揭露的風險而非隱藏行為",
-          "Docker 容器預設以 root 執行以存取 docker.sock,README 有說明可改用 TCP/IP 連線並降權為非特權使用者",
-          "手動安裝步驟使用 curl 下載 .env.example 與 docker-compose.yml 等設定檔(非執行檔),未發現 curl | bash 類型的直接管線執行安裝腳本"
+          "這是攻擊性資安工具,README 明確聲明僅限授權測試;使用者須自行確保有合法授權並遵守法規。",
+          "docker-compose.yml 將主機的 /var/run/docker.sock 掛載進 pentagi 容器,且設定 user: root:root,代理因此具備控制主機 Docker 的能力;README 另有「Giving agents Docker without giving away the host」章節說明緩解做法,並有 DOCKER_NET_ADMIN 選項(預設 false)。",
+          "README 的快速安裝流程是從 pentagi.com 下載預編譯的 installer 壓縮檔並執行(wget 後 unzip),而非從原始碼建置;使用者應自行確認來源並留意 README 中的 macOS 安全警告說明。",
+          "Dockerfile 在建置時使用 go install go-licenses@latest,屬未鎖定版本的建置期相依。",
+          "掃描範圍內未發現 npm 生命週期腳本、混淆程式碼或內嵌的 base64 payload;examples 文件中的 curl | sh 僅出現於 uv 安裝說明與範例報告文字。"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程成熟度與文件品質在同類 AI Agent 專案中相當突出,若你在合法授權範圍內從事滲透測試或紅隊自動化研究,值得花時間深入評估。",
+      "verdict": "工程品質高、文件與測試完整的自主滲透測試框架,對資安與 AI agent 研究者很有參考價值;部署時需留意 docker.sock 權限與授權使用範圍。",
       "_mode": "full"
     }
   },
@@ -25034,10 +25086,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-14",
-    "days_on_trending": 8,
-    "consecutive_days_on_trending": 8,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 9,
+    "consecutive_days_on_trending": 9,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -25091,6 +25143,13 @@
       "2026-10-14": [
         207627,
         54679,
+        1,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-15": [
+        242241,
+        41034,
         1,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
@@ -25759,15 +25818,22 @@
   },
   "xtool-org/xtool": {
     "first_seen": "2026-10-14",
-    "last_seen": "2026-10-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-14": [
         9376,
         1198,
         9,
+        "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
+        "Swift"
+      ],
+      "2026-10-15": [
+        10833,
+        1502,
+        10,
         "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
         "Swift"
       ]
@@ -25807,6 +25873,162 @@
       },
       "star_rating": 4,
       "verdict": "對想在 Linux/Windows 上開發 iOS App 的 Swift 開發者很有價值,專案成熟且持續維護,值得關注;使用前留意 Apple ID 認證與簽署資料的處理即可。",
+      "_mode": "full"
+    }
+  },
+  "ifixai-ai/iFixAi": {
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-15": [
+        27418,
+        2109,
+        7,
+        "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-15",
+    "analysis": {
+      "one_liner": "針對 AI Agent 的獨立稽核診斷工具,以最多 60 項檢測評估 Agent 是否依業務規則行事,提供 CLI、Claude Code/Codex 外掛與 Skill 三種用法。",
+      "summary": "iFixAi 是 Apache-2.0 授權的 Python 開源診斷工具,聚焦「Agent 是否依業務 KPI 與組織權限做事」,而非只看延遲或 prompt injection。它結合紅隊對抗與營運保證,支援多家模型供應商,評審可選自評、單一獨立評審或多評審團,輸出 JSON/Markdown 報告與終端計分卡,並對應 EU AI Act、NIST AI RMF、ISO 42001、OWASP LLM 等框架。",
+      "category": "ai-ml",
+      "highlights": [
+        "三種使用模式:互動式精靈 (ifixai setup/run)、全旗標 CLI(適合 CI)、Claude Code/Codex 外掛與跨 Agent Skill (uvx ifixai install)",
+        "最多 60 項檢測,預設 10 項,可用 --suite smoke/strategic/core/all 切換;具 manifest、replay seed 等可重現機制",
+        "附 Policy Lab(找出合法動作組合造成的最短有害序列)與 Trajectory Assurance(稽核已記錄的 Agent 行為軌跡)",
+        "支援 OpenAI、Anthropic、Gemini、Bedrock、Azure、LiteLLM 等供應商;API key 僅以環境變數名稱儲存,不寫入設定檔",
+        "附四個案例 SCORECARD 與中英日韓多語 README,docs 目錄完整"
+      ],
+      "use_cases": [
+        "上線前對客服、營運類 Agent 做權限與政策遵循稽核",
+        "把 ifixai run 整合進 CI,追蹤模型或提示詞變更後的行為退化",
+        "為 EU AI Act / NIST AI RMF / ISO 42001 合規準備提供稽核證據",
+        "在 Claude Code 內讓 Agent 自行探索環境並稽核自己或其他模型"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "套件內含 145 個以上測試檔(多為供應商傳輸層、設定、manifest、計分的細部行為測試);CI 以 Python 3.10–3.12 矩陣執行 ruff、bandit、fixture 驗證與文件連結檢查。程式結構清晰、有型別標註,README 偏行銷語氣但 docs 目錄完整。最近推送為 2026-10-14,維護活躍;專案為 trending 第 1 天、星數成長極快,後續穩定度仍待觀察。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Claude Code/Codex 外掛的 plugin/hooks/hooks.json 設定 SessionStart 鉤子,會執行 python3 bootstrap.py;該腳本在外掛資料目錄建立 venv,並以 pip 安裝 requirements.txt 中固定的依賴(安裝外掛前建議先檢視)。",
+          "bootstrap.py 支援環境變數 IFIXAI_ENGINE_SPEC,設定後會改從指定的 wheel、目錄或 -e 路徑安裝引擎,屬開發用覆寫機制,一般情況未設定。",
+          "工具執行時會依使用者設定呼叫各 LLM 供應商 API,會產生費用並把測試內容送往對應供應商;README 說明金鑰由環境變數讀取、不經命令列。",
+          "pyproject.toml 無 setup.py 或安裝時生命週期腳本;依賴套件名稱皆為常見知名套件,未見混淆程式碼、內嵌 base64 載荷或 curl|bash 安裝指令。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "以「業務規則對齊」為切角的 Agent 稽核工具,工程品質與文件扎實、測試密集,對 AI 研發與治理團隊值得試用;星數暴增屬 trending 現象,宜持續觀察長期維護。",
+      "_mode": "full"
+    }
+  },
+  "rust-lang/rust": {
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-15": [
+        120035,
+        207,
+        9,
+        "Empowering everyone to build reliable and efficient software.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-10-15",
+    "analysis": {
+      "one_liner": "Rust 程式語言的官方主倉庫,包含編譯器、標準函式庫與文件,主打效能、可靠性與生產力。",
+      "summary": "rust-lang/rust 是 Rust 語言的核心原始碼倉庫,涵蓋 rustc 編譯器、標準函式庫與官方文件。Rust 透過所有權模型與型別系統,在編譯期保證記憶體與執行緒安全,同時維持接近 C/C++ 的效能。",
+      "category": "framework",
+      "highlights": [
+        "以所有權與型別系統在編譯期確保記憶體與執行緒安全",
+        "具備 Cargo、rustfmt、Clippy、rust-analyzer 等完整工具鏈",
+        "編譯器診斷訊息友善,文件完整(The Book、rustc-dev-guide)",
+        "適用於關鍵服務、嵌入式裝置,並易與其他語言整合",
+        "採 MIT/Apache-2.0 雙授權,由 Rust Foundation 保護商標,社群治理成熟"
+      ],
+      "use_cases": [
+        "開發高效能且安全的系統軟體、後端服務與嵌入式應用",
+        "為 AI/ML 專案撰寫高效能推論元件或 Python 擴充模組",
+        "研究編譯器架構並參與 rustc 貢獻",
+        "作為學習系統程式設計與記憶體安全概念的起點"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 簡潔清楚,並指向 The Book、rustc-dev-guide、INSTALL 與 CONTRIBUTING 等完整資源。測試部分僅憑 README 判斷,無法檢視程式碼。最後推送時間為近日,維護極為活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "README 建議透過 The Book 的安裝章節取得工具鏈,並說明從原始碼安裝不建議,細節見 INSTALL.md;README 本身未列出 curl | bash 類指令。僅依 README 評估,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "Rust 生態系的根基專案,對任何需要安全高效系統程式的工程師都值得長期關注與學習。",
+      "_mode": "light"
+    }
+  },
+  "ntdevlabs/tiny11builder": {
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-15": [
+        20229,
+        139,
+        11,
+        "WinUI app for building smaller, customized Windows 11 images.",
+        "C#"
+      ]
+    },
+    "last_analyzed": "2026-10-15",
+    "analysis": {
+      "one_liner": "以原生 WinUI 應用程式精簡 Windows 11 映像,可自選要移除的元件並產出更小的 ISO。",
+      "summary": "Tiny11 Builder 是 tiny11builder 專案的 WinUI(C#)新版,把原本的 PowerShell 腳本改為圖形介面。可下載官方 Windows 11 映像或使用自備 ISO,選擇 Tiny11、Tiny11 Core 或自訂模式移除內建應用與元件,最後以 oscdimg 產出 ISO。倉庫仍保留原本的 tiny11maker.ps1 與 tiny11Coremaker.ps1。",
+      "category": "devtool",
+      "highlights": [
+        "提供 Tiny11、Tiny11 Core、Custom 三種模式,Core 模式會移除服務與復原功能並停用 Defender",
+        "支援 Turbo 模式,中斷的建置可從已存檔進度續建",
+        "官方映像下載器限制 HTTPS 與 Microsoft 網域、大小上限 32 GiB,並支援 SHA-256 驗證與斷點續傳",
+        "oscdimg.exe 下載有固定 SHA-256 與主機白名單檢查,驗證不符即不儲存也不執行",
+        "x64 與 ARM64 皆有發行版本,CI 在 Windows 上執行測試並打包"
+      ],
+      "use_cases": [
+        "為虛擬機器或測試環境製作精簡的 Windows 11 安裝媒體",
+        "在舊硬體或低資源裝置上部署體積較小的 Windows 11",
+        "研究 DISM 離線映像維護、登錄檔調整與 unattend 自動應答流程"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 簡潔,另有 docs/usage.md 與 NOTICE.md。專案分為 Core 與 App,Core 有二十多個測試檔,涵蓋建置引擎、續建、下載器與取消清理。CI 在 push 時執行測試並打包 x64/ARM64。抽樣的程式碼有路徑安全檢查、大小限制與雜湊驗證,品質不錯。最近一次推送是 2026-10-12,活躍度高。未標示授權條款。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "應用程式需要系統管理員權限,並會對 Windows 映像執行 DISM、離線登錄檔修改等操作;Core 模式會停用 Defender 並移除服務與復原功能,README 也提醒應先在 VM 中測試。",
+          "OscdimgAcquirer.cs 會從 msdl.microsoft.com 下載 oscdimg.exe,程式內固定了 SHA-256 並限制 HTTPS 與主機白名單,雜湊不符則不會儲存或執行。",
+          "OfficialImageDownloader.cs 只接受 Microsoft 網域的 HTTPS .iso 連結,並限制大小上限。",
+          "倉庫根目錄含 autounattend.xml 與 PowerShell 腳本,執行前建議先自行檢視內容。",
+          "本次僅靜態檢視部分檔案,未建置或執行。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "知名工具的 GUI 重寫版,工程品質與下載驗證做得扎實,有測試與 CI。對需要精簡 Windows 11 的人值得關注,但 Core 模式風險高,務必先在虛擬機器測試。",
       "_mode": "full"
     }
   }
