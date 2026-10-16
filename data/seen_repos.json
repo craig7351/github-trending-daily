@@ -1250,8 +1250,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-04",
-    "days_on_trending": 3,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1379,46 +1379,54 @@
         11,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-16": [
+        299899,
+        582,
+        6,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-09-24",
+    "last_analyzed": "2026-10-16",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "給 AI 編程代理人(Claude Code、Codex、Cursor 等)使用的「軟體開發方法論」外掛,以一套可組合的 Skill 文件強制執行需求訪談、TDD、程式碼審查等流程。",
-      "summary": "Superpowers 並非傳統程式庫,而是一組結構化的 Markdown「Skill」提示詞,搭配各家 coding agent(Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Pi、Devin 等)的外掛/hook 機制,在 AI 開始寫程式前自動觸發腦力激盪、寫規格、拆解任務、TDD 紅綠燈循環、程式碼審查等步驟,目的是讓代理人的自主開發更可控、更少偷工減料。倉庫同時附上大量跨平台整合腳本與測試,確保同一套 Skill 能在十餘種不同 AI 工具上以一致方式運作。",
+      "one_liner": "跨多種程式代理(Claude Code、Codex、Cursor、Gemini CLI 等)的可組合技能框架與軟體開發方法論,涵蓋腦力激盪、計畫、子代理開發與 TDD。",
+      "summary": "Superpowers 是一套以 Markdown 技能(SKILL.md)為核心的代理開發流程。工作階段啟動時,它會用 SessionStart hook 注入 using-superpowers 技能,讓代理在寫程式前依序進行需求釐清、設計、計畫、子代理執行、TDD 與程式碼審查。專案提供十多種代理平台的外掛清單與安裝方式,目的是讓代理自主工作較長時間,又不偏離計畫。",
+      "category": "ai-ml",
       "highlights": [
-        "核心是 15 個 SKILL.md 文件(brainstorming、test-driven-development、subagent-driven-development 等),定義強制性工作流程與『硬性關卡』(如未經人類核准不得寫程式碼)",
-        "同時支援 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Pi、Devin、Kimi、Hermes、Muse 等十餘種 AI 編程工具,各自有獨立的外掛/bridge 程式碼",
-        "OpenCode 外掛(.opencode/plugins/superpowers.js)展示了扎實的工程細節:frontmatter 手動解析、bootstrap 內容快取、子 session 偵測避免重複注入、fail-open 錯誤處理",
-        "測試涵蓋面廣,涉及多個 harness 的整合測試(bash + node + python),另有 diagnosing-superpowers skill 用於除錯代理人行為異常",
-        "內建可選的『visual companion』遙測(載入公司 logo 並回報版本號),可用環境變數關閉,且行為在 README 中揭露透明"
+        "完整的工作流程:brainstorming → git worktree → writing-plans → subagent-driven-development → TDD → code review → 收尾分支",
+        "同一份技能可用於 Claude Code、Codex、Cursor、Gemini CLI、Copilot CLI、OpenCode、Pi、Hermes、Muse 等十多種平台,各平台有獨立的外掛 manifest",
+        "技能內容嚴謹,例如 TDD 技能明訂「沒有先失敗的測試就不能寫正式程式碼」,並附有反合理化的約束",
+        "內建 diagnosing-superpowers 技能,可讀取工作階段紀錄、找出技能誤觸發或沒觸發的原因,並匯出已去識別化的 bug 回報",
+        "MIT 授權,有 docs/superpowers 下大量的設計規格與實作計畫,等於用自己的方法論開發自己"
       ],
       "use_cases": [
-        "希望讓 Claude Code / Cursor 等 AI 編程代理人在寫程式前先做需求澄清與設計審查,避免代理人『先斬後奏』",
-        "團隊想導入 subagent-driven-development 或嚴格 TDD 流程,但不想手寫大量 prompt 規範",
-        "同時使用多種 AI coding CLI/工具,需要一套可攜的方法論與 skill 定義跨工具共用",
-        "研究如何用 Markdown + hooks 的方式為 LLM agent 建立『軟約束』流程控制機制"
+        "讓 Claude Code 或 Codex 在大型功能開發中先釐清需求、再依計畫逐步實作並審查",
+        "團隊想在多種程式代理之間統一開發流程與紀律(TDD、驗證、審查)",
+        "研究或撰寫自己的代理技能(skills)與外掛,參考 writing-skills 與跨平台移植文件",
+        "以子代理並行處理多個獨立任務,並搭配任務後審查"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 與各 Skill 文件寫得極為詳盡,對每種整合工具都有清楚安裝說明;tests/ 目錄涵蓋十餘個子系統的 shell/node/python 測試,但屬於整合與行為測試而非傳統單元測試覆蓋率量化;近期提交頻繁(最後 push 為 2026-09-22),docs/plans 與 docs/specs 顯示持續有設計變更被記錄與追蹤,專案維護活躍度高。"
+        "comment": "README 完整,涵蓋各平台安裝,另有移植指南、設計規格與發行說明。tests/ 下有大量 shell、JS 與 Python 測試,涵蓋 brainstorm server、各平台外掛、hooks、版本升級與技能結構。不過技能行為測試放在外部的 superpowers-evals,且 repo 內未找到 .github/workflows,CI 設定在本地看不到。最後推送時間為 2026-10-10,有大量近期開發紀錄,版本為 7.0.0。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "hooks/run-hook.cmd 是一個 polyglot 腳本(同時是有效的 .cmd 與 bash script),在 Windows 上會呼叫 Git for Windows 內建的 bash.exe 來執行 hooks/session-start,這是專案自身用來注入啟動情境(bootstrap)給 AI 代理人的機制,並非下載外部內容執行,僅本機腳本互相呼叫",
-          "README 中的『Visual companion telemetry』段落揭露:brainstorming 功能的可選視覺化元件會從官方網站載入 logo 並附帶 Superpowers 版本號,官方聲明不收集專案內容或提示詞,並提供 SUPERPOWERS_DISABLE_TELEMETRY 環境變數可關閉,此為文件中主動揭露的行為,非隱藏行為",
-          "未發現 npm/pip 生命週期腳本(pre/postinstall)執行任意程式碼,也未發現 curl|bash 或 iwr|iex 之類的遠端下載執行安裝模式,package.json 沒有 scripts 欄位"
+          "README 的「Visual companion telemetry」一節說明,brainstorming 視覺輔助功能預設會從 primeradiant.com 載入 Logo(server.cjs 中的網址),請求會帶有 Superpowers 版本。文件稱不含專案、提示詞或代理資訊,可用環境變數 SUPERPOWERS_DISABLE_TELEMETRY 或 DISABLE_TELEMETRY 關閉。",
+          "hooks/session-start 會在每次工作階段開始時,把 using-superpowers 技能全文以 <EXTREMELY_IMPORTANT> 標記注入代理上下文。這是設計行為,安裝前應知道此技能內容會直接影響代理的行為。",
+          "OpenCode 的安裝方式是請代理擷取並依照遠端 INSTALL.md 的指示操作;Pi 與 Antigravity 則直接從 GitHub 安裝。這些方式會執行外部取得的內容,建議先檢視。",
+          "package.json 沒有 preinstall、postinstall 或 prepare 等生命週期腳本。在檢視的 hooks 與 scripts 中,沒有發現 curl|bash、混淆程式碼或內嵌的 base64 payload。"
         ]
       },
-      "star_rating": 4,
-      "verdict": "如果你的日常工作是用 Claude Code 之類的代理人自主寫程式,這套「流程即提示詞」框架值得一試;但它是方法論/提示詞集合而非可執行程式庫,價值取決於你是否認同其強制流程哲學。",
+      "star_rating": 5,
+      "verdict": "如果你使用程式代理做較長的自主開發,這是目前最完整、影響力最大的技能與流程框架,值得安裝試用,也值得研讀其技能設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 19,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 20,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1628,7 +1636,7 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-04",
+    "last_seen": "2026-10-16",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
@@ -1768,6 +1776,13 @@
         3,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-10-16": [
+        280399,
+        1013,
+        10,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-10-04",
@@ -1808,7 +1823,7 @@
       "verdict": "生態完整、維護活躍,對重度使用多種 AI 編碼 harness 的工程師很值得關注。內容龐大,建議挑選需要的元件,並在套用 hooks 前先審閱。",
       "_mode": "full"
     },
-    "total_days_on_trending": 21,
+    "total_days_on_trending": 22,
     "consecutive_days_on_trending": 1
   },
   "pingdotgg/t3code": {
@@ -11363,10 +11378,10 @@
   },
   "JuliusBrussee/caveman": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-10-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-21": [
         99638,
@@ -11407,6 +11422,13 @@
         109535,
         507,
         5,
+        "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+        "Go"
+      ],
+      "2026-10-16": [
+        112549,
+        433,
+        4,
         "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
         "Go"
       ]
@@ -11657,10 +11679,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-09-08",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -11696,38 +11718,50 @@
         14,
         "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
+      ],
+      "2026-10-16": [
+        75128,
+        147,
+        7,
+        "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-06",
+    "last_analyzed": "2026-10-16",
     "analysis": {
-      "one_liner": "Ruflo(前身 Claude Flow)是為 Claude Code 與 Codex 打造的「agent meta-harness」,提供多代理群集協作、記憶學習與跨機器聯邦通訊能力。",
-      "summary": "Ruflo 是一套建構在 Claude Code / Codex 之上的執行層框架,可透過 CLI(npx ruflo init)或 Claude Code Plugin 兩種方式安裝,提供 98 個以上專用代理、60+ 指令、30 個技能、MCP 伺服器與 hooks 系統,目標是讓多個 AI agent 自我組織成 swarm、彼此協作、持續學習並跨會話保留記憶。專案由原本的 Claude Flow 更名而來,涵蓋記憶儲存、RAG、知識圖譜、安全稽核、DevOps 觀測等 35 個外掛模組。",
-      "category": "devtool",
+      "one_liner": "為 Claude Code 與 Codex 打造的 agent 元框架(meta-harness),提供多代理群集、自學記憶、聯邦通訊與 MCP 工具。",
+      "summary": "Ruflo(前身 Claude Flow)是包在 Claude Code / Codex 外層的執行層,提供 100+ 專業 agent、swarm 協調、向量記憶、跨機器聯邦通訊與安全護欄。可透過 Claude Code 外掛市集安裝,或用 npx 初始化並以 MCP server 連接其他客戶端,另附視覺化 console 與終端 TUI。",
+      "category": "ai-ml",
       "highlights": [
-        "提供 CLI 與 Claude Code Plugin 兩種安裝路徑,README 清楚說明兩者功能差異與檔案落地範圍",
-        "內建 35 個模組化外掛,涵蓋協作、記憶、學習、測試、安全、架構治理、DevOps 等多面向",
-        "強調「Federation」功能,可讓不同機器上的 agent 安全互通而不外洩資料",
-        "目前在 GitHub trending 排名第 9,單日新增 136 顆星,顯示社群關注度正快速上升"
+        "以 Claude Code 外掛(core/console/mods)或 npx ruflo init 兩種路徑安裝,亦可作為 MCP server 供 Codex 等客戶端使用",
+        "Console 儀表板可追蹤工作流、agent、token 與成本,並支援 Claude 控制權限分級(read/write/manage/full)與 ask/auto 核准",
+        "自學記憶與向量檢索(RuVector),README 稱本地檢索與對比更新可不需 LLM",
+        "支援 swarm 多代理協作與跨機器聯邦通訊",
+        "附 14 章 RuFlo Explained 指南、使用者手冊與 ADR 文件,文件相當完整"
       ],
       "use_cases": [
-        "需要在 Claude Code / Codex 上建立多代理協作工作流程的開發團隊",
-        "想為 AI agent 加上跨會話記憶、RAG 檢索或知識圖譜能力的專案",
-        "想導入自動化測試生成、安全稽核或架構決策紀錄(ADR)等工程治理外掛的團隊"
+        "在 Claude Code 中協調多個 agent 處理大型開發任務",
+        "為 Codex 或其他 MCP 客戶端加入持久記憶與工具",
+        "監看 agent 執行成本、日誌並回放除錯",
+        "研究 agent harness 與 swarm 架構設計"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 說明結構清晰、功能表格豐富,但內容以行銷式描述與外掛清單為主,缺乏具體技術細節;測試與程式碼品質僅能依 README 推測,無法從中判斷實際涵蓋率,此為 README-only 評估。近期推送頻繁且正處於 trending 榜單,活躍度高。"
+        "comment": "README 內容豐富,有動畫、指南與 ADR,但行銷色彩偏重、功能宣稱繁多(如 314 個 MCP 工具),需實測驗證。最近才推送,維護活躍。測試僅依 README 評估,未檢視程式碼。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "安裝方式為標準 npm 指令(npx ruflo init)或 Claude Code 官方 plugin marketplace 機制,README 中未見 curl | bash 之類的高風險安裝手法;僅為 README 層級審視,未進行原始碼層級安全檢視。"
+          "README 說明 mods 以帳號權限執行、未沙箱化,建議安裝前先檢視程式碼",
+          "安裝使用 npx ruflo@latest(取最新版本),建議考慮鎖定版本",
+          "Claude 控制 console 預設為 read + ask;提升權限等級需使用者自行決定",
+          "僅依 README 評估,未進行原始碼層級審查"
         ]
       },
       "star_rating": 4,
-      "verdict": "若正在使用 Claude Code / Codex 建構多代理系統,值得一試;但功能表面極廣、外掛眾多,建議先以單一外掛小範圍驗證,再評估是否導入完整 CLI 安裝。",
+      "verdict": "生態完整、活躍度高的 Claude Code/Codex agent harness,值得關注並試用;宣稱較多,導入前宜小範圍實測並鎖定版本。",
       "_mode": "light"
     }
   },
@@ -13207,10 +13241,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-09-26",
+    "last_seen": "2026-10-16",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -13253,40 +13287,51 @@
         2,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
+      ],
+      "2026-10-16": [
+        39102,
+        307,
+        2,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-26",
+    "last_analyzed": "2026-10-16",
     "analysis": {
-      "one_liner": "Anthropic 官方維護的 Claude Code 外掛(plugin)目錄與市集,收錄開發工具、生產力外掛與 MCP 整合。",
-      "summary": "這是 Claude Code 的官方外掛市集倉庫,分為 Anthropic 自維護的 `/plugins` 與第三方合作夥伴/社群提供的 `/external_plugins` 兩大類,透過 `.claude-plugin/marketplace.json` 統一索引數百個外掛(含 SHA pin 版本控管)。倉庫本身不是傳統程式庫,而是「目錄 + 治理機制」:用 GitHub Actions 自動驗證外掛結構、授權條款、MCP URL 有效性,並用 Claude 本身對每個新增/變更的外部外掛跑政策掃描(隱私、資料外洩、憑證濫用等)才能合併。",
+      "one_liner": "Anthropic 官方維護的 Claude Code 外掛市集目錄,收錄內部與第三方外掛(MCP、skills、commands、agents)。",
+      "summary": "這個倉庫是 Claude Code 外掛市集 claude-plugins-official 的內容來源。使用者可用 /plugin install {name}@claude-plugins-official 安裝外掛。倉庫以 .claude-plugin/marketplace.json 為索引,/plugins 放 Anthropic 自家外掛,/external_plugins 放合作夥伴與社群外掛(例如 discord、github、linear、playwright、context7)。倉庫本身主要是資料與 CI 自動化,並非單一應用程式。",
       "category": "devtool",
       "highlights": [
-        "採用「用 Claude 審查 Claude 外掛」的自動化安全掃描流程(scan-plugins.yml),對照 Anthropic 軟體目錄政策逐一檢查每個第三方外掛的原始碼、hooks、skills,並將裁決結果快取、公布在 PR 留言",
-        "外部依賴以 commit SHA 精確釘選(pin),並有每日自動偵測上游更新、產生 bump PR 的排程機制(discover_bumps.py),失敗的 bump 會被自動回退,避免壞版本卡住整條流水線",
-        "marketplace.json 提供 renames 機制處理外掛改名相容性,plugin 目錄結構(commands/agents/skills/.mcp.json)有清楚的規範文件與 example-plugin 參考實作",
-        "已收錄 Adobe、Asana、Discord、GitHub、GitLab、Linear、Playwright 等主流服務的官方或合作夥伴外掛,涵蓋開發、通訊、生產力等多種類別"
+        "Claude Code 官方外掛目錄,可直接用 /plugin install 安裝,也能從 /plugin > Discover 瀏覽",
+        "外掛結構標準化:plugin.json、.mcp.json、commands、agents、skills,可當作自製外掛的參考範本",
+        "支援 skill-bundle(strict:false 加 skills 陣列)與 renames 對照表,讓改名後的既有安裝自動遷移",
+        "CI 完整:有 frontmatter 驗證、授權檢查、MCP URL 連線檢查、外掛掃描、自動更新 SHA 與失敗回復等工作流程",
+        "外部外掛以固定 commit SHA 釘選,並有 bump 自動化流程與政策提示檔做審核"
       ],
       "use_cases": [
-        "想快速安裝現成的 Claude Code 外掛(如 GitHub/Linear/Discord 整合、程式碼現代化、安全掃描)以擴充工作流程",
-        "想學習如何撰寫、包裝並發布自己的 Claude Code plugin(可參考 example-plugin 與各外掛的 skills/agents 結構)",
-        "想借鏡其「AI 審查 AI 外掛」的自動化供應鏈安全治理模式,應用在自家的插件/擴充套件市集"
+        "尋找並安裝官方認可的 Claude Code 外掛、MCP 整合與 skills",
+        "開發自己的外掛時參考官方目錄結構與 marketplace.json 格式",
+        "企業內部建立私有外掛市集時,參考其驗證與 SHA 釘選的 CI 做法",
+        "合作夥伴提交外掛上架官方市集"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 3,
         "tests": 3,
         "activity": 5,
-        "comment": "這是目錄型倉庫而非傳統程式庫,沒有典型的單元測試套件覆蓋全部 460 多個外掛(多數為指向外部 repo 的 vendored 條目),但以結構驗證、授權檢查、MCP URL 檢查、AI 政策掃描等多層 CI 取代傳統測試,治理成熟度高於一般開源專案。文件方面主 README 與各外掛 README 清楚說明結構與安裝方式,workflow 檔案中大量以註解記錄設計決策與踩過的坑,可讀性高。活躍度極高,幾乎每日都有 SHA bump 或新外掛合併紀錄。"
+        "comment": "根目錄 README 簡潔但涵蓋安裝、結構、命名不可變與 skill-bundle 規則;各外掛文件品質不一,部分只有設定檔。專案幾乎每日更新,有 9 個 GitHub Actions 工作流程做驗證與自動化。部分外掛(如 code-modernization)附有單元測試,但目錄本身沒有統一的測試套件。範例腳本 discover_bumps.py 寫法清楚。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 明確提醒:Anthropic 不對外部 plugin 內含的 MCP server、檔案或程式碼進行完全控管與功能保證,使用前需自行評估信任(此為官方主動揭露的既有風險,非本次分析新發現的漏洞)",
-          "抽樣檢視的 external_plugins/discord/server.ts 等第三方 MCP server 原始碼會讀取本機憑證檔(如 .env 內的 bot token)並設定檔案權限為 0o600,屬正常的憑證管理作法,未見跨服務外洩行為",
-          "倉庫內建 scan-plugins.yml 會對每個變更的外部外掛執行 Claude 政策掃描(檢查憑證竊取、隱私侵犯、prompt injection 等),抽樣程式碼與該掃描機制本身均未發現惡意程式碼跡象"
+          "README 明確警告:Anthropic 無法控制外掛內含的 MCP 伺服器、檔案或軟體,也無法保證其不會變動,安裝前請自行確認可信度",
+          "部分外掛(如 discord、telegram)文件建議以 curl -fsSL https://bun.sh/install | bash 安裝 Bun 執行環境,屬常見的 curl|bash 模式,使用者應留意",
+          "cwc-makers 外掛的 maker-setup 指令在沒有 git 時,會從 GitHub 下載 tarball 解壓縮;另有文件提到經使用者確認後以 Homebrew 官方安裝腳本安裝",
+          "discord 等外掛的 .mcp.json 會在本機以 bun 啟動 MCP 伺服器,外掛具備本機程式碼執行能力,啟用前宜檢視內容",
+          "在我檢視的檔案中,未發現 npm 生命週期腳本(preinstall/postinstall)、混淆程式碼或嵌入的長 base64 payload;base64 僅出現在工作流程與報告產生腳本的正常用途中"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你在用 Claude Code,這是官方外掛生態的入口,治理機制(尤其是 AI 自動安全審查)做得比多數第三方套件市集扎實,值得追蹤與試用,但安裝任何第三方外掛前仍建議自行檢查其原始碼。",
+      "verdict": "使用 Claude Code 的工程師值得關注:它是官方外掛生態的入口,也是撰寫外掛的最佳參考;安裝第三方外掛前仍須自行審查。",
       "_mode": "full"
     }
   },
@@ -13544,10 +13589,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-10-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -13602,6 +13647,13 @@
         49340,
         163,
         5,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-10-16": [
+        50474,
+        1091,
+        3,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -14255,10 +14307,10 @@
   },
   "NationalSecurityAgency/ghidra": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-10-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-29": [
         73340,
@@ -14299,6 +14351,13 @@
         87515,
         1008,
         12,
+        "Ghidra is a software reverse engineering (SRE) framework",
+        "Java"
+      ],
+      "2026-10-16": [
+        88760,
+        1369,
+        9,
         "Ghidra is a software reverse engineering (SRE) framework",
         "Java"
       ]
@@ -15791,10 +15850,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 12,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 13,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15877,6 +15936,13 @@
         66369,
         3538,
         2,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-16": [
+        69100,
+        3024,
+        5,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -17354,10 +17420,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-15",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -17426,6 +17492,13 @@
         29129,
         947,
         3,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-10-16": [
+        29796,
+        904,
+        8,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -25086,10 +25159,10 @@
   },
   "morluto/rea": {
     "first_seen": "2026-10-07",
-    "last_seen": "2026-10-15",
-    "days_on_trending": 9,
-    "consecutive_days_on_trending": 9,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-16",
+    "days_on_trending": 10,
+    "consecutive_days_on_trending": 10,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-10-07": [
         10019,
@@ -25150,6 +25223,13 @@
       "2026-10-15": [
         242241,
         41034,
+        1,
+        "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "TypeScript"
+      ],
+      "2026-10-16": [
+        270315,
+        32314,
         1,
         "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "TypeScript"
@@ -26029,6 +26109,107 @@
       },
       "star_rating": 4,
       "verdict": "知名工具的 GUI 重寫版,工程品質與下載驗證做得扎實,有測試與 CI。對需要精簡 Windows 11 的人值得關注,但 Core 模式風險高,務必先在虛擬機器測試。",
+      "_mode": "full"
+    }
+  },
+  "lightseekorg/tokenspeed": {
+    "first_seen": "2026-10-16",
+    "last_seen": "2026-10-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-16": [
+        2489,
+        30,
+        11,
+        "TokenSpeed is a speed-of-light LLM inference engine.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-16",
+    "analysis": {
+      "one_liner": "由 LightSeek 基金會開發、主打 agentic 工作負載的極速 LLM 推論引擎,以 C++ 排程控制面搭配 Python 執行面。",
+      "summary": "TokenSpeed 是一個 LLM 推論引擎,目標是兼具 TensorRT-LLM 等級的效能與 vLLM 等級的易用性。它把排程控制面(C++ 有限狀態機,以型別系統在編譯期確保 KV cache 資源安全)與執行面(Python)分離,並提供可插拔的 kernel 系統,內含針對 Blackwell/Rubin 的 MLA 實作。專案支援 NVIDIA B200/GB300 與 AMD MI355X,對 Kimi、Qwen、GLM、DeepSeek、Inkling 等新模型提供 Day-0 支援。",
+      "category": "ai-ml",
+      "highlights": [
+        "控制面(C++ FSM)與執行面(Python)分離,以型別系統在編譯期保證 KV cache 與請求生命週期安全",
+        "Kernel 為一級模組:可攜式公開 API、集中式 registry、支援異質加速器的外掛機制",
+        "同時支援 NVIDIA(B200/GB300/Rubin)與 AMD(MI355X)硬體,新模型多半 Day-0 支援",
+        "已加入 PyTorch Ecosystem,由 LightSeek 非營利基金會維護,具中立性",
+        "內建 L2/L3(Mooncake)分層 KV cache、分散式通訊後端與整合 SMG 的 AsyncLLM 入口"
+      ],
+      "use_cases": [
+        "在 Blackwell/GB300 或 AMD MI355X 上部署 Kimi、Qwen、GLM 等大型 MoE 模型",
+        "需要低延遲、高單人 tokens/s 的 agentic 或程式輔助推論服務",
+        "研究推論引擎架構、MLA kernel 與 KV cache 管理設計",
+        "評估取代或對照 vLLM、SGLang、TensorRT-LLM 的方案"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "程式碼結構清晰、授權標頭一致,模組劃分細緻(cache、distributed、engine、configs 等)。README 偏簡要,詳細文件放在外部網站。CI 非常完整:有數十個 workflow,涵蓋 NVIDIA/AMD GPU 測試、lint、夜間發佈與 C++ 排程測試,並有 test/ 目錄的模型與 CI 系統測試。推送頻繁,維護活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "架構設計紮實、硬體與模型支援廣、維護活躍,是推論引擎領域值得持續關注的專案,尤其適合使用新一代 NVIDIA/AMD GPU 的團隊。",
+      "_mode": "full"
+    }
+  },
+  "xerj-org/xerj": {
+    "first_seen": "2026-10-16",
+    "last_seen": "2026-10-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-16": [
+        5662,
+        715,
+        12,
+        "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-10-16",
+    "analysis": {
+      "one_liner": "以 Rust 打造、相容 Elasticsearch 的本機 AI 搜尋引擎,一行 autoindex 讓程式碼代理用更少 token 檢索程式碼、文件、日誌與 PDF。",
+      "summary": "XERJ 是單一靜態執行檔的搜尋引擎,支援 BM25、kNN 向量與混合搜尋,並相容 Elasticsearch API。`xerj autoindex <資料夾>` 會自動辨識檔案類型並建立索引,程式碼則透過 tree-sitter 保留符號與行號。主打情境是讓 coding agent 查詢精準片段,取代 grep 讀整檔以節省 token;另提供 MCP 整合與 `/_memory` 代理長期記憶。",
+      "category": "ai-ml",
+      "highlights": [
+        "單一靜態執行檔、無需 JVM,相容 Elasticsearch API,既有客戶端可直接使用",
+        "autoindex 零設定:自動推斷資料集型態,程式碼以 tree-sitter 解析出符號與 file:line",
+        "README 提供對照實驗:輸出 token 比 grep 少 2.7 倍、解題率同為 16/16,並說明對熱門公開函式庫效益有限",
+        "原生 MCP、llms.txt 與 /_memory 命名空間,適合作為 agent 的搜尋與長期記憶後端",
+        "CI 的 GitHub Actions 皆以 commit SHA 釘選,倉庫內有大量 Rust 單元與整合測試(約 5000 處測試標註)"
+      ],
+      "use_cases": [
+        "讓 Claude Code、Cursor 等 coding agent 索引專案與相近開源專案,做 reference coding",
+        "本機程式碼庫問答與 RAG,回傳帶 file:line 的段落",
+        "日誌、文件、PDF 混合資料的搜尋與資安稽核(掃描 sink 與機密)",
+        "作為 Elasticsearch 的輕量替代或 agent 長期記憶儲存"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整(中英 README、SECURITY_MODEL、recipes、CHANGELOG、ROADMAP、CLA)。有多個 CI workflow 與煙霧測試腳本,且 actions 皆釘選 SHA。程式量大、提交頻繁(近期每日更新)。專案很新,README 中的 token 節省數據多為作者自行實驗,宣傳色彩較濃,第三方驗證有限。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 建議使用 `curl -fsSL https://xerj.org/get | sh`(Windows 為 `irm https://xerj.org/get.ps1 | iex`)安裝;該腳本會從 GitHub Releases 下載預編譯執行檔並驗證 SHA-256,但執行檔本身為預編譯產物,建議自行檢視腳本或改用原始碼建置。",
+          "README 的 `xerj --insecure` 模式會關閉 TLS 與 API 金鑰驗證,任何可連到該埠的呼叫者皆為超級使用者;文件已說明預設僅綁定 127.0.0.1,僅適合單人開發機。",
+          "專案鼓勵讓 AI 代理依 llms.txt 自動安裝並 clone 其他開源專案,使用時需留意代理被授予的權限。",
+          "倉庫內含 benchmarks 資料集(CSV/TSV 等)與基準測試腳本;本次檢視未發現 npm 生命週期腳本或混淆程式碼。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想降低 coding agent token 消耗或找 Elasticsearch 相容的輕量替代品,值得試用。效益數據以作者自測為主,請先在隔離環境驗證,並避免在不受信任的網路使用 --insecure。",
       "_mode": "full"
     }
   }
