@@ -1250,8 +1250,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1386,6 +1386,13 @@
         6,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-17": [
+        300684,
+        973,
+        8,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-16",
@@ -1425,8 +1432,8 @@
       "verdict": "如果你使用程式代理做較長的自主開發,這是目前最完整、影響力最大的技能與流程框架,值得安裝試用,也值得研讀其技能設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 20,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 21,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1636,8 +1643,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1783,6 +1790,13 @@
         10,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-10-17": [
+        281523,
+        1057,
+        3,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-10-04",
@@ -1823,8 +1837,8 @@
       "verdict": "生態完整、維護活躍,對重度使用多種 AI 編碼 harness 的工程師很值得關注。內容龐大,建議挑選需要的元件,並在套用 hooks 前先審閱。",
       "_mode": "full"
     },
-    "total_days_on_trending": 22,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 23,
+    "consecutive_days_on_trending": 2
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -9446,10 +9460,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-10-03",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -9499,43 +9513,50 @@
         14,
         "Cursor plugin specification and official plugins",
         "TypeScript"
+      ],
+      "2026-10-17": [
+        11956,
+        278,
+        9,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-10-02",
+    "last_analyzed": "2026-10-17",
     "analysis": {
-      "one_liner": "Cursor 官方外掛市集倉庫,收錄外掛規格與近百個官方/第三方整合外掛(skills、hooks、MCP、rules)。",
-      "summary": "cursor/plugins 是 Cursor 的外掛規格與官方外掛集合。每個外掛是獨立目錄,含 .cursor-plugin/plugin.json 資訊清單,根目錄的 marketplace.json 統一列出。內容涵蓋開發工作流(advisor、orchestrate、continual-learning、pstack、thermos)與大量 SaaS 整合(Gmail、GitHub、Salesforce、券商/金融等),透過 skills、agents、rules、hooks 與 MCP 設定擴充 Cursor agent。",
+      "one_liner": "Cursor 官方的外掛規格與 marketplace 倉庫,收錄約 100 個 Agent 外掛(skills、hooks、rules、MCP 整合)。",
+      "summary": "這是 Cursor 官方維護的多外掛 marketplace 倉庫,根目錄的 .cursor-plugin/marketplace.json 列出所有外掛,每個外掛都有獨立的 plugin.json 清單。內容包含 Cursor 自家的開發工作流外掛(advisor、continual-learning、orchestrate、pstack、create-plugin 等),以及大量 third_party 的 SaaS/MCP 整合(Gmail、Salesforce、GitHub、Playwright 等)。它同時是外掛規格的實際範例,可作為開發 Cursor 外掛的參考。",
       "category": "framework",
       "highlights": [
-        "提供清楚的外掛目錄結構規範(skills/rules/hooks/mcp.json/agents),可作為自製外掛的範本",
-        "含 create-plugin 外掛,可建立並檢查新外掛的骨架與品質",
-        "orchestrate 外掛附有 TypeScript 腳本與近 30 個測試檔,支援平行雲端 agent 調度",
-        "continual-learning 以 stop hook 依輪數與時間門檻增量更新 AGENTS.md,實作簡潔且防禦性佳",
-        "第三方整合涵蓋 70 餘個 SaaS,生態完整"
+        "官方外掛規格的參照實作:plugin.json、skills/SKILL.md、rules/*.mdc、hooks、mcp.json 的目錄結構一目了然",
+        "內含 advisor(結束前諮詢更強模型)、continual-learning(自動更新 AGENTS.md 記憶)、orchestrate(平行雲端 Agent 編排)等高價值工作流範例",
+        "hooks 寫法具參考性:stop hook 以 followup_message 驅動 Agent 續跑,並含節流、狀態檔與防重複處理",
+        "同時提供 .claude-plugin/marketplace.json,與 Claude Code 外掛格式相容",
+        "有 PR 驗證 CI(ajv schema 驗證 plugin.json 與 marketplace),orchestrate、pstack 另有大量單元測試"
       ],
       "use_cases": [
-        "開發 Cursor 外掛或 MCP 整合時參考官方規格與範例",
-        "在 Cursor 中安裝現成工作流,如程式碼審查、平行 agent 調度、持續學習記憶",
-        "研究 agent hooks 與 skills 的設計模式,應用到自家 agent 工具",
-        "團隊建立內部外掛市集時參考 marketplace.json 結構"
+        "學習如何撰寫 Cursor/Claude Code 外掛、skills 與 hooks",
+        "直接安裝官方外掛,把 Gmail、GitHub、Playwright 等 MCP 整合接入 Cursor",
+        "參考 orchestrate/pstack 設計多 Agent 平行協作與驗證流程",
+        "為團隊建立自家外掛 marketplace 時作為範本"
       ],
       "quality": {
         "docs": 4,
         "tests": 3,
         "activity": 5,
-        "comment": "根 README 有完整外掛清單與結構說明,各外掛多附 README、CHANGELOG、LICENSE。CI 僅在 PR 時以 ajv 驗證 plugin.json 與 marketplace 格式;測試集中在 orchestrate 與 pstack 的腳本,多數外掛以 markdown 與設定為主,沒有測試。近期仍有推送,維護活躍。"
+        "comment": "根 README 有完整外掛清單與結構說明,各外掛有獨立 README/CHANGELOG/LICENSE。CI 僅在 PR 時驗證 schema 與 pstack 產出樹;單元測試集中在 orchestrate 與 pstack 的腳本,多數外掛(以 markdown 為主)沒有測試。抽樣的 continual-learning-stop.ts 型別完整、錯誤處理保守(失敗時回傳空物件);advisor 的 stop-hook.sh 用 set -euo pipefail 且邏輯清楚。推送頻繁、維護積極。GitHub 未標示授權,但 README 與各外掛 LICENSE 為 MIT。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "多個外掛包含 hooks(如 advisor 的 shell 腳本、continual-learning 的 bun TypeScript 腳本),安裝後會在 agent 停止事件時於本機執行,並讀寫 .cursor/hooks/state 下的狀態檔,使用前建議先檢視",
-          "第三方整合外掛(金融、券商、Gmail 等)透過 MCP 連接外部服務並涉及帳號授權,建議留意授予的權限範圍",
-          "orchestrate 腳本依賴 @cursor/sdk、@slack/web-api 等套件,需自行 bun install;未發現 preinstall/postinstall 生命週期腳本或 curl|bash 安裝模式",
-          "README 未標示授權於 GitHub metadata,但 README 聲明為 MIT"
+          "未發現 npm preinstall/postinstall 等安裝時腳本,也未見 curl|bash 或 iwr|iex 模式;全倉庫的敏感關鍵字搜尋僅命中 3 個檔案(orchestrate 的 util.ts 與兩份 check-plan.mjs)",
+          "外掛含 hooks(shell 與 TypeScript/Bun),安裝後會在 Agent 事件(如 stop)時於本機執行,並讀寫 .cursor/hooks/state 下的狀態檔與對話 transcript,使用者安裝前宜先檢視",
+          "third_party 外掛會連接外部 SaaS/MCP 服務(含金融與交易類,如 Robinhood、Coinbase),授權範圍與權限需使用者自行確認",
+          "CI 在 PR 時執行 npm install --no-save ajv ajv-formats,屬常見的驗證用依賴安裝"
         ]
       },
       "star_rating": 4,
-      "verdict": "想了解或開發 Cursor 外掛生態的人值得關注,可當作官方規格與範例庫;一般使用者則挑需要的外掛安裝即可。",
+      "verdict": "想開發或理解 Cursor/Claude Code 外掛生態的人值得關注;官方範例與工作流外掛品質高,安裝第三方外掛前記得檢視其 hooks 與 MCP 權限。",
       "_mode": "full"
     }
   },
@@ -9960,10 +9981,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-17",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -9990,6 +10011,13 @@
         52503,
         103,
         6,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ],
+      "2026-10-17": [
+        53504,
+        281,
+        4,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
       ]
@@ -11679,10 +11707,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -11723,6 +11751,13 @@
         75128,
         147,
         7,
+        "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
+      ],
+      "2026-10-17": [
+        75634,
+        672,
+        6,
         "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
       ]
@@ -12529,10 +12564,10 @@
   },
   "MadsLorentzen/ai-job-search": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-08-27",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-25": [
         34074,
@@ -12554,41 +12589,51 @@
         5,
         "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "Python"
+      ],
+      "2026-10-17": [
+        48520,
+        898,
+        11,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-25",
+    "last_analyzed": "2026-10-17",
     "analysis": {
-      "one_liner": "在本機執行的 AI 求職助手,以 Claude Code 為引擎,自動評估職缺、客製化履歷與求職信、並協助面試準備。",
-      "summary": "這是一套建構在 Claude Code 之上的求職應徵框架,把「搜尋職缺 → 評估契合度 → 撰寫客製化 CV/求職信(LaTeX)→ 面試準備」的完整流程封裝成一系列 Claude Code 指令(/setup、/scrape、/apply、/interview 等)。使用者 fork 這個 repo、填入自己的背景資料,Claude 就會用 drafter-reviewer 雙代理架構產生並反覆編譯校對 PDF,直到排版與 ATS 可讀性都過關。作者本人用這套流程實際投遞 69 份履歷、拿到 20 次面試並成功轉職,是把個人經驗系統化的產物。",
+      "one_liner": "以 Claude Code 為核心的本機求職框架:評估職缺、客製 CV(LaTeX)、撰寫求職信、準備面試,fork 後即可自用。",
+      "summary": "這是一套建構於 Claude Code 之上的求職工作流程,透過 /setup、/scrape、/apply、/rank、/interview、/outcome 等指令,完成個人檔案建立、職缺搜尋與評分、CV 與求職信客製(LaTeX)、起草者與審稿者雙代理審查、面試準備與投遞追蹤。作者以此流程完成 69 份申請並成功就業。職缺搜尋技能目前以丹麥市場為主(Jobindex、Jobnet 等),但核心流程與語言、國家無關。",
       "category": "ai-ml",
       "highlights": [
-        "核心工作流程與語言、國家無關,僅職缺搜尋技能(Jobindex、Jobnet 等)是丹麥市場專用,並提供 /add-portal 生成器讓使用者自建在地職缺爬蟲",
-        "drafter-reviewer 雙代理架構:一個 agent 撰寫 CV/求職信,另一個以全新 context 研究公司並批評草稿,再修訂,提升輸出品質",
-        "PDF 驗證迴圈相當扎實:自動編譯 lualatex/xelatex、視覺檢查排版、並用 pdftotext 檢查 ATS 可解析性與關鍵字覆蓋率,避免「看起來像 CV 但機器讀不到」的常見問題",
-        "資安意識明顯高於一般開源專案:CI 有專門的 security-guards job,鎖死 .claude/settings.json 權限清單、hooks 白名單、.gitignore 個資規則,並禁止 package.json 內的 npm/bun 生命週期腳本(明確提到防範 Shai-Hulud 這類供應鏈攻擊手法)",
-        "文件中明確警告:fork 後的 repo 依 GitHub 規則必為公開,若不想曝光個資需改用私有 repo 搭配 upstream 同步,設計上有考慮到隱私風險"
+        "完整指令鏈涵蓋 setup / scrape / rank / apply / interview / outcome,另有 gmail-sync、notion-sync、html-report 等延伸功能",
+        "起草者加審稿者的雙代理流程,並以 verify_pdf、verify_layout 檢查 ATS 可解析性與頁數",
+        "職缺貼文視為不可信輸入,不跟隨其中的指令,並附 SECURITY.md 說明防護範圍與限制",
+        "CI 完整:Python 3.10 至 3.14 矩陣測試、LaTeX 雙環境編譯、各入口 CLI 型別檢查與測試、供應鏈安全守衛",
+        "入口 CLI 為 TypeScript,以 Bun 執行並附測試,可用 /add-portal 擴充在地求職網站"
       ],
       "use_cases": [
-        "使用 Claude Code 的求職者想要自動化「職缺篩選→客製化履歷/求職信→面試準備」全流程",
-        "想要研究「多代理協作(drafter-reviewer)+ 強制產出驗證(PDF 編譯與 ATS 檢查)」設計模式的 AI 工程師",
-        "想參考如何在 fork 型開源模板中設計 CI 安全防護(權限允許清單、gitignore 個資規則、禁止 lifecycle script)的專案維護者"
+        "個人求職時批次評估職缺並產出客製化 CV 與求職信",
+        "學習如何以 Claude Code 的 skills、slash commands 與多代理設計複雜工作流程",
+        "改寫成台灣或其他市場的求職自動化(替換 portal 搜尋技能)",
+        "追蹤投遞進度與面試結果,並產生離線 HTML 儀表板"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
-        "activity": 4,
-        "comment": "README 與 SECURITY.md 極為詳盡,對威脅模型、隱私與使用限制都有清楚說明。CI 涵蓋 lint、security-guards、Python unittest、LaTeX 編譯煙霧測試(雙環境矩陣)、TypeScript CLI 型別檢查與 fixture 測試,抽查的 salary_lookup.py 與 jobindex helpers.ts 程式碼結構清晰、註解精準且有防禦性處理(重試、逾時、HTML 解析邊界情況)。由於近期才登上 trending 且倉庫歷史較淺(git shallow clone),長期維護活躍度仍待觀察,但目前釋出節奏與 CI 嚴謹度顯示是持續投入中的專案。"
+        "tests": 5,
+        "activity": 5,
+        "comment": "README、SETUP、SECURITY、AGENTS 文件齊全。tests/ 下有四十多個 Python 測試檔,各入口 CLI 也有 Bun 測試。CI 涵蓋 lint、安全守衛、多版本 Python、LaTeX 編譯與依賴審查,且 Actions 以 commit SHA 固定版本。最近一次推送在 2026-10-15,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "job-portal CLI 技能(jobindex-search、jobnet-search 等)會對外發送 HTTP 請求擷取職缺頁面內容,且依賴 bun 生態的 npm 套件安裝,使用者應留意這些技能實際存取的網域範圍",
-          "README 明確要求使用者在借用其他 fork 的 portal skill 前先閱讀原始碼,因為這些 CLI 會在 .claude/settings.json 預先核准的權限下於使用者機器上執行,屬於專案自我揭露的風險提醒而非本倉庫本身的問題",
-          "專案已內建 CI 防護機制(tools/security_guards.py)主動封鎖 package.json 中的 postinstall/preinstall 等生命週期腳本與 settings.json 權限擴張,顯示對供應鏈攻擊有主動防範"
+          "專案內附 .claude/settings.json,預先核准特定指令(例如 bun run 各入口 CLI、python tools/*.py、pdftotext),使用者在 Claude Code 中執行這些指令時不會再被詢問;範圍已限縮至具體檔案路徑,而非萬用字元。",
+          "tools/install_portal_clis.py 會在各入口 CLI 目錄執行 bun install(下載 npm 依賴);腳本會略過宣告 lifecycle scripts 或 trustedDependencies 的 package.json。經檢索,現有 package.json 未發現 preinstall / postinstall / prepare。",
+          "入口 CLI 與 /scrape 會對外部求職網站發出網路請求並讀取職缺內容,這些內容屬不可信輸入;README 已說明防護僅在指令層級而非沙箱,建議在不熟悉的求職網站上先檢視抓取與產出內容。",
+          "/setup 會將姓名、聯絡方式、經歷與期望薪資寫入受 git 追蹤的檔案;README 提醒 fork 一律公開,個人使用宜改用私有儲存庫。",
+          "未發現 curl|bash 安裝模式、混淆程式碼、內嵌 base64 載荷或已提交的二進位檔。"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質與資安意識在同類 AI agent 專案中相當突出,若你用 Claude Code 求職或想學習多代理工作流程設計,值得一看;非丹麥地區使用者需自行搭建職缺搜尋技能。",
+      "verdict": "工程品質高、測試與 CI 完整的 Claude Code 工作流程範本,即使不求職,也很值得拿來學習 skills 與多代理設計;若要用於台灣市場,需自行替換職缺搜尋入口。",
       "_mode": "full"
     }
   },
@@ -13241,10 +13286,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -13292,6 +13337,13 @@
         39102,
         307,
         2,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ],
+      "2026-10-17": [
+        40569,
+        1552,
+        1,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
       ]
@@ -13589,10 +13641,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -13654,6 +13706,13 @@
         50474,
         1091,
         3,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-10-17": [
+        51514,
+        1158,
+        2,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -15850,10 +15909,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 13,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 14,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -15943,6 +16002,13 @@
         69100,
         3024,
         5,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-17": [
+        71215,
+        2301,
+        10,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -17420,10 +17486,10 @@
   },
   "mksglu/context-mode": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 11,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 12,
     "stars_history": {
       "2026-09-08": [
         20834,
@@ -17499,6 +17565,13 @@
         29796,
         904,
         8,
+        "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "TypeScript"
+      ],
+      "2026-10-17": [
+        30236,
+        449,
+        5,
         "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
         "TypeScript"
       ]
@@ -26162,15 +26235,22 @@
   },
   "xerj-org/xerj": {
     "first_seen": "2026-10-16",
-    "last_seen": "2026-10-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-16": [
         5662,
         715,
         12,
+        "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+        "Rust"
+      ],
+      "2026-10-17": [
+        6932,
+        1648,
+        13,
         "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
         "Rust"
       ]
@@ -26210,6 +26290,114 @@
       },
       "star_rating": 4,
       "verdict": "想降低 coding agent token 消耗或找 Elasticsearch 相容的輕量替代品,值得試用。效益數據以作者自測為主,請先在隔離環境驗證,並避免在不受信任的網路使用 --insecure。",
+      "_mode": "full"
+    }
+  },
+  "android/skills": {
+    "first_seen": "2026-10-17",
+    "last_seen": "2026-10-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-17": [
+        8076,
+        36,
+        7,
+        "",
+        "Kotlin"
+      ]
+    },
+    "last_analyzed": "2026-10-17",
+    "analysis": {
+      "one_liner": "Google 官方 Android 團隊維護的 Agent Skills 集合,以模組化 SKILL.md 讓 AI 代理更準確地執行 Android 開發任務。",
+      "summary": "android/skills 收錄約 26 個符合 agentskills.io 開放標準的 Android 技能(SKILL.md 加 references),涵蓋 AGP 9 升級、CameraX、Navigation 3、Compose 自適應版面、R8 分析、Play Billing 升級、Wear、XR、安全性等主題。團隊專注於 LLM 表現不佳的領域,不重複 LLM 已熟悉的基礎內容。可透過 Android CLI 安裝,或作為 Claude Code / Codex 外掛使用。",
+      "category": "ai-ml",
+      "highlights": [
+        "Google 官方出品,內容對應 developer.android.com 的最佳實務,權威性高",
+        "涵蓋面廣:build-system、camera、device-ai、identity、compose、play、security、wear、xr 等分類",
+        "同時提供 Claude Code(.claude-plugin)與 Codex(.codex-plugin)外掛安裝,並支援 `android skills add` CLI",
+        "每個技能附 references 子文件(遷移指南、範例、測試),採漸進式載入,節省 context",
+        "內含 android-cli 技能,教 agent 操作 SDK、模擬器、layout/screen 檢視與 docs 搜尋"
+      ],
+      "use_cases": [
+        "讓 Claude Code 或 Codex 協助升級 AGP 9、Navigation 3、Play Billing 等版本遷移",
+        "在 Android 專案中引導 AI 代理實作 CameraX、edge-to-edge、自適應 Compose 版面",
+        "作為撰寫自家 Agent Skills 的官方範本與參考",
+        "做 Android 安全審查(intent、權限)時為 agent 提供規範依據"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 簡潔清楚,安裝與啟用方式完整,各技能含 frontmatter 與 references。內容多為 Markdown 文件,沒有測試。CI 只有 create-release 與 update-skills 兩個 workflow;自動同步排程目前被註解停用。官方表示暫不接受外部貢獻。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "devtools/android-cli/SKILL.md 的安裝說明包含 `curl -fsSL https://dl.google.com/android/cli/latest/.../install.sh | bash`,以及 Windows 下載 install.cmd 後執行的做法;來源為 dl.google.com,使用者執行前宜自行確認。",
+          "SKILL.md 會指示 agent 安裝並呼叫外部 CLI,包含 SDK 安裝、App 執行與裝置螢幕擷取,啟用技能前宜留意 agent 的執行權限。",
+          "update-skills.yml(僅手動 workflow_dispatch)會用 curl 從 dl.google.com 下載 dac_skills.zip 解壓覆蓋內容,並使用 secrets.ADR_GITHUB_BOT_PAT 建立 PR;屬維護端的同步流程,對使用者無安裝時影響。",
+          "未發現 npm 生命週期腳本、混淆程式碼、內嵌 base64 payload 或提交的二進位檔。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你用 AI 代理開發 Android,這個官方技能庫值得收藏並安裝;內容權威且維護活躍,但本質是文件而非程式碼,價值取決於你的使用情境。",
+      "_mode": "full"
+    }
+  },
+  "hmjz100/LinkSwift": {
+    "first_seen": "2026-10-17",
+    "last_seen": "2026-10-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-17": [
+        23700,
+        538,
+        12,
+        "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-10-17",
+    "analysis": {
+      "one_liner": "支援九大中國網盤的 Tampermonkey 使用者腳本,可取得檔案直連下載網址並推送至 Aria2、IDM 等下載器。",
+      "summary": "LinkSwift 基於「網盤直鏈下載助手」修改而成,是以 JavaScript 撰寫的油猴(userscript)腳本。它在百度、阿里雲盤、移動雲盤、天翼雲盤、迅雷、光鴨、夸克、UC、123 雲盤等頁面注入 UI,透過各家網盤 API 取得下載連結,並可複製或推送到 Aria2、IDM、ABDM 等下載器。專案另提供介面美化與多組遠端下載器設定。",
+      "category": "devtool",
+      "highlights": [
+        "單一腳本涵蓋九大網盤(百度、阿里、移動、天翼、迅雷、光鴨、夸克、UC、123)",
+        "支援 Aria2、IDM、ABDM、比特彗星等多種下載器,可儲存多組服務設定",
+        "更新頻繁(1.1.4,2026/09),並提供正式版與 dev 金絲雀版",
+        "百度網盤改用 AccessToken,取代舊的 BDUSS Cookie 做法",
+        "導入 eslint 檢查腳本;README 附完整更新日誌與免責聲明"
+      ],
+      "use_cases": [
+        "在瀏覽器中取得網盤檔案直連,交給 Aria2/IDM 下載",
+        "研究各網盤網頁 API 與 userscript 注入技巧",
+        "管理多組遠端下載器設定並一鍵推送任務",
+        "作為油猴腳本開發的參考範例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 有安裝來源、版本號與完整更新日誌,並附 issue 範本與貢獻指南。沒有自動化測試(npm test 只是佔位),也沒有 CI workflow,只有 eslint 檢查。主腳本是單一大型檔案(六千多行),維護性一般。最近一次推送為 2026-09-10,仍持續更新。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "腳本宣告 `@connect *`,並授予 GM_xmlhttpRequest、GM_setValue/GetValue、GM_openInTab、unsafeWindow 等權限,可對任意網域發出跨站請求,並在各網盤頁面中執行。安裝前請留意此權限範圍。",
+          "腳本在本機儲存並使用網盤授權資訊(例如百度的 access_token,透過 GM_setValue 保存),也會處理夸克網盤 Cookie 的傳遞。使用者應清楚這些憑證會被腳本讀取與使用。",
+          "腳本以 @require 從 unpkg.com 載入 jquery、sweetalert2、js-md5,版本已固定,但仍依賴外部 CDN。",
+          "config 目錄中的設定含有 youxiaohou.com 等第三方網址與百度 OAuth client_id,屬於原腳本沿用的設定。",
+          "專案用途是繞過官方客戶端取得下載直連,使用時可能違反各網盤服務條款,README 也有免責聲明。",
+          "未發現 package.json 的 install 類生命週期腳本、curl|bash 安裝方式,也未發現明顯的混淆程式碼或內嵌二進位檔。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "對需要多網盤直連下載的中文使用者很實用,也持續更新;但沒有測試與 CI,且權限範圍廣、涉及網盤憑證,使用前務必審視腳本內容。",
       "_mode": "full"
     }
   }
