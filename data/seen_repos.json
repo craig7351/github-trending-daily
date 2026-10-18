@@ -1643,8 +1643,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1797,48 +1797,55 @@
         3,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-10-18": [
+        282514,
+        1145,
+        3,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-10-04",
+    "last_analyzed": "2026-10-18",
     "analysis": {
-      "one_liner": "跨 Claude Code、Codex、OpenCode、Cursor 等多種 agent harness 的技能、hooks、規則與記憶系統套件,附統一安裝器。",
-      "summary": "ECC(ecc-universal)是一個 agent harness 效能優化與營運套件。內含數百個 skills、agents、commands、rules、hooks 與 MCP 設定,另有記憶、安全掃描、研究優先開發等工作流。它透過 Node 安裝器把這些內容部署到多種 AI 編碼工具,解決各工具設定零散、無法共用最佳實務的問題。",
+      "one_liner": "跨 Claude Code、Codex、OpenCode、Cursor 等多種 agent harness 的技能、hooks、規則與記憶系統套件。",
+      "summary": "ECC(npm 套件 ecc-universal)是一個 agent harness 作業系統,提供數百個 skills、agents、commands、hooks、rules 與 MCP 設定。它附有 CLI(ecc、ecc-install、ecc-control-pane 等),可把這些內容安裝到不同的 AI 編碼工具。它想解決跨工具重複設定的問題,也想讓 TDD、安全審查、先研究再開發、持續學習與記憶等流程保持一致。",
       "category": "ai-ml",
       "highlights": [
-        "涵蓋 Claude Code、Codex、OpenCode、Cursor、Gemini 等 7 種以上 harness 的統一安裝與適配",
-        "技能庫非常龐大(程式語言、框架、安全、醫療、DevOps、研究、內容等數百項)",
-        "內建 hooks、記憶 MCP(ecc-memory-mcp)、持續學習、harness 稽核與評測腳本",
-        "多語系文件(含繁體中文),並有 CI 驗證 agents、skills、hooks 與安裝 manifest",
-        "安裝腳本使用 npm install --ignore-scripts,並提供供應鏈 IOC 掃描 CI"
+        "涵蓋 7 種以上 harness(Claude Code、Codex、OpenCode、Cursor、Gemini、Qoder 等)的統一安裝與設定",
+        "skills 範圍極廣,包含各語言與框架的 patterns、testing、security、continuous-learning、memory、eval-harness 等",
+        "內建多個 CI 驗證腳本(validate-skills、validate-hooks、供應鏈 IOC 掃描),並設有 80% 覆蓋率門檻",
+        "提供多國語言文件,包含繁體中文 README(docs/zh-TW)",
+        "MIT 授權,近期持續推送,有 13 個 GitHub Actions 工作流程"
       ],
       "use_cases": [
-        "為團隊統一 Claude Code 與 Codex、Cursor 的技能、規則與 hooks 設定",
-        "作為 agent 技能與工作流的參考與素材庫,挑選需要的部分使用",
-        "建立 harness 稽核、評測與記憶機制,改善 AI 編碼流程"
+        "為 Claude Code 或 Codex 快速導入一套成熟的 skills、hooks 與規則",
+        "在團隊中統一多種 AI 編碼工具的開發流程與安全審查規範",
+        "參考其 skill、hook 與記憶設計,打造自己的 agent harness",
+        "用 harness-audit、skills-health 等腳本評估 agent 設定的健康度"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 完整且有多語系版本,並有 CONTRIBUTING、安全指南。tests 目錄含大量 JS 與 Python 測試,npm test 串接多項驗證與 80% 覆蓋率門檻。.github/workflows 有 12 個 workflow,近期仍頻繁推送。範圍極廣,內容品質參差,且部分技能偏離核心主題。"
+        "comment": "文件豐富且多語系,專案規模龐大(超過 4600 個檔案)。tests/ 下有多個 *.test.js 與 run-all.js,npm test 串接大量驗證器,並設有 c8 80% 覆蓋率門檻,CI 工作流程完整。主要缺點是內容龐雜、skills 數量多,品質需逐項挑選。本次分析只讀了 package.json、README 與目錄結構,沒有逐一審閱原始碼。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "install.sh 僅委派給 Node 安裝器 scripts/install-apply.js,未發現 curl|bash 或遠端下載執行;在 clone 內自動執行 npm install 時已加上 --ignore-scripts。",
-          "package.json 未定義 preinstall/postinstall 等安裝期 lifecycle 腳本;prepack 只會執行 build:opencode。welcome 腳本僅輸出文字。",
-          "scripts/hooks 下多個 hook(如 quality-gate、mcp-health-check、plugin-hook-bootstrap)使用 child_process 執行本機指令,安裝後會在 agent 事件中自動運作,使用者可先審閱 hooks 設定。",
-          "本專案會把 hooks、MCP 設定與規則寫入使用者的 agent 設定目錄,建議先看安裝計畫(install-plan)再套用。",
-          "README 與 package.json 含贊助商與商業產品(ECC Pro、Itô 運算)連結,屬宣傳內容;文件稱 ecc ito find 為選用且需明確設定。",
-          "依賴僅 4 個(@iarna/toml、ajv、js-yaml、sql.js),版本固定,未見可疑套件名。"
+          "package.json 沒有 preinstall、postinstall 或 prepare 生命週期腳本。只有 prepack 會執行 build:opencode,屬於發佈端行為。welcome 腳本只是 echo 訊息。",
+          "在 README、install.sh、install.ps1 與 scripts/*.js 中,沒有找到 curl|bash 或 iwr|iex 之類的下載即執行模式。install.sh 內也沒有外部網址。",
+          "套件會把大量 hooks、MCP 設定與 skills 寫入使用者的 Claude Code、Codex 等工具設定。這些 hooks 會在 agent 工作階段中執行,安裝前建議先檢視 hooks/ 與 mcp-configs/ 的內容。",
+          "安裝內容包含贊助商與 ECC Pro 的連結和說明,另有選用的 `ecc ito find` 橋接功能,會呼叫外部 CLI 並提交需驗證的 RFQ。README 與 welcome 訊息已說明這是選用功能。",
+          "依賴只有 4 個(@iarna/toml、ajv、js-yaml、sql.js),版本固定且名稱正常。README 提醒只應從官方管道安裝。"
         ]
       },
       "star_rating": 4,
-      "verdict": "生態完整、維護活躍,對重度使用多種 AI 編碼 harness 的工程師很值得關注。內容龐大,建議挑選需要的元件,並在套用 hooks 前先審閱。",
+      "verdict": "想系統化管理 Claude Code、Codex 等 agent 設定的工程師值得關注。內容龐大,建議只挑需要的 skills 與 hooks 安裝,並先審閱 hooks。",
       "_mode": "full"
     },
-    "total_days_on_trending": 23,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 24,
+    "consecutive_days_on_trending": 3
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -7975,10 +7982,10 @@
   },
   "stablyai/orca": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-13",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-12": [
         42779,
@@ -7993,38 +8000,49 @@
         4,
         "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
         "TypeScript"
+      ],
+      "2026-10-18": [
+        95419,
+        830,
+        8,
+        "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-12",
+    "last_analyzed": "2026-10-18",
     "analysis": {
+      "one_liner": "跨平台桌面與行動端的 AI 代理編排 IDE,讓多個 CLI 程式碼代理各自在獨立 git worktree 中並行運作,並集中管理。",
+      "summary": "Orca 是以 TypeScript 開發、MIT 授權的應用程式,可同時並行執行 Claude Code、Codex、OpenCode、Pi 等任何終端機代理,每個代理使用獨立的 git worktree,並在同一介面追蹤進度。內建終端分割、內嵌瀏覽器 Design Mode、GitHub/Linear 整合、SSH 遠端 worktree、diff 註解與行動端配套 App,使用者以自己的訂閱帳號即可使用。",
       "category": "devtool",
-      "one_liner": "Orca 是一款讓開發者能同時管理多個 AI coding agent 的桌面級 IDE(ADE),支援平行 worktree 協作。",
-      "summary": "Orca 定位為「AI Orchestrator」,可同時執行 Claude Code、Codex、Cursor、OpenCode 等多種 coding agent,每個 agent 各自在獨立的 git worktree 中運作,並集中在單一介面追蹤進度、比較結果、合併變更。提供桌面(macOS/Windows/Linux)、手機陪伴 App 與 SSH 遠端 worktree 支援,鎖定同時發起大量平行 agent 任務的重度開發者。",
       "highlights": [
-        "支援 20 種以上的 coding agent(Claude Code、Codex、Cursor、Grok、GitHub Copilot、OpenCode 等)並列執行",
-        "平行 worktree 機制:一個 prompt 可同時派給多個 agent,各自獨立 git worktree,再比較結果擇優合併",
-        "內建 Ghostty 等級終端機(WebGL 渲染、無限分割、可還原 scrollback)",
-        "Design Mode 可直接點選 UI 元素擷取 HTML/CSS/截圖餵給 agent",
-        "手機陪伴 App(iOS/Android)可遠端監控與催促 agent,並支援 SSH 遠端 worktree"
+        "每個代理使用獨立 git worktree,可一個 prompt 分派給多個代理,比較結果後合併最佳者",
+        "支援幾乎所有 CLI 代理(Claude Code、Codex、Grok、Cursor、Copilot、OpenCode、Hermes、Goose 等)",
+        "提供 iOS/Android 行動端配套 App,代理完成時通知並可遠端追問",
+        "Design Mode:在內嵌 Chromium 點選 UI 元素,將 HTML/CSS/截圖送入代理 prompt",
+        "提供 Orca CLI 與 SSH 遠端 worktree,代理也能自動化操控 Orca;並有帳號切換與用量追蹤"
       ],
       "use_cases": [
-        "同時對多個 AI coding agent 下達同一任務,快速比較輸出品質再挑選最佳結果合併",
-        "遠端/雲端開發環境下透過 SSH worktree 操控 agent 進行大型或長時間任務",
-        "團隊在 GitHub/Linear 任務與程式碼審查之間無縫切換,搭配 AI agent 加速修 bug 與 PR 流程",
-        "行動裝置上追蹤與催促背景執行中的 coding agent,適合需要隨時掌握進度的開發者"
+        "同時以多個代理平行處理同一任務並比較結果",
+        "在遠端高規格機器上透過 SSH 執行代理,並從手機監控",
+        "前端開發時用 Design Mode 精準把 UI 上下文交給代理",
+        "管理多組 Claude/Codex 帳號並追蹤用量與速率限制"
       ],
       "quality": {
-        "docs": 4,
-        "tests": 1,
+        "docs": 5,
+        "tests": 2,
         "activity": 5,
-        "comment": "README 結構完整、圖文並茂且提供多語系版本,說明各功能相當清楚;但僅為資源型/工具介紹類專案,測試面向不適用,故給予 1 分。從 last pushed 與今日 +875 star、trending 排名可見專案活躍度極高。"
+        "comment": "README 圖文並茂,每項功能皆附文件連結並有多語言版本;近乎每日發布,最後推送為 2026-10-18,趨勢動能強勁。測試品質僅憑 README 無法判斷,未檢視原始碼。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "README 以官網下載安裝檔與行動 App(含 Android APK 直接下載)為主,未見 curl | bash 之類的安裝指令",
+          "應用程式會執行終端代理、SSH 連線,並提供 Computer Use 讓代理操作桌面,使用時宜留意授予的權限與帳號憑證",
+          "僅檢視 README,未進行原始碼層級審查"
+        ]
       },
       "star_rating": 4,
-      "verdict": "若你已在用多個 coding agent 且苦於視窗切換與結果比較,Orca 值得立即試用;但目前僅能從 README 判斷功能面,尚未有原始碼層級的安全與品質驗證。",
+      "verdict": "多代理並行開發工作流的熱門工具,功能完整且更新頻繁,正在使用多個 CLI 代理的工程師值得試用。",
       "_mode": "light"
     }
   },
@@ -9981,10 +9999,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -10017,6 +10035,13 @@
       "2026-10-17": [
         53504,
         281,
+        4,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ],
+      "2026-10-18": [
+        54062,
+        574,
         4,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
@@ -10341,10 +10366,10 @@
   },
   "akitaonrails/ai-memory": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-09-22",
+    "last_seen": "2026-10-18",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-18": [
         2063,
@@ -10373,40 +10398,51 @@
         4,
         "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "Rust"
+      ],
+      "2026-10-18": [
+        9924,
+        178,
+        6,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-09-22",
+    "last_analyzed": "2026-10-18",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "用 Rust 打造的自架伺服器,把 git 版控的 Markdown wiki 變成可跨 AI coding agent(Claude Code、Codex、Cursor 等)共享的長期記憶與交接系統。",
-      "summary": "ai-memory 解決的問題是:各家 AI coding CLI(Claude Code、Codex、Cursor…)各自有獨立、無法跨工具延續的記憶功能。它透過 lifecycle hooks 靜默擷取 prompt、工具呼叫與 session 邊界,於 session 結束時整理成可讀的 Markdown wiki 頁面,並提供全文/實體/圖譜(可選向量)融合檢索,讓你中途從 Claude Code 切到 Codex 時能拿到明確的 handoff(交接紀錄)。預設零 LLM 呼叫也能運作,資料以 git 版控的純文字檔為真實來源,並支援多人、多機器共用一台伺服器。",
+      "one_liner": "以 Rust 撰寫的 AI 程式代理長期記憶系統,以 git 版 markdown wiki 為資料來源,可在 Claude Code、Codex、Cursor 等 20 多種 CLI 之間交接工作。",
+      "summary": "ai-memory 透過各代理的生命週期 hook 靜默記錄工作內容,經隱私邊界清理後整理成可讀的 markdown 頁面。下一個代理,無論是哪家廠商、哪台機器,都能取得簡報並接手 handoff。預設完全不呼叫 LLM,以單一二進位檔提供,支援多使用者、稽核日誌與 MCP,解決代理記憶被綁在單一工具與單一機器的問題。",
+      "category": "ai-ml",
       "highlights": [
-        "一個 Rust 二進位檔同時提供 MCP/HTTP 伺服器,支援 20+ 種 agent 整合(hooks + MCP),且用 CI 保證支援矩陣不失真",
-        "記憶來源是 git 版控的 Markdown wiki,資料庫只是可重建的衍生索引,不會被綁在專屬向量庫裡",
-        "跨 agent 的 handoff 協定是「型別化、單一擁有者、只能被 claim 一次」的正式協定,而非口頭約定",
-        "密碼雜湊用 Argon2id + 專屬 KDF semaphore 限流,且對不存在使用者做 dummy verify 以防時序攻擊,安全細節做得相當到位",
-        "CI 涵蓋 fmt/clippy/多平台測試/cargo-audit/cargo-deny/gitleaks 秘密掃描,外加對 4 種不同 awk 實作的 shell hook 測試矩陣"
+        "支援 20 多種代理工具(Claude Code、Codex、Cursor、Gemini CLI、OpenCode 等),以 MCP 與 hook 整合",
+        "handoff 為型別化協定,每筆有明確擁有者且只能被認領一次,可在不同廠商的代理之間接續工作",
+        "記憶以 git 版 markdown 為真實來源,SQLite 只是可重建的索引,可用 grep、Obsidian 直接編輯",
+        "預設零 LLM 呼叫:擷取、搜尋、handoff、衰減、去重與矛盾標記皆不需 API key;「dream」整併為選用",
+        "提供多使用者驗證、稽核日誌、備份還原、桌面與 macOS 選單列 app,並有 NixOS、AUR、RPM 套件"
       ],
       "use_cases": [
-        "個人在多台機器(桌機、筆電)或多個 AI coding CLI 之間切換時,希望專案脈絡、失敗嘗試與待辦問題能無縫接續",
-        "團隊共用一台記憶伺服器,讓不同成員的 agent session 學到的知識彼此可見,同時保留個人 handoff 隱私",
-        "不想依賴雲端記憶 API、希望資料以純文字 Markdown 形式留在自己掌控的機器或 git repo 中"
+        "在 Claude Code 與 Codex 之間切換,不必重新說明架構與失敗經驗",
+        "個人跨多台機器延續同一專案的上下文",
+        "團隊共用一台記憶伺服器,讓成員的代理共享專案知識",
+        "自架離線、不依賴雲端記憶 API 的代理記憶層"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件量極大且分工清楚(安裝、安全、多人協作、架構設計各自成篇),測試涵蓋每個 crate 並包含多平台(含 Windows 獨立 workflow)、多 awk 實作、cargo-audit/cargo-deny/gitleaks 等供應鏈與秘密掃描,CI 設計細緻(例如 release build 單獨跑、docker smoke test、changelog 格式檢查)。專案版本已到 2.3.2,commit 歷史顯示持續密集開發,是目前少見在工程嚴謹度上接近生產級標準的個人/小團隊 Rust 專案。"
+        "comment": "文件極為完整:README、docs/、ARCHITECTURE、SECURITY(含威脅模型)、DATA_HANDLING、CHANGELOG、INSTALL_FOR_AGENTS 都齊備。Rust 工作區拆成多個 crate,單元測試超過 6000 處,另有 nextest 設定與 evals。CI 涵蓋 ci、windows、nix、release、secret-scan 與 CodeQL 等多條流程,並有 dependabot。最近仍有推送,版本迭代頻繁。因功能面廣,上手複雜度偏高,原生 Windows 仍標示為實驗性。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "bin/ai-memory 這支包裝腳本會用 curl 從 GitHub Releases 下載執行檔與 wrapper 腳本,但下載後都會用 SHA256 checksum 驗證後才執行,且會檢查腳本開頭 shebang 是否符合預期,屬於相對嚴謹的下載驗證流程,並非未驗證的 curl|bash",
-          "Docker quick-start 預設伺服器只綁定 127.0.0.1 且無驗證機制;README 與 docs/security.md 有明確說明何時需要加上 bearer token,使用者若要對外(LAN/公網)開放需自行留意這個預設值"
+          "README 與 docs/install.md 提供 `curl -fsSL .../install.sh | sh`(Linux/macOS)與 `irm .../install.ps1 | iex`(Windows)的安裝方式,會從 GitHub Releases 下載並執行腳本。文件說明腳本會比對發佈的 SHA-256 checksum,無法比對則拒絕安裝,使用者可自行先檢視腳本。",
+          "`ai-memory setup` 會修改多個代理的設定檔(MCP 註冊、hook、skills),並建立使用者層級的常駐服務(systemd --user、launchd 或 Windows 登入項目)。官方提供 `--plan` 預覽模式,實際套用前也會詢問確認。",
+          "hook 會擷取提示詞與工具呼叫並存入記憶,文件說明寫入前有型別化的隱私清理;若以非 loopback 位址綁定伺服器,應設定 bearer token(文件載明伺服器預設會拒絕無驗證的非 loopback 服務)。",
+          "bin/ai-memory 包裝腳本預設使用 docker.io/akitaonrails/ai-memory:latest 容器映像,並會轉送 Claude 等 OAuth token 給輔助容器;使用前宜留意這些環境變數的傳遞範圍。",
+          "本次檢視未發現混淆程式碼、內嵌的大型 base64 負載,或可疑的相依套件名稱。"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程品質與文件完整度都在個人專案中名列前茅,若你日常在多個 AI coding CLI 間切換或想要可控、可版控的長期記憶方案,非常值得一試。",
+      "star_rating": 4,
+      "verdict": "設計成熟、測試與文件扎實,直接解決多代理切換時的記憶與交接問題,常同時使用多種程式代理的人值得關注與試用;安裝時請留意 curl|sh 與設定檔改寫。",
       "_mode": "full"
     }
   },
@@ -11707,10 +11743,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -11758,6 +11794,13 @@
         75634,
         672,
         6,
+        "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
+      ],
+      "2026-10-18": [
+        76071,
+        420,
+        12,
         "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
       ]
@@ -12564,10 +12607,10 @@
   },
   "MadsLorentzen/ai-job-search": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-25": [
         34074,
@@ -12594,6 +12637,13 @@
         48520,
         898,
         11,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
+      ],
+      "2026-10-18": [
+        50413,
+        1365,
+        2,
         "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "Python"
       ]
@@ -13286,10 +13336,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -13343,6 +13393,13 @@
       "2026-10-17": [
         40569,
         1552,
+        1,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ],
+      "2026-10-18": [
+        41763,
+        1397,
         1,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
@@ -13641,10 +13698,10 @@
   },
   "K-Dense-AI/scientific-agent-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-27": [
         34733,
@@ -13713,6 +13770,13 @@
         51514,
         1158,
         2,
+        "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "Python"
+      ],
+      "2026-10-18": [
+        52253,
+        878,
+        5,
         "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "Python"
       ]
@@ -15909,10 +15973,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 14,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 15,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -16008,6 +16072,13 @@
       "2026-10-17": [
         71215,
         2301,
+        10,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-18": [
+        73389,
+        2125,
         10,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
@@ -16652,10 +16723,10 @@
   },
   "anomalyco/opencode": {
     "first_seen": "2026-09-05",
-    "last_seen": "2026-09-07",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-05": [
         204130,
@@ -16677,40 +16748,49 @@
         6,
         "The open source coding agent.",
         "TypeScript"
+      ],
+      "2026-10-18": [
+        215334,
+        438,
+        11,
+        "The open source coding agent.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-05",
+    "last_analyzed": "2026-10-18",
     "analysis": {
-      "one_liner": "開源終端機 AI 程式碼代理工具,提供 build/plan 雙模式與跨平台安裝方式。",
-      "summary": "opencode 是一款開源的 AI coding agent,主打終端機 UI 操作與新推出的桌面應用程式(Beta)。它內建 build(完整權限開發代理)與 plan(唯讀分析代理)兩種模式,可用 Tab 鍵切換,適合在不同開發情境下控制 AI 代理的操作權限。",
+      "one_liner": "以 TypeScript 打造的開源 AI 程式碼代理,提供終端機 TUI 與桌面版,定位為商用編碼代理的開源替代方案。",
+      "summary": "OpenCode 是一個開源的 AI 編碼代理(coding agent),主要在終端機中操作,另有桌面 App(BETA)。內建 build(完整權限)與 plan(唯讀分析)兩種代理,可用 Tab 鍵切換,並提供 @general 子代理處理複雜搜尋與多步驟任務。專案星數超過 21 萬,發行管道(npm、brew、scoop、choco、AUR、nix 等)相當完整。",
       "category": "ai-ml",
       "highlights": [
-        "提供 build(完整存取)與 plan(唯讀、需授權才能執行指令)兩種內建代理模式,方便控管 AI 代理的操作範圍",
-        "另有 general 子代理,可用 @general 語法呼叫處理複雜多步驟搜尋任務",
-        "支援極多元的安裝方式:curl 腳本、npm/bun/pnpm/yarn、Homebrew、Scoop、Chocolatey、pacman/AUR、mise、nix,涵蓋 macOS/Windows/Linux",
-        "新增桌面應用程式(Beta),提供 macOS(Apple Silicon/Intel)、Windows、Linux(.deb/.rpm/.AppImage)安裝包",
-        "README 提供多達 21 種語言版本,社群觸及面廣,並附有 Discord 與貢獻指南連結"
+        "內建 build / plan 雙代理,plan 模式預設禁止編輯檔案,執行 bash 前會先詢問權限,適合探索陌生程式碼庫",
+        "提供 general 子代理,可用 @general 呼叫處理複雜搜尋與多步驟任務",
+        "安裝管道廣泛:npm、Homebrew、Scoop、Chocolatey、pacman/AUR、mise、nix",
+        "同時提供終端機 TUI 與桌面 App(BETA,支援 macOS/Windows/Linux)",
+        "MIT 授權,README 有 20 多種語言版本,含繁體中文"
       ],
       "use_cases": [
-        "在終端機中以 AI 代理輔助日常程式開發、除錯與重構",
-        "用 plan 模式唯讀探索不熟悉的程式碼庫或規劃變更,避免誤動作",
-        "透過桌面應用程式在 GUI 環境中使用 AI coding agent"
+        "在終端機中以 AI 代理協助日常開發、重構與除錯",
+        "用 plan 模式安全地閱讀並分析不熟悉的程式碼庫",
+        "作為 Claude Code 等商用編碼代理的開源替代或對照研究",
+        "研究開源代理的架構與擴充方式,並在其上開發相關工具"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 結構清楚,涵蓋安裝、代理模式、文件連結與貢獻指南,且提供大量多語言翻譯,文件完整度高;但因僅能檢視 README,無法確認測試涵蓋狀況,此評分僅反映 README 本身呈現的品質。專案在 2026-09-05 仍有推送紀錄,且單日新增 345 星、位居 trending 第 15 名,活躍度非常高。"
+        "comment": "README 安裝說明清楚、多語系完整,並連結到完整文件站;設定與進階用法放在外部文件。測試品質僅憑 README 無法判斷。最近一次推送為 2026-10-18,今日仍在趨勢榜(第 11 名,+438 星),維護相當活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供 curl -fsSL https://opencode.ai/install | bash 的一鍵安裝方式,屬於常見但需自行評估風險的遠端腳本執行模式,建議使用前先查看腳本內容或改用套件管理器安裝",
-          "本評估僅根據 README 與中繼資料,未實際檢視原始碼,無法確認實際安全性"
+          "README 提供 `curl -fsSL https://opencode.ai/install | bash` 的一行式安裝(標註為 YOLO),會直接執行遠端腳本,建議先檢視腳本內容,或改用 brew、npm 等套件管理器。",
+          "本工具定位為可執行 bash 與編輯檔案的編碼代理,build 代理擁有完整權限,使用時宜留意權限設定;plan 代理預設唯讀。",
+          "以上僅依 README 判斷,未進行原始碼層級審查。"
         ]
       },
       "star_rating": 4,
-      "verdict": "熱度與活躍度都相當高,若在尋找終端機/桌面版 AI coding agent 工具,值得列入觀察與試用清單。",
+      "verdict": "想嘗試開源的終端機編碼代理,這個專案值得關注並試用。",
       "_mode": "light"
     }
   },
@@ -20500,10 +20580,10 @@
   },
   "anthropics/claude-code": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-04",
+    "last_seen": "2026-10-18",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-09-17": [
         145503,
@@ -20546,44 +20626,49 @@
         16,
         "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "TypeScript"
+      ],
+      "2026-10-18": [
+        151757,
+        179,
+        9,
+        "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-10-04",
+    "last_analyzed": "2026-10-18",
     "analysis": {
+      "one_liner": "Anthropic 官方終端機 AI 編碼助理 Claude Code 的公開倉庫,內含文件、Hook 與部署範例、devcontainer 及 GitHub 自動化工作流程。",
+      "summary": "Claude Code 是可在終端機、IDE 或 GitHub(@claude)中使用的 agentic 編碼工具,能用自然語言解釋程式碼、執行例行任務並處理 git 流程。這個公開倉庫主要放 README、CHANGELOG、Issue 追蹤、外掛市集設定(.claude-plugin)、Hook 範例、MDM 設定範例、AWS/GCP gateway 的 Terraform 範例與 devcontainer。我沒有在其中看到產品核心原始碼,倉庫內容以文件和範例為主。",
       "category": "devtool",
-      "one_liner": "Anthropic 官方終端機 AI 程式助理 Claude Code 的公開倉庫,收錄外掛、範例、devcontainer 與 issue 自動化流程。",
-      "summary": "Claude Code 是在終端機中運作的 agentic 程式開發工具,可用自然語言理解程式碼、執行例行任務並處理 git 工作流程。此倉庫不含核心產品原始碼,內容主要是官方外掛(plugins)、hooks 範例、AWS/GCP gateway 的 Terraform 範例、devcontainer 與防火牆腳本、CHANGELOG,以及 GitHub issue 管理用的 workflows。",
       "highlights": [
-        "官方外掛集合:code-review、feature-dev、hookify、pr-review-toolkit、security-guidance、ralph-wiggum 等 12 個外掛,可作為撰寫自訂 plugin 的參考",
-        "examples/hooks 提供 PreToolUse hook 範例(例如把 grep 導向 rg),示範如何攔截並驗證 Bash 指令",
-        "devcontainer 內附 init-firewall.sh,以 iptables/ipset 限制對外連線白名單,適合隔離執行 agent",
-        "examples/gateway 提供 AWS、GCP 的 Terraform 與 Docker 部署範例,另有 macOS MDM 設定範例供企業佈署",
-        "GitHub Actions 以 commit SHA 固定第三方 action,並附 workflow hardening 檢查腳本,同時用 Claude 自動做 issue 分流與去重"
+        "官方 agentic CLI 工具,支援終端機、IDE 與 GitHub @claude 整合",
+        "提供 Hook 範例(如 PreToolUse 的 Bash 指令驗證器),可自訂工具呼叫規則",
+        "examples/ 內含 AWS、GCP gateway 的 Terraform 部署範例與 macOS MDM 設定檔",
+        "devcontainer 搭配 iptables 防火牆腳本,以白名單網域限制對外連線",
+        "多個以 Claude 處理 Issue 去重、分流的 GitHub Actions,並有 workflow 強化檢查腳本"
       ],
       "use_cases": [
-        "學習如何撰寫 Claude Code 外掛、slash command、subagent 與 hooks",
-        "在企業內以 devcontainer、防火牆白名單與 MDM 設定安全佈署 Claude Code",
-        "參考以 Claude 自動分流、去重 GitHub issue 的 workflow 設計",
-        "參考在 AWS/GCP 上架設 LLM gateway 的範例"
+        "個人或團隊在終端機以自然語言進行程式碼理解、重構與 git 操作",
+        "企業參考 MDM 與雲端 gateway 範例,統一部署與管控 Claude Code",
+        "以 Hook 與外掛擴充 Claude Code,加入自訂審核或指令規則",
+        "參考 devcontainer 防火牆設定,在隔離環境中執行 AI 代理"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 簡潔並導向官方文件,另有 plugins/README、CHANGELOG、SECURITY.md 與 gateway 範例說明。核心產品未在此開源,因此無法評估主程式碼品質。測試僅有針對 mods 的 CI 工作流程(且在缺少 plugin test 指令時會跳過),覆蓋有限。最近推送時間為 2026-10-03,維護非常活躍,並有 14 個 workflows 與 hardening 檢查。"
+        "comment": "README 簡潔,詳細文件放在官方網站;CHANGELOG、SECURITY、Issue 範本齊全。倉庫並非產品原始碼,只看到少量測試(mod-tests 工作流程)與 workflow 強化檢查。推送頻繁、CI 工作流程多,且 Action 以 commit SHA 固定版本,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 的安裝方式包含 curl -fsSL https://claude.ai/install.sh | bash 與 irm https://claude.ai/install.ps1 | iex,會從官方網域下載並執行腳本,使用者可自行先檢視內容再執行",
-          "README 標註 npm 安裝方式已棄用,仍列出 npm install -g @anthropic-ai/claude-code",
-          "devcontainer/init-firewall.sh 需要 root 權限,會清空並重設 iptables 規則,執行時以 curl 取得 api.github.com/meta 的 IP 範圍建立白名單,屬於預期的網路隔離用途",
-          "授權為 Anthropic 專有條款(LICENSE.md 標示 All rights reserved),非開源授權,使用須遵循其商業條款",
-          "本次僅抽樣檢視,未發現混淆程式碼、內嵌 base64 payload 或可疑相依套件"
+          "README 建議的安裝方式為 `curl -fsSL https://claude.ai/install.sh | bash` 與 `irm https://claude.ai/install.ps1 | iex`,會從官方網域下載並執行腳本;使用者可視需求改用 Homebrew 或 WinGet。npm 安裝方式已標示為棄用。",
+          "`.devcontainer/init-firewall.sh` 需要特權操作(iptables、ipset),會清空既有防火牆規則並僅放行白名單網域,同時從 api.github.com/meta 取得 IP 範圍;屬於限制對外連線的設計,執行前建議先了解其行為。",
+          "我沒有在倉庫內看到 package.json 的 preinstall/postinstall 等生命週期腳本,也沒有發現混淆程式碼或內嵌的長 base64 內容。"
         ]
       },
       "star_rating": 4,
-      "verdict": "Claude Code 使用者與外掛開發者值得關注,可當作官方範例庫;但這裡看不到核心原始碼,授權也非開源。",
+      "verdict": "Claude Code 本身值得 AI 研發工程師使用;但這個倉庫以文件、範例與 Issue 追蹤為主,不含核心原始碼,適合挑選其中的 Hook、外掛與部署範例來參考。",
       "_mode": "full"
     }
   },
@@ -26235,10 +26320,10 @@
   },
   "xerj-org/xerj": {
     "first_seen": "2026-10-16",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-16": [
         5662,
@@ -26252,6 +26337,13 @@
         1648,
         13,
         "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+        "Rust"
+      ],
+      "2026-10-18": [
+        7803,
+        1160,
+        13,
+        "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep (1974 tool). One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. It’s durable and can replace ElasticSearch saving you x10 infra costs.",
         "Rust"
       ]
     },
@@ -26295,14 +26387,21 @@
   },
   "android/skills": {
     "first_seen": "2026-10-17",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-17": [
         8076,
         36,
+        7,
+        "",
+        "Kotlin"
+      ],
+      "2026-10-18": [
+        8428,
+        355,
         7,
         "",
         "Kotlin"
