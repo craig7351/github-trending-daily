@@ -7275,10 +7275,10 @@
   },
   "Comfy-Org/ComfyUI": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-24",
+    "last_seen": "2026-10-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-10": [
         125521,
@@ -7300,42 +7300,50 @@
         17,
         "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
         "Python"
+      ],
+      "2026-10-19": [
+        138619,
+        154,
+        13,
+        "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-10",
+    "last_analyzed": "2026-10-19",
     "analysis": {
-      "one_liner": "ComfyUI 是一套模組化、以節點圖形介面驅動的 AI 生成引擎,支援圖像、影片、3D、音訊等多種擴散模型工作流。",
-      "summary": "ComfyUI 讓使用者透過視覺化節點圖(而非寫程式)組合、重用並執行 Stable Diffusion、Flux、Wan 等各類擴散/生成模型的推理工作流程,原生支援本機離線執行、VRAM 管理、局部圖重算等進階特性。專案由 Comfy-Org 維護,搭配獨立前端倉庫與桌面應用/雲端服務,形成完整生態系,是目前最主流的開源生成式 AI 圖形化工作台。",
+      "one_liner": "以節點圖形介面驅動的模組化擴散模型引擎,支援圖像、影片、音訊、3D 等工作流,主打在消費級硬體上的本地推論效能。",
+      "summary": "ComfyUI 是以 Python/PyTorch 實作的 AI 內容生成引擎,提供節點圖(graph/nodes)介面、HTTP/WebSocket API 與後端執行器。它原生支援 SD、SDXL、Flux、Wan、LTX 等大量開源模型,並以非同步權重串流、智慧 VRAM/RAM 管理與量化支援,讓大型模型能在 4GB VRAM 等低階硬體上運行。可透過桌面應用、可攜版或手動安裝使用,也能搭配自訂節點擴充。",
       "category": "ai-ml",
       "highlights": [
-        "節點圖形介面涵蓋圖像/影片/3D/音訊/文字生成,原生支援數十種主流開源模型(SD、Flux、Wan、Qwen Image 等)",
-        "採用非同步佇列、局部圖重算、VRAM/RAM 智慧管理與量化模型支援,適合本機硬體資源有限的使用者",
-        "核心倉庫、桌面應用(Comfy-Desktop)、前端(ComfyUI_frontend)三個倉庫協同開發,並有明確的每 2 週穩定版發布節奏",
-        "測試涵蓋單元測試、執行測試、啟動測試,並針對過往 CVE(GHSA-779p 系列路徑穿越/XSS)建立專屬回歸測試",
-        "以 GPL-3.0 授權,CI 使用 ruff 做靜態檢查,並有詳盡的 SECURITY.md 說明威脅模型與漏洞回報範圍"
+        "原生支援極廣的模型:圖像、影片、音訊、3D、文字生成,更新跟進快速,每週發版",
+        "非同步權重串流、部分圖重新執行與快取機制,可在低 VRAM 環境運行大型模型",
+        "完整 API 與自訂節點生態,可嵌入生產流程;另有 App Mode 將複雜工作流包成簡易 UI",
+        "支援 NVIDIA、AMD、Intel、Apple Silicon、Ascend 等多種硬體,以及 Windows/Linux/macOS",
+        "工程化程度高:數十個 GitHub Actions 工作流、alembic 資料庫遷移、OpenAPI lint 與 CLA 流程"
       ],
       "use_cases": [
-        "本機或工作站上以圖形化方式建構、除錯、分享 AI 影像/影片/音訊生成工作流",
-        "整合至生產管線,透過 API 節點或本機 API 呼叫既有 ComfyUI 工作流",
-        "作為研究/教學用途快速嘗試多種擴散模型與取樣器組合",
-        "透過自訂節點擴充功能以支援新模型或自建工具"
+        "在本機以節點工作流進行圖像/影片生成與影像編輯實驗",
+        "將生成式 AI 工作流透過 API 整合進產品或自動化管線",
+        "研究與測試新開源擴散模型,或開發自訂節點與擴充",
+        "在消費級顯卡上跑大型模型的低資源部署"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 4,
         "activity": 5,
-        "comment": "文件非常完整(README 詳列各平台安裝、GPU 支援、快捷鍵、疑難排解),另有 CONTRIBUTING.md、AGENTS.md、SECURITY.md。測試涵蓋單元/執行/啟動/安全回歸多層面,CI workflow 眾多(lint、build、release)。專案活躍度極高,每日皆有提交,並依週期發布穩定版。"
+        "comment": "README 涵蓋功能、安裝、發版流程與快捷鍵,另有 CONTRIBUTING、SECURITY、AGENTS 等文件。tests-unit 目錄下有 150 個以上測試檔(以資產與資料庫遷移為主),CI 含 unit、execution、launch、ruff 等多條工作流。最後推送為今日,維護極為活躍。核心 execution.py 結構清楚,模組劃分合理,但單檔規模大、依賴多。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "SECURITY.md 明確聲明威脅模型:預設僅綁定 127.0.0.1,且將「安裝不受信任的自訂節點」視為使用者自行承擔風險的行為,因為自訂節點可執行任意 Python 程式碼",
-          "README 提供產生自簽 TLS 憑證與啟用 --listen 對外暴露服務的說明,若使用者依此開放對外存取且未額外加上驗證/防火牆,需自行承擔對外曝露風險",
-          "tests-unit/security_test 內含針對先前已修復 CVE(GHSA-779p,路徑穿越、XSS、危險 Content-Type 等)的回歸測試,顯示專案有主動修補歷史漏洞並留存測試防止再犯"
+          "專案核心不含 setup.py 或 npm 安裝生命週期腳本,依賴列於 requirements.txt,多數版本未固定(如 torch、transformers),屬一般 Python 專案做法",
+          "支援載入第三方自訂節點,這些節點是任意 Python 程式碼,載入時會以本機權限執行,使用者安裝前宜自行審視來源",
+          "選用的付費 Partner/API 節點會連線外部服務;README 說明可用 --offline 或 --disable-partner-nodes 停用",
+          "於 .ci/update_windows 目錄中未檢出 curl 或 iwr 等下載指令;未發現混淆程式碼或內嵌的大型編碼酬載"
         ]
       },
       "star_rating": 5,
-      "verdict": "生態成熟、文件與測試齊全、社群與更新頻率都在頂尖水準,是生成式 AI 工作流工具的事實標準,非常值得關注與投入。",
+      "verdict": "開源生成式 AI 工作流領域的事實標準之一,活躍度與工程品質都很高,AI 研發工程師值得持續關注與實際使用。",
       "_mode": "full"
     }
   },
@@ -7982,10 +7990,10 @@
   },
   "stablyai/orca": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-12": [
         42779,
@@ -8005,6 +8013,13 @@
         95419,
         830,
         8,
+        "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+        "TypeScript"
+      ],
+      "2026-10-19": [
+        96657,
+        1146,
+        7,
         "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "TypeScript"
       ]
@@ -9478,10 +9493,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-10-17",
+    "last_seen": "2026-10-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -9536,6 +9551,13 @@
         11956,
         278,
         9,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ],
+      "2026-10-19": [
+        12747,
+        350,
+        4,
         "Cursor plugin specification and official plugins",
         "TypeScript"
       ]
@@ -9999,10 +10021,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -10043,6 +10065,13 @@
         54062,
         574,
         4,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ],
+      "2026-10-19": [
+        54594,
+        589,
+        8,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
       ]
@@ -10366,10 +10395,10 @@
   },
   "akitaonrails/ai-memory": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-18": [
         2063,
@@ -10402,6 +10431,13 @@
       "2026-10-18": [
         9924,
         178,
+        6,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
+      ],
+      "2026-10-19": [
+        10491,
+        512,
         6,
         "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "Rust"
@@ -11743,10 +11779,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -11801,6 +11837,13 @@
         76071,
         420,
         12,
+        "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
+      ],
+      "2026-10-19": [
+        76523,
+        513,
+        5,
         "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
       ]
@@ -12607,10 +12650,10 @@
   },
   "MadsLorentzen/ai-job-search": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-25": [
         34074,
@@ -12644,6 +12687,13 @@
         50413,
         1365,
         2,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
+      ],
+      "2026-10-19": [
+        53203,
+        2232,
+        1,
         "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "Python"
       ]
@@ -13336,10 +13386,10 @@
   },
   "anthropics/claude-plugins-official": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-26": [
         34093,
@@ -13401,6 +13451,13 @@
         41763,
         1397,
         1,
+        "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "Python"
+      ],
+      "2026-10-19": [
+        42696,
+        1175,
+        2,
         "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
         "Python"
       ]
@@ -15973,10 +16030,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 15,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 16,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -16080,6 +16137,13 @@
         73389,
         2125,
         10,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-19": [
+        75386,
+        2082,
+        9,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -16723,10 +16787,10 @@
   },
   "anomalyco/opencode": {
     "first_seen": "2026-09-05",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-05": [
         204130,
@@ -16753,6 +16817,13 @@
         215334,
         438,
         11,
+        "The open source coding agent.",
+        "TypeScript"
+      ],
+      "2026-10-19": [
+        216599,
+        1414,
+        3,
         "The open source coding agent.",
         "TypeScript"
       ]
@@ -26387,10 +26458,10 @@
   },
   "android/skills": {
     "first_seen": "2026-10-17",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-17": [
         8076,
@@ -26403,6 +26474,13 @@
         8428,
         355,
         7,
+        "",
+        "Kotlin"
+      ],
+      "2026-10-19": [
+        8773,
+        375,
+        10,
         "",
         "Kotlin"
       ]
@@ -26497,6 +26575,110 @@
       },
       "star_rating": 3,
       "verdict": "對需要多網盤直連下載的中文使用者很實用,也持續更新;但沒有測試與 CI,且權限範圍廣、涉及網盤憑證,使用前務必審視腳本內容。",
+      "_mode": "full"
+    }
+  },
+  "mlabonne/llm-course": {
+    "first_seen": "2026-10-19",
+    "last_seen": "2026-10-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-19": [
+        84031,
+        81,
+        11,
+        "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-10-19",
+    "analysis": {
+      "one_liner": "Maxime Labonne 製作的免費 LLM 入門到進階課程,附學習路線圖與大量 Colab 筆記本。",
+      "summary": "llm-course 將 LLM 學習分成三部分:基礎(數學、Python、神經網路)、LLM Scientist(訓練與優化模型)、LLM Engineer(開發與部署應用)。並提供微調、量化、模型合併等實作 Colab 筆記本與對應文章。內容以資源整理與路線圖為主,適合自學者依需求查閱。",
+      "category": "learning-resource",
+      "highlights": [
+        "三段式結構:基礎、Scientist、Engineer,可依程度挑選切入點",
+        "提供視覺化路線圖,方便規劃學習順序",
+        "Colab 筆記本涵蓋 Unsloth、ORPO、DPO、QLoRA、Axolotl 等微調實作",
+        "量化教學涵蓋 GGUF、GPTQ、EXL2 等格式,另有 MergeKit 模型合併與 AutoEval 等工具",
+        "Apache-2.0 授權,作者承諾課程永遠免費,並有配套書籍 LLM Engineer's Handbook"
+      ],
+      "use_cases": [
+        "想系統性入門 LLM 的工程師自學路線參考",
+        "在免費 Colab 上動手練習微調與量化",
+        "團隊內部 LLM 教育訓練的教材來源",
+        "查找 LLM 訓練、評估、部署各階段的精選資源"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 3,
+        "comment": "資源彙整類,測試不適用。README 結構清楚、資源豐富且有路線圖;部分 notebook 範例(Llama 2、Mistral)偏舊。最後推送為 2026-02,近期更新較少,但星數與熱度仍高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "LLM 自學的經典路線圖與實作資源,值得收藏;使用時留意部分範例較舊,需搭配新版工具驗證。",
+      "_mode": "light"
+    }
+  },
+  "Kruk2/jasna": {
+    "first_seen": "2026-10-19",
+    "last_seen": "2026-10-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-19": [
+        2403,
+        115,
+        12,
+        "Video restoration tool",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-19",
+    "analysis": {
+      "one_liner": "Jasna 是 GPU 加速的影片/圖片馬賽克還原工具,提供 GUI 與 CLI,模型包含免費的 BasicVSR++ 與支持者專用的 LTX 擴散模型。",
+      "summary": "Jasna 以 Python 實作,整條流程(解碼、偵測、追蹤、還原、混合、編碼)都在 GPU 上跑,支援 NVIDIA(NVDEC/NVENC/TensorRT)與實驗性的 AMD(ROCm/AMF)。偵測使用 rfdetr,還原使用 BasicVSR++,另有 LTX 擴散模型與 UNet 4x、SD 1.5 等付費模型。專案受 Lada 啟發,README 的基準測試稱在 RTX 5090 上比 Lada 快約 3.4–4.7 倍。",
+      "category": "app",
+      "highlights": [
+        "整條處理管線都在 GPU 上執行,README 的基準測試顯示比 Lada 快約 3.4–4.7 倍",
+        "同時提供 GUI(Segment Editor、Video Player、佇列、預設組)與 CLI,支援 VR180 和靜態圖片",
+        "提供 BasicVSR++(免費)與 LTX 擴散模型(支持者專用,僅 NVIDIA),並附有 LTX 的 CUDA/C++ 原生核心與 INT8 attention(SageAttention 衍生)",
+        "repo 內含大量 benchmarks 報告(CSV/MD)、多語系文件(英/日/中)與完整第三方授權說明",
+        "tests/ 下有 184 個以上測試檔,涵蓋 GUI、LTX、混合、追蹤等模組"
+      ],
+      "use_cases": [
+        "在自有 NVIDIA/AMD GPU 上批次還原影片或圖片中的馬賽克區域",
+        "研究 GPU 端到端影片處理管線(NVDEC → TensorRT → NVENC)的實作與效能調校",
+        "參考 LTX 擴散模型的 INT8 量化與 Triton/CUDA 核心優化",
+        "在雲端租用 GPU(RunPod、Vast)上做影片修復"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 結構清楚,docs/ 有 GUI、CLI、模型選擇、調校、雲端等分冊,並有三語版本。tests/ 規模龐大(至少 184 個測試檔,含 GPU 專用測試)。最後 push 在 2026-10-18、版本 0.11.x,更新頻繁。我在本地檢查時沒有找到 .github/workflows,因此看不到 CI 設定。核心程式碼風格一致,有型別標註與鎖保護。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "授權啟用邏輯放在私有的 jasna/protection 子模組中(.gitmodules 指向相對路徑),公開原始碼無法檢視;支持者模型與啟用功能需使用官方 release,README 說明從原始碼執行時只能用免費的 BasicVSR++。",
+          "官方 release 為預編譯執行檔(Nuitka 打包),使用者需自行信任下載來源;README 指出應只從 GitHub 下載,並提醒第三方販售的修改檔可能含隱藏程式碼。",
+          "啟用支持者授權碼時需連網(Activate online),啟用後可離線運作;一組授權碼最多綁定 3 台電腦,並以主機板識別碼等硬體資訊判定。",
+          "首次執行會依 GPU 編譯 TensorRT 引擎並下載模型權重,使用者應留意下載來源與磁碟空間。",
+          "專案依賴含固定版本的 GPU 套件與 Codeberg 上的 VALI 分支(vali fork wheel),建置時需另外取得;repo 內有 assets/test_clip 測試影片(mp4)等少量二進位檔,屬測試素材。",
+          "pyproject.toml 無 postinstall 類生命週期腳本,未發現 curl|bash 安裝模式、混淆程式碼或內嵌 base64 載荷。",
+          "工具用途為還原影片中的馬賽克,使用者需自行留意內容來源的版權與當地法規。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程完整、文件詳盡、更新積極,GPU 管線與 LTX 優化值得 AI 研發工程師參考。但完整功能依賴私有模組與付費授權,公開原始碼只含免費部分。",
       "_mode": "full"
     }
   }
