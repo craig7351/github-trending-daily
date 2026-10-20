@@ -249,7 +249,7 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-08-13",
+    "last_seen": "2026-10-20",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -281,41 +281,54 @@
         6,
         "Kronos: A Foundation Model for the Language of Financial Markets",
         "Python"
+      ],
+      "2026-10-20": [
+        41673,
+        363,
+        12,
+        "Kronos: A Foundation Model for the Language of Financial Markets",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-13",
+    "last_analyzed": "2026-10-20",
     "analysis": {
+      "one_liner": "首個開源的金融 K 線基礎模型,以階層式離散 token 加自迴歸 Transformer 預測 OHLCV 走勢。",
+      "summary": "Kronos 是專為金融 K 線(OHLCV)序列設計的 decoder-only 基礎模型家族,已被 AAAI 2026 接受。它先以 BSQuantizer 將連續 K 線量化為階層式離散 token,再用自迴歸 Transformer 預訓練,可用於預測與量化研究。專案提供 Hugging Face 預訓練權重、預測 API、微調流程(Qlib 與 CSV)及 WebUI。",
       "category": "ai-ml",
-      "one_liner": "Kronos 是首個開源的金融K線基礎模型,將OHLCV蜡烛图資料當作「語言」來預訓練,可直接用於股票/加密貨幣的走勢預測。",
-      "summary": "Kronos 採兩階段架構:先用二元球面量化(BSQ)Tokenizer 將連續的K線資料離散化成階層式token,再用自回歸Transformer在這些token上預訓練,形成統一的量化任務基礎模型。專案提供4種規模的預訓練模型(4.1M~499.2M參數,大模型未開源)、推論用的Predictor類別,以及針對A股市場的完整微調與回測範例流程。",
       "highlights": [
-        "論文已被AAAI 2026接受,並掛在arXiv (2508.02739)",
-        "提供4種不同規模的預訓練模型,可直接從HuggingFace Hub載入使用",
-        "內建predict_batch支援多序列平行預測,適合同時對多檔標的做推論",
-        "附上以Qlib為基礎的A股微調+回測完整範例,並附風險免責聲明說明僅供示範",
-        "有真正跑pretrained model做數值比對的迴歸測試(MSE/相對誤差容忍度),而非僅有形式測試"
+        "涵蓋全球 45 個以上交易所資料訓練,提供 mini/small/base 三種開源規模(約 4.1M 至 102M 參數),可由 Hugging Face 直接載入",
+        "KronosPredictor 封裝正規化、取樣(T/top_p/sample_count)與反正規化,並支援 predict_batch 批次預測",
+        "附完整微調流程:Qlib A 股管線(torchrun 多 GPU)與 finetune_csv 的自有 CSV 資料微調",
+        "附 WebUI、回測範例與 BTC/USDT 線上 Demo,論文公開於 arXiv",
+        "MIT 授權,迴歸測試固定模型 revision,並以種子與容差驗證輸出"
       ],
       "use_cases": [
-        "針對特定市場或標的,微調Kronos做K線走勢預測研究",
-        "作為量化策略訊號產生器,搭配自有的組合優化/風控模型使用",
-        "學術研究金融時序基礎模型的分詞與自回歸架構設計",
-        "教學/展示用途,理解如何將Qlib資料串接進微調與回測流程"
+        "以預訓練權重對股票、加密貨幣等 K 線做短期預測實驗",
+        "以自有行情資料微調 tokenizer 與預測模型,研究量化因子或訊號",
+        "作為金融時間序列基礎模型的研究與論文復現基準",
+        "快速搭建 WebUI 展示多資產批次預測結果"
       ],
       "quality": {
         "docs": 4,
-        "tests": 3,
-        "activity": 4,
-        "comment": "README 詳盡且附使用範例、模型表格與微調教學,核心模型碼(model/kronos.py、module.py)有清楚的docstring說明每個張量形狀與參數意義,程式品質偏學術但工整。測試僅涵蓋predictor推論的數值迴歸(對照HuggingFace上pinned版本模型輸出),沒有涵蓋finetune/webui等模組,且未見GitHub Actions CI設定,測試只能靠人工執行。README明確標註finetune/目錄部分註解由AI(Gemini 2.5 Pro)生成,建議以程式碼本身為準,顯示團隊誠實揭露而非隱瞞。"
+        "tests": 2,
+        "activity": 3,
+        "comment": "README 完整,涵蓋模型表、快速上手、微調與注意事項,並附免責聲明;程式碼註解清楚。測試僅有單一迴歸測試檔(固定 HF revision),且未見 .github/workflows CI。最後推送為 2026-04-13,近期更新頻率偏低;倉庫內含大量範例預測結果與資料檔,略顯雜亂。requirements 中 numpy、pandas 未釘版本且 pandas 重複宣告。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "未發現 setup.py、pyproject.toml 或 package.json,安裝僅透過 requirements.txt,沒有安裝時自動執行的腳本",
+          "webui/run.py 啟動時會以 subprocess 呼叫 pip install -r requirements.txt;examples/get_akshare_date_2024-2025_x.py 與 get_date_new.py 在特定情況下會呼叫 pip install requests numpy pandas,使用者執行前宜留意",
+          "finetune/dataset.py 與 finetune/qlib_test.py 以 pickle.load 讀取資料檔,請只載入自己產生或信任來源的 pkl 檔",
+          "範例腳本會透過 requests 對外部行情資料網址發送請求以抓取資料",
+          "模型與 tokenizer 於執行時從 Hugging Face Hub 下載;未發現混淆程式碼、內嵌長 base64 payload 或 curl|bash 安裝模式"
+        ]
       },
       "star_rating": 4,
-      "verdict": "學術嚴謹、有真實數值迴歸測試把關,且剛被AAAI 2026收錄,對做金融時序/量化研究的工程師值得一看,但finetune與webui部分仍偏示範性質,離生產可用還有距離。",
+      "verdict": "金融時間序列基礎模型中少見的完整開源實作,權重、微調與範例俱全,對量化與時序研究者值得關注;但近期更新放緩、測試與 CI 偏薄,且預測結果不應直接當作交易依據。",
       "_mode": "full"
     },
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "consecutive_days_on_trending": 1
   },
   "Automattic/harper": {
@@ -7275,10 +7288,10 @@
   },
   "Comfy-Org/ComfyUI": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-10": [
         125521,
@@ -7305,6 +7318,13 @@
         138619,
         154,
         13,
+        "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+        "Python"
+      ],
+      "2026-10-20": [
+        139729,
+        1011,
+        4,
         "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "Python"
       ]
@@ -7990,10 +8010,10 @@
   },
   "stablyai/orca": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-12": [
         42779,
@@ -8020,6 +8040,13 @@
         96657,
         1146,
         7,
+        "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+        "TypeScript"
+      ],
+      "2026-10-20": [
+        98294,
+        1590,
+        6,
         "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "TypeScript"
       ]
@@ -10021,10 +10048,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -10072,6 +10099,13 @@
         54594,
         589,
         8,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ],
+      "2026-10-20": [
+        55239,
+        606,
+        10,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
       ]
@@ -10395,10 +10429,10 @@
   },
   "akitaonrails/ai-memory": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-18": [
         2063,
@@ -10439,6 +10473,13 @@
         10491,
         512,
         6,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
+      ],
+      "2026-10-20": [
+        11349,
+        666,
+        3,
         "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "Rust"
       ]
@@ -11779,10 +11820,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -11843,6 +11884,13 @@
       "2026-10-19": [
         76523,
         513,
+        5,
+        "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
+      ],
+      "2026-10-20": [
+        77192,
+        564,
         5,
         "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
@@ -12650,10 +12698,10 @@
   },
   "MadsLorentzen/ai-job-search": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-25": [
         34074,
@@ -12693,6 +12741,13 @@
       "2026-10-19": [
         53203,
         2232,
+        1,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
+      ],
+      "2026-10-20": [
+        57285,
+        3856,
         1,
         "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "Python"
@@ -16787,10 +16842,10 @@
   },
   "anomalyco/opencode": {
     "first_seen": "2026-09-05",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-05": [
         204130,
@@ -16824,6 +16879,13 @@
         216599,
         1414,
         3,
+        "The open source coding agent.",
+        "TypeScript"
+      ],
+      "2026-10-20": [
+        217819,
+        1311,
+        2,
         "The open source coding agent.",
         "TypeScript"
       ]
@@ -20651,10 +20713,10 @@
   },
   "anthropics/claude-code": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-18",
+    "last_seen": "2026-10-20",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-09-17": [
         145503,
@@ -20702,6 +20764,13 @@
         151757,
         179,
         9,
+        "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "TypeScript"
+      ],
+      "2026-10-20": [
+        152657,
+        167,
+        11,
         "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
         "TypeScript"
       ]
@@ -26628,15 +26697,22 @@
   },
   "Kruk2/jasna": {
     "first_seen": "2026-10-19",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-20",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-19": [
         2403,
         115,
         12,
+        "Video restoration tool",
+        "Python"
+      ],
+      "2026-10-20": [
+        2894,
+        498,
+        9,
         "Video restoration tool",
         "Python"
       ]
@@ -26679,6 +26755,108 @@
       },
       "star_rating": 4,
       "verdict": "工程完整、文件詳盡、更新積極,GPU 管線與 LTX 優化值得 AI 研發工程師參考。但完整功能依賴私有模組與付費授權,公開原始碼只含免費部分。",
+      "_mode": "full"
+    }
+  },
+  "headroomlabs-ai/headroom": {
+    "first_seen": "2026-10-20",
+    "last_seen": "2026-10-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-20": [
+        76246,
+        310,
+        7,
+        "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-20",
+    "analysis": {
+      "one_liner": "在工具輸出、日誌、RAG 片段送進 LLM 之前先於本機壓縮,以節省 token 的 Python 函式庫、代理伺服器與 MCP 伺服器。",
+      "summary": "Headroom 是一個在本機執行的 context 壓縮層,會依內容類型(JSON、程式碼 AST、文字)選擇不同的壓縮器,並以 CCR 機制在本機保存原文,模型需要時可透過 headroom_retrieve 取回。可當作 Python/TypeScript 函式庫、HTTP 代理、MCP 伺服器使用,也能用 `headroom wrap claude/codex/cursor...` 一行包裝各種程式開發 agent,用來降低 agent 工作流程中的 token 成本與 context 視窗膨脹問題。",
+      "category": "ai-ml",
+      "highlights": [
+        "多種整合模式:函式庫、proxy、MCP、wrap 指令,支援 Claude Code、Codex、Cursor、Aider 等十多種 agent,且可用 unwrap 還原",
+        "內容感知壓縮:SmartCrusher(JSON)、CodeCompressor(AST)、Kompress-v2-base(文字),並附可重現的 seeded 基準腳本",
+        "CCR 可逆壓縮:原文存於本機,模型可按需取回;CacheAligner 負責偵測容易破壞 provider prompt cache 的內容,但不會改寫 prompt",
+        "額外功能:跨 agent 共用記憶、`headroom learn` 從失敗 session 產出修正規則、輸出 token 精簡",
+        "工程成熟度高:數百個測試檔、20 多個 CI workflow(含 CodeQL、security、e2e),並對曾出現供應鏈問題的相依版本明確排除"
+      ],
+      "use_cases": [
+        "以 Claude Code / Codex 等 agent 長時間開發,希望降低 token 成本並延長可用 context",
+        "在 RAG 或 agent 管線中壓縮大型 JSON、日誌、搜尋結果",
+        "為團隊建立統一的 LLM proxy,集中觀測節省量與快取行為",
+        "研究 context engineering 與 prompt cache 對齊策略"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 結構完整,附架構圖與可重現基準,另有線上文件、wiki 與 llms.txt。tests/ 目錄含 700 個以上測試檔,涵蓋 CCR、快取、各 provider 與 CLI;CI 有 20 多個 workflow。版本 0.41.0、近日仍有推送,維護非常活躍。標題宣稱的節省比例依場景差異大(程式碼搜尋情境約 21%),實際效益需自行驗證。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 預設啟用匿名遙測 beacon,會回報壓縮比、計數器、provider 與模型 ID、作業系統與架構;依文件不含 prompt、程式碼或檔案路徑,可用 HEADROOM_BEACON=off、HEADROOM_TELEMETRY=off、DO_NOT_TRACK=1 或 HEADROOM_OFFLINE=1 關閉",
+          "wiki 文件建議以 `curl ... | bash`(scripts/install.sh)與 `irm ... | iex`(scripts/install.ps1)安裝,內容來自 GitHub raw 網址;此為常見做法,建議執行前先檢視腳本",
+          "`headroom wrap` 會啟動本機 proxy、安裝 Serena 並寫入 ~/.claude.json 等 agent 設定檔(可用 unwrap 還原、--code-memory none 略過),使用者應留意其修改了本機設定",
+          "pyproject.toml 以 maturin 建置(含 Rust 擴充),並明確排除 ast-grep-cli 0.44.1(註解稱該版本曾為遭入侵的建置);未發現 setup.py 安裝時執行任意程式碼或 npm 生命週期腳本的情形",
+          "dashboard/static 內含 alpine.min.js、tailwind.min.js 等第三方壓縮檔,屬前端函式庫的常見做法"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對重度使用 coding agent 或需控制 LLM token 成本的人很實用,工程品質與測試覆蓋佳,值得試用;建議先關閉遙測並自行量測在自家工作負載上的實際節省比例。",
+      "_mode": "full"
+    }
+  },
+  "withmarbleapp/os-taxonomy": {
+    "first_seen": "2026-10-20",
+    "last_seen": "2026-10-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-20": [
+        6125,
+        284,
+        8,
+        "",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-10-20",
+    "analysis": {
+      "one_liner": "開放授權的小學階段學習知識圖譜:1,591 個微主題、3,225 條先修關係,並對齊各國課程標準。",
+      "summary": "Marble Skill Taxonomy 是由 Marble 發布的純資料集,把小學階段的學習內容拆解成細粒度微主題,並以有向無環圖串接先修關係(標示 hard/soft 與理由)。同時提供對應 NGSS、Common Core、英國國家課程等標準的連結、科學與數學的教學研究紀錄,以及領域摘要。解決課程資料多半只是扁平標準清單、或被鎖在產品內的問題。",
+      "category": "data",
+      "highlights": [
+        "1,591 個微主題含說明、掌握度證據、類型、年齡區間與 assessmentPrompt,先修圖含 3,225 條邊與理由",
+        "對齊 NGSS、CCSS、UK National Curriculum 等標準,並採「僅代碼」政策避免轉載受限條文",
+        "附 1,051 筆科學與數學教學研究紀錄,並誠實標註為 agent 撰寫、來源未重新驗證",
+        "提供 JSON Schema、manifest SHA-256 校驗,以及零依賴的 validate.mjs 完整性檢查與測試",
+        "資料採 ODbL、內容採 CC-BY-SA,附 PROVENANCE 與 CHANGELOG,來源說明透明"
+      ],
+      "use_cases": [
+        "建置自適應學習或個人化學習路徑系統(依先修圖推薦下一步)",
+        "作為 AI 家教或教育 LLM 應用的課程知識底座與評量提示來源",
+        "教育研究與課程對照分析,比較各國課程標準覆蓋",
+        "作為視覺化或圖演算法練習的現成有向圖資料集"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README、CHANGELOG、PROVENANCE 與 JSON Schema 完整,對資料限制(研究未經實證、來源未重驗)說明坦誠。驗證腳本涵蓋參照完整性、計數與校驗碼,並有回歸測試,但未見 CI 工作流程。近期仍持續推送更新。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "做教育 AI、自適應學習或課程圖譜的人值得收藏:資料品質與文件透明度高,但教學研究內容為 AI 撰寫且未經實證,使用時需自行把關。",
       "_mode": "full"
     }
   }
