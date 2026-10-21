@@ -249,8 +249,8 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
         33496,
@@ -286,6 +286,13 @@
         41673,
         363,
         12,
+        "Kronos: A Foundation Model for the Language of Financial Markets",
+        "Python"
+      ],
+      "2026-10-21": [
+        42356,
+        733,
+        14,
         "Kronos: A Foundation Model for the Language of Financial Markets",
         "Python"
       ]
@@ -328,8 +335,8 @@
       "verdict": "金融時間序列基礎模型中少見的完整開源實作,權重、微調與範例俱全,對量化與時序研究者值得關注;但近期更新放緩、測試與 CI 偏薄,且預測結果不應直接當作交易依據。",
       "_mode": "full"
     },
-    "total_days_on_trending": 7,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 8,
+    "consecutive_days_on_trending": 2
   },
   "Automattic/harper": {
     "first_seen": "2026-07-25",
@@ -7032,10 +7039,10 @@
   },
   "msitarzewski/agency-agents": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-10-07",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-10": [
         140680,
@@ -7085,43 +7092,50 @@
         10,
         "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
         "Shell"
+      ],
+      "2026-10-21": [
+        162357,
+        562,
+        9,
+        "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-10-06",
+    "last_analyzed": "2026-10-21",
     "analysis": {
-      "one_liner": "一套涵蓋工程、設計、行銷、安全等多部門的 AI 代理人角色提示詞庫,並附多工具一鍵轉換與安裝腳本。",
-      "summary": "The Agency 是以 Markdown 撰寫的專業 AI 代理人(agent)人設集合,每個檔案含身分、流程、交付物與成功指標,分佈在 engineering、design、marketing、security 等數十個部門資料夾(約 400 個檔案)。專案提供 convert.sh 與 install.sh,可把角色轉成 Claude Code、Cursor、Copilot、Gemini CLI、Codex、Hermes 等十多種工具的格式並安裝,另有桌面 App 可一鍵安裝。",
+      "one_liner": "收錄數百個專業分工 AI 代理人角色(Markdown 提示詞)的大型集合,並附安裝腳本可轉換到 Claude Code、Cursor、Codex 等十多種工具。",
+      "summary": "The Agency 是一套依部門(工程、設計、學術、策略等)分類的 AI 代理人人格與流程定義,每個 agent 是一份含身分、使命、交付物與成功指標的 Markdown 檔。專案提供 convert.sh 與 install.sh,可把這些 agent 轉成各家 AI 編碼工具的格式並安裝到對應目錄,另有桌面 App 可一鍵安裝。",
       "category": "ai-ml",
       "highlights": [
-        "角色數量龐大:數十個部門、近 300 個專業代理人,每個都有人格、流程與可交付成果",
-        "支援 16 種以上工具(Claude Code、Cursor、Codex、Gemini CLI、OpenCode、Hermes 等)的轉換與安裝",
-        "install.sh 支援 --division、--agent、--agents-file、--dry-run、--link,可只安裝需要的團隊",
-        "divisions.json 作為單一資料來源,並有 runbook 團隊名單可直接批次安裝",
-        "CI 內含 frontmatter 檢查、原創性檢查、安裝測試等多個工作流程,維護嚴謹"
+        "規模龐大:全 repo 約 400 多個檔案,涵蓋工程、設計、學術、策略等多個部門,並有 runbook 團隊編組",
+        "多工具支援:install.sh 支援 Claude Code、Copilot、Gemini CLI、Cursor、Codex、Hermes 等 16 種目標,可用 --division、--agent、--dry-run、--link 精準安裝",
+        "工程化程度高:以 divisions.json 作為單一資料來源,並有 lint、division 檢查、runbook 檢查等 CI 工作流程",
+        "測試腳本完整:scripts/ 下有數十個針對轉換與安裝行為的回歸測試(slug 衝突、symlink、平行安裝失敗等)",
+        "文件完整,另提供桌面 App 與 Homebrew cask 安裝方式"
       ],
       "use_cases": [
-        "為 Claude Code 或 Cursor 快速擴充一批專業子代理人(code reviewer、架構師、SRE 等)",
-        "作為撰寫自家 agent 系統提示詞的參考範本",
-        "依 runbook 組出特定任務團隊(例如 startup MVP)並批次安裝",
-        "跨多個 AI 編碼工具統一管理同一套角色設定"
+        "為 Claude Code 或 Cursor 快速取得一批現成的角色型子代理人(subagent)",
+        "參考各領域 agent 提示詞結構,設計自家團隊的 agent 規範",
+        "依 runbook 組出特定任務(如新創 MVP)所需的 agent 團隊",
+        "跨多個 AI 編碼工具統一管理同一份 agent 資源"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 完整,有名冊表格、安裝選項與貢獻指南(含簡體中文版)。scripts/ 下有三十多個 shell/python 測試腳本,涵蓋安裝、轉換與 frontmatter,並有 6 個 GitHub Actions 工作流程。最後推送為 2026-10-04,維護活躍。內容本質是提示詞文件,實際程式碼主要是 Shell 工具鏈,整體品質整齊。"
+        "comment": "README、CONTRIBUTING(含簡中版)、SECURITY、issue/PR 範本齊全。以 Shell 撰寫的安裝與轉換腳本結構清楚、註解詳盡,並有 6 個 CI 工作流程與大量 test-*.sh 回歸測試。最近推送時間為 2026-10-19,維護活躍。核心內容是提示詞文件,品質較難客觀量化。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "install.sh 會把檔案寫入使用者家目錄下各工具的設定資料夾(如 ~/.claude/agents/、~/.codex/agents/),Hermes 選項還會複製外掛並啟用,執行前建議先用 --dry-run 檢視計畫。",
-          "安裝的代理人檔案屬於會影響 AI 行為的系統提示詞,建議在啟用前先抽閱內容。",
-          "在 scripts/ 中未發現 curl|bash、base64 酬載或寫死 IP;唯一的 eval 出現在測試腳本中,用於載入 install.sh 內的函式。",
-          "README 建議的 Homebrew cask 與桌面 App 下載來自另一個 repo(agency-agents-app),不在本次檢視範圍內。"
+          "install.sh 會把檔案複製(或以 --link 建立符號連結)到使用者家目錄下各工具的設定目錄,例如 ~/.claude/agents/、~/.codex/agents/、~/.gemini/,並可能修改 Hermes 的外掛啟用設定;執行前建議先用 --dry-run 檢視計畫。",
+          "安裝的 agent 內容是會被 AI 工具載入的提示詞,等同於影響代理行為的指令;使用前建議自行檢視要啟用的 agent 檔案。",
+          "在 scripts/ 中未發現 curl|bash、下載並執行外部內容、base64 內嵌 payload 等模式;唯一的 eval 出現在測試腳本中,用於載入 install.sh 內的函式。",
+          "README 提供 Homebrew cask 與桌面 App 的下載連結,屬於另一個 repo(agency-agents-app)的發行版本,本次分析未涵蓋其內容。"
         ]
       },
       "star_rating": 4,
-      "verdict": "對使用 Claude Code、Cursor 等工具的開發者而言是值得收藏的現成代理人資源庫,安裝腳本與 CI 品質良好;但內容以提示詞為主,技術深度有限,建議按需挑選安裝。",
+      "verdict": "如果你常用 Claude Code、Cursor 等 AI 編碼工具,這個 agent 角色庫值得收藏參考,工程化做得相當扎實。實際效果取決於提示詞品質,建議只挑需要的部門安裝。",
       "_mode": "full"
     }
   },
@@ -7288,10 +7302,10 @@
   },
   "Comfy-Org/ComfyUI": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-10": [
         125521,
@@ -7325,6 +7339,13 @@
         139729,
         1011,
         4,
+        "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+        "Python"
+      ],
+      "2026-10-21": [
+        140771,
+        1206,
+        5,
         "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "Python"
       ]
@@ -8010,10 +8031,10 @@
   },
   "stablyai/orca": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-12": [
         42779,
@@ -8047,6 +8068,13 @@
         98294,
         1590,
         6,
+        "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+        "TypeScript"
+      ],
+      "2026-10-21": [
+        99752,
+        1565,
+        3,
         "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "TypeScript"
       ]
@@ -11820,10 +11848,10 @@
   },
   "ruvnet/ruflo": {
     "first_seen": "2026-08-22",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-22": [
         68646,
@@ -11892,6 +11920,13 @@
         77192,
         564,
         5,
+        "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+        "TypeScript"
+      ],
+      "2026-10-21": [
+        77849,
+        684,
+        6,
         "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
         "TypeScript"
       ]
@@ -12698,10 +12733,10 @@
   },
   "MadsLorentzen/ai-job-search": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-25": [
         34074,
@@ -12748,6 +12783,13 @@
       "2026-10-20": [
         57285,
         3856,
+        1,
+        "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "Python"
+      ],
+      "2026-10-21": [
+        60599,
+        3861,
         1,
         "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
         "Python"
@@ -13296,10 +13338,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-05",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 14,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 15,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -13398,44 +13440,52 @@
         4,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
+      ],
+      "2026-10-21": [
+        169671,
+        1208,
+        4,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-10-01",
+    "last_analyzed": "2026-10-21",
     "analysis": {
-      "one_liner": "讓 AI 程式代理人像「最懶的資深工程師」一樣思考:能不寫就不寫,先用內建、標準庫與既有程式碼。",
-      "summary": "Ponytail 是一組跨代理人的規則與技能(skill)包,透過 Claude Code、Codex、Cursor 等約 20 種代理人的 plugin 或規則檔,讓代理人在寫程式前依「梯子」順序判斷:是否需要、能否重用、標準庫、原生平台功能、已安裝相依套件,最後才寫最少的程式碼。目標是減少過度設計造成的程式碼膨脹,同時保留驗證、錯誤處理、安全與無障礙等防護。",
+      "one_liner": "讓 AI 程式助理像「最懶的資深工程師」一樣思考:能不寫就不寫、先重用現有程式碼,一份提示詞跨約 20 種 agent 通用。",
+      "summary": "Ponytail 本質上是一份核心提示詞(skills/ponytail/SKILL.md,精簡版為 AGENTS.md),再以各 agent 的外掛、hook、規則檔格式(Claude Code、Codex、Cursor、Copilot、Windsurf、Kiro、OpenCode 等)分發。它用「梯子」準則(是否需要?已有?標準庫?原生功能?)約束模型少寫程式,同時保留驗證、安全、無障礙等底線,並提供 /ponytail-review、/ponytail-audit、/ponytail-debt 等指令。README 自述在 39 個任務基準下程式碼量減 53%、成本降 26%,但為作者自行測試的數據。",
       "category": "ai-ml",
       "highlights": [
-        "一套規則同時支援 Claude Code、Codex、Cursor、Windsurf、Cline、Kiro、Qoder、OpenCode、Copilot 等約 20 種代理人",
-        "七階「懶惰梯子」決策流程,並明確保留信任邊界驗證、安全與無障礙,不為求短而犧牲正確性",
-        "附 agentic 基準測試(FastAPI+React 真實 repo、12 項任務),宣稱平均減少約 54% 程式碼、成本降約 20%,且作者公開承認舊版單次測試的基線偏差",
-        "提供 /ponytail-review、audit、debt、gain 等指令與狀態列徽章,並以 SessionStart / UserPromptSubmit hooks 維持常駐模式",
-        "測試涵蓋 hooks、Windows、各代理人外掛與解除安裝腳本,CI 另檢查規則副本與版本一致性"
+        "核心是單一提示詞,以「決策梯子」讓 agent 先重用既有程式碼、標準庫與原生功能,再考慮新增程式",
+        "一份規則適配約 20 種 agent,並有腳本檢查各規則副本一致",
+        "附 review / audit / debt 指令,審查範圍涵蓋 diff 以外受影響的程式碼,並將 shortcut: 註解彙整成技術債清單",
+        "Claude Code 專屬的 band 狀態列與本機 board,顯示任務成本、token、重用率與測試結果,資料預設只存本機",
+        "附基準測試腳本與結果文件,公開方法與限制,不只是口號"
       ],
       "use_cases": [
-        "在 Claude Code 或 Cursor 中抑制代理人過度工程化(例如不必要的套件、包裝元件)",
-        "團隊統一多種 AI 編輯器的程式碼風格與 YAGNI 原則",
-        "作為 prompt engineering / agent skill 的設計參考與基準測試方法範例",
-        "用 review / audit 指令檢視既有程式碼中可刪減的部分"
+        "在 Claude Code / Codex / Cursor 等工具中抑制 AI 過度設計與重複造輪子",
+        "團隊統一 AI 程式助理的編碼風格,降低 token 與 code review 成本",
+        "對現有 repo 做 AI 輔助的全域審查,取得依重要性排序的修復清單",
+        "研究 prompt 工程與跨 agent 外掛分發的實作範例"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
-        "activity": 4,
-        "comment": "文件完整(含西、韓文版本與基準測試方法說明),作者對測量方法的批評有公開修正,態度誠實。tests/ 下有十餘個 node 測試檔,CI 會跑規則副本與版本檢查。hooks 程式碼小而清楚,錯誤皆採靜默失敗以免阻斷工作階段。最後推送為 2026-09-14,維護仍屬活躍。核心屬 prompt 內容,效果是否普遍成立仍需自行驗證。"
+        "activity": 5,
+        "comment": "文件完整,有 README、INSTALL、多語系 README 與基準報告。tests/ 內有 20 多個 node:test 測試,涵蓋 hooks、各 agent 外掛格式、Windows 相容、解除安裝等;CI 另跑規則副本一致性、版本一致性與 benchmark selftest,GitHub Actions 皆固定 commit SHA 且權限僅 contents: read。程式碼註解清楚,錯誤處理偏向失敗時放行。最近仍在頻繁推送。效益數據為作者自行基準測試,需自行驗證。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "Claude Code / Codex plugin 會註冊 SessionStart、SubagentStart、UserPromptSubmit 三個 Node.js 生命週期 hook,每次工作階段與每次送出提示都會執行本機 node 腳本(hooks/*.js),安裝前建議先審閱並信任這些 hook",
-          "ponytail-activate.js 會在 Claude 設定目錄寫入旗標檔(.ponytail-active、.ponytail-statusline-nudged),並讀取 settings.json 偵測是否已設定狀態列",
-          "首次啟動時會向代理人注入「STATUSLINE SETUP NEEDED」提示,內含 powershell -ExecutionPolicy Bypass -File 或 bash 指令片段,並要求代理人主動向使用者提議寫入 settings.json;需由使用者同意才會生效,但使用者應留意此指令內容",
-          "在已檢視的 hooks 檔案中未發現網路請求、child_process 或外部網址呼叫;package.json 未見 preinstall / postinstall / prepare 腳本",
-          "README 提及的安裝方式為 Claude Code / Codex 官方 plugin marketplace 指令,未見 curl|bash 形式的安裝器"
+          "根目錄 package.json 的 scripts 只有 test,未見 preinstall / postinstall / prepare 等安裝期腳本",
+          "作為 Claude Code / Codex 等外掛,會註冊 SessionStart 等 lifecycle hook,每次啟動 session 執行 Node 腳本;README 指出 Codex 須由使用者在 /hooks 中自行信任",
+          "hooks/ponytail-activate.js 會在 $CLAUDE_CONFIG_DIR 寫入旗標檔,並把 statusline 腳本複製到設定目錄、提示模型協助修改 settings.json;另以 child_process 執行 ponytail-map.js(3 秒逾時)掃描程式碼庫並注入上下文",
+          "ponytail-mode-tracker.js 會以背景程序執行 band 匯入腳本,讀取過往 Claude Code session 紀錄以計算成本;資料預設存於 ~/.config/ponytail/band/",
+          "band 外掛程式碼含選用的 webhookUrl / webhookToken 設定,啟用後會把任務統計資料送往使用者指定的網址,預設未設定;安裝者應留意此選項",
+          "未發現 curl|bash 式安裝、混淆程式碼、內嵌 base64 載荷或可疑依賴;README 提醒只從官方 GitHub / npm 安裝"
         ]
       },
       "star_rating": 4,
-      "verdict": "想約束 AI 代理人過度設計的人值得一試,跨工具支援與誠實的基準測試是亮點,但效益數據請以自己的專案實測為準。",
+      "verdict": "概念清晰、工程紮實、跨 agent 覆蓋廣的提示詞工具包,值得 AI 研發工程師試用並自行驗證其效益數據。",
       "_mode": "full"
     }
   },
@@ -16842,10 +16892,10 @@
   },
   "anomalyco/opencode": {
     "first_seen": "2026-09-05",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-09-05": [
         204130,
@@ -16886,6 +16936,13 @@
         217819,
         1311,
         2,
+        "The open source coding agent.",
+        "TypeScript"
+      ],
+      "2026-10-21": [
+        218931,
+        1240,
+        8,
         "The open source coding agent.",
         "TypeScript"
       ]
@@ -20421,10 +20478,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-21",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -20465,6 +20522,13 @@
         26056,
         576,
         11,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-10-21": [
+        34238,
+        1712,
+        2,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
       ]
@@ -20563,10 +20627,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-11",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -20614,6 +20678,13 @@
         28822,
         625,
         12,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ],
+      "2026-10-21": [
+        30794,
+        267,
+        11,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
       ]
@@ -26760,15 +26831,22 @@
   },
   "headroomlabs-ai/headroom": {
     "first_seen": "2026-10-20",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-20": [
         76246,
         310,
         7,
+        "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+        "Python"
+      ],
+      "2026-10-21": [
+        76758,
+        549,
+        10,
         "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "Python"
       ]
@@ -26858,6 +26936,218 @@
       "star_rating": 4,
       "verdict": "做教育 AI、自適應學習或課程圖譜的人值得收藏:資料品質與文件透明度高,但教學研究內容為 AI 撰寫且未經實證,使用時需自行把關。",
       "_mode": "full"
+    }
+  },
+  "Graphify-Labs/graphify": {
+    "first_seen": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-21": [
+        130246,
+        802,
+        7,
+        "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-21",
+    "analysis": {
+      "one_liner": "把程式碼、文件、SQL schema、PDF 轉成可查詢知識圖譜的 AI 編碼助理技能(/graphify),本地 tree-sitter AST 解析、不用向量庫。",
+      "summary": "Graphify 是以 Python 實作的 CLI 與技能套件(PyPI 套件名 graphifyy),可註冊到 Claude Code、Cursor、Codex、Gemini CLI 等 20 多種 AI 編碼助理。輸入 /graphify . 後會產出 graph.html、GRAPH_REPORT.md 與 graph.json。程式碼部分以 tree-sitter 做確定性 AST 解析(約 40 種語言),每條邊標註 EXTRACTED 或 INFERRED,並以 Leiden 做社群偵測。它解決的是讓 agent 查詢圖譜、而不是反覆 grep 檔案的問題。",
+      "category": "devtool",
+      "highlights": [
+        "程式碼解析完全在本地用 tree-sitter AST,確定性、不用 LLM,也不用向量庫或 embeddings",
+        "每條邊都有 EXTRACTED / INFERRED 信心標籤,可區分原始碼明文與推論連結",
+        "一次安裝可支援 Claude Code、Cursor、Codex、Gemini CLI、Copilot 等 20 多種助理與多個作業系統",
+        "提供 query、path、explain 指令與 MCP server(含 HTTP 傳輸與 Dockerfile),可整合進 agent 流程",
+        "涵蓋 SQL/Postgres 內省、PDF、Office、影片轉錄等可選 extras,Leiden 社群分群並產生 GRAPH_REPORT"
+      ],
+      "use_cases": [
+        "讓 AI 編碼助理快速理解陌生的大型 codebase,減少 token 花費",
+        "對 monorepo 或跨 repo 專案做架構探索、找出核心節點與子系統",
+        "追蹤兩個概念或函式之間的最短依賴路徑,輔助影響範圍分析",
+        "以 MCP server 形式共享專案知識圖譜給團隊的 agent"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,含 README、ARCHITECTURE、SECURITY、CHANGELOG 與 30 多種語言的翻譯。tests/ 下有約 440 個檔案,涵蓋各語言抽取器、快取、去重與 CLI。CI 使用 GitHub Actions,Python 3.10 到 3.14 矩陣,並有 skillgen 一致性檢查。dev 依賴含 bandit、pip-audit、pyright。最後推送為 2026-10-20,版本號 0.9.93,迭代頻繁。README 同時推廣其商業產品 Graphify Cloud,但核心功能是開源且可本地使用。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "pyproject.toml 使用標準 setuptools 建置,未見 setup.py 或 npm 生命週期腳本等安裝時任意程式碼執行。",
+          "README 的安裝方式為 uv tool install graphifyy,並未見 curl | bash 之類的安裝模式。",
+          "graphify install 會把技能檔(SKILL.md 等)與常駐指令區塊寫入各 AI 助理的設定目錄,並提供 git hooks(hooks.py),使用者應留意其會修改自己的助理設定與 repo hooks。",
+          "程式碼中有 subprocess 與網路請求(llm.py、prs.py、ingest 等),文件類語意抽取會使用助理模型或使用者設定的 API 金鑰,內容可能送往外部模型服務。",
+          "security.py 提供 URL scheme 白名單、私有與中繼位址 SSRF 阻擋、下載大小上限、graph.json 大小上限等防護,屬正面設計。",
+          "Dockerfile 以非 root 使用者執行 MCP HTTP 服務並綁定 0.0.0.0,部署時應設定 --api-key。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質高、測試與文件完整,對經常用 AI 編碼助理處理大型 codebase 的工程師很實用,值得試用。專案同時推廣商業雲端版,但本地開源功能已相當完整。",
+      "_mode": "full"
+    }
+  },
+  "wshobson/agents": {
+    "first_seen": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-21": [
+        41254,
+        93,
+        12,
+        "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-21",
+    "analysis": {
+      "one_liner": "跨 Claude Code、Codex、Cursor、OpenCode、Copilot、Antigravity、Pi 七種 harness 共用的 agent/skill/command 插件市集。",
+      "summary": "wshobson/agents 以單一 Markdown 來源維護 94 個插件(約 202 個 agent、185 個 skill、105 個 command),再透過 Python 工具產生各 harness 的原生格式或 manifest。解決不同 AI 編碼工具之間要重複維護 subagent 與 skill 的問題,並提供 Make 目標與 symlink 安裝器。",
+      "category": "ai-ml",
+      "highlights": [
+        "單一 Markdown 來源,經 tools/generate.py 產生 Claude、Codex、Cursor、OpenCode、Copilot、Antigravity、Pi 的對應格式",
+        "涵蓋 94 個插件,橫跨 Python/JS 開發、安全掃描、K8s、資料工程、LLM 應用等領域",
+        "提供 gh skill、npx skills 的單一 skill 安裝方式,也可用 make install-* 以 symlink 安裝",
+        "內建 plugin-eval 評測框架(Elo、Monte Carlo、靜態評分),並有 harness 可攜性測試",
+        "文件完整,含 docs/harnesses.md 能力對照表與使用指南"
+      ],
+      "use_cases": [
+        "想在 Claude Code 中快速取得一整套專業 subagent 與 skill",
+        "團隊同時使用多種 AI 編碼工具,需要共用同一份 agent 知識庫",
+        "參考其 skill/agent 寫法與跨 harness 轉換設計,自建插件市集",
+        "用 plugin-eval 評估自家 skill 或 agent 的品質"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 結構清楚,提供各 harness 的安裝路徑與限制說明。tools/tests 與 plugin-eval/tests 涵蓋轉接器、安裝器、round-trip、快照等測試,CI 有 validate、code-quality、eval-report 等 workflow。最近仍持續推送,維護活躍。內容以大量 prompt 型 Markdown 為主,各插件品質可能不一。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "tools/install_*.py 的安裝器會在使用者設定目錄(如 ~/.pi/agent)建立 symlink,指向 clone 下來的 repo;使用 --force 時可能取代既有連結,執行前請先了解其行為",
+          "CI 的 validate.yml 內有 `curl -fsSL https://opencode.ai/install | bash -s -- --version 1.18.30` 這類下載後執行的寫法,僅出現在 CI 流程,且有指定版本",
+          "本專案的插件含 agent 指令、hooks 與 MCP 設定,安裝後會影響 AI 編碼工具的行為與權限,建議安裝前先檢視要啟用的插件內容",
+          "未在 Makefile、安裝腳本與 workflows 中發現混淆程式碼或內嵌 base64 payload;抽樣的 Python 安裝腳本內容為單純的 symlink 操作"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "跨 harness 的 agent/skill 集合中規模與工程化程度都很高,建議挑選需要的插件並檢視後再安裝,值得關注。",
+      "_mode": "full"
+    }
+  },
+  "sickn33/agentic-awesome-skills": {
+    "first_seen": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-21": [
+        48093,
+        83,
+        13,
+        "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-21",
+    "analysis": {
+      "one_liner": "擁有 2,700+ 個 SKILL.md 技能的本地 agent-first 控制平面,提供 CLI、本地 MCP 與 Workbench,讓 Codex/Claude 自行挑選並驗證技能組合。",
+      "summary": "Agentic Awesome Skills(AAS Core)是一個收錄 2,724+ 個可安裝 SKILL.md 劇本的技能庫,並提供本地 MCP 與 CLI,讓 Codex 或 Claude 搜尋完整目錄、記錄所選技能、驗證 stack 並產生可檢視的安裝計畫預覽。Core 本身不排名也不推薦技能,選擇權交給 agent,解決技能數量龐大時難以挑選與重現的問題。",
+      "category": "ai-ml",
+      "highlights": [
+        "收錄 2,724+ 個技能,支援 Claude Code、Codex、Cursor、Gemini CLI、Kiro、Copilot、OpenCode 等多種工具",
+        "本地 MCP 提供 compose_stack 驗證,並可產生 aas-stack.json 與不可變的 plan 預覽,流程可審閱可重現",
+        "安裝預設先以 --dry-run 預覽,並提供版本釘選與安全指引文件",
+        "瀏覽器端 Workbench 在記憶體內審閱 stack 與 plan,不存取檔案系統",
+        "提供 Claude Code 與 Codex 的專用外掛包(如 Web App Builder),MIT 授權"
+      ],
+      "use_cases": [
+        "為專案讓 AI agent 從大量技能中挑選並鎖定固定技能組合",
+        "一次為多種 AI 編碼工具(Cursor、Gemini CLI、Codex 等)安裝統一技能庫",
+        "團隊以 aas-stack.json 管理並審閱可重現的技能集",
+        "學習與參考 SKILL.md 的撰寫方式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,有安裝、各工具對照表與信任邊界說明,版本化文件清楚;但 apply 與 recovery 仍為實驗性。測試僅能由 README 推估,未見原始碼。最近一次推送在 2026-10-20,維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝方式為 npm exec(帶 --ignore-scripts 與版本釘選)並預設 --dry-run 預覽,未見 curl | bash 類寫法",
+          "MCP 設定指令會先預覽變更並回傳核准摘要,再修改設定檔",
+          "僅根據 README 評估,未進行原始碼層級審查;技能內容為第三方撰寫,安裝前建議自行檢視"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "技能庫規模大、跨工具支援廣且維護活躍,對使用多種 AI 編碼 agent 的工程師很值得關注;採用前應挑選並審閱所需技能,避免一次載入過多。",
+      "_mode": "light"
+    }
+  },
+  "vllm-project/vllm": {
+    "first_seen": "2026-10-21",
+    "last_seen": "2026-10-21",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-21": [
+        94437,
+        128,
+        15,
+        "A high-throughput and memory-efficient inference and serving engine for LLMs",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-21",
+    "analysis": {
+      "one_liner": "高吞吐、省記憶體的開源 LLM 推論與服務引擎,以 PagedAttention 為核心,已成為業界事實標準之一。",
+      "summary": "vLLM 源自 UC Berkeley Sky Computing Lab,提供 LLM 推論與服務,具備 PagedAttention、連續批次處理、前綴快取、推測解碼與多種量化。支援 200 多種模型架構與 NVIDIA、AMD、Intel、TPU 等多樣硬體,並提供 OpenAI 相容 API,解決大模型部署成本高、吞吐低的問題。",
+      "category": "ai-ml",
+      "highlights": [
+        "PagedAttention 高效管理 KV cache,搭配連續批次、chunked prefill、prefix caching 提升吞吐",
+        "量化支援廣泛:FP8、MXFP4、NVFP4、INT4、GPTQ/AWQ、GGUF 等",
+        "支援 tensor、pipeline、data、expert、context 平行以及 prefill/decode 分離部署",
+        "OpenAI 相容 API,另支援 Anthropic Messages API 與 gRPC,並含 tool calling 與結構化輸出",
+        "硬體生態廣:NVIDIA、AMD、Intel、CPU,以及 TPU、Gaudi、Ascend 等外掛"
+      ],
+      "use_cases": [
+        "自建生產級 LLM API 服務(取代或相容 OpenAI 介面)",
+        "在多 GPU 或 MoE 模型(DeepSeek、Qwen、GPT-OSS)上做高吞吐推論",
+        "LLM 推論效能研究與 kernel、量化、推測解碼實驗",
+        "多 LoRA 或多模態模型的統一部署"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,有完整文件站、部落格、論壇與 Slack,並附論文引用。最近推送在 2026-10-21,超過 2000 位貢獻者,專案非常活躍。測試部分僅憑 README 評估,無法查看程式碼。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 安裝方式為 `uv pip install vllm` 與 `vllm download-kernels`(下載預編譯 kernel),屬一般套件安裝流程,未見 curl | bash 模式",
+          "`vllm download-kernels` 會下載預編譯二進位檔,建議確認來源與版本",
+          "僅依 README 評估,未進行原始碼層級審查;安全問題通報走 GitHub Security Advisories"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "LLM 推論服務領域的核心專案,做模型部署的工程師必須熟悉,值得持續關注。",
+      "_mode": "light"
     }
   }
 }

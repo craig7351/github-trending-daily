@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-21",
+    "analyzed": 6,
+    "cached": 9,
+    "deferred": 0,
+    "top_name": "vllm-project/vllm",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-20",
     "analyzed": 3,
     "cached": 9,
