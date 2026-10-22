@@ -249,8 +249,8 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
         33496,
@@ -295,6 +295,13 @@
         14,
         "Kronos: A Foundation Model for the Language of Financial Markets",
         "Python"
+      ],
+      "2026-10-22": [
+        42829,
+        575,
+        9,
+        "Kronos: A Foundation Model for the Language of Financial Markets",
+        "Python"
       ]
     },
     "last_analyzed": "2026-10-20",
@@ -335,8 +342,8 @@
       "verdict": "金融時間序列基礎模型中少見的完整開源實作,權重、微調與範例俱全,對量化與時序研究者值得關注;但近期更新放緩、測試與 CI 偏薄,且預測結果不應直接當作交易依據。",
       "_mode": "full"
     },
-    "total_days_on_trending": 8,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 9,
+    "consecutive_days_on_trending": 3
   },
   "Automattic/harper": {
     "first_seen": "2026-07-25",
@@ -7302,10 +7309,10 @@
   },
   "Comfy-Org/ComfyUI": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-10": [
         125521,
@@ -7346,6 +7353,13 @@
         140771,
         1206,
         5,
+        "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+        "Python"
+      ],
+      "2026-10-22": [
+        141524,
+        939,
+        6,
         "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
         "Python"
       ]
@@ -8031,10 +8045,10 @@
   },
   "stablyai/orca": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-12": [
         42779,
@@ -8074,6 +8088,13 @@
       "2026-10-21": [
         99752,
         1565,
+        3,
+        "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+        "TypeScript"
+      ],
+      "2026-10-22": [
+        101275,
+        1541,
         3,
         "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
         "TypeScript"
@@ -10457,10 +10478,10 @@
   },
   "akitaonrails/ai-memory": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-18": [
         2063,
@@ -10508,6 +10529,13 @@
         11349,
         666,
         3,
+        "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "Rust"
+      ],
+      "2026-10-22": [
+        12332,
+        286,
+        11,
         "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
         "Rust"
       ]
@@ -13338,10 +13366,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 15,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 16,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -13445,6 +13473,13 @@
         169671,
         1208,
         4,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-10-22": [
+        171648,
+        2079,
+        5,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -20478,10 +20513,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -20531,38 +20566,51 @@
         2,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
+      ],
+      "2026-10-22": [
+        36502,
+        2012,
+        1,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-10-08",
+    "last_analyzed": "2026-10-22",
     "analysis": {
-      "one_liner": "Cloudflare 開源的程式碼代理(coding agent)技能,以多階段、獨立驗證的流程執行資安稽核並輸出機器可讀的發現。",
-      "summary": "security-audit 是一組給 coding agent 使用的 skill(Markdown 提示詞加上 Node.js 驗證腳本),把代理變成資安稽核員,依序完成偵察、覆蓋率導向獵捕、候選驗證、結構化輸出、獨立紀錄驗證與中立報告六個階段。它源自 Cloudflare 自家漏洞發掘 harness 的起點,以「發現者與驗證者分離」及 JSON schema 驗證來降低誤報。",
+      "one_liner": "Cloudflare 開源的程式碼代理 (coding agent) 技能,以多階段、獨立驗證的流程執行安全稽核,並輸出機器可讀的弱點紀錄。",
+      "summary": "security-audit 是一組給 coding agent 使用的 skill,以六個階段運作:偵察、覆蓋導向的獵測、候選驗證、結構化輸出、獨立紀錄驗證與中立報告。它源自 Cloudflare 弱點發掘 harness 的單一 repo 起點,並提供零依賴的 Node.js 驗證器,用來檢查 findings.json 與 coverage-ledger.json。內容以 Markdown 提示詞為主,搭配 JSON Schema 與驗證腳本。",
       "category": "ai-ml",
       "highlights": [
-        "六階段工作流程:偵察、獵捕、驗證、結構化輸出、獨立驗證、報告,每階段都有明確提示詞與產出檔案",
-        "對抗式驗證:確認發現的代理必須與發現者不同,並區分 confirmed / needs_validation / rejected 三種結論",
-        "附零相依的 validate-findings.cjs 與 validate-coverage-ledger.cjs,依 report-schema.json 驗證 findings.json 與覆蓋帳本",
-        "涵蓋記憶體安全、AI/LLM、Web 協定、供應鏈、雲端、桌面/行動等多類攻擊提示詞",
-        "安全守則嚴謹:要求 OS 層級沙箱、無外網、環境變數白名單、寫入隔離,否則不執行目標程式碼"
+        "六階段流程:偵察、覆蓋導向獵測、候選驗證、結構化輸出、獨立紀錄驗證、報告",
+        "對抗式驗證:驗證弱點的代理與發現弱點的代理必須是不同的代理",
+        "結論分為 confirmed、needs_validation、rejected 三種,並以 report-schema.json 約束格式",
+        "附有涵蓋記憶體安全、AI/LLM、供應鏈、雲端部署、客戶端等領域的攻擊類別提示詞",
+        "驗證器零依賴,並有測試檔;執行目標程式碼時要求 OS 層級的沙箱"
       ],
       "use_cases": [
-        "對自家程式庫進行全面的 AI 輔助資安稽核並產出結構化報告",
-        "為資安團隊建立多代理(multi-agent)漏洞發掘流程的起點",
-        "學習如何設計低誤報、可驗證的 LLM 漏洞挖掘提示詞與流程",
-        "在 Claude Code 等代理中針對特定攻擊類別做聚焦式安全審查"
+        "對單一程式碼庫做完整的 AI 輔助安全稽核與弱點報告",
+        "作為團隊自建弱點挖掘 harness 的起點與提示詞參考",
+        "重複執行以累積覆蓋率,並追蹤弱點的修復與重新驗證",
+        "在其他 coding agent 中,將安全審查方法論當作指引模式使用"
       ],
       "quality": {
-        "docs": 5,
-        "tests": 3,
+        "docs": 4,
+        "tests": 4,
         "activity": 3,
-        "comment": "README 清楚列出檔案用途、安裝與使用方式,SKILL.md 與各攻擊類別文件內容詳實。兩個驗證腳本各有對應的測試檔,驗證器程式碼具備輸入大小、巢狀深度與診斷字元跳脫等防禦。但倉庫內沒有 .github/workflows 的 CI 設定,也沒有 package.json;最後推送為 2026-09-14,近期更新頻率中等。"
+        "comment": "README 與 SKILL.md 結構清楚,檔案用途表完整。兩個驗證器各有測試檔(使用 node:test),程式碼謹慎,包含輸入大小與巢狀深度上限、對 Unicode 控制字元的處理。repo 內沒有 .github/workflows,因此未見 CI;沒有 package.json。最後推送日期為 2026-09-14,更新頻率中等。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "repo 內沒有 package.json、install 腳本或 CI 設定,也沒有 postinstall 之類的生命週期腳本。",
+          "README 安裝方式是 `npx skills add https://github.com/cloudflare/security-audit-skill`,會透過 Skills CLI 從外部下載並安裝 skill,使用者應留意此第三方工具。",
+          "兩個 .cjs 驗證器只使用 fs、path、util 等 Node 內建模組,未見網路請求、eval 或 child_process。測試檔用 spawnSync 執行本 repo 的驗證器。",
+          "這個 skill 會讓 agent 在稽核時執行目標程式碼的建置或測試。SKILL.md 要求先具備 OS 層級的沙箱(禁用外部網路、環境變數白名單、資源限制),否則不執行。使用者應自行確認沙箱確實有效。",
+          "未發現混淆程式碼、內嵌的長 base64 或十六進位 payload、已提交的二進位檔,或可疑的相依套件。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "想用 AI 代理做系統化資安稽核的團隊值得優先關注;它主要是提示詞與流程設計,實際成效取決於所搭配的代理與模型。",
+      "verdict": "如果你要做 AI 輔助安全稽核,或想參考 Cloudflare 的弱點挖掘方法論,值得關注。內容嚴謹,提示詞完整。它以提示詞為主,效果取決於你搭配的代理與模型。",
       "_mode": "full"
     }
   },
@@ -20885,10 +20933,10 @@
   },
   "supabase/supabase": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-09-19",
+    "last_seen": "2026-10-22",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-17": [
         109730,
@@ -20903,38 +20951,45 @@
         14,
         "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
         "TypeScript"
+      ],
+      "2026-10-22": [
+        113008,
+        504,
+        7,
+        "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-17",
+    "last_analyzed": "2026-10-22",
     "analysis": {
-      "one_liner": "開源版 Firebase 替代方案,以 Postgres 為核心提供資料庫、驗證、即時訂閱、儲存與 AI 向量功能的一站式後端平台。",
-      "summary": "Supabase 是以開源工具組合打造的 Postgres 開發平台,整合資料庫、認證授權、自動生成 REST/GraphQL API、即時訂閱、Edge Functions、檔案儲存及 AI/向量嵌入工具,目標是提供類似 Firebase 的開發體驗但採用企業級開源技術。可選擇託管服務或自行架設本地開發環境。",
-      "category": "infra",
+      "one_liner": "以 Postgres 為核心的開源 Firebase 替代方案,整合資料庫、驗證、即時訂閱、儲存、Edge Functions 與向量 AI 工具組。",
+      "summary": "Supabase 是 Postgres 開發平台,以 PostgREST、GoTrue、Realtime、Storage、pg_graphql 等開源元件組合出類似 Firebase 的開發體驗。可使用託管服務,也能自行架設或在本機開發。內建 pgvector 等 AI/向量嵌入工具,適合 Web、行動與 AI 應用。",
+      "category": "framework",
       "highlights": [
-        "以 Postgres 為核心,結合 PostgREST、GoTrue、Realtime、Storage、pg_graphql 等多個開源專案組成完整後端平台",
-        "內建 AI + Vector/Embeddings 工具鏈,支援 pgvector,適合建構 RAG 或語意搜尋應用",
-        "官方與社群齊備的多語言客戶端函式庫(JS/TS、Flutter、Swift、Python、C#、Go、Java、Kotlin 等)",
-        "支援託管雲端服務與自架本地開發兩種模式,彈性高",
-        "Apache-2.0 授權,長期活躍且社群規模大(GitHub Discussions、Discord 皆有經營)"
+        "以 Postgres 為核心,自動產生 REST、GraphQL 與 Realtime API",
+        "內建驗證授權、檔案儲存、Database Functions 與 Edge Functions",
+        "AI + 向量/嵌入工具組(pgvector),適合 RAG 與語意搜尋",
+        "官方提供 JS、Flutter、Swift、Python 用戶端,社群涵蓋 C#、Go、Kotlin 等",
+        "Apache-2.0 授權,支援託管、自架與本機開發"
       ],
       "use_cases": [
-        "需要快速建立後端(資料庫+驗證+API)的 Web/行動應用開發",
-        "作為 Firebase 的開源替代方案,避免廠商鎖定或需要自架環境",
-        "建構具備向量搜尋/embeddings 的 AI 應用(如 RAG 系統)",
-        "需要即時資料同步(websocket)功能的協作型應用"
+        "快速建立 AI 應用的後端,結合 pgvector 做 RAG 與向量搜尋",
+        "取代 Firebase,需要關聯式資料庫與開放原始碼的專案",
+        "自架後端以符合資料落地或合規需求",
+        "行動 App 或全端 Web 專案的驗證、即時資料與檔案儲存"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 結構清楚、功能清單與架構圖完整,並附上各語言客戶端函式庫對照表,文件品質高;測試部分因僅能看到 README,無法檢視實際程式碼與測試覆蓋率,此評分僅供參考。近期仍持續 push 且今日登上 trending 第 14 名、單日 +120 星,活躍度高。"
+        "comment": "README 結構清楚,涵蓋功能、架構、用戶端與社群資源,並連結完整官方文件。測試部分僅依 README 評估,無法檢視程式碼。最後推送為 2026-10-22,專案非常活躍,星數逾 11 萬。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "已是後端即服務領域的標竿專案,無論自架或雲端託管都值得投入學習與採用。",
+      "verdict": "成熟且活躍的 Postgres 後端平台,對需要 AI/向量功能的後端開發很值得關注與採用。",
       "_mode": "light"
     }
   },
@@ -26831,10 +26886,10 @@
   },
   "headroomlabs-ai/headroom": {
     "first_seen": "2026-10-20",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-20": [
         76246,
@@ -26847,6 +26902,13 @@
         76758,
         549,
         10,
+        "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+        "Python"
+      ],
+      "2026-10-22": [
+        77260,
+        474,
+        4,
         "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
         "Python"
       ]
@@ -26940,15 +27002,22 @@
   },
   "Graphify-Labs/graphify": {
     "first_seen": "2026-10-21",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-21": [
         130246,
         802,
         7,
+        "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+        "Python"
+      ],
+      "2026-10-22": [
+        131649,
+        1433,
+        12,
         "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
         "Python"
       ]
@@ -27100,15 +27169,22 @@
   },
   "vllm-project/vllm": {
     "first_seen": "2026-10-21",
-    "last_seen": "2026-10-21",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-22",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-21": [
         94437,
         128,
         15,
+        "A high-throughput and memory-efficient inference and serving engine for LLMs",
+        "Python"
+      ],
+      "2026-10-22": [
+        94874,
+        441,
+        2,
         "A high-throughput and memory-efficient inference and serving engine for LLMs",
         "Python"
       ]
@@ -27148,6 +27224,112 @@
       "star_rating": 5,
       "verdict": "LLM 推論服務領域的核心專案,做模型部署的工程師必須熟悉,值得持續關注。",
       "_mode": "light"
+    }
+  },
+  "twentyhq/twenty": {
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-22": [
+        59170,
+        112,
+        8,
+        "The open alternative to Salesforce, designed for AI.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-22",
+    "analysis": {
+      "one_liner": "以 TypeScript 打造的開源 CRM,定位為「為 AI 設計的 Salesforce 開源替代品」,可用程式碼定義物件、視圖與 AI 代理。",
+      "summary": "Twenty 是開源 CRM 平台,採 NestJS、PostgreSQL、Redis、React 的 monorepo 架構,提供物件、視圖、工作流程與 AI 代理等 CRM 基礎元件。開發者能透過 Twenty CLI 與 SDK 以程式碼定義並版本化自訂 CRM 應用,也能選擇雲端或 Docker Compose 自架,解決閉源 CRM 客製化受限、難以納入工程流程的問題。",
+      "category": "app",
+      "highlights": [
+        "以程式碼定義 CRM 物件、欄位與視圖(defineObject),並可用 npx twenty app:publish 發布,契合工程團隊的版本控管流程",
+        "內建 AI 代理與聊天功能,並提供官方 agent skills,支援 Claude Code、Codex、Cursor 等編碼代理",
+        "支援雲端託管與 Docker Compose 自架,資料可自行掌控",
+        "技術棧成熟現代:TypeScript、Nx、NestJS、BullMQ、PostgreSQL、Redis、React、Jotai、Lingui",
+        "社群規模大(約 5.9 萬星),並有 Discord、公開路線圖與多語系翻譯(Crowdin)"
+      ],
+      "use_cases": [
+        "企業想以開源方案取代 Salesforce,並自架保有資料主權",
+        "技術團隊需要高度客製的內部 CRM,並納入 Git 版本控管與 CI 流程",
+        "開發 AI 代理驅動的銷售與客戶管理自動化流程",
+        "學習大型 NestJS + React monorepo 的架構與貢獻開源專案"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清晰,涵蓋安裝、應用開發範例、技術棧與社群連結,並有完整文件站。測試品質僅依 README 判斷,未檢視程式碼。最近推送為 2026-10-22,專案維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝方式為 npx create-twenty-app、npx twenty app:publish 與 npx skills add,會從 npm 下載並執行套件,使用前建議先確認套件來源",
+          "自架採 Docker Compose,需自行管理資料庫與憑證等設定",
+          "授權標示為「Other」,商用前建議先閱讀 LICENSE",
+          "本評估僅依 README,未進行原始碼層級審查"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟且活躍的開源 CRM,對想自架或以程式碼客製 CRM 並整合 AI 的團隊很值得關注;採用前請先確認授權條款。",
+      "_mode": "light"
+    }
+  },
+  "strelov1/freehire": {
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-22": [
+        2386,
+        360,
+        10,
+        "freehire — the open-source search engine for job seekers",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-10-22",
+    "analysis": {
+      "one_liner": "開源、可自架的 IT 職缺搜尋引擎,直接從各公司 ATS 抓取超過 330 萬筆職缺,並延伸出履歷、投遞追蹤與 AI 代理功能。",
+      "summary": "freehire 以 Go(Fiber)+ PostgreSQL/pgvector + Meilisearch + SvelteKit 打造,從 Workday、Greenhouse、Lever、Ashby 等上百個 ATS 及 Telegram 頻道直接爬取職缺,正規化並去重後提供分面搜尋。除搜尋外,還包含履歷產生器(typst 轉 PDF)、履歷與職缺評分、投遞看板、信箱分類、LLM 代理(langchaingo)、公開 API、MCP server 與瀏覽器擴充套件。解決求職者面對轉貼、失效連結與聚合平台中間商的問題。",
+      "category": "app",
+      "highlights": [
+        "資料直接來自企業 ATS,README 宣稱 330 萬以上職缺、47 萬以上公司、124 個 ATS 平台,並對跨板重複貼文去重",
+        "架構完整:Go + Fiber、sqlc(不用 ORM)、Meilisearch 分面搜尋、pgvector 語意向量、Redis、S3,可用 docker compose 一鍵啟動",
+        "cmd/ 下有大量一次性 worker(ingest、enrich、reindex、liveness 等),適合以 cron 排程,責任分離清楚",
+        "LLM 走任何 OpenAI 相容端點,搭配 Bifrost 閘道與 Langfuse 追蹤,另提供 MCP server 可供 Claude Desktop/Code 使用",
+        "MIT 授權,可自架,並有 CodeQL、gitleaks、govulncheck、Snyk、hadolint 等安全相關 CI"
+      ],
+      "use_cases": [
+        "自架私有職缺聚合與搜尋服務",
+        "研究大規模 ATS 爬蟲、去重與資料正規化的工程實作",
+        "以其公開 API 或 MCP 將職缺資料整合進自己的 AI 求職助理",
+        "參考 Go + SvelteKit + Meilisearch + LLM 的全端架構"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 完整,另有 docs/features.md、architecture.md、CONTRIBUTING、SECURITY、AGENTS.md 與 issue 模板。倉庫內有大量 *_test.go(Glob 顯示約 1,685 個),含整合測試。最後推送為 2026-10-22,CI 工作流程齊全,並有 dependabot。程式碼註解詳細,結構以 cmd/ 搭配 internal/ 清楚分層。專案體量龐大,自架需要較多服務。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 的 typst 建置階段會以 curl 從 GitHub Releases 下載固定版本(0.15.0)的 typst 二進位檔,未見校驗碼驗證;這是容器建置時的外部下載,使用者可留意。",
+          "web/package.json 未發現 preinstall / postinstall / prepare 等生命週期腳本。",
+          "Makefile 與 Dockerfile 僅做一般的建置、啟動與資料庫遷移操作,未見 curl | bash 或混淆程式碼。",
+          "專案會大量爬取第三方網站並處理使用者履歷與郵件等個資,自架時需妥善設定 JWT_SECRET 與各項憑證。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質高、測試與 CI 完整、功能涵蓋面廣的開源求職平台,值得關注並研究其爬蟲及 LLM 整合設計,但完整自架門檻不低。",
+      "_mode": "full"
     }
   }
 }

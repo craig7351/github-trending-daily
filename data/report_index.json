@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-22",
+    "analyzed": 4,
+    "cached": 8,
+    "deferred": 0,
+    "top_name": "supabase/supabase",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-21",
     "analyzed": 6,
     "cached": 9,
