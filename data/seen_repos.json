@@ -13366,10 +13366,10 @@
   },
   "DietrichGebert/ponytail": {
     "first_seen": "2026-08-26",
-    "last_seen": "2026-10-22",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 16,
+    "last_seen": "2026-10-23",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 17,
     "stars_history": {
       "2026-08-26": [
         111025,
@@ -13480,6 +13480,13 @@
         171648,
         2079,
         5,
+        "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "JavaScript"
+      ],
+      "2026-10-23": [
+        173484,
+        1948,
+        3,
         "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
         "JavaScript"
       ]
@@ -20513,10 +20520,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-22",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-23",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -20571,6 +20578,13 @@
         36502,
         2012,
         1,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-10-23": [
+        39583,
+        2979,
+        4,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
       ]
@@ -20675,10 +20689,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-21",
+    "last_seen": "2026-10-23",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -20735,43 +20749,50 @@
         11,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
+      ],
+      "2026-10-23": [
+        31607,
+        303,
+        2,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-10-09",
+    "last_analyzed": "2026-10-23",
     "analysis": {
-      "one_liner": "Anthropic 官方開源的角色型外掛集合,以 Markdown 與 JSON 為 Claude Cowork / Claude Code 提供銷售、法務、財務、資料等職能的技能、斜線指令與 MCP 連接器。",
-      "summary": "這是 Anthropic 官方的 Claude 外掛市集,內含 11 個外掛(productivity、sales、legal、finance、data、bio-research 等)。每個外掛由 skills、commands 與 .mcp.json 連接器組成,主體是 Markdown 與 JSON,不需要建置步驟。使用者可用 `claude plugin marketplace add` 安裝,再依公司流程客製。",
+      "one_liner": "Anthropic 官方開源的 Claude Cowork/Claude Code 角色型外掛集合,以 Markdown 與 JSON 為主,涵蓋銷售、法務、財務、資料、生技研究等職能。",
+      "summary": "這個儲存庫收錄 11 個以上的外掛,每個對應一種職能(sales、legal、finance、data、bio-research 等)。外掛由 skills(領域知識)、commands(斜線指令)與 .mcp.json(MCP 連接器)組成。使用者可在 Claude Code 用 `claude plugin marketplace add` 安裝,也可依公司流程客製化。主體是純文字設定,只有少數 bio-research 技能附有 Python 輔助腳本。",
       "category": "ai-ml",
       "highlights": [
-        "官方出品,涵蓋 11 種職能,並提供 cowork-plugin-management 外掛協助建立自訂外掛",
-        "結構統一(.claude-plugin/plugin.json、.mcp.json、commands/、skills/),純檔案式,容易閱讀與改寫",
-        "透過 MCP 串接 Slack、HubSpot、Snowflake、PubMed 等數十種外部工具",
-        "bio-research 附有 nextflow、scvi-tools、單細胞 QC 等含 Python 腳本的深度技能",
-        "CI 內建以 Claude 做政策掃描(scan-plugins),並有外部 PR 範圍守門與 MCP URL 檢查"
+        "官方出品,外掛結構一致:.claude-plugin/plugin.json、.mcp.json、commands/、skills/",
+        "涵蓋 11 種職能外掛,另有 partner-built 目錄收錄合作夥伴外掛(例如 Zoom)",
+        "純檔案式設計,無需建置,容易 fork 後改成自家工具與術語",
+        "CI 內含以 Claude 對外部 marketplace 項目做政策掃描的流程,並有驗證快取與失敗回退機制",
+        "cowork-plugin-management 外掛可協助建立與客製新外掛"
       ],
       "use_cases": [
-        "企業團隊以官方範本客製出符合自家流程的 Claude 外掛",
-        "學習如何撰寫 SKILL.md、斜線指令與 MCP 設定",
-        "生醫或資料團隊直接使用 bio-research、data 外掛輔助分析工作",
-        "自行建立內部外掛市集時參考 marketplace.json 與 CI 治理做法"
+        "企業導入 Claude Cowork 時,依部門套用現成的角色型工作流",
+        "學習如何設計 Claude 外掛、skills 與 slash commands",
+        "以 sales、legal 等外掛為範本,打造公司內部專屬外掛",
+        "為生技研究團隊串接 PubMed、ChEMBL 等資料庫的 MCP 連接器"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 清楚,各外掛另有 README 與 CONNECTORS.md。主體是內容檔案,所以沒有傳統單元測試;品質控管靠 CI,包括政策掃描、MCP URL 檢查與 PR 範圍守門。Python 腳本(例如 check_environment.py)使用 dataclass 與型別標註,風格整潔。最近一次推送在 2026-10-08,維護活躍。"
+        "comment": "README 清楚說明結構、安裝與客製方式,各外掛另有自己的說明與 CONNECTORS.md。專案主體是 Markdown 與 JSON,沒有傳統單元測試。品質控管靠 GitHub Actions,包含 MCP URL 檢查、外部 PR 範圍守門與政策掃描。最近仍有推送,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "外掛本身以 Markdown 與 JSON 為主,未見 npm 生命週期腳本、curl|bash 安裝器或混淆程式碼。",
-          "各外掛的 .mcp.json 會連線至第三方遠端 MCP 伺服器(如 pubmed.mcp.claude.com、mcp.consensus.app、mcp.k.owkin.com 等),安裝後資料會經由這些服務,使用者宜自行確認信任範圍與授權權限。",
-          "bio-research 等外掛附有 Python 腳本(如 check_environment.py 會呼叫 docker、nextflow 等本機指令),由 Claude 代為執行時應留意其行為。",
-          "CI 工作流程 scan-plugins.yml 使用 OIDC 聯合驗證,並在檔案中寫有組織與服務帳號識別碼,屬 CI 設定常見做法,不含長期金鑰。"
+          "各外掛的 .mcp.json 會連到外部 HTTP MCP 服務(例如 pubmed.mcp.claude.com、mcp.consensus.app、mcp.k.owkin.com 等),啟用後查詢內容會送往這些第三方端點,建議先確認資料敏感度與授權範圍",
+          "bio-research 的 benchling 連接器 URL 為空字串,需使用者自行填入",
+          "部分技能附有 Python 腳本(例如 nextflow-development 的 check_environment.py),會呼叫 docker 等本機指令做環境檢查,執行前建議先閱讀",
+          "本次抽查未發現 npm 生命週期腳本、curl|bash 安裝流程、混淆程式碼或內嵌的長 base64 內容"
         ]
       },
       "star_rating": 4,
-      "verdict": "想了解 Claude 外掛與技能的官方寫法,或要替團隊客製角色型工作流程,這個專案值得收藏;若期待可執行的程式碼框架則不太適合。",
+      "verdict": "想了解 Claude 外掛生態、或要為企業建立角色型 Claude 工作流的人值得關注。它是官方範本,但本身偏設定與提示詞,不是可獨立執行的程式。",
       "_mode": "full"
     }
   },
@@ -20933,10 +20954,10 @@
   },
   "supabase/supabase": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-22",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-23",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-17": [
         109730,
@@ -20956,6 +20977,13 @@
         113008,
         504,
         7,
+        "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+        "TypeScript"
+      ],
+      "2026-10-23": [
+        113488,
+        693,
+        6,
         "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
         "TypeScript"
       ]
@@ -27002,10 +27030,10 @@
   },
   "Graphify-Labs/graphify": {
     "first_seen": "2026-10-21",
-    "last_seen": "2026-10-22",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-23",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-21": [
         130246,
@@ -27018,6 +27046,13 @@
         131649,
         1433,
         12,
+        "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+        "Python"
+      ],
+      "2026-10-23": [
+        132958,
+        1408,
+        5,
         "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
         "Python"
       ]
@@ -27329,6 +27364,212 @@
       },
       "star_rating": 4,
       "verdict": "工程品質高、測試與 CI 完整、功能涵蓋面廣的開源求職平台,值得關注並研究其爬蟲及 LLM 整合設計,但完整自架門檻不低。",
+      "_mode": "full"
+    }
+  },
+  "php/php-src": {
+    "first_seen": "2026-10-23",
+    "last_seen": "2026-10-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-23": [
+        41160,
+        287,
+        1,
+        "The PHP Interpreter",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-10-23",
+    "analysis": {
+      "one_liner": "PHP 語言的官方原始碼倉庫,以 C 實作的 PHP 直譯器與內建擴充套件。",
+      "summary": "php-src 是 PHP 直譯器的官方原始碼,涵蓋 Zend 引擎、核心與眾多內建擴充。README 說明如何在各平台從原始碼建置、測試、安裝,以及透過 RFC 與 GitHub PR 參與貢獻的流程。PHP 是特別適合網頁開發的通用腳本語言,採 BSD-3-Clause 授權。",
+      "category": "infra",
+      "highlights": [
+        "PHP 語言官方實作,驅動大量網站與 CMS 生態",
+        "提供 Ubuntu、Fedora、macOS、Windows 的建置指引",
+        "內建大型平行測試套件(make test),並整合 OSS-Fuzz 模糊測試",
+        "新功能需經 RFC 與投票流程,治理制度明確",
+        "BSD-3-Clause 授權,擴充可透過 PIE 安裝"
+      ],
+      "use_cases": [
+        "從原始碼編譯自訂或除錯版本的 PHP",
+        "學習直譯器與 Zend 引擎的內部實作",
+        "開發或除錯 PHP C 擴充套件",
+        "向 PHP 核心提交 bug 修正或參與 RFC 討論"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 簡潔清楚,建置、測試、貢獻流程完整,並連結編碼規範與內部文件。測試僅依 README 判斷:提到大型測試套件、CI 與 OSS-Fuzz,但未檢視程式碼。最近一次推送為 2026-10-22,維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝方式為使用系統套件管理員安裝相依套件,並以 buildconf/configure/make 從原始碼編譯,未出現 curl | bash 之類的指令。",
+          "僅依 README 判斷,未進行原始碼層級審查;make install 可能需要超級使用者權限,請留意安裝前綴。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "PHP 生態的核心專案,對想了解直譯器內部或開發擴充的工程師很有價值;一般使用者直接用預建套件即可。",
+      "_mode": "light"
+    }
+  },
+  "fastapi/fastapi": {
+    "first_seen": "2026-10-23",
+    "last_seen": "2026-10-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-23": [
+        103753,
+        101,
+        7,
+        "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-23",
+    "analysis": {
+      "one_liner": "以 Python 型別提示與 Pydantic 為基礎的高效能非同步 Web API 框架,可自動產生 OpenAPI 文件。",
+      "summary": "FastAPI 建構在 Starlette 與 Pydantic 之上,讓開發者用標準 Python 型別提示宣告路由、參數與回應模型。框架會自動完成資料驗證、序列化,並產生 OpenAPI 與 Swagger UI/ReDoc 互動文件。它解決了建構 REST API 時重複寫驗證與文件的痛點,在 AI/ML 模型服務領域也很常見。",
+      "category": "framework",
+      "highlights": [
+        "以型別提示驅動參數驗證、序列化與 OpenAPI/JSON Schema 自動文件",
+        "原生支援 async/await,並提供依賴注入、WebSocket、SSE、背景任務等功能",
+        "新版內建 OpenTelemetry 遙測設定(telemetry 參數)",
+        "pyproject 使用 pdm-backend 建置,支援 Python 3.10–3.14,並以 extras(standard、all)選裝依賴",
+        "文件完整且有多語系翻譯,並有 CI 工作流程涵蓋測試、文件部署、發版與 zizmor 安全掃描"
+      ],
+      "use_cases": [
+        "建構 AI/ML 模型推論服務與 LLM 應用的後端 API",
+        "開發微服務與 REST API,並自動產生 SDK 或 API 文件",
+        "快速製作原型,再平順擴充到正式環境",
+        "學習現代 Python 型別系統與非同步程式設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "tests/ 下有 500 多個測試檔,另有效能與記憶體基準測試。.github/workflows 有 18 個工作流程,涵蓋測試、文件、發版、依賴守衛與 zizmor。最後推送時間為 2026-10-22,維護相當活躍。抽樣讀取的 applications.py 使用完整型別標註與 Doc 註解,風格一致。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "Python API 開發的事實標準,成熟、文件與測試完整、維護活躍,值得每位 AI/後端工程師熟悉並採用。",
+      "_mode": "full"
+    }
+  },
+  "luongnv89/claude-howto": {
+    "first_seen": "2026-10-23",
+    "last_seen": "2026-10-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-23": [
+        43215,
+        177,
+        8,
+        "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-23",
+    "analysis": {
+      "one_liner": "以 Mermaid 圖解與可複製貼上範本組成的 Claude Code 完整教學指南,從斜線指令一路教到子代理與外掛。",
+      "summary": "claude-howto 是一套結構化的 Claude Code 教學,共 10 個模組,涵蓋斜線指令、記憶、技能、子代理、MCP、Hooks、外掛、檢查點與 CLI。每個模組都附可直接複製的設定範本,並提供學習路線圖與自我評量技能(/self-assessment、/lesson-quiz)。它主要補足官方文件缺少的「功能如何組合成工作流程」與循序漸進的學習路徑。",
+      "category": "learning-resource",
+      "highlights": [
+        "10 個教學模組加上約 11–13 小時的學習路線,依程度分為初學、中階、進階",
+        "範本齊全:斜線指令、CLAUDE.md、Hook 腳本、MCP 設定、子代理定義與完整外掛組合",
+        "內建 /self-assessment 與 /lesson-quiz 技能,可在 Claude Code 內測驗並找出知識缺口",
+        "提供英、越、中、日、烏克蘭語版本,並有腳本負責翻譯同步、EPUB 與網站建置",
+        "CI 完整:pytest(Python 3.10–3.12)、ruff、bandit、mypy、EPUB 建置與連結檢查"
+      ],
+      "use_cases": [
+        "剛上手 Claude Code 的工程師,想循序學習各項功能",
+        "團隊導入 Claude Code,直接複製範本到專案作為標準設定",
+        "撰寫 Hooks、Skills、Subagents 或 MCP 設定時,拿來當參考範例",
+        "建立內部教育訓練教材或自我評量流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整且多語系,版本與 Claude Code 發行同步(README 標示 v2.1.302)。Python 輔助腳本(EPUB、網站建置、連結與 Mermaid 檢查)有 pytest 測試,CI 含 lint、型別檢查與 bandit。程式碼本身不是重點,內容才是,而且最近仍持續推送。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝說明提到官方 Claude Code 的 `curl -fsSL https://claude.ai/install.sh | bash` 安裝方式,這是引用上游官方安裝指令,並非本專案自己的安裝腳本。",
+          "scripts/vendor_assets.py 會用 urllib 從網路下載資產,並以固定的 sha256 雜湊值驗證,另以固定 argv 呼叫 Tailwind CLI;scripts/pele_renderer.py 會呼叫 Node.js 渲染圖表。這些只在使用者手動執行建置腳本時才會運作。",
+          "未發現 package.json 生命週期腳本、setup.py 任意程式碼、混淆程式碼、內嵌 base64 payload 或可疑相依套件;在 .py、.sh、.yml、.toml、.json 檔中搜尋 eval、base64、curl|bash 等樣式,沒有命中。",
+          "範本中的斜線指令與 Hook 範例(例如 push-all、commit)會讓 Claude 執行 git 或 shell 操作,複製到自己的專案前建議先檢視內容。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "Claude Code 的教學資源裡,這份相當完整且維護積極,新手與要在團隊內推廣的人都值得收藏。它是內容型專案,沒有安裝風險。",
+      "_mode": "full"
+    }
+  },
+  "Meloong-Git/PCL": {
+    "first_seen": "2026-10-23",
+    "last_seen": "2026-10-23",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-23": [
+        8701,
+        119,
+        9,
+        "Minecraft 启动器 Plain Craft Launcher（PCL）。",
+        "Visual Basic .NET"
+      ]
+    },
+    "last_analyzed": "2026-10-23",
+    "analysis": {
+      "one_liner": "Plain Craft Launcher(PCL)是以 VB.NET + WPF 撰寫的 Windows 版 Minecraft 啟動器,公開大部分原始碼。",
+      "summary": "PCL 是中文社群廣受歡迎的 Minecraft Java 版啟動器,倉庫包含自製 UI 控制項庫、動畫模組、下載模組、Mod/整合包管理與遊戲啟動邏輯。原始碼只在每次正式版發布時同步一次,並非即時開發,且涉及加解密的敏感程式碼已被移除。授權為自訂的「PCL 分發有限許可」,對衍生作品的命名、署名與功能有明確限制。",
+      "category": "app",
+      "highlights": [
+        "完整的 WPF 自製控制項庫(MyButton、MyCard、MyMsg 等)與動畫模組,可作為客製 UI 的參考",
+        "涵蓋 Minecraft 啟動、Java 管理、版本下載、Mod/整合包與 CurseForge 資源搜尋等完整啟動器模組",
+        "自建 LoaderBase 非同步任務載入器架構,統一處理狀態、事件與父子任務",
+        "VB.NET 與 C#(PCLCS)混合架構,另附 Java 輔助 jar(JavaWrapper、LwjglUnsafeAgent)",
+        "GitHub Actions 在 CI 中以 secrets 注入 OAuth ClientId 與 CurseForge API Key,原始碼內不含金鑰"
+      ],
+      "use_cases": [
+        "研究大型 VB.NET/WPF 桌面應用的架構與自製控制項實作",
+        "學習 Minecraft 啟動流程、版本清單與資源下載機制",
+        "參考 CurseForge 等 Mod 平台 API 的整合方式",
+        "在遵守其授權條款的前提下,製作二次創作或修改版"
+      ],
+      "quality": {
+        "docs": 2,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 簡短,僅說明來源與連結,沒有建置教學;專案內未見單元測試,僅有 Debug/Release 兩種組態的 GitHub Actions 建置。程式碼模組化清楚、註解多為中文,維護持續(2026-10-20 仍有推送),但原始碼隨版本發布才同步,部分機密程式碼已移除,無法完整自行建置為官方版本。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "倉庫內含預編譯的 Java 檔案 PCLCS/Launch/JavaWrapper.jar 與 LwjglUnsafeAgent.jar,屬於原始碼之外另附的二進位檔,使用前可自行比對來源。",
+          "CI 工作流程(build.yml)會在建置時從 github.com/LTCatt/PCL2Help 複製說明文件並打包進程式,並以 PowerShell 將 ModSecret.vb 內的金鑰佔位符取代為 GitHub secrets。",
+          "ModSecret.vb 註明部分加解密程式碼已刪除,並含一個預設為空的匿名資料收集(騰訊雲 CLS)上報網址欄位;開源版以環境變數讀取微軟登入 ClientId 與 CurseForge API Key。",
+          "專案以子模組方式引用 MeloongCore(github.com/Meloong-Git/MeloongCore),該部分不在本次檢視範圍內。",
+          "未發現 curl|bash 類安裝腳本、長 base64 載荷或混淆程式碼;授權為自訂條款(非標準開源授權),二次發布前請先閱讀 LICENCE。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "對中文 Minecraft 玩家與 WPF/VB.NET 開發者是不錯的參考資源,但授權特殊、無測試且原始碼並非即時同步,對 AI 研發工程師而言屬非必看。",
       "_mode": "full"
     }
   }

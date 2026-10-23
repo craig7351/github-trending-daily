@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-23",
+    "analyzed": 5,
+    "cached": 4,
+    "deferred": 0,
+    "top_name": "fastapi/fastapi",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-22",
     "analyzed": 4,
     "cached": 8,
