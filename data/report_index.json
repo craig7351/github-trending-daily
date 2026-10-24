@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-24",
+    "analyzed": 5,
+    "cached": 3,
+    "deferred": 0,
+    "top_name": "NVIDIA/OpenShell",
+    "top_rating": 5
+  },
+  {
     "date": "2026-10-23",
     "analyzed": 5,
     "cached": 4,

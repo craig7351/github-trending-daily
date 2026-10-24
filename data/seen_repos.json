@@ -1960,47 +1960,58 @@
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-07-27",
+    "last_seen": "2026-10-24",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
         118470,
         36
+      ],
+      "2026-10-24": [
+        122867,
+        66,
+        8,
+        "Node.js JavaScript runtime ✨🐢🚀✨",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-07-28",
+    "last_analyzed": "2026-10-24",
     "analysis": {
-      "one_liner": "Node.js 官方原始碼庫,跨平台的 JavaScript 執行環境核心專案。",
-      "summary": "Node.js 是建構在 V8 引擎上的開源跨平台 JavaScript 執行環境,支援 Linux、macOS、Windows,是現今伺服器端 JavaScript 開發的基石。此 README 主要說明專案治理、版本發布策略(Current/LTS/Nightly)、二進位驗證與貢獻方式,而非教學文件。",
-      "category": "infra",
+      "one_liner": "Node.js 官方原始碼庫,開源跨平台的 JavaScript 執行環境,由 OpenJS 基金會支持。",
+      "summary": "nodejs/node 是 Node.js 的主要儲存庫,提供以 V8 為基礎的跨平台 JavaScript 執行環境。README 說明發行類型(Alpha、Current、LTS、Nightly)、下載與二進位驗證方式、建置、安全通報及治理架構。專案採開放治理模式,由 TSC 負責技術方向。",
+      "category": "framework",
       "highlights": [
-        "118K+ 星數、持續 20 多年活躍開發的重量級基礎設施專案,今日以 +36 星再度登上 trending",
-        "明確的 LTS/Current/Nightly 三軌發布模式,附語意化版本與 GPG 簽章驗證機制,適合企業導入評估",
-        "採開放治理模型(OpenJS Foundation 支持),TSC 與 Collaborator 名單公開透明,治理成熟度高",
-        "README 偏重專案治理與發布資訊,實際 API 使用教學需另外查閱 nodejs.org 官方文件"
+        "README 說明新的發行時程:每年 10 月從 main 分出新版本線並發布 Alpha,隔年 4 月升為 Current,再於 10 月轉為 LTS",
+        "LTS 提供 30 個月支援,從首次 Current 發行起共 36 個月",
+        "提供 SHASUMS256.txt.asc 與 PGP 簽章,可用 release-keys 驗證下載的二進位檔",
+        "開放治理模式,由 OpenJS 基金會支持,並有明確的 TSC、Collaborators、Triagers 架構",
+        "支援 Linux、macOS、Windows,每日產出 Nightly 建置"
       ],
       "use_cases": [
-        "作為伺服器端/CLI 工具/前端建置鏈的 JavaScript 執行環境基礎",
-        "評估是否採用特定 LTS 版本作為公司內部標準 runtime",
-        "研究大型開源專案的治理模式與發布流程作為參考範本"
+        "作為後端服務、CLI 工具與 AI 應用(如 LLM API 整合)的 JavaScript 執行環境",
+        "追蹤新發行版本線與 LTS 時程,規劃升級",
+        "了解 Node.js 內部實作並參與核心貢獻",
+        "在 CI 中用 Alpha 或 Current 版測試函式庫的相容性"
       ],
       "quality": {
-        "docs": 4,
-        "tests": 1,
+        "docs": 5,
+        "tests": 2,
         "activity": 5,
-        "comment": "README 對治理、版本發布與二進位驗證說明完整清晰,但屬專案總覽性質,缺乏 API 使用範例;測試品質無法從 README 判斷,此為資源彙整類條目,測試不適用。"
+        "comment": "README 結構完整,涵蓋發行、驗證、建置、安全與治理並附目錄。測試僅依 README 評估,未檢視程式碼。最近一次推送是 2026-10-24,維護非常活躍,今日也在 trending 上。"
       },
       "security": {
-        "risk_level": "low",
+        "risk_level": "none",
         "findings": [
-          "README 提供 curl 下載 keyring 並以 gpgv/shasum 驗證官方發布檔案的正規流程,屬安全良好實務,非可疑的 curl | bash 直接執行模式"
+          "README 的安裝說明是從官方網站下載二進位檔,並用 PGP 簽章與 SHA256 校驗檔驗證,沒有 curl | bash 式的安裝指令。",
+          "README 中的 curl 指令僅用於下載金鑰環與校驗檔。",
+          "本次僅檢視 README,未進行原始碼層級的審查。"
         ]
       },
-      "star_rating": 5,
-      "verdict": "Node.js 是 JavaScript 生態圈不可或缺的基礎設施,雖然今日上榜多為既有知名度延續,仍值得持續關注其版本發布節奏與治理動態。",
+      "star_rating": 4,
+      "verdict": "Node.js 是基礎設施級專案,對 JS/AI 工程師而言是必備工具。它是長期值得追蹤的核心專案,但今日上榜只是熱度現象,不代表有新功能。",
       "_mode": "light"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "pbakaus/impeccable": {
@@ -19490,10 +19501,10 @@
   },
   "SnailSploit/Claude-Red": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-09-17",
+    "last_seen": "2026-10-24",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-13": [
         3598,
@@ -19522,7 +19533,50 @@
         17,
         "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
         "Python"
+      ],
+      "2026-10-24": [
+        8492,
+        226,
+        6,
+        "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+        "Python"
       ]
+    },
+    "last_analyzed": "2026-10-24",
+    "analysis": {
+      "one_liner": "為 Claude Skills 打造的攻擊性資安技能庫,內含 78 個 SKILL.md,涵蓋 Web、AD、無線、EDR 規避與漏洞開發等領域。",
+      "summary": "claude-red 是一套可直接放入 Claude Skills 系統的紅隊方法論集合,每個技能都是結構化的 SKILL.md,針對特定攻擊面(SQLi、SSRF、ADCS、WPA3、shellcode 等)提供技術、工具與升級路徑。技能依對話觸發按需載入,不佔用多餘上下文。README 聲明用途為授權紅隊演練、賞金獵人、研究、CTF 與培訓。",
+      "category": "ai-ml",
+      "highlights": [
+        "78 個技能、23 個類別,涵蓋 Web、Auth、AD、無線、雲端、行動、IoT、漏洞開發、Fuzzing 等",
+        "無線類特別完整(14 個):WPA3、BLE、Zigbee、Z-Wave、LoRa 等",
+        "依對話觸發自動載入,節省上下文",
+        "提供 git clone、sparse-checkout 單類別安裝及 install.sh 腳本",
+        "MIT 授權,README 結構清晰、有技能索引表"
+      ],
+      "use_cases": [
+        "授權的滲透測試與紅隊演練輔助",
+        "Bug bounty 漏洞分流與研究",
+        "CTF 備賽與資安培訓",
+        "研究如何以 Skills 機制撰寫領域專家提示詞"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 3,
+        "comment": "資源彙整類,測試不適用。README 結構完整、索引清楚;最後推送為 2026-10-12,但目前正登上趨勢榜、熱度高。內容品質僅憑 README 評估,未檢視各 SKILL.md 實際深度。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝方式為 git clone 到 ~/.claude/skills,以及執行倉庫內的 install.sh;未見 curl | bash 形式,但未進行原始碼層級審查,執行腳本前建議先閱讀內容。",
+          "技能內容屬攻擊性資安方法論(含 EDR 規避、shellcode、C2 等主題),屬雙用途性質,應僅在取得授權的環境下使用。",
+          "安裝後這些 SKILL.md 會成為 Claude 的載入指令來源,建議使用前自行檢視內容。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "對資安研究者與想學習 Claude Skills 組織方式的人頗有參考價值,涵蓋面廣;但屬雙用途內容,僅限授權場景,且需自行檢視技能品質。",
+      "_mode": "light"
     }
   },
   "multimodal-art-projection/YuE": {
@@ -20115,10 +20169,10 @@
   },
   "OpenBMB/VoxCPM": {
     "first_seen": "2026-09-15",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-10-24",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-15": [
         37366,
@@ -20126,38 +20180,51 @@
         14,
         "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
         "Python"
+      ],
+      "2026-10-24": [
+        40258,
+        150,
+        7,
+        "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-15",
+    "last_analyzed": "2026-10-24",
     "analysis": {
+      "one_liner": "OpenBMB 推出的 2B 參數免 tokenizer 多語 TTS 模型,支援 30 種語言、文字描述造音與 48kHz 聲音克隆。",
+      "summary": "VoxCPM2 以 MiniCPM-4 為骨幹,採擴散自回歸架構直接生成連續語音表示,跳過離散 tokenization。提供 Python API、CLI、Gradio WebUI、LoRA 與全參數微調腳本及 Docker 訓練環境,程式碼與權重皆採 Apache-2.0 授權,可商用。",
       "category": "ai-ml",
-      "one_liner": "OpenBMB 推出的 tokenizer-free TTS 模型 VoxCPM2,支援 30 種語言、語音設計與高擬真聲音克隆。",
-      "summary": "VoxCPM2 是基於 MiniCPM-4 骨幹的 2B 參數擴散自回歸(diffusion autoregressive)語音合成模型,直接在連續潛在空間生成語音而非離散 token,訓練資料超過 200 萬小時。它主打多語言(30 種語言含多種中文方言)、免參考音檔的「語音設計」、可控聲音克隆,以及 48kHz 錄音室等級輸出,解決傳統 TTS 表現力不足與音質受限的問題。",
       "highlights": [
-        "Tokenizer-free 的 diffusion autoregressive 架構(LocEnc → TSLM → RALM → LocDiT),直接生成連續語音表徵",
-        "支援 30 種語言與多種中文方言,並提供語音設計(文字描述生成聲音)與可控聲音克隆兩種模式",
-        "官方提供 Nano-vLLM、vLLM-Omni、llama.cpp-omni 等多條生態系推理路徑,RTF 最低可到 0.13",
-        "在 Seed-TTS-eval、CV3-eval 等多項公開基準上達到與商用閉源模型相當甚至更好的表現",
-        "程式碼庫附有真正的 pytest 測試,並針對 torch.load 反序列化風險撰寫了專門的靜態掃描與行為測試"
+        "免 tokenizer 的擴散自回歸架構,2B 參數、逾 200 萬小時多語語料訓練,支援 30 種語言與多種中文方言",
+        "Voice Design:只用自然語言描述(性別、年齡、情緒、語速)即可生成全新聲音,不需參考音訊",
+        "可控式克隆與 Ultimate Cloning,輸入 16kHz 參考音訊可直接輸出 48kHz 音質",
+        "RTX 4090 上 RTF 約 0.3,搭配 Nano-vLLM / vLLM-Omni 可達約 0.13,並支援串流",
+        "附 SFT 與 LoRA 微調腳本、訓練 WebUI、Docker 與 ReadTheDocs 文件,生態完整"
       ],
       "use_cases": [
-        "需要多語言、高擬真度語音合成或聲音克隆的產品開發(有聲書、配音、客服語音)",
-        "研究擴散自回歸 TTS 架構或 tokenizer-free 語音生成方法的學術/研究用途",
-        "以少量音檔(5-10 分鐘)做 LoRA/全量微調以打造特定說話人或領域語音",
-        "透過 vLLM-Omni / Nano-vLLM 建置高吞吐、OpenAI 相容的 TTS 推理服務"
+        "多語言配音、有聲書與旁白生成",
+        "用文字描述快速產生角色或品牌專屬聲音",
+        "以少量參考音訊做聲音克隆,並以 LoRA 微調特定音色",
+        "透過 vLLM 或 llama.cpp-omni 部署即時語音服務或端側推論"
       ],
       "quality": {
         "docs": 5,
         "tests": 3,
-        "activity": 5,
-        "comment": "README 內容非常完整,涵蓋安裝、API、CLI、部署、微調、基準測試與風險說明,文件品質優異。專案有正式的 tests/ 目錄與 pytest 測試(含 CLI、LoRA checkpoint 載入、torch.load 反序列化安全性測試等),但沒有對應的 CI workflow 會自動跑這些測試(僅有發版到 PyPI 的 workflow),測試覆蓋率也偏向工具函式而非核心模型邏輯,故 tests 給中等分數。專案活躍度高:今日新上榜、有多個版本迭代(0.5B → 1.5 → 2)、生態系整合(vLLM-Omni、llama.cpp-omni 等)持續擴充,活躍度給滿分。"
+        "activity": 4,
+        "comment": "README 中英雙語且內容完整,另有 ReadTheDocs、技術報告與線上 Demo。tests/ 下有 CLI、LoRA 載入、時間戳、訓練資料與 torch.load 安全性等單元測試,但 CI 只有 PyPI 發佈流程,沒有自動執行測試的 workflow。程式分層清楚(core、model、modules、training),有型別註解與 docstring。最後推送為 2026-10-08,維護持續。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "pyproject.toml 使用標準 setuptools 建置,未見 preinstall/postinstall 等安裝時腳本;依賴為常見套件(torch、transformers、gradio、funasr、modelscope 等)。",
+          "執行時會從 Hugging Face Hub 與 ModelScope 下載模型權重(含 zipenhancer 降噪模型),使用者應留意下載來源與網路存取。",
+          "專案以測試(tests/test_torch_load_safety.py)要求所有 torch.load 皆設 weights_only=True,降低載入惡意檢查點的風險。",
+          "Docker 映像對外開放 7860 埠執行 Gradio 訓練 WebUI,部署於公開網路時建議自行加上存取控制。",
+          "GitHub Actions 僅有透過 OIDC 發佈到 PyPI 的 workflow,未發現 curl|bash、混淆程式碼或內嵌 base64 payload。"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "技術與文件品質俱佳、生態系快速擴張的開源 TTS 模型,值得 AI 語音方向的工程師立即關注與試用。",
+      "star_rating": 4,
+      "verdict": "開源多語 TTS 中少見同時具備語音設計、高保真克隆與完整微調流程的專案,授權寬鬆、文件完整,值得 AI 研發工程師實際試用;缺點是 CI 未自動跑測試。",
       "_mode": "full"
     }
   },
@@ -20520,10 +20587,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-23",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-24",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -20585,6 +20652,13 @@
         39583,
         2979,
         4,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-10-24": [
+        42155,
+        2716,
+        1,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
       ]
@@ -20689,10 +20763,10 @@
   },
   "anthropics/knowledge-work-plugins": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-10-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-09-17": [
         24285,
@@ -20754,6 +20828,13 @@
         31607,
         303,
         2,
+        "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "Python"
+      ],
+      "2026-10-24": [
+        32219,
+        635,
+        3,
         "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
         "Python"
       ]
@@ -24178,10 +24259,10 @@
   },
   "NVIDIA/OpenShell": {
     "first_seen": "2026-09-30",
-    "last_seen": "2026-10-03",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-30": [
         10615,
@@ -24210,42 +24291,51 @@
         7,
         "OpenShell is the safe, private runtime for autonomous AI agents.",
         "Rust"
+      ],
+      "2026-10-24": [
+        18805,
+        1119,
+        4,
+        "OpenShell is the safe, private runtime for autonomous AI agents.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-09-30",
+    "last_analyzed": "2026-10-24",
     "analysis": {
-      "one_liner": "NVIDIA 推出的 Rust 自主 AI 代理沙箱執行環境,以核心層級政策強制執行,並用形式驗證審查政策變更。",
-      "summary": "OpenShell 為自主 AI 代理提供隔離沙箱,讓代理能讀檔、裝套件、呼叫 API 與使用憑證,同時以宣告式政策限制檔案、系統呼叫與網路存取。代理看不到真實憑證,憑證只會在送往核准端點的請求中由系統注入。政策變更可經形式驗證(prover)標示風險,再交由人工審查。專案包含 CLI、閘道(gateway)、Helm/Kubernetes 部署,以及 Python、TypeScript、Go、Rust SDK。",
+      "one_liner": "NVIDIA 推出的 Rust 版 AI Agent 沙箱執行環境,以核心層級隔離、憑證代管與形式化驗證的政策審查,讓自主 Agent 在受控權限下運作。",
+      "summary": "OpenShell 是供自主 AI Agent 使用的安全、私密 runtime。使用者以宣告式政策定義 Agent 可存取的檔案、系統呼叫與網路目的地,由 gateway、supervisor 與 sandbox 三層架構強制執行。Agent 看不到真實憑證,憑證只會注入到已核准端點的請求中;政策變更先經形式化驗證,標出新增的風險存取再交由人工審核。",
       "category": "infra",
       "highlights": [
-        "核心層級強制執行:檔案存取、系統呼叫與網路連線都要經過政策檢查",
-        "憑證隔離:代理看不到真實密鑰,只在送往核准端點的請求中注入",
-        "以形式驗證(prover)與 advisor 審查政策變更,高風險授權需人工核准",
-        "支援 Docker、Podman、VM、Kubernetes(Helm)與 GPU,並提供四種語言的 SDK",
-        "工程流程完整:數十個 CI workflow(CodeQL、Trivy、cargo-deny、多種 e2e),crates 中有逾七千個測試標記"
+        "核心層級強制:每個 Agent 跑在隔離沙箱中,檔案存取、syscall 與每條對外連線都要通過政策檢查",
+        "憑證代管:Agent 不接觸真實金鑰,僅在送往核准端點的請求中由 OpenShell 注入",
+        "政策變更用形式化驗證(prover)與 advisor 預審,風險變更需人工核准",
+        "多後端 compute driver:Docker、Podman、Kubernetes(Helm)、VM、MXC 等,並提供 middleware 與 interceptor 擴充面",
+        "多語言 SDK(Python、TypeScript、Go、Rust)與給 coding agent 用的 skills;CI 涵蓋 e2e、CodeQL、Trivy、cargo-deny、DCO"
       ],
       "use_cases": [
-        "在受控環境中執行 coding agent(如 OpenCode),限制其可存取的主機與資料",
-        "企業內部部署多代理叢集,集中管理網路與憑證政策",
-        "為代理應用建立可稽核的安全邊界與推論路由",
-        "研究代理沙箱、政策驗證與 Kubernetes 上的隔離方案"
+        "在公司內部讓 coding agent 或自動化 Agent 在受限網路與檔案權限下執行,並由人工逐步核准新增存取",
+        "以 Kubernetes 部署多 Agent 的控制平面,集中管理政策、憑證與推論路由",
+        "為 Agent 平台做安全稽核與合規,透過 OCSF/OTel 觀測 Agent 行為",
+        "研究 Agent 沙箱、policy-as-code 與形式化驗證的設計"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件完整,有官方文件站、架構說明、教學與升級指南。多 crate 的 Rust 專案含逾七千個測試標記與多種 e2e,CI 涵蓋建置、安全掃描、發佈與套件打包。近日仍持續推送,整體工程品質高。"
+        "comment": "README 清楚並連到完整官方文件站、SECURITY.md、CONTRIBUTING 與 AGENTS.md。工作區超過 35 個 crate,單元測試標記達 8,000 次以上,另有大量 e2e 工作流程(Docker、Podman、Kubernetes、VM、GPU)與 CodeQL、Trivy、依賴審查等安全掃描。最後推送為 2026-10-24,屬 0.1.x 階段,發版節奏穩定。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 的快速上手使用 `curl ... install.sh | sh` 從 GitHub raw 網址下載並執行安裝腳本。install.sh 也提供先下載再執行的用法,腳本本身會從 GitHub release 下載 deb/rpm 套件或 Homebrew formula,並有 checksums 檔案名稱設定。",
-          "README 說明專案會收集匿名遙測,限於操作類別與計數。可設定 OPENSHELL_TELEMETRY_ENABLED=false 關閉,也可在編譯時移除。",
-          "本身是沙箱與權限管控工具,執行時需要 Docker/Podman/虛擬化等較高的系統權限,部署前建議先閱讀其政策與威脅模型文件。"
+          "README 的快速開始建議使用 `curl ... install.sh | sh`;腳本來自官方 GitHub raw 網址,內容是依平台下載 release 的 deb/rpm/snap 或 Homebrew formula 並安裝,安裝時可能需要較高權限。腳本也提供先下載、檢視再執行的用法,並使用 checksums 檔名參照。",
+          "README 揭露會收集匿名遙測(僅操作類別與計數),可用 `OPENSHELL_TELEMETRY_ENABLED=false` 或 Helm 的 `server.telemetryEnabled=false` 關閉,也可在編譯時移除。",
+          "README 載明軟體會自動取得外部資源(如 release 資產、映像檔),使用者需自行確認其完整性與授權。",
+          "README 建議以 `npx skills add NVIDIA/OpenShell` 安裝 Agent skills,屬於從外部套件來源取得內容,使用前可先檢視 `skills/` 目錄。",
+          "未發現混淆程式碼、內嵌的長 base64 或十六進位 payload,也未發現可疑相依套件名稱或原始碼庫中的可疑二進位檔(僅依檔案結構與抽樣觀察)。"
         ]
       },
       "star_rating": 5,
-      "verdict": "由 NVIDIA 維護、切中代理安全痛點且工程紀律完整,值得立即關注,適合評估作為代理執行的安全基礎設施。",
+      "verdict": "由 NVIDIA 維護、架構完整且工程紀律佳的 Agent 沙箱與政策治理方案,正好切中 Agent 落地的安全痛點。開發 Agent 平台或在內部導入自主 Agent 的人值得優先關注。",
       "_mode": "full"
     }
   },
@@ -27369,15 +27459,22 @@
   },
   "php/php-src": {
     "first_seen": "2026-10-23",
-    "last_seen": "2026-10-23",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-24",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-23": [
         41160,
         287,
         1,
+        "The PHP Interpreter",
+        "C"
+      ],
+      "2026-10-24": [
+        41564,
+        716,
+        2,
         "The PHP Interpreter",
         "C"
       ]
@@ -27570,6 +27667,54 @@
       },
       "star_rating": 3,
       "verdict": "對中文 Minecraft 玩家與 WPF/VB.NET 開發者是不錯的參考資源,但授權特殊、無測試且原始碼並非即時同步,對 AI 研發工程師而言屬非必看。",
+      "_mode": "full"
+    }
+  },
+  "Renhuai123/ziwei-doushu": {
+    "first_seen": "2026-10-24",
+    "last_seen": "2026-10-24",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-24": [
+        6862,
+        546,
+        5,
+        "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-24",
+    "analysis": {
+      "one_liner": "以倪海厦《天纪》體系為本的開源紫微斗數排盤引擎(TypeScript/Next.js),附古籍原文、格局知識庫與 67.5 萬命盤解讀資料集。",
+      "summary": "這是一個以 iztro 與 lunar-javascript 為基礎的紫微斗數排盤專案,含真太陽時校正、中國夏令時、農曆/公曆轉換、星曜亮度流派切換、四化與十二神煞等演算法,並附 Next.js 示範介面。專案同時公開《天紀》逐字稿語料(1848 條)、古籍原文,以及由引擎確定性生成(不經 AI)的 v4.0 解讀資料集(透過 Release 下載)。斷語庫與後端 API 不開源,介面僅為 Demo。",
+      "category": "library",
+      "highlights": [
+        "排盤引擎模組完整:真太陽時(NOAA 均時差)、中國夏令時、閏月與晚子時口徑、流派亮度表、運限與童限",
+        "附 9 條回歸測試並有 GitHub Actions CI(npm ci + typecheck + npm test),且已提交 package-lock.json",
+        "公開 v4.0 解讀資料集:674,976 張命盤 × 13 維,壓縮後 161 MB、附 SHA256 校驗,資料採 CC BY 4.0",
+        "收錄倪師《天紀》紫微斗數 14 講逐字稿與古籍原文,並清楚劃分程式碼 MIT、資料 CC BY、原話非商用的授權邊界",
+        "程式碼註解詳盡,記錄修正歷史與古籍出處依據,維護紀錄透明"
+      ],
+      "use_cases": [
+        "在自己的應用中嵌入紫微斗數排盤與真太陽時校正",
+        "取得大規模命盤解讀資料,用於研究或 NLP 實驗",
+        "研究《天紀》體系、四化與格局規則的程式化實作",
+        "作為 Next.js 命理類網站的前端範本參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 詳盡(中英雙語、更新日誌、資料規格、授權與開源邊界),另有貢獻指南與 issue/PR 模板。測試為排盤回歸腳本(以 tsx 直接執行,無測試框架),涵蓋邊界案例但數量有限。最近推送為 2026-10-20,更新頻繁。程式碼註解細緻,但演算法檔案夾雜大量歷史修正註記;引擎以全域 astro.config 設定,有狀態副作用。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "若你需要中文紫微斗數排盤引擎或大型命理資料集,這個專案完整、文件與授權清楚,值得收藏;但斷語庫與後端不開源,且屬傳統術數領域。",
       "_mode": "full"
     }
   }
