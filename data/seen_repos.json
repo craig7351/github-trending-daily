@@ -2016,7 +2016,7 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-07",
+    "last_seen": "2026-10-25",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
@@ -2075,44 +2075,52 @@
         5,
         "The design language that makes your AI harness better at design.",
         "JavaScript"
+      ],
+      "2026-10-25": [
+        86423,
+        619,
+        6,
+        "The design language that makes your AI harness better at design.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-09-24",
+    "last_analyzed": "2026-10-25",
     "analysis": {
-      "one_liner": "一套讓 AI coding agent(如 Claude Code、Cursor、Codex)產出前端設計更有質感的技能包與規則集。",
-      "summary": "Impeccable 是針對 AI coding agent 設計的「設計語言」套件,提供 1 個 skill、24 個指令與 61 條確定性(非 LLM)偵測規則,用來對抗 AI 生成前端常見的「千篇一律」問題(如過度使用 Inter 字體、紫藍漸層、卡片疊卡片等)。它透過 PRODUCT.md/DESIGN.md 紀錄產品脈絡,並提供 audit、critique、polish 等指令供多種 AI 開發工具串接使用。",
+      "one_liner": "為 AI 程式碼代理打造的設計技能包:1 個 skill、24 個指令與 62 條確定性偵測規則,對抗 AI 生成前端的千篇一律。",
+      "summary": "Impeccable 是一套給 Claude Code、Cursor、Codex、Gemini CLI 等 AI 編碼工具使用的設計指引,起源於 Anthropic 的 frontend-design skill。透過 `/impeccable init` 建立 PRODUCT.md,再用 polish、audit、critique 等 24 個指令統一設計詞彙。CLI 與瀏覽器擴充套件可執行不需 LLM 的偵測規則,用來避免 Inter 字體、紫藍漸層、卡片巢狀等常見 AI 設計痕跡。",
       "category": "devtool",
       "highlights": [
-        "提供 24 個設計相關指令(polish、audit、critique、animate 等)與 61 條確定性偵測規則,CLI 與瀏覽器擴充功能可在無 LLM/API key 下執行檢查",
-        "支援眾多 AI coding 工具:Claude Code、Cursor、Codex CLI、Gemini CLI、Grok Build、GitHub Copilot 等,安裝方式多元(CLI installer、Git submodule、外掛市集、手動複製)",
-        "明確列出常見 AI 生成設計的反模式(過度使用 Inter 字體、紫藍漸層、卡片疊卡片、彈跳緩動等)作為設計指引",
-        "GitHub 累積星數高達 7 萬顆,今日再新增 304 顆,顯示社群關注度持續攀升",
-        "透過 PRODUCT.md/DESIGN.md 分離「產品長期事實」與「視覺風格」,設計上有一定的架構思考"
+        "支援極廣:Claude Code、Cursor、Codex、Gemini CLI、Copilot、Grok、Hermes、OpenCode 等十餘種工具",
+        "62 條確定性偵測規則,CLI 與瀏覽器擴充套件不需 LLM 或 API Key 即可執行",
+        "24 個指令形成共用設計詞彙(craft、shape、audit、polish、harden 等),另有 live 瀏覽器變體迭代模式",
+        "以 PRODUCT.md / DESIGN.md 分離長期產品事實與視覺方向,讓後續指令有穩定脈絡",
+        "安裝方式多元:npx 安裝器、Git submodule、Claude Code plugin、VS Code 擴充、手動複製"
       ],
       "use_cases": [
-        "使用 Claude Code、Cursor 等 AI coding agent 開發前端介面時,套用一致的設計語言避免「AI 味」設計",
-        "團隊想標準化 AI 產生 UI 的品質查核流程(a11y、效能、響應式等技術審查)",
-        "個人或新專案想快速套用一套設計原則、動畫與配色指引,加速從雛形到可上線的視覺打磨"
+        "讓 AI 生成的前端介面擺脫通用 SaaS 模板風格",
+        "在本機或 CI 以確定性規則檢查前端設計反模式",
+        "團隊以 submodule 統一管理跨工具的設計技能",
+        "對既有頁面進行 critique、audit、polish 的最後優化流程"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 內容詳盡,涵蓋多種工具的安裝步驟與指令說明,但因未檢視原始碼,測試品質僅能以 README 描述為準,無法確認實際測試涵蓋率;專案於 2026-09-24 有推送紀錄,且今日仍在 trending 榜單上,活躍度高。"
+        "comment": "README 結構完整,涵蓋指令表、範例、多工具安裝與信任設定說明,並有官網與案例研究。僅憑 README 評估,無法檢視程式碼與測試。最近才推送,星數高且今日仍在趨勢榜,活躍度很高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 說明安裝流程會下載一個獨立執行檔(binary)至 ~/.impeccable/bin/ 並於首次執行時啟動,屬於執行外部下載程式碼的行為",
-          "多個整合對象(如 Codex、Grok Build)在 README 中被明確要求使用者需手動核准/信任 hook 才能執行,顯示該工具會安裝可自動觸發的 hook 腳本,使用前建議依官方文件確認信任範圍",
-          "僅根據 README 進行評估,未檢視原始碼或執行檔內容,無法進一步驗證實際行為"
+          "README 說明啟動器會在首次執行時下載一個獨立二進位檔到 ~/.impeccable/bin/,建議使用前確認來源與完整性。",
+          "安裝器可為 Claude Code、Cursor、Codex 等寫入專案層級的 hook 設定,README 指出 Codex 與 Grok 需使用者明確信任或核准後才會執行。",
+          "本評估僅依據 README,未進行原始碼層級審查。"
         ]
       },
       "star_rating": 4,
-      "verdict": "若團隊大量使用 AI coding agent 產出前端介面,這套工具值得一試,但安裝時牽涉下載執行檔與自動 hook,建議先讀懂信任機制再上線。",
+      "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 9,
+    "total_days_on_trending": 10,
     "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat-android": {
@@ -20587,10 +20595,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-24",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-10-25",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -20658,6 +20666,13 @@
       "2026-10-24": [
         42155,
         2716,
+        1,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-10-25": [
+        44572,
+        2264,
         1,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
@@ -24259,10 +24274,10 @@
   },
   "NVIDIA/OpenShell": {
     "first_seen": "2026-09-30",
-    "last_seen": "2026-10-24",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-25",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-09-30": [
         10615,
@@ -24296,6 +24311,13 @@
         18805,
         1119,
         4,
+        "OpenShell is the safe, private runtime for autonomous AI agents.",
+        "Rust"
+      ],
+      "2026-10-25": [
+        19481,
+        896,
+        2,
         "OpenShell is the safe, private runtime for autonomous AI agents.",
         "Rust"
       ]
@@ -27565,15 +27587,22 @@
   },
   "luongnv89/claude-howto": {
     "first_seen": "2026-10-23",
-    "last_seen": "2026-10-23",
+    "last_seen": "2026-10-25",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-23": [
         43215,
         177,
         8,
+        "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+        "Python"
+      ],
+      "2026-10-25": [
+        44569,
+        392,
+        5,
         "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
         "Python"
       ]
@@ -27716,6 +27745,328 @@
       "star_rating": 4,
       "verdict": "若你需要中文紫微斗數排盤引擎或大型命理資料集,這個專案完整、文件與授權清楚,值得收藏;但斷語庫與後端不開源,且屬傳統術數領域。",
       "_mode": "full"
+    }
+  },
+  "aws/agent-toolkit-for-aws": {
+    "first_seen": "2026-10-25",
+    "last_seen": "2026-10-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-25": [
+        3131,
+        13,
+        3,
+        "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-25",
+    "analysis": {
+      "one_liner": "AWS 官方推出的 Agent Toolkit,把 AWS MCP Server 設定、技能(skills)與外掛打包,讓 Claude Code、Codex、Cursor、Devin、Kiro 等 AI 程式代理能在 AWS 上建置、部署與管理應用。",
+      "summary": "這個儲存庫以 plugin marketplace 的形式,提供 aws-core、aws-agents、aws-data-analytics、aws-agents-for-devsecops、aws-startup-advisor 等外掛。每個外掛都包含 MCP 設定與 SKILL.md 技能,涵蓋 CDK/CloudFormation、無伺服器、可觀測性、AI/ML、資料分析與 DevSecOps 等主題。它還附有 rules 檔,以及 Claude Code 的安全 hook。AWS 稱它是 AWS Labs MCP 專案的後繼者,並強調 IAM 條件鍵可區分代理與人類操作,也提供 CloudWatch 與 CloudTrail 稽核。",
+      "category": "ai-ml",
+      "highlights": [
+        "官方背書:同時支援 Claude Code、Codex、Cursor、Devin、Kiro、fx 等多種代理,各代理有對應的 marketplace manifest",
+        "託管的 AWS MCP Server 涵蓋 300 多項 AWS 服務,提供沙箱 Python 執行與即時文件搜尋,並可用 IAM 條件鍵區分代理與人類操作",
+        "內含 PreToolUse hook(secret-safety.py),會阻擋代理直接呼叫 get-secret-value,且為防 regex 回溯而特別設計",
+        "agents-pay 的 x402 付款政策閘門以程式碼決策,採用預設拒絕與設定檔權限檢查,不依賴模型輸出作為授權",
+        "CI 完整:markdownlint、manifest/skill 驗證、外掛一致性檢查、gitleaks、CodeQL、Scorecard、dependency-review,且 action 皆以 SHA 固定版本"
+      ],
+      "use_cases": [
+        "讓 Claude Code 或 Cursor 等代理在 AWS 上設計架構、撰寫 CDK/CloudFormation 並部署",
+        "用 aws-agents 外掛在 Bedrock AgentCore 上建置 AI agent",
+        "用 DevOps Agent 與 Security Agent 外掛處理事故調查、程式碼弱點掃描與發版前驗證",
+        "為團隊制定受控的 AWS 代理使用方式,搭配 IAM 條件鍵、CloudTrail 稽核與 rules 檔"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 的各代理安裝步驟清楚,每個外掛也有自己的 README。測試方面,agents-pay 與 observability 等腳本旁有單元測試,tools/ 也有驗證工具測試。不過大量技能內容(markdown 與程式碼範本)主要靠 frontmatter 與一致性檢查把關,而非功能測試。最後推送時間近,有 9 個 workflow、CODEOWNERS 與 dependabot,維護活躍。我只讀了 README、build.yml、mise.toml 與三個樣本檔,沒有逐一讀完全部約 390 個 Python 檔。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "此專案沒有 npm 的 postinstall 等生命週期腳本。我只看了 mise.toml 與 build.yml,安裝流程是 README 中的 /plugin install、npx skills add 與 uvx 指令。",
+          "README 的 MCP 設定使用 `uvx mcp-proxy-for-aws-cli@latest`,會在執行時從 PyPI 拉取最新版套件,且未固定版本;使用者可自行評估是否改為固定版本。",
+          "外掛的 .mcp.json 會連線至 AWS 網域端點(如 knowledge-mcp.global.api.aws、aws-mcp.us-east-1.api.aws),代理的請求會送往這些遠端服務。",
+          "技能與程式碼範本含 AWS 操作腳本,包括部署、SageMaker 訓練與 agents-pay 的付款功能。這些操作需要 AWS 憑證,可能產生費用或變更帳號資源,建議在最小權限的 IAM 角色與非正式環境下使用。",
+          "mise.toml 的 gitleaks 與 uv 使用 latest 版本,屬於開發與 CI 工具,未固定版本。",
+          "未發現混淆程式碼、內嵌 base64 長字串或被提交的二進位檔。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "如果你用 AI 程式代理操作 AWS,這是官方出品、設計謹慎且值得先試的工具包。建議先裝 aws-core,並以最小權限的 IAM 角色使用。",
+      "_mode": "full"
+    }
+  },
+  "Nutlope/hallmark": {
+    "first_seen": "2026-10-25",
+    "last_seen": "2026-10-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-25": [
+        32153,
+        455,
+        4,
+        "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "CSS"
+      ]
+    },
+    "last_analyzed": "2026-10-25",
+    "analysis": {
+      "one_liner": "Together AI 推出的「反 AI 味」設計 Agent Skill,內含 48 套主題與瀏覽器渲染 lint,適用 Claude Code、Codex、Cursor、OpenCode。",
+      "summary": "Hallmark 是一套 Agent Skill,目的是讓 AI 產生的網頁不再帶有典型的「AI slop」特徵,例如每個標題上方的小標籤、只有單字上色的標題、看似送出實則沒有作用的表單。它從 48 套「材質」主題中挑出 3 套供選擇,依頁面用途排版,再用 sloplint 在真實瀏覽器中以八種寬度檢查,最後由全新上下文的子代理審查。它也支援對既有頁面做 redesign 與 audit。",
+      "category": "ai-ml",
+      "highlights": [
+        "檢查分三層:Floor(對比、焦點、手機版面等,不可出貨)、Reflex(模型的預設習慣,可附理由推翻)、Finish(只提供工藝建議)",
+        "48 套主題,每套是不超過 8KB 的 Markdown 並附完成頁截圖,一次建置只讀取其中一套",
+        "sloplint 搭配 puppeteer 在八種寬度渲染檢查,並提供編輯時觸發的 Claude Code hook",
+        "redesign 流程用 --before 與 --kept 記錄並驗證連結、欄位與處理函式未遺失",
+        "照片庫只列出 Wikimedia Commons 連結,不含圖檔,並在頁面標註授權;另附多模型評測腳本(eval/)"
+      ],
+      "use_cases": [
+        "讓 Claude Code 或 Cursor 產生的 landing page 更有設計感、少一點模板味",
+        "對既有前端專案做 audit,找出看起來像機器生成的設計問題",
+        "把設計規範與 lint 規則整合進團隊的 AI 輔助前端工作流程",
+        "研究如何把設計品味寫成 Agent Skill 的提示詞與規則"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 清楚,涵蓋安裝、流程與各 harness 的對照表,另有 ROADMAP 與評測說明。沒有傳統單元測試,但 GitHub Actions 的 verify 工作流程會跑 refcheck.mjs(檢查參考文件、規則、fixture 與連結一致)、驗證所有主題,並確認主題索引為最新。最近推送時間為 2026-10-22,維護活躍。專案以 Markdown 與 Node 腳本為主,CSS 為主要語言的標示僅反映範例頁面。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 沒有 preinstall、postinstall、prepare 等生命週期腳本,只有一個本機預覽用的 serve 腳本。",
+          "install-hook.mjs 會修改 Claude Code 的 settings.json(專案或 --global 的全域設定),新增一個 PostToolUse hook 在編輯檔案後執行 lint-hook.mjs;提供 --print 預覽與 --remove 移除,寫入前會檢查 JSON 格式並以暫存檔改名方式寫入。這是使用者主動執行的選用步驟,但會讓每次編輯後自動執行本機腳本,啟用前建議先檢視。",
+          "腳本中使用 child_process 的地方包括執行 `npm root -g` 尋找全域 puppeteer、以 node 呼叫專案內的腳本,未發現執行遠端下載內容的情形。",
+          "imagegen.mjs 會呼叫 api.together.xyz 的圖片生成 API,theme.mjs 的照片功能只允許下載 upload.wikimedia.org 的網址;兩者皆為文件所述功能,使用圖片生成需自備 Together API 金鑰。",
+          "安裝方式為 `npx skills add nutlope/hallmark -g`,會從第三方工具下載並安裝技能檔案,另外瀏覽器檢查需自行 `npm i -g puppeteer-core`。未發現 curl|bash 安裝、混淆程式碼或內嵌的長 base64 內容。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想讓 AI 產生的前端頁面不那麼千篇一律的人值得關注:規則完整、有瀏覽器渲染 lint 與 CI 驗證,安裝風險低,啟用 hook 前先看過即可。",
+      "_mode": "full"
+    }
+  },
+  "pollen-robotics/microduck": {
+    "first_seen": "2026-10-25",
+    "last_seen": "2026-10-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-25": [
+        10997,
+        319,
+        7,
+        "A Tiny biped duck robot 🦆",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-10-25",
+    "analysis": {
+      "one_liner": "Pollen Robotics 的 Microduck 小型雙足鴨機器人韌體:以 Rust 寫成,用強化學習(RL)策略驅動 15 顆伺服馬達行走。",
+      "summary": "這個 repo 是 Microduck(約 25 公分、800 克)的「大腦」。它是一個 Rust workspace,在 Rockchip RK3566 上執行多個 daemon:50 Hz 控制迴圈(以 ONNX 策略驅動伺服)、藍牙、手把、WebRTC 相機串流、深度感測,以及簽章驗證、可回滾的 OTA 更新機制。策略訓練在另一個 repo(microduck_rl),這裡負責載入 ONNX 並部署,另附 MuJoCo 模擬器與開發者工具。",
+      "category": "framework",
+      "highlights": [
+        "完整的機器人軟體堆疊:robotd(控制迴圈)、updaterd、configd、btd、padd、mediad、tofd,透過 Unix socket 上的單一 JSON-RPC 契約溝通",
+        "更新機制使用 minisign 簽章驗證與健康檢查把關,失敗可自動回滾;開發金鑰與正式金鑰分開管理",
+        "RL 策略(ONNX)放在 Hugging Face Hub,不必隨 daemon 發版;版本釘選由測試確保各處一致",
+        "CI 完整:fmt、clippy(-D warnings)、workspace 測試、aarch64 原生容器測試、shellcheck,以及 70% 行覆蓋率門檻",
+        "docs/design 記錄設計決策與已知問題,並附 duck-sim,沒有硬體也能用 MuJoCo 跑真實 daemon"
+      ],
+      "use_cases": [
+        "研究 sim2real:了解 RL 策略如何從 MuJoCo 匯出 ONNX,再部署到真實雙足機器人",
+        "參考嵌入式 Rust 機器人系統架構,包括多 daemon 設計與簽章 OTA 更新",
+        "購買或開發 Microduck 的使用者與貢獻者,用它做控制、設定與二次開發",
+        "學習 Rust workspace 的 CI、交叉編譯(zig)與硬體相關程式的測試做法"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件很完整,有 README、CONTRIBUTING、架構與設計文件、cheatsheet 和模擬器指南,程式碼註解詳細並說明決策原因。全 repo 約 1700 處 #[test],CI 分 check、board、coverage 三個 job,並有覆蓋率下限。與硬體直接相關的程式(如 Dynamixel 驅動)未被測試涵蓋,CI 註解也坦承這點。最近一次 push 為 2026-10-24,近日每天都有提交。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "文件建議使用 `curl -fsSL https://raw.githubusercontent.com/pollen-robotics/microduck/main/scripts/install-duckctl.sh | sh` 安裝客戶端 duckctl。腳本會下載 tar.gz 並安裝,建議使用前先檢視腳本內容。",
+          "scripts/ 下的 install.sh、setup-board.sh、setup-gstreamer.sh 等板端安裝腳本設計成可用 curl 管線執行,並會從外部下載 ONNX Runtime、Rockchip RKNN 執行階段、Hugging Face 上的策略與偵測模型,以及預編譯的 GStreamer 外掛。版本在 Cargo.toml 的 metadata 中釘選。這些腳本在機器人上以高權限執行,適合有硬體並了解其行為的使用者。",
+          "deploy/dev-key/team.dev.pub 是 minisign 公開金鑰,並非私鑰。依文件說明,開發金鑰只有在機器人的 trusted_keys_dir 內且 allow_dev_keys = true 時才會被接受,預設兩者皆關閉。",
+          "未發現混淆程式碼、內嵌長 base64 payload,或可疑的相依套件名稱。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "這是少見的完整開源機器人韌體,工程品質高、文件詳盡,對研究 sim2real 與嵌入式 Rust 的人很值得關注。",
+      "_mode": "full"
+    }
+  },
+  "google-gemini/gemini-cli": {
+    "first_seen": "2026-10-25",
+    "last_seen": "2026-10-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-25": [
+        108056,
+        44,
+        8,
+        "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-25",
+    "analysis": {
+      "one_liner": "Google 官方開源的終端機 AI 代理程式,把 Gemini 模型接進命令列,支援 MCP、沙箱與自訂指令。",
+      "summary": "gemini-cli 是以 TypeScript 撰寫的 monorepo(packages/* 工作區),以 npm、npx 或 Homebrew 安裝,提供 `gemini` 指令。它在終端機中用 Ink 建構 TUI,讓 Gemini 模型讀寫程式碼、呼叫工具並串接 MCP。專案附有 Docker/Podman 沙箱、VS Code 夥伴擴充、A2A server 與完整的 eval 機制。",
+      "category": "ai-ml",
+      "highlights": [
+        "Apache-2.0 授權,Google 官方維護,版本採 nightly/preview/latest 三種發佈通道",
+        "支援 MCP client、沙箱執行(Docker/Podman)與 A2A server,可擴充性高",
+        "測試分層完整:單元、整合、行為 eval、記憶體與效能基準(memory-tests、perf-tests)",
+        "CI/CD 工作流程多達四十餘個,涵蓋自動分流 issue、nightly 發佈、回滾與文件稽核",
+        "repo 內含 .gemini/skills 與 commands,把自家 AI 代理用於專案開發流程"
+      ],
+      "use_cases": [
+        "在終端機以自然語言進行程式碼閱讀、除錯與重構",
+        "搭配 MCP 伺服器把內部工具或資料源接入 AI 代理",
+        "研究大型 CLI 代理的架構、沙箱與評測(eval)設計",
+        "在 CI 或自動化腳本中以非互動模式呼叫 Gemini"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,包含 docs 目錄、設定 schema 自動產生與 changelog 技能。測試涵蓋單元、整合、eval、記憶體與效能,並有大量 CI 工作流程。最後推送時間為 2026-10-24,版本為每日 nightly,維護非常活躍。此次僅閱讀 package.json、README 與 CI 清單,未深入抽樣核心原始碼。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "根目錄 package.json 的 `prepare` 腳本為 `husky && npm run bundle`,從原始碼安裝(npm install)時會自動執行 bundle 建置流程;透過 npm 安裝已發佈套件不受此影響",
+          "package.json 的 overrides 將部分依賴替換為替代套件,例如 `node-domexception` 改為 `npm:empty`、`prebuild-install` 改為 `npm:nop`,屬常見的依賴精簡做法,使用者可知悉即可",
+          "README 提供 `npx @google/gemini-cli`、`npm install -g` 與 `brew install` 安裝方式,未見 curl | bash 形式的安裝指令",
+          "作為會執行 shell 指令、讀寫檔案的 AI 代理,使用時建議了解其權限與沙箱設定(Docker/Podman 沙箱為可選項)",
+          "本次未見混淆程式碼或內嵌的長 base64 內容"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "Google 官方、活躍度與工程品質都很高的終端機 AI 代理,對從事 AI 研發與代理工具的工程師很值得關注與研究。",
+      "_mode": "full"
+    }
+  },
+  "jbiaojerry/ebook-treasure-chest": {
+    "first_seen": "2026-10-25",
+    "last_seen": "2026-10-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-25": [
+        22612,
+        227,
+        9,
+        "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-25",
+    "analysis": {
+      "one_liner": "以 Markdown 分類彙整大量中文電子書(epub/mobi/azw3)網盤下載連結,並附 GitHub Pages 即時搜尋與每日自動同步的資源索引庫。",
+      "summary": "這是一個以中文書籍為主的電子書下載連結索引庫,依標籤把書名、作者與網盤下載連結整理在 md/ 目錄下上千個分類 Markdown 檔中。專案內的 Python 腳本每天透過 GitHub Actions,從一個以 GitHub Secret(BOOK_SITE_DOMAIN)設定、網域未公開的外部書站抓取新書,更新 README 熱門分類與 docs/all-books.json,並由 GitHub Pages 提供多關鍵字即時搜尋。內容本身是連結清單,不是軟體工具。",
+      "category": "data",
+      "highlights": [
+        "md/ 下有上千個依標籤分類的 Markdown 書單,涵蓋文學、歷史、科普、管理,以及 Python、AI、Linux 等技術書",
+        "提供 GitHub Pages 前端(docs/index.html + search.js)與 all-books.json,支援多關鍵字即時搜尋",
+        "GitHub Actions 每日排程做增量同步(比對最大書籍 ID,只處理新增),並自動重建 README 與 JSON 索引",
+        "Python 腳本分工清楚(find_max_book_id、incremental_sync、parse_md_to_json),依賴只有 requests、beautifulsoup4、aiohttp",
+        "README 的熱門分類區塊由腳本自動產生,並標示各分類的書籍數量"
+      ],
+      "use_cases": [
+        "查找中文電子書(epub/mobi/azw3)的網盤下載來源",
+        "參考「增量同步 + 靜態 JSON + GitHub Pages 搜尋」的資料索引站架構",
+        "挑選中文技術書單(Python、AI、Linux 等)作為閱讀清單參考"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 1,
+        "activity": 4,
+        "comment": "README 大半是自動產生的分類索引,使用方式與架構說明很簡短,也沒有標示授權條款。腳本結構清楚,註解與日誌訊息完整。倉庫中沒有正式的測試套件,只有一支名為 test_batch_sync.py 的批次同步腳本。有 3 個 GitHub Actions workflow 負責每日更新;最近一次推送是 2026-01-13。內容品質取決於上游書站,且同步用的書站網域放在 Secret 中沒有公開,外界難以驗證資料來源。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "書單中的下載連結指向第三方網盤(例如 ctfile.com),檔案內容由外部託管,本次分析未檢視也無法驗證其安全性,下載前請自行留意。",
+          "同步腳本會連線到由環境變數 BOOK_SITE_DOMAIN 指定的外部網域抓取頁面;網域值存放在 GitHub Secret 中,倉庫內看不到實際位址。",
+          "GitHub Actions 的 workflow 具有 contents: write 權限,排程執行後會自動 git commit 並 push 到 main;這是自動更新資料的常見做法,使用者了解即可。",
+          "本次檢視的腳本中,未發現 eval/exec、base64 內嵌酬載、curl|bash 安裝流程或 install 階段腳本;subprocess 僅用於呼叫專案內的 parse_md_to_json.py。",
+          "README 與賑賞碼圖片是對作者的捐助入口;專案是否擁有這些書籍的散布授權並未標示,使用者需自行留意版權風險。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "對想找中文電子書資源的人實用,技術上也是一個簡潔的自動化索引站範例;但內容的版權與連結可靠性無法從倉庫驗證,值得瞭解架構,不必視為必看。",
+      "_mode": "full"
+    }
+  },
+  "makecindy/cindy": {
+    "first_seen": "2026-10-25",
+    "last_seen": "2026-10-25",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-25": [
+        4106,
+        477,
+        10,
+        "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-25",
+    "analysis": {
+      "one_liner": "開源、開箱即用的本機 AI Agent 客戶端,整合 Claude Code 與 Codex 等多種 harness 與模型,支援桌面與手機。",
+      "summary": "Cindy 是以 TypeScript 開發的開源 AI Agent 客戶端(pnpm monorepo),包含 Electron 桌面版與 Expo/React Native 行動版。它在本機運行,可使用真實檔案與已登入的應用,並讓不同 harness(目前支援 Claude Code、Codex)與模型在任務中途切換,同時保留記憶、技能與工具的連續性。後端服務不在此倉庫內。",
+      "category": "ai-ml",
+      "highlights": [
+        "多 harness × 多模型混用,可在任務中途切換,記憶、技能與工具保持連續",
+        "可沿用既有 Claude Code / Codex Coding Plan,也可自帶 API Key 或使用本地模型",
+        "支援操控瀏覽器、電腦與手機,並可從 IM 與排程接收任務",
+        "提供記憶、技能、自動化、MCP 與外掛等可擴充機制,採 Apache-2.0 授權",
+        "桌面(Electron)與行動(React Native)雙端,文件與貢獻流程(DCO)完整"
+      ],
+      "use_cases": [
+        "想在個人電腦上以統一介面使用 Claude Code 與 Codex 完成實際工作",
+        "研究多 Agent 跨 harness/模型協作、規劃、平行執行與審查的架構",
+        "需要透過 MCP 與技能把內部工具接入 Agent 的團隊",
+        "參考 Electron + React Native 的 monorepo Agent 客戶端實作"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,涵蓋定位、倉庫結構、前置需求、貢獻、隱私與授權,並連結大量延伸文件。僅憑 README 評估,無法檢視程式碼與測試(有 CI 徽章)。推送時間為近日且上榜首日增星快,活躍度高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 說明預設連線至官方雲端服務,桌面版自動更新來自官方 CDN;未進行原始碼層級審查。",
+          "官方發行版內含 TapDB 使用統計與登入後的線上心跳(帳號 ID、平台、版本),README 聲明不收集對話、檔案內容或工作目錄資料。",
+          "pnpm install 會依平台下載 claude-code、codex、ripgrep 等工具二進位檔;Agent 在本機使用真實檔案與已登入應用,使用時應留意權限範圍。",
+          "README 未出現 curl | bash 之類的安裝指令。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想看整合 Claude Code/Codex 的開源多 harness Agent 客戶端值得關注;部分功能仰賴官方雲端服務,後端不開源。",
+      "_mode": "light"
     }
   }
 }
