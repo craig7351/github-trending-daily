@@ -2016,8 +2016,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-25",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-26",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -2082,6 +2082,13 @@
         6,
         "The design language that makes your AI harness better at design.",
         "Rust"
+      ],
+      "2026-10-26": [
+        87704,
+        1092,
+        4,
+        "The design language that makes your AI harness better at design.",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-10-25",
@@ -2120,8 +2127,8 @@
       "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 10,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 11,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -6699,10 +6706,10 @@
   },
   "TauricResearch/TradingAgents": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-10-26",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-09": [
         96733,
@@ -6745,42 +6752,50 @@
         11,
         "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "Python"
+      ],
+      "2026-10-26": [
+        114618,
+        381,
+        6,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-10",
+    "last_analyzed": "2026-10-26",
     "analysis": {
-      "one_liner": "用多個 LLM Agent 模擬真實交易公司分工(分析師、研究員、交易員、風控),協同產生股票交易決策的研究框架。",
-      "summary": "TradingAgents 用 LangGraph 建構一組角色化 LLM Agent(基本面/情緒/新聞/技術分析師、多空研究員、交易員、風控與投資組合經理),透過結構化辯論與流程圖產生交易訊號。專案支援十餘家 LLM 供應商、多市場代碼(美股、港股、日股、加密貨幣等)、決策日誌記憶與 LangGraph checkpoint 續跑機制,定位為金融多代理人研究工具而非實盤交易系統。",
+      "one_liner": "以 LangGraph 模擬真實交易公司運作的多代理 LLM 金融交易研究框架,支援多家模型供應商與回測。",
+      "summary": "TradingAgents 把交易流程拆成基本面、情緒、新聞、技術四類分析師,再由多空研究員辯論、交易員、風控團隊與投資組合經理逐層決策。底層以 LangGraph 編排,提供 CLI、Python 套件與 Docker 執行方式。專案定位為研究用途,並明確聲明不構成投資建議。",
       "category": "ai-ml",
       "highlights": [
-        "模組化架構清晰:agents/dataflows/graph/llm_clients 分層明確,搭配 LangGraph 做流程編排與 checkpoint 續跑",
-        "測試覆蓋面廣,tests/ 目錄下有 60+ 個測試檔涵蓋各供應商、資料驗證、路徑穿越防護、checkpoint 生命週期等",
-        "CI 設定完善:多版本 Python(3.10–3.13)矩陣測試、乾淨安裝 smoke test、ruff 嚴格 lint 全倉庫檢查",
-        "程式碼中主動處理安全與正確性邊界案例,例如 ticker 路徑穿越防護(safe_ticker_component)、symbol 正規化避免幻覺價格、point-in-time 記憶過濾避免回測學到未來資訊",
-        "CHANGELOG 顯示版本迭代頻繁(v0.2.0 到 v0.4.0),持續修正 look-ahead bias、crash-safety 等實務問題"
+        "角色分工完整:四類分析師並行 → 多空辯論 → 交易員 → 風控 → 投資組合經理,對應真實交易公司架構,並附 arXiv 論文(2412.20138)",
+        "支援多家 LLM 供應商(OpenAI、Anthropic、Google、Bedrock、Ollama、DeepSeek、Qwen 等及任何 OpenAI 相容端點),且可依模型層級指定不同供應商",
+        "重視 point-in-time 資料完整性:有多個防 look-ahead 的測試(基本面、新聞、社群、SEC EDGAR),並提供回測與 checkpoint 續跑",
+        "工程化程度高:tests/ 下有約百個測試檔、CI 涵蓋 Python 3.11–3.14 與時區矩陣、ruff 嚴格檢查,另有 clean-install 煙霧測試",
+        "版本迭代快(v0.2 至 v0.7.0),CHANGELOG 完整,另附 Dockerfile(非 root 使用者、多階段建置)"
       ],
       "use_cases": [
-        "研究多代理人 LLM 系統在金融決策場景的協作與辯論機制",
-        "作為 LangGraph 應用架構(狀態機、checkpoint 續跑、工具節點)的參考範例",
-        "學術或教育用途探討 LLM 驅動的量化交易策略回測與訊號產生流程",
-        "評估/比較不同 LLM 供應商(OpenAI、Anthropic、Gemini、Qwen、GLM 等)在金融分析任務上的表現"
+        "研究多代理 LLM 在金融決策上的協作與辯論機制",
+        "以歷史資料做策略回測、比較不同模型組合的決策表現",
+        "作為 LangGraph 多代理應用的參考架構,學習工具呼叫、checkpoint 與結構化輸出設計",
+        "產出單一標的的多面向分析報告(HTML)作為研究輔助"
       ],
       "quality": {
-        "docs": 5,
-        "tests": 4,
+        "docs": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "文件詳盡(README 涵蓋安裝、CLI、持久化、可重現性等說明),程式碼註解著重解釋「為何」而非「做什麼」,並附帶 issue 編號追溯設計決策。測試數量多且針對邊界案例(路徑穿越、look-ahead bias、checkpoint 續跑)撰寫,CI 有多版本矩陣與 lint gate。近期(2026-09)持續有版本發布與修正,活躍度高。"
+        "comment": "README 涵蓋架構圖、安裝、CLI、Docker 與版本新聞,並有多語言連結與完整 CHANGELOG。測試覆蓋廣(約百個測試檔,涵蓋資料時間邊界、供應商、CLI、回測等),CI 為多版本矩陣加 ruff 與乾淨安裝檢查。程式碼註解清楚、結構分層明確(有 layering 測試)。最後推送時間與版本節奏顯示維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "Docker 映像使用非 root 使用者(appuser)執行,屬於良好實踐,無異常發現",
-          "程式碼中未發現 eval/exec/os.system/subprocess 等高風險呼叫,也無 curl|bash 型安裝腳本或混淆程式碼",
-          "使用者需注意:此工具會將 ticker、新聞等外部資料餵給 LLM 並執行工具呼叫,專案本身已針對路徑穿越等注入風險做防範(如 safe_ticker_component 驗證檔名字元),使用時仍建議留意 API 金鑰以環境變數管理,勿提交至版控"
+          "未發現 npm 生命週期腳本、curl|bash 安裝流程、混淆程式碼或內嵌長 base64 載荷;pyproject 依賴皆為常見套件(langchain、langgraph、pandas、yfinance 等)",
+          "cli/prompts.py 會以 subprocess 啟動自身 CLI 的 `login chatgpt` 流程(使用 sys.executable,非外部下載內容),並提供使用 ChatGPT 方案登入的功能;使用者應留意其授權範圍與 token 儲存位置",
+          "CLI 在缺少 API 金鑰時會互動式詢問並以 python-dotenv 寫入專案的 .env 檔,使用者應避免將該檔提交到版本控制",
+          "框架會呼叫多個外部資料與 LLM 服務(Yahoo、Alpha Vantage、SEC EDGAR、Reddit、StockTwits 等),資料會送往所選供應商;README 聲明僅供研究,不構成投資建議,實盤使用需自行評估風險"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程品質紮實、文件與測試齊全的多代理人金融研究框架,適合想研究 LLM 協作決策或 LangGraph 應用架構的工程師深入一探,但需謹記其定位是研究工具而非可直接用於實盤的交易系統。",
+      "verdict": "工程品質與測試紀律在同類 LLM 交易專案中相當突出,值得研究多代理架構與回測設計者關注;但屬研究框架,不應直接用於實盤決策。",
       "_mode": "full"
     }
   },
@@ -16196,10 +16211,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-19",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 16,
+    "last_seen": "2026-10-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 17,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -16310,6 +16325,13 @@
         75386,
         2082,
         9,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-26": [
+        86838,
+        1592,
+        3,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -20595,10 +20617,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-25",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 11,
+    "last_seen": "2026-10-26",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 12,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -20674,6 +20696,13 @@
         44572,
         2264,
         1,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-10-26": [
+        46917,
+        2878,
+        10,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
       ]
@@ -27701,15 +27730,22 @@
   },
   "Renhuai123/ziwei-doushu": {
     "first_seen": "2026-10-24",
-    "last_seen": "2026-10-24",
+    "last_seen": "2026-10-26",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-24": [
         6862,
         546,
         5,
+        "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "TypeScript"
+      ],
+      "2026-10-26": [
+        7562,
+        199,
+        7,
         "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "TypeScript"
       ]
@@ -27804,15 +27840,22 @@
   },
   "Nutlope/hallmark": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-25": [
         32153,
         455,
         4,
+        "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "CSS"
+      ],
+      "2026-10-26": [
+        33782,
+        1317,
+        2,
         "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "CSS"
       ]
@@ -27858,15 +27901,22 @@
   },
   "pollen-robotics/microduck": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-25": [
         10997,
         319,
         7,
+        "A Tiny biped duck robot 🦆",
+        "Rust"
+      ],
+      "2026-10-26": [
+        11645,
+        647,
+        5,
         "A Tiny biped duck robot 🦆",
         "Rust"
       ]
@@ -28018,15 +28068,22 @@
   },
   "makecindy/cindy": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-25",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-26",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-25": [
         4106,
         477,
         10,
+        "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+        "TypeScript"
+      ],
+      "2026-10-26": [
+        4876,
+        675,
+        1,
         "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "TypeScript"
       ]
@@ -28067,6 +28124,168 @@
       "star_rating": 4,
       "verdict": "想看整合 Claude Code/Codex 的開源多 harness Agent 客戶端值得關注;部分功能仰賴官方雲端服務,後端不開源。",
       "_mode": "light"
+    }
+  },
+  "JetBrains/thinkrail": {
+    "first_seen": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-26": [
+        1744,
+        51,
+        8,
+        "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-26",
+    "analysis": {
+      "one_liner": "JetBrains 孵化的代理式 IDE,以 pi 編碼代理為核心,結合 git worktree 工作區與活規格(SPEC.md)。",
+      "summary": "ThinkRail 在 pi 編碼代理外包了一層完整 IDE 介面:每個任務在獨立的 git worktree 工作區進行,內建 Monaco 編輯器、終端機、diff 與 PR 流程。它用 SPEC.md 規格圖與可重用 skills 讓代理保有專案知識,並支援 MCP 伺服器。提供桌面 App 與可在瀏覽器開啟的 CLI 兩種形式。",
+      "category": "devtool",
+      "highlights": [
+        "以 git worktree 隔離工作區,可並行跑多個 pi 代理而不污染主分支,並整合 PR、CI 狀態與合併流程",
+        "SPEC.md 規格圖加上 spec_* 工具,讓代理的專案知識跨工作階段保留(spec-driven)",
+        "支援 MCP 伺服器、Agent Skills、子代理與共用計畫,非唯讀的 MCP 呼叫會在聊天中先詢問",
+        "桌面 App 與 CLI 兩種形式,可用 JetBrains AI 或自備 pi 供應商憑證,無自有帳號系統",
+        "Monorepo 規模大(bun + turbo),含邊界檢查、i18n 檢查與多層 e2e 測試,支援英文與簡體中文"
+      ],
+      "use_cases": [
+        "想用 pi 代理做平行 vibe coding,又希望每個任務有獨立分支與目錄",
+        "採用規格驅動開發,需要讓 AI 代理長期維護專案規格",
+        "團隊想以 GUI 管理代理對話、diff 審查與 PR 流程",
+        "研究如何在 pi 之上打造代理式 IDE 與擴充機制"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 完整,涵蓋功能、安裝、更新與解除安裝,另有 CONTRIBUTING、AGENTS.md 與各模組 SPEC.md。伺服器端有大量單元測試(如 git、files、workspaces),並有 e2e、binary/desktop smoke 測試及六個 CI 工作流程,還有 changesets 發版流程。近期持續推送,工程化程度高。專案仍在早期(約 0.1.x),功能與 API 可能快速變動。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 建議以 `curl -fsSL .../install.sh | bash`(macOS/Linux)與 `irm .../install.ps1 | iex`(Windows)安裝 CLI,屬常見的管道執行安裝方式,建議使用者先檢視腳本內容",
+          "install.sh 會從 GitHub Releases 下載二進位檔與 SHA256SUMS,並在安裝前比對 SHA-256 校驗碼",
+          "package.json 的 prepare 腳本僅執行 husky(設定 git hook),未見其他安裝期腳本;trustedDependencies 僅列 biome 與 esbuild",
+          "本身為會執行 shell 指令、操作 git 與連接 MCP 伺服器的代理式工具,使用時應留意授權範圍;README 說明非唯讀的 MCP 呼叫會先詢問,且儲存庫定義的伺服器需經核准才啟用"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "由 JetBrains 維護、工程品質高,針對 pi 代理提供 worktree 隔離與規格驅動的完整 IDE 體驗,對關注代理式開發工具的人值得試用與追蹤。",
+      "_mode": "full"
+    }
+  },
+  "coollabsio/coolify": {
+    "first_seen": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-26": [
+        64387,
+        152,
+        9,
+        "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 360+ one-click services on your own servers.",
+        "PHP"
+      ]
+    },
+    "last_analyzed": "2026-10-26",
+    "analysis": {
+      "one_liner": "可自行架設的開源 PaaS,是 Vercel、Heroku、Netlify 的替代方案,只要 SSH 連線就能在自己的伺服器上部署應用程式、資料庫與 360 多種一鍵服務。",
+      "summary": "Coolify 以 Laravel/PHP 開發,是自架式 PaaS。它能管理多台伺服器,從 Git 部署應用(Nixpacks、Railpack、Dockerfile、Docker Compose),也能執行資料庫與一鍵服務。功能涵蓋自動 HTTPS、PR 預覽、備份、通知、API、CLI、MCP 與團隊權限控管。專案採 Apache-2.0 授權,同時提供付費的 Coolify Cloud。",
+      "category": "infra",
+      "highlights": [
+        "自架 PaaS,只需 SSH 即可管理 VPS、裸機或樹莓派,部署資源與平台脫鉤,停用 Coolify 後既有服務仍可運作",
+        "支援 Nixpacks、Railpack、Dockerfile、Docker Compose 與預建映像,並可由 GitHub、GitLab、Bitbucket、Gitea 觸發部署",
+        "內建 360 多種一鍵服務與多種資料庫,含自動 HTTPS、反向代理、備份、排程任務與通知",
+        "提供 Dashboard、API、CLI 與 MCP 多種管理介面",
+        "測試與 CI 完整:Pest 單元、功能與瀏覽器測試,以及十餘個 GitHub Actions 工作流程;倉庫另附 .agents/skills 供 AI 輔助開發"
+      ],
+      "use_cases": [
+        "個人或小團隊想用低成本 VPS 取代 Vercel、Heroku 的託管費用",
+        "企業內部需要自架 CI/CD 與部署平台,資料與設定留在自己的伺服器",
+        "AI 研發團隊快速自架資料庫、向量庫、n8n 等一鍵服務作為內部工具",
+        "在多台伺服器上集中管理 Docker 應用的部署、備份與監控"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 清楚列出功能、快速安裝與社群資源,另有 CONTRIBUTING 與官方文件站。tests 目錄下有數百個測試檔,Grep 統計約 5900 處測試宣告,涵蓋 Unit、Feature 與 Browser。.github/workflows 有 18 個工作流程,包含建置、發佈與 PR 品質檢查。最後推送時間為 2026-10-25,維護相當活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 快速安裝指令為 `curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash`,會從外部網址下載並以 bash 執行腳本;README 同時提供 scripts/install.sh 供事先檢閱,這在自架工具中很常見,使用者宜先審閱再執行",
+          "scripts/install.sh 在未安裝 Docker 時會執行 `curl -fsSL https://get.docker.com | sh`,也是從外部下載並執行腳本",
+          "scripts/restore-backup-vm.sh 內亦有以 curl 管線執行安裝腳本的寫法",
+          "安裝與運作需要 root 與 Docker 權限,並持有 SSH 金鑰及各伺服器的憑證,建議部署在專用主機並做好存取控管",
+          "package.json 未發現 preinstall、postinstall 或 prepare 等生命週期腳本"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "成熟、活躍且社群龐大的自架 PaaS,適合想擺脫雲端託管費用的團隊,值得優先關注與試用。安裝前請先審閱安裝腳本,並將它部署在隔離的專用主機上。",
+      "_mode": "full"
+    }
+  },
+  "AgriciDaniel/claude-seo": {
+    "first_seen": "2026-10-26",
+    "last_seen": "2026-10-26",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-26": [
+        20880,
+        197,
+        11,
+        "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-26",
+    "analysis": {
+      "one_liner": "Claude Code 的通用 SEO 外掛:26 個子技能加 19 個子代理,涵蓋技術 SEO、E-E-A-T、Schema、GEO/AEO 與 Agent 就緒度稽核。",
+      "summary": "claude-seo 是以 Claude Code plugin 形式發佈的 SEO 稽核工具。輸入網址後,多個專責代理會平行檢查技術 SEO、內容品質、結構化資料、AI 搜尋引用機率、本地與電商 SEO,並產出依優先序排序的行動計畫。它也整合 Google API(GSC、PageSpeed、CrUX、GA4)、漂移監控,以及 PDF/Markdown 報告,另有 9 個選用擴充可接入即時 SEO 資料。",
+      "category": "devtool",
+      "highlights": [
+        "以 /seo audit 一次啟動最多 17 個子代理平行稽核,依優先序輸出報告",
+        "涵蓋較新的 GEO/AEO 與 Agent 就緒度(Lighthouse Agentic Browsing、WebMCP、llms.txt)",
+        "測試檔多達約 80 個,涵蓋 SSRF、ReDoS、API key 遮罩、惡意輸入與安裝器注入等安全面向",
+        "scripts/url_safety.py 集中處理 SSRF 防護與 DNS pinning,取網址的腳本都須經由它",
+        "CI 含 ruff、多版本 Python 與跨平台測試、secret scan、pip-audit,且 GitHub Actions 以 commit SHA 固定版本"
+      ],
+      "use_cases": [
+        "SEO 代理商對每位客戶做每週例行稽核與變更監控",
+        "企業內部 SEO 團隊在改版或審查前快速檢查技術與 AI 搜尋可見度",
+        "自由接案顧問在初次洽談時現場跑稽核,展示分數與優先修正項",
+        "為網站補寫或驗證 Schema.org 標記與 llms.txt"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整:README、COMMANDS、ARCHITECTURE、CHANGELOG、SECURITY、PRIVACY 與貢獻指南齊備。測試規模大(README 標示 1077 項通過),CI 內容紮實。程式碼註解與模組設計清楚,近期仍持續更新。部分行銷內容(如成效數字、付費社群導流)屬宣傳性質,不影響程式品質。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install.sh 會用 git clone 從 GitHub 下載指定 release tag(預設 v2.5.0),把檔案複製到 ~/.claude/skills 與 ~/.claude/agents,並用 sed 改寫文件內的路徑;安裝時會執行 claude-seo setup,建立隔離的 Python 環境並下載 Chromium。",
+          "README 的 curl 安裝範例是先下載、檢視再執行,並未使用 curl | bash;Windows 範例使用 powershell -ExecutionPolicy Bypass 執行本地 install.ps1。uninstall 的提示訊息則寫了 curl ... | bash。",
+          "外掛包含 hooks(hooks/hooks.json、validate-schema.py),在 Claude Code 中以外掛身分執行;使用者安裝前宜先檢視其內容。",
+          "外掛會抓取使用者指定的網址並透過 Playwright 渲染。程式已有 SSRF 防護;CLAUDE_SEO_LOCAL_TARGETS 環境變數可選擇性開放本機目標。",
+          "選用擴充需要各項 API 金鑰(Google、DataForSEO、Moz 等),請妥善保管;倉庫的 CI 內建 secret scan。",
+          "未發現混淆程式碼、內嵌的長 base64 payload 或可疑相依套件名稱。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "這是少見成熟的 Claude Code SEO 外掛,測試與安全工程都做得扎實,SEO 或行銷相關的 AI 研發者值得關注;建議先在隔離環境檢視 hooks 與安裝流程再導入。",
+      "_mode": "full"
     }
   }
 }
