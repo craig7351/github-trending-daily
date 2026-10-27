@@ -1670,8 +1670,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-18",
-    "days_on_trending": 3,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1831,6 +1831,13 @@
         3,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-10-27": [
+        289846,
+        896,
+        5,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-10-18",
@@ -1871,8 +1878,8 @@
       "verdict": "想系統化管理 Claude Code、Codex 等 agent 設定的工程師值得關注。內容龐大,建議只挑需要的 skills 與 hooks 安裝,並先審閱 hooks。",
       "_mode": "full"
     },
-    "total_days_on_trending": 24,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 25,
+    "consecutive_days_on_trending": 1
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -2016,8 +2023,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -2089,6 +2096,13 @@
         4,
         "The design language that makes your AI harness better at design.",
         "Rust"
+      ],
+      "2026-10-27": [
+        89217,
+        1506,
+        6,
+        "The design language that makes your AI harness better at design.",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-10-25",
@@ -2127,8 +2141,8 @@
       "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 11,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 12,
+    "consecutive_days_on_trending": 3
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -4766,10 +4780,10 @@
   },
   "Panniantong/Agent-Reach": {
     "first_seen": "2026-08-03",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-03": [
         64702,
@@ -4819,44 +4833,52 @@
         6,
         "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
         "Python"
+      ],
+      "2026-10-27": [
+        103597,
+        746,
+        10,
+        "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-10-03",
+    "last_analyzed": "2026-10-27",
     "analysis": {
-      "one_liner": "一個 Python CLI,把 Twitter、Reddit、YouTube、GitHub、B站、小紅書等十多個平台包成 AI Agent 可呼叫的讀取與搜尋通道,並附診斷指令。",
-      "summary": "Agent Reach 是 Python 寫的 CLI 與 skill 工具集,替 Claude Code、Cursor、OpenClaw 等 Agent 挑選、安裝並檢查各平台的上游工具,例如 twitter-cli、bili-cli、OpenCLI、yt-dlp、mcporter。每個平台採「首選加備選」多後端路由,`agent-reach doctor` 會回報哪些通道可用、哪些需要設定。它解決的是 Agent 上網時 API 收費、IP 被封、必須登入的整合麻煩。",
+      "one_liner": "讓 AI Agent 以單一 CLI 讀取並搜尋 Twitter、Reddit、YouTube、GitHub、B站、小紅書等平台的網路存取層,不需付費 API。",
+      "summary": "Agent Reach 是 Python CLI,把各平台背後的第三方工具(yt-dlp、bilibili-cli、OpenCLI、CloakBrowser 等)裝好並統一成 `agent-reach <渠道> <動作>` 介面,輸出 JSON 給 Claude Code、Cursor 等 Agent 使用。它補足 Agent 內建搜尋與網頁讀取碰不到的部分,包括需登入的平台、影片字幕與語音轉文字、中文平台,以及結構化資料。需要登入的渠道會使用專用瀏覽器,並從使用者 Chrome 複製該網站的登入狀態。",
       "category": "ai-ml",
       "highlights": [
-        "涵蓋網頁、YouTube、RSS、GitHub、Twitter/X、B站、Reddit、小紅書、LinkedIn、V2EX、雪球、小宇宙等十多個通道",
-        "每個通道有多後端優先序並自動降級,例如 Twitter 依序嘗試 twitter-cli、OpenCLI、bird CLI,後端失效時使用者不用改設定",
-        "內建 `agent-reach doctor` 診斷指令,另有 MCP server 整合(`integrations/mcp_server.py`)與 SKILL.md 技能檔",
-        "安全面設計用心:Cookie 只存本機、採最小權限逐平台擷取,並有 cookie_security、url_security、scrub_credentials 等專門測試",
-        "MIT 授權,tests 目錄有 30 多個測試檔,並有 pytest CI workflow"
+        "統一的 `agent-reach <渠道> <動作>` 介面,另有 `read <URL>` 依網址自動選渠道,涵蓋約 14 個渠道,分為預設、可選、實驗三級。",
+        "第三方工具安裝在 ~/.agent-reach/tools/ 下的私有 venv 或 npm prefix,不污染使用者 PATH,版本並鎖定(例如 yt-dlp==2026.8.19、boss-agent-cli 指向特定 commit)。",
+        "內附 Agent 技能文件(SKILL.md、capabilities、sessions 等),安裝方式是請 Agent 讀取 docs/install.md,由 Agent 自行完成設定。",
+        "tests/ 有約 28 個測試檔,涵蓋 URL 安全性、憑證清除、私有檔案寫入、各渠道契約等,並有 pytest 與 release 兩條 CI workflow。",
+        "中文平台(B站、小紅書、雪球、V2EX、小宇宙)支援完整,對台灣使用者有實用價值。"
       ],
       "use_cases": [
-        "讓 Claude Code 或 Cursor 讀取 YouTube 字幕、網頁內容與 RSS,用於研究與摘要",
-        "為 Agent 建立跨平台輿情搜尋,涵蓋 Twitter、Reddit、B站、小紅書",
-        "在自建 Agent 環境中,用 doctor 檢查各種外部 CLI 工具的安裝與登入狀態",
-        "參考它的多後端路由與通道抽象,設計自己的 Agent 工具層"
+        "讓 Claude Code 或 Cursor 等 Agent 搜尋 Reddit、X、小紅書並讀取貼文與留言",
+        "擷取 YouTube 與 B站字幕,或將 YouTube 與小宇宙播客轉成文字",
+        "在 Agent 工作流程中讀取 GitHub issue/PR、V2EX 討論與雪球行情等結構化資料",
+        "蒐集中文社群輿情與職缺資訊"
       ],
       "quality": {
         "docs": 4,
         "tests": 4,
-        "activity": 4,
-        "comment": "README 完整且有英、日、韓版本,內容偏行銷風格,贊助商區塊佔不少篇幅。程式結構清楚,有 Channel 基底類別、通道契約測試與型別標註,pyproject 設有 ruff 與 mypy。測試涵蓋廣,包含憑證處理與家目錄隔離。最後推送為 2026-09-15,有 CHANGELOG 與 CI。專案依賴許多第三方抓取工具,上游變動會影響穩定度。"
+        "activity": 5,
+        "comment": "README 完整(中英文)且有 SECURITY.md、CHANGELOG、CONTRIBUTING 與 Agent 技能文件。程式碼分成 channels、backends、runtime 三層,結構清楚,依賴與工具版本有鎖定。測試涵蓋面廣,另有 CI 與發佈驗收設定。最近一次推送是 2026-10-25,維護積極。部分功能(Twitter、Facebook、Instagram)標示為實驗性,可能因平台反爬而失效。"
       },
       "security": {
-        "risk_level": "low",
+        "risk_level": "medium",
         "findings": [
-          "README 的主要安裝方式,是請 Agent 讀取 raw.githubusercontent.com 上的 docs/install.md 並照著執行,Agent 會因此執行 pip install 等 shell 指令。使用者可先自行閱讀該文件再決定是否交給 Agent 執行。",
-          "專案有 cookie_extract.py,可從本機 Chrome、Firefox、Edge、Brave、Opera 的 profile 讀取指定平台的 Cookie(Twitter 的 auth_token 與 ct0、B站的 SESSDATA、雪球的 xq_a_token 等)。程式碼採逐平台最小權限擷取,Twitter 與小紅書限定手動匯出;使用前仍應留意這項敏感操作。",
-          "憑證(Twitter token、ct0 等)會存在本機設定檔,並可作為子行程的環境變數傳入;測試中有針對檔案權限與憑證清除的案例。",
-          "會依賴並呼叫多個第三方外部工具(twitter-cli、OpenCLI、rdt-cli、mcporter、yt-dlp 等),其供應鏈與權限不在本專案控制範圍。",
-          "setup 使用 hatchling,未見 npm lifecycle 腳本、混淆程式碼或內嵌 base64 payload;依賴套件名稱皆為常見套件。"
+          "README 的安裝方式是請 Agent 讀取並執行 docs/install.md 的指示,Agent 會因此在本機執行命令;建議先自行閱讀該檔案內容,再決定是否授權 Agent 執行。",
+          "runtime/tools.py 在 Windows 上缺少 uv 時,會用 `powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"` 下載並執行官方安裝腳本。這是常見做法,但屬於執行外部下載內容。",
+          "需登入的渠道會把使用者 Chrome 中該網站的登入狀態(cookie)複製到 Agent Reach 專用瀏覽器,README 說明複製的通常是主賬號,並建議改用小號。使用者應留意帳號與憑證暴露的範圍。",
+          "會自動安裝第三方套件:pip 的 cloakbrowser、bilibili-cli,npm 的 @jackwener/opencli,另有一個釘在特定 commit 的 GitHub zip(boss-agent-cli)。這些上游程式碼不在本專案內,使用者需自行信任。",
+          "README 提醒 PyPI 上同名的 `agent-reach` 套件不是本專案,不應從 PyPI 安裝,只應依 install.md 使用 GitHub 來源,以避免裝錯套件。",
+          "本次檢視的程式碼中未見混淆程式碼、內嵌的長 base64 酬載或 npm 生命週期腳本。"
         ]
       },
       "star_rating": 4,
-      "verdict": "對需要讓 Agent 上網的工程師很實用,工程品質與安全設計都高於一般同類專案,值得關注。使用前建議先審閱 install.md,並留意 Cookie 的處理方式。",
+      "verdict": "實用性高、工程品質扎實的 Agent 上網工具,特別適合需要存取中文平台或登入牆後內容的人。安裝與登入狀態複製都涉及較高權限,建議先看 install.md,並搭配小號使用。",
       "_mode": "full"
     }
   },
@@ -6706,10 +6728,10 @@
   },
   "TauricResearch/TradingAgents": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-09": [
         96733,
@@ -6757,6 +6779,13 @@
         114618,
         381,
         6,
+        "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "Python"
+      ],
+      "2026-10-27": [
+        116103,
+        1395,
+        2,
         "TradingAgents: Multi-Agents LLM Financial Trading Framework",
         "Python"
       ]
@@ -12898,10 +12927,10 @@
   },
   "multica-ai/andrej-karpathy-skills": {
     "first_seen": "2026-08-25",
-    "last_seen": "2026-10-11",
+    "last_seen": "2026-10-27",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-25": [
         206514,
@@ -12930,37 +12959,45 @@
         13,
         "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
         ""
+      ],
+      "2026-10-27": [
+        224657,
+        638,
+        14,
+        "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        ""
       ]
     },
-    "last_analyzed": "2026-10-11",
+    "last_analyzed": "2026-10-27",
     "analysis": {
-      "one_liner": "一份源自 Karpathy 對 LLM 寫程式缺點觀察的 CLAUDE.md,用四條原則約束 Claude Code 的行為。",
-      "summary": "這個專案本質上是一份純文字行為準則,包含 CLAUDE.md、Claude Code plugin/skill 定義與 Cursor 規則檔,沒有可執行程式碼。它針對 LLM 常見毛病(默默做假設、過度設計、順手改無關程式碼、缺少驗證目標),提出「先想再寫、簡單優先、精準修改、目標驅動」四條原則。可用 plugin 指令安裝,或直接複製到各專案的 CLAUDE.md。",
+      "one_liner": "一份源自 Karpathy 對 LLM 寫程式缺點觀察的 CLAUDE.md,用四大原則約束 Claude Code 的行為。",
+      "summary": "這是純文件型專案,核心是一份 CLAUDE.md,內含四條行為準則:先想再寫、簡單優先、精準修改、目標導向執行。目的是減少 LLM 常見的亂假設、過度設計,以及順手改動無關程式碼等問題。同時提供 Claude Code plugin/skill 封裝與 Cursor rule 版本。",
       "category": "devtool",
       "highlights": [
-        "四條原則簡潔明確:Think Before Coding、Simplicity First、Surgical Changes、Goal-Driven Execution",
-        "同一套內容提供多種載體:CLAUDE.md、Claude Code plugin(含 marketplace.json)、SKILL.md 與 Cursor .mdc 規則",
-        "附 EXAMPLES.md、CURSOR.md 與簡體中文 README,說明如何套用與判斷是否生效",
-        "零依賴、零建置,可直接複製貼上或以 plugin 指令安裝,導入成本極低",
-        "「每一行修改都應能對應到使用者需求」的判準,容易在 code review 中檢驗"
+        "四原則直指痛點:Think Before Coding、Simplicity First、Surgical Changes、Goal-Driven Execution",
+        "同一份內容提供多種接入方式:CLAUDE.md、Claude Code plugin/skill、Cursor rule",
+        "附 EXAMPLES.md 與簡體中文 README,說明清楚、容易上手",
+        "內容精簡,可直接合併進既有專案的 CLAUDE.md",
+        "README 列出判斷準則是否生效的觀察指標(diff 更小、先提問再實作)"
       ],
       "use_cases": [
-        "放進團隊專案的 CLAUDE.md,降低 AI 產生冗長 diff 與順手重構的情形",
-        "作為自訂 CLAUDE.md 或 Cursor 規則的基底,再合併專案專屬規範",
-        "教學用途:向團隊說明如何以提示規範約束 coding agent 的行為"
+        "為團隊專案快速建立 Claude Code 的行為基線規範",
+        "減少 AI 產生的 PR 中不必要的重構與過度抽象",
+        "作為撰寫自家 CLAUDE.md / Cursor rules 的參考範本",
+        "教學或分享如何用提示規範改善 LLM 輔助開發品質"
       ],
       "quality": {
         "docs": 4,
         "tests": 1,
         "activity": 3,
-        "comment": "文件清楚、結構完整,並有中英文版本與範例。專案只是提示詞文件,沒有測試與 CI,也無法量化成效;最後推送為 2026-04-20,維護頻率低,但內容本來就變動不大。star 數極高,主要反映話題熱度而非技術複雜度。"
+        "comment": "文件清楚、結構簡潔,但屬於純提示詞專案,沒有測試與 CI,也無法客觀驗證成效。最後推送為 2026-04,近期更新較少。星數極高,主要反映概念的普及度,而非工程複雜度。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 3,
-      "verdict": "內容精簡實用、導入成本近乎為零,適合直接參考或採用;但它只是一份提示詞,價值取決於你自己的調整,不必期待技術深度。",
+      "verdict": "概念實用且易於採用,可直接參考或合併進自己的 CLAUDE.md,但內容本身只是一份簡短的提示規範,不必期待更多技術深度。",
       "_mode": "full"
     }
   },
@@ -16211,10 +16248,10 @@
   },
   "debpalash/VoiceStudio": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 17,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 18,
     "stars_history": {
       "2026-09-03": [
         14721,
@@ -16332,6 +16369,13 @@
         86838,
         1592,
         3,
+        "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+        "Python"
+      ],
+      "2026-10-27": [
+        89256,
+        2297,
+        11,
         "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
         "Python"
       ]
@@ -27840,10 +27884,10 @@
   },
   "Nutlope/hallmark": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-25": [
         32153,
@@ -27856,6 +27900,13 @@
         33782,
         1317,
         2,
+        "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "CSS"
+      ],
+      "2026-10-27": [
+        36334,
+        2244,
+        1,
         "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "CSS"
       ]
@@ -27901,10 +27952,10 @@
   },
   "pollen-robotics/microduck": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-25": [
         10997,
@@ -27917,6 +27968,13 @@
         11645,
         647,
         5,
+        "A Tiny biped duck robot 🦆",
+        "Rust"
+      ],
+      "2026-10-27": [
+        12412,
+        843,
+        8,
         "A Tiny biped duck robot 🦆",
         "Rust"
       ]
@@ -28068,10 +28126,10 @@
   },
   "makecindy/cindy": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-25": [
         4106,
@@ -28084,6 +28142,13 @@
         4876,
         675,
         1,
+        "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+        "TypeScript"
+      ],
+      "2026-10-27": [
+        6482,
+        1296,
+        4,
         "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "TypeScript"
       ]
@@ -28128,15 +28193,22 @@
   },
   "JetBrains/thinkrail": {
     "first_seen": "2026-10-26",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-27",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-26": [
         1744,
         51,
         8,
+        "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+        "TypeScript"
+      ],
+      "2026-10-27": [
+        2905,
+        1173,
+        3,
         "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "TypeScript"
       ]
@@ -28285,6 +28357,226 @@
       },
       "star_rating": 4,
       "verdict": "這是少見成熟的 Claude Code SEO 外掛,測試與安全工程都做得扎實,SEO 或行銷相關的 AI 研發者值得關注;建議先在隔離環境檢視 hooks 與安裝流程再導入。",
+      "_mode": "full"
+    }
+  },
+  "NVIDIA/SkillSpector": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-27": [
+        22194,
+        214,
+        7,
+        "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-10-27",
+    "analysis": {
+      "one_liner": "NVIDIA 出品的 AI Agent Skill 安全掃描器,在安裝 Claude Code、Codex、MCP skill 前先偵測提示注入、資料外洩與供應鏈風險。",
+      "summary": "SkillSpector 是以 Python 撰寫的 CLI 工具,可掃描 Git repo、URL、zip、目錄或單一檔案形式的 agent skill。它先做快速靜態分析(71 種弱點模式、17 個類別,含 AST、taint tracking、YARA),再視需要接上 LLM 做語意判斷,並輸出 0–100 風險分數,以及終端、JSON、Markdown、SARIF 報告。它也是 NVIDIA Verified Skills 流程的一環,用來回答「這個 skill 能不能裝」。",
+      "category": "security",
+      "highlights": [
+        "71 種偵測模式、17 個類別,涵蓋提示注入、資料外洩、權限提升、供應鏈、MCP 最小權限與 MCP 工具投毒",
+        "兩階段分析:靜態規則加 LLM 語意評估,可用 --no-llm 純離線執行",
+        "SC4 會即時查詢 OSV.dev 取得 CVE 資料,離線時自動退回本地資料",
+        "輸出支援 SARIF,可接 CI/CD 與 IDE,並有 baseline 機制抑制已知誤報",
+        "輸入處理有防護:SSRF 主機白名單、私網 IP 檢查、zip-slip 防護、100 MiB 與 10,000 成員上限,超限即 fail closed",
+        "附 Docker、MCP server、Pi 與 OpenCode 擴充,以及 contrib 批次平行掃描工具"
+      ],
+      "use_cases": [
+        "安裝第三方 Claude Code / Codex skill 前先做安全檢查",
+        "在 CI 以 SARIF 輸出把 skill 掃描設為上架或合併的把關步驟",
+        "對大量 skill 或 MCP registry 做批次稽核與快照比對",
+        "研究 agent 供應鏈攻擊面與偵測規則的設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 完整,docs/ 另有開發、資源上限、各偵測規則的專文,並附 SECURITY.md、CHANGELOG 與 CONTRIBUTING。tests/ 有 20 個左右的測試檔,涵蓋 MCP、AST、ledger 等核心模組,CI 另含 scorecard、release 與 Docker 工作流程。程式碼有型別標註,並設定 ruff 與 mypy;CI 的 Action 以 commit SHA 固定,Dockerfile 以 digest 固定基底映像。版本 2.12.0,classifier 標為 Alpha,近期仍在推送。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 說明專案會下載並安裝第三方開源套件(依賴包含 langchain、boto3、yara-python 等),使用前宜自行檢視授權條款。",
+          "建議安裝方式為 uv tool install git+https://github.com/NVIDIA/skillspector.git,直接從 Git 安裝。",
+          "掃描遠端 URL 或 Git repo 時會連網下載內容;程式碼將主機限制在 github.com、gitlab.com、bitbucket.org、huggingface.co 等,並有私網 IP 檢查。",
+          "啟用 LLM 分析時需提供 ANTHROPIC_API_KEY 等金鑰,待掃描的 skill 內容會送往所選的 LLM 供應商;若有隱私顧慮可改用 --no-llm。",
+          "pyproject.toml 使用標準 hatchling 建置;所讀取的檔案中未見 install-time 腳本、curl|bash 安裝器、混淆程式碼或內嵌二進位檔。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "主題切中 agent skill 供應鏈風險,工程實作紮實、文件齊全且有大廠維護,從事 agent 開發或上架 skill 的人值得優先試用。",
+      "_mode": "full"
+    }
+  },
+  "nightly-labs/openbot": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-27": [
+        1478,
+        176,
+        9,
+        "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-27",
+    "analysis": {
+      "one_liner": "本地優先的桌面 AI 隊友工作區,整合 Codex、Claude、Grok 等多家 agent,具備任務佇列、瀏覽器控制與 agent 間協作。",
+      "summary": "OpenBot 是以 Electron + SolidJS + Bun 打造的桌面應用,讓每個 AI agent 擁有獨立工作區與對話,支援 Codex App Server、Claude Code,並透過 ACP 支援 Grok、OpenCode、Gemini、Cursor、Cline 等。內建 FIFO 訊息佇列、檔案傳輸、內嵌瀏覽器、Computer Use、agent 間訊息,另提供可自架的伺服器模式(Linux/Docker)與行動端 App。",
+      "category": "app",
+      "highlights": [
+        "支援多家 provider(Codex、Claude、Grok、Gemini、Cursor、Cline、OpenCode,以及自訂 OpenAI 相容端點與 ACP agent)",
+        "每個 agent 有獨立工作區、可暫停/取消且崩潰安全的 FIFO 佇列,以及自動 context 壓縮",
+        "內嵌可被 agent 操控的瀏覽器、Computer Use(cua-driver)與 agent 間協作、共享頻道",
+        "跨平台(macOS/Windows/Linux AppImage)、Nix flake、Docker 與無螢幕伺服器模式,另有行動端 App",
+        "工程紀律嚴謹:大量 SQLite migration 測試、IPC 信任邊界測試、CSP 測試、自訂 biome anti-slop 規則與 release 升級安全檢查"
+      ],
+      "use_cases": [
+        "在個人電腦上同時管理多個長期運作的 AI 程式助理並分派佇列任務",
+        "在 VPS 或家用伺服器自架常駐 agent,再從桌面或手機遠端使用",
+        "研究多 agent 協作、ACP 整合與 Electron 桌面 agent 架構",
+        "在同一工作流中比較不同模型 provider 的表現"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 完整,涵蓋安裝、各平台注意事項與安全警語,另有 docs/ 架構文件。測試以 vitest 為主,涵蓋後端 migration、IPC 信任邊界、preload 解碼、redaction 等,並有大量 e2e 腳本;CI 與 release 工作流齊備。專案極度活躍(最後推送為今日,版本 0.51.x)。授權為 PolyForm Noncommercial,非開源軟體,商業使用受限。整體規模龐大(含 mobile、auth-api、remote 等子專案),屬開發預覽階段。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "README 明確警告:agent 以 danger-full-access 與 approvalPolicy: never 執行,可在首次同意後讀寫檔案、執行指令、使用網路並控制內嵌瀏覽器,無逐次確認,請只執行信任的 agent 與任務並保留備份",
+          "根目錄 package.json 含 postinstall(下載並快取 Electron,執行 bun scripts/install-electron.ts 等)與 prepare(安裝 git hooks)腳本,安裝時會執行這些腳本;install-electron.ts 僅在網路失敗時重試 Electron 下載,並依 checksums.json 驗證",
+          "README 提供 curl -fsSL https://raw.githubusercontent.com/nightly-labs/openbot/main/scripts/install-server.sh | sudo bash 的安裝方式;該腳本會下載最新 release 的 AppImage,先以 release manifest 的 SHA-512 驗證,再解開並以 root 執行其中的 openbot-server-setup,使用前建議先檢視腳本",
+          "Docker 安裝範例另需從 GitHub raw 下載 seccomp.json 並以其啟動容器",
+          "可選的 Computer Use 會啟動 release 內附的 cua-driver 二進位檔作為子行程,並提供給所有 provider",
+          "應用程式在啟動時會自動下載並更新各 provider 的 CLI 執行環境(受管理的 CLI),此為功能設計,使用者應知悉",
+          "未發現混淆程式碼、內嵌的長 base64 負載或可疑的相依套件名稱"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、工程品質高且極度活躍的多 agent 桌面工作區,值得關注與試用;但 agent 預設擁有完整系統權限、授權為非商業用途,建議在隔離環境中評估。",
+      "_mode": "full"
+    }
+  },
+  "gitroomhq/postiz-app": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-27": [
+        38455,
+        188,
+        12,
+        "📨 The ultimate agentic social media scheduling tool 🤖",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-27",
+    "analysis": {
+      "one_liner": "開源、可自架的社群媒體排程與自動化平台,內建 AI 功能、公開 API,並支援 MCP 與多種 AI agent 整合。",
+      "summary": "Postiz 是以 TypeScript 開發的 monorepo(Next.js 前端、NestJS 後端、orchestrator、瀏覽器擴充套件),用來排程、自動化與分析社群貼文。程式碼中有 40 個以上平台的 provider,例如 X、LinkedIn、Instagram、YouTube、TikTok、Bluesky、Mastodon、Reddit。專案提供 Public API、Node SDK、n8n 與 Make.com 整合,也提供 MCP Server 與 AI agent CLI,讓 Claude、Codex、Cursor 等 agent 可以直接排程貼文。授權為 AGPL-3.0,可自架,也有官方託管的雲端版。",
+      "category": "app",
+      "highlights": [
+        "支援平台廣:social 目錄下有 40 個以上 provider,含主流平台與 Bluesky、Nostr、Farcaster、Telegram、WordPress 等,並共用 SocialProvider 介面。",
+        "Agent 友善:README 列出 ChatGPT、Claude、Claude Code、Codex、Cursor、MCP Server 等整合,依賴包含 Mastra、CopilotKit、LangGraph、AI SDK。",
+        "自動化生態完整:提供 Public API、Node SDK、n8n 自訂節點與 Make.com 整合,可接入既有工作流程。",
+        "程式碼有防護意識:Bluesky provider 下載圖片時使用 SSRF-safe axios,並有 webhook URL 驗證器;另有 CodeQL 掃描與 SECURITY.md。",
+        "架構現代:使用 pnpm monorepo、Prisma、Redis、Temporal 工作流,自架與雲端版皆可。"
+      ],
+      "use_cases": [
+        "企業或團隊自架內部社群排程平台,資料留在自己的基礎設施,不依賴 SaaS。",
+        "讓 AI agent(Claude Code、Codex 等)透過 MCP 或 CLI 自動產生並排程社群貼文。",
+        "以 n8n、Make.com 或 Public API 串接內容生產流程,批次發佈到多個平台。",
+        "研究多平台 OAuth 與發文 API 整合的實作範例。"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 完整,並連結獨立文件站、貢獻指南、CLAUDE.md 與 Copilot 指引。最後推送在 2026-10-24,有 CI(build、CodeQL、容器建置、extension 發佈)。我只用 Glob 在 apps 與 libraries 目錄找到 0 個 *.test / *.spec 檔,雖然 package.json 有 jest 的 test 指令。CI 的 build.yml 只跑安裝與 build,沒有跑測試,因此測試分數偏低。程式碼分層清楚,以 provider 抽象為主。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "根目錄 package.json 有 postinstall 腳本,會執行 `pnpm run prisma-generate`;該指令透過 `pnpm dlx prisma@6.5.0` 從 npm 下載並執行 Prisma CLI(版本已固定),屬 Prisma 專案常見做法。",
+          "自架部署需要設定多個第三方平台的 OAuth 金鑰與 token(見 .env.example),使用者應妥善保管這些憑證。",
+          "專案會代使用者呼叫各社群平台 API,並從外部 URL 下載媒體。程式中已使用 SSRF-safe axios/dispatcher 與 URL 驗證器處理。",
+          "README 中的贊助商與圖片連結指向外部網域。依我讀過的檔案範圍,未見 curl|bash 安裝流程、混淆程式碼或內嵌長 base64 payload。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想自架社群排程工具,或想讓 AI agent 自動發文的人值得關注;功能成熟且更新活躍,但要留意 AGPL 授權與測試覆蓋偏弱。",
+      "_mode": "full"
+    }
+  },
+  "alchaincyf/huashu-design": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-27": [
+        26757,
+        251,
+        13,
+        "Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, Cursor & any agent",
+        "HTML"
+      ]
+    },
+    "last_analyzed": "2026-10-27",
+    "analysis": {
+      "one_liner": "HTML 原生的設計 skill,在 Claude Code、Codex、Cursor 等 agent 裡一句話就能產出網頁、App 原型、可編輯 PPTX、動畫與資訊圖。",
+      "summary": "huashu-design 是一個 agent skill,以 `npx skills add` 安裝。它先出六張縮圖讓使用者挑三個方向,再做成完整設計稿,並附 84 種有樣張的風格庫。內建設計體檢(design_lint)與記錄使用者偏好的外觀帳本,用來避免千篇一律的 AI 風格。核心流程(HTML 渲染後匯出 MP4、PDF、PPTX)在本機執行。",
+      "category": "ai-ml",
+      "highlights": [
+        "「六選三」流程:先出六張縮圖,再把選定的三個方向做成真稿,並先為參照作品截圖建立參考板",
+        "84 種附樣張的風格庫,含 App、中文與東亞分區,資料夾內有大量 HTML 與 JPG 樣張",
+        "設計體檢 design_lint.py 只量事實(例如撞色、版面重複),外觀帳本會記錄過往交付的樣貌以避免重複",
+        "可匯出 PPTX(html2pptx、pptx_from_rendered)、PDF 與 MP4,另附配樂與音效素材及旁白/TTS 管線",
+        "跨 agent 通用,採 MIT 授權;附 SECURITY.md,逐項列出網路目的地、金鑰、子程序與刪除行為"
+      ],
+      "use_cases": [
+        "用一句話為產品發布製作宣傳動畫或簡報",
+        "快速產出可點擊的 App 或網頁原型,供設計評審與提案",
+        "把 HTML 設計轉成可編輯 PPTX 或印刷級資訊圖",
+        "為 agent 工作流加入設計品質把關與風格多樣化機制"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 有中英文版本與大量案例,並附詳盡的 SECURITY.md,文件水準很高。測試只有兩支 Python unittest(design_lint 與 pptx_from_rendered)加上 HTML fixtures,覆蓋範圍有限。未發現 .github/workflows 的 CI 設定。最近一次推送是 2026-10-23,維護仍活躍。專案以 SKILL.md、參考文件與腳本組成,品質取決於 agent 如何使用。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "未發現 package.json 的 install 生命週期腳本,也未發現 curl|bash 一類的安裝流程;安裝方式為 `npx skills add` 或 git clone。",
+          "SECURITY.md 聲明雲端相關腳本(scripts/cloud/ai-review-video.py、tts-doubao.mjs)需使用者自備金鑰,並要求 --yes 或 HUASHU_CLOUD_OK=1 才會連線,資料送往 ByteDance/Volcengine 官方 API。使用前請留意影片片段與旁白文字會送到第三方。",
+          "scripts/ref_board.py 會用無頭 Chromium 開啟 agent 提供的任意 URL,SECURITY.md 說明該腳本不過濾網址,也可能開啟本機檔案或 localhost。",
+          "學習與帳本腳本會把偏好(含使用者原話片段)與專案絕對路徑寫入 ~/.huashu-design/,文件稱僅存本機、不上傳。",
+          "fetch_images.py 與 ai-review-video.py 會停用代理環境變數繼承,文件說明用於避開失效的本機代理設定。",
+          "scripts/design-gate-hook.sh 是選擇性 hook,不會自動安裝;腳本使用 subprocess/spawn 呼叫 ffmpeg、Playwright 等本機工具。",
+          "倉庫內含 mp3 音效與配樂等二進位素材,屬於設計用途的資源檔。本次只讀取檔案,未執行任何程式。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "設計流程完整、文件與安全聲明透明,是 agent 設計類 skill 中值得關注的一個。使用雲端選項前,請先確認資料會送往哪些外部服務。",
       "_mode": "full"
     }
   }
