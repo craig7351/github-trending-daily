@@ -1277,8 +1277,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-17",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1420,6 +1420,13 @@
         8,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-28": [
+        306444,
+        617,
+        4,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-16",
@@ -1459,8 +1466,8 @@
       "verdict": "如果你使用程式代理做較長的自主開發,這是目前最完整、影響力最大的技能與流程框架,值得安裝試用,也值得研讀其技能設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 21,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 22,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1670,8 +1677,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-27",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -1838,6 +1845,13 @@
         5,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-10-28": [
+        290896,
+        1165,
+        8,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-10-18",
@@ -1878,8 +1892,8 @@
       "verdict": "想系統化管理 Claude Code、Codex 等 agent 設定的工程師值得關注。內容龐大,建議只挑需要的 skills 與 hooks 安裝,並先審閱 hooks。",
       "_mode": "full"
     },
-    "total_days_on_trending": 25,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 26,
+    "consecutive_days_on_trending": 2
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -2023,8 +2037,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-27",
-    "days_on_trending": 3,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -2103,6 +2117,13 @@
         6,
         "The design language that makes your AI harness better at design.",
         "Rust"
+      ],
+      "2026-10-28": [
+        90536,
+        1449,
+        5,
+        "The design language that makes your AI harness better at design.",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-10-25",
@@ -2141,8 +2162,8 @@
       "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 12,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 13,
+    "consecutive_days_on_trending": 4
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -8056,10 +8077,10 @@
   },
   "HKUDS/DeepTutor": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
+    "last_seen": "2026-10-28",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-12": [
         34718,
@@ -8067,42 +8088,52 @@
         9,
         "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
         "Python"
+      ],
+      "2026-10-28": [
+        45913,
+        1598,
+        9,
+        "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-12",
+    "last_analyzed": "2026-10-28",
     "analysis": {
-      "one_liner": "DeepTutor 是一套「終身個人化家教」的多智能體學習平台,整合聊天、研究、視覺化、解題、記憶與多引擎 RAG 於同一套代理迴圈之中。",
-      "summary": "DeepTutor 是香港大學 HKUDS 團隊開發的 agent-native 學習工作站,將 Chat、Quiz、Research、Visualize、Solve、Mastery Path 等模式統一在同一個 agent loop 上運行,並提供三層記憶系統(L1 事件追蹤、L2 摘要、L3 綜合)、多引擎 RAG(LlamaIndex/GraphRAG/LightRAG/PageIndex)、Partner IM 機器人整合,以及可獨立安裝的 CLI 工具。專案同時提供 Web App(Next.js + FastAPI)與純 CLI 兩種安裝路徑,並支援 Docker/Podman 部署與多使用者隔離。",
+      "one_liner": "HKUDS 推出的 AI 個人化家教平台,結合多代理、RAG、Deep Research 與 Web/CLI/IM 多通路,主打終身學習陪伴。",
+      "summary": "DeepTutor 是 Python(FastAPI)加 Next.js 的全端應用,提供對話式家教、知識庫 RAG(LightRAG、PageIndex、GraphRAG 等)、測驗與題庫、Book 與 Reading 學習模式、Deep Research,以及可接入 IM 的 Partners 代理。專案支援多家 LLM 供應商,也支援 MCP、CLI Apps 與 Skills 擴充。目標是把文件和資料變成可追蹤進度的個人化學習體驗。",
       "category": "ai-ml",
       "highlights": [
-        "單一 agent loop 貫穿 Chat/Quiz/Research/Visualize/Solve/Mastery Path 六種模式,上下文共用而非各自為政",
-        "三層可稽核記憶系統(L1 事件追蹤 → L2 摘要 → L3 綜合),每筆合成結論都能回溯到原始證據",
-        "支援 LlamaIndex、PageIndex、GraphRAG、LightRAG、Obsidian 等多種可切換 RAG 引擎",
-        "可即時串接 Claude Code / Codex / Gemini 等外部 coding CLI 作為 subagent,並匯入其歷史對話",
-        "文件對 code-execution sandbox、多容器部署、非 root 使用者權限等安全設計有相當透明的說明"
+        "功能面非常完整:多代理對話、Mastery Path 精熟學習、Book 生成、Reading、題庫與每日練習、Math Animator、Co-writer",
+        "RAG 後端多選:LightRAG、PageIndex、GraphRAG、LlamaIndex、FAISS,並支援多種文件解析引擎(MinerU、Tika 等)",
+        "可擴充性強:MCP 服務、101 個 CLI Apps、ClawHub 技能安裝(附安全閘門)、15 個 IM 通道的 Partners",
+        "工程紀律佳:import-linter 架構邊界檢查、ruff、pre-commit、secrets baseline、Python 3.11–3.14 矩陣測試",
+        "提供 Docker 多階段映像,應用程序以非 root 使用者執行,並提供沙盒 runner 容器與 PUID/PGID 設定"
       ],
       "use_cases": [
-        "個人或團隊自架的 AI 家教/學習助手,搭配自有知識庫做長期客製化學習追蹤",
-        "需要多引擎 RAG(向量/圖譜/混合檢索)比較與整合的知識管理場景",
-        "以 Partner 角色接入 IM(Slack/Discord/Telegram 等)提供常駐學習陪伴機器人",
-        "研究/內容創作者用 Book、Co-Writer、Deep Research 等能力產出可互動的教材或報告"
+        "個人或團隊把教材、論文、PDF 建成知識庫,做互動式問答與自學",
+        "學校或培訓單位部署多使用者(學習者/監護人帳號)的 AI 家教平台",
+        "研究者研究多代理、RAG 與 Agent harness 的整合架構",
+        "需要自架、可接多家 LLM 供應商的學習輔助或 Deep Research 工具"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "文件極為詳盡(主 README 近千行、多語言翻譯、CONTAINERIZATION.md、AGENTS.md 等),原始碼中大量帶有「為什麼這樣設計」的高品質註解;tests/ 目錄有 380+ 個測試檔案覆蓋 agents/api/cli/book 等模組,CI 涵蓋 lint(ruff)、web node tests、多版本 Python import check 與 pytest;並配置 bandit、pre-commit、mypy 等靜態檢查。屬於工程紀律相當成熟的專案,近期(2026-08-11)仍持續高頻發版。"
+        "comment": "README 有 11 種語言版本,並有官方文件站與 CONTRIBUTING、AGENTS.md。tests/ 下有數百個 Python 測試檔,涵蓋 agents、api、services 等,另有前端 Playwright 與無障礙審計。CI 含 lint、架構邊界、Web 測試,以及 Python 3.11–3.14 多平台矩陣,每日排程執行。最近一次 push 為 2026-10-27,發版極為頻繁(約每數日一版),專案規模龐大、功能迭代快,學習曲線與維運複雜度也相對較高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "Docker 建置階段會以 `curl https://sh.rustup.rs | sh` 安裝 Rust 官方工具鏈(用於編譯 tiktoken 等套件),此為 rustup 官方文件建議的標準安裝方式,並附帶 `--proto '=https' --tlsv1.2` 限制;非專案自訂的安裝腳本",
-          "預設啟用 code-execution sandbox(model 產生的 Python 腳本會透過受限 subprocess 或獨立 runner sidecar 執行),此行為在 README 中已清楚說明並提供 `sandbox_allow_subprocess=false` 的關閉選項",
-          "專案內建可從社群 EduHub / CLI-Anything 目錄安裝第三方 Skill 或 CLI 工具的功能,官方文件註明此路徑有「安全閘門(security gate)」把關,屬設計內功能而非缺陷"
+          "Dockerfile 在建置階段以 `curl ... https://sh.rustup.rs | sh -s -- -y` 安裝 Rust(僅用於 python-base 建置階段,使用 --proto '=https' --tlsv1.2),屬常見做法,但使用者應知悉建置時會下載並執行遠端腳本",
+          "CLI Apps 目錄(deeptutor/services/cli_apps/vendor/catalog.json)中的部分條目,其 install_cmd 或說明含有 `curl ... | bash` 形式的第三方安裝指令(例如 jimeng.jianying.com、dl.google.com 與 raw.githubusercontent.com 上的腳本);程式碼註解表明安裝屬於需使用者操作的特權行為,啟用第三方 CLI Apps 前建議自行檢視來源",
+          "專案提供程式碼執行(exec)沙盒,預設啟用受限子行程後端,docker-compose 另有 runner 側車;自架並開放給多使用者時,建議確認沙盒與 MCP 工具的權限設定",
+          "容器預設監聽 0.0.0.0(BACKEND_HOST 預設值),對外開放前應啟用認證並綁定適當介面;README 範例則使用 127.0.0.1 綁定",
+          "entrypoint 支援 DEEPTUTOR_EXTRAS / DEEPTUTOR_APT_PACKAGES 於啟動時安裝額外套件,屬使用者自行設定的選項",
+          "pyproject.toml 未見 setup.py 任意程式碼或 npm 生命週期腳本等安裝時執行行為的跡象;依賴名稱皆為常見套件,未發現混淆程式碼或可疑內嵌 payload"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程品質與文件完整度都在 GitHub trending 專案中名列前茅,是目前少見「多智能體 + 多引擎 RAG + 終身記憶」整合得相當扎實的教育類 AI 專案,值得立即關注與試用。",
+      "star_rating": 4,
+      "verdict": "功能完整、工程品質與測試紀律都很高的 AI 家教/RAG 平台,值得關注與試用;注意自架時的沙盒、認證與第三方 CLI Apps 設定即可。",
       "_mode": "full"
     }
   },
@@ -27884,10 +27915,10 @@
   },
   "Nutlope/hallmark": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-27",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-25": [
         32153,
@@ -27907,6 +27938,13 @@
         36334,
         2244,
         1,
+        "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "CSS"
+      ],
+      "2026-10-28": [
+        39012,
+        2830,
+        2,
         "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "CSS"
       ]
@@ -28126,10 +28164,10 @@
   },
   "makecindy/cindy": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-27",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-25": [
         4106,
@@ -28149,6 +28187,13 @@
         6482,
         1296,
         4,
+        "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+        "TypeScript"
+      ],
+      "2026-10-28": [
+        7469,
+        1465,
+        6,
         "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "TypeScript"
       ]
@@ -28193,10 +28238,10 @@
   },
   "JetBrains/thinkrail": {
     "first_seen": "2026-10-26",
-    "last_seen": "2026-10-27",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-26": [
         1744,
@@ -28209,6 +28254,13 @@
         2905,
         1173,
         3,
+        "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+        "TypeScript"
+      ],
+      "2026-10-28": [
+        4011,
+        1204,
+        10,
         "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "TypeScript"
       ]
@@ -28417,15 +28469,22 @@
   },
   "nightly-labs/openbot": {
     "first_seen": "2026-10-27",
-    "last_seen": "2026-10-27",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-27": [
         1478,
         176,
         9,
+        "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+        "TypeScript"
+      ],
+      "2026-10-28": [
+        2446,
+        777,
+        3,
         "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "TypeScript"
       ]
@@ -28473,15 +28532,22 @@
   },
   "gitroomhq/postiz-app": {
     "first_seen": "2026-10-27",
-    "last_seen": "2026-10-27",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-28",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-27": [
         38455,
         188,
         12,
+        "📨 The ultimate agentic social media scheduling tool 🤖",
+        "TypeScript"
+      ],
+      "2026-10-28": [
+        39383,
+        951,
+        7,
         "📨 The ultimate agentic social media scheduling tool 🤖",
         "TypeScript"
       ]
@@ -28578,6 +28644,109 @@
       "star_rating": 4,
       "verdict": "設計流程完整、文件與安全聲明透明,是 agent 設計類 skill 中值得關注的一個。使用雲端選項前,請先確認資料會送往哪些外部服務。",
       "_mode": "full"
+    }
+  },
+  "elayadesign/ai-design-skills": {
+    "first_seen": "2026-10-28",
+    "last_seen": "2026-10-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-28": [
+        9352,
+        1395,
+        1,
+        "",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-10-28",
+    "analysis": {
+      "one_liner": "給 Claude Code、Cursor、Codex 等 AI 編碼工具使用的設計技能集合,首發 landing-page-design,涵蓋行銷策略與嚴格的視覺系統規則。",
+      "summary": "這是一個純 Markdown 的 AI 設計技能(skill)倉庫,目前只有一個技能 landing-page-design。內容分兩部分:Part A 規範落地頁的訊息策略(需求訪談、頁面結構、文案、SEO),Part B 規範視覺系統(字體、間距、圓角、動態、狀態等)。目的是讓 AI 產出的網頁不再千篇一律,且可 fork 後修改設計參數。",
+      "category": "ai-ml",
+      "highlights": [
+        "單一 SKILL.md 約 430 行,結構完整:Intake、頁面結構、版型選擇、文案、建置順序、輸出格式、檢查清單",
+        "視覺規則具體可驗證:Tailwind 字級對應、固定間距表、巢狀圓角公式、限定的深色背景色與動態曲線 cubic-bezier(0.22,1,0.36,1)",
+        "內容真實度規則:禁用 revolutionize 等空洞用語、避免過於整齊的數字,並要求完整狀態(hover/focus/loading/empty/error)與上線必備項目",
+        "README 提供跨工具安裝說明:Claude Code、Cursor、Codex、Windsurf、Cline、Claude.ai",
+        "設計參數集中、fork 後即可客製;並清楚標註 taste-skill 的 MIT 授權來源"
+      ],
+      "use_cases": [
+        "讓 Claude Code 或 Cursor 從零產生高轉換率的 SaaS 落地頁",
+        "為團隊建立統一的 AI 輔助前端設計規範(字體、間距、動態)",
+        "作為撰寫自家 SKILL.md 或規則檔的參考範本",
+        "審查既有行銷頁面是否符合轉換與無障礙基本要求"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "內容為單一高密度規範文件,條理清楚、可操作性高,README 安裝說明完整。沒有程式碼、測試或 CI,屬於提示詞/規則型專案,無從自動驗證。部分規則較主觀且絕對(如禁用 Inter、禁用連字號、禁用背景漸層),需依自家品牌調整。今日仍有推送,但目前僅一個技能,後續擴充尚待觀察。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "倉庫僅含 README、LICENSE、.gitignore 與一份 SKILL.md,沒有可執行程式碼、package.json、安裝腳本或二進位檔。",
+          "README 的 Cursor 安裝方式是用 curl 從 raw.githubusercontent.com 下載 SKILL.md 存成規則檔;Claude Code 方式是 git clone 後複製資料夾。內容是會影響 AI 行為的指令文字,建議安裝前先自行閱讀。",
+          "本次檢視的 SKILL.md 內容為設計與文案規範,未發現要求 AI 執行外部指令或外洩資料的內容。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "若常用 AI 生成落地頁,這份規範值得直接試用或 fork 當範本;但目前只有一個技能、規則偏主觀,屬不錯但非必看。",
+      "_mode": "full"
+    }
+  },
+  "togg53192-cmd/jailbreaks": {
+    "first_seen": "2026-10-28",
+    "last_seen": "2026-10-28",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-28": [
+        5545,
+        902,
+        11,
+        "LIST OF ALL MY JAILBREAKS",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-10-28",
+    "analysis": {
+      "one_liner": "收錄 31 份針對 25 款以上模型的越獄式系統提示詞、人設鎖定與 AGENTS.md 的集合庫",
+      "summary": "此倉庫彙整針對 Claude、Gemini、Grok、GLM、DeepSeek、Kimi、Qwen 及 OpenCode Zen 免費隱藏模型等的完整系統提示詞、人設定義、工作區政策與 Ollama Modelfile,內容可直接貼上使用。README 宣稱僅供研究與教育,用於研究指令階層與提示注入防禦,但本質上是繞過模型安全限制的提示詞庫。",
+      "category": "security",
+      "highlights": [
+        "31 份提示詞涵蓋 25 個以上目標模型,含閉源前沿與開源權重模型",
+        "提供多種格式:系統提示詞、AGENTS.md、Ollama Modelfile、Grok 設定區塊",
+        "README 附使用方式說明,並載明貢獻規範與版本命名慣例",
+        "今日 +902 星、趨勢榜第 11 名,關注度高",
+        "README 載明提示詞效果高度依賴模型版本,可能隨更新失效"
+      ],
+      "use_cases": [
+        "紅隊測試與 LLM 安全研究,評估模型對指令階層衝突與人設框架的抵抗力",
+        "研究提示注入防禦,建立內部測試案例",
+        "了解各模型廠商系統提示詞與政策覆寫手法的演進"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 4,
+        "comment": "資源彙整類,測試不適用。README 結構清楚、表格與使用說明完整,但無授權標示、無主題標籤,提示詞的實際有效性與版本相容性未經驗證(僅依 README 判斷)。最近推送為 2026-10-25,趨勢動能強。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 未提供需執行的安裝腳本(無 curl | bash 之類指令),僅有複製貼上提示詞與 ollama create 範例。",
+          "內容為旨在改變模型行為的提示詞,貼入客戶端或 AGENTS.md 前宜先審閱,並留意模型供應商服務條款對此類用途的限制。",
+          "本評估僅依據 README,未對各檔案內容做原始碼層級審查。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "對 LLM 安全研究與紅隊測試有參考價值,但屬爭議性的越獄提示詞集合,效果易隨模型更新失效,使用前需留意服務條款,適合有明確研究目的者關注。",
+      "_mode": "light"
     }
   }
 }
