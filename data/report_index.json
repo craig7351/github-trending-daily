@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-29",
+    "analyzed": 4,
+    "cached": 10,
+    "deferred": 0,
+    "top_name": "macro-inc/macro",
+    "top_rating": 4
+  },
+  {
     "date": "2026-10-28",
     "analyzed": 3,
     "cached": 8,

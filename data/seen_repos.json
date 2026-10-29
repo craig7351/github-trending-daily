@@ -577,7 +577,7 @@
   },
   "ruvnet/RuView": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-10-29",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -597,45 +597,52 @@
         12,
         "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
         "Rust"
+      ],
+      "2026-10-29": [
+        101060,
+        557,
+        13,
+        "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-09-15",
+    "last_analyzed": "2026-10-29",
     "analysis": {
+      "one_liner": "以 ESP32 擷取 WiFi CSI,在無鏡頭下實現人員偵測、呼吸心率監測與姿態估計的 Rust 邊緣感測平台",
+      "summary": "RuView 利用低成本 ESP32 節點讀取 WiFi 通道狀態資訊(CSI),在不使用攝影機或穿戴裝置下,做到穿牆存在偵測、生命徵象、活動辨識與 17 點姿態估計。全程在邊緣端運行,並整合 Home Assistant、Apple Home、Matter 等智慧家庭生態,還提供 npm MetaHarness 與 MCP 伺服器供 AI 代理操作。",
       "category": "ai-ml",
-      "one_liner": "用一般家用 WiFi 訊號取代攝影機,打造能穿牆偵測人體、生命徵象與姿態的邊緣感測平台。",
-      "summary": "RuView 是以 Rust 打造的 WiFi CSI(通道狀態資訊)感測平台,透過低成本 ESP32 節點分析 WiFi 訊號反射,偵測人員存在、呼吸心跳、跌倒與姿態動作,並原生整合 Home Assistant、Apple Home、Google Home、Alexa 等智慧家庭生態系。專案附有大量 ADR 架構決策文件、基準測試數據與已發布於 Hugging Face 的預訓練模型。",
       "highlights": [
-        "以 9 美元 ESP32 節點讀取 WiFi CSI,免攝影機即可實現透牆人體偵測、呼吸心跳量測與 17 個關節點姿態估計",
-        "原生支援 Home Assistant、Apple Home/HomePod、Google Home、Amazon Alexa 四大智慧家庭生態系統,並可透過 Matter 端點串接",
-        "提供 105 個邊緣模組(Cog)目錄,涵蓋健康、居家安全、零售、工業等應用場景,並附完整 ADR 設計文件",
-        "README 罕見地主動揭露並更正先前誇大的準確率數據(如姿態估計 PCK@20 僅 3%,尚未達到內部目標,且該路徑仍是 confidence=0 的初版模型)",
-        "內建 RuView MetaHarness(npx @ruvnet/ruview)可供 AI Agent(Claude Code/Codex)進行守護式操作,預設唯讀,需明確加旗標才能寫入"
+        "以約 9 美元的 ESP32 節點搭配 CSI 做感測,無需雲端與攝影機,保護隱私",
+        "預訓練模型僅 8KB(4-bit 量化),README 稱可在 Raspberry Pi 上微秒級推論",
+        "每節點提供 21 個 Home Assistant 實體,並支援 Apple Home、Google Home、Alexa 與 Matter",
+        "提供 @ruvnet/ruview npm 工具包、MCP 伺服器與 Claude Code mod,預設唯讀並設有授權限制",
+        "README 主動撤回舊的「100% 存在偵測」數字,改報 82.3% 的 temporal-triplet 準確率,並標明部分準確度仍為合成資料"
       ],
       "use_cases": [
-        "智慧家庭中的無感跌倒偵測、長者獨居安全監控與異常行為告警",
-        "睡眠品質與生命徵象(呼吸、心跳)非接觸式監測",
-        "零售、工業或建築場域的人流計數與空間佔用感測研究",
-        "WiFi 感測、邊緣運算與姿態估計相關的學術研究或技術教學參考"
+        "智慧家庭中的無攝影機人員存在與睡眠、跌倒風險監測",
+        "長者照護的無接觸活動與異常不動偵測",
+        "WiFi CSI 感測與邊緣 AI 的研究與原型開發",
+        "以 AI 代理(MCP/Claude Code)操作並驗證感測硬體"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 內容非常完整,附有大量 ADR 決策文件、基準測試表格與模型連結,文件品質高;但僅能依 README 判斷,無法檢視實際程式碼與測試涵蓋率,標榜的 1463 項測試通過為自我陳述、未經第三方驗證。最後推送時間為今日,搭配 trending 熱度顯示專案仍在積極開發中。"
+        "comment": "README 內容豐富,有導覽、ADR 與使用指南連結,且有誠實聲明的設計。但篇幅龐大、行銷味濃,部分宣稱(如統一 RF 世界模型)仍待真實資料驗證。測試品質僅依 README 評估,未檢視程式碼。專案推送頻繁,趨勢熱度很高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供的安裝與操作方式是透過 npx 執行官方發布的 npm 套件(@ruvnet/ruview),並非 curl|bash 這類直接執行遠端腳本的高風險模式",
-          "文件明確說明 AI Agent 操作預設為唯讀模式,需同時加上 --allow-write 與 --confirm 兩個旗標才能寫入工作區,顯示對操作風險有一定防護設計",
-          "此評估僅根據 README 描述,未實際檢視原始碼或進行程式碼層級的資安稽核"
+          "README 僅列出 npx 執行 @ruvnet/ruview 的指令,未見 curl | bash 之類的安裝方式;未進行原始碼層級審查。",
+          "工具涉及硬體存取與韌體燒錄,README 稱需 device-access 授權,寫入需 --allow-write 與 --confirm,燒錄與校準不會經由 HTTP 傳輸執行。",
+          "建議固定版本(如 0.9.1)並在實際部署前自行審視。"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念新穎且文件詳盡、生態整合完整,值得關注與追蹤,但專案本身坦承部分準確率數據仍待驗證,實際落地效果建議親自測試後再評估。",
+      "verdict": "WiFi 感測與邊緣 AI 領域相當有野心且文件完整的專案,值得關注;但準確度宣稱需自行驗證,建議先用實體硬體小規模測試。",
       "_mode": "light"
     },
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "consecutive_days_on_trending": 1
   },
   "CoreBunch/Instatic": {
@@ -1277,8 +1284,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 1,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1427,6 +1434,13 @@
         4,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-29": [
+        307446,
+        1095,
+        3,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-16",
@@ -1466,8 +1480,8 @@
       "verdict": "如果你使用程式代理做較長的自主開發,這是目前最完整、影響力最大的技能與流程框架,值得安裝試用,也值得研讀其技能設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 22,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 23,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -2037,8 +2051,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 4,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -2124,6 +2138,13 @@
         5,
         "The design language that makes your AI harness better at design.",
         "Rust"
+      ],
+      "2026-10-29": [
+        92684,
+        1472,
+        7,
+        "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-10-25",
@@ -2162,8 +2183,8 @@
       "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 13,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 14,
+    "consecutive_days_on_trending": 5
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -8077,10 +8098,10 @@
   },
   "HKUDS/DeepTutor": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-12": [
         34718,
@@ -8093,6 +8114,13 @@
         45913,
         1598,
         9,
+        "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+        "Python"
+      ],
+      "2026-10-29": [
+        47988,
+        2371,
+        4,
         "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
         "Python"
       ]
@@ -8668,10 +8696,10 @@
   },
   "macro-inc/macro": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-08-15",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-13": [
         1807,
@@ -8693,38 +8721,48 @@
         4,
         "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "Rust"
+      ],
+      "2026-10-29": [
+        5423,
+        117,
+        5,
+        "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-08-13",
+    "last_analyzed": "2026-10-29",
     "analysis": {
-      "one_liner": "Macro 是一個將 email、聊天、文件、任務、AI agent、通話與 CRM 整合成單一工作區的全能協作平台。",
-      "summary": "Macro 試圖解決團隊工具分散、彼此不互通造成的「不可計算」混亂問題,用 Rust 打造後端、SolidJS 打造前端,將所有功能模組(email、訊息、任務、文件、CRM 等)存放在同一個雙向圖資料結構中,彼此可用 @連結互相參照,並讓 AI agent 能像人類協作者一樣存取、編輯這些共享團隊記憶。",
+      "one_liner": "以 Rust 與 SolidJS 打造的一體化團隊工作空間,把信箱、聊天、文件、任務、Agent、通話與 CRM 以 @連結與共享 AI 記憶整合在一起。",
+      "summary": "Macro 是開源(AGPL-3.0)的團隊工作空間,試圖取代 Slack、Linear、Notion、HubSpot 與 Superhuman 的組合。所有內容(信件、訊息、文件、任務、CRM 物件)以雙向圖譜儲存並可互相 @連結,Agent 能透過共享的團隊記憶、MCP 與 API 存取並操作。解決的是多工具並用造成資料分散、公司資訊「無法被運算」的問題。",
       "category": "app",
       "highlights": [
-        "以雙向圖(bidirectional graph)串接 email、任務、文件、訊息、CRM 等模組,而非各自獨立的工具拼接",
-        "文件編輯採用 CRDT + Cloudflare Durable Objects,支援即時協作、離線編輯與版本歷史",
-        "強調 AI agent 為一級公民,可透過 MCP、API 或內部 agent 直接讀寫任務、文件與郵件",
-        "CRM 與郵件、聊天共享同一資料層,號稱能自動保持客戶資訊最新,不需另開系統手動同步",
-        "團隊自用兩年後開源,由 NYC 與多倫多團隊開發,目前為 GitHub trending 第 2 名且成長迅速"
+        "以雙向圖譜儲存跨類型的 @連結,例如信件→任務→Agent→PR 全程可追溯",
+        "文件採用 CRDT 與 Cloudflare Durable Objects,支援即時協作、離線編輯,Agent 可作為對等協作者直接編輯",
+        "信箱支援多 Gmail 帳號、鍵盤優先操作,並提供跨收件匣與附件 PDF 的統一搜尋 MCP 工具",
+        "內建 CRM,可依聯絡人或公司彙整信件與檔案,並提供給 Agent 查詢",
+        "團隊內部使用兩年,具 iOS App,提供 MCP/API/SDK 對外整合"
       ],
       "use_cases": [
-        "10~20 人規模的新創團隊想用單一系統取代 Slack+Linear+Notion+HubSpot 等多套工具",
-        "需要讓 AI agent 能跨郵件、文件、任務、CRM 統一存取團隊記憶並自動執行動作的場景",
-        "重視文件協作與版本控管、且想把客服信件、CRM 客戶紀錄與任務串接在同一介面的團隊",
-        "想觀察 Rust + SolidJS + CRDT 架構如何實作多模組即時協作系統的工程師"
+        "小型新創想用單一系統取代多套 SaaS 工具",
+        "需要讓 AI Agent 存取團隊完整上下文(信件、聊天、文件)的團隊",
+        "研究 CRDT 協作與多 Agent 共同編輯文件的架構",
+        "尋找可自架的 Slack/Linear/Notion 替代方案"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 撰寫詳細,對每個功能模組(email、聊天、任務、文件、CRM)都有清楚說明與截圖搭配官方文件連結,產品定位與設計理念交代得很完整;但本評估僅基於 README,未檢視原始碼,無法確認測試覆蓋率或程式碼品質。目前在 trending 榜排名第 2、單日增加 227 星,活躍度非常高,且今天有推送更新。"
+        "comment": "README 結構清楚,有功能表、截圖與各區塊文件連結,理念說明完整,但內容偏行銷且部分被截斷,缺少自架與技術架構細節。測試情況僅憑 README 無法評估。最近仍有推送,趨勢熱度高。"
       },
       "security": {
         "risk_level": "none",
-        "findings": []
+        "findings": [
+          "README 可見範圍內未提供需執行的安裝指令(如 curl | bash),主要引導使用託管服務註冊;本評估僅依 README,未進行原始碼審查。",
+          "產品會連接 Gmail 等帳號並處理信件與團隊資料,使用託管版或自架前宜自行確認權限範圍與資料處理方式。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "產品定位清晰、文件完整且在 trending 榜快速竄升,值得追蹤觀察其後續開源進度與社群反應,但目前仍偏商業產品導向(以 sign up/demo call 為主),而非典型開源工具,實際可用性與程式碼品質需待進一步查看原始碼與試用。",
+      "verdict": "野心大、定位明確的 AI 原生團隊工作空間,技術選型(Rust、CRDT、MCP)值得 AI 研發工程師關注;是否適合採用需再看自架文件與實際成熟度。",
       "_mode": "light"
     }
   },
@@ -26964,15 +27002,22 @@
   },
   "hmjz100/LinkSwift": {
     "first_seen": "2026-10-17",
-    "last_seen": "2026-10-17",
+    "last_seen": "2026-10-29",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-17": [
         23700,
         538,
         12,
+        "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+        "JavaScript"
+      ],
+      "2026-10-29": [
+        34692,
+        1616,
+        11,
         "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
         "JavaScript"
       ]
@@ -27915,10 +27960,10 @@
   },
   "Nutlope/hallmark": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-25": [
         32153,
@@ -27945,6 +27990,13 @@
         39012,
         2830,
         2,
+        "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "CSS"
+      ],
+      "2026-10-29": [
+        40726,
+        2110,
+        6,
         "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
         "CSS"
       ]
@@ -28164,10 +28216,10 @@
   },
   "makecindy/cindy": {
     "first_seen": "2026-10-25",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-25": [
         4106,
@@ -28194,6 +28246,13 @@
         7469,
         1465,
         6,
+        "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+        "TypeScript"
+      ],
+      "2026-10-29": [
+        8105,
+        728,
+        8,
         "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
         "TypeScript"
       ]
@@ -28238,10 +28297,10 @@
   },
   "JetBrains/thinkrail": {
     "first_seen": "2026-10-26",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-26": [
         1744,
@@ -28261,6 +28320,13 @@
         4011,
         1204,
         10,
+        "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+        "TypeScript"
+      ],
+      "2026-10-29": [
+        5058,
+        1068,
+        1,
         "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "TypeScript"
       ]
@@ -28469,10 +28535,10 @@
   },
   "nightly-labs/openbot": {
     "first_seen": "2026-10-27",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-27": [
         1478,
@@ -28485,6 +28551,13 @@
         2446,
         777,
         3,
+        "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+        "TypeScript"
+      ],
+      "2026-10-29": [
+        3256,
+        1054,
+        9,
         "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "TypeScript"
       ]
@@ -28648,15 +28721,22 @@
   },
   "elayadesign/ai-design-skills": {
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-28": [
         9352,
         1395,
         1,
+        "",
+        ""
+      ],
+      "2026-10-29": [
+        11124,
+        2139,
+        2,
         "",
         ""
       ]
@@ -28700,15 +28780,22 @@
   },
   "togg53192-cmd/jailbreaks": {
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-29",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-28": [
         5545,
         902,
         11,
+        "LIST OF ALL MY JAILBREAKS",
+        ""
+      ],
+      "2026-10-29": [
+        7121,
+        1477,
+        10,
         "LIST OF ALL MY JAILBREAKS",
         ""
       ]
@@ -28747,6 +28834,107 @@
       "star_rating": 3,
       "verdict": "對 LLM 安全研究與紅隊測試有參考價值,但屬爭議性的越獄提示詞集合,效果易隨模型更新失效,使用前需留意服務條款,適合有明確研究目的者關注。",
       "_mode": "light"
+    }
+  },
+  "expo/skills": {
+    "first_seen": "2026-10-29",
+    "last_seen": "2026-10-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-29": [
+        3581,
+        90,
+        12,
+        "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+        "Shell"
+      ]
+    },
+    "last_analyzed": "2026-10-29",
+    "analysis": {
+      "one_liner": "Expo 官方出品的 AI agent skills 合集,涵蓋 Expo 開發、EAS 部署與 SDK 升級,支援 Claude Code、Codex、Cursor 等多種 agent。",
+      "summary": "expo/skills 是 Expo 團隊官方維護的 AI agent 技能庫,以 SKILL.md 與 references 文件的形式,教 AI 編碼助手正確使用 Expo、EAS、React Native 與原生 iOS/Android 的相關約束。內容分為入口路由(expo-overview)、開源框架類、EAS 付費服務類與實驗類,並附帶 Expo MCP server 設定。可透過 Claude Code / Codex 外掛市集或 `npx skills` CLI 安裝。",
+      "category": "ai-ml",
+      "highlights": [
+        "官方出品:涵蓋 expo-router、expo-ui、expo-module、expo-upgrade 與 eas-app-stores、eas-update、eas-workflows 等 20 多個技能",
+        "把免費開源技能與付費 EAS 服務技能分組,每個服務類技能開頭都附費用與方案限制說明",
+        "同時支援 Claude Code、Codex 外掛與 skills CLI,可涵蓋 Cursor、Copilot、Windsurf 等多種 agent",
+        "外掛內附 Expo MCP server 設定,可即時讀取文件、觸發 EAS build、擷取模擬器畫面",
+        "repo 內建 expo-skill-eval 評測技能與 EAS workflow,用 fixture 專案驗證技能品質"
+      ],
+      "use_cases": [
+        "讓 Claude Code 或 Codex 協助建立與重構 Expo Router 應用,包含原生分頁、modal 與動畫",
+        "由 agent 協助撰寫 EAS Workflow、上架 App Store / Play Store 與設定 OTA 更新",
+        "由 agent 引導 Expo SDK 升級與相依套件衝突處理",
+        "參考其 SKILL.md 與評測架構,設計自家框架的 agent skills"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 清楚,有安裝、更新、技能清單、FAQ 與貢獻指南。CI 會檢查技能限制、外掛版本是否遞增與 overview 路由涵蓋率,並有 bun 測試;另有以 fixture 專案跑的技能評測,但屬於行為評測,不是傳統單元測試。最近仍持續推送,維護積極。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 只有 name 與 private,沒有 preinstall、postinstall 等生命週期腳本。",
+          "外掛內的 .mcp.json 設定了遠端 MCP 端點 https://mcp.expo.dev/mcp,安裝外掛後 agent 會連線至該 Expo 服務。",
+          "README 建議用 `npx skills@latest add` 安裝,每次會從 npm 取得最新版 CLI 並執行;各技能的回饋指令也使用 `npx --yes @expo/agent-cli@latest feedback`。",
+          "評測腳本 make-fixture.sh 會透過 bunx 執行 create-expo-app 與 expo install,並寫入使用者家目錄下的快取目錄,僅供評測使用。",
+          "未發現混淆程式碼、內嵌的長 base64 內容、硬編碼 IP 或 curl|bash 安裝模式。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "只要使用 Expo / React Native 搭配 AI 編碼助手,這個官方技能庫就值得安裝;對想設計 agent skills 的人,其結構與評測流程也有參考價值。",
+      "_mode": "full"
+    }
+  },
+  "xiaolai/the-craft-of-selfteaching": {
+    "first_seen": "2026-10-29",
+    "last_seen": "2026-10-29",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-29": [
+        18509,
+        148,
+        14,
+        "One has no future if one couldn't teach themself.",
+        "Jupyter Notebook"
+      ]
+    },
+    "last_analyzed": "2026-10-29",
+    "analysis": {
+      "one_liner": "李笑來《自學是門手藝》全書的 Jupyter Notebook 版,以 Python 為入口教人如何自學。",
+      "summary": "這是李笑來所著《自學是門手藝》(The Craft of Selfteaching)的開源電子書倉庫。內容以 Jupyter Notebook 撰寫,分三部分:自學方法論、Python 基礎到函式與測試、類別/正則/BNF 等進階主題,並附 Markdown 版本與讀者自學故事。它不是軟體工具,而是以寫程式作為自學訓練入口的中文教材。",
+      "category": "learning-resource",
+      "highlights": [
+        "完整的中文電子書,章節涵蓋自學方法論、刻意練習與 Python 從入門到進階",
+        "以 Jupyter Notebook 撰寫,可在本機 JupyterLab 邊讀邊執行範例",
+        "TDD 章節以先寫斷言、逐步實作 is_leap() 的方式示範測試驅動開發",
+        "附 Markdown 版本、讀者自學故事,以及用 Pull Request 校對的貢獻流程",
+        "採用 CC-BY-NC-ND 授權(README 說明,GitHub 未標示)"
+      ],
+      "use_cases": [
+        "想用中文系統學習 Python 與自學方法的初學者",
+        "需要自學與刻意練習方法論參考的工程師或團隊培訓",
+        "想透過 Pull Request 參與校對的社群讀者"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 2,
+        "comment": "README 目錄完整、章節編排清楚,並附 Markdown 版本與校對貢獻說明。範例以 notebook 內嵌驗證(如 TDD 章逐步讓四個斷言通過),沒有獨立測試或 CI(未發現 .github 目錄)。最後推送為 2026-05,屬低頻維護的書籍型專案,但內容成熟、社群關注度高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "對中文讀者而言是不錯的自學與 Python 入門讀物,但不是技術工具,對 AI 研發工程師屬於選讀。",
+      "_mode": "full"
     }
   }
 }
