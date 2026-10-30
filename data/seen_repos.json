@@ -1284,8 +1284,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-29",
-    "days_on_trending": 2,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1441,47 +1441,55 @@
         3,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-30": [
+        308551,
+        1034,
+        2,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-10-16",
+    "last_analyzed": "2026-10-30",
     "analysis": {
-      "one_liner": "跨多種程式代理(Claude Code、Codex、Cursor、Gemini CLI 等)的可組合技能框架與軟體開發方法論,涵蓋腦力激盪、計畫、子代理開發與 TDD。",
-      "summary": "Superpowers 是一套以 Markdown 技能(SKILL.md)為核心的代理開發流程。工作階段啟動時,它會用 SessionStart hook 注入 using-superpowers 技能,讓代理在寫程式前依序進行需求釐清、設計、計畫、子代理執行、TDD 與程式碼審查。專案提供十多種代理平台的外掛清單與安裝方式,目的是讓代理自主工作較長時間,又不偏離計畫。",
-      "category": "ai-ml",
+      "one_liner": "跨 16 種以上程式代理(Claude Code、Codex、Cursor、Gemini CLI 等)通用的可組合技能框架與軟體開發方法論,涵蓋腦力激盪、計畫、TDD、子代理開發與審查。",
+      "summary": "Superpowers 是一套給 coding agent 使用的技能(skills)庫,加上開機時注入的引導指令。它要求代理在動手寫程式前先釐清需求、產出設計與計畫,再以 TDD 與子代理逐任務執行並審查。專案以外掛、擴充套件或 marketplace 形式支援多個代理平台,用來解決代理跳過規劃與測試、輸出品質不穩的問題。",
+      "category": "devtool",
       "highlights": [
-        "完整的工作流程:brainstorming → git worktree → writing-plans → subagent-driven-development → TDD → code review → 收尾分支",
-        "同一份技能可用於 Claude Code、Codex、Cursor、Gemini CLI、Copilot CLI、OpenCode、Pi、Hermes、Muse 等十多種平台,各平台有獨立的外掛 manifest",
-        "技能內容嚴謹,例如 TDD 技能明訂「沒有先失敗的測試就不能寫正式程式碼」,並附有反合理化的約束",
-        "內建 diagnosing-superpowers 技能,可讀取工作階段紀錄、找出技能誤觸發或沒觸發的原因,並匯出已去識別化的 bug 回報",
-        "MIT 授權,有 docs/superpowers 下大量的設計規格與實作計畫,等於用自己的方法論開發自己"
+        "完整工作流程:brainstorming → git worktree → writing-plans → subagent-driven-development → TDD → code review → 收尾分支,技能會自動觸發",
+        "平台覆蓋廣:Claude Code、Codex、Cursor、Gemini、Copilot CLI、OpenCode、Pi、Hermes、Muse、Kimi、Devin 等,皆有各自的外掛 manifest",
+        "SessionStart hook 會把 using-superpowers 技能注入上下文,並依 Cursor、Claude Code、Copilot、Muse 輸出不同的 JSON 格式",
+        "附有 diagnosing-superpowers 診斷技能,可讀取 session transcript 並產生已去識別的 bug 回報包",
+        "docs/superpowers/specs 保存大量設計文件,顯示專案以自身方法論進行開發"
       ],
       "use_cases": [
-        "讓 Claude Code 或 Codex 在大型功能開發中先釐清需求、再依計畫逐步實作並審查",
-        "團隊想在多種程式代理之間統一開發流程與紀律(TDD、驗證、審查)",
-        "研究或撰寫自己的代理技能(skills)與外掛,參考 writing-skills 與跨平台移植文件",
-        "以子代理並行處理多個獨立任務,並搭配任務後審查"
+        "讓 Claude Code 或 Codex 等代理在長任務中遵循規劃、TDD 與審查流程",
+        "團隊想統一多種 AI 編碼工具的開發紀律與工作流程",
+        "參考其 SKILL.md 寫法與跨平台外掛打包方式,自行設計技能或外掛",
+        "需要子代理逐任務實作並兩階段審查的大型功能開發"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 完整,涵蓋各平台安裝,另有移植指南、設計規格與發行說明。tests/ 下有大量 shell、JS 與 Python 測試,涵蓋 brainstorm server、各平台外掛、hooks、版本升級與技能結構。不過技能行為測試放在外部的 superpowers-evals,且 repo 內未找到 .github/workflows,CI 設定在本地看不到。最後推送時間為 2026-10-10,有大量近期開發紀錄,版本為 7.0.0。"
+        "comment": "README 完整,各平台安裝步驟清楚,另有移植到新 harness 的指南、測試文件與大量設計規格。tests/ 涵蓋各平台外掛 manifest、hooks、brainstorm server、OpenCode、Hermes(pytest)、skill 大小與 shell lint 等。本次檢視的 .github/ 內只有 issue 與 PR 範本,沒有 workflows,CI 可能在別處,這裡看不到。最後推送為 2026-10-29,維護非常活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 的「Visual companion telemetry」一節說明,brainstorming 視覺輔助功能預設會從 primeradiant.com 載入 Logo(server.cjs 中的網址),請求會帶有 Superpowers 版本。文件稱不含專案、提示詞或代理資訊,可用環境變數 SUPERPOWERS_DISABLE_TELEMETRY 或 DISABLE_TELEMETRY 關閉。",
-          "hooks/session-start 會在每次工作階段開始時,把 using-superpowers 技能全文以 <EXTREMELY_IMPORTANT> 標記注入代理上下文。這是設計行為,安裝前應知道此技能內容會直接影響代理的行為。",
-          "OpenCode 的安裝方式是請代理擷取並依照遠端 INSTALL.md 的指示操作;Pi 與 Antigravity 則直接從 GitHub 安裝。這些方式會執行外部取得的內容,建議先檢視。",
-          "package.json 沒有 preinstall、postinstall 或 prepare 等生命週期腳本。在檢視的 hooks 與 scripts 中,沒有發現 curl|bash、混淆程式碼或內嵌的 base64 payload。"
+          "README 的 Visual companion telemetry 章節說明:brainstorming 的選用視覺輔助功能預設會從 primeradiant.com 載入 logo,請求中含 Superpowers 版本;可用環境變數 SUPERPOWERS_DISABLE_TELEMETRY 關閉,也會遵循 DISABLE_TELEMETRY 與 CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC。skills/brainstorming/scripts/server.cjs 內可見對應的 logo URL。",
+          "hooks/session-start 是 bash 腳本,會讀取本地 skills/using-superpowers/SKILL.md 並以 JSON 注入代理上下文,未見下載或執行外部內容的行為。",
+          "根目錄 package.json 沒有 preinstall、postinstall、prepare 等生命週期腳本,也沒有任何相依套件。",
+          "OpenCode 安裝方式是請代理擷取並依照遠端 INSTALL.md 的指示操作,使用者應先檢視該檔案內容。",
+          "本次抽樣未發現混淆程式碼、長 base64 payload 或已提交的二進位執行檔,assets/ 內僅有圖片。"
         ]
       },
-      "star_rating": 5,
-      "verdict": "如果你使用程式代理做較長的自主開發,這是目前最完整、影響力最大的技能與流程框架,值得安裝試用,也值得研讀其技能設計。",
+      "star_rating": 4,
+      "verdict": "用 AI 編碼代理做正式開發的人值得關注與試用;其技能設計與跨平台打包也很適合當參考範本。",
       "_mode": "full"
     },
-    "total_days_on_trending": 23,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 24,
+    "consecutive_days_on_trending": 3
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -2051,8 +2059,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-29",
-    "days_on_trending": 5,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 6,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -2145,6 +2153,13 @@
         7,
         "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "Rust"
+      ],
+      "2026-10-30": [
+        95336,
+        2870,
+        3,
+        "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-10-25",
@@ -2183,8 +2198,8 @@
       "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 14,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 15,
+    "consecutive_days_on_trending": 6
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -8098,10 +8113,10 @@
   },
   "HKUDS/DeepTutor": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-12": [
         34718,
@@ -8121,6 +8136,13 @@
         47988,
         2371,
         4,
+        "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+        "Python"
+      ],
+      "2026-10-30": [
+        50068,
+        1930,
+        1,
         "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
         "Python"
       ]
@@ -14392,10 +14414,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-09",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -14445,43 +14467,50 @@
         5,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
+      ],
+      "2026-10-30": [
+        104803,
+        336,
+        8,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-10-04",
+    "last_analyzed": "2026-10-30",
     "analysis": {
-      "one_liner": "為 Claude Code 與多種 AI 代理提供跨 session 持久記憶的擷取、壓縮與注入系統。",
-      "summary": "claude-mem 透過生命週期 hooks 自動擷取代理的工具使用觀察,以 AI 壓縮成語意摘要,存入 SQLite 並搭配 Chroma 向量庫做混合搜尋,再於後續 session 注入相關上下文。支援 Claude Code、OpenClaw、Codex、Gemini、OpenCode 等,解決代理跨 session 失憶的問題。",
-      "category": "devtool",
+      "one_liner": "為各種 AI 程式代理(Claude Code、Codex、Gemini、OpenCode 等)提供跨 session 持久記憶的壓縮與注入系統。",
+      "summary": "claude-mem 會自動擷取代理在 session 中的工具使用觀察,用 AI 壓縮成語意摘要,並在後續 session 自動注入相關情境,讓代理能延續專案知識。它以 npx 安裝器支援多種 IDE 與代理平台,並提供搜尋技能、Web viewer、隱私標籤與選用的雲端同步。",
+      "category": "ai-ml",
       "highlights": [
-        "5 個生命週期 hooks 自動擷取,無需手動操作",
-        "SQLite + FTS5 搭配 Chroma 做混合語意/關鍵字搜尋",
-        "漸進式揭露(Progressive Disclosure),顯示 token 成本",
-        "支援多種代理與 IDE(Claude Code、OpenCode、OpenClaw、Antigravity 等)",
-        "提供 Web Viewer、<private> 標籤隱私控制,以及 30 多種語言文件"
+        "支援 Claude Code、OpenCode、T3 Code、Antigravity、OpenClaw、Pi 等多種代理平台,一行 npx 指令安裝",
+        "漸進式揭露(Progressive Disclosure)機制,檢索時可看到 token 成本",
+        "內建 mem-search 技能、本地 My Work 與 viewer 介面,以及 TeamBrain 團隊共享工作區",
+        "<private> 標籤可排除敏感內容;截圖功能預設關閉、需主動啟用",
+        "記憶供應者可選:官方 observer、自備 OpenRouter/Gemini 金鑰或 Anthropic 方案;提供 30 天免費試用"
       ],
       "use_cases": [
-        "長期專案中讓 Claude Code 記住先前決策與修復",
-        "多代理工作流程共享持久記憶",
-        "搜尋並引用過往 session 的觀察紀錄",
-        "研究 agent 上下文工程與記憶架構設計"
+        "讓 Claude Code 長期專案跨 session 保留決策、修 bug 脈絡與程式碼知識",
+        "在多種代理工具(Codex、OpenCode 等)間建立一致的長期記憶層",
+        "團隊透過 TeamBrain 共享工作清單與發現",
+        "研究代理記憶與 context engineering 的實作範例"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "文件完整,有官方文件站、架構說明與多語系 README,版本 13.x,近期仍持續推送且熱度高。測試僅依 README 評估,未檢視程式碼。README 安裝段落內容較雜,混有多個整合與商業方案說明。"
+        "comment": "README 完整,涵蓋多平台安裝、功能與文件連結,並有 30 多種語言翻譯,但篇幅冗長、商業方案資訊混雜。測試品質僅憑 README 評估,無法確認。專案極為活躍,版本 15.7.0,最近一次推送為 2026-10-29,星數超過 10 萬。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供 npx claude-mem install 與 curl -fsSL https://install.cmem.ai/openclaw.sh | bash 等安裝方式,執行遠端腳本前建議先檢視內容",
-          "安裝流程會引導登入 claude-mem 帳號並可使用託管記憶(CMEM Pro)與雲端同步,工具使用紀錄可能被送往外部服務,使用前應確認資料範圍",
-          "工具會擷取代理的工具使用內容,README 提供 <private> 標籤排除敏感內容",
-          "本評估僅依 README,未進行原始碼層級審查"
+          "README 提供 `npx claude-mem install` 與 OpenClaw 的 `curl -fsSL https://install.cmem.ai/openclaw.sh | bash` 安裝方式,後者會直接執行遠端腳本,建議先檢視內容再執行。",
+          "安裝器會註冊 hooks 並啟動 worker 服務,會擷取工具使用紀錄;README 說明安裝時會引導使用者登入雲端帳號,Cloud Sync 屬選用功能,可用 --provider 或環境變數跳過。",
+          "截圖上傳與影像推論須主動開啟,預設關閉。",
+          "本評估僅依 README,未進行原始碼層級審查。"
         ]
       },
       "star_rating": 4,
-      "verdict": "跨代理持久記憶領域人氣極高、文件完整且維護活躍,對經常使用 Claude Code 的工程師很值得試用,但需留意資料外送與遠端安裝腳本。",
+      "verdict": "代理長期記憶領域的熱門專案,生態整合廣、更新頻繁,使用 Claude Code 等工具的工程師值得試用,但應先確認資料外送與雲端選項的設定。",
       "_mode": "light"
     }
   },
@@ -28297,10 +28326,10 @@
   },
   "JetBrains/thinkrail": {
     "first_seen": "2026-10-26",
-    "last_seen": "2026-10-29",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-26": [
         1744,
@@ -28327,6 +28356,13 @@
         5058,
         1068,
         1,
+        "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+        "TypeScript"
+      ],
+      "2026-10-30": [
+        6014,
+        1117,
+        4,
         "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "TypeScript"
       ]
@@ -28535,10 +28571,10 @@
   },
   "nightly-labs/openbot": {
     "first_seen": "2026-10-27",
-    "last_seen": "2026-10-29",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-27": [
         1478,
@@ -28558,6 +28594,13 @@
         3256,
         1054,
         9,
+        "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+        "TypeScript"
+      ],
+      "2026-10-30": [
+        3883,
+        709,
+        6,
         "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
         "TypeScript"
       ]
@@ -28721,10 +28764,10 @@
   },
   "elayadesign/ai-design-skills": {
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-28": [
         9352,
@@ -28737,6 +28780,13 @@
         11124,
         2139,
         2,
+        "",
+        ""
+      ],
+      "2026-10-30": [
+        12157,
+        1187,
+        7,
         "",
         ""
       ]
@@ -28780,10 +28830,10 @@
   },
   "togg53192-cmd/jailbreaks": {
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-29",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-10-30",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-28": [
         5545,
@@ -28795,6 +28845,13 @@
       "2026-10-29": [
         7121,
         1477,
+        10,
+        "LIST OF ALL MY JAILBREAKS",
+        ""
+      ],
+      "2026-10-30": [
+        9049,
+        1594,
         10,
         "LIST OF ALL MY JAILBREAKS",
         ""
@@ -28934,6 +28991,166 @@
       },
       "star_rating": 3,
       "verdict": "對中文讀者而言是不錯的自學與 Python 入門讀物,但不是技術工具,對 AI 研發工程師屬於選讀。",
+      "_mode": "full"
+    }
+  },
+  "milind-soni/OpenMausBot": {
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-30": [
+        7479,
+        1199,
+        5,
+        "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-30",
+    "analysis": {
+      "one_liner": "開源的 Grok Bot 替代品:以聊天軟體形式管理一群本機 Claude/Codex 代理人,每個 bot 各有模型、電腦與連接應用。",
+      "summary": "OpenMausBot 是 Electron/TypeScript 桌面應用,把 AI 代理人包裝成類似 Telegram 的聊天介面。每個 bot 使用你本機已安裝的 claude、codex、grok CLI,資料存於 ~/.openmausbot。它也提供雲端 Linux 桌面、本機 VM 或(需明確啟用)主機控制,並透過 Composio 串接 500 多種應用,風險動作以核准卡片讓使用者決定。",
+      "category": "ai-ml",
+      "highlights": [
+        "自帶代理人:直接使用本機 claude/codex/grok CLI 與既有訂閱登入,無中間代理",
+        "本機優先:單一 127.0.0.1 harness 伺服器管理所有代理程序,逐字稿與金鑰存於本機",
+        "每個 bot 可有獨立電腦(雲端桌面、本機 VM 或主機控制),並有 Allow/Deny 核准卡片",
+        "透過 Composio 連接 Gmail、Slack、GitHub、Notion 等 500+ 應用",
+        "支援頻道、Markdown 團隊包匯入(BotMRR)與部門分享,跨 macOS、Windows、Ubuntu"
+      ],
+      "use_cases": [
+        "在個人桌面上建立多代理人團隊,依情境分頻道處理工作",
+        "為 Claude Code/Codex 提供圖形化聊天與核准介面",
+        "研究多代理人、computer-use 與權限代理(permission broker)的產品設計",
+        "作為 Grok Bot、Meta Muse 等封閉產品的自託管替代方案評估"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 完整、截圖豐富、下載與功能說明清楚,但行銷色彩偏重。僅依 README 評估,無法檢視測試與程式碼。最近推送為 2026-10-30,今日熱度 +1199 星,活躍度高;專案較新,穩定度待觀察。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "README 主要提供預編譯安裝檔(.dmg、.exe、.deb)下載,未見 curl | bash 式安裝;本次僅看 README,未做原始碼審查",
+          "應用可讓代理人執行 shell 指令、編輯檔案,並可選擇控制主機電腦(macOS/Ubuntu Xorg 需明確啟用),建議保持核准機制開啟並先在隔離環境(本機 VM)試用",
+          "需貼入 API 金鑰並連接 Gmail、Slack 等第三方帳號(經 Composio OAuth),使用前請確認授權範圍",
+          "README 聲明專案與任何加密貨幣無關,使用者應只從官方 GitHub Releases 取得安裝檔"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "概念完整、本機優先且支援多代理人與核准機制的 Grok Bot 開源替代品,值得關注;但專案很新,實際穩定度與安全性需自行驗證。",
+      "_mode": "light"
+    }
+  },
+  "CopilotKit/OpenBot": {
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-30": [
+        8150,
+        247,
+        9,
+        "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-10-30",
+    "analysis": {
+      "one_liner": "CopilotKit 推出的開源「AI 同事」平台範本:每個 Agent 擁有獨立瀏覽器、檔案與工具,所有動作都經閘道先決策、後稽核,可接入任何 AG-UI Agent。",
+      "summary": "OpenBot 是一個可自架的 Agent 平台範本,用 Docker Compose 在自有基礎設施上執行。每個 Bot 有自己的 Chromium 容器、登入狀態與工作區。所有瀏覽器、檔案、MCP 與元件操作都必須經過同一個 gateway,先依政策判斷、寫入稽核紀錄,才實際執行。它透過 AG-UI 協定支援 LangGraph、Mastra、CrewAI、ADK 等多種框架,解決企業「想讓 Agent 碰工具,又要能治理與稽核」的問題。",
+      "category": "ai-ml",
+      "highlights": [
+        "Gateway 設計嚴謹:先由伺服器端從快照解析 ref,不信任模型提供的標籤,再套用政策(deny 優先、無政策即拒絕),並先寫稽核紀錄才執行動作",
+        "框架中立:以 AG-UI 協定接入 LangGraph、Mastra、ADK、AG2、Agno、Claude SDK 等多種 Agent,倉庫內附多個範例實作",
+        "每個 Bot 獨立電腦(容器內 Chromium、登入、檔案),支援人工接手(handoff)、出口(egress)控制與即時畫面",
+        "測試規模龐大(TS 測試檔近千個,另有 Python 測試),CI 含 format、lint、typecheck,並有 zizmor 工作流程安全掃描",
+        "定位為「範本而非產品」:MIT 授權,所有 workspace 皆為 private,需複製後自行改造;目前為 Beta"
+      ],
+      "use_cases": [
+        "企業內部自架 AI 助理,需對 Agent 行為做政策管控與稽核",
+        "研究 Agent 治理、動作審批與可稽核 gateway 的架構參考",
+        "為各種 AG-UI Agent 提供統一的聊天介面與沙盒瀏覽器環境",
+        "需要人機協作(Agent 遇到敏感操作時交還人工接手)的自動化流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 完整,說明架構、需求與快速上手,並附 prompt.txt 供 AI 助手協助設定;程式碼註解清楚說明設計取捨。測試覆蓋廣,CI 流程成熟,依賴與 GitHub Actions 皆以 SHA 固定。專案仍為 Beta,近期更新頻繁(最後推送 2026-10-29)。需要 CopilotKit Intelligence 專案與授權,上手門檻稍高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "根 package.json 未見 preinstall/postinstall/prepare 等安裝期生命週期腳本,Dockerfile 也未見 curl|bash 模式(測試甚至檢查 Dockerfile 不得出現此模式)",
+          "快速上手步驟使用 `npx --yes copilotkit@latest login` 與 `bun scripts/setup-learning.ts`,會下載並執行最新版 CLI,並開啟瀏覽器登入以寫入 .env,使用者應留意",
+          "`.env.example` 預設 `OPENBOT_SINGLE_USER=true`,會把所有請求視為單一管理員,README 說明僅適用本機,對外部署前須啟用登入",
+          "Bot 擁有瀏覽器、檔案與 MCP 工具權限,並提供 supervisor 模式(需 Docker socket);部署時建議審視政策與網路出口設定",
+          "範例 KEY_ENCRYPTION_KEY 為公開值,README 建議正式環境自行產生"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你在做企業級 Agent 治理、稽核或沙盒瀏覽器,這是工程品質很高、值得深入研讀的參考實作。它是 Beta 範本,且需要 CopilotKit Intelligence,上手前先評估。",
+      "_mode": "full"
+    }
+  },
+  "Donchitos/Claude-Code-Game-Studios": {
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-10-30": [
+        29201,
+        353,
+        11,
+        "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+        "Shell"
+      ]
+    },
+    "last_analyzed": "2026-10-30",
+    "analysis": {
+      "one_liner": "把 Claude Code 變成遊戲工作室的範本:49 個 AI 代理、74 個技能和 hooks,依真實工作室階層(總監、主管、專員)分工。",
+      "summary": "這是一套放在 `.claude/` 底下的 Claude Code 專案範本,內含 agents、slash command 技能、hooks、規則與文件模板。它把遊戲開發流程(發想、GDD、架構、Story/Sprint、QA、發行)拆成有審核關卡的多代理協作,並附 Godot、Unity、Unreal 的引擎專家代理組。使用者仍然自己做所有決策,代理負責提問、檢查與維持文件結構。",
+      "category": "ai-ml",
+      "highlights": [
+        "三層代理階層(3 位總監、8 位部門主管、專員),每個代理都有明確職責與升級路徑",
+        "74 個 slash 技能涵蓋 /start、/design-system、/create-stories、/dev-story、/gate-check 等完整流程",
+        "15 個 hooks 在提交、推送、寫檔與讀檔時做驗證,並記錄代理稽核軌跡",
+        "settings.json 內建大量 deny 規則,擋下 rm -rf、強制推送、git reset --hard、讀取 .env 等操作",
+        "README 坦承實測結果:rigor=standard 比 minimal 多寫 29 份文件,盲測卻排最後,並要求視覺變更要有截圖佐證"
+      ],
+      "use_cases": [
+        "獨立遊戲開發者想用 Claude Code 搭出有結構的開發流程",
+        "想參考多代理協作、hooks 與權限設計的 Claude Code 使用者",
+        "在 Godot、Unity 或 Unreal 專案中導入 GDD、ADR、Sprint 規劃等文件化流程的小團隊"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 詳盡,附代理與技能清單、升級指引和誠實的成本評估。倉庫內沒有傳統單元測試,也沒有 .github/workflows CI,只有 .claude/scripts 下的 test-run.sh 與 test-scaffold.sh,以及 skill-test 這類技能。hooks 寫得細緻,考慮了跨平台與失敗時的退讓。最後推送為 2026-10-19,且有 CODEOWNERS 與 issue/PR 模板,維護狀態不錯。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "settings.json 在 SessionStart、PreToolUse、PostToolUse、Stop 等事件註冊了 15 個 bash hooks。使用者在專案根目錄啟動 Claude Code 後,這些腳本就會自動執行,採用前建議先看過內容。",
+          "hooks/update-check.sh 每天最多一次在背景用 curl 或 wget 向 api.github.com 查詢本專案最新 release,結果快取在 ~/.cache/claude-code-game-studios。可用 updates.check=false 關閉,CI 環境下也會自動停用。",
+          "在 hooks 目錄中只找到 update-check.sh 含有網路請求,沒有發現 curl|bash 安裝模式、base64 payload、混淆程式碼或寫死的 IP。",
+          "沒有 package.json、setup.py 等會在安裝時執行的腳本。README 要求具備 Python 3 與 Bash,hooks 會用 Python 讀取 project.yaml。",
+          "settings.json 的 deny 清單偏保守,會阻擋破壞性指令與 .env 讀寫,屬於額外防護。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對想用 Claude Code 做遊戲開發或研究多代理與 hooks 設計的人很有參考價值;因為 hooks 會自動執行,導入前先瀏覽一遍腳本即可。",
       "_mode": "full"
     }
   }
