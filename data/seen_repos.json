@@ -757,8 +757,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-11",
-    "days_on_trending": 5,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -914,49 +914,56 @@
         6,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-10-31": [
+        307488,
+        876,
+        8,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-10-10",
+    "last_analyzed": "2026-10-31",
     "analysis": {
+      "one_liner": "Matt Pocock 每天使用的 agent skills 合集,以 Markdown 技能檔實踐 grill 需求對齊、TDD、規格拆票等工程流程,支援 Claude Code、Codex、Copilot、Gemini CLI 等。",
+      "summary": "這是一組小而可組合的 agent skills(SKILL.md),把「對齊需求(grilling)、共用語彙(GLOSSARY/ADR)、TDD、除錯、架構改善、規格轉票、平行實作」等工程實務寫成可重複使用的提示流程。專案主張「真工程而非 vibe coding」,不像 GSD、BMAD、Spec-Kit 接管整個流程,而是讓使用者保有控制權並可自行修改。可透過 Claude Code plugin、Codex/Copilot marketplace、Gemini CLI 或 npx skills 安裝。",
       "category": "ai-ml",
-      "one_liner": "Matt Pocock 每天實際使用的 agent skills 集合,以小而可組合的方式取代 GSD、BMAD 等重流程框架。",
-      "summary": "這是一組以 Markdown(SKILL.md)撰寫的 coding agent 技能,涵蓋 grilling 訪談、領域建模(GLOSSARY/ADR)、TDD、除錯、任務拆解、code review 與 PR 等工程流程。可透過 Claude Code、Codex、Copilot、Gemini CLI 的 plugin 機制或 npx skills 安裝,再用 /setup-matt-pocock-skills 設定 issue tracker 與標籤。主打讓開發者保有流程控制權,而非被整套方法論綁住。",
       "highlights": [
-        "以 grill-me / grill-with-docs 先對齊需求,並同步累積 GLOSSARY.md 與 ADR,降低 agent 囉嗦與誤解",
-        "tdd 技能強調預先約定 seam、垂直切片與反模式(tautological、實作耦合),規範具體可行",
-        "skills 分為使用者觸發與模型觸發兩類,規則清楚且可組合(implement、implement-spec、wayfinder 等)",
-        "同時支援 Claude Code、Codex、Copilot、Gemini 等多種 agent,並附 openai.yaml 設定",
-        "以 changesets 管理版本與 CHANGELOG,並有 ADR 與 out-of-scope 文件記錄設計取捨"
+        "grill-me / grill-with-docs 是對齊需求的核心技能,並透過 GLOSSARY.md 與 ADR 建立專案共用語彙,減少 agent 贅述與誤解",
+        "明確區分「使用者呼叫」與「模型呼叫」技能,且禁止使用者呼叫型技能互相呼叫,架構清楚、可組合",
+        "tdd 技能強調事先約定測試 seam、垂直切片 red→green,並列出實作耦合、同義反覆等反模式",
+        "涵蓋完整工程鏈:to-spec → to-tickets → implement / implement-spec(平行子代理)→ code-review,另有 wayfinder、retro、triage 等",
+        "跨 agent 相容:提供 Claude plugin、Codex/Copilot marketplace、Gemini CLI 與 npx skills 安裝方式,每個技能附 openai.yaml",
+        "附 .out-of-scope、SCOPE.md、ADR、changeset 等文件,維護紀律佳"
       ],
       "use_cases": [
-        "為 Claude Code / Codex 團隊建立一致的需求對齊與 TDD 工作流程",
-        "在既有專案導入共用術語表(GLOSSARY)與 ADR,減少 agent 的冗長輸出",
-        "參考其技能撰寫方式,學習如何為 agent 設計小而可組合的 SKILL.md",
-        "以 triage、to-tickets、implement-spec 串接 issue tracker 進行規格到實作的流程"
+        "在 Claude Code / Codex 等 coding agent 中建立標準化的需求釐清與規格撰寫流程",
+        "團隊以 TDD、code-review、架構檢視等紀律約束 agent 產出品質",
+        "作為撰寫自家 SKILL.md、AGENTS.md 的參考範本(writing-for-agents)",
+        "用 triage、wayfinder、to-tickets 把大型工作拆成議題追蹤器上的任務圖"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 清楚說明動機、安裝與每個技能用途,docs/ 下另有各技能文件、ADR、SCOPE 與 GLOSSARY。內容主要是提示詞文件而非程式碼,因此沒有傳統單元測試,僅有 release 與 issue 分流的 GitHub Actions 及版本同步檢查腳本。最後推送時間為 2026-10-09,changeset 與 commit 紀錄顯示維護頻繁。"
+        "comment": "README 完整,分章說明動機、安裝與技能參考;另有 CONTRIBUTING、SCOPE、GLOSSARY、ADR 與 docs/ 逐技能說明。內容以 Markdown 提示為主,沒有傳統單元測試,僅有 changeset 發佈、issue triage 與版本同步檢查等 CI。推送頻繁(每日更新),版本管理與範圍界定嚴謹。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 只有 changeset 相關 scripts,沒有 preinstall/postinstall 等生命週期腳本,devDependencies 僅為 @changesets 官方套件",
-          "README 的安裝方式是 claude plugin install、codex plugin add,以及 npx skills@latest add,屬於從外部來源取得並安裝內容,使用者可自行評估來源",
-          "scripts/link-skills.sh 為維護者開發用腳本,會在 ~/.claude/skills 與 ~/.agents/skills 建立符號連結,若目標已存在且非符號連結則以 rm -rf 刪除,執行前需留意",
-          "skills/misc/git-guardrails-claude-code 內的 block-dangerous-git.sh 為 hook,會封鎖 git push、reset --hard 等指令,屬於防護用途",
-          "這些 SKILL.md 會成為 agent 的指令內容,安裝後會影響 agent 行為(例如可呼叫子代理、發佈到 issue tracker),建議先閱讀再啟用",
-          "未發現混淆程式碼、內嵌 base64 載荷、寫死 IP 或已提交的二進位檔"
+          "package.json 沒有 preinstall / postinstall / prepare 等安裝期生命週期腳本,僅有 changeset 相關的 devDependencies 與維護用指令",
+          "README 的安裝方式為 claude plugin install、codex plugin add、npx skills@latest add mattpocock/skills,會從外部來源取得並載入技能檔;技能內容是會影響 agent 行為的提示指令,安裝前建議先閱讀",
+          "scripts/link-skills.sh 為維護者開發用腳本,會在 ~/.claude/skills 與 ~/.agents/skills 建立符號連結;若目標路徑已存在非符號連結的同名項目,會以 rm -rf 刪除,檔案內已註明並非正式安裝器",
+          "skills/misc/git-guardrails-claude-code/scripts/block-dangerous-git.sh 是防護性 hook,會攔截 git push、reset --hard 等指令,依賴 jq",
+          "未發現 curl|bash、混淆程式碼、內嵌 base64 載荷、寫死 IP 或已提交的二進位檔;GitHub Actions 的 release.yml 使用官方 actions 與 changesets/action,權限為 contents / pull-requests write"
         ]
       },
       "star_rating": 4,
-      "verdict": "想用 Claude Code 或 Codex 做嚴謹工程開發的人值得關注與參考,其 grilling、領域語言與 TDD 技能設計成熟且可自由改造,但內容屬提示詞性質,效果取決於個人工作流程。",
+      "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 23,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 24,
+    "consecutive_days_on_trending": 1
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1284,8 +1291,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 3,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1448,6 +1455,13 @@
         2,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-10-31": [
+        309438,
+        1259,
+        14,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-30",
@@ -1488,8 +1502,8 @@
       "verdict": "用 AI 編碼代理做正式開發的人值得關注與試用;其技能設計與跨平台打包也很適合當參考範本。",
       "_mode": "full"
     },
-    "total_days_on_trending": 24,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 25,
+    "consecutive_days_on_trending": 4
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1919,8 +1933,8 @@
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-06",
-    "days_on_trending": 3,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
         15052,
@@ -1960,46 +1974,53 @@
         4,
         "",
         "TypeScript"
+      ],
+      "2026-10-31": [
+        32744,
+        930,
+        9,
+        "",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-10-04",
+    "last_analyzed": "2026-10-31",
     "analysis": {
-      "one_liner": "T3 Code 是開源的「agent harness 控制介面」,以桌面、網頁與手機 App 統一操控本機的 Claude Code、Codex、Cursor 等程式碼代理。",
-      "summary": "T3 Code 由 pingdotgg 開發,讓你透過 Electron 桌面版、網頁版以及 iOS/Android App,控制電腦上已安裝並登入的各種 coding agent(Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity)。它沿用你既有的訂閱,主打高效能、可遠端使用且完全開源,方便自行 fork 客製。專案仍處早期,目前大致不接受外部貢獻。",
+      "one_liner": "T3 Code 是一個開源的「agent harness 控制介面」,可用手機、網頁與桌面 App 統一操控本機的 Claude Code、Codex、Cursor 等 AI 編程代理。",
+      "summary": "T3 Code 由 pingdotgg 開發,定位為本機 AI 編程代理(Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity)的控制介面,提供 iOS/Android、Web 與 Electron 桌面版。它沿用使用者已登入的訂閱與 CLI,不另外販售服務,強調效能、可遠端操作與完全開源(MIT)。",
       "category": "devtool",
       "highlights": [
-        "支援 Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity 等多家代理,統一介面操作",
-        "提供桌面(Electron)、網頁與 iOS/Android 手機 App,可從手機遠端控制本機代理",
-        "MIT 授權、完全開源,並明確鼓勵不滿意時自行 fork",
-        "多種安裝管道:install 腳本、npx、winget、Homebrew、deb、AUR",
-        "文件涵蓋權限模式、遠端存取、背景服務與多帳號設定"
+        "支援多種代理後端:Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity",
+        "跨平台:iOS、Android、Web、Electron 桌面版,並支援遠端從手機操作",
+        "安裝管道完整:curl/PowerShell 腳本、npx、winget、scoop、Homebrew、AUR、Nix、.deb",
+        "文件目錄完整,涵蓋權限模式、遠端存取、MCP 串接、背景服務與多帳號",
+        "MIT 授權,作者明言希望使用者能自行 fork;今日上榜 +930 星,動能強"
       ],
       "use_cases": [
-        "在手機或其他機器上遠端監控並操控本機執行中的 coding agent",
-        "同時使用多家 AI 編碼工具訂閱,希望用單一介面管理",
-        "想以開源基底自行客製 agent 控制介面的團隊或個人",
-        "作為 Conductor、Codex 桌面版等工具的開源替代方案評估"
+        "在手機上遠端監控並操控家中或公司電腦上的 AI 編程代理",
+        "同時使用多家代理訂閱,以單一介面切換與管理",
+        "作為自建 agent 前端的開源參考實作",
+        "透過 MCP 讓外部代理與 T3 Code 串接"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 清楚說明定位、安裝與前置條件,並附有 docs/ 下的分項使用文件,但尚無文件網站。測試部分僅憑 README 判斷、未檢視程式碼。最近仍有推送且 trending 動能強,維護活躍;作者自述專案早期、可能有 bug。"
+        "comment": "README 結構清楚,安裝與文件索引完整,但尚無文件網站。測試部分僅憑 README 判斷,無法評估。最近一次推送為 2026-10-31,且正在趨勢榜上,活躍度高。作者表示專案仍非常早期,預期會有 bug,且大多不接受外部貢獻。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供 `curl -fsSL https://t3.codes/install.sh | sh` 與 `irm https://t3.codes/install.ps1 | iex` 的安裝方式,屬於直接執行遠端腳本的常見模式,建議先檢視腳本內容或改用 winget、Homebrew、GitHub Releases 等套件管道。",
-          "README 說明工具會控制本機已登入的 agent 並支援遠端存取,啟用遠端功能時應留意存取權限與網路暴露範圍。",
+          "README 提供 `curl -fsSL https://t3.codes/install.sh | sh` 與 `irm https://t3.codes/install.ps1 | iex` 的管道執行式安裝,建議先檢視腳本內容再執行,或改用套件管理器或 npx。",
+          "工具會操控本機已登入的代理 CLI,並提供遠端存取功能,啟用前宜確認權限模式與網路暴露範圍。",
           "本次僅依 README 評估,未進行原始碼層級審查。"
         ]
       },
       "star_rating": 4,
-      "verdict": "想用手機或單一介面統一操控多家 coding agent 的開發者值得關注;專案仍早期且不收外部貢獻,適合先試用、觀察再導入。",
+      "verdict": "若你同時使用多種 AI 編程代理並想要手機遠端操控,這個專案值得試用與關注;但專案仍在早期,建議先看過安裝腳本再安裝。",
       "_mode": "light"
     },
-    "total_days_on_trending": 6,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 7,
+    "consecutive_days_on_trending": 1
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
@@ -2059,8 +2080,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 6,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 7,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -2160,6 +2181,13 @@
         3,
         "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "Rust"
+      ],
+      "2026-10-31": [
+        97073,
+        2300,
+        3,
+        "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-10-25",
@@ -2198,8 +2226,8 @@
       "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 15,
-    "consecutive_days_on_trending": 6
+    "total_days_on_trending": 16,
+    "consecutive_days_on_trending": 7
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -7971,10 +7999,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-09-26",
+    "last_seen": "2026-10-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -8017,37 +8045,50 @@
         7,
         "Public repository for Agent Skills",
         "Python"
+      ],
+      "2026-10-31": [
+        185324,
+        295,
+        11,
+        "Public repository for Agent Skills",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-26",
+    "last_analyzed": "2026-10-31",
     "analysis": {
+      "one_liner": "Anthropic 官方的 Agent Skills 公開倉庫,收錄可供 Claude 動態載入的技能範例,以及 docx/pdf/pptx/xlsx 文件處理技能的實際實作。",
+      "summary": "這個倉庫是 Anthropic 官方 Agent Skills 的參考實作集合。每個技能是一個資料夾,內含 SKILL.md(YAML frontmatter 加指令)以及輔助腳本與資源,涵蓋創意設計、開發技術與企業溝通等類型。倉庫也附上驅動 Claude 文件功能的 docx/pdf/pptx/xlsx 技能,可作為正式環境複雜技能的參考。",
       "category": "ai-ml",
-      "one_liner": "Anthropic 官方釋出的 Claude Agent Skills 範例集,教 Claude 如何用「技能資料夾」完成特定任務。",
-      "summary": "這是 Anthropic 官方倉庫,收錄一系列「Skill」——每個都是包含 SKILL.md 指令與輔助腳本/資源的資料夾,讓 Claude(Claude Code、Claude.ai、API)動態載入以提升特定任務的表現。內容涵蓋創意設計(算圖藝術、品牌規範、Canvas 設計)、技術任務(MCP server 產生器、網頁測試)到企業工作流程(內部溝通),並附上支撐 Claude 文件功能的 docx/pdf/pptx/xlsx 技能原始碼作為參考。",
       "highlights": [
-        "18 個技能各自獨立成資料夾,結構一致(SKILL.md + scripts + LICENSE),可直接當作 Claude Code Plugin marketplace 安裝",
-        "docx/pdf/pptx/xlsx 技能是 Claude 文件產生功能背後的實際實作,原始碼可供參考(source-available,非開源)",
-        "sample 到的 merge_runs.py 等腳本品質高:使用 defusedxml 防止 XML 炸彈、明確處理符號連結等不受信任輸入、註解清楚說明非顯而易見的邊界情況",
-        "多數技能採用 Apache 2.0 授權,可作為自建 Skill 的範本(repo 內附 template/SKILL.md)",
-        "當日 GitHub trending 第 7 名,單日 +189 星,顯示 Agent Skills 生態系正快速被開發者關注"
+        "提供 Claude Code 外掛市集整合,可用 `/plugin marketplace add anthropics/skills` 註冊,再安裝 document-skills 或 example-skills",
+        "收錄 docx、pdf、pptx、xlsx 等正式環境文件技能,含 OOXML 驗證器、表單填寫、重算與縮圖等腳本",
+        "包含 skill-creator(含 eval、benchmark、description 優化腳本)、mcp-builder、webapp-testing、claude-api 等開發向技能",
+        "結構統一:每個技能自成一個資料夾並附 SKILL.md,另有 spec/ 與 template/ 方便自行建立技能",
+        "官方維護,最近一次推送為 2026-10-28,星數達 18.5 萬"
       ],
       "use_cases": [
-        "想了解 Claude Skills 機制、學習如何撰寫自訂 Skill 的開發者",
-        "需要在 Claude Code / Claude.ai / API 中啟用文件處理(Word/PDF/PPT/Excel)、網頁測試、MCP server 產生等能力的使用者",
-        "尋找 Agent Skill 設計模式與最佳實踐(如 XML 安全處理、任務分解指令撰寫)的工程師"
+        "學習如何撰寫 SKILL.md 與組織技能資源,作為自製技能的範本",
+        "在 Claude Code 安裝文件處理技能,處理 Word、PDF、PowerPoint、Excel",
+        "參考 skill-creator 的評測與迭代流程,系統化改進自己的技能",
+        "研究 Anthropic 在正式產品中處理文件與 MCP 伺服器產生的做法"
       ],
       "quality": {
-        "docs": 5,
-        "tests": 1,
-        "activity": 4,
-        "comment": "文件品質極高,每個 SKILL.md 都詳細說明使用時機、注意事項與常見陷阱;抽樣的 Python 腳本(如 merge_runs.py)註解精煉、只解釋『為什麼』而非『做什麼』,且對不受信任輸入(如第三方 docx 檔案)有防範意識。但整個 repo 沒有 tests/ 目錄、CI workflow 或任何測試框架,因為本質上是內容/指令集合而非傳統程式庫,傳統 tests/CI 指標不完全適用,但仍缺乏自動化驗證機制。"
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 清楚說明用途、安裝方式與技能格式,每個技能都有 SKILL.md。倉庫內未找到 .github 工作流程,也沒有 tests 目錄或測試檔,只有 webapp-testing 的範例腳本。我抽樣讀了 with_server.py 與 init-artifact.sh,兩者結構清楚、有基本錯誤處理。倉庫活躍,由官方維護。授權混合:多數為 Apache 2.0,文件類技能為 source-available(非開源),且 GitHub 未標示整體授權。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "web-artifacts-builder/scripts/init-artifact.sh 執行時若找不到 pnpm 會執行 `npm install -g pnpm`,並透過 `pnpm create vite` 與 `pnpm install` 從 npm 下載大量套件,同時以 `tar -xzf` 解壓同目錄的 shadcn-components.tar.gz。這些行為只在使用者手動執行該腳本時發生,使用前請留意。",
+          "webapp-testing/scripts/with_server.py 使用 `subprocess.Popen(..., shell=True)` 執行呼叫端傳入的伺服器指令。這是為了支援 `cd … && …` 這類寫法,指令內容由使用者或 Claude 提供,執行前應確認。",
+          "倉庫內含大量 .ttf 字型檔(canvas-design/canvas-fonts)與 tar.gz 壓縮檔等二進位資源,字型皆附 OFL 授權檔。",
+          "未發現 npm 生命週期腳本、curl|bash 安裝模式、混淆程式碼、內嵌長 base64 內容或硬編碼可疑網址。"
+        ]
       },
-      "star_rating": 4,
-      "verdict": "官方出品、文件與程式碼品質皆佳,是學習 Agent Skills 設計模式的絕佳參考,值得收藏但非日常必用工具。",
+      "star_rating": 5,
+      "verdict": "想製作或學習 Claude Skills 的人必看。官方範例完整、涵蓋面廣,文件技能實作具參考價值,只是缺少自動化測試與 CI,且授權為混合型態,商用前需自行確認。",
       "_mode": "full"
     }
   },
@@ -8113,10 +8154,10 @@
   },
   "HKUDS/DeepTutor": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-12": [
         34718,
@@ -8143,6 +8184,13 @@
         50068,
         1930,
         1,
+        "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+        "Python"
+      ],
+      "2026-10-31": [
+        51779,
+        2282,
+        10,
         "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
         "Python"
       ]
@@ -8718,10 +8766,10 @@
   },
   "macro-inc/macro": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-10-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-13": [
         1807,
@@ -8748,6 +8796,13 @@
         5423,
         117,
         5,
+        "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+        "Rust"
+      ],
+      "2026-10-31": [
+        5877,
+        57,
+        7,
         "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
         "Rust"
       ]
@@ -14414,10 +14469,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -14472,6 +14527,13 @@
         104803,
         336,
         8,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-10-31": [
+        106261,
+        1140,
+        1,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
       ]
@@ -18226,10 +18288,10 @@
   },
   "lightpanda-io/browser": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-10-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-08": [
         34853,
@@ -18237,41 +18299,51 @@
         12,
         "Lightpanda: the headless browser designed for AI and automation",
         "Zig"
+      ],
+      "2026-10-31": [
+        38384,
+        626,
+        15,
+        "Lightpanda: the headless browser designed for AI and automation",
+        "Zig"
       ]
     },
-    "last_analyzed": "2026-09-08",
+    "last_analyzed": "2026-10-31",
     "analysis": {
+      "one_liner": "Lightpanda 是用 Zig 從零打造的無頭瀏覽器,專為 AI 代理與自動化設計,主打比 Headless Chrome 更省記憶體、更快。",
+      "summary": "Lightpanda 不是 Chromium 或 WebKit 的分支,而是以 Zig 重新實作的瀏覽器,內嵌 V8 引擎。它提供 CDP 伺服器,Puppeteer 和 Playwright 可直接連線。它也有 fetch 模式,可把頁面轉成 HTML、Markdown 或結構化資料。官方 README 宣稱 100 頁爬取的尖峰記憶體約為 Chrome 的 1/16,執行時間約快 9 倍。這些數據來自官方基準測試,我沒有實際執行驗證。",
       "category": "devtool",
-      "one_liner": "用 Zig 從零打造的無頭瀏覽器,專為 AI 代理與自動化爬蟲設計,主打極低記憶體與高速執行。",
-      "summary": "Lightpanda 是一個不基於 Chromium/WebKit、完全自行實作的無頭瀏覽器,以 Zig 撰寫,內建 V8 引擎執行 JavaScript,支援 CDP 與 WebDriver BiDi 協定,可直接相容 Puppeteer/Playwright 腳本。相較於 Headless Chrome,官方測試顯示記憶體用量減少約 16 倍、執行速度快約 9 倍,鎖定 AI agent 自動化與大量爬蟲場景。近期新增了原生 Agent 模式與 MCP server 功能,可讓 LLM 直接操控瀏覽器並輸出可重放的 PandaScript。",
       "highlights": [
-        "非 Chromium/WebKit fork,以 Zig 語言從零實作瀏覽器核心,對記憶體控制與效能有明顯優勢(官方 benchmark:100 頁面記憶體 123MB vs Chrome 2GB)",
-        "同時支援 CDP、WebDriver BiDi 協定,可直接相容既有 Puppeteer/Playwright 自動化腳本",
-        "內建原生 Agent 模式與 MCP server,支援多家 LLM 供應商(Anthropic、OpenAI、Gemini、Ollama 等),並可將互動過程輸出成無需模型即可重放的 PandaScript",
-        "CI 相當扎實:zig fmt 檢查、debug/release 雙軌單元測試、Web Platform Tests 每日跑分、agent 迴歸測試,GitHub Actions 皆使用 commit SHA 鎖定版本",
-        "原始碼結構清晰,模組化程度高(browser/js/agent/server 分層),註解著重解釋非顯而易見的設計取捨而非流水帳"
+        "以 Zig 從零實作,並非 Chromium 或 WebKit 分支,內嵌 V8 並以預建 snapshot 加速啟動",
+        "相容 CDP,可用 Puppeteer、Playwright 連線,並提供 serve 與 fetch 兩種模式",
+        "fetch 支援 --dump html、markdown、structured_data、png、pdf,適合餵給 LLM 或做爬蟲",
+        "程式碼內含 MCP 與 agent 相關模組,另有 Docker、Nix、Homebrew、AUR 等安裝方式",
+        "CI 完整,包含 zig-test、e2e、WPT(Web Platform Tests)、release 與 nix-build 等工作流程"
       ],
       "use_cases": [
-        "大規模網頁爬蟲或資料擷取,需要比 Headless Chrome 更省資源、更快速的執行環境",
-        "AI agent 自動化網頁操作(填表單、點擊、擷取結構化資料),可搭配多家 LLM 或以 --no-llm 模式手動操控",
-        "既有 Puppeteer/Playwright 測試或爬蟲腳本的直接替代後端,透過 CDP endpoint 無痛切換",
-        "需要在容器化環境大量並行啟動瀏覽器實例,但受限於 CPU/記憶體成本的場景"
+        "AI 代理的網頁瀏覽與擷取後端,取代較吃資源的 Headless Chrome",
+        "大規模爬蟲或網頁資料擷取,需要低記憶體與高併發",
+        "把網頁轉成 Markdown 或結構化資料,供 LLM 或 RAG 使用",
+        "在 CI 或容器中執行輕量的 Puppeteer、Playwright 自動化腳本"
       ],
       "quality": {
         "docs": 4,
         "tests": 4,
         "activity": 5,
-        "comment": "README 詳盡且包含安裝、CDP/BiDi、Agent 模式、MCP 等完整使用情境;程式碼內建大量單元測試檔(testing.zig、test_runner.zig)並搭配 Web Platform Tests 每日跑分驗證瀏覽器相容性,CI 流程分層完整(fmt、debug/release 測試、e2e、agent 迴歸)。commit 紀錄顯示近期(2026-09-07)仍持續更新,活躍度高。缺點是專案仍非常年輕、功能覆蓋(尤其 CSS 渲染、WPT 通過率)仍在持續補齊中,不算完整瀏覽器引擎。"
+        "comment": "README 涵蓋安裝、基準測試、CDP 與 Puppeteer 範例、Docker 與 Nix,另有 CONTRIBUTING、SECURITY、AGENTS.md。src 下約 349 個檔案含 test 區塊,共 2000 多個,並有 WPT 與 e2e 測試。CI 工作流程齊全,最近推送為 2026-10-31,維護非常活躍。程式碼風格一致,記憶體管理(arena、pool)有明確設計。專案較新,Web API 覆蓋度尚未與完整瀏覽器相當,Windows 也無原生版本。授權為 AGPL-3.0,商業整合前需先評估。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "Dockerfile 與 Makefile 中會用 curl 下載 Rust 安裝腳本、Zig 編譯器、V8 預編譯庫等外部資源後執行,這是建置流程常見做法,且下載 Zig 版本會用 minisign 做簽章驗證,curl 也搭配 --fail 避免下載失敗被忽略",
-          "預設會蒐集並回傳使用遙測資料(usage telemetry),可透過環境變數 LIGHTPANDA_DISABLE_TELEMETRY=true 關閉,README 有明確揭露並附隱私權政策連結"
+          "預設會對 https://telemetry.lightpanda.io/v2 傳送使用遙測。README 說明可設定環境變數 LIGHTPANDA_DISABLE_TELEMETRY=true 關閉,並附有隱私權政策連結。",
+          "README 的安裝方式是從 GitHub Releases 下載 nightly 二進位檔並加上執行權限。這是預建二進位檔,使用者需自行信任發行來源,README 建議先用 ./lightpanda version 檢查。",
+          "Dockerfile 在建置階段從 sh.rustup.rs 下載腳本並執行,不是直接 curl | sh。它也從 ziglang.org 下載 Zig,並用 minisign 驗證簽章。V8 預建函式庫則從 lightpanda-io/zig-v8-fork 的 Releases 下載,Makefile 也有類似的 curl 下載步驟。",
+          "Dockerfile 預設以 --host 0.0.0.0 啟動 CDP 服務並開放 9222 埠。README 範例將埠綁定在 127.0.0.1,CDP 沒有內建驗證,若對外暴露需自行做網路層限制。",
+          "未發現 npm 生命週期腳本、混淆程式碼、內嵌大型 base64 載荷或可疑依賴名稱。"
         ]
       },
-      "star_rating": 4,
-      "verdict": "技術路線大膽且工程品質扎實,對需要輕量、高速無頭瀏覽器做 AI 自動化或大規模爬蟲的開發者值得馬上試用,但作為新生瀏覽器引擎,相容性覆蓋仍在成長中,正式導入前建議先用實際目標網站驗證相容性。",
+      "star_rating": 5,
+      "verdict": "若你做 AI 代理或大規模爬蟲,而 Headless Chrome 的資源成本是痛點,這個專案很值得立即關注並試用。採用前請先確認 AGPL 授權是否符合你的使用情境,並評估網頁相容度。",
       "_mode": "full"
     }
   },
@@ -27879,10 +27951,10 @@
   },
   "Renhuai123/ziwei-doushu": {
     "first_seen": "2026-10-24",
-    "last_seen": "2026-10-26",
+    "last_seen": "2026-10-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-24": [
         6862,
@@ -27895,6 +27967,13 @@
         7562,
         199,
         7,
+        "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "TypeScript"
+      ],
+      "2026-10-31": [
+        11208,
+        1126,
+        5,
         "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "TypeScript"
       ]
@@ -28326,10 +28405,10 @@
   },
   "JetBrains/thinkrail": {
     "first_seen": "2026-10-26",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-10-26": [
         1744,
@@ -28363,6 +28442,13 @@
         6014,
         1117,
         4,
+        "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+        "TypeScript"
+      ],
+      "2026-10-31": [
+        6582,
+        722,
+        12,
         "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
         "TypeScript"
       ]
@@ -28830,10 +28916,10 @@
   },
   "togg53192-cmd/jailbreaks": {
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-28": [
         5545,
@@ -28853,6 +28939,13 @@
         9049,
         1594,
         10,
+        "LIST OF ALL MY JAILBREAKS",
+        ""
+      ],
+      "2026-10-31": [
+        11030,
+        2055,
+        13,
         "LIST OF ALL MY JAILBREAKS",
         ""
       ]
@@ -28895,15 +28988,22 @@
   },
   "expo/skills": {
     "first_seen": "2026-10-29",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-10-31",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-29": [
         3581,
         90,
         12,
+        "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+        "Shell"
+      ],
+      "2026-10-31": [
+        3898,
+        38,
+        6,
         "A collection of AI agent skills for working with Expo projects and Expo Application Services",
         "Shell"
       ]
@@ -28996,15 +29096,22 @@
   },
   "milind-soni/OpenMausBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-30": [
         7479,
         1199,
         5,
+        "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "TypeScript"
+      ],
+      "2026-10-31": [
+        8655,
+        895,
+        2,
         "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "TypeScript"
       ]
@@ -29049,15 +29156,22 @@
   },
   "CopilotKit/OpenBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-10-30",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-10-31",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-30": [
         8150,
         247,
         9,
+        "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+        "TypeScript"
+      ],
+      "2026-10-31": [
+        8792,
+        706,
+        4,
         "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
         "TypeScript"
       ]
