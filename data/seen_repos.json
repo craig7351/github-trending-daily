@@ -757,8 +757,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -921,6 +921,13 @@
         8,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-11-01": [
+        308393,
+        883,
+        2,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -962,8 +969,8 @@
       "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 24,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 25,
+    "consecutive_days_on_trending": 2
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -1291,8 +1298,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 4,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1462,6 +1469,13 @@
         14,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-11-01": [
+        310066,
+        665,
+        8,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-30",
@@ -1502,8 +1516,8 @@
       "verdict": "用 AI 編碼代理做正式開發的人值得關注與試用;其技能設計與跨平台打包也很適合當參考範本。",
       "_mode": "full"
     },
-    "total_days_on_trending": 25,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 26,
+    "consecutive_days_on_trending": 5
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1933,8 +1947,8 @@
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-27": [
         15052,
@@ -1981,6 +1995,13 @@
         9,
         "",
         "TypeScript"
+      ],
+      "2026-11-01": [
+        35601,
+        1148,
+        4,
+        "",
+        "TypeScript"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -2019,8 +2040,8 @@
       "verdict": "若你同時使用多種 AI 編程代理並想要手機遠端操控,這個專案值得試用與關注;但專案仍在早期,建議先看過安裝腳本再安裝。",
       "_mode": "light"
     },
-    "total_days_on_trending": 7,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 8,
+    "consecutive_days_on_trending": 2
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
@@ -2080,8 +2101,8 @@
   },
   "pbakaus/impeccable": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 7,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 8,
     "stars_history": {
       "2026-07-27": [
         50687,
@@ -2188,6 +2209,13 @@
         3,
         "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
         "Rust"
+      ],
+      "2026-11-01": [
+        98291,
+        1338,
+        7,
+        "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+        "Rust"
       ]
     },
     "last_analyzed": "2026-10-25",
@@ -2226,8 +2254,8 @@
       "verdict": "常用 AI 編碼工具做前端的人值得關注,可作為改善 AI 設計品質的實用工具包;安裝前留意二進位下載與 hook 設定。",
       "_mode": "light"
     },
-    "total_days_on_trending": 16,
-    "consecutive_days_on_trending": 7
+    "total_days_on_trending": 17,
+    "consecutive_days_on_trending": 8
   },
   "permissionlesstech/bitchat-android": {
     "first_seen": "2026-07-27",
@@ -8154,10 +8182,10 @@
   },
   "HKUDS/DeepTutor": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-12": [
         34718,
@@ -8190,6 +8218,13 @@
       "2026-10-31": [
         51779,
         2282,
+        10,
+        "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+        "Python"
+      ],
+      "2026-11-01": [
+        52819,
+        1034,
         10,
         "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
         "Python"
@@ -14469,10 +14504,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -14533,6 +14568,13 @@
       "2026-10-31": [
         106261,
         1140,
+        1,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-11-01": [
+        107879,
+        1723,
         1,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
@@ -15008,10 +15050,10 @@
   },
   "THU-MAIC/OpenMAIC": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-09-11",
+    "last_seen": "2026-11-01",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-30": [
         22267,
@@ -15047,41 +15089,51 @@
         13,
         "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
         "TypeScript"
+      ],
+      "2026-11-01": [
+        42189,
+        116,
+        12,
+        "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-30",
+    "last_analyzed": "2026-11-01",
     "analysis": {
-      "category": "ai-ml",
-      "one_liner": "用一鍵生成 + 多智能體協作,把任何主題或文件變成沉浸式互動課堂的開源平台。",
-      "summary": "OpenMAIC(Open Multi-Agent Interactive Classroom)是清華團隊開源的 AI 教學平台,透過兩階段生成管線(大綱→場景)與 LangGraph 多智能體編排,把一段描述或上傳的文件自動轉成含投影片、測驗、互動模擬、專案式學習(PBL)的完整課堂,並由會說話、能在白板上畫圖的 AI 老師與同學即時互動。v1.0.0 新增可對話的 Agent Workbench,能規劃課程、逐頁修改、串接使用者上傳的教材,並支援可插拔的儲存後端(瀏覽器 IndexedDB 或 PostgreSQL/S3)。",
+      "one_liner": "清華大學 THU-MAIC 開源的多智能體互動教室平台,輸入主題或文件即可一鍵生成含 AI 老師與 AI 同學的完整互動課程。",
+      "summary": "OpenMAIC 是以 Next.js 16、React 19 與 TypeScript 打造的 AI 教學平台。它能把任何主題或文件轉成投影片、測驗、互動模擬與 PBL 專案式學習,並由多個 AI 角色以語音、白板和即時討論授課。專案採 monorepo,內含 @openmaic/dsl、editor、renderer、generation、storage 等套件。後端需要 PostgreSQL 和長時間運行的伺服器,模型則透過 openmaic.yml 統一設定。",
+      "category": "app",
       "highlights": [
-        "v1.0.0 新增聊天式 Agent Workbench,可規劃課綱、原子化修改單一場景、串接教材與 20 種內建技能",
-        "支援近 20 家 LLM/影像/語音供應商(OpenAI、Anthropic、Bedrock、Gemini、GLM、MiniMax 等),也可接 Ollama/Lemonade 做本地推論",
-        "課程可匯出為可編輯 .pptx、離線可播放的互動 HTML(內嵌 CDN 資源成 data URI)或完整課堂 ZIP",
-        "透過 OpenClaw 技能可直接從 Feishu/Slack/Telegram 等 20+ 訊息 App 生成課堂",
-        "CI 涵蓋 lint、型別檢查、i18n key 檢查、多套件單元測試、Playwright E2E 與容器建置,測試檔案超過 800 個"
+        "多智能體課堂:AI 老師與同學可講課、畫白板、即時討論,場景涵蓋投影片、測驗、互動 HTML 模擬與 PBL",
+        "伺服器優先架構(v1.2 起):生成流程在伺服器端執行,關閉分頁或重啟後仍可延續,並以 openmaic.yml 以「slot」方式設定各用途的模型",
+        "支援多家模型供應商:OpenAI、Anthropic、Bedrock、Gemini、DeepSeek、Qwen、Kimi、Ollama、Lemonade 等,以及任何 OpenAI 相容 API",
+        "可匯出 PPTX、單一離線 HTML 或教室 ZIP,並提供 OpenClaw、Codex 等 agent workbench 的 Skill 整合",
+        "版本迭代快(v1.3.0 於 2026-10-29 發布),近期多次發布安全修補(SSRF、DNS rebinding 等)並附 GHSA 公告"
       ],
       "use_cases": [
-        "教育工作者或自學者想針對某主題快速產出含講解、測驗、互動模擬的完整課程",
-        "團隊想要一個可自架、可接多家 LLM/語音供應商的教學內容生成系統",
-        "透過聊天機器人(Feishu/Slack/Telegram)整合 AI 教學功能,免架設前端",
-        "需要離線/內網可播放教材(如企業內訓、無網路教室)的場景"
+        "教師或培訓人員用主題或教材快速產出互動課程與測驗",
+        "研究多智能體編排、AI 教育應用與 agent workbench 整合",
+        "企業內部自架 AI 教學或新人訓練平台,搭配本地模型(Ollama、Lemonade、FunASR)",
+        "以 @openmaic/* 套件二次開發投影片編輯器或課程渲染功能"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "README 與程式內註解都相當詳盡,清楚說明每個功能開關、資料流與已知限制(例如開發用 token 的安全邊界都直接寫在程式碼註解裡)。原始碼樣本(director-graph.ts 等)型別嚴謹、註解解釋設計取捨而非重述程式碼行為。CI pipeline 涵蓋 lint/tsc/i18n/單元測試/E2E/容器建置多道關卡,測試檔案數量龐大(800+),且每日都有更新,是少見兼具工程嚴謹度與活躍度的專案。"
+        "comment": "README 與中英文文件完整,並附 CHANGELOG、SECURITY、CONTRIBUTING 和獨立的 docs 套件。測試涵蓋 Playwright e2e(約 40 個 spec)、各套件的 vitest 單元測試,以及 .github 腳本測試。CI 有 8 個 workflow,包含 lint、型別檢查、PG 契約測試與 flaky 報告,action 以 commit SHA 固定版本。最近一次 push 為 2026-10-31,發版頻繁。程式規模龐大,升級有發布條件限制(例如 v1.3.0 不能回滾),自架維運門檻不低。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 與 lib/persistence/server-auth.ts 皆明確標示:啟用伺服器端持久化(server-persistence)時所用的 PERSISTENCE_DEV_TOKEN 會被編譯進公開的瀏覽器 bundle,不具保密性,任何存取該頁面的人都能讀寫所有學習者的資料,官方文件建議僅用於本機或受信任內網,正式環境需自行替換為真正的身份驗證模組。這是專案主動揭露的已知限制,而非隱藏漏洞。",
-          "postinstall 腳本僅對 monorepo 內部的 @openmaic/* workspace 套件執行建置(npm/pnpm run build),未發現對外下載或執行遠端腳本的行為。"
+          "根目錄 package.json 的 postinstall 會執行 pnpm run build:packages,依序建置各 workspace 套件並執行 scripts/sync-*.mjs;這是 monorepo 常見做法,安裝前可先檢視這些腳本",
+          "Dockerfile 的依賴安裝階段使用 pnpm install --frozen-lockfile --ignore-scripts,套件建置改在 builder 階段執行,runner 階段以非 root 使用者 nextjs 執行",
+          "全庫搜尋未發現 curl|bash 或 iwr|iex 安裝模式;唯一的比對結果是 renderer 套件中的 katex-fonts-embed.ts,其中含內嵌的字型資料(長行)",
+          "專案需要設定多家 LLM 供應商的 API 金鑰(放在 .env.local),並提供 access code 與使用者自帶金鑰的選項;部署時請妥善保管金鑰並限制網路暴露",
+          "README 記載專案近期修補過 SSRF、DNS rebinding 與 Next.js RCE 等漏洞,並公開 GHSA 公告;自架時建議使用最新版本"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程品質與功能完整度都達到少見水準,若你對 AI 教學生成或多智能體編排系統感興趣,非常值得一探究竟。",
+      "star_rating": 4,
+      "verdict": "工程成熟、文件與測試完整且更新很勤,適合關注 AI 教育與多智能體應用的工程師研究或自架。需準備 PostgreSQL 與多組模型金鑰,部署前請先讀升級說明。",
       "_mode": "full"
     }
   },
@@ -18288,10 +18340,10 @@
   },
   "lightpanda-io/browser": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-08": [
         34853,
@@ -18304,6 +18356,13 @@
         38384,
         626,
         15,
+        "Lightpanda: the headless browser designed for AI and automation",
+        "Zig"
+      ],
+      "2026-11-01": [
+        39257,
+        929,
+        9,
         "Lightpanda: the headless browser designed for AI and automation",
         "Zig"
       ]
@@ -27951,10 +28010,10 @@
   },
   "Renhuai123/ziwei-doushu": {
     "first_seen": "2026-10-24",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-24": [
         6862,
@@ -27973,6 +28032,13 @@
       "2026-10-31": [
         11208,
         1126,
+        5,
+        "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "TypeScript"
+      ],
+      "2026-11-01": [
+        12278,
+        1092,
         5,
         "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "TypeScript"
@@ -29096,10 +29162,10 @@
   },
   "milind-soni/OpenMausBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-01",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-30": [
         7479,
@@ -29112,6 +29178,13 @@
         8655,
         895,
         2,
+        "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "TypeScript"
+      ],
+      "2026-11-01": [
+        9626,
+        1303,
+        6,
         "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "TypeScript"
       ]
@@ -29217,15 +29290,22 @@
   },
   "Donchitos/Claude-Code-Game-Studios": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-10-30",
+    "last_seen": "2026-11-01",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-30": [
         29201,
         353,
         11,
+        "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+        "Shell"
+      ],
+      "2026-11-01": [
+        31181,
+        742,
+        3,
         "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
         "Shell"
       ]
@@ -29265,6 +29345,161 @@
       },
       "star_rating": 4,
       "verdict": "對想用 Claude Code 做遊戲開發或研究多代理與 hooks 設計的人很有參考價值;因為 hooks 會自動執行,導入前先瀏覽一遍腳本即可。",
+      "_mode": "full"
+    }
+  },
+  "Orkas-AI/Orkas": {
+    "first_seen": "2026-11-01",
+    "last_seen": "2026-11-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-01": [
+        6216,
+        1044,
+        11,
+        "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-11-01",
+    "analysis": {
+      "one_liner": "本機優先的開源桌面 AI 團隊:由 Commander 拆解目標,協調 16 個內建專家 Agent 與 Claude Code、Codex、OpenCode 等外部 CLI Agent。",
+      "summary": "Orkas 是以 Electron 打造、MIT 授權的桌面應用。核心是 Commander,它會把使用者目標拆成待辦,分派給內建專家(研究、內容、影片、UI、辦公文件、電商等)或本機已安裝的 CLI Agent。專案記憶、待辦自動推進、排程自動化與 Gmail、Notion、Shopify 等連接器,讓多 Agent 協作能長期持續,資料預設留在本機。",
+      "category": "ai-ml",
+      "highlights": [
+        "Commander 統籌 16 個內建專家 Agent,並可同時調度 Claude Code、Codex、OpenCode、OpenClaw、Hermes-Agent",
+        "專案、待辦自動推進與排程自動化(每小時、每日、每週、每月),適合持續性工作",
+        "本機優先,支援自帶 API Key(Claude、OpenAI、Gemini、DeepSeek、Kimi 等)或本地 OpenAI 相容端點",
+        "連接器涵蓋大量電商與 Google 服務,README 稱預設在寄送、發佈、刪除前徵求確認",
+        "測試規模龐大:test/ 下有近千個測試檔,涵蓋單元、連接器、eval 與 Playwright E2E"
+      ],
+      "use_cases": [
+        "以單一對話串接 Claude Code 與 Codex,分工進行寫程式、審查與撰寫發佈說明",
+        "自動產出研究報告、簡報、行銷內容與影片,並依排程定期執行",
+        "電商營運:選品、上架文案、評論分析與銷售報表",
+        "研究多 Agent 桌面應用的架構,作為自建 Agent 編排工具的參考"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 完整,有中英文版,涵蓋功能、比較與快速開始。package.json 腳本分工細緻,CI 有 Linux 原始碼 smoke 與原生依賴兩個 workflow。我只檢視了少數原始檔,但目錄結構規整,有契約與 gate 檢查。專案活躍,最後推送為 2026-10-31,版本號採日期制。開源版缺少共享專案、雲端同步與網頁發佈功能,這些只在打包版提供。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 有 postinstall(ensure-sqlite-electron-abi.mjs 與 fetch-embedding-model.mjs)與 prepare(install-git-hooks.mjs)腳本。前者會在 npm install 時從外部下載嵌入模型,程式內有固定大小、重新導向與逾時限制,並做完整性驗證。後者會把本機 git 的 core.hooksPath 設為 repo 內的 .githooks。",
+          "另有 officecli、ffmpeg、whisper 等 fetch 腳本需手動執行,會從外部下載二進位檔,使用前建議留意來源。",
+          "桌面應用會執行本機 CLI Agent、連接器與 MCP 伺服器,並可存取 Gmail、Shopify 等帳號。README 稱預設會在寄送、發佈、刪除前徵求確認,建議使用者自行檢視權限設定。",
+          "內建 Orkas 模型與語音辨識會把資料送到 Orkas 的託管服務,README 對此有說明。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "架構完整、測試扎實且更新活躍的多 Agent 桌面應用,對想整合 Claude Code、Codex 等工具的工程師值得關注。安裝時請留意 postinstall 的外部下載,並檢視連接器權限。",
+      "_mode": "full"
+    }
+  },
+  "bregman-arie/devops-exercises": {
+    "first_seen": "2026-11-01",
+    "last_seen": "2026-11-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-01": [
+        85989,
+        342,
+        13,
+        "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-01",
+    "analysis": {
+      "one_liner": "涵蓋 DevOps、SRE、雲端、Linux、Kubernetes 等主題、共 2624 題的面試與練習題庫。",
+      "summary": "這是一個以問答形式整理的 DevOps/SRE 技術題庫,主題橫跨網路、Linux、Git、Kubernetes、AWS/Azure/GCP、Terraform、Ansible、Prometheus、資料庫等。每題以可展開的 details 區塊呈現答案,適合自學與面試準備。作者也提醒題目不一定代表真實面試,學習概念比背題更重要。",
+      "category": "learning-resource",
+      "highlights": [
+        "共 2624 題,涵蓋 DevOps/SRE 幾乎所有主流技術領域",
+        "以 details 摺疊區塊呈現,可先自我測驗再看答案",
+        "依主題分目錄(Kubernetes、AWS、Terraform、Linux 等),方便針對性複習",
+        "GitHub 星數約 8.6 萬,社群貢獻活躍",
+        "README 坦承題目不等於真實面試,並附 FAQ 與貢獻指南"
+      ],
+      "use_cases": [
+        "準備 DevOps/SRE/雲端工程師面試",
+        "檢驗自己對 Linux、K8s、CI/CD 等基礎概念的掌握度",
+        "團隊內部出題或培訓教材參考",
+        "查漏補缺、建立 DevOps 知識地圖"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 3,
+        "comment": "資源彙整類,測試不適用。README 結構清楚、主題索引完整,但各題內容品質與時效性不一;最後推送為 2025-12-27,近期更新較少,但趨勢熱度仍高。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "知名度高的 DevOps 題庫,適合面試準備與知識查漏補缺,但非必看;部分內容可能較舊,建議搭配官方文件使用。",
+      "_mode": "light"
+    }
+  },
+  "vorssaint/vorssaint-utils": {
+    "first_seen": "2026-11-01",
+    "last_seen": "2026-11-01",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-01": [
+        31904,
+        501,
+        14,
+        "Free and open-source macOS menu bar toolkit.",
+        "Swift"
+      ]
+    },
+    "last_analyzed": "2026-11-01",
+    "analysis": {
+      "one_liner": "免費開源的 macOS 選單列工具箱,把音量混音、系統監控、視窗切換、剪貼簿、解除安裝等功能整合在單一圖示下。",
+      "summary": "Vorssaint 是用 Swift 寫的 macOS 14+(Apple Silicon)選單列應用程式。它把過去要分開購買的小工具整合在一起,例如每個 App 獨立音量、系統監控、風扇控制、App 切換器、視窗排版、Dock 預覽、剪貼簿歷史和文字片段。功能可個別安裝或移除。專案宣稱無帳號、無遙測、無訂閱,並以 GPL-3.0 授權。",
+      "category": "app",
+      "highlights": [
+        "功能範圍廣:音量混音(可超過 100%)、CPU/GPU/溫度監控、風扇控制(beta)、視窗排版、Dock 預覽、剪貼簿歷史、Shelf、清理與解除安裝等",
+        "可按需安裝功能,未安裝的功能不會載入,並且只請求所選功能需要的權限",
+        "測試很多:Tests/ 下有約 250 個 Swift 測試檔,涵蓋混音、剪貼簿、風扇復原、Dock 預覽、在地化等",
+        "發佈流程嚴謹:release.yml 驗證 tag 簽章與 main 分支關係,再做 Developer ID 簽署、公證與 SHA256 驗證,最後發佈不可變 release;GitHub Actions 皆以 commit SHA 固定版本",
+        "支援多國語系(含 zh-TW、zh-HK、zh-Hans),README 完整,另有 SECURITY.md、CONTRIBUTING.md 與 CHANGELOG"
+      ],
+      "use_cases": [
+        "想用單一免費開源 App 取代多個付費 Mac 小工具(音量混音、App 切換器、剪貼簿管理等)的使用者",
+        "需要在選單列即時監控 Mac 的溫度、記憶體、網路和電池,並設定告警",
+        "想參考大型 Swift/AppKit 選單列應用的架構、權限處理與簽署公證流程的開發者",
+        "需要精細控制視窗排版、Dock 預覽、滑鼠與鍵盤行為的進階 Mac 使用者"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,README 詳列功能與隱私說明,另有 CHANGELOG、SECURITY、CONTRIBUTING 與 issue/PR 模板。測試檔數量龐大,CI 與 release 流程成熟,並有 Dependabot。最後推送時間為 2026-10-30,維護活躍。程式碼我只抽樣了 FanControlHelper/main.swift,其中有 O_NOFOLLOW、root 擁有者與權限檢查、flock 鎖和 marker 檔等防護,寫法相當謹慎。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "專案含有以 root 身分執行的風扇控制特權輔助程式(Sources/FanControlHelper、com.vorssaint.utils.fan-control.plist),會寫入 /var/run 的鎖檔與 marker 檔,並控制硬體風扇轉速。檔案開啟時使用 O_NOFOLLOW,並檢查擁有者與權限。安裝或啟用此功能前,使用者應了解它需要系統管理員授權。",
+          "許多功能需要 macOS 輔助使用(Accessibility)、螢幕錄製、全域鍵盤與滑鼠事件監聽等敏感權限,例如 App 切換器、超級鍵、剪貼簿歷史、文字片段。這類權限本身能讀取輸入與畫面,使用者應只啟用所需功能。",
+          "Resources/now-playing.pl 是 Perl 腳本,會用 DynaLoader 載入一個 adapter 動態函式庫,藉此取得正在播放的資訊。參數由 App 傳入,並檢查檔案是否存在。這是為了繞過 macOS 15.4+ 的 MediaRemote 限制而採用的做法,屬於少見的機制,使用者應知悉。",
+          "儲存庫內有 ReleaseAssets/ 的 mp4 展示影片(二進位媒體檔)與 Resources/ 圖片,屬一般素材,未看到編譯後的執行檔。",
+          "未發現 curl|bash 安裝腳本、npm 生命週期腳本、混淆程式碼或內嵌的 base64 payload。官方發佈為經 Developer ID 簽署並公證的 DMG,release 流程有簽章與 SHA256 驗證。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "整合度高、測試與發佈流程成熟的免費開源 macOS 工具箱,Mac 使用者值得試用,Swift 開發者也值得參考;它需要多項敏感系統權限,請只啟用用得到的功能。",
       "_mode": "full"
     }
   }
