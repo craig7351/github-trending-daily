@@ -249,8 +249,8 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-22",
-    "days_on_trending": 3,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         33496,
@@ -302,6 +302,13 @@
         9,
         "Kronos: A Foundation Model for the Language of Financial Markets",
         "Python"
+      ],
+      "2026-11-02": [
+        45393,
+        630,
+        3,
+        "Kronos: A Foundation Model for the Language of Financial Markets",
+        "Python"
       ]
     },
     "last_analyzed": "2026-10-20",
@@ -342,8 +349,8 @@
       "verdict": "金融時間序列基礎模型中少見的完整開源實作,權重、微調與範例俱全,對量化與時序研究者值得關注;但近期更新放緩、測試與 CI 偏薄,且預測結果不應直接當作交易依據。",
       "_mode": "full"
     },
-    "total_days_on_trending": 9,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 10,
+    "consecutive_days_on_trending": 1
   },
   "Automattic/harper": {
     "first_seen": "2026-07-25",
@@ -1947,8 +1954,8 @@
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-11-01",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-27": [
         15052,
@@ -2002,6 +2009,13 @@
         4,
         "",
         "TypeScript"
+      ],
+      "2026-11-02": [
+        38014,
+        3094,
+        4,
+        "",
+        "TypeScript"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -2040,8 +2054,8 @@
       "verdict": "若你同時使用多種 AI 編程代理並想要手機遠端操控,這個專案值得試用與關注;但專案仍在早期,建議先看過安裝腳本再安裝。",
       "_mode": "light"
     },
-    "total_days_on_trending": 8,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 9,
+    "consecutive_days_on_trending": 3
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
@@ -10231,10 +10245,10 @@
   },
   "public-apis/public-apis": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-08-19",
+    "last_seen": "2026-11-02",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-16": [
         460176,
@@ -10256,38 +10270,45 @@
         6,
         "A collective list of free APIs",
         "Python"
+      ],
+      "2026-11-02": [
+        494612,
+        324,
+        6,
+        "A collective list of free APIs",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-16",
+    "last_analyzed": "2026-11-02",
     "analysis": {
+      "one_liner": "社群維護、涵蓋各領域的免費公開 API 精選清單,近期新增 MCP Server 區塊。",
+      "summary": "public-apis 是長年由社群手動維護的免費 API 目錄,依領域分類,並標示認證方式、HTTPS、CORS 等資訊,方便開發者快速找到可用的資料來源。README 開頭帶有 APILayer 的商業推廣內容(含 UTM 追蹤連結),另新增「MCP Servers」表格,列出 AI agent 可安裝的 MCP 伺服器、傳輸方式與安裝管道。",
       "category": "learning-resource",
-      "one_liner": "一份社群共同維護、收錄大量免費公開 API 的巨型清單。",
-      "summary": "public-apis/public-apis 是一個依領域分類(動物、金融、天氣、機器學習等超過 40 個分類)整理免費公開 API 的資源彙整專案,每筆條目附上驗證方式、是否支援 HTTPS/CORS 等實用資訊。它解決的是開發者要快速找到可用第三方 API 卻苦於資訊分散的問題,同時與 APILayer 商業服務有合作推廣關係。",
       "highlights": [
-        "依 40 多個領域分類(動物、金融、機器學習、政府資料等),索引清楚易於查找",
-        "每筆 API 條目標註 Auth 方式、HTTPS、CORS 支援與否,方便快速評估可用性",
-        "460k+ Star、今日新增 2260 顆,顯示極高人氣與社群關注度",
-        "README 開頭大篇幅置入 APILayer 商業廣告與推薦連結(帶 UTM 追蹤參數)",
-        "MIT 授權,搭配 Contributing Guide 引導社群提交新 API"
+        "累計約 49 萬顆星,是最具代表性的公開 API 清單之一",
+        "新增 MCP Servers 表格,標示認證、傳輸方式(stdio/HTTP)與安裝來源,貼近 AI agent 開發需求",
+        "MIT 授權,由社群手動審核維護",
+        "涵蓋 IP 定位、天氣、匯率、股市、航班等大量實用 API",
+        "README 前段含 APILayer 推廣內容,使用時需分辨商業贊助與一般條目"
       ],
       "use_cases": [
-        "開發原型或демо時快速尋找免費可用的第三方 API",
-        "教學/課程中作為 API 串接練習的資源清單",
-        "調研特定領域(如天氣、金融、動物圖片)有哪些現成 API 可整合",
-        "作為 API 探索起點,再深入查閱各服務官方文件"
+        "做原型或黑客松時快速尋找免費資料 API",
+        "為 AI agent 專案挑選可用的 MCP Server",
+        "學習 REST API 整合時尋找練習用資料來源",
+        "評估不同 API 的認證與 CORS 限制"
       ],
       "quality": {
         "docs": 4,
         "tests": 1,
         "activity": 5,
-        "comment": "資源彙整類,測試不適用。README 結構清晰、分類完整、索引方便導覽,但前段大量商業廣告(APILayer)內容稀釋了純資源清單的定位;近期(2026-08-13)仍有持續推送,活躍度高。"
+        "comment": "資源彙整類,測試不適用。清單結構清楚、更新頻繁(最近推送 2026-11-01),並持續有新條目。但開頭商業推廣占比不小,且 README 有重複項目(如 Mediastack 出現兩次)。評估僅依 README。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 4,
-      "verdict": "作為 API 查找的入口清單相當實用且維護活躍,但需留意其中夾雜商業推廣內容,建議把它當索引而非最終文件來源。",
+      "verdict": "經典的 API 目錄,日常開發與 AI agent 選型都值得收藏;使用時留意前段的商業贊助內容,並自行確認各 API 的現況與條款。",
       "_mode": "light"
     }
   },
@@ -14504,10 +14525,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-11-01",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -14575,6 +14596,13 @@
       "2026-11-01": [
         107879,
         1723,
+        1,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-11-02": [
+        109290,
+        1526,
         1,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
@@ -18340,10 +18368,10 @@
   },
   "lightpanda-io/browser": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-11-01",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-08": [
         34853,
@@ -18363,6 +18391,13 @@
         39257,
         929,
         9,
+        "Lightpanda: the headless browser designed for AI and automation",
+        "Zig"
+      ],
+      "2026-11-02": [
+        40130,
+        825,
+        2,
         "Lightpanda: the headless browser designed for AI and automation",
         "Zig"
       ]
@@ -28010,10 +28045,10 @@
   },
   "Renhuai123/ziwei-doushu": {
     "first_seen": "2026-10-24",
-    "last_seen": "2026-11-01",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-24": [
         6862,
@@ -28040,6 +28075,13 @@
         12278,
         1092,
         5,
+        "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "TypeScript"
+      ],
+      "2026-11-02": [
+        13118,
+        941,
+        11,
         "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
         "TypeScript"
       ]
@@ -28982,10 +29024,10 @@
   },
   "togg53192-cmd/jailbreaks": {
     "first_seen": "2026-10-28",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-28": [
         5545,
@@ -29012,6 +29054,13 @@
         11030,
         2055,
         13,
+        "LIST OF ALL MY JAILBREAKS",
+        ""
+      ],
+      "2026-11-02": [
+        12959,
+        726,
+        14,
         "LIST OF ALL MY JAILBREAKS",
         ""
       ]
@@ -29162,10 +29211,10 @@
   },
   "milind-soni/OpenMausBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-11-01",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-30": [
         7479,
@@ -29185,6 +29234,13 @@
         9626,
         1303,
         6,
+        "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "TypeScript"
+      ],
+      "2026-11-02": [
+        10533,
+        922,
+        5,
         "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "TypeScript"
       ]
@@ -29229,10 +29285,10 @@
   },
   "CopilotKit/OpenBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-10-31",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-30": [
         8150,
@@ -29245,6 +29301,13 @@
         8792,
         706,
         4,
+        "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+        "TypeScript"
+      ],
+      "2026-11-02": [
+        9525,
+        175,
+        13,
         "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
         "TypeScript"
       ]
@@ -29290,10 +29353,10 @@
   },
   "Donchitos/Claude-Code-Game-Studios": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-11-01",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-02",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-30": [
         29201,
@@ -29306,6 +29369,13 @@
         31181,
         742,
         3,
+        "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+        "Shell"
+      ],
+      "2026-11-02": [
+        32284,
+        967,
+        8,
         "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
         "Shell"
       ]
@@ -29500,6 +29570,383 @@
       },
       "star_rating": 4,
       "verdict": "整合度高、測試與發佈流程成熟的免費開源 macOS 工具箱,Mac 使用者值得試用,Swift 開發者也值得參考;它需要多項敏感系統權限,請只啟用用得到的功能。",
+      "_mode": "full"
+    }
+  },
+  "cjpais/Handy": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-02": [
+        36556,
+        339,
+        7,
+        "A free, open source, and extensible speech-to-text application that works completely offline.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-02",
+    "analysis": {
+      "one_liner": "以 Tauri v2 與 Rust 打造的免費開源跨平台離線語音轉文字桌面工具:按下快捷鍵說話,文字就貼到任何輸入框。",
+      "summary": "Handy 是桌面端的語音輸入工具。使用者按住或切換快捷鍵錄音,放開後在本機以 Whisper 或 Parakeet 模型轉錄(先用 Silero VAD 濾除靜音),再把文字貼進目前使用的應用程式,全程不必把音訊上傳雲端。它支援 Windows、macOS、Linux,也提供 CLI 遠端控制,並可選擇串接 LLM 做後處理。",
+      "category": "app",
+      "highlights": [
+        "完全離線轉錄:支援 Whisper(Small/Medium/Turbo/Large,可用 GPU 加速)與 CPU 友善的 Parakeet V3,並內建 Silero VAD",
+        "Rust 後端模組化:audio_toolkit、engine_supervisor(獨立 worker)、managers、shortcut、paste_tx 等分工清楚",
+        "功能完整:CLI 旗標(--toggle-transcription 等)、歷史紀錄、自訂字典、多語系、Raycast 整合、Nix 套件",
+        "LLM 後處理可自選供應商(OpenAI、Anthropic、Groq、OpenRouter 或本機 Ollama 等),並非強制使用",
+        "MIT 授權,社群規模大(36k+ stars),並有 Homebrew、winget 等散布管道"
+      ],
+      "use_cases": [
+        "取代雲端聽寫服務,在敏感或離線環境做語音輸入",
+        "作為輔助工具,讓行動不便者或習慣口述者輸入文字",
+        "參考 Tauri v2 加 Rust 的音訊擷取、VAD 與本地推論整合架構",
+        "為 AI 研發工作流程加入口述 prompt 或筆記的輸入方式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "README 清楚,另有 BUILD.md、CONTRIBUTING、翻譯貢獻指南與 AGENTS.md/CLAUDE.md。Rust 端有數百處單元測試(如 text.rs、transcription_coordinator.rs、llm_client.rs、settings.rs),前端有 Playwright 的 app.spec.ts。CI 涵蓋 build、test、code-quality、nix-check、playwright 與 release 共 9 個 workflow。最後推送時間近(2026-10-27),維護活躍。端對端與前端測試相對較少。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 有 postinstall 腳本(bun scripts/check-nix-deps.ts),用來檢查 Nix 依賴,屬本地 TypeScript 腳本,未見下載外部程式碼的行為",
+          "程式內建模型下載位址指向 blob.handy.computer(專案網域),模型檔為執行時下載,不在儲存庫內",
+          "選用的 LLM 後處理功能會把轉錄文字傳到使用者設定的 API(如 OpenAI、Anthropic、Groq、OpenRouter 或本機 Ollama),需自行填入 API key;若啟用,文字就不再只留在本機",
+          "應用程式需要麥克風與輔助使用(Accessibility)權限,並會模擬鍵盤貼上,屬於此類工具的正常需求,但使用者應留意授權範圍",
+          "README 將 Homebrew cask 與 winget 套件標示為非官方維護,安裝時建議確認來源",
+          "本次檢視未發現混淆程式碼、內嵌長 base64 載荷或 curl|bash 安裝模式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟、活躍且實用的離線語音輸入工具,工程品質良好,值得 AI 研發工程師試用,也值得參考其 Tauri 與 Rust 的本地推論架構。",
+      "_mode": "full"
+    }
+  },
+  "kornia/kornia": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-02": [
+        11789,
+        101,
+        9,
+        "🐍 Geometric Computer Vision Library for Spatial AI",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-02",
+    "analysis": {
+      "one_liner": "建構於 PyTorch 之上的可微分電腦視覺與幾何函式庫,提供 1,200 多個 GPU 批次運算子,涵蓋影像處理、增強、特徵匹配與相機幾何。",
+      "summary": "Kornia 是 PyTorch 生態系中的可微分電腦視覺函式庫,提供濾波、幾何變換、色彩轉換、資料增強、特徵偵測與匹配(LoFTR、LightGlue、DISK 等)、RANSAC 與最小解算器、相機模型與李群等。它支援逐樣本參數的批次呼叫、torch.compile 與 ONNX 匯出。專案目前定位為「可微分電腦視覺與幾何的參考實作與可執行規格」。",
+      "category": "library",
+      "highlights": [
+        "運算子涵蓋廣:1,200 多個公開運算子,包含相機模型、對極幾何、PnP、RANSAC、形態學與 Lab/Bayer 色彩等,多數在 torchvision 中沒有對應功能",
+        "支援逐樣本參數的批次運算(例如 (B,2) 的 sigma、(B,3,3) 的單應矩陣),並設有 sync-guard 測試避免不必要的 GPU 同步",
+        "AugmentationSequential 可對影像、遮罩、框與關鍵點一起套用同一組取樣變換,並可反向還原",
+        "README 公開列出基準測試結果,包含 Kornia 慢於 torchvision 或 OpenCV 的情況,並提供 torch.compile 與 ONNX 匯出支援頁",
+        "工程流程完整:tests 目錄含 API surface、docstring 風格與 inductor conformance 測試,並有 15 個 CI workflow、型別檢查、變更記錄檢查與 pre-commit"
+      ],
+      "use_cases": [
+        "在訓練管線中以 GPU 批次方式做可微分資料增強與影像前處理",
+        "SLAM、SfM、機器人與 3D 視覺中的相機投影、位姿估計與 RANSAC 穩健估計",
+        "影像特徵匹配與配準(LoFTR、LightGlue、SIFT/HardNet 等)",
+        "需要 torch.compile 或 ONNX 匯出的幾何視覺運算元"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,有 README、ROADMAP、TESTING、CONTRIBUTING、AI_POLICY 與 CHANGELOG,以及 Sphinx 文件、教學和基準測試。tests 目錄下有多種元測試,CI 涵蓋 PR 測試、排程測試、覆蓋率、型別檢查、匯入面檢查與文件連結檢查。最後推送時間為 2026-11-01,維護活躍。使用 hatchling 建置,Python 需 3.11 以上,依賴為 kornia_rs、numpy、torch,數量精簡。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README.md 與 CONTRIBUTING.md 的文件中建議以 `curl -fsSL https://pixi.sh/install.sh | bash` 安裝 pixi 開發環境工具,這是會下載外部腳本並直接執行的常見做法,使用者執行前可自行檢視腳本內容",
+          "docs/export_support/harness.py 使用 exec() 執行文件產生流程中的程式碼字串(已標註 noqa: S102),屬於文件與測試用途,不在一般安裝路徑內",
+          "pyproject.toml 使用 hatchling 建置,未發現 setup.py 或安裝時的生命週期腳本;依賴為 kornia_rs、numpy、torch,名稱均為正常知名套件",
+          "未發現混淆程式碼、內嵌的長 base64 負載或寫死的可疑 IP;基準測試檔中的 base64 解碼僅用於還原 inliers 結果資料",
+          "部分特徵模型(如 LoFTR、LightGlue)在執行時會下載預訓練權重,使用者應留意權重來源與下載行為"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "成熟、維護活躍且文件與測試完整的 PyTorch 電腦視覺與幾何基礎函式庫,做視覺、機器人或空間 AI 的工程師值得關注並納入工具箱。",
+      "_mode": "full"
+    }
+  },
+  "beenuar/AiSOC": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-02": [
+        6222,
+        446,
+        10,
+        "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-02",
+    "analysis": {
+      "one_liner": "可自架的開源 AI 資安營運中心(SOC),整合告警融合、LLM Agent 分流、MITRE ATT&CK 調查,並為每個 Agent 步驟留下可重播的決策帳本。",
+      "summary": "AiSOC 是一套 Python 為主的微服務式 SOC 平台,負責匯入遙測資料、套用大量偵測規則、關聯成事件,再交由 AI Agent 調查,並把每次 prompt 與工具呼叫寫入 Postgres 決策帳本。預設內建本地 Ollama 小模型,不需 API key 就能跑完整流程,並提供 MCP server 給 Claude、Cursor 等工具。處置動作預設只做預覽,需人工核准才會送到廠商端。",
+      "category": "security",
+      "highlights": [
+        "決策帳本(Investigation Ledger)記錄每個 prompt 與工具呼叫,可匯出簽章證據包(OCSF 1.9.0),Copilot 的結論會引用帳本條目",
+        "`make up` 一鍵起服務,內建本地 llama3.2:3b 模型與 CISA KEV 威脅情資,免 API key 即可得到真實的分流結果",
+        "規則庫共 7023 條、其中 2538 條為可執行規則,且須經重放驗證確實會觸發才算數,並附上 `--prove-gate` 這類可失敗的檢查",
+        "自動化回應設有多層保護:部署、租戶、劇本三道開關預設全關,核准步驟會持久化暫停,到期則記錄結果",
+        "提供 90 個資料連接器、雲端收集器(CloudTrail/SQS、GCP Pub/Sub、Azure Event Hubs、syslog/CEF),以及 Splunk/Sentinel/Elastic 規則遷移工具"
+      ],
+      "use_cases": [
+        "在內部自架 SOC 做 AI 輔助告警分流與調查的原型驗證",
+        "研究可稽核、可重播的 LLM Agent 決策架構與證據鏈設計",
+        "搭配 MCP 讓 Claude 或 Cursor 查詢事件並協助偵測工程",
+        "評估從 Splunk/Sentinel 規則遷移到開源平台的可行性"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件非常完整,有 README、架構圖、27 頁技術指南和誠實的「實際能做什麼」稽核頁。測試與 CI 規模龐大:僅 services/actions 就有 100 多個測試檔,另有逾 100 個 GitHub Actions 工作流,涵蓋 CodeQL、Scorecard、隔離與整合測試。專案推送頻繁,版本為 21.0.0。取樣的 ledger.py 結構清楚、註解詳實,錯誤處理有明確設計。不過專案規模龐大,上手成本與資源需求(8–12 GB RAM)不低。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 與 install.sh、install.ps1 提供從 raw.githubusercontent.com 下載並執行的一行安裝指令(curl | bash、iwr | iex),屬常見做法,建議先檢視腳本再執行。",
+          "install.sh 會要求 sudo 並安裝系統套件(Docker、Node 等),且在背景維持 sudo 時效;macOS 上可能引導安裝 Homebrew。",
+          "串流執行模式下,install.sh 會再從同一分支下載 preflight 腳本。",
+          "根目錄 package.json 有 `prepare` 腳本,會執行 scripts/setup_hooks.sh,只把 git 的 core.hooksPath 設為 .githooks,已讀過內容,未見其他行為,且失敗時不影響安裝。",
+          "`make up` 會自動產生 15 組密鑰並建立管理員帳號,首次啟動會下載約 2 GB 模型;自動化回應預設為預覽模式,實際動作須明確開啟並經人工核准。",
+          "取樣的原始碼與設定檔中,未見混淆程式碼、內嵌的長 base64 payload 或可疑相依套件。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程成熟度高、設計理念紮實(可稽核帳本加上預設安全的回應流程),很適合想研究 AI SOC 架構的人,可優先關注;部署規模大,建議先用 sandbox 或 demo 體驗。",
+      "_mode": "full"
+    }
+  },
+  "anomalyco/hex": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-02": [
+        3274,
+        1179,
+        12,
+        "Local voice dictation for mac, windows and linux",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-02",
+    "analysis": {
+      "one_liner": "Hex 是一款跨平台(Mac/Windows/Linux)的本機語音聽寫工具,按住快捷鍵說話、放開即自動貼上文字。",
+      "summary": "Hex 以 Rust 撰寫,語音辨識完全在本機執行(底層為 transcribe.cpp,Linux 與 Windows x64 支援 Vulkan GPU 加速)。首次執行需下載語音模型,之後不會有資料離開本機。專案同時提供桌面 UI、本機 API、`hex mcp` MCP 伺服器、轉換腳本(QuickJS)與螢幕擷取/標註等實驗功能。",
+      "category": "app",
+      "highlights": [
+        "本機優先:模型下載後離線辨識,隱私友善",
+        "三大平台皆有安裝包,另提供 Homebrew、AUR、Nix 與 Linux 安裝腳本",
+        "Linux 安裝腳本做了 SHA-256 校驗與 ed25519 簽章驗證,並拒絕覆寫非自身管理的檔案",
+        "Rust workspace,有 16 個 CI workflow(三平台檢查、簽章、發佈),Rust 測試標記超過 2300 處",
+        "內建 MCP 伺服器與本機 API,可與 AI agent 工作流整合"
+      ],
+      "use_cases": [
+        "在任何應用程式中以語音快速輸入文字,例如寫程式、聊天、寫文件",
+        "需要離線或隱私敏感的語音轉文字場景",
+        "用 MCP 把語音輸入或會議內容接進 AI agent 工作流",
+        "研究 Rust 跨平台桌面應用、發佈簽章流程的參考實作"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 簡潔,詳細文件放在 docs/。程式庫測試密度高(多個 crate 與整合測試),CI 與發佈流程完整,lint 設定嚴謹,不過部分 lint 因歷史債務暫時放寬。專案最近仍有推送,更新頻繁。官方表示不接受 PR,只收 issue,社群貢獻門檻較高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 `curl -fsSL https://anoma.ly/hex/install-linux.sh | sh` 安裝方式,屬於管道執行遠端腳本,建議先下載檢視再執行。",
+          "install-linux.sh 會從 anoma.ly 下載 manifest 與可執行檔,並驗證大小、SHA-256 與內嵌公鑰的 ed25519 簽章,簽章不符即拒絕安裝。",
+          "安裝腳本會在使用者目錄寫入 systemd user service、autostart 項目與 desktop 檔案,使 Hex 開機後在背景執行;並建立 install.json 讓程式自動更新,使用者應留意此自動更新機制。",
+          "Hex 需要麥克風、輔助使用(模擬鍵盤貼上)等系統權限,這是聽寫工具的功能需求。",
+          "Cargo.toml 依賴數個指向 anomalyco 組織的 git 套件(以固定 commit 鎖定),並含 `.cloudflare/cache/cloudflare-account.json`,內容僅為帳號名稱與 ID,未見金鑰。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "本機語音聽寫的完成度高,安裝與簽章流程嚴謹,值得關注與試用。使用前請留意其自動更新與背景服務行為。",
+      "_mode": "full"
+    }
+  },
+  "patchy631/ai-engineering-hub": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-02": [
+        40249,
+        1191,
+        15,
+        "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+        "Jupyter Notebook"
+      ]
+    },
+    "last_analyzed": "2026-11-02",
+    "analysis": {
+      "one_liner": "收錄 93 個以上涵蓋 LLM、RAG、AI Agent 與 MCP 的實作教學專案合集,依難度分級。",
+      "summary": "AI Engineering Hub 是一個以 Jupyter Notebook 為主的教學專案彙整庫,內含 93 個以上的範例,分為初階 22、中階 48、進階 23 個。主題涵蓋 OCR、本地聊天介面、RAG、多代理工作流、語音代理、MCP、模型比較與微調,並附 AI 工程學習路線圖,適合循序漸進學習與快速取用範例。",
+      "category": "learning-resource",
+      "highlights": [
+        "93 個以上專案,依初階、中階、進階分級,學習路徑清楚",
+        "涵蓋 RAG、Agentic RAG、MCP、語音代理、多模態、微調等熱門主題",
+        "包含多組模型比較專案(如 Qwen3 vs DeepSeek-R1、GPT-OSS vs Qwen3)",
+        "附 AI Engineering Roadmap,適合新手規劃學習路線",
+        "MIT 授權,40k+ 星且當日 +1191,社群熱度高"
+      ],
+      "use_cases": [
+        "尋找可直接改寫的 RAG 或 Agent 範例作為專案起點",
+        "學習 MCP 與多代理框架(CrewAI、AutoGen 等)的實作方式",
+        "團隊內部 AI 教育訓練的教材來源",
+        "快速比較不同開源 LLM 在特定任務上的表現"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 5,
+        "comment": "資源彙整類,測試不適用。README 結構清楚、分類完整、連結齊全,但各子專案品質與維護程度不一,僅憑 README 無法判斷。最近一次推送為 2026-11-01,且熱度持續上升。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 本身未提供 curl | bash 之類的安裝指令,各子專案需分別安裝依賴",
+          "未進行原始碼層級審查;各範例可能需要第三方服務的 API 金鑰,使用前請自行檢視各子專案的依賴與金鑰處理方式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "內容豐富、分類清楚的 AI 工程實作範例庫,值得收藏並按需挑選專案學習,但要留意各子專案品質不一。",
+      "_mode": "light"
+    }
+  },
+  "FlashML-org/FreeToken": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-02": [
+        15408,
+        242,
+        16,
+        "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-02",
+    "analysis": {
+      "one_liner": "面向消費級硬體的邊緣 MoE 推論引擎,讓 290B+ 大型模型能在遊戲電腦上以互動速度執行。",
+      "summary": "FreeToken 是由 FlashML 團隊開發的 MoE 服務引擎,以頻寬自適應的 CPU–GPU 協同執行、全層雙緩衝預填串流、全域 LRU 專家快取與 FTW 快速權重格式,在 RTX 30/40/50 系列上執行 DeepSeek-V4、Qwen3.6、GLM-5.2 等模型。提供相容 OpenAI 與 Anthropic 的 API,可接 Claude Code、Codex 等 agent,並有桌面 GUI 與 `ft` CLI。",
+      "category": "ai-ml",
+      "highlights": [
+        "頻寬自適應 CPU–GPU 協同執行(q* 策略)搭配專家 LRU 快取,讓超大 MoE 可在消費級 GPU 上推論",
+        "語意錨點檢查點(semantic anchor checkpoints)可在 agent 編輯上下文時避免重算 KV 與遞迴狀態",
+        "執行期可動態在專家快取與 KV 記憶體之間重新配置 VRAM,無須重啟或重載權重",
+        "同時提供 OpenAI 與 Anthropic 相容 API,並支援 MXFP4/NVFP4/FP8/BF16 等量化格式",
+        "附 arXiv 論文、桌面 App、完整 docs 與 155+ 個測試檔,涵蓋 kernel、kvcache、各模型與 e2e"
+      ],
+      "use_cases": [
+        "在個人 RTX 工作站或遊戲機上本地執行大型開源 MoE 模型",
+        "為 Claude Code、Codex、OpenCode 等 coding agent 提供本地 Anthropic/OpenAI 相容後端",
+        "研究 MoE offload、專家快取與 CPU–GPU 協同推論的系統設計",
+        "需要資料不外流的離線或私有 LLM 推論環境"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整(README、install/quickstart/models/cli、CONTRIBUTING、SECURITY、AGENTS.md 等),pyproject 的依賴有版本範圍與註解說明。tests/ 下有 155+ 個測試檔,涵蓋 kernel、kvcache、各模型、e2e,並以 slow、needs_weights 標記分層。.github/workflows 僅見 release、nightly-wheels、promote-beta、issue-labels,未見執行 pytest 的 CI。最近推送在 2026-11-02,維護活躍。許多測試需要 GPU 或真實權重,一般環境難以完整重現。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install.sh 在找不到 uv 時,會在使用者同意(或加 --yes)後執行 `curl -LsSf https://astral.sh/uv/install.sh | sh` 安裝 uv;這是常見的 curl|sh 模式,網址為 uv 官方站點。",
+          "install.sh 註解建議以 `curl -fsSL https://<host>/install.sh | bash` 方式安裝;預設 wheel URL 目前為空字串,實際來源需由使用者自行指定或由原始碼建置。",
+          "install.sh 會額外加入套件索引(download.pytorch.org、flashinfer.ai),並使用 uv 的 `--index-strategy unsafe-best-match`,依賴解析來源較寬,屬供應鏈上值得留意的設定。",
+          "install.sh 會在 ~/.freetoken 建立 venv、在 ~/.local/bin 建立 `ft` 符號連結,並寫入 ~/.config/environment.d/50-freetoken.conf。",
+          "freetoken-kernel-cache 的 build_backend.py 在建置時會載入並執行專案內的 _toolchain.py,並以 nvcc 編譯 CUDA kernel;屬一般原生擴充建置行為,setup.py 中未發現網路下載或 subprocess 呼叫。",
+          "桌面 App 從 flashml.ai 下載,屬預先編譯的二進位檔,本次分析範圍未涵蓋其內容,建議使用者自行確認來源與簽章。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "技術深度高、測試與文件齊全且維護活躍,對想在本地跑大型 MoE 模型的工程師值得關注;安裝涉及外部索引與 curl|sh 引導 uv,使用時留意即可。",
+      "_mode": "full"
+    }
+  },
+  "hyprwm/Hyprland": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-02",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-02": [
+        39373,
+        38,
+        17,
+        "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-11-02",
+    "analysis": {
+      "one_liner": "Hyprland 是以 C++ 撰寫、完全獨立(不依賴 wlroots)的動態平鋪式 Wayland 合成器,主打豐富的視覺特效與高度客製化。",
+      "summary": "Hyprland 是自行實作 Wayland 協定堆疊的動態平鋪式合成器,支援漸層邊框、模糊、動畫等特效、Socket IPC、插件系統與多種版面配置(Dwindle、Scrolling、Master、Monocle、Lua 自訂版面)。專案已有大型測試目錄與多組 CI 工作流程,持續高頻率更新。",
+      "category": "app",
+      "highlights": [
+        "完全獨立實作,不使用 wlroots、libweston、kwin 或 mutter",
+        "內建插件管理器(hyprpm)與 hyprctl IPC,擴充性強",
+        "支援 Lua 組態與 Lua 自訂版面,另有 Scrolling、Master、Monocle 等多種版面",
+        "tests/ 下有涵蓋設定、鍵綁定、渲染、協定等模組的大量 gtest,另有 hyprtester 整合測試",
+        "CI 完整:Arch 建置(-Werror)、clang-format、Nix、安全檢查、發佈流程"
+      ],
+      "use_cases": [
+        "Linux 桌面使用者打造高度客製化、視覺華麗的平鋪式桌面環境",
+        "研究 Wayland 合成器、DRM/KMS 與渲染管線的實作",
+        "開發 Hyprland 插件或自訂版面",
+        "作為現代 C++ 大型專案的程式碼與測試組織參考"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 簡潔並導向官方 wiki,另有 man 文件、貢獻指引與 SECURITY.md。tests/ 有數十個單元測試檔,並有 hyprtester 整合測試。CI 涵蓋建置、格式檢查、Nix 與安全檢查。最後推送於 2026-11-01,更新非常活躍。本次分析僅抽查 README、Makefile 與 CI 設定,未逐一檢視核心原始碼。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Makefile 的 `asan` 目標會執行 `git clone --recursive` 從 gitlab.freedesktop.org 下載 wayland 原始碼,並套用 scripts/ 內的 patch 後編譯;此為選用的除錯目標,一般安裝不會觸發。",
+          "Makefile 的 `installheaders`、`install` 目標會寫入 PREFIX(預設 /usr/local)及 /usr/share/pkgconfig,通常需要 root 權限,使用前應留意安裝位置。",
+          "在 CMakeLists.txt 中未發現 curl/wget/base64/eval 等下載或執行外部內容的用法;未見 curl|bash 安裝流程,也未見 npm 生命週期腳本。",
+          "作為合成器,執行時會處理輸入裝置、螢幕擷取與插件載入;第三方插件(hyprpm)以原生程式碼形式載入,使用者應自行審視插件來源。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟且活躍的大型 C++ Wayland 合成器專案,工程品質與測試紀律良好;若使用 Linux 桌面或研究 Wayland 值得關注,與 AI/ML 領域無直接關聯。",
       "_mode": "full"
     }
   }
