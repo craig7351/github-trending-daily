@@ -249,8 +249,8 @@
   },
   "shiyu-coder/Kronos": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
         33496,
@@ -316,6 +316,13 @@
         8,
         "Kronos: A Foundation Model for the Language of Financial Markets",
         "Python"
+      ],
+      "2026-11-04": [
+        46519,
+        503,
+        12,
+        "Kronos: A Foundation Model for the Language of Financial Markets",
+        "Python"
       ]
     },
     "last_analyzed": "2026-11-03",
@@ -357,8 +364,8 @@
       "verdict": "金融時間序列 foundation model 領域關注度很高、論文與權重齊備,值得量化或時序研究者關注並試用;但缺 CI、近期更新不多,預測結果不應直接視為交易依據。",
       "_mode": "full"
     },
-    "total_days_on_trending": 11,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 12,
+    "consecutive_days_on_trending": 3
   },
   "Automattic/harper": {
     "first_seen": "2026-07-25",
@@ -772,8 +779,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -950,6 +957,13 @@
         11,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-11-04": [
+        311465,
+        1164,
+        5,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -991,8 +1005,8 @@
       "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 26,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 27,
+    "consecutive_days_on_trending": 2
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -14554,10 +14568,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 12,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 13,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -14640,6 +14654,13 @@
         110746,
         1803,
         2,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-11-04": [
+        111911,
+        1139,
+        1,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
       ]
@@ -15203,10 +15224,10 @@
   },
   "p-e-w/heretic": {
     "first_seen": "2026-08-30",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-30": [
         28702,
@@ -15233,6 +15254,13 @@
         38102,
         420,
         15,
+        "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+        "Python"
+      ],
+      "2026-11-04": [
+        38794,
+        701,
+        6,
         "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
         "Python"
       ]
@@ -19075,10 +19103,10 @@
   },
   "JustVugg/colibri": {
     "first_seen": "2026-09-11",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-09-11": [
         27465,
@@ -19127,6 +19155,13 @@
         675,
         10,
         "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "C"
+      ],
+      "2026-11-04": [
+        47247,
+        802,
+        4,
+        "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
         "C"
       ]
     },
@@ -20051,10 +20086,10 @@
   },
   "max-sixty/worktrunk": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-13": [
         7236,
@@ -20067,6 +20102,13 @@
         10033,
         77,
         12,
+        "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+        "Rust"
+      ],
+      "2026-11-04": [
+        10491,
+        438,
+        3,
         "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
         "Rust"
       ]
@@ -29429,10 +29471,10 @@
   },
   "Donchitos/Claude-Code-Game-Studios": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-30": [
         29201,
@@ -29459,6 +29501,13 @@
         33555,
         1379,
         5,
+        "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+        "Shell"
+      ],
+      "2026-11-04": [
+        34668,
+        1182,
+        13,
         "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
         "Shell"
       ]
@@ -29829,15 +29878,22 @@
   },
   "anomalyco/hex": {
     "first_seen": "2026-11-02",
-    "last_seen": "2026-11-02",
+    "last_seen": "2026-11-04",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-02": [
         3274,
         1179,
         12,
+        "Local voice dictation for mac, windows and linux",
+        "Rust"
+      ],
+      "2026-11-04": [
+        4587,
+        410,
+        10,
         "Local voice dictation for mac, windows and linux",
         "Rust"
       ]
@@ -30056,15 +30112,22 @@
   },
   "vercel-labs/agent-desktop": {
     "first_seen": "2026-11-03",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-03": [
         9696,
         2275,
         1,
+        "Computer use CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-04": [
+        12761,
+        3791,
+        2,
         "Computer use CLI for AI agents",
         "Rust"
       ]
@@ -30108,15 +30171,22 @@
   },
   "D4Vinci/Scrapling": {
     "first_seen": "2026-11-03",
-    "last_seen": "2026-11-03",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-04",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-03": [
         92866,
         706,
         3,
+        "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
+        "Python"
+      ],
+      "2026-11-04": [
+        94858,
+        1658,
+        11,
         "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
         "Python"
       ]
@@ -30209,6 +30279,168 @@
       },
       "star_rating": 5,
       "verdict": "想親手了解或低成本重現 LLM 完整訓練流程的 AI 工程師,這是目前最值得關注的教學與研究基準專案之一。",
+      "_mode": "full"
+    }
+  },
+  "spotify/portal-ai-plugins": {
+    "first_seen": "2026-11-04",
+    "last_seen": "2026-11-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-04": [
+        3040,
+        91,
+        7,
+        "",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-04",
+    "analysis": {
+      "category": "devtool",
+      "one_liner": "Spotify 官方的 Portal AI 外掛集,把 Spotify Portal(Backstage)接進 Claude Code、Codex、Cursor 與 pi,並附帶節省 token 的 shunt 委派外掛。",
+      "summary": "這是 Spotify 發佈的 AI coding agent 外掛 marketplace,以 SKILL.md 形式提供 setup、doctor、search、service、actions 與 Fleetshift 系列工作流,透過 @spotify/portal-cli 操作 Spotify Portal。另含 shunt 外掛,用 hooks 攔截大檔案讀取,改交由 AiKA 較便宜的 worker 模型處理,以降低主模型 token 用量。",
+      "highlights": [
+        "一套 skills 同時支援 Claude Code、Codex、Cursor、pi 四種 agent 環境,各有對應的 plugin/marketplace manifest",
+        "工作流涵蓋服務目錄搜尋、服務簡報、Portal actions 呼叫(含 dry-run 與確認機制)以及 Fleetshift 批次 PR 流程",
+        "setup 技能明訂不得要求使用者在對話中貼上 token,且多個 instance 時必須詢問使用者",
+        "shunt 以 PreToolUse hooks 阻擋超過 350 行的檔案讀取並導向 bulk-reader;README 宣稱在大型 Java monorepo 上節省 82–94% token",
+        "shunt 附有 hook 路由與傳輸層 evals(以 stub CLI 測試,不需 Portal 存取),shell 腳本對錯誤、payload 上限與逾時有細緻處理"
+      ],
+      "use_cases": [
+        "已使用 Spotify Portal / Backstage 的團隊,想讓 coding agent 直接查詢服務目錄、擁有者與事故資訊",
+        "需要在多個 repo 批次執行變更(Fleetshift)並由 agent 協助建立與追蹤 PR",
+        "在大型程式碼庫中以 agent 工作,想把大檔案閱讀與樣板生成卸載到較便宜的模型以節省成本",
+        "研究跨 agent 平台(Claude/Codex/Cursor/pi)的外掛與 skill 封裝方式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 3,
+        "comment": "README 與 shunt README 結構清楚,涵蓋安裝、設定變數、限制與基準測試。shunt 有 51 個 evals(hook 與傳輸層),但根層 skills 沒有自動化測試,也未發現 .github/workflows CI 設定。最後推送於 2026-10-23,專案尚新(版本 0.1.0),實際使用高度依賴 Spotify Portal 與 AiKA 的存取權限。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "文件與腳本透過 `npx @spotify/portal-cli`(shunt 的 aika.sh 為 `npx --yes @spotify/portal-cli`)在執行時從 npm 下載並執行套件,使用者需留意此外部相依",
+          "shunt 註冊了 PreToolUse hooks(check-file-size、check-bash-read),會在每次 Read 與 Bash 工具呼叫前執行 shell 腳本並可能阻擋操作,安裝前宜先了解",
+          "shunt 的 bulk-read 會把指定檔案內容送往 Portal 的 AiKA 服務(aika:invoke-chat),處理敏感程式碼時需注意資料流向",
+          "未發現 package.json 的 preinstall/postinstall 生命週期腳本、curl|bash 安裝模式、混淆程式碼或內嵌 base64 載荷"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "對 Spotify Portal 使用者是不錯的官方整合,shunt 的 token 節省思路也值得參考;非 Portal 使用者則價值有限,屬不錯但非必看。",
+      "_mode": "full"
+    }
+  },
+  "floci-io/floci": {
+    "first_seen": "2026-11-04",
+    "last_seen": "2026-11-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-04": [
+        28781,
+        482,
+        8,
+        "Light, fluffy, and always free - The AWS Local Emulator alternative",
+        "Java"
+      ]
+    },
+    "last_analyzed": "2026-11-04",
+    "analysis": {
+      "one_liner": "用 Java/Quarkus 寫成的免費開源 AWS 本機模擬器,定位為 LocalStack 的免帳號、免授權替代品。",
+      "summary": "Floci 是 MIT 授權的本機 AWS 模擬器,供開發、測試與 CI 使用。AWS SDK、CLI、Terraform、CDK 和 OpenTofu 只要指向 http://localhost:4566 就能使用,不需要帳號、auth token 或付費功能閘門。專案提供 Docker 映像、各平台的原生執行檔(Mandrel native image)和 Testcontainers 整合,主打可直接取代 LocalStack。",
+      "category": "devtool",
+      "highlights": [
+        "服務涵蓋廣:S3、SQS、SNS、DynamoDB、EC2、ECS、RDS、IAM、CloudFormation、Cognito、ElastiCache 等,由 Query / JSON / REST 協定控制器分派。",
+        "提供 docker compose 與原生執行檔(Linux/macOS/Windows),另有官方 floci CLI 與 awslocal 包裝腳本,上手步驟少。",
+        "支援多個 AWS partition(含 cn、us-gov、eusc),request shapes 與 partitions.json 由 botocore 模型腳本產生,貼近真實 AWS 行為。",
+        "測試規模大:src/test 下的 Java 測試檔超過 3000 個,另有 compatibility-tests 目錄(含 CDK 等相容性套件)。",
+        "CI 完整:有 19 個 workflow,包含 checkstyle、nightly、相容性測試、schema 漂移檢查與 release 自動化,另有 dependabot。"
+      ],
+      "use_cases": [
+        "在本機或 CI 取代 LocalStack,跑 AWS SDK 或 IaC(Terraform/CDK/OpenTofu)的整合測試",
+        "用 Testcontainers 為服務起一個臨時的 AWS 環境",
+        "離線或免雲端帳號時開發 AWS 應用,例如 S3、SQS、DynamoDB 的流程",
+        "驗證多 partition(中國、GovCloud)下的 ARN 與端點行為"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 清楚,有快速開始、遷移指南和獨立文件站,另有 CONTRIBUTING、SECURITY、AGENTS.md 等文件。我讀的 AwsQueryController 有 Javadoc 說明路由邏輯,結構清楚。測試規模很大,涵蓋單元與整合測試,CI 有 19 個 workflow。最後推送時間是 2026-11-04,今日排行榜新增星數很多,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的 Web Console 與部分範例建議掛載 /var/run/docker.sock。掛載後,容器可以操作主機的 Docker daemon,權限很高,使用者應自行評估。",
+          "Web Console 首次請求時會拉取 console 映像,並以 sidecar 容器啟動,執行的是外部映像內容。",
+          "CONTRIBUTING.md 提到 curl -s https://get.sdkman.io | bash,用來安裝 SDKMAN 開發環境。這是常見的做法,屬於貢獻者的環境設定,不是專案本身的安裝流程。",
+          "預設憑證可以是任意非空值(例如 test/test),只適合本機開發和測試,不應對外網暴露。測試中有 NetworkExposureGuardTest 這類相關檢查。",
+          "未發現混淆程式碼、內嵌的長 base64 payload、install-time 腳本或可疑相依套件。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想找免授權、功能廣、測試紮實的 LocalStack 替代品,值得關注並試用。專案很新,真實相容度要用自己的工作負載驗證。",
+      "_mode": "full"
+    }
+  },
+  "Usagi-org/ai-goofish-monitor": {
+    "first_seen": "2026-11-04",
+    "last_seen": "2026-11-04",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-04": [
+        16371,
+        228,
+        9,
+        "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-04",
+    "analysis": {
+      "one_liner": "以 Playwright 加 AI 多模態分析為核心的閒魚(Goofish)商品多任務監控系統,附 Web 管理介面與多渠道通知。",
+      "summary": "這是一套 FastAPI 加 Vue 的閒魚二手商品監控系統。它用 Playwright 抓取搜尋結果,再讓 OpenAI 相容的多模態模型依自訂標準分析商品,符合條件時推送通知。支援自然語言建立任務、Cron 排程、多帳號與代理輪替,並以 SQLite 儲存資料,可用 Docker 一鍵部署。",
+      "category": "app",
+      "highlights": [
+        "可用自然語言描述需求,由 AI 產生分析標準,也能改用關鍵字規則判斷",
+        "支援 ntfy、企業微信、Bark、Telegram、Webhook 等多種通知渠道",
+        "具備多帳號綁定、代理池輪替、失敗保護、Cron 排程與價格歷史",
+        "分層架構完整(api/domain/infrastructure/services),主儲存已遷移到 SQLite",
+        "附 Chrome 擴充功能匯出登入態,並提供 Docker 與桌面啟動器兩種部署方式"
+      ],
+      "use_cases": [
+        "個人或小型團隊追蹤閒魚上特定品項(如 MacBook)的低價與新上架",
+        "搭配多模態 LLM 自動評估商品圖片與賣家資訊,過濾詐騙或不符規格的商品",
+        "研究 Playwright 爬蟲搭配 LLM 判斷的任務調度架構",
+        "部署成長期運行的二手市場比價與推播服務"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 含部署、環境變數、資料遷移與使用流程,另有英文版與 DISCLAIMER。tests 目錄涵蓋 unit、integration 與 live smoke,包括 AI 客戶端、通知、排程、爬蟲區域篩選等模組,覆蓋面不錯。CI 只有 Docker 映像建置與 Claude 輔助 workflow,沒有自動跑 pytest 的流程。最後推送為 2026-10-10,屬持續維護。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Web UI 預設帳密為 admin/admin123(README 明載),對外暴露前建議先修改 WEB_USERNAME 與 WEB_PASSWORD",
+          "專案需要使用者提供閒魚登入態(cookie JSON)並存放在 state/ 目錄;配套的 Chrome 擴充功能會讀取 goofish.com 分頁的 cookie、localStorage 與請求標頭,使用時應留意憑證保管",
+          "本專案屬爬蟲性質,專案內附 DISCLAIMER.md;使用者需自行留意閒魚平台服務條款與帳號風控風險",
+          "Dockerfile 以 root 身分執行容器(USER root),且 pip 使用清華大學鏡像源(pypi.tuna.tsinghua.edu.cn)",
+          "CI 的 claude.yml 在 workflow 中使用 curl -fsSL https://bun.sh/install | bash,並透過第三方路由(claude-code-router)轉接模型端點;僅影響該專案自身的 GitHub Actions,不影響使用者本地安裝",
+          "本次觀察範圍內未發現安裝時自動執行的腳本,也未發現混淆程式碼或內嵌的大型編碼負載"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對有閒魚監控或 LLM 輔助爬取需求的人,這是功能完整、測試與文件都不錯的專案,值得關注;部署時請先改掉預設密碼,並妥善保管登入態。",
       "_mode": "full"
     }
   }
