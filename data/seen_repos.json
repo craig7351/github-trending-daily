@@ -779,8 +779,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-11-04",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-05",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -964,6 +964,13 @@
         5,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-11-05": [
+        313320,
+        1379,
+        3,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -1005,8 +1012,8 @@
       "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 27,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 28,
+    "consecutive_days_on_trending": 3
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -9808,10 +9815,10 @@
   },
   "github/spec-kit": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-09-12",
+    "last_seen": "2026-11-05",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-15": [
         128522,
@@ -9833,38 +9840,50 @@
         15,
         "💫 Toolkit to help you get started with Spec-Driven Development",
         "Python"
+      ],
+      "2026-11-05": [
+        147307,
+        808,
+        7,
+        "💫 Toolkit to help you get started with SDD or any other process!",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-12",
+    "last_analyzed": "2026-11-05",
     "analysis": {
-      "one_liner": "GitHub 官方出品的「規格驅動開發(Spec-Driven Development)」工具組,讓 AI coding agent 先寫清楚規格再動手實作。",
-      "summary": "Spec Kit 提供一套 CLI(specify)與斜線指令流程(constitution → specify → plan → tasks → implement → converge),協助開發者用結構化的規格文件驅動 30 多種 AI coding agent(Copilot、Claude、Codex、Gemini 等)產生程式碼,而不是直接讓 AI 隨性生成。專案已滿一年並發布 1.0.0,並延伸出 extensions/presets/bundles 機制,支援擴充功能、模板客製化與角色化的整套安裝包。",
       "category": "devtool",
+      "one_liner": "GitHub 官方推出的規格驅動開發(SDD)工具包,透過 specify CLI 為各種 AI 程式助理提供結構化流程、範本與擴充機制。",
+      "summary": "Spec Kit 是 GitHub 開源的 Python CLI(specify-cli),讓 AI 程式助理依照「憲章→規格→計畫→任務→實作→收斂」的流程工作,並內建除錯與想法評估兩種流程。它以 Integration、Extension、Preset、Workflow、Bundle、Catalog 等可組合機制,支援數十種 AI 助理(Copilot、Claude、Gemini、Codex 等),解決 vibe coding 缺乏規格與可追溯性的問題。",
       "highlights": [
-        "由 GitHub 官方維護,一年內迭代到 1.0.0,commit 與 release 節奏非常密集",
-        "支援 30+ 種 AI coding agent 整合(Copilot、Claude Code、Codex、Gemini CLI 等),並可透過 extensions/presets/bundles 深度客製化工作流程",
-        "下載與解壓縮程式碼(_download_security.py)寫得相當嚴謹,內建 zip bomb、路徑穿越、symlink、SSRF/loopback 重導向等多重防護,並非隨手拼湊的腳本",
-        "CI 設置完整:ruff lint、跨平台(Linux/Windows/macOS)pytest matrix、CodeQL、定期 pip-audit 依賴掃描,且 GitHub Actions 皆以 commit SHA 鎖定版本",
-        "文件量龐大且分工清楚(README、CONTRIBUTING、DEVELOPMENT、SECURITY.md、docs/ 站點),另有簡體中文版 README"
+        "支援數十種 AI 程式助理的整合(Copilot、Claude、Gemini、Cursor、Codex 等),可在不同助理間切換",
+        "可組合架構:Extension、Preset、Workflow、Bundle 與社群 Catalog,可客製流程或建立私有目錄",
+        "安裝套件內含核心資產,支援離線/內網(air-gapped)使用 specify init",
+        "下載與壓縮檔解壓有嚴謹的安全限制(大小上限、zip 條目數、路徑檢查),並以 ruff 規則限制 shell=True",
+        "官方維護、多語 README 與完整文件站,測試涵蓋每個 integration 與合約測試"
       ],
       "use_cases": [
-        "團隊想在導入 AI coding agent 前,先建立「先寫規格、再產生程式碼」的標準化開發流程",
-        "需要同時支援多種 AI 助理(Copilot/Claude/Codex/Gemini 等)且希望流程一致的組織",
-        "想要針對特定角色(PM、資安研究員、工程師)提供客製化 SDD 工作包(bundles)的團隊",
-        "已有專案想漸進導入規格文件並讓 AI 輔助處理 bug fix 或既有系統現代化(brownfield)"
+        "團隊以規格驅動方式搭配 AI 助理開發新功能或應用",
+        "用 bug 擴充套件做「評估→修復→驗證」的有記錄除錯流程",
+        "企業以 Preset/私有 Catalog 統一組織的開發規範與範本",
+        "在不同 AI 程式助理之間維持一致的工作流程"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件、測試、CI 三方面都達到大型開源專案水準:README 結構完整、docs/ 站點齊全;tests/ 底下依 contract/integration/unit 分層,涵蓋數十種 agent 整合與 bundler 邏輯;CI 有 lint、跨平台測試、CodeQL 與排程式依賴掃描。原始碼(如 _download_security.py)品質遠高於一般 CLI 工具,對 zip/tar 解壓與下載重導向都有詳細註解說明防護理由。"
+        "comment": "文件完整(README 多語、GitHub Pages 文件站、DEVELOPMENT/CONTRIBUTING/AGENTS.md)。tests 目錄約 360 個測試檔,涵蓋各 integration、合約與 wheel 打包測試。CI 含 test、lint、codeql、security、docs、release 等工作流,依賴套件版本有約束,最近一次推送為 2026-11-04,維護非常活躍。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "pyproject.toml 使用 hatchling 建置,未見 setup.py 或安裝時自動執行的生命週期腳本;安裝以 `uv tool install specify-cli` 進行,README 中未見 curl|bash 類安裝方式。",
+          "workflow 的 shell 步驟(src/specify_cli/workflows/step/shell/__init__.py)使用 subprocess.run(shell=True) 執行 workflow YAML 中撰寫的命令,程式碼註解說明此為支援管線與多指令所需,且不提供沙箱;執行來自社群的 workflow 前應先檢視內容。",
+          "專案支援從社群 Catalog 安裝 extension、preset、workflow 等元件,README 自行聲明目錄列表並非稽核或背書,使用者安裝前應審閱社群來源碼。",
+          "未發現混淆程式碼、長 base64 內嵌 payload 或可疑相依套件名稱。"
+        ]
       },
       "star_rating": 5,
-      "verdict": "GitHub 官方維護、工程品質與安全意識都在水準之上的 SDD 工具,對導入 AI 輔助開發流程的團隊值得立即關注與試用。",
+      "verdict": "GitHub 官方出品、品質與維護度俱佳,是目前 AI 輔助開發中規格驅動流程的代表性工具,非常值得 AI 研發工程師立即關注與試用。",
       "_mode": "full"
     }
   },
@@ -10593,10 +10612,10 @@
   },
   "harry0703/MoneyPrinterTurbo": {
     "first_seen": "2026-08-18",
-    "last_seen": "2026-10-01",
+    "last_seen": "2026-11-05",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-08-18": [
         106041,
@@ -10639,42 +10658,49 @@
         6,
         "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
         "Python"
+      ],
+      "2026-11-05": [
+        138969,
+        617,
+        9,
+        "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-10-01",
+    "last_analyzed": "2026-11-05",
     "analysis": {
-      "one_liner": "輸入主題或關鍵字,即可一鍵自動產生腳本、配音、素材、字幕與配樂,並合成高清短影音的開源工具。",
-      "summary": "MoneyPrinterTurbo 是一套 Python 開源專案,串接多種大型語言模型與 TTS,從主題自動完成短影音的腳本、素材匹配、字幕、背景音樂與剪輯合成。提供 AI Agent、WebUI、API 與 CLI 四種使用方式,可批次生成並接入自動化流程,降低短影音製作門檻。",
+      "one_liner": "輸入主題或關鍵詞,一鍵自動產生腳本、配音、素材、字幕與配樂並合成高清短影音的 Python 工具。",
+      "summary": "MoneyPrinterTurbo 是以 Python 撰寫的 AI 短影音生成工具,從主題或關鍵詞出發,自動完成文案、素材比對、字幕、背景音樂與剪輯合成。提供 AI Agent、WebUI、API 與 CLI 四種使用方式,支援多家 LLM 服務(Kimi、OpenAI、Claude、Gemini、DeepSeek、通義千問等),降低短影音內容製作門檻。",
       "category": "ai-ml",
       "highlights": [
-        "一站式流程:腳本、配音、素材、字幕、配樂、剪輯全自動,也可在各環節使用自訂內容",
-        "支援 Kimi、OpenAI、Claude、Gemini、DeepSeek、通義千問等大量模型,並相容 OpenRouter、Ollama、OneAPI 等閘道",
-        "提供 WebUI、API、CLI 與 AI Agent 四種入口,容易整合進自動化流程",
-        "支援批次生成多支成片、任務歷史記錄,以及設定與 API Key 的匯入匯出",
-        "跨平台(Windows/macOS/Linux)、MIT 授權,星數超過 12.7 萬且社群活躍"
+        "一站式流程:腳本、配音、素材、字幕、配樂、剪輯全自動,各環節也可改用自訂內容",
+        "四種入口:AI Agent、WebUI、API、CLI,方便接入自動化流程",
+        "支援多家 LLM 與影片生成服務(Kimi、OpenAI、Claude、Gemini、DeepSeek、Seedance 等)",
+        "支援批次產生多部影片、任務歷史,以及設定與 API Key 的匯入匯出",
+        "MIT 授權、跨平台(Windows/macOS/Linux),約 13.9 萬星,社群成熟且持續更新"
       ],
       "use_cases": [
-        "自媒體量產 TikTok、YouTube Shorts、Reels 等短影音",
-        "把 LLM 與影音合成整合進自動化內容工作流",
-        "研究多模型 API 串接與影片生成管線的實作",
-        "為不熟剪輯的人快速產出口播或資訊型影片"
+        "自媒體批量製作 TikTok、YouTube Shorts、Reels 短影音",
+        "把短影音生成接入內容自動化工作流(透過 API 或 CLI)",
+        "學習 LLM + TTS + FFmpeg 組合的影片自動化管線設計",
+        "快速產出多語言行銷或知識類短片原型"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 提供多語版本、功能清單與介面截圖,內容完整,但前半篇幅多為贊助商資訊。測試部分僅憑 README 評估,無法確認。最後推送於 2026-09-30,近期持續提交,且正在趨勢榜上。"
+        "comment": "README 有多語系版本、介面截圖與清楚的功能清單,但開頭被大量贊助商內容佔據,實際安裝說明在截斷部分未見。測試情況僅憑 README 無法判斷。最近推送為 2026-11-04,且今日登上趨勢榜,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "僅檢視 README,未做原始碼層級審查;所見內容中沒有 curl | bash 之類的安裝指令(README 已截斷)。",
-          "使用時需填入多家 LLM 服務的 API Key,README 提到設定可匯出匯入,建議妥善保管金鑰。",
-          "README 含多個贊助商推廣連結,使用前請自行判斷。"
+          "僅依 README 評估,未進行原始碼層級審查;README 截斷處未見安裝指令。",
+          "使用時需自行設定多家 LLM/影片服務的 API Key,建議妥善保管並留意金鑰匯出功能的存放位置。",
+          "README 含多個贊助商的推廣連結與註冊連結,屬一般贊助揭露,使用者點擊前自行判斷即可。"
         ]
       },
       "star_rating": 4,
-      "verdict": "短影音自動化領域的熱門專案,功能完整、模型支援廣,想做 AI 影片工作流的人值得關注與試用。",
+      "verdict": "短影音自動化領域的高人氣標竿專案,功能完整、整合多家模型且維護活躍,想做內容自動化或研究影片生成管線的工程師值得關注與試用。",
       "_mode": "light"
     }
   },
@@ -14568,10 +14594,10 @@
   },
   "thedotmack/claude-mem": {
     "first_seen": "2026-08-28",
-    "last_seen": "2026-11-04",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 13,
+    "last_seen": "2026-11-05",
+    "days_on_trending": 7,
+    "consecutive_days_on_trending": 7,
+    "total_days_on_trending": 14,
     "stars_history": {
       "2026-08-28": [
         92279,
@@ -14661,6 +14687,13 @@
         111911,
         1139,
         1,
+        "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "TypeScript"
+      ],
+      "2026-11-05": [
+        112862,
+        1172,
+        5,
         "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
         "TypeScript"
       ]
@@ -20086,10 +20119,10 @@
   },
   "max-sixty/worktrunk": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-11-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-13": [
         7236,
@@ -20109,6 +20142,13 @@
         10491,
         438,
         3,
+        "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+        "Rust"
+      ],
+      "2026-11-05": [
+        11037,
+        531,
+        2,
         "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
         "Rust"
       ]
@@ -25904,10 +25944,10 @@
   },
   "garrytan/gstack": {
     "first_seen": "2026-10-05",
-    "last_seen": "2026-10-05",
+    "last_seen": "2026-11-05",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-05": [
         135164,
@@ -25915,45 +25955,52 @@
         14,
         "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
         "TypeScript"
+      ],
+      "2026-11-05": [
+        139343,
+        290,
+        10,
+        "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-10-05",
+    "last_analyzed": "2026-11-05",
     "analysis": {
-      "one_liner": "Garry Tan 的 Claude Code 技能包:以斜線指令把 AI 變成 CEO、設計師、工程經理、QA、資安與發佈工程師組成的虛擬團隊,並附帶無頭瀏覽器。",
-      "summary": "gstack 是一套以 Markdown 為主的 Claude Code 技能(slash commands)集合,涵蓋產品審查(/office-hours、/plan-ceo-review)、程式審查(/review)、真實瀏覽器 QA(/qa)、資安審計(/cso)、發佈(/ship、/land-and-deploy)等流程,並內建以 Bun + Playwright 編譯的 browse 無頭瀏覽器。也可透過 --host 安裝到 Codex、Cursor、OpenCode、Copilot CLI 等其他代理環境,解決「單人使用 AI 代理需要結構化角色與流程」的問題。",
+      "one_liner": "Garry Tan(YC 執行長)的 Claude Code 技能套件,把 CEO、工程經理、設計師、QA、資安、發布工程師等角色做成 slash command,涵蓋從構想到出貨的完整流程。",
+      "summary": "gstack 是一組以 Markdown 撰寫的 Claude Code 技能(如 /office-hours、/plan-ceo-review、/review、/qa、/ship、/autoplan),另附以 Bun 編譯的無頭瀏覽器(browse)與 make-pdf 等工具。它把「思考、規劃、實作、審查、測試、出貨、回顧」串成流程,各技能的輸出(設計文件、測試計畫)會交給下一步使用。除 Claude Code 外,也支援 Codex、Cursor、Gemini CLI、OpenCode、Copilot 等 agent,多數為 experimental 等級。",
       "category": "devtool",
       "highlights": [
-        "23 個專業角色技能加數個工具,涵蓋規劃、審查、QA、資安、發佈完整流程",
-        "支援多代理主機:Claude Code(完整)、Codex、Cursor、OpenCode、Copilot CLI 等",
-        "附帶自建 browse 無頭瀏覽器與 make-pdf 等 Bun 編譯的 CLI 工具",
-        "團隊模式(--team)可讓整個 repo 的成員自動取得並更新 gstack",
-        "測試規模龐大:test/ 下約 900 個測試檔,並有付費 LLM eval 分級(gate/periodic)"
+        "以角色分工的技能流程(office-hours、plan 審查、review、qa、ship),各步驟產物互相銜接,形成完整的開發 sprint",
+        "支援多種 agent host(Claude Code 為 full 等級,其餘多為 experimental),並提供 --host auto 與 --status 等安裝管理功能",
+        "內建以 Playwright 為基礎的無頭瀏覽器與 /qa,可開真實瀏覽器重現並修復 bug",
+        "團隊模式可讓同一 repo 的成員自動取得並更新 gstack,另有 stable 與 main 兩個更新通道",
+        "工程化程度高:三十多個 CI workflow、OSV 與 Scorecard 掃描、依賴審查,並有 Windows、ARM 跨平台測試"
       ],
       "use_cases": [
-        "個人開發者或創辦人用 Claude Code 建立結構化的規劃→審查→QA→發佈流程",
-        "技術主管為團隊導入統一的 AI 輔助程式審查與發佈自動化",
-        "研究如何設計與測試大型 Claude Code 技能/提示詞系統",
-        "需要讓 AI 代理操作真實瀏覽器進行 QA 或網頁抓取的場景"
+        "個人開發者或創辦人用結構化角色取代空白 prompt,導入 Claude Code 工作流",
+        "技術團隊在每個 PR 上套用統一的 review、QA 與出貨自動化,並用團隊模式同步設定",
+        "想參考大型 agent skill 套件如何組織、測試與發布的團隊",
+        "同時使用多種 coding agent,想用一套技能跨工具共用的使用者"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件齊備(README、ARCHITECTURE、CONTRIBUTING、SECURITY、ETHOS、CHANGELOG 等),測試檔約 900 個並有 20 餘個 GitHub Actions 工作流程(含 Windows、ARM、actionlint、OSV、Scorecard、dependency-review)。最近推送為 2026-10-05,版本迭代頻繁。專案體量龐大、設定與選項繁複,上手與維護成本偏高。"
+        "comment": "文件非常完整,有 README、ARCHITECTURE、CONTRIBUTING、SECURITY、CHANGELOG 與大量 docs 子文件。test/ 目錄下的測試檔超過 1400 個,CI 有三十多個 workflow,涵蓋免費測試、付費 eval、Windows 與 ARM 驗證、發布閘門、secret 掃描與依賴審查。最近一次推送在 2026-11-05,版本號 1.95.5,迭代頻繁。整體規模龐大,學習與維護成本偏高,但工程紀律扎實。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 建議的安裝方式是 git clone 後執行 ./setup,該腳本會建置二進位檔、下載 Chromium,並把技能寫入 ~/.claude/skills 等使用者目錄;執行前建議先閱讀腳本內容",
-          "package.json 未見 preinstall/postinstall/prepare 等生命週期腳本",
-          "bin/gstack-gbrain-install 的提示文字中引用 `curl -fsSL https://bun.sh/install | bash` 作為 Bun 安裝方式(屬於官方 Bun 的常見安裝指令)",
-          "README 的團隊模式會在 repo 中新增 .claude/ 設定並讓成員每次 session 啟動時自動檢查更新(每小時一次),使用者應知悉此自動更新行為",
-          "專案設計為在本機以使用者自身憑證運作,並提供 browse 瀏覽器、cookie 匯入等功能,使用時需注意其可存取的登入工作階段範圍",
-          "SECURITY.md 提供私下回報管道,CI 含 OSV scanner、dependency-review、Scorecard 等供應鏈檢查"
+          "安裝方式是 git clone 後執行 ./setup。setup 會建置瀏覽器二進位檔、將技能寫入 ~/.claude/skills,並依選項註冊 Claude Code hooks(如 UserPromptSubmit、Stop)。執行前建議先閱讀腳本內容。",
+          "README 建議把安裝指令貼進 Claude Code,讓 agent 代為執行 clone 與 setup,並修改 CLAUDE.md。使用者應留意 agent 會對本機設定檔做哪些改動。",
+          "setup 會啟動 Chromium 的下載或引導流程(可用 --no-browser 跳過),並可能安裝字型,安裝時需要對外連線。",
+          "文件中有 `curl -fsSL https://bun.sh/install | bash` 的 Bun 官方安裝指引,位於 troubleshooting 與 gstack-upgrade 的說明文字內。這是常見的安裝方式,使用者應自行評估。",
+          "團隊模式的 required hook 以及自動更新機制(預設每小時檢查一次)會在 session 啟動時從遠端更新技能內容,採用前應了解其信任範圍。可用 update_channel 設定切換 stable 或 main 通道。",
+          "package.json 中未見 preinstall、postinstall 或 prepare 等 npm 生命週期腳本。依賴為常見套件(playwright、sharp、@anthropic-ai/sdk 等),並使用 patchedDependencies 修補 playwright-core。"
         ]
       },
       "star_rating": 4,
-      "verdict": "工程化程度很高、測試與 CI 完整的 Claude Code 技能框架,值得有在用 Claude Code 的團隊試用或借鏡其設計,但體量大、需先審視安裝腳本與自動更新行為。",
+      "verdict": "工程品質與文件都屬頂級,適合想系統化導入 Claude Code 工作流的人試用;但規模龐大、帶有強烈個人風格,建議先讀 setup 與 hooks 再安裝。",
       "_mode": "full"
     }
   },
@@ -30112,10 +30159,10 @@
   },
   "vercel-labs/agent-desktop": {
     "first_seen": "2026-11-03",
-    "last_seen": "2026-11-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-03": [
         9696,
@@ -30128,6 +30175,13 @@
         12761,
         3791,
         2,
+        "Computer use CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-05": [
+        15106,
+        2470,
+        6,
         "Computer use CLI for AI agents",
         "Rust"
       ]
@@ -30171,10 +30225,10 @@
   },
   "D4Vinci/Scrapling": {
     "first_seen": "2026-11-03",
-    "last_seen": "2026-11-04",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-05",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-03": [
         92866,
@@ -30187,6 +30241,13 @@
         94858,
         1658,
         11,
+        "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
+        "Python"
+      ],
+      "2026-11-05": [
+        96544,
+        2005,
+        14,
         "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
         "Python"
       ]
@@ -30337,15 +30398,22 @@
   },
   "floci-io/floci": {
     "first_seen": "2026-11-04",
-    "last_seen": "2026-11-04",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-05",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-04": [
         28781,
         482,
         8,
+        "Light, fluffy, and always free - The AWS Local Emulator alternative",
+        "Java"
+      ],
+      "2026-11-05": [
+        29624,
+        1090,
+        4,
         "Light, fluffy, and always free - The AWS Local Emulator alternative",
         "Java"
       ]
@@ -30441,6 +30509,375 @@
       },
       "star_rating": 4,
       "verdict": "對有閒魚監控或 LLM 輔助爬取需求的人,這是功能完整、測試與文件都不錯的專案,值得關注;部署時請先改掉預設密碼,並妥善保管登入態。",
+      "_mode": "full"
+    }
+  },
+  "NVIDIA/auto-ontology": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-05": [
+        5010,
+        2050,
+        1,
+        "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-05",
+    "analysis": {
+      "one_liner": "NVIDIA 官方開源的企業語意本體(ontology)層,為 Agent 提供可驗證、可追溯的 NL-to-SQL 上下文。",
+      "summary": "Auto Ontology 從企業資料庫 metadata 自動產生本體與知識圖譜,調和跨系統的指標定義,並透過 MCP、CLI 與 API 提供給任何 Agent。它讓 LLM 產生的 SQL 能對照認證過的定義與血緣驗證,並隨答案回傳出處,解決「Agent 答得快但數字不可靠」的問題。專案包含 FastAPI 後端、Next.js 前端、ingestion worker 與 Postgres/pgvector,預設使用 NVIDIA NIM 模型。",
+      "category": "ai-ml",
+      "highlights": [
+        "以 metadata 自動產生本體,並可串接既有語意模型,調和跨系統定義",
+        "答案附帶 SQL 與推理步驟,並提供 check_answerable 判斷資料是否能回答問題",
+        "透過 MCP / CLI / API 對外服務,可接入任何 Agent harness",
+        "連接器涵蓋 Postgres、MySQL、Snowflake、Databricks、Trino、ClickHouse 等",
+        "提供 Helm chart 與 Docker Compose,CI 工作流與測試相當完整"
+      ],
+      "use_cases": [
+        "為企業 BI / 資料分析 Agent 建立可信的語意層,降低 NL-to-SQL 幻覺",
+        "跨多個資料來源統一指標定義(如營收、客戶),並保留血緣與出處",
+        "替 LLM Agent 提供 MCP 形式的資料目錄與可回答性檢查",
+        "評估 text-to-SQL 方案,可搭配官方 ontology-sql-eval 跑 BIRD 基準"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 4,
+        "comment": "README 涵蓋架構、元件、模型設定與逐步 Quickstart,另有 DEPLOYMENT、SECURITY、AGENTS 等文件。各模組內附大量單元測試(160 個以上測試檔,涵蓋 connectors、dal、retrieval 等),並有多個 CI 工作流。程式碼註解清楚、結構分層明確。專案剛開源,README 註明目前不接受外部貢獻;近期仍有推送。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 在建置階段以 curl 下載 uv 的 install.sh(固定版本 0.11.29)並以 sh 執行,屬常見做法,但使用者需知悉會從外部網址取得並執行腳本",
+          "Quickstart 需自行 clone 另一個 NVIDIA 儲存庫(auto-ontology-eval)並執行其 seed 腳本,且需提供 NVIDIA API 金鑰與資料庫密碼;.env.example 含預設密碼,README 已提醒啟動前必須替換",
+          "Docker Compose 會將 Postgres、pgAdmin 與網頁應用對主機開放,部署時建議確認網路暴露範圍",
+          "專案會連線至使用者提供的資料庫並將資料內容送往 LLM 端點(預設為 NVIDIA 託管 API),處理敏感資料時建議使用自架 NIM"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "NVIDIA 出品、架構完整且測試充足的企業語意層方案,對做 Agent 資料分析與 NL-to-SQL 可靠性的工程師值得優先關注;但目前不接受外部貢獻,且依賴 NVIDIA NIM 生態。",
+      "_mode": "full"
+    }
+  },
+  "The-PR-Agent/pr-agent": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-05": [
+        14759,
+        280,
+        8,
+        "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-05",
+    "analysis": {
+      "one_liner": "PR-Agent 是社群維護的開源 AI 程式碼審查機器人,支援多家 Git 平台與多種 LLM,可透過 GitHub Action、CLI 或 webhook 自動審查 PR。",
+      "summary": "PR-Agent 原為 Qodo(CodiumAI)開發,現為社群維護的專案,提供 /review、/describe、/improve、/ask 等指令,每個工具僅用單次 LLM 呼叫即可產出 PR 審查、描述與程式碼建議。透過 PR 壓縮策略處理大型 PR,並以 litellm 串接 OpenAI、Anthropic、Ollama 等模型。支援 GitHub、GitLab、Bitbucket、Azure DevOps、Gitea、Gerrit、CodeCommit 等平台。",
+      "category": "devtool",
+      "highlights": [
+        "支援多家 Git 平台,部署形式涵蓋 GitHub Action、CLI、webhook 伺服器與 Lambda",
+        "每個指令單次 LLM 呼叫(約 30 秒),並有 PR 壓縮策略處理大型 diff,成本低",
+        "以 litellm 抽象 LLM,可用 OpenAI、Anthropic、Ollama 等,並可用 TOML 設定客製提示與審查類別",
+        "測試完整:tests/unittest 有數百個測試檔,另有 e2e、provider smoke、CodeQL 與 pre-commit 等 CI",
+        "Dockerfile 以 digest 固定基底映像與 uv 版本、用 uv.lock 凍結依賴,服務以非 root 使用者(UID 10001)執行"
+      ],
+      "use_cases": [
+        "在團隊 GitHub/GitLab 倉庫以 GitHub Action 自動產生 PR 審查與描述",
+        "企業內部自架 webhook 伺服器,搭配自有或本地 LLM(Ollama)做程式碼審查",
+        "研究 LLM 程式碼審查的 prompt 設計、diff 壓縮與多平台整合實作",
+        "在 CLI 中對指定 PR URL 執行 review/improve 作為本地開發輔助"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件齊全(README、docs 站台、各平台安裝指南、SECURITY.md、AGENTS.md、CHANGELOG)。測試規模大,涵蓋安全回歸(webhook 認證、憑證遮蔽、URL 安全等),CI 有 build-and-test、e2e、CodeQL、dependabot 等。最近推送於 2026-11-05,維護活躍。抽樣的 pr_agent.py 結構清晰,含防禦性例外處理與安全註解。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "pyproject.toml 使用標準 setuptools 建置,未見 setup.py 在安裝時執行任意程式碼,也未見 preinstall/postinstall 類腳本。",
+          "Dockerfile 在建置時以 apt-get 安裝 git、curl,並以 uv sync --frozen 依 uv.lock 安裝依賴;基底映像與 uv 皆以 digest 固定。",
+          "容器中的 webhook 服務以 gunicorn 啟動並設定 --forwarded-allow-ips \"*\",自架時建議置於可信的反向代理後方。",
+          "專案需要 LLM API 金鑰與 Git 平台 token,使用時請妥善管理 secrets;程式碼中 /help_docs 指令因 clone 目標驗證問題暫時停用,顯示維護者有進行安全強化。",
+          "未發現混淆程式碼、內嵌大型 base64 payload、curl|bash 安裝模式或可疑相依套件名稱。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟、文件與測試完整且維護活躍的開源 PR 審查工具,若團隊想自架或客製 AI code review 流程非常值得關注;但已轉為社群維護,與 Qodo 商業產品功能不同。",
+      "_mode": "full"
+    }
+  },
+  "FareedKhan-dev/kimi-k3-in-c": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-05": [
+        10296,
+        351,
+        11,
+        "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-11-05",
+    "analysis": {
+      "one_liner": "以純 C99 從零實作的 Kimi K3(2.78T 參數 MoE)CPU 推論引擎,僅需約 8 GB RAM 即可串流執行 1.56 TB 的檢查點。",
+      "summary": "這是一個不依賴 BLAS、框架或 GPU 的 Kimi K3 推論引擎,以 C99 搭配 AVX2/NEON/OpenMP 實作。它把稠密主幹放在記憶體、將 1.45 TB 的 MXFP4 專家權重從 NVMe 串流讀取,讓同一模型在 8 GB 到 224 GB 記憶體下輸出位元組完全一致,只有速度不同。專案附完整文件、無需權重即可執行的測試與跨平台 CI。",
+      "category": "ai-ml",
+      "highlights": [
+        "8.24 GB 峰值記憶體跑 2.78T 參數模型,靠專家串流與 4-bit packed 直接運算達成",
+        "手寫 scalar/AVX2/NEON 核心,並維持位元精確(bit-exact)的浮點契約,與 PyTorch 參考實作對照",
+        "CI 完整:Linux/macOS/Windows、gcc/clang、CMake、ASan+UBSan、-Werror、shellcheck、tokenizer parity",
+        "測試不需模型權重:以 JSON fixture 逐算子驗證與全模型 oracle,CI 並斷言測試套件不是空跑",
+        "文件豐富(架構、效能、調校、路線圖、實測數據),並誠實標示每 token 約 5~30 秒的速度限制"
+      ],
+      "use_cases": [
+        "學習 MoE、線性注意力(KDA)、MXFP4 量化與 SSD 串流推論的系統實作",
+        "研究在記憶體受限設備上運行超大模型的 offloading 與快取策略",
+        "作為從零撰寫 LLM 推論引擎與核心算子驗證方法的參考",
+        "在高記憶體工作站上做離線、非即時的大模型實驗"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 4,
+        "comment": "程式碼註解詳盡,明確記載設計取捨與失敗處理(OOM 時直接 abort,而非輸出無意義結果);單元測試約 20 個檔案搭配 fixture 與 golden 對照,CI 涵蓋廣。最後推送為 2026-10-02,距今略久,但版本與貢獻者紀錄完整。實用速度偏慢(每 token 數秒至數十秒),且 README 含作者求職/PhD 宣傳。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "scripts/download-model.sh 會透過 hf CLI 從 Hugging Face(moonshotai/Kimi-K3)下載約 1.56 TB 的權重,並以位元組總數驗證;腳本說明不讀取或轉送使用者 token,也不自動執行 pip install。",
+          "倉庫內含二進位測試 fixture(.safetensors、.bin),用於測試且 README 有說明,使用者需注意這些是測試資料而非可執行檔。",
+          "本次未發現 curl|bash 安裝流程、npm 生命週期腳本、混淆程式碼或內嵌的長 base64 內容。",
+          "引擎含手寫 safetensors 解析器與 O_DIRECT 快取配置,專案已將其列入 SECURITY.md 範圍並以 ASan/UBSan 測試;載入不受信任的權重檔時仍宜留意。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質高、文件與測試紮實的系統級實作,對想理解大型 MoE 推論與記憶體串流的工程師很有參考價值;實際使用速度慢,適合研究學習而非生產部署。",
+      "_mode": "full"
+    }
+  },
+  "JiaFeiMiao-K-Cat/DiscImageStudio": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-05": [
+        6614,
+        1778,
+        12,
+        "",
+        "C#"
+      ]
+    },
+    "last_analyzed": "2026-11-05",
+    "analysis": {
+      "one_liner": "以任何 CD/DVD/單層藍光燒錄機,把圖片燒成光碟表面肉眼可見圖案的 C#/.NET 10 跨平台工具。",
+      "summary": "Disc Image Studio 把一張圖片轉換成符合 CD、DVD、單層 BD-R 物理層限制的資料(ISO / RAW / WAV+CUE),燒錄後光碟盤面會呈現肉眼可見的圖案。內含圖層設計、抖動與伽瑪調整、輔助標定(以盤面照片估算半徑與軌距)及即時串流燒錄(實驗性)。桌面版支援 Windows,Linux/macOS 提供實驗性 CLI。",
+      "category": "app",
+      "highlights": [
+        "題材原創:利用光碟資料編碼在盤面「畫」出圖像,涵蓋 CD、DVD 與單層 BD-R",
+        "輔助標定流程(粗標定/邊界/精細)可用盤面照片估算三次軌距參數,並附 Verbatim AZO 實拍教學與校準前後對照",
+        "架構分層清楚(Core/Cd/Dvd/BluRay/Iso/Burning/Cli 等多個專案),docs 下有 ARCHITECTURE、PHYSICAL_MODEL_AUDIT 等深入文件",
+        "tests 目錄下有 100 多個測試檔,涵蓋編碼、標定、UDF 檔案系統、燒錄流程等",
+        "README 提供七種語言,並有 build / release / MSIX 打包的 CI 工作流程"
+      ],
+      "use_cases": [
+        "在可報廢的空白 CD/DVD/BD-R 上製作肉眼可見圖案的藝術或收藏光碟",
+        "研究光碟物理層編碼、DVD 擾碼與 UDF 檔案系統實作",
+        "以 CLI 在 Linux/macOS 產生 ISO/RAW 鏡像,再交由其他燒錄軟體寫入",
+        "為新的光碟品牌建立標定預設並貢獻給專案"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件豐富且多語系,有架構、標定、發佈等專題說明;測試以自訂 ArchitectureTests 主控台專案執行,數量多且涵蓋面廣;最近一次推送為 2026-11-04,有 3 個 CI 工作流程,開發活躍。README 以簡體中文為主,PRIVACY.md 仍留有「發布前請替換聯絡方式」的待辦項目。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "PRIVACY.md 聲明應用不含網路通訊;在 .cs/.ps1/.yml/.props 中以 HttpClient、下載等關鍵字搜尋,僅在 SettingsViewModel.cs 找到兩處 Process.Start,用於開啟資料夾與專案網址,未見下載或遠端執行行為。",
+          "「即時燒錄」功能會直接對光碟機寫入,文件自身標示為實驗性並建議只用可報廢的空白盤片;使用者應留意此類寫入裝置的操作風險。",
+          "發佈版本為自帶 .NET 執行階段的預建執行檔,建議自行核對 Releases 來源,或從原始碼建置。",
+          "未發現 install-time 腳本、curl|bash 類安裝流程或混淆程式碼。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "題材獨特、工程紮實且文件與測試完整,對光碟或影像處理有興趣的人值得關注;實體燒錄需自行承擔風險。",
+      "_mode": "full"
+    }
+  },
+  "MichaelCade/90DaysOfDevOps": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-05": [
+        30421,
+        97,
+        13,
+        "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps, including Principles, Processes, Tooling and Use Cases surrounding this vast topic.",
+        "Shell"
+      ]
+    },
+    "last_analyzed": "2026-11-05",
+    "analysis": {
+      "one_liner": "由社群共同維護的 90 天 DevOps 學習地圖,涵蓋原則、流程、工具與 DevSecOps 實務。",
+      "summary": "90DaysOfDevOps 起初是 Michael Cade 在 2022 年以「公開學習」方式記錄 DevOps 基礎知識的專案,後來擴展為結構化的社群學習資源。內容分為 2022 DevOps 基礎(約 11 萬字)、2023 DevSecOps,以及 2024 社群版(91 場 YouTube 社群講座)。README 表示全部內容使用免費、社群與開源軟體,並非由廠商贊助。",
+      "category": "learning-resource",
+      "highlights": [
+        "三年累積的完整學習路線:DevOps 基礎、DevSecOps、社群版講座",
+        "約 11 萬字的原創內容,並由社群翻譯、校正與強化",
+        "91 場社群講座影片,提供多種媒介的學習方式",
+        "主題涵蓋 Kubernetes、Terraform、Ansible、容器、網路、備份等",
+        "README 表示不受廠商贊助,內容基於免費與開源工具"
+      ],
+      "use_cases": [
+        "DevOps 新手建立系統化的基礎知識與學習路線",
+        "AI/ML 工程師補強 CI/CD、容器、Kubernetes 與 IaC 技能",
+        "團隊內部訓練或讀書會的教材參考",
+        "學習 DevSecOps 與社群觀點的補充資源"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 1,
+        "activity": 3,
+        "comment": "資源彙整類,測試不適用。README 清楚說明專案背景與三個系列的入口,但章節細節需進入子頁面才能看到。最後推送為 2026-06,更新較不頻繁;今日趨勢僅 +97 星,屬長青型資源而非爆發性成長。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "知名度高(3 萬星)的 DevOps 長青學習資源,適合想系統補強 DevOps 基礎者收藏,但非新技術,不必急著投入。授權為 CC BY-NC-SA 4.0,商業使用需留意。",
+      "_mode": "light"
+    }
+  },
+  "Thysrael/Horizon": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-05": [
+        12491,
+        121,
+        15,
+        "📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-05",
+    "analysis": {
+      "one_liner": "以 AI 為核心的個人新聞雷達,自動聚合多來源、評分過濾並產出中英雙語每日簡報",
+      "summary": "Horizon 是 Python 專案,可從 RSS、Hacker News、Reddit、Telegram、X、GitHub、財經新聞等來源抓取內容。它依「profile」(評分標準加輸出格式)讓 LLM 分析、去重、補充背景與社群討論,再產生中英文 Markdown 簡報。成品可發佈到 GitHub Pages,也可透過 Email、微信、飛書或 webhook 推送,並提供 MCP 伺服器讓 AI 助理呼叫各階段。",
+      "category": "ai-ml",
+      "highlights": [
+        "Profile 機制:用 Markdown prompt 加 JSON 定義各類內容(科技新聞、工程文章、AI 創作者素材)的評分與輸出,通常不必改 Python",
+        "支援約十種來源,並有多種 LLM 後端(README 列出 Claude、GPT、Gemini、DeepSeek、Ollama 等),程式碼含 Azure、ChatGPT 登入等客戶端",
+        "內建 MCP 伺服器與 Agent Skill,可讓 AI 助理設定來源並執行管線",
+        "輸出管道完整:Markdown、Pages、Email、微信、webhook,並有 Dockerfile 與 docker-compose 部署",
+        "src/url_security.py 提供 SSRF 防護;tests/ 目錄下有大量依模組劃分的測試檔"
+      ],
+      "use_cases": [
+        "自建每日科技或 AI 新聞簡報,並推送到 Email、飛書或微信",
+        "追蹤特定領域(財經、工程部落格、AI 創作)時,用自訂 profile 過濾雜訊",
+        "讓 Claude 等 AI 助理透過 MCP 管理並執行新聞管線",
+        "作為多來源爬取加 LLM 評分去重的 pipeline 參考實作"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整:README 有英、中、日三語,docs/ 另有設定、評分、擴充器、profile 等專文。原始碼依 ai、scrapers、extractors、services、mcp、storage 分層,結構清楚。tests/ 內有大量針對各模組的測試檔(本次只看到檔名清單,未逐一檢視內容)。pushed_at 距今僅約兩天,並有 deploy-docs 工作流程。每日摘要的工作流程目前是 .disabled,且未看到獨立的測試 CI 設定,這是小缺點。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 以 COPY --from=ghcr.io/astral-sh/uv:latest 取得 uv,使用浮動的 latest 標籤而非固定版本;映像最後以非 root 使用者(uid 10001)執行",
+          "此工具需要設定多組 API 金鑰與憑證(LLM、Email、webhook、微信),另有 Twitter cookies 文件與 ChatGPT 登入流程(chatgpt_auth.py);使用時請妥善保管 .env 與 data/config.json",
+          "在 src/ 中搜尋 curl 管線、eval、exec、subprocess 與 base64,僅發現 base64 用於 PKCE 挑戰碼與微信 nonce,未見混淆程式碼或內嵌的長 base64 酬載",
+          "README 建議以 npx skills add Thysrael/Horizon --skill horizon -g 安裝 Agent Skill,屬於從外部套件來源安裝,使用者可先檢視內容再安裝",
+          "src/url_security.py 提供 SSRF 防護,會拒絕 localhost 與非公開網路位址,屬於正面的防護措施"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "架構成熟、文件與測試紮實、持續活躍的 AI 新聞聚合工具,對想自建每日簡報或研究 MCP 與 profile 化 LLM 管線的工程師很值得關注。",
+      "_mode": "full"
+    }
+  },
+  "scenario-labs/skills": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-05": [
+        2439,
+        224,
+        16,
+        "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-05",
+    "analysis": {
+      "one_liner": "Scenario 官方 Agent Skills 合集:讓 Claude Code、Codex 等 AI 代理透過 Scenario MCP 產出圖像、影片、音訊、3D,並附 Blender/Maya/ZBrush/Unreal/Unity/Godot/Roblox 專家技能組。",
+      "summary": "這是 Scenario 官方維護的 Agent Skills 倉庫,約 90 個遵循 agentskills.io 格式的技能,教 AI 代理選對模型、先估價再花費、保持角色與品牌一致,並透過 Scenario MCP 產生各類素材。另有一批「專家團隊」技能,直接驅動本機的 DCC 軟體與遊戲引擎(附 Python 腳本與離線/即時測試)。以 npx skills add 安裝。",
+      "category": "ai-ml",
+      "highlights": [
+        "涵蓋圖像、影片、音訊、3D、貼圖、天空盒、模型訓練等 90 餘個技能,並依角色/目標分組安裝(INSTALL.md)",
+        "專家技能組支援 Blender、Maya、ZBrush、Unreal、Unity、Godot、Roblox,含匯出預設、LOD、碰撞體、往返匯入驗證等實用腳本",
+        "工程化完整:release-please 自動發版、commitlint/husky、prettier、cspell、ruff、OpenSSF Scorecard、各引擎專屬 CI",
+        "提供釘選已審查版本的安裝方式(固定 commit 與 skills CLI 版本),利於供應鏈管控",
+        "tests/ 目錄含大量 pytest 與 node/vitest 測試,涵蓋多數技能腳本"
+      ],
+      "use_cases": [
+        "讓 Claude Code/Codex 透過 MCP 批次產出遊戲素材、精靈動畫與一致角色",
+        "用 AI 代理自動化 Blender/Unity/Unreal/Godot 的資產匯出與引擎整合流程",
+        "製作音樂影片、廣告、UGC 等影音內容的代理工作流",
+        "作為撰寫與驗證自家 Agent Skills 的結構與規範參考"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件完整(README、INSTALL、各家族 README 並記錄驗證程度),CI 工作流多達 11 個,測試涵蓋大量 Python 腳本與工具鏈檢查,但部分即時測試需要實際安裝 DCC/引擎。最後推送為 2026-11-05,維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "使用方式為 npx skills add 從 GitHub 拉取並安裝技能內容,技能由代理讀取後可能引導執行本機腳本,建議使用文件提供的釘選 commit 方式安裝並先審閱內容。",
+          "package.json 含 prepare: husky 生命週期腳本,僅用於開發者端的 git hook,屬常見做法,且套件標記為 private。",
+          "部分技能腳本(如 Unity 的 ut_live.eval、Maya 的 mel.eval)會在本機編輯器中執行程式碼片段,屬其驅動 DCC/引擎的設計用途。",
+          "技能需連線 Scenario MCP 並以 OAuth 或 API key 登入,使用者應妥善保管金鑰。",
+          "搜尋未發現 curl|bash、iwr|iex 管道安裝或內嵌長 base64 載荷。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "廠商級、工程規範嚴謹的技能庫;若你使用 Claude Code/Codex 做遊戲或創意內容生成,值得關注並按需挑選安裝。",
       "_mode": "full"
     }
   }

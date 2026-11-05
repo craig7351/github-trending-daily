@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-05",
+    "analyzed": 10,
+    "cached": 6,
+    "deferred": 0,
+    "top_name": "github/spec-kit",
+    "top_rating": 5
+  },
+  {
     "date": "2026-11-04",
     "analyzed": 3,
     "cached": 10,
