@@ -779,8 +779,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 3,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -971,6 +971,13 @@
         3,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-11-06": [
+        315232,
+        2071,
+        2,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -1012,8 +1019,8 @@
       "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 28,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 29,
+    "consecutive_days_on_trending": 4
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -3361,47 +3368,60 @@
   },
   "microsoft/VibeVoice": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
+    "last_seen": "2026-11-06",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
         51280,
         336
+      ],
+      "2026-11-06": [
+        55931,
+        223,
+        13,
+        "Open-Source Frontier Voice AI",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-07-30",
+    "last_analyzed": "2026-11-06",
     "analysis": {
+      "one_liner": "微軟開源的語音 AI 模型家族,涵蓋長音訊 ASR(含說話者與時間戳)、即時串流 TTS 與串流 ASR。",
+      "summary": "VibeVoice 是微軟推出的開源語音 AI 框架,核心是 7.5 Hz 的連續語音 tokenizer,搭配 LLM 與 next-token diffusion head。它提供可單次處理 60 分鐘音訊的 ASR(輸出誰、何時、說了什麼)、串流 ASR 與 0.5B 即時 TTS,並附有 vLLM 外掛、LoRA 微調程式碼與 Gradio、FastAPI、Web 範例。長篇多人 TTS 的程式碼因被濫用疑慮,已在 2025-09 從 repo 移除。",
       "category": "ai-ml",
-      "one_liner": "微軟開源的前沿語音 AI 家族,涵蓋長篇多語者 TTS、長音訊 ASR 與即時串流 TTS 三大模型。",
-      "summary": "VibeVoice 是微軟研究團隊開源的語音 AI 專案,核心技術是以 7.5Hz 超低幀率的連續語音 tokenizer 搭配 next-token diffusion 架構,讓 LLM 負責文字/對話理解、diffusion head 負責生成高保真聲音細節。專案內含三個模型線:可處理 60 分鐘長音訊、產出「誰在何時說了什麼」結構化逐字稿的 VibeVoice-ASR;可生成長達 90 分鐘、最多 4 位講者對話的 VibeVoice-TTS(注意:TTS 程式碼已因濫用疑慮從本倉庫移除,僅保留說明文件);以及 0.5B 參數、低延遲的即時串流 TTS 模型 VibeVoice-Realtime。",
       "highlights": [
-        "7.5Hz 超低幀率語音 tokenizer + next-token diffusion,兼顧長序列效率與音質",
-        "ASR 可單次處理 60 分鐘音訊並輸出講者分離、時間戳記的結構化逐字稿",
-        "已有搭配 vLLM 的推論外掛(vllm_plugin)與 LoRA 微調範例,方便落地整合",
-        "官方於 2025-09-05 已主動下架 TTS 原始碼,因為發現有濫用情形,展現對負責任 AI 的重視",
-        "Realtime 0.5B 模型首字延遲約 300ms,適合邊緣/低資源部署"
+        "ASR 可單次處理 60 分鐘長音訊,同時輸出說話者、時間戳與內容,並支援自訂熱詞,涵蓋 50 種以上語言",
+        "有串流 ASR、Realtime-0.5B 串流 TTS,以及 CPU 端 BitNet 量化版(VibeASR.cpp)",
+        "提供 vLLM 外掛(pyproject 註冊 entry point)、LoRA 微調程式碼,以及 Gradio、FastAPI、WebRTC 範例",
+        "ASR 已整合進 Hugging Face Transformers 與 Azure AI Foundry Labs",
+        "MIT 授權,文件齊全,各模型都有獨立說明文件與 Colab 或 Playground 可試用"
       ],
       "use_cases": [
-        "長時間會議/podcast 的自動逐字稿與講者分離(ASR)",
-        "需要即時語音回覆的互動應用(串流 TTS)",
-        "語音相關研究與模型微調(LoRA finetuning 範例已附上)",
-        "透過 vLLM 外掛將 ASR 模型部署為高吞吐推論服務"
+        "會議、訪談、Podcast 的長音訊轉錄,並做說話者分離與時間戳標註",
+        "建置即時語音助理或串流字幕系統",
+        "在邊緣裝置或無 GPU 環境以 BitNet CPU 版部署 ASR",
+        "針對特定領域對 ASR 做 LoRA 微調"
       ],
       "quality": {
-        "docs": 4,
-        "tests": 2,
-        "activity": 5,
-        "comment": "README 與 docs/ 目錄對三條模型線的說明都相當完整,核心程式碼(modeling_vibevoice.py、processor 等)有清楚的 docstring 與型別註記,可讀性佳;但自動化測試僅見於 vllm_plugin/tests 兩個檔案,核心 vibevoice 套件本身缺乏單元測試,且倉庫中找不到 CI workflow 設定。專案由微軟官方維護、更新頻繁(最近一次推送在 2026-07-24,並持續發布新聞與新模型),活躍度很高。"
+        "docs": 5,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 與 docs/ 下的各模型文件完整,並附有技術報告連結與多個 demo。測試集中在 tests/test_streaming_audio_inputs.py 與 vllm_plugin/tests/(API、串流、自動復原),核心模型程式碼的覆蓋有限。repo 內沒有 .github/workflows,未見 CI 設定。最後推送為 2026-10-08,近期持續有新模型發布。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "demo/download_experimental_voices.sh 會用 wget 從 github.com/user-attachments 下載 tar.gz 並直接解壓到本機目錄,內容未做雜湊驗證,執行前建議自行確認來源。",
+          "多處範例程式以 trust_remote_code=True 載入 Hugging Face 模型(如 demo/vibevoice_asr_gradio_demo.py、finetuning-asr),這會執行模型端的程式碼,建議只使用官方 microsoft 組織下的模型。",
+          "讀取 .pt 語音檔時使用 torch.load(..., weights_only=True),能降低 pickle 反序列化風險。",
+          "repo 內含 .pt 語音嵌入檔與示範 mp3、mp4 等二進位資料,屬於 demo 資源。",
+          "pyproject.toml 沒有 install-time 腳本,依賴名稱皆為常見套件,未發現混淆程式碼或內嵌的長 base64 內容。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "微軟官方出品、技術報告扎實且持續更新,語音 ASR/TTS 研究者或想做長音訊應用的工程師值得關注,但正式落地前建議自行補強測試與評估。",
+      "verdict": "微軟官方維護的高品質開源語音 AI 專案,ASR 長音訊能力與周邊工具(vLLM、微調、CPU 版)很完整,做語音相關研發值得持續關注。不過長篇 TTS 程式碼已被移除,repo 也沒有 CI。",
       "_mode": "full"
     },
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "consecutive_days_on_trending": 1
   },
   "different-ai/openwork": {
@@ -6829,10 +6849,10 @@
   },
   "google/skills": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-10-03",
+    "last_seen": "2026-11-06",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-09": [
         16924,
@@ -6854,45 +6874,51 @@
         11,
         "Agent Skills for Google products and technologies",
         "Python"
+      ],
+      "2026-11-06": [
+        22371,
+        211,
+        9,
+        "Agent Skills for Google products and technologies",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-10-03",
+    "last_analyzed": "2026-11-06",
     "analysis": {
-      "one_liner": "Google 官方的 Agent Skills 集合,涵蓋 Google Cloud、GKE、BigQuery、Gemini、Ads 等產品,可用 npx skills add 一鍵安裝。",
-      "summary": "google/skills 是 Google 維護的 Agent Skills(SKILL.md 格式)倉庫,內含數百個針對 Google 產品與技術的技能,包括 GKE 疑難排解、BigQuery 最佳化、Gemini/Agent Platform、Genkit、Well-Architected Framework、Google Ads API 與行動廣告 SDK 等。它解決的是 AI 編碼代理對 gcloud 語法與 Google 產品細節容易過時或幻覺的問題,提供經過驗證的流程、參考文件與輔助腳本。另提供 Claude、Codex、Gemini CLI 的 plugin 與 marketplace 設定。",
       "category": "ai-ml",
+      "one_liner": "Google 官方的 Agent Skills 集合,涵蓋 Google Cloud、GKE、BigQuery、Ads、SecOps 等上百項產品技能,可讓 Claude Code、Codex 等 AI 代理直接載入。",
+      "summary": "google/skills 是 Google 官方維護的 Agent Skills 倉庫,每個技能由 SKILL.md、references 文件與部分輔助 Python/Shell 腳本組成,讓 AI 代理能正確操作 Google 產品,減少 gcloud 指令與 API 的幻覺。可透過 `npx skills add google/skills` 安裝,也提供 Claude Code、Codex、Antigravity 的 plugin marketplace 設定。",
       "highlights": [
-        "官方出品,涵蓋雲端、資料庫、GKE、AI/ML、廣告等數百個技能,分類清楚",
-        "支援多代理生態:有 .claude-plugin、.codex-plugin、gemini-extension 與 marketplace.json",
-        "gcloud 技能強制先執行 gcloud help 驗證葉層指令語法,並保留使用者旗標,可降低幻覺與誤操作",
-        "許多技能附帶 Python/Shell 輔助腳本,部分腳本附有單元測試(*_test.py),例如 alert-configuration、monitoring chart 生成",
-        "透過 skills.sh 的 npx skills add google/skills 即可選擇性安裝個別技能"
+        "涵蓋範圍極廣:GKE、BigQuery、Spanner、Cloud Run、Gemini/Agent Platform、SecOps、Ads SDK、Well-Architected Framework 等上百個技能",
+        "gcloud 技能內建防護:強制先執行 `gcloud help <leaf>` 驗證語法、強制 --dry-run、--quiet 與資料縮減旗標,並列出禁止自動執行的危險指令清單(IAM、delete、billing、kms 等)",
+        "同時提供 Claude Code(.claude-plugin)、Codex、Antigravity 的 plugin marketplace 與 MCP 設定,跨代理工具相容",
+        "許多技能附帶輔助腳本與對應單元測試(如 agent-platform-alert-configuration、assuredworkloads-frameworks-navigator)",
+        "Apache-2.0 授權,Google 官方背書,上榜首日即約 22k stars"
       ],
       "use_cases": [
-        "讓 Claude Code、Codex、Gemini CLI 等代理更準確地操作 GCP(gcloud、GKE、BigQuery)",
-        "團隊建立內部雲端維運代理時,參考官方技能的結構與撰寫方式",
-        "GKE/BigQuery 疑難排解與成本最佳化的標準化流程",
-        "學習如何設計高品質的 SKILL.md 與 plugin 結構"
+        "讓 Claude Code 或其他代理在 GCP 上安全地產生與執行 gcloud 指令",
+        "建立 GKE / BigQuery / Cloud SQL 的營運、疑難排解與成本優化自動化流程",
+        "參考 Google 官方 SKILL.md 寫法,設計自家企業的 Agent Skills",
+        "在 SecOps 或 IAM 場景中以代理輔助告警分流、威脅獵捕與權限診斷"
       ],
       "quality": {
         "docs": 4,
         "tests": 3,
         "activity": 5,
-        "comment": "內容以 Markdown 技能為主,README 有完整分類索引與安裝說明,另有 CONTRIBUTING.md。部分 Python 腳本附單元測試,但測試覆蓋不均,多數技能無測試。本次檢視未在倉庫中找到 .github/workflows 的 CI 設定。最近推送為 2026-10-02,維護活躍。"
+        "comment": "README 有完整技能索引、安裝與更新說明,各技能文件結構一致且內容紮實(gcloud SKILL.md 規則明確)。部分腳本有 *_test.py,但並非全面覆蓋;CI 僅見連結檢查(link-checker)工作流,沒有測試的 CI。最近仍持續推送,更新頻繁。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "主要安裝方式為 npx skills add google/skills,會透過 npm 生態系的第三方工具下載技能,建議使用前先確認來源。",
-          "plugins/cloud/google-cloud-developer/.mcp.json 設定了遠端 MCP 伺服器 https://developerknowledge.googleapis.com/mcp,並需要自行提供環境變數 DEVELOPERKNOWLEDGE_API_KEY,屬於 Google 官方網域。",
-          ".gitmodules 引用多個外部子模組(gemini-cli-extensions、GoogleCloudPlatform 組織下的倉庫),內容不在本倉庫中,需另行檢視。",
-          "skills 目錄內含 Python 與 Shell 輔助腳本(如 config_gcloud_cli.sh、bulk_translate_via_gcloud.py),會呼叫 gcloud 等工具操作雲端資源,執行前應確認專案與權限範圍。",
-          "技能被代理載入後可能引導代理執行 gcloud 等會變更雲端資源的指令,建議在權限受限的帳號下使用,並搭配 --dry-run 或人工確認。",
-          "本次檢視未發現 curl | bash、混淆程式碼、內嵌長 base64 載荷或 npm 生命週期腳本。"
+          "技能目錄中含有多個 Shell 與 Python 腳本(如 apigee-agent-gateway-governance 的 deploy_proxy.sh、teardown_vector_search.sh),會呼叫 gcloud 並對 GCP 資源進行部署或移除;代理執行前建議先檢視內容並確認專案與權限範圍",
+          "plugin 的 .mcp.json 會連線至 https://developerknowledge.googleapis.com/mcp,並從環境變數 DEVELOPERKNOWLEDGE_API_KEY 讀取 API 金鑰,屬 Google 官方網域;使用者需自行管理該金鑰",
+          "產生 .gitmodules 引用多個 GoogleCloudPlatform 組織下的外部 plugin 子模組,拉取子模組時會引入其他倉庫內容,需另行信任評估",
+          "安裝方式為 `npx skills add google/skills`,會透過 npm 下載並執行第三方 CLI 工具(skills),屬常見做法,使用者應知悉",
+          "未發現混淆程式碼、內嵌大型 base64 內容或 install-time 生命週期腳本"
         ]
       },
       "star_rating": 4,
-      "verdict": "想讓 AI 代理穩定操作 Google Cloud 的人很值得關注,也是學習 SKILL.md 與 plugin 設計的官方範本;若不使用 GCP 則參考價值較有限。",
+      "verdict": "Google 官方出品、內容量大且品質整齊的 Agent Skills 資源庫,對使用 GCP 搭配 AI 代理的工程師很值得收藏;gcloud 防護規則更是可借鏡的範本。",
       "_mode": "full"
     }
   },
@@ -14136,10 +14162,10 @@
   },
   "ConardLi/garden-skills": {
     "first_seen": "2026-08-27",
-    "last_seen": "2026-08-28",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-27": [
         10924,
@@ -14154,33 +14180,51 @@
         11,
         "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
         "CSS"
+      ],
+      "2026-11-06": [
+        14131,
+        175,
+        12,
+        "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-08-27",
+    "last_analyzed": "2026-11-06",
     "analysis": {
-      "one_liner": "test",
-      "summary": "test",
+      "one_liner": "ConardLi 的 Agent Skills 精選集,涵蓋網頁設計、程式碼渲染影片、GPT Image 2 生圖、知識庫檢索等 6 個 SKILL.md 技能。",
+      "summary": "Garden Skills 是一組相容 Claude Code、Cursor、Codex 等代理工具的 SKILL.md 技能集合,包含 motion-showreel、web-video-presentation、web-design-engineer、gpt-image-2、beautiful-article、kb-retriever。每個技能附 manifest.json,並以腳本自動打包版本、發佈 zip,也支援 Claude Code plugin marketplace 與 npx skills 安裝。",
       "category": "ai-ml",
       "highlights": [
-        "a",
-        "b"
+        "6 個完整技能,各有獨立 README、SKILL.md 與 manifest 版本管理,文件提供英文、簡中、日文三種語言",
+        "motion-showreel:以確定性 render(t) 逐幀擷取產生 MP4,內建 43 種風格庫,音畫共用同一條時間軸",
+        "web-video-presentation:Vite+React+TS 腳手架,內建 23 套主題與可插拔 TTS(MiniMax、OpenAI)",
+        "gpt-image-2:提供 generate/edit 腳本與案例網站,收錄大量提示詞案例",
+        "CI 會驗證 manifest、試打包與 README 同步,並提供 release 腳本"
       ],
       "use_cases": [
-        "a",
-        "b"
+        "讓 Claude Code / Cursor 產出更精緻的網頁、簡報與儀表板前端",
+        "用程式碼自動產生帶旁白與音樂的短影片或產品動畫",
+        "透過 GPT Image 2 批次生圖與編輯,並參考提示詞案例庫",
+        "作為撰寫自家 Agent Skill 的結構與工作流範本"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 4,
-        "comment": "test"
+        "comment": "文件相當完整且多語系,結構與發佈流程規整。測試僅有 CI 的 manifest 驗證與試打包,沒有針對各技能腳本的單元測試。最後推送於 2026-10-25,持續維護,並設有 release 工作流程。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "根目錄 package.json 僅含維護者用的 release / validate 腳本,未發現 preinstall、postinstall、prepare 等生命週期腳本。",
+          "motion-showreel/scripts/setup.sh 由使用者手動執行,會呼叫 npm install(playwright、tone)並執行 npx --yes playwright install chromium 下載瀏覽器,使用者執行前應知悉。",
+          "gpt-image-2 的 shared.js 會讀取工作目錄的 .env、.gateway.env 與家目錄的 ~/.gateway.env 來載入環境變數(用於 API 金鑰),使用時請留意這些檔案內容。",
+          "web-video-presentation 的 TTS 腳本會呼叫 OpenAI 或 MiniMax 等外部服務,需要使用者自備金鑰,並會把旁白文字送往這些服務。",
+          "在檢視的檔案中未發現 curl|bash、混淆程式碼或內嵌的長 base64 內容;dist/ 內為圖片與提示詞檔案。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "test",
+      "verdict": "品質整齊、技能實用且文件完整的 Agent Skills 合集,對使用 Claude Code / Cursor 做前端、影片與生圖的工程師值得收藏。主要不足是缺少腳本層級的自動化測試。",
       "_mode": "full"
     }
   },
@@ -20119,10 +20163,10 @@
   },
   "max-sixty/worktrunk": {
     "first_seen": "2026-09-13",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-13": [
         7236,
@@ -20149,6 +20193,13 @@
         11037,
         531,
         2,
+        "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+        "Rust"
+      ],
+      "2026-11-06": [
+        11515,
+        546,
+        7,
         "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
         "Rust"
       ]
@@ -25944,10 +25995,10 @@
   },
   "garrytan/gstack": {
     "first_seen": "2026-10-05",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-10-05": [
         135164,
@@ -25960,6 +26011,13 @@
         139343,
         290,
         10,
+        "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+        "TypeScript"
+      ],
+      "2026-11-06": [
+        139943,
+        612,
+        3,
         "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
         "TypeScript"
       ]
@@ -30159,10 +30217,10 @@
   },
   "vercel-labs/agent-desktop": {
     "first_seen": "2026-11-03",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-03": [
         9696,
@@ -30181,6 +30239,13 @@
       "2026-11-05": [
         15106,
         2470,
+        6,
+        "Computer use CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-06": [
+        16853,
+        2173,
         6,
         "Computer use CLI for AI agents",
         "Rust"
@@ -30225,10 +30290,10 @@
   },
   "D4Vinci/Scrapling": {
     "first_seen": "2026-11-03",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-03": [
         92866,
@@ -30248,6 +30313,13 @@
         96544,
         2005,
         14,
+        "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
+        "Python"
+      ],
+      "2026-11-06": [
+        97982,
+        1655,
+        5,
         "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
         "Python"
       ]
@@ -30398,10 +30470,10 @@
   },
   "floci-io/floci": {
     "first_seen": "2026-11-04",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-04": [
         28781,
@@ -30414,6 +30486,13 @@
         29624,
         1090,
         4,
+        "Light, fluffy, and always free - The AWS Local Emulator alternative",
+        "Java"
+      ],
+      "2026-11-06": [
+        30410,
+        779,
+        14,
         "Light, fluffy, and always free - The AWS Local Emulator alternative",
         "Java"
       ]
@@ -30459,15 +30538,22 @@
   },
   "Usagi-org/ai-goofish-monitor": {
     "first_seen": "2026-11-04",
-    "last_seen": "2026-11-04",
+    "last_seen": "2026-11-06",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-04": [
         16371,
         228,
         9,
+        "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+        "Python"
+      ],
+      "2026-11-06": [
+        17533,
+        240,
+        4,
         "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
         "Python"
       ]
@@ -30514,14 +30600,21 @@
   },
   "NVIDIA/auto-ontology": {
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-05": [
         5010,
         2050,
+        1,
+        "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+        "Python"
+      ],
+      "2026-11-06": [
+        7336,
+        2679,
         1,
         "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
         "Python"
@@ -30674,15 +30767,22 @@
   },
   "JiaFeiMiao-K-Cat/DiscImageStudio": {
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-05": [
         6614,
         1778,
         12,
+        "",
+        "C#"
+      ],
+      "2026-11-06": [
+        7269,
+        984,
+        15,
         "",
         "C#"
       ]
@@ -30829,15 +30929,22 @@
   },
   "scenario-labs/skills": {
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-05",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-06",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-05": [
         2439,
         224,
         16,
+        "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+        "Python"
+      ],
+      "2026-11-06": [
+        3058,
+        667,
+        11,
         "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
         "Python"
       ]
@@ -30878,6 +30985,108 @@
       },
       "star_rating": 4,
       "verdict": "廠商級、工程規範嚴謹的技能庫;若你使用 Claude Code/Codex 做遊戲或創意內容生成,值得關注並按需挑選安裝。",
+      "_mode": "full"
+    }
+  },
+  "lz4/lz4": {
+    "first_seen": "2026-11-06",
+    "last_seen": "2026-11-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-06": [
+        12384,
+        23,
+        8,
+        "Extremely Fast Compression algorithm",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-11-06",
+    "analysis": {
+      "one_liner": "極速無損壓縮演算法 LZ4 的官方 C 語言參考實作,包含函式庫與命令列工具。",
+      "summary": "LZ4 是由 Yann Collet 開發的無損壓縮演算法,README 宣稱每核心壓縮速度超過 500 MB/s,解壓縮可達數 GB/s。本倉庫提供符合 C90 的函式庫(lz4、lz4hc、lz4frame、lz4file)與 `lz4` CLI,支援字典壓縮與高壓縮比的 LZ4_HC 模式,並提供 Make、CMake、Meson、Visual Studio 等建置方式。",
+      "category": "library",
+      "highlights": [
+        "README 列出的 Silesia 基準:預設模式壓縮約 770 MB/s、解壓縮約 4950 MB/s,速度與壓縮比取得良好平衡",
+        "提供 acceleration 參數與 LZ4_HC 高壓縮模式,各模式解壓縮速度相同",
+        "支援字典壓縮(API 與 CLI 的 -D 選項),適合小檔案場景",
+        "tests/ 依類別分層(unit、fuzz、cli、compat、bench),CI 含 OSS-Fuzz、sanitizer、跨平台與多編譯器測試",
+        "建置系統完整(Make、CMake、Meson、VS2022);函式庫為 BSD-2,CLI 為 GPL-2.0 以上"
+      ],
+      "use_cases": [
+        "在資料庫、日誌、網路傳輸或儲存系統中加入低延遲壓縮",
+        "AI 或資料管線中壓縮大量中間資料與快取(例如序列化後的張量、特徵)",
+        "嵌入式或需要 C90 相容、無外部相依的專案",
+        "作為 LZ4 區塊與框架格式的參考實作,用於驗證其他語言的移植版"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "專案成熟且維護積極。README、格式規格文件(doc/)、API 標頭註解與 NEWS 齊備。CI 涵蓋多編譯器、跨平台、sanitizer、CMake、FreeBSD、OSS-Fuzz 與 Scorecard。核心原始碼有清楚的調校參數說明,並有 CODING_STYLE 與 AGENTS.md 規範貢獻流程。最後推送時間為 2026-11-06。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "這是業界廣泛使用的基礎壓縮函式庫,品質與維護度都很高,需要高速壓縮時值得優先考慮;對一般開發者而言屬於「知道並會用」的必備工具,而非新奇專案。",
+      "_mode": "full"
+    }
+  },
+  "vercel-labs/agent-browser": {
+    "first_seen": "2026-11-06",
+    "last_seen": "2026-11-06",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-06": [
+        45886,
+        150,
+        10,
+        "Browser automation CLI for AI agents",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-06",
+    "analysis": {
+      "one_liner": "Vercel Labs 推出的 Rust 原生瀏覽器自動化 CLI,讓 AI agent 以 accessibility tree 加 @ref 逐步操作網頁。",
+      "summary": "agent-browser 是以 Rust 撰寫的命令列工具,背景 daemon 透過 Chrome DevTools Protocol 控制瀏覽器。`snapshot` 會把頁面輸出成精簡文字並為每個元素附上 ref(如 @e1),agent 再用 click、fill 等短指令操作,並重新讀取頁面確認結果。它解決 AI agent 驅動瀏覽器時流程繁瑣、token 成本高的問題,並提供 MCP server、內建 skills,以及多種雲端瀏覽器供應商支援。",
+      "category": "ai-ml",
+      "highlights": [
+        "原生 Rust CLI 搭配常駐 daemon,瀏覽器在指令之間保持開啟,每一步只需一次簡短的 shell 呼叫",
+        "以 accessibility tree 快照加 @ref 的方式操作元素,對 LLM 友善且節省 token",
+        "指令涵蓋廣:導覽、互動、截圖/錄影、網路攔截、trace/profiler、session 與 auth vault、a11y 檢查",
+        "支援 Chrome for Testing、Lightpanda、Obscura、iOS Simulator,以及 Browserbase、Browserless、Kernel 等雲端供應商",
+        "內建 `agent-browser mcp` MCP server 與版本相符的 `skills get core`,可直接整合各種 agent harness"
+      ],
+      "use_cases": [
+        "讓 Claude Code、Cursor 等 coding agent 以 shell 指令操作網頁並驗證前端結果",
+        "AI agent 的網頁資料擷取、表單填寫與端到端流程自動化",
+        "在 Vercel Sandbox 或 CI 中執行無頭瀏覽器測試與除錯(console、network、trace)",
+        "透過 MCP 把瀏覽器能力提供給支援 MCP 的 AI 用戶端"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 結構清楚,涵蓋安裝、快速上手、運作原理、指令總覽與開發流程,並有獨立文件站、CHANGELOG 與 AGENTS.md。Rust 原始碼內有大量單元測試(例如 commands.rs 約 330 個、flags.rs 約 115 個),另有需要真實 Chrome 的 e2e 測試與 Node launcher 測試。有 ci.yml 與 release.yml,最後推送為 2026-11-06,版本 0.41.2,維護活躍。抽樣的 browser_security.rs 寫法嚴謹,有逾時、回應大小上限與 https_only 限制。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 含 postinstall 腳本(node scripts/postinstall.js),安裝時會從 GitHub Releases(github.com/vercel-labs/agent-browser/releases/download/v<版本>/)下載對應平台的預編譯原生執行檔,使用者應留意安裝時會有網路下載與執行檔落地的行為",
+          "首次使用需執行 `agent-browser install` 下載 Chrome for Testing,屬於額外的外部下載",
+          "工具本身可控制瀏覽器並提供 eval、cookies、storage、auth vault 等能力,若交給 AI agent 使用,建議搭配文件所述的網域白名單與 action policy 等限制",
+          "cli/src/native/a11y/axe.min.js 為壓縮檔,附有 axe-core 的 LICENSE,屬第三方函式庫",
+          "bin/agent-browser.js 僅為啟動器,以 spawn 執行對應平台的原生二進位檔,未見混淆程式碼或硬編碼可疑網域"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對需要讓 AI agent 操作瀏覽器的開發者很值得關注:官方團隊維護、更新頻繁、設計貼近 agent 使用情境,安裝時的二進位下載行為屬常見做法。",
       "_mode": "full"
     }
   }
