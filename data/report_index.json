@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-07",
+    "analyzed": 10,
+    "cached": 3,
+    "deferred": 4,
+    "top_name": "zed-industries/zed",
+    "top_rating": 5
+  },
+  {
     "date": "2026-11-06",
     "analyzed": 5,
     "cached": 10,

@@ -779,8 +779,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-11-06",
-    "days_on_trending": 4,
+    "last_seen": "2026-11-07",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -978,6 +978,13 @@
         2,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-11-07": [
+        316720,
+        2070,
+        15,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -1019,8 +1026,8 @@
       "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 29,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 30,
+    "consecutive_days_on_trending": 5
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -5876,10 +5883,10 @@
   },
   "angular/angular": {
     "first_seen": "2026-08-05",
-    "last_seen": "2026-08-05",
+    "last_seen": "2026-11-07",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-05": [
         100827,
@@ -5887,37 +5894,48 @@
         14,
         "Deliver web apps with confidence 🚀",
         "TypeScript"
+      ],
+      "2026-11-07": [
+        101361,
+        135,
+        7,
+        "Deliver web apps with confidence 🚀",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-05",
+    "last_analyzed": "2026-11-07",
     "analysis": {
-      "one_liner": "Google 官方維護的現代化前端開發平台,用 TypeScript 打造可擴展的 Web/行動應用",
-      "summary": "Angular 是一套完整的前端開發平台,涵蓋元件化架構、表單、路由、SSR、動畫等企業級功能,並搭配 CLI 與 Angular Material 生態系。此次登上 Trending 屬於長青專案的日常熱度波動,而非新專案爆紅。",
+      "one_liner": "Google 主導的 TypeScript 全功能前端框架,提供元件、路由、表單、SSR 與 CLI 的完整 Web 應用開發平台。",
+      "summary": "Angular 是以 TypeScript 打造的開發平台,用來建構行動與桌面 Web 應用。它內建元件與模板、表單、路由、動畫、SSR、Angular Elements 與 Schematics,並搭配 Angular CLI 與 Angular Material 形成完整生態,適合中大型、需長期維護的專案。",
       "category": "framework",
       "highlights": [
-        "官方文件完善,提供 Quickstart、Architecture、Forms、API 等分類清晰的教學連結",
-        "生態系成熟,涵蓋 CLI、Angular Material、Schematics、SSR、Lazy Loading 等進階功能",
-        "10 萬+ star 的長青專案,由 Google 團隊持續維護,最近一次 push 在今天",
-        "支援 Angular Elements、動畫、伺服器端渲染等企業級開發需求"
+        "全功能框架:元件、表單、路由、動畫、SSR、延遲載入皆為官方內建",
+        "Angular CLI 以 ng new / ng serve 快速建立與執行專案",
+        "官方文件站 angular.dev 含互動式教學與升級指南",
+        "生態完整,有 Angular Material 與 Schematics 擴充機制",
+        "MIT 授權,10 萬以上星數,近期仍持續推送"
       ],
       "use_cases": [
-        "建立大型企業級 SPA 或 PWA 應用",
-        "需要官方長期支援與完整生態系(表單、路由、SSR)的專案",
-        "團隊已有 TypeScript 基礎,想要有明確架構規範的前端框架",
-        "透過 Angular CLI 快速建立可擴展的專案骨架"
+        "企業級大型 SPA 與後台管理系統開發",
+        "需要 SSR 與效能優化的 Web 應用",
+        "團隊要求統一架構與嚴謹 TypeScript 型別的前端專案",
+        "為 AI 應用建構前端儀表板與管理介面"
       ],
       "quality": {
-        "docs": 4,
+        "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 文件結構清晰,連結導向官方 angular.dev 完整文件,但本身 README 內容較精簡,未展示測試涵蓋率等資訊;僅依 README 評估,無法看到原始碼品質。作為超過 10 萬星、持續每日更新的專案,活躍度極高。"
+        "comment": "README 結構清楚,涵蓋入門、進階、貢獻與社群資源,並連結完整官方文件。測試品質僅憑 README 無法評估。最近推送為 2026-11-06,維護非常活躍,今日上榜為既有大型專案的常態熱度。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝方式為 npm install -g @angular/cli,屬標準 npm 套件安裝,未見 curl | bash 之類的做法",
+          "僅依 README 評估,未進行原始碼層級的審查"
+        ]
       },
       "star_rating": 4,
-      "verdict": "Angular 是業界標準的前端框架之一,文件與生態系成熟,若尚未熟悉可列入學習清單,但對已知曉此框架的工程師來說並非需要立即關注的新資訊。",
+      "verdict": "成熟且活躍的主流前端框架,若有企業級前端需求或需要了解 Angular 生態,值得持續關注;對一般 AI 研發而言屬於選用工具,並非必看。",
       "_mode": "light"
     }
   },
@@ -6849,10 +6867,10 @@
   },
   "google/skills": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-11-06",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-07",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-09": [
         16924,
@@ -6879,6 +6897,13 @@
         22371,
         211,
         9,
+        "Agent Skills for Google products and technologies",
+        "Python"
+      ],
+      "2026-11-07": [
+        22838,
+        534,
+        10,
         "Agent Skills for Google products and technologies",
         "Python"
       ]
@@ -21134,10 +21159,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-10-26",
-    "days_on_trending": 6,
-    "consecutive_days_on_trending": 6,
-    "total_days_on_trending": 12,
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 13,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -21220,6 +21245,13 @@
         46917,
         2878,
         10,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
+      ],
+      "2026-11-07": [
+        64017,
+        2548,
+        16,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
       ]
@@ -24260,10 +24292,10 @@
   },
   "microsoft/vscode": {
     "first_seen": "2026-09-27",
-    "last_seen": "2026-09-27",
+    "last_seen": "2026-11-07",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-27": [
         193074,
@@ -24271,38 +24303,48 @@
         9,
         "Visual Studio Code",
         "TypeScript"
+      ],
+      "2026-11-07": [
+        195024,
+        301,
+        11,
+        "Visual Studio Code",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-27",
+    "last_analyzed": "2026-11-07",
     "analysis": {
+      "one_liner": "微軟開源的 Visual Studio Code(Code - OSS)主體儲存庫,以 TypeScript 與 Electron 打造的跨平台程式碼編輯器。",
+      "summary": "此儲存庫是 VS Code 產品的開源開發主庫(Code - OSS),採 MIT 授權,微軟與社群在此共同開發程式碼、處理 issue,並公開 roadmap 與每月迭代計畫。它結合輕量編輯器與編輯、建置、除錯循環所需功能,並提供豐富的擴充模型。",
       "category": "devtool",
-      "one_liner": "微軟開源的程式碼編輯器 VS Code(Code - OSS)原始碼庫,全球最主流的開發工具之一。",
-      "summary": "這是 Visual Studio Code 的開源核心「Code - OSS」倉庫,由 Microsoft 與社群共同開發。README 主要說明專案定位、貢獻方式、開發容器設定與相關資源連結,而非技術實作細節,因為此專案本身即是廣為人知的成熟產品。",
       "highlights": [
-        "長期由 Microsoft 官方維護,近 20 萬顆星,是目前最受歡迎的程式碼編輯器之一",
-        "提供完整的貢獻指南、開發容器(Dev Containers/Codespaces)與建置流程說明",
-        "採用 MIT 授權,原始碼完全開放",
-        "今日登上 GitHub trending 第 9 名,單日新增 95 顆星,顯示持續高關注度",
-        "內建豐富的擴充套件系統與語言支援(如 json-language-features)"
+        "MIT 授權的 Code - OSS,為 VS Code 官方發行版的上游原始碼",
+        "每月釋出更新,並提供每日更新的 Insiders 版本",
+        "內建多語言語法與語言功能擴充(extensions 資料夾)",
+        "提供 Dev Container 與 Codespaces 開發環境,便於從原始碼建置",
+        "公開 roadmap、迭代計畫與貢獻指南,社群參與管道完整"
       ],
       "use_cases": [
-        "作為日常開發的程式碼編輯器使用",
-        "研究大型 TypeScript/Electron 專案的架構與工程實踐",
-        "參與開源貢獻,學習大型專案的協作流程與程式碼規範",
-        "透過 Dev Container 快速建立一致的開發環境"
+        "研究大型 Electron/TypeScript 編輯器的架構與實作",
+        "開發 VS Code 擴充功能前參考核心 API 與內建擴充",
+        "基於 Code - OSS 打造自訂 IDE 或雲端編輯器",
+        "向上游貢獻修補、回報問題或參與翻譯"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 文件結構清晰,涵蓋貢獻方式、回饋管道、相關專案與開發容器設定,但本身偏向專案入口導覽而非技術深入說明;測試品質僅能依 README 判斷,無法看到實際程式碼與測試涵蓋率。最後推送時間為 2026-09-27,近乎每日更新,活躍度極高。"
+        "comment": "README 結構清楚,涵蓋貢獻、回饋、相關專案與開發容器,細節則交由 wiki。測試僅憑 README 評估,無法檢視程式碼。最後推送為 2026-11-07,維護極為活躍。"
       },
       "security": {
         "risk_level": "none",
-        "findings": []
+        "findings": [
+          "README 未包含 curl | bash 等安裝指令,僅指向官方下載頁與 Dev Container 流程;未進行原始碼層級審查。",
+          "README 說明官方 VS Code 發行版採微軟產品授權,與 MIT 授權的 Code - OSS 不同,使用時請留意授權差異。"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "身為全球最主流的開源編輯器核心,技術價值與社群影響力毋庸置疑,絕對值得持續關注。",
+      "star_rating": 4,
+      "verdict": "全球最主流的開源編輯器上游專案,雖已是眾所周知,但對擴充開發與自製 IDE 的工程師仍極具參考價值。",
       "_mode": "light"
     }
   },
@@ -27135,10 +27177,10 @@
   },
   "rust-lang/rust": {
     "first_seen": "2026-10-15",
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-11-07",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-10-15": [
         120035,
@@ -27146,40 +27188,45 @@
         9,
         "Empowering everyone to build reliable and efficient software.",
         "Rust"
+      ],
+      "2026-11-07": [
+        121450,
+        192,
+        5,
+        "Empowering everyone to build reliable and efficient software.",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-10-15",
+    "last_analyzed": "2026-11-07",
     "analysis": {
-      "one_liner": "Rust 程式語言的官方主倉庫,包含編譯器、標準函式庫與文件,主打效能、可靠性與生產力。",
-      "summary": "rust-lang/rust 是 Rust 語言的核心原始碼倉庫,涵蓋 rustc 編譯器、標準函式庫與官方文件。Rust 透過所有權模型與型別系統,在編譯期保證記憶體與執行緒安全,同時維持接近 C/C++ 的效能。",
+      "one_liner": "Rust 程式語言的官方主倉庫,包含編譯器、標準函式庫與文件,主打安全、效能與生產力。",
+      "summary": "這是 Rust 語言的核心原始碼倉庫,內含 rustc 編譯器、標準函式庫與官方文件。透過所有權模型與型別系統,在編譯期保證記憶體與執行緒安全,同時維持接近 C/C++ 的效能。配套工具鏈包含 Cargo、rustfmt、Clippy 與 rust-analyzer。",
       "category": "framework",
       "highlights": [
-        "以所有權與型別系統在編譯期確保記憶體與執行緒安全",
-        "具備 Cargo、rustfmt、Clippy、rust-analyzer 等完整工具鏈",
+        "編譯期記憶體與執行緒安全,透過所有權模型降低執行期錯誤",
+        "高效能且記憶體用量低,適用於關鍵服務與嵌入式裝置",
+        "完整工具鏈:Cargo、rustfmt、Clippy、rust-analyzer",
         "編譯器診斷訊息友善,文件完整(The Book、rustc-dev-guide)",
-        "適用於關鍵服務、嵌入式裝置,並易與其他語言整合",
-        "採 MIT/Apache-2.0 雙授權,由 Rust Foundation 保護商標,社群治理成熟"
+        "擁有龐大社群與 Rust Foundation 治理,星數超過 12 萬"
       ],
       "use_cases": [
-        "開發高效能且安全的系統軟體、後端服務與嵌入式應用",
-        "為 AI/ML 專案撰寫高效能推論元件或 Python 擴充模組",
-        "研究編譯器架構並參與 rustc 貢獻",
-        "作為學習系統程式設計與記憶體安全概念的起點"
+        "開發系統層級軟體、高效能服務與嵌入式程式",
+        "為 AI/ML 基礎設施撰寫安全高效的推論或資料處理元件(如 Python 擴充)",
+        "學習編譯器架構並參與 rustc 貢獻",
+        "以 Rust 重寫既有 C/C++ 元件以提升記憶體安全"
       ],
       "quality": {
         "docs": 5,
         "tests": 2,
         "activity": 5,
-        "comment": "README 簡潔清楚,並指向 The Book、rustc-dev-guide、INSTALL 與 CONTRIBUTING 等完整資源。測試部分僅憑 README 判斷,無法檢視程式碼。最後推送時間為近日,維護極為活躍。"
+        "comment": "README 簡潔清楚,並導向 The Book、CONTRIBUTING 與 rustc-dev-guide 等完整文件。測試部分僅依 README 評估,無法檢視程式碼。最近一次推送在 2026-11-07,維護極為活躍。"
       },
       "security": {
         "risk_level": "none",
-        "findings": [
-          "README 建議透過 The Book 的安裝章節取得工具鏈,並說明從原始碼安裝不建議,細節見 INSTALL.md;README 本身未列出 curl | bash 類指令。僅依 README 評估,未進行原始碼層級審查。"
-        ]
+        "findings": []
       },
       "star_rating": 5,
-      "verdict": "Rust 生態系的根基專案,對任何需要安全高效系統程式的工程師都值得長期關注與學習。",
+      "verdict": "Rust 是現代系統程式設計的基石,生態成熟且持續活躍,值得每位工程師長期關注與學習。",
       "_mode": "light"
     }
   },
@@ -30600,10 +30647,10 @@
   },
   "NVIDIA/auto-ontology": {
     "first_seen": "2026-11-05",
-    "last_seen": "2026-11-06",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-07",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-05": [
         5010,
@@ -30616,6 +30663,13 @@
         7336,
         2679,
         1,
+        "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+        "Python"
+      ],
+      "2026-11-07": [
+        9036,
+        2015,
+        2,
         "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
         "Python"
       ]
@@ -31088,6 +31142,390 @@
       "star_rating": 4,
       "verdict": "對需要讓 AI agent 操作瀏覽器的開發者很值得關注:官方團隊維護、更新頻繁、設計貼近 agent 使用情境,安裝時的二進位下載行為屬常見做法。",
       "_mode": "full"
+    }
+  },
+  "zed-industries/zed": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        93628,
+        306,
+        1,
+        "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-07",
+    "analysis": {
+      "one_liner": "由 Atom 與 Tree-sitter 作者打造、以 Rust 撰寫的高效能多人協作程式碼編輯器。",
+      "summary": "Zed 是由 Zed Industries 開發的高效能、支援多人協作的程式碼編輯器,使用 Rust 與自家 GPUI 框架打造,支援 macOS、Linux 與 Windows。它針對傳統編輯器的速度與延遲問題,主打即時回應與協作編輯。原始碼主要採 GPL-3.0-or-later,部分元件為 Apache-2.0。",
+      "category": "devtool",
+      "highlights": [
+        "創作者來自 Atom 與 Tree-sitter,技術背景深厚",
+        "以 Rust 與 GPUI 打造,主打高效能與低延遲",
+        "內建多人即時協作編輯",
+        "支援 macOS、Linux、Windows,並提供套件管理員安裝方式",
+        "README 說明授權合規流程(cargo-about)與貢獻方式"
+      ],
+      "use_cases": [
+        "作為日常開發的高效能編輯器,取代較重的工具",
+        "團隊遠端協作與結對程式設計",
+        "學習大型 Rust 專案架構與 GPUI 桌面 UI 開發",
+        "研究編輯器與 Tree-sitter 整合的實作方式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 簡潔,涵蓋安裝、建置、貢獻與授權說明,細節導向官方文件。測試部分僅依 README 判斷(有 CI 徽章),未檢視程式碼。最後推送為 2026-11-06,且登上 trending 第 1 名,專案非常活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "新世代高效能編輯器的代表作,Rust 開發者與重視編輯器效能的工程師都值得立即關注與試用。",
+      "_mode": "light"
+    }
+  },
+  "rails/rails": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        59026,
+        142,
+        3,
+        "Ruby on Rails",
+        "Ruby"
+      ]
+    },
+    "last_analyzed": "2026-11-07",
+    "analysis": {
+      "one_liner": "Ruby on Rails 是成熟的全端 MVC Web 框架,內建 ORM、路由、視圖、背景工作、WebSocket、郵件與檔案儲存等完整元件。",
+      "summary": "Rails 是以 Ruby 撰寫的全端 Web 應用框架,依 MVC 模式拆成 Active Record、Active Model、Action Pack、Action View 等模組。它也附帶 Active Job、Action Cable、Active Storage、Action Mailer、Action Mailbox、Action Text 與 Active Support。這些元件讓開發者用一致的慣例快速建立資料庫導向的網站與 API,其中數個元件也能單獨使用。",
+      "category": "framework",
+      "highlights": [
+        "「慣例優於設定」的全端框架,一個 `rails new` 就能建立完整應用",
+        "模組化設計:Active Record、Active Model、Action Pack、Action View、Active Support 可獨立於 Rails 使用",
+        "內建 Active Job、Action Cable、Active Storage、Action Mailer、Action Text 等,涵蓋現代 Web 應用常見需求",
+        "程式碼風格一致,有 frozen_string_literal、rdoc 文件與 autoload 機制;activerecord 的 test/cases 就有 138 個以上測試檔",
+        "具備 devcontainer、release、labeler、rails-new-docker 等 CI 工作流程,專案長年維護、仍在持續提交"
+      ],
+      "use_cases": [
+        "快速開發有資料庫的 Web 應用、SaaS 或後台管理系統",
+        "為 AI 或機器學習產品建立 API 後端與管理介面",
+        "單獨使用 Active Record 或 Active Support 作為 Ruby 專案的 ORM 與工具庫",
+        "學習成熟 MVC 框架的架構設計與 Ruby 元程式設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,有 README、各子框架 README、CONTRIBUTING、RELEASING 與 CHANGELOG,程式碼內也有大量 rdoc 註解。測試極為完整,例如 activerecord 的 test/cases 有 138 個以上測試檔。最後推送時間為 2026-11-06,近期每日都有提交,CI 工作流程齊全,維護狀況極佳。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "Rails 是 Web 開發領域的經典框架,品質與維護都極佳。若你的團隊使用 Ruby 或需要快速交付全端應用,值得持續關注;若只是想了解 Rails 本身,它不算新鮮,這次上榜主要是熱度所致。",
+      "_mode": "full"
+    }
+  },
+  "mpv-player/mpv": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        37876,
+        37,
+        4,
+        "🎥 Command line media player",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-11-07",
+    "analysis": {
+      "one_liner": "功能完整、高度可客製化的開源命令列媒體播放器,以 C 語言撰寫,基於 FFmpeg,支援 libmpv 嵌入與 Lua/JS 腳本擴充。",
+      "summary": "mpv 是 MPlayer/mplayer2 的後繼專案,支援幾乎所有影音格式、編解碼器與字幕類型,使用 GPU 著色器進行高品質渲染與縮放。提供 libmpv C API、JSON IPC、Lua 與 JavaScript 腳本介面,可在 Linux、Windows、macOS 上運作,也是許多第三方播放器的底層引擎。",
+      "category": "cli",
+      "highlights": [
+        "以 FFmpeg 為核心,GPU 著色器渲染,畫質調校空間大",
+        "libmpv 嵌入式 API,加上 JSON IPC、Lua、JavaScript 腳本擴充生態",
+        "DOCS 目錄含完整 man 文件、API 變更記錄、技術概覽與貢獻指南",
+        "test/ 含單元測試與 libmpv 整合測試,並有 FFmpeg 6/7/8 參考輸出",
+        "CI 涵蓋 build、lint、docs、fuzz,並有 dependabot 與 SECURITY.md"
+      ],
+      "use_cases": [
+        "日常以命令列或輕量 GUI 播放各式影音與字幕",
+        "透過 libmpv 將播放能力嵌入自家應用程式或第三方播放器",
+        "撰寫 Lua/JS 腳本自動化媒體處理或自訂 OSC 介面",
+        "使用 encode 模式做簡易轉檔,或用 IPC 遠端控制播放"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "成熟且長期維護的專案,最後推送時間為 2026-11-05,近日每天皆有提交。文件完整,涵蓋 man page、API 變更與貢獻規範。測試涵蓋核心工具、影像格式、縮放與 libmpv 生命週期,CI 另含 fuzz 與 lint。本次僅做唯讀分析,未實際驗證測試覆蓋率。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "業界標竿級的媒體播放器,對需要播放引擎或影音自動化的工程師很值得關注;今日上榜屬長青專案的常態曝光,不是新興專案。",
+      "_mode": "full"
+    }
+  },
+  "react/react": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        252257,
+        248,
+        6,
+        "The library for web and native user interfaces.",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-11-07",
+    "analysis": {
+      "one_liner": "以宣告式、元件化為核心的 Web 與原生使用者介面 JavaScript 函式庫,前端生態系的基石。",
+      "summary": "React 是由 Meta 主導開發的 UI 函式庫,以宣告式檢視與元件組合方式建構互動介面,資料變動時只更新必要部分。可搭配 Node 做伺服器端渲染,也能透過 React Native 開發行動應用。此倉庫同時包含 runtime 與 Compiler 的 CI,持續演進核心。",
+      "category": "framework",
+      "highlights": [
+        "宣告式檢視:為每個狀態設計簡單畫面,資料變動時自動高效更新",
+        "元件化:封裝狀態的元件可組合成複雜 UI,邏輯以 JavaScript 撰寫而非模板",
+        "Learn Once, Write Anywhere:支援瀏覽器、伺服器端渲染與 React Native 行動端",
+        "可漸進式採用,不強制改寫既有技術堆疊",
+        "官方文件 react.dev 完整,含教學、思維指南與 API 參考"
+      ],
+      "use_cases": [
+        "建構單頁應用與複雜的互動式 Web 前端",
+        "搭配 Node 進行伺服器端渲染或全端框架開發",
+        "以 React Native 開發跨平台行動應用",
+        "在既有專案中逐步導入元件化 UI"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 簡潔清楚,並導向完整的 react.dev 文件,含範例與貢獻指南。測試僅能從 README 的 CI 徽章(runtime 建置測試、compiler TypeScript)推斷,未檢視程式碼。最近推送為 2026-11-07,維護非常活躍,累計超過 25 萬星。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "前端領域事實標準,維護活躍、文件完整,是任何 UI 開發者都應熟悉的基礎專案。",
+      "_mode": "light"
+    }
+  },
+  "symfony/symfony": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        31430,
+        128,
+        8,
+        "The Symfony PHP framework",
+        "PHP"
+      ]
+    },
+    "last_analyzed": "2026-11-07",
+    "analysis": {
+      "one_liner": "成熟且廣泛使用的 PHP 網頁與命令列框架,同時提供可獨立重用的元件集合。",
+      "summary": "Symfony 是以 PHP 撰寫的框架,用於建構 Web 與 Console 應用,並提供一組可單獨使用的可重用元件。專案嚴格遵循語意化版本、提供 LTS 版本與可預期的發布流程,許多知名 PHP 專案都以其元件為基礎。",
+      "category": "framework",
+      "highlights": [
+        "框架加上可獨立使用的元件,可只取所需(如 HttpFoundation、Console)",
+        "嚴格語意化版本並提供 LTS,發布節奏可預期,適合企業採用",
+        "文件生態完整:入門指南、Demo 應用、Fast Track 書籍與最佳實務",
+        "MIT 授權、社群龐大,最近一次推送為 2026-11-06,維護活躍",
+        "安裝透過 Composer,屬 PHP 標準流程"
+      ],
+      "use_cases": [
+        "建構企業級 PHP Web 應用或 API 後端",
+        "在既有專案中單獨引入 Symfony 元件(路由、表單、Console 等)",
+        "開發 CLI 工具或排程任務",
+        "學習現代 PHP 架構與依賴注入等設計模式"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 簡潔、導覽清楚,詳細內容導向官方文件站;測試部分僅依 README 判斷、無法檢視程式碼。最後推送為 2026-11-06,維護活躍,並有 Symfony 8.2 開發進行中。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "PHP 生態的基石級框架,若你有 PHP 後端需求或想了解其元件設計,值得關注;對 AI 研發本業則非必看。",
+      "_mode": "light"
+    }
+  },
+  "prometheus/prometheus": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        67183,
+        148,
+        9,
+        "The Prometheus monitoring system and time series database.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-11-07",
+    "analysis": {
+      "one_liner": "CNCF 畢業的開源監控系統與時間序列資料庫,以 PromQL 與拉取式(pull)模型聞名,是雲原生可觀測性的事實標準。",
+      "summary": "Prometheus 會依設定的間隔從目標抓取指標、評估規則運算式、儲存為時間序列,並在條件成立時觸發告警。它採多維度資料模型與 PromQL 查詢語言,單一節點即可自主運作,不依賴分散式儲存,並支援服務探索、聯邦與多種儀表板整合。專案以 Go 撰寫,附內建 Web UI 與 promtool 命令列工具。",
+      "category": "infra",
+      "highlights": [
+        "多維度標籤資料模型搭配 PromQL,查詢與聚合能力強大",
+        "單節點自主運作的拉取式採集,支援多種服務探索機制與聯邦架構",
+        "內建 TSDB 時間序列儲存引擎,另附 promtool 做設定檢查、規則測試與資料分析",
+        "CI 完整:ci、CodeQL、govulncheck、fuzzing(OSS-Fuzz)、OpenSSF Scorecard、zizmor 等工作流程",
+        "CNCF 畢業專案,治理、安全政策(SECURITY.md)與貢獻指南齊備"
+      ],
+      "use_cases": [
+        "為 Kubernetes 與微服務叢集建立指標監控與告警",
+        "搭配 Grafana 建置可觀測性儀表板",
+        "AI/ML 訓練與推論服務(GPU、延遲、吞吐量)的指標蒐集與容量規劃",
+        "學習時間序列資料庫與查詢引擎的 Go 實作"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 清楚,完整文件託管於 prometheus.io;倉庫內有大量 *_test.go、測試資料與 fuzzing 設定,CI 涵蓋靜態分析與漏洞掃描。最後推送時間為 2026-11-06,維護極為活躍。本次僅抽樣檢視 README、Dockerfile 與目錄結構,未逐一閱讀核心原始碼。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "雲原生監控領域的標竿專案,品質與維護度俱佳,做基礎設施或 AI 服務可觀測性的工程師值得熟悉。",
+      "_mode": "full"
+    }
+  },
+  "nushell/nushell": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        40983,
+        131,
+        12,
+        "A new type of shell",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-07",
+    "analysis": {
+      "one_liner": "以 Rust 打造的新世代 Shell,把管線資料視為結構化表格而非純文字。",
+      "summary": "Nushell(Nu)是以 Rust 撰寫的跨平台 Shell,管線傳遞的是結構化資料(表格、記錄、列表),而不是原始文字串流。它內建大量資料處理指令、具型別的腳本語言與外掛系統,可處理 JSON、CSV、YAML 等格式。目前版本為 0.116.x,README 自述已達 MVP 品質,許多人已當作日常 Shell 使用。",
+      "category": "cli",
+      "highlights": [
+        "管線傳遞結構化資料,ls、where、table 等指令可像操作資料表般組合",
+        "以 Rust 實作,Cargo workspace 拆成多個 crate,並附 benches 與 ast-grep 自訂規則",
+        "跨平台,支援 brew、winget 等套件管理員,另有 setup-nu GitHub Action",
+        "CI 完整:ci、nightly-build、audit、typos、release 等多條 workflow",
+        "提供外掛機制,並有官方 Nushell Book、cookbook 等文件,Discord 社群活躍"
+      ],
+      "use_cases": [
+        "以結構化方式處理 JSON/CSV/YAML 與日誌,取代 grep/awk/jq 的組合",
+        "需要在 Windows、Linux、macOS 上行為一致的腳本與日常 Shell",
+        "撰寫具型別的系統管理或開發自動化腳本",
+        "研究大型 Rust CLI 專案與 Shell/直譯器的實作"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "專案成熟、維護活躍(2026-11-06 仍有推送),具完整 CI、依賴稽核(cargo audit)、拼字檢查與 PR/Issue 範本,並有 CONTRIBUTING、SECURITY、CODE_OF_CONDUCT 等文件。官方文件集中在外部的 Nushell Book。本次僅抽樣檢視 README、目錄結構、Cargo.toml 與 workflow,未逐一審閱各 crate 原始碼;測試部分僅看到 tests/main.rs 與 CI 設定,未實際檢視測試內容。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "成熟且高度活躍的 Rust Shell 專案,對經常處理結構化資料的工程師很值得試用與關注。",
+      "_mode": "full"
+    }
+  },
+  "etcd-io/etcd": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        52614,
+        128,
+        13,
+        "Distributed reliable key-value store for the most critical data of a distributed system",
+        "Go"
+      ]
+    }
+  },
+  "openssl/openssl": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        31292,
+        26,
+        14,
+        "General purpose TLS and crypto library",
+        "C"
+      ]
+    }
+  },
+  "astral-sh/ruff": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-07": [
+        50691,
+        169,
+        17,
+        "An extremely fast Python linter and code formatter, written in Rust.",
+        "Rust"
+      ]
     }
   }
 }
