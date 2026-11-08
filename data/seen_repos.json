@@ -779,8 +779,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-11-07",
-    "days_on_trending": 5,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 6,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -985,6 +985,13 @@
         15,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-11-08": [
+        317716,
+        1100,
+        4,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -1026,8 +1033,8 @@
       "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 30,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 31,
+    "consecutive_days_on_trending": 6
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -5941,10 +5948,10 @@
   },
   "tailwindlabs/tailwindcss": {
     "first_seen": "2026-08-05",
-    "last_seen": "2026-08-06",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-05": [
         96475,
@@ -5959,38 +5966,45 @@
         11,
         "A utility-first CSS framework for rapid UI development.",
         "TypeScript"
+      ],
+      "2026-11-08": [
+        98474,
+        122,
+        11,
+        "A utility-first CSS framework for rapid UI development.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-05",
+    "last_analyzed": "2026-11-08",
     "analysis": {
-      "one_liner": "Tailwind CSS — 業界主流的 utility-first CSS 框架,搭配 Rust 引擎(Oxide)提供高速類別掃描與編譯。",
-      "summary": "Tailwind CSS 讓開發者直接在 HTML 標籤上組合預設的工具類別(utility classes)來建構介面樣式,取代手寫自訂 CSS。v4 版本以 Rust 撰寫核心掃描/編譯引擎(crates/oxide),並提供 PostCSS、Vite、Webpack、Turbopack 等多種建置整合套件。專案由 Tailwind Labs 維護,是目前前端生態系中最主流的 CSS 框架之一。",
+      "one_liner": "以 utility class 為核心的 CSS 框架,v4 起採用 TypeScript 編譯器搭配 Rust (Oxide) 掃描引擎。",
+      "summary": "Tailwind CSS 是全球最廣泛使用的 utility-first CSS 框架,讓開發者直接在 HTML/JSX 以原子類別組合出介面。此 monorepo 包含核心編譯器 (packages/tailwindcss)、PostCSS/Vite/CLI/Webpack/Turbopack 等整合套件、升級工具,以及 Rust 寫成的 Oxide 內容掃描引擎 (crates/)。",
       "category": "framework",
       "highlights": [
-        "核心引擎以 Rust 重寫(crates/oxide),大幅提升類別掃描與建置效能",
-        "monorepo 內含 tailwindcss 核心與 cli/postcss/vite/webpack/turbopack/upgrade 等九個官方整合套件",
-        "CI 涵蓋 Windows、Linux、macOS 三平台,包含 Rust 測試、Vitest 單元測試與 Playwright UI 測試",
-        "CHANGELOG 更新頻率高且記錄詳盡,每筆修正都附對應 PR 連結,顯示活躍且嚴謹的維護流程",
-        "TypeScript 原始碼型別定義完整、模組化清楚,可讀性高"
+        "核心編譯器以 TypeScript 實作,包含 CSS parser、AST、variants、utilities、plugin API 等分層清楚的模組",
+        "Rust crates(Oxide 引擎、ignore)負責高速掃描原始碼,並透過 napi 提供多平台原生綁定,亦有 WASM 目標",
+        "Monorepo 內含 PostCSS、Vite、CLI、Webpack、Turbopack、Browser、Standalone 與 upgrade 等多種整合",
+        "測試涵蓋單元 (vitest)、Rust (cargo test)、整合測試與 Playwright UI 測試",
+        "CI 於 Linux/Windows/macOS 執行,Actions 皆以 commit SHA 固定版本並限縮 permissions"
       ],
       "use_cases": [
-        "需要快速建構響應式 UI 而不想手寫大量自訂 CSS 的前端專案",
-        "搭配 React/Vue/Next.js 等框架搭建設計系統或元件庫",
-        "從 Tailwind v3 舊版設定遷移至 v4 的專案(可用 @tailwindcss/upgrade 工具)",
-        "需要高效能建置流程(Vite/Webpack/Turbopack)的大型前端專案"
+        "為 Web 應用快速建構一致的設計系統與響應式介面",
+        "在 Vite、Next.js、PostCSS 等工具鏈中作為 CSS 編譯層",
+        "研究現代 CSS 編譯器、AST 處理與 TS+Rust 混合架構的實作",
+        "將 v3 專案透過升級工具遷移至 v4"
       ],
       "quality": {
         "docs": 4,
         "tests": 5,
         "activity": 5,
-        "comment": "測試覆蓋非常完整(TypeScript 端 70+ 測試檔涵蓋 utilities、variants、compat 等,加上 Playwright UI 測試與 Rust 端 cargo test),CI 三平台皆跑;README 精簡但完整文件在官網,CHANGELOG 詳細且更新頻繁(最近一次推送為今日),屬於維護活躍度極高的專案。"
+        "comment": "README 簡短,但完整文件在 tailwindcss.com,另有 CONTRIBUTING 與 changelog 片段機制。核心套件有大量對應的 *.test.ts,CI 多平台並行,最近一次推送為 2026-11-06,維護極為活躍。程式碼風格一致、型別嚴謹、模組切分清楚。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
       "star_rating": 5,
-      "verdict": "前端生態系的標竿專案,程式碼品質、測試覆蓋與維護活躍度都達到頂尖水準,絕對值得持續關注。",
+      "verdict": "前端生態的核心基礎設施,維護活躍、工程品質高,值得持續關注,也適合作為 TS+Rust 混合架構的學習範本。",
       "_mode": "full"
     }
   },
@@ -6867,10 +6881,10 @@
   },
   "google/skills": {
     "first_seen": "2026-08-09",
-    "last_seen": "2026-11-07",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-09": [
         16924,
@@ -6904,6 +6918,13 @@
         22838,
         534,
         10,
+        "Agent Skills for Google products and technologies",
+        "Python"
+      ],
+      "2026-11-08": [
+        23405,
+        443,
+        3,
         "Agent Skills for Google products and technologies",
         "Python"
       ]
@@ -8142,10 +8163,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-31",
+    "last_seen": "2026-11-08",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -8193,6 +8214,13 @@
         185324,
         295,
         11,
+        "Public repository for Agent Skills",
+        "Python"
+      ],
+      "2026-11-08": [
+        188790,
+        390,
+        5,
         "Public repository for Agent Skills",
         "Python"
       ]
@@ -21159,10 +21187,10 @@
   },
   "cloudflare/security-audit-skill": {
     "first_seen": "2026-09-17",
-    "last_seen": "2026-11-07",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 13,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 14,
     "stars_history": {
       "2026-09-17": [
         7245,
@@ -21254,44 +21282,50 @@
         16,
         "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
         "JavaScript"
+      ],
+      "2026-11-08": [
+        65741,
+        2085,
+        2,
+        "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-10-22",
+    "last_analyzed": "2026-11-08",
     "analysis": {
-      "one_liner": "Cloudflare 開源的程式碼代理 (coding agent) 技能,以多階段、獨立驗證的流程執行安全稽核,並輸出機器可讀的弱點紀錄。",
-      "summary": "security-audit 是一組給 coding agent 使用的 skill,以六個階段運作:偵察、覆蓋導向的獵測、候選驗證、結構化輸出、獨立紀錄驗證與中立報告。它源自 Cloudflare 弱點發掘 harness 的單一 repo 起點,並提供零依賴的 Node.js 驗證器,用來檢查 findings.json 與 coverage-ledger.json。內容以 Markdown 提示詞為主,搭配 JSON Schema 與驗證腳本。",
+      "one_liner": "Cloudflare 開源的程式碼代理技能,以六階段流程進行資安稽核,並產出經獨立驗證、可機器讀取的漏洞發現。",
+      "summary": "這是一個 agent 技能(SKILL),讓 Claude Code 等程式碼代理依序執行偵察、覆蓋導向獵捕、候選驗證、結構化輸出、獨立紀錄驗證與報告產出。它是 Cloudflare 漏洞發現 harness 的前身,以多個相互隔離的子代理協作,並規定「找出問題的代理不能是驗證的代理」,藉此降低誤報。倉庫內容以 Markdown 提示詞為主,搭配兩支無依賴的 Node.js 驗證器。",
       "category": "ai-ml",
       "highlights": [
-        "六階段流程:偵察、覆蓋導向獵測、候選驗證、結構化輸出、獨立紀錄驗證、報告",
-        "對抗式驗證:驗證弱點的代理與發現弱點的代理必須是不同的代理",
-        "結論分為 confirmed、needs_validation、rejected 三種,並以 report-schema.json 約束格式",
-        "附有涵蓋記憶體安全、AI/LLM、供應鏈、雲端部署、客戶端等領域的攻擊類別提示詞",
-        "驗證器零依賴,並有測試檔;執行目標程式碼時要求 OS 層級的沙箱"
+        "六階段稽核流程:偵察、獵捕、驗證、結構化輸出、獨立紀錄驗證、報告,並區分 confirmed、needs_validation、rejected 三種結論",
+        "對抗式驗證:每個候選漏洞交由全新的代理嘗試推翻,不由發現者自己確認",
+        "附 report-schema.json 與 validate-findings.cjs、validate-coverage-ledger.cjs 兩支零依賴驗證器,確保輸出可被機器讀取",
+        "涵蓋多種攻擊類別提示詞:記憶體安全、AI/LLM、Web 認證、供應鏈、雲端部署、資料隔離等",
+        "執行安全規範嚴謹:要求對目標程式碼的執行必須在 OS 層級沙箱內(無外網、環境變數白名單、資源限制),否則只標為 needs_validation"
       ],
       "use_cases": [
-        "對單一程式碼庫做完整的 AI 輔助安全稽核與弱點報告",
-        "作為團隊自建弱點挖掘 harness 的起點與提示詞參考",
-        "重複執行以累積覆蓋率,並追蹤弱點的修復與重新驗證",
-        "在其他 coding agent 中,將安全審查方法論當作指引模式使用"
+        "對自家程式碼庫做完整的 AI 輔助資安稽核,並產出 REPORT.md 與結構化 findings.json",
+        "針對特定目錄或功能做聚焦式漏洞審查與風險分級",
+        "作為建構自家多代理漏洞發現系統的參考範本",
+        "多次重複稽核同一專案,逐步累積覆蓋率"
       ],
       "quality": {
         "docs": 4,
-        "tests": 4,
+        "tests": 3,
         "activity": 3,
-        "comment": "README 與 SKILL.md 結構清楚,檔案用途表完整。兩個驗證器各有測試檔(使用 node:test),程式碼謹慎,包含輸入大小與巢狀深度上限、對 Unicode 控制字元的處理。repo 內沒有 .github/workflows,因此未見 CI;沒有 package.json。最後推送日期為 2026-09-14,更新頻率中等。"
+        "comment": "README 清楚列出檔案用途、安裝與使用方式,SKILL.md 對沙箱與寫入隔離規則寫得很細。驗證器程式碼謹慎,有輸入大小、巢狀深度等限制與診斷字元跳脫,並附有對應測試檔。未見 .github/workflows CI 設定。最後推送為 2026-09-14,之後未見更新。核心價值在提示詞設計,其成效無法靠靜態檢視驗證。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "repo 內沒有 package.json、install 腳本或 CI 設定,也沒有 postinstall 之類的生命週期腳本。",
-          "README 安裝方式是 `npx skills add https://github.com/cloudflare/security-audit-skill`,會透過 Skills CLI 從外部下載並安裝 skill,使用者應留意此第三方工具。",
-          "兩個 .cjs 驗證器只使用 fs、path、util 等 Node 內建模組,未見網路請求、eval 或 child_process。測試檔用 spawnSync 執行本 repo 的驗證器。",
-          "這個 skill 會讓 agent 在稽核時執行目標程式碼的建置或測試。SKILL.md 要求先具備 OS 層級的沙箱(禁用外部網路、環境變數白名單、資源限制),否則不執行。使用者應自行確認沙箱確實有效。",
-          "未發現混淆程式碼、內嵌的長 base64 或十六進位 payload、已提交的二進位檔,或可疑的相依套件。"
+          "未發現 package.json、安裝期生命週期腳本、curl|bash 安裝器、混淆程式碼、內嵌 base64 載荷或已提交的二進位檔。",
+          "安裝方式為 README 中的 `npx skills add https://github.com/cloudflare/security-audit-skill`,會透過第三方 Skills CLI 下載並安裝技能,使用者可自行評估該工具來源。",
+          ".cjs 驗證器以本機檔案讀取為主;在 .cjs 檔中僅於測試檔使用 child_process 的 spawnSync,未見網路請求、eval 或 exec 呼叫。",
+          "此技能會讓代理讀取目標程式碼並可能執行目標專案的建置或測試;SKILL.md 要求在 OS 強制沙箱內進行,若無法提供則不執行,實際防護仍取決於使用者環境與代理平台是否落實。"
         ]
       },
       "star_rating": 4,
-      "verdict": "如果你要做 AI 輔助安全稽核,或想參考 Cloudflare 的弱點挖掘方法論,值得關注。內容嚴謹,提示詞完整。它以提示詞為主,效果取決於你搭配的代理與模型。",
+      "verdict": "想用代理做系統化資安稽核,或研究多代理對抗式驗證流程的人值得關注;重點是提示詞與流程設計,不是可直接執行的工具。",
       "_mode": "full"
     }
   },
@@ -29481,10 +29515,10 @@
   },
   "milind-soni/OpenMausBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-11-02",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-10-30": [
         7479,
@@ -29511,6 +29545,13 @@
         10533,
         922,
         5,
+        "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "TypeScript"
+      ],
+      "2026-11-08": [
+        16989,
+        1955,
+        9,
         "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "TypeScript"
       ]
@@ -31092,15 +31133,22 @@
   },
   "vercel-labs/agent-browser": {
     "first_seen": "2026-11-06",
-    "last_seen": "2026-11-06",
+    "last_seen": "2026-11-08",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-06": [
         45886,
         150,
         10,
+        "Browser automation CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-08": [
+        46830,
+        190,
+        1,
         "Browser automation CLI for AI agents",
         "Rust"
       ]
@@ -31146,15 +31194,22 @@
   },
   "zed-industries/zed": {
     "first_seen": "2026-11-07",
-    "last_seen": "2026-11-07",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-07": [
         93628,
         306,
         1,
+        "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "Rust"
+      ],
+      "2026-11-08": [
+        94283,
+        1114,
+        13,
         "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
         "Rust"
       ]
@@ -31386,15 +31441,22 @@
   },
   "prometheus/prometheus": {
     "first_seen": "2026-11-07",
-    "last_seen": "2026-11-07",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-07": [
         67183,
         148,
         9,
+        "The Prometheus monitoring system and time series database.",
+        "Go"
+      ],
+      "2026-11-08": [
+        67449,
+        322,
+        7,
         "The Prometheus monitoring system and time series database.",
         "Go"
       ]
@@ -31514,10 +31576,10 @@
   },
   "astral-sh/ruff": {
     "first_seen": "2026-11-07",
-    "last_seen": "2026-11-07",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-08",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-07": [
         50691,
@@ -31525,7 +31587,315 @@
         17,
         "An extremely fast Python linter and code formatter, written in Rust.",
         "Rust"
+      ],
+      "2026-11-08": [
+        50979,
+        350,
+        10,
+        "An extremely fast Python linter and code formatter, written in Rust.",
+        "Rust"
       ]
+    },
+    "last_analyzed": "2026-11-08",
+    "analysis": {
+      "one_liner": "以 Rust 撰寫、速度極快的 Python linter 與程式碼格式化工具,可取代 Flake8、Black、isort 等多款工具。",
+      "summary": "Ruff 是 Astral 開發的 Python 靜態分析與格式化工具,內建 900 條以上規則,原生重新實作 flake8-bugbear、pyupgrade、isort、pydocstyle 等外掛功能,並支援自動修復、快取與 pyproject.toml 設定。透過 PyPI(以 maturin 打包成二進位檔)發佈,宣稱比既有工具快 10 到 100 倍,解決傳統 Python 工具鏈緩慢且分散的問題。",
+      "category": "devtool",
+      "highlights": [
+        "Rust 實作,效能比 Flake8、Black 快一到兩個數量級,支援內建快取與 monorepo 階層式設定",
+        "單一工具整合 lint、format、import 排序與自動修復,內建超過 900 條規則",
+        "官方提供 VS Code 等編輯器整合、Language Server 與線上 Playground,另有 WASM 建置",
+        "專案為多 crate 的 Rust workspace(ruff_linter、ruff_python_ast、ruff_python_semantic 等),規則檔含完整文件註解",
+        "同一個 repo 也包含 Astral 的型別檢查器 ty,且被 Airflow、FastAPI、Pandas、Hugging Face 等大型專案採用"
+      ],
+      "use_cases": [
+        "以單一工具取代 Flake8、Black、isort 等,加速本機開發與 CI 流程",
+        "在 pre-commit 或編輯器儲存時即時 lint 與格式化 Python 程式碼",
+        "大型 monorepo 的統一程式碼風格與自動修復",
+        "AI/ML 專案中維持 Python 程式碼品質,並研究 Rust 靜態分析工具的設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整,有 README、docs 目錄、CONTRIBUTING 與每條規則的內嵌說明。CI 與發佈流程相當完整(ci.yaml、每日 fuzz、記憶體報告、簽署發佈二進位檔、cargo-deny 等),並有 nextest 與 insta 快照測試、大量測試 fixtures。最近一次推送是 2026-11-07,維護非常活躍。抽樣的 unused_import.rs 結構清楚,文件註解詳盡。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "README 與 docs 的安裝說明提供 `curl -LsSf https://astral.sh/ruff/install.sh | sh` 的選用安裝方式,屬常見做法,使用者可改用 pip、uv 等管道安裝,並可先自行檢視腳本。",
+          "pyproject.toml 使用 maturin 作為 build backend,從原始碼建置時需要編譯 Rust;未發現 setup.py 或會在安裝時執行任意程式的 lifecycle script。",
+          "repo 內含 .claude/hooks/session-start.sh 等針對 AI 編碼助理的設定檔,內容僅為遠端環境判斷與轉派,未見可疑行為。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "Python 開發者的必備工具,效能、完整度與維護活躍度都屬頂級,值得立即採用,Rust 工具鏈設計也值得研究。",
+      "_mode": "full"
+    }
+  },
+  "meta/astryx": {
+    "first_seen": "2026-11-08",
+    "last_seen": "2026-11-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-08": [
+        14531,
+        96,
+        6,
+        "An open source design system that's fully customizable and agent ready",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-08",
+    "analysis": {
+      "one_liner": "Meta 開源的 React 19 + StyleX 設計系統,提供 150+ 元件,並針對人類與 AI 代理協作開發設計。",
+      "summary": "Astryx 是在 Meta 內部發展八年的設計系統,現已開源(Beta)。它提供 150+ 無障礙元件、主題、深色模式、模板與 CLI,使用者只需匯入預建 CSS 即可使用,不需要 build plugin。API、文件與 CLI 一併設計,讓開發者與 AI 助理能用同一套參考資料開發。",
+      "category": "framework",
+      "highlights": [
+        "Meta 內部八年經驗,README 稱支援 13,000+ 應用,150+ 元件並有完整 TypeScript 型別",
+        "無樣式綁定:StyleX 對使用者透明,可用 Tailwind、CSS Modules 或純 CSS 以 className 覆寫",
+        "主題以 CSS 自訂屬性覆寫實現,內建七款主題(neutral、butter、chocolate、matcha 等)",
+        "swizzle 指令可將元件完整原始碼匯出到專案自行維護",
+        "CLI 提供元件文件、模板、腳手架與 codemod,為 AI 代理而設計"
+      ],
+      "use_cases": [
+        "為 React 19 專案建立可高度客製的企業級 UI 元件庫",
+        "讓 AI 編碼助理依據一致的慣例與 CLI 文件產生介面程式碼",
+        "需要深色模式與品牌主題的後台、資料表格與表單流程應用",
+        "研究大型設計系統的 API 慣例與 agent-ready 文件設計"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋安裝、套件、原則、貢獻指南,並有文件站、Storybook 與 Sandbox。僅憑 README 評估,無法檢視測試程式碼;README 提及 Vitest 與 DOM 測試。最近有推送且熱度高,目前仍為 Beta。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 安裝方式為標準 npm/pnpm/yarn 套件安裝,另可全域安裝 CLI(npm i -g),未見 curl | bash 類指令",
+          "未進行原始碼層級審查;CLI 會被 AI 代理呼叫,建議使用前確認套件來源與版本",
+          "部分套件(vega、charts)僅發佈於 @canary 標籤,尚無穩定版"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "來自 Meta 的成熟設計系統,主打 AI 代理友善與低綁定,對 React 團隊與 agent 工作流值得關注;但仍為 Beta,導入前宜評估穩定性。",
+      "_mode": "light"
+    }
+  },
+  "sherlock-project/sherlock": {
+    "first_seen": "2026-11-08",
+    "last_seen": "2026-11-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-08": [
+        100474,
+        1766,
+        8,
+        "Hunt down social media accounts by username across social networks",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-08",
+    "analysis": {
+      "one_liner": "以使用者名稱跨 400 多個社群網站搜尋帳號的 OSINT 命令列工具。",
+      "summary": "Sherlock 是以 Python 撰寫的 OSINT 工具。輸入一或多個使用者名稱後,它會用多執行緒向 data.json 中列出的數百個社群網站發送請求,判斷帳號是否存在,並可輸出 txt、CSV、XLSX。它解決的是在不同平台上快速盤點同一個帳號名稱的問題,常用於資安調查與數位鑑識。",
+      "category": "cli",
+      "highlights": [
+        "安裝方式多元:pipx、pip、uv、Docker 或各發行版套件",
+        "站台規則集中在 data.json,並附 JSON Schema,新增或修正站台只需改資料、不必改程式",
+        "支援 SOCKS/HTTP 代理(含 Tor)、逾時設定、{?} 萬用符號(自動嘗試 _、-、. 變體)與多種匯出格式",
+        "CI 以 tox 在 Ubuntu、Windows、macOS 與 Python 3.10 至 3.14 上跑測試與 lint,另有站台驗證與 Docker 建置測試",
+        "GitHub 星數已超過 10 萬,社群與維護者活躍"
+      ],
+      "use_cases": [
+        "資安研究員或紅隊在授權範圍內蒐集目標的公開帳號足跡",
+        "數位鑑識與威脅情資(CTI)調查時,關聯同一人的多平台帳號",
+        "品牌保護:檢查某個名稱是否已被他人在各平台註冊",
+        "把 sherlock 當作 CLI 或 Python 套件,整合進自己的 OSINT 流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "程式結構清楚(sherlock.py、sites.py、result.py、notify.py 分工明確),有型別標註與 py.typed。tests/ 含 manifest、探測、Unicode、UX、版本與站台驗證等測試,.github/workflows 有 4 個工作流。最後推送日期為 2026-11-07,維護活躍。README 簡潔,詳細文件放在外部網站。偵測依賴各站台的回應,誤判與漏判是此類工具的固有限制。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "執行時會對外連線:向 GitHub API 查詢最新版本,並從 raw.githubusercontent.com 下載站台清單與誤判排除清單(sites.py 的 EXCLUSIONS_URL)。",
+          "--json 參數可載入遠端 JSON 或指定上游 PR 編號,程式會從 GitHub 取得該 PR 的 data.json;此內容僅作為資料解析,未見 eval/exec。",
+          "工具本身會向大量第三方網站發送查詢,使用者應確保用途合法且已取得授權,並留意自身 IP 曝光(可搭配代理)。",
+          "pyproject.toml 使用 poetry-core 建置,未見 setup.py 或安裝時腳本;相依套件(requests、pandas、PySocks、stem 等)皆為常見知名套件。Dockerfile 以 pip 安裝固定版本的 sherlock-project。",
+          "未發現 curl|bash 式安裝、混淆程式碼、內嵌的長 base64 或十六進位內容,也未發現已提交的二進位執行檔。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟、維護活躍的 OSINT 標竿工具,適合需要做帳號足跡調查的人收藏;使用時務必遵守授權與法規。",
+      "_mode": "full"
+    }
+  },
+  "mbillow/localthings": {
+    "first_seen": "2026-11-08",
+    "last_seen": "2026-11-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-08": [
+        1062,
+        186,
+        12,
+        "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-08",
+    "analysis": {
+      "one_liner": "純本地、不需 Samsung 雲端帳號的 Home Assistant 整合,透過 CoAP over DTLS 控制三星智慧家電",
+      "summary": "LocalThings 是 Home Assistant 的自訂整合(HACS),讓使用者只輸入家電 IP,就能在區網內透過 OCF/CoAP over DTLS 控制三星洗衣機、冷氣、冰箱、烤箱等二十多類家電。設定完成後不再連線 Samsung 伺服器。它解決了 SmartThings 必須依賴雲端的問題,並以宣告式對照表支援新機型。",
+      "category": "app",
+      "highlights": [
+        "純區網運作:設定後不再連 Samsung 雲端,支援 CoAP Observe 推播並搭配 30 秒輪詢",
+        "支援 20 多種家電類型,包含冷氣(多室內機)、洗烘衣機、冰箱、烤箱、爐具、掃地機器人、聲霸等",
+        "宣告式裝置對照表,並以 90 多組真實設備擷取資料做測試,新機型多半只需補表格",
+        "另支援 2018–2022 年款老家電的 TCP 8888 HTTPS 介面、DHCP 探索 IP 變動、重新設定與診斷檔去識別化",
+        "CI 完整:hassfest、HACS 驗證、ruff、ty 型別檢查與 pytest,屬於 HACS 預設清單"
+      ],
+      "use_cases": [
+        "想擺脫 SmartThings 雲端依賴,在 Home Assistant 中本地控制三星家電",
+        "建立洗衣機/烘衣機完成通知、冷氣與能耗監控等家庭自動化",
+        "研究 OCF/CoAP/DTLS 在 IoT 家電上的實作,或貢獻新機型支援"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 詳盡,涵蓋安裝、設定、各類家電行為、疑難排解與回報流程,另有 CONTRIBUTING 與 AGENTS.md。tests 目錄有近 200 個測試檔,涵蓋各裝置類型、config flow、coordinator 與診斷。CI 每日排程並同時跑 lint、型別檢查與 pytest。最後推送為 2026-11-07,版本 0.36.0,維護積極。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "對 TCP 8888 的舊款家電,legacy_http_tls.py 會停用憑證驗證(CERT_NONE、不檢查 hostname),並允許 TLS 1.0 與 DEFAULT@SECLEVEL=0 加密套件;README 說明這只用在該單一連線,因為舊韌體僅支援此設定",
+          "舊款家電的 token 取得流程需要 Home Assistant 在 8889 埠開放回呼監聽,使用者需留意區網內的暴露範圍",
+          "README 說明新增第一台家電時會連線 Samsung 伺服器一次,以讀取公開識別碼,不需帳號登入",
+          "整合會處理並儲存憑證/金鑰 PEM(config entry),寫入暫存檔後立即刪除,並設 0600 權限;診斷下載會去識別化",
+          "依賴 smartthings-local(>=0.1.23)與 cbor2,由 Home Assistant 在整合設定時安裝;未發現安裝腳本、混淆程式碼或內嵌 payload。Dockerfile 僅用於開發環境,以 pip 安裝 smartthings-local"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "如果你有三星智慧家電並使用 Home Assistant,這是值得關注、維護與測試都紮實的本地化整合;使用舊款 8888 介面的家電時,請留意其放寬的 TLS 設定。",
+      "_mode": "full"
+    }
+  },
+  "ranxianglei/billion-context": {
+    "first_seen": "2026-11-08",
+    "last_seen": "2026-11-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-08": [
+        4615,
+        191,
+        14,
+        "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-08",
+    "analysis": {
+      "one_liner": "一個夾在 AI coding agent 與模型 API 之間的本機代理,由模型自己決定何時、壓縮哪些對話,支援月級長會話、100K 小窗口,並宣稱可省約 5 倍 token。",
+      "summary": "billion-context(指令為 `bili`)是 TypeScript 寫的代理層。它攔截 Anthropic/OpenAI 格式的請求與串流回應,用 acp-kernel 做增量、可逆、對 prefix cache 友善的分層摘要。代理會注入 compress、decompress、search_context、acp_status 四個工具,讓模型自行管理上下文,以解決長會話爆窗口與 token 成本高的問題。支援約 25 種客戶端,包括 Claude Code、Codex、opencode、pi、aider、Gemini CLI 等,有的走原生外掛,有的走啟動器或憑證 MITM。",
+      "category": "ai-ml",
+      "highlights": [
+        "壓縮是增量且可還原:模型呼叫 compress 摺疊訊息範圍,需要細節時再 decompress,並保持 prefix cache 命中率(README 宣稱 95–97%)",
+        "相容面廣:README 列出約 25 種 agent 客戶端,提供原生外掛、`bili <client>` 啟動器與 `/bili/` 前綴等多種接入方式",
+        "附有論文與第三方基準:README 宣稱 4.5 個月、17 萬次以上模型呼叫的實測,並有 LongMemEval-S、ContextBench、MemoryAgentBench 對比 full context 與 RAG",
+        "工程化程度高:kernel 目錄有上千個測試檔、約 30 個 GitHub Actions 工作流(含 e2e、Windows、發佈金絲雀),文件有中英雙語"
+      ],
+      "use_cases": [
+        "用 Claude Code、Codex 等 agent 跑數天到數週的長會話,又不想頻繁重啟或丟失上下文",
+        "模型窗口小(如 100K–200K),需要在窗口內撐住長時間任務",
+        "想降低 API token 費用,並觀察 prefix cache 命中情況",
+        "研究長壽 agent 的上下文管理,或參考其論文與基準方法"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README、CLIENTS、CONFIGURATION、TECHNICAL-NOTES 等文件齊全且有中英雙語,另附論文與基準。tests 目錄檔案量很大,CI 工作流多而細,版本號已到 0.1.213,最後推送是昨天,維護非常活躍。缺點是專案複雜度高、客戶端組合多,上手與除錯門檻不低。效能與省 token 的數字都出自作者自己的說明與基準,未經本次審查驗證。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 的 `prepare` 腳本會執行 `node scripts/check-dist-ready.mjs`,屬於安裝或建置時的腳本執行。未見 preinstall 或 postinstall,也未在文件中發現 curl|bash 類安裝指令",
+          "多個客戶端(kimi、qwen、aider、copilot、amp、kiro、crush、zed 等)採用「cert-MITM」模式,代理會產生並信任自簽憑證,以攔截 HTTPS 流量。這是代理型工具的常見做法,但使用者要知道 API 金鑰與對話內容會經過本機代理",
+          "README 提到 `bili` 有自我更新機制,倉庫內也有 auto-update-policy.json 與 announcements/remote.json 等遠端公告設定。本次未深入審查其行為,建議使用前確認更新與公告的來源及設定",
+          "`bili plugin install` 會改寫各客戶端的設定檔(README 說明會先備份為 `.bili-bak`),並可能設定 managed settings,安裝前建議先檢視變更",
+          "授權在 package.json 標為 MIT,GitHub 中繼資料顯示為「Other」,採用前請自行核對 LICENSE"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對長期跑 coding agent 的人來說,這是目前少見做得完整且工程紮實的上下文壓縮代理,值得追蹤與試用。但它會介入所有模型流量,先在隔離環境評估,再考慮用在重要專案。",
+      "_mode": "full"
+    }
+  },
+  "dsx-ai-factory/nvke": {
+    "first_seen": "2026-11-08",
+    "last_seen": "2026-11-08",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-08": [
+        560,
+        123,
+        15,
+        "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-11-08",
+    "analysis": {
+      "one_liner": "NVIDIA 官方的裸機 GPU Kubernetes 管理平面,透過 Cluster API 與 NICo 在自有 GPU 機器上建立並維運多個獨立的工作負載叢集。",
+      "summary": "NVKE(NVIDIA Kubernetes Engine)是以 Go 撰寫的管理平面,讓平台團隊在自己的 NVIDIA GPU 基礎設施上提供託管式 Kubernetes 服務。它先用暫時的 seed 叢集建出管理叢集,再由管理叢集透過 NICo 與 Cluster API 建立多個各有獨立 control plane、etcd 和 node pool 的工作負載叢集。節點端的 agent 負責 kubeadm、etcd 與 SPIFFE/SPIRE TPM 身分認證等操作。專案目前是 preview 狀態,README 明確說明不建議用於正式環境。",
+      "category": "infra",
+      "highlights": [
+        "自我託管(self-hosting)架構:seed 叢集建立管理叢集,再由管理叢集建立並維運多個隔離的工作負載叢集",
+        "節點以 TPM 搭配 SPIFFE/SPIRE 做身分證明後才取得 join 憑證,並支援每個叢集的 etcd 靜態加密",
+        "節點 agent 涵蓋 etcd defrag、憑證更新、kubeadm 升級、Open vSwitch 網路與 kube-vip 等營運細節",
+        "可在沒有 GPU 的情況下用模擬機器做本機快速上手(local quickstart),降低評估門檻",
+        "一次建出 9 個二進位檔(agent、controller、nvkectl、tenant-api、operator-api 等),並附有大量文件"
+      ],
+      "use_cases": [
+        "在自有資料中心的裸機 GPU 叢集上提供多租戶的託管 Kubernetes 服務",
+        "評估 NICo 加 Cluster API 的 GPU 基礎設施自動化方案",
+        "研究裸機 Kubernetes 的節點 agent、etcd 維運與 TPM 身分認證實作",
+        "參考大型 Go 多模組(go.work)專案的 CI 與文件組織方式"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 結構清楚,把預覽階段的限制(API 預設無認證、使用 HTTP、沒有管理平面升級與備份還原流程)寫得很直白,另有 docs/ 目錄、貢獻指南與治理文件。專案約有 746 個以上 Go 測試檔,涵蓋 agent、auth、cli 等模組。.github/workflows 下有數十個工作流程,含 CodeQL、govulncheck、scorecard、gitleaks、malware-scan 與多種 e2e 測試。最後推送時間為 2026-11-07,維護相當活躍。抽樣的 etcd_defrag.go 有清楚的錯誤處理與前置條件檢查。專案仍屬 preview,API 可能變動。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "部分開發與建置輔助腳本使用 curl 下載後直接交給 sh/bash 執行,例如 controller/nico-sim/scripts/setup-linux.sh 安裝 tilt 與 helm、os-image/efi/scripts/setup-efi-build-host.sh 安裝 rustup、agent/Dockerfile.nke-builder 安裝 golangci-lint。這些屬於建置或開發環境的常見做法,使用前建議先確認來源",
+          "README 說明預覽版安裝後 API 認證預設關閉且使用純 HTTP,正式對外提供服務前需依文件另行設定 API 認證與受保護的存取",
+          "未發現混淆程式碼、內嵌的長 base64 或 hex 內容,也未發現 install-time 生命週期腳本或可疑的相依套件名稱",
+          "專案附有 .claude/settings.json,內容僅將 commit 與 PR 的署名欄位設為空字串,不含指令或 hook"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "NVIDIA 官方背景的裸機 GPU Kubernetes 管理平面,工程品質、測試和 CI 都很完整。若在做 GPU 基礎設施或 Cluster API,值得追蹤;但目前仍是 preview,不適合直接用於正式環境。",
+      "_mode": "full"
     }
   }
 }

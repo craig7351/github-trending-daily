@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-08",
+    "analyzed": 8,
+    "cached": 7,
+    "deferred": 0,
+    "top_name": "astral-sh/ruff",
+    "top_rating": 5
+  },
+  {
     "date": "2026-11-07",
     "analyzed": 10,
     "cached": 3,
