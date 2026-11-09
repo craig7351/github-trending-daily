@@ -8163,10 +8163,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-11-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -8221,6 +8221,13 @@
         188790,
         390,
         5,
+        "Public repository for Agent Skills",
+        "Python"
+      ],
+      "2026-11-09": [
+        189657,
+        792,
+        7,
         "Public repository for Agent Skills",
         "Python"
       ]
@@ -29515,10 +29522,10 @@
   },
   "milind-soni/OpenMausBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-11-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-10-30": [
         7479,
@@ -29552,6 +29559,13 @@
         16989,
         1955,
         9,
+        "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "TypeScript"
+      ],
+      "2026-11-09": [
+        18264,
+        1439,
+        3,
         "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "TypeScript"
       ]
@@ -31133,10 +31147,10 @@
   },
   "vercel-labs/agent-browser": {
     "first_seen": "2026-11-06",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-06": [
         45886,
@@ -31149,6 +31163,13 @@
         46830,
         190,
         1,
+        "Browser automation CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-09": [
+        47608,
+        815,
+        5,
         "Browser automation CLI for AI agents",
         "Rust"
       ]
@@ -31635,14 +31656,21 @@
   },
   "meta/astryx": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-08": [
         14531,
         96,
+        6,
+        "An open source design system that's fully customizable and agent ready",
+        "TypeScript"
+      ],
+      "2026-11-09": [
+        16805,
+        875,
         6,
         "An open source design system that's fully customizable and agent ready",
         "TypeScript"
@@ -31687,15 +31715,22 @@
   },
   "sherlock-project/sherlock": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-08": [
         100474,
         1766,
         8,
+        "Hunt down social media accounts by username across social networks",
+        "Python"
+      ],
+      "2026-11-09": [
+        103535,
+        2373,
+        1,
         "Hunt down social media accounts by username across social networks",
         "Python"
       ]
@@ -31794,15 +31829,22 @@
   },
   "ranxianglei/billion-context": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-08": [
         4615,
         191,
         14,
+        "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+        "TypeScript"
+      ],
+      "2026-11-09": [
+        5157,
+        460,
+        9,
         "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
         "TypeScript"
       ]
@@ -31847,15 +31889,22 @@
   },
   "dsx-ai-factory/nvke": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-09",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-08": [
         560,
         123,
         15,
+        "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+        "Go"
+      ],
+      "2026-11-09": [
+        853,
+        345,
+        2,
         "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
         "Go"
       ]
@@ -31895,6 +31944,107 @@
       },
       "star_rating": 4,
       "verdict": "NVIDIA 官方背景的裸機 GPU Kubernetes 管理平面,工程品質、測試和 CI 都很完整。若在做 GPU 基礎設施或 Cluster API,值得追蹤;但目前仍是 preview,不適合直接用於正式環境。",
+      "_mode": "full"
+    }
+  },
+  "anthropics/claude-quickstarts": {
+    "first_seen": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-09": [
+        19423,
+        32,
+        4,
+        "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-09",
+    "analysis": {
+      "one_liner": "Anthropic 官方維護的 Claude API 快速上手範例集,涵蓋 Computer Use、瀏覽器自動化、自主寫程式代理與 Managed Agents 等多個可部署範例。",
+      "summary": "這是 Anthropic 官方的範例合集,每個子目錄都是獨立的 Claude 應用起手式,各自有 README 與安裝說明。內容從客服代理、財務分析、Computer/Browser Use,到 Claude Agent SDK 自主寫程式,以及大量 Managed Agents 整合(Slack、Linear、Sentry、MCP Server、CopilotKit 等)。目標是讓開發者快速看懂 Claude 工具使用與代理模式的參考實作,再依需求改寫。",
+      "category": "learning-resource",
+      "highlights": [
+        "官方出品,同步最新功能,例如 computer_toolset_20260801、browser_toolset_20260801 與 Managed Agents",
+        "範例種類廣:Computer Use、瀏覽器 CDP/Playwright、雙代理自主寫程式、Slack/Linear/Sentry 橋接",
+        "autonomous-coding 以指令 allowlist 的 pre-tool-use hook 限制 bash 指令,是實用的安全設計參考",
+        "部分範例有完整測試,如 computer-use-best-practices、browser-use-demo、openshell-policy",
+        "Python 與 TypeScript 並行,多數範例附 Dockerfile 或 .env.example,方便部署"
+      ],
+      "use_cases": [
+        "學習如何用 Claude API 與 Agent SDK 建構工具使用型代理",
+        "以 Computer Use 或 Browser Use 範例為底,開發桌面或網頁自動化代理",
+        "參考 Managed Agents 範例,串接 Slack、Linear、Sentry 等團隊工具",
+        "設計代理時參考 prompt caching、compaction、批次工具呼叫與沙箱化 shell 的作法"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "根 README 條理清楚,每個範例都有自己的 README,並附 CLAUDE.md 與 PR 範本。測試分布不均:computer-use-best-practices、browser-use-demo、openshell-policy 測試完整,但其他範例幾乎沒有測試。CI 的 tests.yaml 只涵蓋 computer-use-demo,範圍有限。最近推送時間為 2026-11-06,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "在 README、原始碼與設定檔中,未發現 curl|bash 或 iwr|iex 類型的安裝指令,也未發現 package.json 的 preinstall/postinstall 腳本;grep 命中的 postinstall 僅出現在 package-lock.json 的第三方依賴 napi-postinstall",
+          "Computer Use、Browser Use、autonomous-coding 等範例會讓模型控制桌面、瀏覽器或執行 bash,屬於此類範例的固有能力,建議在 VM 或容器內執行(README 亦建議在 VM 中執行 macOS 範例)",
+          "autonomous-coding 以指令 allowlist 限制 bash 可執行的指令(security.py),但 allowlist 內含 npm、node、git 等,仍可執行任意專案程式碼,使用前宜留意",
+          "範例需要 Anthropic API 金鑰,以及 Slack、Linear、Sentry、GitHub 等第三方憑證,應以環境變數或 vault 管理,不要提交進版本庫"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想上手 Claude 代理、Computer Use 與 Managed Agents 的人,值得收藏作為官方參考;使用前記得先看各子專案的安全說明,並在隔離環境中執行。",
+      "_mode": "full"
+    }
+  },
+  "google-deepmind/mujoco": {
+    "first_seen": "2026-11-09",
+    "last_seen": "2026-11-09",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-09": [
+        16420,
+        41,
+        8,
+        "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-11-09",
+    "analysis": {
+      "one_liner": "Google DeepMind 維護的通用物理模擬引擎 MuJoCo,專為機器人、生物力學與強化學習打造的高速、高精度多關節接觸動力學模擬器。",
+      "summary": "MuJoCo(Multi-Joint dynamics with Contact)是以 C/C++ 撰寫、提供 C API 的物理引擎,執行期針對效能調校並使用預先配置的低階資料結構,模型由內建 XML 編譯器產生。專案同時提供 Python 綁定、Unity 外掛、MuJoCo Studio/simulate 視覺化工具、WebAssembly 版本,以及以 JAX 實作的 MJX(GPU/TPU 加速)。它解決機器人與機器學習研究中對快速且準確的關節結構與接觸模擬的需求。",
+      "category": "library",
+      "highlights": [
+        "以 C 為核心、效能導向的引擎設計,執行期資料預先配置,適合大規模 rollout 與強化學習訓練",
+        "生態完整:Python 綁定、Unity 外掛、MuJoCo Studio/simulate 檢視器、WASM 線上版(live.mujoco.org)與 JAX 版 MJX",
+        "Colab 教學筆記本涵蓋入門、模型編輯、多執行緒 rollout、LQR、最小平方法與可微分物理",
+        "同時支援 CMake 與 Bazel 建置,並有多平台 CI 矩陣、lint 與 WASM 發佈流程",
+        "Apache-2.0 授權,由 Google DeepMind 維護,文件託管於 readthedocs,另有版本與風格指南"
+      ],
+      "use_cases": [
+        "機器人控制與運動規劃的模擬驗證(sim-to-real 研究)",
+        "強化學習環境開發與大規模平行 rollout 訓練",
+        "生物力學、角色動畫與可微分物理研究",
+        "在瀏覽器中以 WASM 版本快速檢視與除錯 MJCF 模型"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(官網、readthedocs、README 含多本教學筆記本、CONTRIBUTING、STYLEGUIDE、VERSIONING、SECURITY)。test/ 目錄下依引擎模組對應有大量 C++ 單元測試(如 engine_forward_test.cc),CI 工作流涵蓋 build 矩陣、lint 與 live/WASM 發佈。核心原始碼(如 src/engine/engine_forward.c)結構清楚、模組化,含授權標頭與輸入檢查(如偵測到 NaN 時自動重置)。最後推送為 2026-11-08,維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "機器人與強化學習領域的業界標準物理引擎,成熟、文件與測試俱佳且持續活躍維護,從事模擬或強化學習的 AI 研發工程師值得長期關注與使用。",
       "_mode": "full"
     }
   }
