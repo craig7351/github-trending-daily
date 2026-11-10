@@ -599,7 +599,7 @@
   },
   "ruvnet/RuView": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-10",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -624,6 +624,13 @@
         101060,
         557,
         13,
+        "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "Rust"
+      ],
+      "2026-11-10": [
+        103458,
+        172,
+        8,
         "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
         "Rust"
       ]
@@ -664,7 +671,7 @@
       "verdict": "WiFi 感測與邊緣 AI 領域相當有野心且文件完整的專案,值得關注;但準確度宣稱需自行驗證,建議先用實體硬體小規模測試。",
       "_mode": "light"
     },
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "consecutive_days_on_trending": 1
   },
   "CoreBunch/Instatic": {
@@ -7559,10 +7566,10 @@
   },
   "ZhuLinsen/daily_stock_analysis": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-08-12",
+    "last_seen": "2026-11-10",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-10": [
         61192,
@@ -7577,38 +7584,51 @@
         5,
         "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
         "Python"
+      ],
+      "2026-11-10": [
+        68855,
+        506,
+        9,
+        "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-10",
+    "last_analyzed": "2026-11-10",
     "analysis": {
+      "one_liner": "以 LLM 驅動的多市場(A股/港股/美股/日股/韓股/台股)自選股分析系統,每日產出決策儀表板並推送到企業微信、飛書、Telegram 等管道。",
+      "summary": "這是一套 Python 股票智能分析系統,整合 AkShare、Tushare、YFinance、Longbridge 等行情來源與多種新聞搜尋服務,交給 LLM 產出含評分、買賣點位與風險警示的決策報告。可透過 GitHub Actions 免伺服器定時執行,也能用 Docker、FastAPI 與 Web/桌面工作台部署,並提供 Agent 策略問股、回測與持倉管理。",
       "category": "ai-ml",
-      "one_liner": "用 LLM 驅動的多市場（A股/港股/美股/日股/韓股/台股）每日自動選股分析與決策看板推送系統。",
-      "summary": "這個專案整合多個行情數據源（AkShare、Tushare、YFinance、Longbridge 等）、新聞舆情搜尋與 LLM（Gemini/OpenAI/Claude/DeepSeek 等）來產生每日股票決策報告，並可透過企業微信、飛書、Telegram、Discord、Slack、Email 等管道推送。支援 GitHub Actions 零成本排程、Docker 部署、Web/桌面工作台與 Agent 策略問股功能，鎖定的問題是幫個人投資者自動化每日盯盤與資訊彙整。",
       "highlights": [
-        "工程規模龐大且成熟：268+ 個測試檔、CI 依變更路徑分流(backend/docker/frontend/futu打包)並用 3-shard 平行跑測試",
-        "支援 6 個市場 + 10 種以上行情/新聞資料源,並有清楚的 fallback 與資料源優先序文件",
-        "多元部署方式:GitHub Actions 免費排程、Docker(含健康檢查、非 root 使用者)、桌面客戶端打包(Windows/macOS)",
-        "Agent 策略問股支援 15 種內建策略(均線、纏論、波浪理論等)並可多輪追問",
-        "文件完整度高:提供簡中/英/繁中三語 README、完整部署指南、市場支援邊界說明、LLM 設定指南"
+        "涵蓋 A股、港股、美股、日股、韓股、台股與 ETF,資料來源多且有 fallback 機制,預設內建免費行情源,可零設定上手",
+        "Fork 後設定 Secrets 即可在 GitHub Actions 定時執行,部署成本低;同時支援 Docker、本機排程與 FastAPI 服務",
+        "Agent 問股內建 15 種策略(均線、纏論、波浪等),支援多輪追問,並涵蓋 Web、Bot 與 API",
+        "LLM 後端相容 Gemini、OpenAI 相容服務、DeepSeek、Claude、Ollama 等,通知管道多元",
+        "工程化完整:有多個 CI workflow、API 與 Web 前端、桌面打包,並有 AGENTS.md、CLAUDE.md 等貢獻規範"
       ],
       "use_cases": [
-        "個人投資者想要每天自動收到 AI 生成的自選股決策報告(買賣點位、風險提示、催化因素)",
-        "需要零伺服器成本、用 GitHub Actions 排程執行的量化分析場景",
-        "想研究如何用 LiteLLM 統一調度多家 LLM 供應商並串接多源行情/新聞資料的架構範例",
-        "想要在企業微信/飛書/Telegram 等群組自動推送股市監控訊息的團隊或個人"
+        "個人投資者建立每日自選股 AI 摘要,並自動推送到通訊軟體",
+        "研究 LLM Agent 結合金融資料與工具呼叫的工程實作",
+        "以 GitHub Actions 免費排程搭建自動化分析流程",
+        "作為多資料源聚合、通知推送與 FastAPI + React 全端專案的參考範本"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件與測試覆蓋度在同類專案中屬上乘,README 提供三語版本並拆分出完整指南、市場支援邊界、LLM 設定指南等專門文件;CI 設定成熟,依變更路徑分流跑測試、Docker build 與桌面打包,並有 268+ 測試檔涵蓋 API、Agent、資料抓取、回測等模組;近期(2026-08-09)仍持續有 push,活躍度高。抽查的 main.py、analyzer.py 程式碼結構清晰、模組化程度高,但專案規模與依賴數量龐大(接觸多個第三方 API 與券商 SDK),長期維護成本不低。"
+        "comment": "README 完整,另有 docs/ 目錄、多語系文件與完整部署指南。tests/ 下約有 300 個測試檔,涵蓋 agent、API、資料來源、認證與 CI 契約。CI 流程完整,最近推送在 2026-11-09,維護非常活躍。Dockerfile 採多階段建置並以非 root 使用者執行。專案體量大,設定項目繁多,上手需要時間。輸出僅為 AI 分析,不構成投資建議。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "部署文件 docs/DEPLOY.md 與 docs/DEPLOY_EN.md 建議以 `curl -fsSL https://get.docker.com | sh` 安裝 Docker。這是 Docker 官方常見的安裝方式,使用者可自行評估是否採用。",
+          "專案需要填入 LLM API Key、通知 Webhook、Telegram/Slack Token 等敏感憑證(GitHub Secrets 或 .env),請妥善保管,並避免提交到公開儲存庫。",
+          "README 與設定中含有贊助商與推廣連結(如 Modelflare、AIHubMix、Anspire 的邀請連結),僅為使用者留意的資訊。",
+          "README 提到 Longbridge 的 OAuth 快取以 base64 字串(`LONGBRIDGE_OAUTH_TOKEN_CACHE_B64`)作為設定值傳入,程式碼會將其解碼讀取。這屬於憑證傳遞的設計,未見內嵌的可疑 payload。",
+          "在 pyproject.toml、setup.py 與 Dockerfile 範圍內,未見 npm 生命週期腳本或安裝時任意執行的程式碼。Dockerfile 會執行 `npm ci`、`npm run build` 與 `pip install -r requirements.txt`,屬一般建置流程。"
+        ]
       },
-      "star_rating": 5,
-      "verdict": "工程成熟度與文件品質都相當高,是少見在個人量化分析類專案中把 CI/測試/多平台部署做到位的範例,值得關注與參考其架構設計。",
+      "star_rating": 4,
+      "verdict": "工程完整、文件與測試扎實且維護活躍,對有多市場股票分析或 LLM Agent 實作需求的人很值得關注。使用時需自行保管憑證,並把輸出視為參考而非投資建議。",
       "_mode": "full"
     }
   },
@@ -8163,10 +8183,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-11-10",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -8228,6 +8248,13 @@
         189657,
         792,
         7,
+        "Public repository for Agent Skills",
+        "Python"
+      ],
+      "2026-11-10": [
+        190982,
+        1038,
+        1,
         "Public repository for Agent Skills",
         "Python"
       ]
@@ -29522,10 +29549,10 @@
   },
   "milind-soni/OpenMausBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 6,
+    "last_seen": "2026-11-10",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 7,
     "stars_history": {
       "2026-10-30": [
         7479,
@@ -29566,6 +29593,13 @@
         18264,
         1439,
         3,
+        "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "TypeScript"
+      ],
+      "2026-11-10": [
+        19677,
+        1587,
+        11,
         "Open-source Grok Bot alternative with a virtual machine that bots can use",
         "TypeScript"
       ]
@@ -31147,10 +31181,10 @@
   },
   "vercel-labs/agent-browser": {
     "first_seen": "2026-11-06",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-10",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-06": [
         45886,
@@ -31170,6 +31204,13 @@
         47608,
         815,
         5,
+        "Browser automation CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-10": [
+        48465,
+        916,
+        7,
         "Browser automation CLI for AI agents",
         "Rust"
       ]
@@ -31656,10 +31697,10 @@
   },
   "meta/astryx": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-10",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-08": [
         14531,
@@ -31672,6 +31713,13 @@
         16805,
         875,
         6,
+        "An open source design system that's fully customizable and agent ready",
+        "TypeScript"
+      ],
+      "2026-11-10": [
+        20067,
+        3278,
+        2,
         "An open source design system that's fully customizable and agent ready",
         "TypeScript"
       ]
@@ -31715,10 +31763,10 @@
   },
   "sherlock-project/sherlock": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-10",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-08": [
         100474,
@@ -31731,6 +31779,13 @@
         103535,
         2373,
         1,
+        "Hunt down social media accounts by username across social networks",
+        "Python"
+      ],
+      "2026-11-10": [
+        107040,
+        4267,
+        3,
         "Hunt down social media accounts by username across social networks",
         "Python"
       ]
@@ -31949,15 +32004,22 @@
   },
   "anthropics/claude-quickstarts": {
     "first_seen": "2026-11-09",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-09": [
         19423,
         32,
         4,
+        "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+        "Python"
+      ],
+      "2026-11-10": [
+        20019,
+        551,
+        5,
         "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
         "Python"
       ]
@@ -32002,15 +32064,22 @@
   },
   "google-deepmind/mujoco": {
     "first_seen": "2026-11-09",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-10",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-09": [
         16420,
         41,
         8,
+        "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+        "C++"
+      ],
+      "2026-11-10": [
+        16909,
+        574,
+        4,
         "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
         "C++"
       ]
@@ -32045,6 +32114,115 @@
       },
       "star_rating": 5,
       "verdict": "機器人與強化學習領域的業界標準物理引擎,成熟、文件與測試俱佳且持續活躍維護,從事模擬或強化學習的 AI 研發工程師值得長期關注與使用。",
+      "_mode": "full"
+    }
+  },
+  "garrytan/gbrain": {
+    "first_seen": "2026-11-10",
+    "last_seen": "2026-11-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-10": [
+        32151,
+        216,
+        6,
+        "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-10",
+    "analysis": {
+      "one_liner": "Garry Tan 打造的 AI 代理長期記憶層:帶來源的事實儲存、知識圖譜與綜合回答,可透過 MCP 供多個代理共用。",
+      "summary": "GBrain 是以 TypeScript/Bun 實作、MIT 授權的自架代理記憶系統,把事實連同來源儲存,支援修正與撤回,並可讓 Claude Code、Codex、ChatGPT 等代理透過 MCP 共用同一份記憶。可從免金鑰的關鍵字檢索起步,再加上語意搜尋、帶引用的綜合回答、型別化知識圖譜與背景豐富化(dream cycle)。作者聲稱其正式環境有逾 15 萬頁、66 個排程工作。",
+      "category": "ai-ml",
+      "highlights": [
+        "免金鑰起步(PGLite + 關鍵字檢索),之後再逐步啟用語意搜尋與綜合回答",
+        "綜合層輸出帶引用的答案,並明示「大腦尚不知道什麼」的缺口分析",
+        "型別化知識圖譜,README 稱 BrainBench 關係問題 R@5 由 0.6626 提升至 0.7241",
+        "`gbrain mcp expose` 可經 Tailscale 對外提供 MCP;`gbrain setup` 支援 --dry-run 預覽與 --remove 還原",
+        "提供 llms.txt、AGENTS.md、CLAUDE.md,對代理友善,並說明共享大腦的信任邊界與限制"
+      ],
+      "use_cases": [
+        "為 Claude Code / Codex 等編碼代理加上跨工作階段、可稽核的長期記憶",
+        "個人或團隊的「第二大腦」,自動整理會議、郵件、人物與公司資料",
+        "會議前準備、關係查詢等需要帶來源綜合答案的情境",
+        "透過 MCP 在多個代理與裝置間共用同一份記憶"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 內容詳盡,有安裝路徑、範例、邊界與信任模型說明,並附大量延伸文件。僅憑 README 評估,未檢視程式碼與測試(README 提到有授權相關測試)。最近才推送、熱度高,維護活躍;部分數據為作者自述,未獨立驗證。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的託管版安裝流程使用 `curl -sSL ... | bash`,並自行註明為 macOS/Linux 安裝腳本、建議執行前先閱讀。",
+          "自架方式為 `bun install -g github:garrytan/gbrain#stable`;README 警告 npm 上同名 `gbrain` 套件與本專案無關,不應安裝。",
+          "`gbrain setup` 會修改 `~/.claude/CLAUDE.md` 或 Codex 的 AGENTS.md 並設定 MCP 與 hook,README 說明可用 --dry-run 預覽、--remove 還原。",
+          "README 說明已設定的雲端嵌入/重排/合成供應商會收到文字內容,遠端 MCP 暴露需注意授權邊界。",
+          "本次僅依 README 評估,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想為編碼代理建立可控、可跨代理共用長期記憶的工程師值得關注;安裝前請先閱讀腳本與記憶邊界文件。",
+      "_mode": "light"
+    }
+  },
+  "homeassistant-ai/ha-mcp": {
+    "first_seen": "2026-11-10",
+    "last_seen": "2026-11-10",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-10": [
+        5975,
+        31,
+        10,
+        "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-10",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "讓 Claude、ChatGPT 等 AI 助理透過 MCP 協定設定並自動化 Home Assistant 的伺服器,提供 87 個工具。",
+      "summary": "ha-mcp 是以 Python 與 FastMCP 打造的 Home Assistant MCP 伺服器,讓 AI 助理能查詢、設定自動化、管理裝置與備份。可透過 HACS 整合在 HA 內部執行,也支援 HA 附加元件、Docker、PyPI/uvx 與 stdio 等多種部署方式,並提供唯讀模式、OIDC 驗證等控管機制。",
+      "highlights": [
+        "提供 87 個工具,涵蓋實體、自動化、儀表板、備份與設定管理",
+        "多種部署方式:HACS/Marketplace 行程內整合、附加元件、Docker、uvx、stdio",
+        "內建唯讀模式(隱藏寫入工具並於呼叫時攔截,採 fail-closed 設計)、秘密 URL 與 OIDC/HA 登入驗證",
+        "將 fastmcp、mcp、websockets 內嵌(vendor)以避免與 Home Assistant 核心相依衝突",
+        "CI 完整:E2E、HAOS E2E、CodeQL、效能測試、Renovate/Dependabot 等工作流程"
+      ],
+      "use_cases": [
+        "用自然語言讓 Claude 建立、除錯 Home Assistant 自動化與腳本",
+        "在家中網路或透過 Nabu Casa 遠端以 AI 管理智慧家居",
+        "研究大型 MCP 伺服器的設計(工具目錄、唯讀策略、權限分層)",
+        "以唯讀模式讓 AI 診斷 HA 設定而不改動系統"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件詳盡,含安裝精靈、各種部署說明與網站;CI 工作流程數量龐大(E2E/HAOS E2E/CodeQL/效能測試),版本號已達 9.x 並持續頻繁推送。程式碼註解清楚、模組劃分明確(如 read_only.py 的 fail-closed 設計)。本次僅抽樣檢視部分檔案,未逐一驗證測試內容。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "此工具的本質是讓 AI 以管理員權限的 Home Assistant 存取權杖操作系統,可修改自動化、設定與備份;建議使用專用管理員帳號、僅限本機存取,並視需要啟用唯讀模式",
+          "README 提供 `curl ... | sh` 的一行安裝指令(scripts/install.sh、install-macos.sh、install-linux.sh)與 Windows 的 `irm ... | iex`,會從 raw.githubusercontent.com 下載並執行腳本;install.sh 另會執行 `curl https://astral.sh/uv/install.sh | sh` 安裝 uv,屬常見做法,但執行前建議先檢視內容",
+          "遠端存取以 webhook 秘密 URL 作為憑證,URL 外洩即可存取伺服器,可改用 ha_auth 或 OIDC 模式",
+          "專案內嵌(vendor)fastmcp、mcp、websockets 套件副本,審查相依性時需注意這些內嵌程式碼的版本與更新",
+          "README 說明直接 stdio 模式有已知傳輸問題,官方不建議正式使用",
+          "未在 pyproject.toml 發現安裝期自訂腳本;依賴套件名稱皆為常見套件,未見可疑拼字仿冒"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟度高、維護活躍的 Home Assistant MCP 實作,對智慧家居玩家與 MCP 開發者都值得關注;使用時請留意管理員權杖的權限範圍。",
       "_mode": "full"
     }
   }
