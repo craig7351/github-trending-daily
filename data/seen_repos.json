@@ -786,8 +786,8 @@
   },
   "mattpocock/skills": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-11-08",
-    "days_on_trending": 6,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
         186743,
@@ -999,6 +999,13 @@
         4,
         "Skills for Real Engineers. Straight from my .agents directory.",
         "Shell"
+      ],
+      "2026-11-11": [
+        320923,
+        1225,
+        12,
+        "Skills for Real Engineers. Straight from my .agents directory.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-10-31",
@@ -1040,8 +1047,8 @@
       "verdict": "想讓 coding agent 更有紀律的工程師值得關注並挑選採用;內容是提示而非程式碼,風險低,最大價值在於工作流設計與可改造性。",
       "_mode": "full"
     },
-    "total_days_on_trending": 31,
-    "consecutive_days_on_trending": 6
+    "total_days_on_trending": 32,
+    "consecutive_days_on_trending": 1
   },
   "Lordog/dive-into-llms": {
     "first_seen": "2026-07-25",
@@ -6249,10 +6256,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-10-10",
+    "last_seen": "2026-11-11",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 18,
+    "total_days_on_trending": 19,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -6379,43 +6386,51 @@
         8,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
+      ],
+      "2026-11-11": [
+        115172,
+        465,
+        3,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-10-04",
+    "last_analyzed": "2026-11-11",
     "analysis": {
-      "one_liner": "Addy Osmani 打造的生產級 AI 編碼代理技能包,涵蓋從定義、規劃、實作到上線的完整開發生命週期。",
-      "summary": "agent-skills 將資深工程師的工作流程與品質關卡(spec、plan、build、test、review、ship)編成 25 個 SKILL.md 技能與 9 個斜線指令,並附子代理(code-reviewer、security-auditor 等)。支援 Claude Code、Cursor、Codex、Gemini CLI、Antigravity、Copilot、Windsurf、OpenCode 等多種代理,可用 npx skills 或原生 plugin 方式安裝。解決的問題是讓 AI 代理在各開發階段遵循一致、可驗證的工程實務。",
-      "category": "devtool",
+      "one_liner": "為 AI 程式代理打造的 25 個生產級工程技能(Skills)與斜線指令,涵蓋從需求、規劃、實作、測試、審查到上線的完整開發流程。",
+      "summary": "agent-skills 把資深工程師的工作流程與品質關卡寫成可重複使用的 SKILL.md,再搭配 /spec、/plan、/build、/test、/review、/ship 等 9 個斜線指令與 4 個子代理(agent)。它同時支援 Claude Code、Codex、Cursor、Gemini CLI、Antigravity、Windsurf、OpenCode 等多種工具,讓代理在各開發階段遵循一致的標準。專案內建 eval 案例與驗證腳本,用來檢查技能的觸發與路由是否正確。",
+      "category": "ai-ml",
       "highlights": [
-        "25 個涵蓋完整生命週期的技能,例如 TDD、規格驅動開發、程式碼審查、安全強化、效能優化,加上 9 個 /spec、/plan、/build 等斜線指令",
-        "跨代理相容:同時提供 Claude plugin、Codex plugin、Gemini TOML 指令與 Antigravity、OpenCode 設定,並附各平台安裝文件",
-        "有技能 lint、指令一致性、版本、參考連結等驗證腳本,以及 evals 觸發/路由評測(CI 要求 rank1 ≥ 95)",
-        "附 hooks(session-start、sdd-cache 的 WebFetch 快取、simplify-ignore),每個都有對應 shell 測試",
-        "CI 在 Ubuntu、macOS、Windows 三平台執行,並實際測試 plugin 安裝流程"
+        "25 個涵蓋完整生命週期的技能(TDD、安全強化、程式碼審查、可觀測性、規格驅動開發等),並有 9 個對應指令",
+        "跨工具支援:Claude Code 外掛市集、npx skills、Codex、Gemini CLI、Antigravity、Cursor 等都有設定文件",
+        "每個技能都有 evals/cases 的 JSON 測試案例,CI 以 run-evals 要求 rank1 命中率至少 95%",
+        "提供 session-start、sdd-cache、simplify-ignore 等 hooks,並附有對應的 shell 回歸測試",
+        "CI 在 Ubuntu、macOS、Windows 上驗證技能內容、指令同步、版本一致性與外掛安裝"
       ],
       "use_cases": [
-        "為團隊的 Claude Code 或 Cursor 導入一致的 AI 開發流程與品質關卡",
-        "挑選單一技能(如 code-review-and-quality、test-driven-development)強化現有代理工作流",
-        "作為撰寫自家 SKILL.md、plugin 與 evals 的參考範本",
-        "跨多種 AI 編碼工具統一維護同一套工程規範"
+        "在團隊的 Claude Code 或 Cursor 中導入一致的規格、規劃、TDD、審查與上線流程",
+        "挑選單一技能(例如 code-review-and-quality、test-driven-development)補強現有代理工作流程",
+        "作為撰寫與評測自家 SKILL.md、指令與子代理的參考範本",
+        "在多種 AI 編碼工具之間維持相同的工程規範"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 清楚,另有 docs/ 下各代理的安裝指南、技能結構說明與貢獻規範。測試涵蓋驗證器單元測試、eval 執行器、hook shell 測試,CI 跨三種作業系統並做 plugin 安裝煙霧測試。最近仍有推送,維護活躍。內容以 Markdown 技能為主,JavaScript 僅用於驗證與評測腳本,程式碼風格整齊。技能的實際效果仍取決於所用代理與模型。"
+        "comment": "文件完整:README、docs/ 內有各工具的設定指南、技能結構說明與貢獻規範。CI 相當扎實,包含技能 lint、版本驗證、指令同步檢查、eval 路由門檻、hooks 回歸測試與跨三種作業系統的矩陣測試。技能本身是 Markdown 內容,『程式碼』主要是驗證腳本與 hooks。最近仍有推送,更新頻繁。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "未發現 package.json,因此沒有 npm 的 preinstall/postinstall 等生命週期腳本;也未發現混淆程式碼或內嵌的 base64 payload",
-          "hooks/sdd-cache-pre.sh 與 sdd-cache-post.sh 是 Claude Code 的 WebFetch hook,會用 curl 對使用者提供的 URL 發出請求以重新驗證快取,並將快取寫入專案的 .claude/sdd-cache/;啟用 hook 前建議先了解其行為",
-          "README 的安裝方式為 npx skills add(使用第三方 skills CLI)以及各代理的 plugin 安裝,會從 GitHub 下載並載入技能內容;技能與 hooks 會影響代理行為,建議安裝前先檢視內容",
-          "CI 設定使用 npm install -g @anthropic-ai/claude-code 做驗證,僅限 GitHub Actions 環境,不影響使用者安裝"
+          "專案沒有 package.json,也沒有 npm 的 preinstall、postinstall 等生命週期腳本。",
+          "README 的安裝方式是 `npx skills add addyosmani/agent-skills`,會執行第三方 skills CLI(vercel-labs/skills)並寫入技能檔案;執行前可先確認該套件來源。",
+          "hooks/sdd-cache-pre.sh 是 WebFetch 的 PreToolUse hook,會用 curl 對代理要抓取的 URL 發出 HEAD 重新驗證請求,命中快取時以 exit 2 回傳先前存的內容給代理;快取內容會被代理當成網頁結果,啟用前建議理解此行為。",
+          "hooks/simplify-ignore.sh 會在代理 Read 檔案時暫時改寫磁碟上的檔案(以佔位符取代區塊並備份),Stop 時再還原;啟用前建議確認備份與還原行為,並事先做好版本控制。",
+          "未發現 curl|bash、混淆程式碼、內嵌 base64 載荷、寫死 IP 或已提交的二進位檔。"
         ]
       },
       "star_rating": 4,
-      "verdict": "結構完整、跨代理相容且有 CI 與評測支撐,是目前少見工程化程度高的 agent skills 集合,值得 AI 研發工程師關注並挑選採用。",
+      "verdict": "內容與工程紀律都屬上乘的代理技能集,CI 與 eval 機制完整,對 Claude Code、Codex、Cursor 等使用者值得一試;啟用 hooks 前先看過其行為即可。",
       "_mode": "full"
     }
   },
@@ -8183,10 +8198,10 @@
   },
   "anthropics/skills": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-11-10",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-12": [
         168130,
@@ -8255,6 +8270,13 @@
         190982,
         1038,
         1,
+        "Public repository for Agent Skills",
+        "Python"
+      ],
+      "2026-11-11": [
+        192336,
+        1679,
+        2,
         "Public repository for Agent Skills",
         "Python"
       ]
@@ -31181,10 +31203,10 @@
   },
   "vercel-labs/agent-browser": {
     "first_seen": "2026-11-06",
-    "last_seen": "2026-11-10",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-11-06": [
         45886,
@@ -31211,6 +31233,13 @@
         48465,
         916,
         7,
+        "Browser automation CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-11": [
+        49218,
+        780,
+        8,
         "Browser automation CLI for AI agents",
         "Rust"
       ]
@@ -31697,10 +31726,10 @@
   },
   "meta/astryx": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-10",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-08": [
         14531,
@@ -31720,6 +31749,13 @@
         20067,
         3278,
         2,
+        "An open source design system that's fully customizable and agent ready",
+        "TypeScript"
+      ],
+      "2026-11-11": [
+        22845,
+        3108,
+        1,
         "An open source design system that's fully customizable and agent ready",
         "TypeScript"
       ]
@@ -31763,10 +31799,10 @@
   },
   "sherlock-project/sherlock": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-10",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-08": [
         100474,
@@ -31786,6 +31822,13 @@
         107040,
         4267,
         3,
+        "Hunt down social media accounts by username across social networks",
+        "Python"
+      ],
+      "2026-11-11": [
+        108982,
+        2393,
+        9,
         "Hunt down social media accounts by username across social networks",
         "Python"
       ]
@@ -31884,10 +31927,10 @@
   },
   "ranxianglei/billion-context": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-09",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-08": [
         4615,
@@ -31900,6 +31943,13 @@
         5157,
         460,
         9,
+        "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+        "TypeScript"
+      ],
+      "2026-11-11": [
+        6314,
+        375,
+        11,
         "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
         "TypeScript"
       ]
@@ -32004,10 +32054,10 @@
   },
   "anthropics/claude-quickstarts": {
     "first_seen": "2026-11-09",
-    "last_seen": "2026-11-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-09": [
         19423,
@@ -32020,6 +32070,13 @@
         20019,
         551,
         5,
+        "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+        "Python"
+      ],
+      "2026-11-11": [
+        20496,
+        531,
+        4,
         "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
         "Python"
       ]
@@ -32064,10 +32121,10 @@
   },
   "google-deepmind/mujoco": {
     "first_seen": "2026-11-09",
-    "last_seen": "2026-11-10",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-09": [
         16420,
@@ -32080,6 +32137,13 @@
         16909,
         574,
         4,
+        "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+        "C++"
+      ],
+      "2026-11-11": [
+        17355,
+        456,
+        5,
         "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
         "C++"
       ]
@@ -32173,15 +32237,22 @@
   },
   "homeassistant-ai/ha-mcp": {
     "first_seen": "2026-11-10",
-    "last_seen": "2026-11-10",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-11",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-10": [
         5975,
         31,
         10,
+        "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+        "Python"
+      ],
+      "2026-11-11": [
+        6664,
+        790,
+        7,
         "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
         "Python"
       ]
@@ -32223,6 +32294,113 @@
       },
       "star_rating": 4,
       "verdict": "成熟度高、維護活躍的 Home Assistant MCP 實作,對智慧家居玩家與 MCP 開發者都值得關注;使用時請留意管理員權杖的權限範圍。",
+      "_mode": "full"
+    }
+  },
+  "we-promise/sure": {
+    "first_seen": "2026-11-11",
+    "last_seen": "2026-11-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-11": [
+        11958,
+        159,
+        6,
+        "The personal finance app for everyone (by everyone)",
+        "Ruby"
+      ]
+    },
+    "last_analyzed": "2026-11-11",
+    "analysis": {
+      "one_liner": "Maybe Finance 已停止維護後,由社群接手的自架式個人理財 Rails 應用,內建 AI 助理與大量銀行/券商/加密貨幣串接。",
+      "summary": "Sure 是 Maybe Finance 專案的社群分支,採用 AGPL-3.0 授權。它是功能完整的個人理財與資產管理應用,可用 Docker 自架,並提供網頁、macOS 桌面、行動 App、API 與 LLM agent 等多種用戶端。專案解決了原專案停擺後,使用者仍需要開源、可自架理財工具的問題。",
+      "category": "app",
+      "highlights": [
+        "Rails + PostgreSQL + Redis/Sidekiq 技術棧,以 Docker、Helm chart 及 Render、PikaPods 等一鍵部署選項支援自架",
+        "內建 AI 助理,可串接 OpenAI 或本地 Ollama,另有 LLM 評測工作流程 (llm-evals)",
+        "model 層涵蓋大量金融資料來源,如 Coinbase、Kraken、IBKR、Enable Banking 等,以及 Mint、Monarch 匯入",
+        "測試與 CI 完整:test/models 下有近 190 個測試檔,CI 含 Brakeman、importmap 稽核,並用 SHA 固定 GitHub Actions 版本",
+        "提供 AGENTS.md、CLAUDE.md、.cursor 規則等,對 AI 輔助開發友善"
+      ],
+      "use_cases": [
+        "想自架一套隱私可控的個人或家庭財務追蹤系統",
+        "需要整合多家銀行、券商與加密貨幣帳戶,集中檢視淨資產與現金流",
+        "研究大型 Rails 專案架構與 AI 助理整合到財務應用的實作",
+        "從 Mint、Monarch 等服務遷移資料到開源方案"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 有背景說明、自架與開發指南,並連到 docs/ 下的詳細文件。測試涵蓋廣,CI 工作流程有 17 個,涵蓋 Rails、行動版、桌面版與 Helm。最近仍有推送,維護活躍。程式碼風格一致,註解詳細(如 account.rb 內說明預計餘額的邏輯)。專案規模大,上手門檻不低。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "Dockerfile 以非 root 使用者 (UID 1000) 執行,建置階段使用 SECRET_KEY_BASE_DUMMY,未將祕密寫入映像",
+          "docs/hosting/ai.md 的文件建議以 curl 下載 ollama.com/install.sh 並用 sh 執行;.devcontainer/Dockerfile 也以 curl 取得 NodeSource 的 setup 腳本再用 bash 執行。兩者為常見安裝方式,但使用前建議自行檢視",
+          "README 內的示範資料帳密 (user@example.com / Password1!) 僅供本機開發,自架正式環境時不應使用",
+          "此應用處理敏感財務資料,並會串接第三方銀行及 LLM 服務,自架時需妥善管理 API 金鑰與資料庫備份,並留意 AI 功能會將資料送往外部服務",
+          "flutter-build.yml 會從 secret 解碼 Android keystore,屬 CI 簽章的常見做法;未發現混淆程式碼或內嵌大型編碼資料"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟、活躍且測試完整的開源個人理財方案,適合想自架理財系統或研究大型 Rails 與 AI 整合的人關注;使用時留意財務資料安全即可。",
+      "_mode": "full"
+    }
+  },
+  "tokio-rs/topcoat": {
+    "first_seen": "2026-11-11",
+    "last_seen": "2026-11-11",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-11": [
+        6814,
+        192,
+        10,
+        "A batteries-included framework for building web apps",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-11",
+    "analysis": {
+      "one_liner": "tokio-rs 出品、以 Rust 打造的「全包式」全端 Web 框架,伺服器端渲染搭配可同時編譯為 JS 的 Rust 表達式。",
+      "summary": "Topcoat 是 Tokio 組織推出的模組化全端 Rust 框架,提供 `view!` 巨集模板、async 元件、模組式路由、資產打包、Tailwind 整合、Session/Cookie、Mail、OpenAPI、l10n 等功能。其特色是 `$(...)` 表達式:同一段型別檢查過的 Rust 程式碼在伺服器初次渲染,並轉譯成 JavaScript 於瀏覽器重跑,不需 wasm 或前端建置。README 明確標示為早期實驗性專案,API 可能出現破壞性變更。",
+      "category": "framework",
+      "highlights": [
+        "`$(...)` 雙語表達式:同一段 Rust 同時在伺服器渲染並轉成 JS 在瀏覽器執行,免 wasm、免前端建置流程",
+        "`#[shard]` 元件在參數變動時由伺服器重新渲染並原地替換 HTML,async 元件可直接查詢資料庫",
+        "依模組結構自動推導路由(module_router),並提供 `topcoat fmt` 格式化巨集內容",
+        "Topcoat UI 仿 shadcn/ui,以 CLI 將元件複製進專案可自由修改;內建 Tailwind(免 Node)、字型與圖示打包",
+        "workspace 含約 40 個 crate、眾多範例與 benchmark(對比 Next.js、Leptos、axum-maud),並附 llms.txt 與 AGENTS.md 供 AI 代理使用"
+      ],
+      "use_cases": [
+        "想以純 Rust 開發伺服器渲染、帶局部互動的全端網站或後台管理系統",
+        "評估 Rust 全端框架(對比 Leptos、axum + maud)的技術選型與研究",
+        "研究 Rust 巨集 DSL、Rust 轉 JS 表達式編譯等框架設計",
+        "在 Cloudflare Worker 等 wasm 環境部署 Rust Web 應用的實驗"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 結構完整,有程式碼範例、功能導覽與 Roadmap,另有 docs/、docs.rs 連結與 llms.txt。測試涵蓋廣:各巨集 crate、grammar、runtime coherence(Rust 與 JS 行為一致性)皆有 tests/,CLI 另有 starters 整合測試。CI 完整:test、clippy(-D warnings)、nightly fmt、docs、cargo-hack 各 feature、wasm、前端 lint/build/test、udeps,並以 release-plz 自動發佈。程式規範嚴格(unsafe_code = deny、clippy pedantic)。版本 0.12.x 且自述實驗性,API 尚不穩定。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "topcoat-tailwind 的 build 程式碼(crates/topcoat-tailwind/src/build/executable.rs)會透過 ureq 從 GitHub Releases 下載 Tailwind 可執行檔並執行,啟用該功能時需留意此網路下載行為",
+          "依賴 v8 crate(152.0.0),其 build script 會下載預先編譯的 V8 函式庫(CI 設定中有相關註解),首次建置需要網路",
+          "專案含多個 build.rs(topcoat-font、topcoat-ui registry、各 example 等)及 icon 功能的網路抓取(Iconify),屬建置期程式碼執行,Rust 專案常見;所見的 topcoat-font/build.rs 僅讀取本地 fonts.json 並產生程式碼",
+          "未發現 curl|bash 安裝腳本、混淆程式碼或內嵌的長 base64 payload;crates/topcoat-runtime/browser 與 topcoat-cli/browser 的 dist/ 為建置產物,CI 會檢查其與原始碼一致"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "由 tokio-rs 團隊維護、設計新穎且工程品質高的 Rust 全端框架;雖仍屬早期實驗階段,對關注 Rust Web 生態的人很值得追蹤與試用。",
       "_mode": "full"
     }
   }
