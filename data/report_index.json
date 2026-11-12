@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-12",
+    "analyzed": 4,
+    "cached": 6,
+    "deferred": 0,
+    "top_name": "GoogleChrome/modern-web-guidance-src",
+    "top_rating": 4
+  },
+  {
     "date": "2026-11-11",
     "analyzed": 3,
     "cached": 9,

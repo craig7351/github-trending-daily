@@ -6256,10 +6256,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-11-11",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 19,
+    "last_seen": "2026-11-12",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 20,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -6391,6 +6391,13 @@
         115172,
         465,
         3,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-11-12": [
+        115957,
+        787,
+        5,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -7581,10 +7588,10 @@
   },
   "ZhuLinsen/daily_stock_analysis": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-12",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-10": [
         61192,
@@ -7604,6 +7611,13 @@
         68855,
         506,
         9,
+        "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "Python"
+      ],
+      "2026-11-12": [
+        70253,
+        278,
+        2,
         "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
         "Python"
       ]
@@ -31203,10 +31217,10 @@
   },
   "vercel-labs/agent-browser": {
     "first_seen": "2026-11-06",
-    "last_seen": "2026-11-11",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-11-12",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-11-06": [
         45886,
@@ -31240,6 +31254,13 @@
         49218,
         780,
         8,
+        "Browser automation CLI for AI agents",
+        "Rust"
+      ],
+      "2026-11-12": [
+        49874,
+        708,
+        6,
         "Browser automation CLI for AI agents",
         "Rust"
       ]
@@ -31726,10 +31747,10 @@
   },
   "meta/astryx": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-11",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-12",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-11-08": [
         14531,
@@ -31755,6 +31776,13 @@
       "2026-11-11": [
         22845,
         3108,
+        1,
+        "An open source design system that's fully customizable and agent ready",
+        "TypeScript"
+      ],
+      "2026-11-12": [
+        24997,
+        2776,
         1,
         "An open source design system that's fully customizable and agent ready",
         "TypeScript"
@@ -32237,10 +32265,10 @@
   },
   "homeassistant-ai/ha-mcp": {
     "first_seen": "2026-11-10",
-    "last_seen": "2026-11-11",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-12",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-10": [
         5975,
@@ -32253,6 +32281,13 @@
         6664,
         790,
         7,
+        "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+        "Python"
+      ],
+      "2026-11-12": [
+        7372,
+        645,
+        8,
         "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
         "Python"
       ]
@@ -32299,15 +32334,22 @@
   },
   "we-promise/sure": {
     "first_seen": "2026-11-11",
-    "last_seen": "2026-11-11",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-12",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-11": [
         11958,
         159,
         6,
+        "The personal finance app for everyone (by everyone)",
+        "Ruby"
+      ],
+      "2026-11-12": [
+        12959,
+        1078,
+        7,
         "The personal finance app for everyone (by everyone)",
         "Ruby"
       ]
@@ -32401,6 +32443,209 @@
       },
       "star_rating": 4,
       "verdict": "由 tokio-rs 團隊維護、設計新穎且工程品質高的 Rust 全端框架;雖仍屬早期實驗階段,對關注 Rust Web 生態的人很值得追蹤與試用。",
+      "_mode": "full"
+    }
+  },
+  "GoogleChrome/modern-web-guidance-src": {
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-12": [
+        1755,
+        159,
+        3,
+        "",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-12",
+    "analysis": {
+      "one_liner": "Google Chrome 官方的 Modern Web Guidance 原始碼庫:把現代 Web 平台最佳實務做成給 coding agent 用的技能與 CLI,並附帶撰寫、評測與稽核這些指南的整套工具鏈。",
+      "summary": "此專案是 GoogleChrome/modern-web-guidance 的來源倉庫,提供約 200 多則以真實開發情境為單位的指南,涵蓋 CSS、表單、效能、無障礙、Passkey、Built-in AI 等現代瀏覽器 API。它透過 `npx modern-web-guidance` 的 search / retrieve / legacy-scan 指令,把精簡指南注入 Claude、Codex、Gemini 等 agent 的上下文,讓 agent 少用過時寫法。倉庫同時包含指南建置、RAG 檢索、LLM 評測 harness、grader 與儀表板。",
+      "category": "ai-ml",
+      "highlights": [
+        "指南以 token 效率為設計目標,並用評測剪掉模型本來就會的內容",
+        "提供 search、retrieve、legacy-scan 等 CLI,可掃描程式碼中的舊式寫法",
+        "內含 RAG 檢索基準、評測 harness、grader 校準與 Playwright 儀表板",
+        "Chrome、Edge、Firefox、MDN 團隊共同維護,並以 web-features 與 BCD 資料對照瀏覽器相容性",
+        "有 142 個以上單元測試檔,CI 涵蓋 typecheck、lint、測試、E2E 與建置產物差異檢查"
+      ],
+      "use_cases": [
+        "為 Claude Code、Codex、Gemini CLI 等 coding agent 安裝 Web 平台技能,減少生成過時 CSS/JS",
+        "用 legacy-scan 找出既有前端專案中可現代化的舊寫法",
+        "參考其 eval、grader、RAG 基準流程,建立自己的 agent 技能評測管線",
+        "查詢 Popover、Anchor Positioning、View Transitions 等新 API 的實作指引"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README、CONTRIBUTING、GOVERNANCE、AGENTS.md 與多份 SKILL.md 俱全。測試檔超過 140 個,涵蓋分析規則、建置、CLI、grading 與 dashboard。CI 工作流程以 commit SHA 固定 action 版本、權限設為 contents: read,並用 `git diff --exit-code` 檢查產物是否與原始碼一致。多個 workflow 與 dependabot 持續運作,最近一次推送在 2026-11-12,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 有 postinstall 腳本(`node src/core/postinstall.ts`),內容是刪除舊版重構後殘留的 node_modules、建置產物與空目錄,路徑限於倉庫根目錄下的固定清單,未見網路存取或外部下載。",
+          "pnpm 的 onlyBuiltDependencies 允許 esbuild、onnxruntime-node、protobufjs、sharp、@anthropic-ai/claude-code 執行建置腳本,屬常見的原生模組與 CLI 依賴,使用者應知悉。",
+          "CLI 內有 telemetry 模組(clearcut-logger、watchdog 與 sender,並有 telemetry-optout 測試),會向可設定的 Clearcut 端點回報使用資料。安裝前建議閱讀文件確認收集內容與退出方式。",
+          "未發現 curl|bash 安裝模式、混淆程式碼、內嵌 base64 載荷或被提交的二進位檔。依賴皆為知名套件(如 @openai/codex、@huggingface/transformers、@mdn/browser-compat-data),未見疑似仿冒名稱。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "Chrome 團隊主導、工程紀律扎實,對常用 coding agent 的前端開發者很實用,其評測與 grader 流程也值得 AI 研發人員參考;安裝前先確認 telemetry 設定即可。",
+      "_mode": "full"
+    }
+  },
+  "shadcn/improve": {
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-12": [
+        10881,
+        361,
+        4,
+        "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+        ""
+      ]
+    },
+    "last_analyzed": "2026-11-12",
+    "analysis": {
+      "category": "ai-ml",
+      "one_liner": "讓最強模型負責審計程式碼並撰寫計畫,再交由較便宜的模型執行的 Agent Skill。",
+      "summary": "improve 是 shadcn 發布的 Agent Skill(純 Markdown 提示詞與參考文件),讓高階模型掃描程式庫、找出問題與改進方向,並產出自包含的實作計畫(plans/*.md)。計畫內含程式碼摘錄、驗證指令與 STOP 條件,方便較弱的模型或人類照做;另提供 execute 與 reconcile 流程,可派遣子代理在隔離 worktree 執行並審查結果。",
+      "highlights": [
+        "核心理念明確:貴模型負責理解與規格化,便宜模型負責執行,「計畫即產品」且技能本身絕不修改原始碼",
+        "審計涵蓋九大類別(正確性、安全、效能、測試、技術債、依賴、DX、文件、方向),每個發現都附 file:line 證據、影響、工作量與信心度",
+        "內建 Vet 階段:由顧問重新閱讀引用的程式碼,剔除子代理誤報、by-design 行為與錯誤歸因,並記錄被拒絕項目避免重複",
+        "計畫為自包含設計:內嵌現況程式碼、每步附驗證指令與預期輸出、明確範圍界線與 STOP 條件,並記錄 git commit 以做 drift 檢查",
+        "execute / reconcile / --issues 形成閉環,執行者在隔離 worktree 工作,合併權仍在使用者手上;並有規則把倉庫內容視為資料以防 prompt injection"
+      ],
+      "use_cases": [
+        "在接手陌生程式庫時,用高階模型做一次完整審計並產出優先順序清單",
+        "PR 前使用 /improve branch 只審計當前分支變更",
+        "把重構或修補工作規格化後交給 Sonnet/Haiku 等較便宜模型執行,以控制成本",
+        "維護長期的改進 backlog,定期 reconcile 驗證已完成、被卡住或過期的計畫"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 1,
+        "activity": 3,
+        "comment": "README 清楚,SKILL.md 與三份 references 規則詳盡,並附實際範例計畫。專案本身是提示詞與文件集合,沒有程式碼測試與 CI(僅有 FUNDING.yml),因此測試評分偏低。最後推送時間為 2026-09-12,距今約兩個月,但內容完整、已具可用性。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "想用高階模型審計、低階模型落地的團隊值得關注;它是設計成熟的工作流提示詞,不是可執行工具,上手成本很低。",
+      "_mode": "full"
+    }
+  },
+  "openai/codex-security": {
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-12": [
+        11734,
+        52,
+        9,
+        "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm:https://www.npmjs.com/package/@openai/codex-security",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-12",
+    "analysis": {
+      "one_liner": "OpenAI 官方推出的 Codex Security CLI 與 TypeScript SDK,用 AI 代理掃描程式碼、驗證漏洞並產生修補。",
+      "summary": "openai/codex-security 是 npm 套件 @openai/codex-security 的原始碼,提供 `cs` / `codex-security` CLI、TypeScript SDK、GitHub Action 與 Codex 外掛。它能掃描整個 repo、指定路徑或 Git diff,進行 Standard/Deep 掃描,驗證候選漏洞、產生並驗證修補,也能匯入 Snyk、Checkmarx、Black Duck 等第三方掃描結果,匯出 SARIF/JSON/CSV,並串接 Linear、Jira、GitHub。掃描需登入 OpenAI 帳號或設定 API key。",
+      "category": "security",
+      "highlights": [
+        "完整漏洞生命週期:掃描、驗證、修補、驗證修補、去重與嚴重度分級,並可自訂 rubric",
+        "同時提供 CLI、TypeScript SDK、GitHub Action、容器與 Codex 外掛,方便整合進 CI",
+        "支援匯入 Snyk、Checkmarx、Black Duck、ArmorCode 等第三方掃描結果,並匯出 SARIF/JSON/CSV",
+        "支援 monorepo 多元件、多 repo 系統審查與可續跑的批次掃描(bulk scan)",
+        "文件詳盡,附有遙測、託管掃描、託管修補等專題文件,發佈流程含 provenance 與套件內容檢查"
+      ],
+      "use_cases": [
+        "在 CI 對 PR 或 diff 自動做 AI 輔助的安全審查",
+        "對既有大型程式碼庫做 Deep Scan 並產出含證據的報告",
+        "整合既有 SAST 工具的結果,再用 AI 驗證與去重、排定優先順序",
+        "用 SDK 打造內部的漏洞分流與自動修補流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "專案結構成熟:sdk/typescript/tests-ts 下有逾 300 個測試檔,涵蓋 CLI、API、驗證與各種匯入器;.github/workflows 有數十個 CI/發佈/工作流程品質檢查(含 zizmor、actionlint)。程式碼採嚴格型別、模組切分清楚。文件完整,最後推送為 2026-11-12,版本仍在快速迭代(0.9.1)。需注意核心掃描依賴 OpenAI 服務與帳號,並非完全離線可用。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "已檢查 sdk/typescript/package.json:未發現 preinstall / postinstall / prepare 等安裝期生命週期腳本;僅 prepack 為發佈時使用的建置步驟。",
+          "文件中的安裝方式為 `npm install --global @openai/codex-security`,未見 curl | bash 形式的安裝指令;搜尋唯一命中的 curl | sh 位於 evals/check-skills/fixtures 的測試夾具,網域為 training.example.invalid,屬評測用範例內容。",
+          "依賴包含 @openai/codex、@openai/codex-sdk、@linear/sdk、@octokit/core 等,名稱皆為常見的官方或知名套件,未見疑似仿冒名稱。",
+          "此工具會讀取本機 Codex 設定(CODEX_HOME/config.toml)、使用 OPENAI_API_KEY / CODEX_API_KEY 或 ChatGPT 登入,並將程式碼內容交由模型處理,使用者應留意程式碼與憑證的外送範圍及費用;telemetry 文件說明本機收據不會上傳,但模型請求會帶有屬性中繼資料。",
+          "工具會啟動子程序(Codex 執行環境與 Python 腳本)並可能產生修補,建議在隔離環境或 CI 中先行評估,並於套用修補前人工審閱。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "OpenAI 官方、工程品質高、測試與文件都相當完整的 AI 資安掃描工具,對需要把 AI 漏洞發現與修補接進 CI 的團隊很值得關注;唯需 OpenAI 帳號與費用,且程式碼會送往模型服務。",
+      "_mode": "full"
+    }
+  },
+  "TheAlgorithms/Java": {
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-12": [
+        67023,
+        51,
+        10,
+        "All Algorithms implemented in Java",
+        "Java"
+      ]
+    },
+    "last_analyzed": "2026-11-12",
+    "analysis": {
+      "one_liner": "以 Java 實作的經典演算法與資料結構教學合集,涵蓋排序、搜尋、動態規劃、圖論、回溯等上千個範例。",
+      "summary": "TheAlgorithms/Java 是 TheAlgorithms 系列中的 Java 版本,以教育為目的,將各類演算法與資料結構整理成獨立類別,依主題分成多個套件(backtracking、bitmanipulation、sorts 等),約有 1700 個檔案。專案使用 Maven 與 JDK 21 建置,搭配單元測試與多項靜態分析,適合作為學習與查閱的參考實作,而非生產環境函式庫。",
+      "category": "learning-resource",
+      "highlights": [
+        "涵蓋範圍極廣:src/main/java/com/thealgorithms 底下依主題分成大量套件,另有 DIRECTORY.md 作為完整索引",
+        "CI 完整:build.yml 執行 mvn verify,並串接 Checkstyle、SpotBugs(含 fb-contrib、findsecbugs)與 PMD;另有 CodeQL、Infer、clang-format 與專案結構檢查",
+        "編譯設定嚴格:使用 -Xlint:all 搭配 -Werror,並以 JaCoCo 蒐集覆蓋率上傳 Codecov",
+        "測試與主程式對應(例如 sorts/QuickSortTest.java),使用 JUnit、AssertJ、Mockito",
+        "授權為 MIT,有 CONTRIBUTING、issue/PR 範本與 dependabot,社群貢獻流程成熟"
+      ],
+      "use_cases": [
+        "學習或複習演算法與資料結構,對照 Java 實作",
+        "面試準備與刷題時查閱各類經典解法",
+        "作為教學素材,或當成參與開源貢獻(如 Hacktoberfest)的入門練習",
+        "在 Java 專案中參考特定演算法的寫法,再自行改寫為生產級程式"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 很精簡,主要靠 CONTRIBUTING.md 與 DIRECTORY.md 補足。工程紀律相當好:有完整 CI、多重靜態分析與覆蓋率。抽樣的 NQueens.java 有清楚的題目說明與複雜度註解,但使用 static 的共用 Set 儲存狀態,並非執行緒安全,並行呼叫時可能互相干擾。專案自述僅供教育用途,效率不一定優於標準函式庫。最後推送時間為 2026-11-11,維護活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "以 Java 學演算法最值得收藏的參考庫之一,工程品質與維護狀況都很好;適合學習與查閱,但不建議直接當成生產用函式庫。",
       "_mode": "full"
     }
   }
