@@ -2137,7 +2137,7 @@
   },
   "nodejs/node": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-10-24",
+    "last_seen": "2026-11-13",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-27": [
@@ -2147,6 +2147,13 @@
       "2026-10-24": [
         122867,
         66,
+        8,
+        "Node.js JavaScript runtime ✨🐢🚀✨",
+        "JavaScript"
+      ],
+      "2026-11-13": [
+        123601,
+        62,
         8,
         "Node.js JavaScript runtime ✨🐢🚀✨",
         "JavaScript"
@@ -2188,7 +2195,7 @@
       "verdict": "Node.js 是基礎設施級專案,對 JS/AI 工程師而言是必備工具。它是長期值得追蹤的核心專案,但今日上榜只是熱度現象,不代表有新功能。",
       "_mode": "light"
     },
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "consecutive_days_on_trending": 1
   },
   "pbakaus/impeccable": {
@@ -5440,10 +5447,10 @@
   },
   "Alishahryar1/free-claude-code": {
     "first_seen": "2026-08-04",
-    "last_seen": "2026-10-13",
+    "last_seen": "2026-11-13",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-08-04": [
         44046,
@@ -5478,6 +5485,13 @@
         626,
         9,
         "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+        "Python"
+      ],
+      "2026-11-13": [
+        69292,
+        415,
+        12,
+        "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
         "Python"
       ]
     },
@@ -6256,10 +6270,10 @@
   },
   "addyosmani/agent-skills": {
     "first_seen": "2026-08-06",
-    "last_seen": "2026-11-12",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 20,
+    "last_seen": "2026-11-13",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 21,
     "stars_history": {
       "2026-08-06": [
         81987,
@@ -6398,6 +6412,13 @@
         115957,
         787,
         5,
+        "Production-grade engineering skills for AI coding agents.",
+        "JavaScript"
+      ],
+      "2026-11-13": [
+        116674,
+        816,
+        9,
         "Production-grade engineering skills for AI coding agents.",
         "JavaScript"
       ]
@@ -8147,10 +8168,10 @@
   },
   "nvm-sh/nvm": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-11-13",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-08-12": [
         94488,
@@ -8170,6 +8191,13 @@
         95456,
         52,
         4,
+        "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+        "Shell"
+      ],
+      "2026-11-13": [
+        96015,
+        63,
+        3,
         "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
         "Shell"
       ]
@@ -29680,10 +29708,10 @@
   },
   "CopilotKit/OpenBot": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-11-02",
+    "last_seen": "2026-11-13",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-10-30": [
         8150,
@@ -29703,6 +29731,13 @@
         9525,
         175,
         13,
+        "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+        "TypeScript"
+      ],
+      "2026-11-13": [
+        11613,
+        298,
+        11,
         "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
         "TypeScript"
       ]
@@ -31747,10 +31782,10 @@
   },
   "meta/astryx": {
     "first_seen": "2026-11-08",
-    "last_seen": "2026-11-12",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-11-13",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-11-08": [
         14531,
@@ -31784,6 +31819,13 @@
         24997,
         2776,
         1,
+        "An open source design system that's fully customizable and agent ready",
+        "TypeScript"
+      ],
+      "2026-11-13": [
+        26544,
+        1830,
+        10,
         "An open source design system that's fully customizable and agent ready",
         "TypeScript"
       ]
@@ -32334,10 +32376,10 @@
   },
   "we-promise/sure": {
     "first_seen": "2026-11-11",
-    "last_seen": "2026-11-12",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-13",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-11": [
         11958,
@@ -32350,6 +32392,13 @@
         12959,
         1078,
         7,
+        "The personal finance app for everyone (by everyone)",
+        "Ruby"
+      ],
+      "2026-11-13": [
+        13920,
+        967,
+        5,
         "The personal finance app for everyone (by everyone)",
         "Ruby"
       ]
@@ -32448,16 +32497,23 @@
   },
   "GoogleChrome/modern-web-guidance-src": {
     "first_seen": "2026-11-12",
-    "last_seen": "2026-11-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-12": [
         1755,
         159,
         3,
         "",
+        "TypeScript"
+      ],
+      "2026-11-13": [
+        2953,
+        739,
+        1,
+        "Keep your coding agent up to date with the latest web best practices",
         "TypeScript"
       ]
     },
@@ -32549,15 +32605,22 @@
   },
   "openai/codex-security": {
     "first_seen": "2026-11-12",
-    "last_seen": "2026-11-12",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-13",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-12": [
         11734,
         52,
         9,
+        "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm:https://www.npmjs.com/package/@openai/codex-security",
+        "TypeScript"
+      ],
+      "2026-11-13": [
+        12427,
+        643,
+        2,
         "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm:https://www.npmjs.com/package/@openai/codex-security",
         "TypeScript"
       ]
@@ -32647,6 +32710,70 @@
       "star_rating": 4,
       "verdict": "以 Java 學演算法最值得收藏的參考庫之一,工程品質與維護狀況都很好;適合學習與查閱,但不建議直接當成生產用函式庫。",
       "_mode": "full"
+    }
+  },
+  "pookjw/HermesEnabler": {
+    "first_seen": "2026-11-13",
+    "last_seen": "2026-11-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-13": [
+        1538,
+        218,
+        4,
+        "Enable Hermès Watch Faces on any Apple Watch devices",
+        "Objective-C"
+      ]
+    }
+  },
+  "QwenLM/qwen-code": {
+    "first_seen": "2026-11-13",
+    "last_seen": "2026-11-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-13": [
+        29812,
+        151,
+        6,
+        "An open-source AI coding agent that lives in your terminal.",
+        "TypeScript"
+      ]
+    }
+  },
+  "ashhart/TensorFold": {
+    "first_seen": "2026-11-13",
+    "last_seen": "2026-11-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-13": [
+        1938,
+        54,
+        7,
+        "LLM Inference Engine for Metal, CUDA and Vulkan.",
+        "Zig"
+      ]
+    }
+  },
+  "ggml-org/llama.cpp": {
+    "first_seen": "2026-11-13",
+    "last_seen": "2026-11-13",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-13": [
+        134557,
+        176,
+        13,
+        "LLM inference in C/C++",
+        "C++"
+      ]
     }
   }
 }
