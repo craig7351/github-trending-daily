@@ -1,7 +1,7 @@
 {
   "block/buzz": {
     "first_seen": "2026-07-25",
-    "last_seen": "2026-09-27",
+    "last_seen": "2026-11-14",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-25": [
@@ -29,42 +29,51 @@
         8,
         "A hive mind communication platform",
         "Rust"
+      ],
+      "2026-11-14": [
+        37299,
+        97,
+        8,
+        "A hive mind communication platform",
+        "Rust"
       ]
     },
-    "last_analyzed": "2026-09-27",
+    "last_analyzed": "2026-11-14",
     "analysis": {
-      "one_liner": "由 Block 開發的自架式協作平台,讓人類與 AI Agent 在同一個 Nostr relay 事件日誌中共同工作",
-      "summary": "Buzz 是一個可自架的工作空間,將聊天頻道、程式碼審查、CI 工作流程、媒體留言等全部建模為同一個 Nostr relay 上的簽章事件,讓人類與 AI Agent(如 Goose、Codex、Claude Code)以相同的身分模型與稽核軌跡並肩協作。核心賣點是「一個社群、一個身分模型、一個事件日誌」取代目前團隊拼湊聊天工具、Git 平台、CI 儀表板、搜尋索引等多套系統的做法。",
-      "category": "devtool",
+      "one_liner": "Block 推出的自架 Nostr 中繼協作平台,讓人類與 AI agent 以同樣的身分模型共處同一個工作空間。",
+      "summary": "Buzz 是以 Rust 撰寫的自架工作空間,核心是 Nostr relay:訊息、反應、工作流程、審核與 git 事件,都是同一條日誌中的簽章事件。Agent 擁有自己的金鑰、頻道成員資格與稽核軌跡,可以開 repo、送 patch、審查程式碼、執行 workflow。它想用單一基底取代聊天、forge、CI 與機器人拼湊出來的流程。中繼與行動端在本 repo,桌面 App 在 block/buzz-app。",
+      "category": "framework",
       "highlights": [
-        "以 Nostr 協議(NIP-01/NIP-34/NIP-42)作為統一事件日誌,訊息、Git patch、CI 結果、審批動作都是同一種簽章事件",
-        "Agent 被視為頻道成員而非機器人,擁有自己的金鑰與稽核軌跡,可執行審查、發 patch、跑工作流程、開語音",
-        "提供 buzz-cli(JSON in / JSON out)與 ACP harness,方便串接 Goose、Codex、Claude Code 等 Agent",
-        "支援桌面應用(Tauri + React)、Docker Compose 自架與 Railway 一鍵部署 relay"
+        "Agent 與人類共用身分與事件模型,以金鑰而非權限旗標做範圍控管,稽核軌跡一致",
+        "以 NIP-34 把 git patch、CI、審查與合併決策放進同一頻道,做到「分支即房間」",
+        "提供 buzz-cli(JSON 進 / JSON 出)與 ACP harness,可接 Goose、Codex、Claude Code",
+        "後端採 Axum + Postgres(FTS 搜尋)+ Redis + S3/MinIO,並提供 Railway 一鍵部署與生產用 Compose 套件",
+        "README 坦白區分「已可用」「施工中」「僅屬願景」的功能"
       ],
       "use_cases": [
-        "團隊想要一個自架、支援人類與 AI Agent 共同協作的工作空間,取代 Slack/GitHub/CI 儀表板的拼湊組合",
-        "需要讓 AI Agent 以「有身分、有稽核軌跡」的方式參與程式碼審查與發布流程的研發團隊",
-        "想串接 Goose、Codex、Claude Code 等 Agent 進行自動化事件觸發(訊息/排程/webhook)工作流程的場景"
+        "團隊自架協作空間,讓 AI agent 以成員身分參與討論與開發",
+        "建構 agent 優先的工作流程,例如自動 bug 分流、release note 生成",
+        "研究以 Nostr 事件日誌作為統一稽核基底的架構",
+        "為 LLM 工具呼叫提供可簽章、可追溯的 CLI 介面"
       ],
       "quality": {
         "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 結構完整,附架構圖、功能矩陣與多種安裝路徑說明,文件品質良好;但僅能依 README 判斷,未檢視實際程式碼與測試涵蓋率,今日新上榜且單日增加 339 星,顯示動能強勁。"
+        "comment": "README 結構完整,有架構圖、快速上手、Windows 說明與多份願景文件,並誠實標示功能成熟度。測試狀況僅憑 README 無法評估。最近仍有推送,趨勢熱度高,但當日新增星數不多。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "提供的 Windows 版安裝檔未經程式碼簽署,README 說明 SmartScreen 可能跳出警告,需使用者手動選擇「仍要執行」",
-          "支援透過 Railway 一鍵部署 relay,以及使用 Docker Compose 自架生產環境,屬於標準自架流程,未見可疑安裝指令"
+          "README 的安裝流程為 git clone、啟用 Hermit 環境、just setup/build,並以 Docker 啟動服務;未見 curl | bash 模式。Hermit 會自動下載工具鏈,建議先了解其來源。",
+          "agent 以 BUZZ_PRIVATE_KEY 私鑰運作,需妥善保管。以上僅依 README 判斷,未進行原始碼層級審查。"
         ]
       },
       "star_rating": 4,
-      "verdict": "概念新穎且執行完整度高,值得追蹤,但屬早期專案(部分功能標示為「開發中」或「尚無程式碼」),適合先觀察或小規模試用而非直接生產導入。",
+      "verdict": "想探索 agent 原生協作平台與 Nostr 架構的工程師值得關注;但部分功能仍在施工,正式導入前宜先評估成熟度。",
       "_mode": "light"
     },
-    "total_days_on_trending": 5,
+    "total_days_on_trending": 6,
     "consecutive_days_on_trending": 1
   },
   "koala73/worldmonitor": {
@@ -1216,7 +1225,7 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-10",
+    "last_seen": "2026-11-14",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
@@ -1283,46 +1292,53 @@
         5,
         "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-11-14": [
+        50624,
+        215,
+        1,
+        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-10-10",
+    "last_analyzed": "2026-11-14",
     "analysis": {
+      "one_liner": "阿里巴巴開源的 AI 程式碼審查 CLI,結合確定性流程與 LLM Agent,產出行級精準的 review 評論。",
+      "summary": "Open Code Review(ocr)源自阿里內部的 AI code review 助手,以 Go 撰寫。它讀取 Git diff,將相關檔案打包成子 Agent 並行審查,Agent 可讀檔、搜尋程式庫取得上下文,並由獨立的定位與反思模組校正評論位置與內容。支援 OpenAI/Anthropic 相容端點,並提供 Claude Code、Codex、Cursor、Kimi 等外掛與 GitHub Action、ACP 轉接層。",
       "category": "devtool",
-      "one_liner": "阿里巴巴開源的 AI 程式碼審查 CLI,以確定性工程流程搭配 LLM Agent,產出精準到行的審查意見。",
-      "summary": "Open Code Review(ocr)源自阿里內部的 AI Code Review 助手,以 Go 撰寫。它讀取 Git diff,由確定性邏輯負責選檔、檔案分組、規則比對,再交給具備工具呼叫能力的 Agent 審查,並由獨立的定位與反思模組修正行號與內容。主要解決通用 Agent 審查時覆蓋不全、行號漂移、品質不穩的問題。",
       "highlights": [
-        "混合架構:選檔、分組、規則比對由工程邏輯保證,Agent 只負責動態決策與上下文檢索",
-        "README 宣稱在 AACR-Bench(200 個 PR、10 種語言)上,相同模型下 Precision 與 F1 高於 Claude Code,token 用量約 1/9,但 Recall 較低(官方宣稱,未經本次驗證)",
-        "支援 review、scan(全檔掃描)、session 續跑,以及 delegation 模式(由 Claude Code、Codex、Cursor、Kimi 等自身 LLM 審查,無須另設 API key)",
-        "提供 GitHub Action、GitLab CI、Gerrit 整合,並輸出 JSON 與 SARIF",
-        "支援 OpenAI 與 Anthropic 相容端點及 MCP 擴充,文件網站為多語系"
+        "混合架構:檔案選擇、打包、規則比對由確定性程式負責,Agent 只負責動態決策與上下文檢索,避免純 Skill 式審查漏檔與行號漂移",
+        "README 自述在 AACR-Bench(200 個真實 PR、10 種語言)上,相同模型下 Precision/F1 高於通用 Agent,token 用量約 1/9(屬官方自述數據)",
+        "多平台整合:npm 全域安裝、Claude Code/Codex/Cursor/Kimi 外掛、GitHub Action、IDE 擴充(VS Code、IDEA)與 ACP 轉接",
+        "工程成熟度高:Go 測試檔超過 340 個、14 個 CI workflow(含 CodeQL、action pin 驗證),標示 OpenSSF Gold",
+        "install.sh 安裝流程會比對 sha256 校驗,並提供多語系文件與官網"
       ],
       "use_cases": [
-        "在 CI/PR 流程中自動做行級程式碼審查",
-        "審查不熟悉的程式庫或沒有 diff 的目錄(ocr scan)",
-        "在 Claude Code、Codex、Cursor 等 AI 編碼助手中,以外掛或技能形式加入審查指令",
-        "團隊以自訂規則(如 NPE、執行緒安全、XSS、SQL injection)統一審查標準"
+        "在 CI/PR 流程中自動產生行級 code review 評論",
+        "在本機以 ocr review 於提交前審查 workspace 或分支差異",
+        "用 ocr scan 稽核不熟悉的程式庫或無 diff 的目錄",
+        "在 Claude Code 等編碼 Agent 內以外掛或委派模式整合審查"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "README 內容完整,另有文件網站、多語系翻譯、CONTRIBUTING、GOVERNANCE、SECURITY 與 ASSURANCE_CASE。Go 與 Node 測試檔多達 237 個,涵蓋 cmd 與 internal 各模組。CI 工作流程齊全,包含 CodeQL、action 與 plugin 契約檢查、release;README 標示 OpenSSF Gold 徽章(未查證)。最近一次推送為 2026-10-10,維護活躍。"
+        "comment": "文件完整(多語系 README、官網、CONTRIBUTING、GOVERNANCE、SECURITY、ASSURANCE_CASE、ROADMAP)。測試檔數量龐大(cmd 與 acp 下共 340 個以上 *_test.go,另有 JS 測試),CI 涵蓋多個 workflow。最近推送為 2026-11-13,維護活躍。本次未深入逐一閱讀核心原始碼,品質判斷主要依據專案結構、測試與 CI 配置。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "根目錄 package.json 設有 postinstall(node scripts/install.js),安裝 npm 套件時會執行此腳本;腳本會依平台從 GitHub Releases 下載 Go 二進位檔,程式中有拒絕非 HTTPS 下載的檢查,package.json 亦設定了 sha256sum.txt 的 checksum 網址",
-          "npm 套件另列 optionalDependencies 的平台專屬套件(@alibaba-group/ocr-*),屬常見的二進位發佈做法",
-          "文件與 install.sh 提供 curl -fsSL https://open-codereview.ai/install.sh | sh 的安裝方式,使用者可自行先下載檢視內容再執行",
-          "工具需要設定 LLM API key,並會將變更的程式碼內容送往所設定的模型端點,用於私有程式碼時需留意資料外送範圍"
+          "package.json 定義 postinstall(node scripts/install.js),安裝 npm 套件時會執行;腳本僅允許 HTTPS 下載,從 GitHub Releases 取得對應平台的二進位檔,並設有 sha256sum.txt 校驗設定,同時提供各平台的 optionalDependencies 套件",
+          "README 與 install.sh 註解提供 curl -fsSL https://open-codereview.ai/install.sh | sh 以及 Windows 的 irm ... | iex 安裝方式,屬常見模式;install.sh 會下載 release 二進位並比對 sha256,同時也建議使用者先下載檢視再執行",
+          "install.sh 支援 OCR_GITHUB_MIRROR 環境變數,指定後會從第三方鏡像網域下載,腳本已警告其校驗完整性無法保證,使用者若設定需自行留意",
+          "工具本身會把程式碼 diff 與檔案內容送往使用者設定的 LLM 端點,使用前宜確認所選供應商的資料政策"
         ]
       },
       "star_rating": 4,
-      "verdict": "架構設計務實、測試與工程化程度高,是目前值得關注的 AI Code Review 工具,尤其適合想把審查流程放進 CI 或與 AI 編碼助手整合的團隊。",
+      "verdict": "架構設計務實、工程品質與文件都相當完整的 AI code review 工具,對有 CI 審查或 Agent 整合需求的團隊值得優先試用;效能數據為官方自述,建議自行以內部程式碼驗證。",
       "_mode": "full"
     },
-    "total_days_on_trending": 11,
+    "total_days_on_trending": 12,
     "consecutive_days_on_trending": 1
   },
   "anthropics/claude-cookbooks": {
@@ -3921,7 +3937,7 @@
   },
   "ChromeDevTools/chrome-devtools-mcp": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-09-03",
+    "last_seen": "2026-11-14",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-30": [
@@ -3948,44 +3964,54 @@
         6,
         "Chrome DevTools for coding agents",
         "TypeScript"
+      ],
+      "2026-11-14": [
+        55454,
+        67,
+        12,
+        "Chrome DevTools for coding agents",
+        "TypeScript"
       ]
     },
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "consecutive_days_on_trending": 1,
-    "last_analyzed": "2026-08-29",
+    "last_analyzed": "2026-11-14",
     "analysis": {
+      "one_liner": "Google 官方出品的 MCP 伺服器與 CLI,讓 AI 程式碼代理能控制並檢視真實的 Chrome 瀏覽器,進行除錯、自動化與效能分析。",
+      "summary": "chrome-devtools-mcp 以 TypeScript 撰寫,結合 Puppeteer 與 Chrome DevTools 前端(trace engine、Lighthouse),把效能追蹤、網路請求、主控台訊息(含 source map 堆疊)、截圖、輸入操作等能力透過 MCP 工具暴露給 Claude、Cursor、Copilot 等代理。同時提供 chrome-devtools CLI 與一組 skills,解決代理無法「看見」瀏覽器實際執行狀態而難以除錯前端的問題。",
       "category": "devtool",
-      "one_liner": "Google 官方打造的 MCP 伺服器,讓 AI coding agent 能直接操控與檢查 Chrome DevTools。",
-      "summary": "chrome-devtools-mcp 讓 Claude、Cursor、Copilot 等 AI 編碼助理透過 Model Context Protocol 控制真實的 Chrome 瀏覽器,提供效能追蹤分析、網路請求檢查、Console 訊息、螢幕截圖、記憶體快照、擴充功能除錯等超過 50 個工具。它把 Puppeteer 的自動化能力與 Chrome DevTools 的除錯/效能分析能力整合成標準化 MCP 介面,解決 AI agent 缺乏「眼睛」與「除錯工具」去驗證前端程式碼實際執行結果的問題。",
       "highlights": [
-        "由 Google 官方(ChromeDevTools 團隊)維護,程式碼中版權宣告與發布流程均對應 Google LLC",
-        "工具涵蓋輸入自動化、效能追蹤(含 CrUX 真實使用者資料)、記憶體堆積快照、擴充功能與 PWA 除錯等 13+ 分類、共 50+ 個工具",
-        "支援幾乎所有主流 AI 編碼工具(Claude Code、Cursor、Gemini CLI、Copilot、Codex 等)的一鍵安裝設定",
-        "測試覆蓋完整,tests/ 目錄對每個 src 模組皆有對應單元測試,並含 e2e 與記憶體洩漏測試",
-        "README 主動揭露資料蒐集(usage statistics)與遠端除錯埠風險,並提供 opt-out 旗標,透明度高"
+        "Google 官方維護,Apache-2.0 授權,已發佈 npm(v1.13.0),並提供多種代理外掛設定(Claude、Cursor、Gemini 等)與 MCP registry 發佈流程",
+        "功能完整:效能 trace 與洞察、網路/主控台除錯、Lighthouse、記憶體 heap snapshot、WebAuthn、logpoints、網路覆寫等",
+        "同時提供 MCP 伺服器與獨立 CLI(chrome-devtools),並附 skills 教代理如何使用",
+        "測試覆蓋廣,含 tools、formatters、daemon、e2e、telemetry 等約百個測試檔,另有記憶體洩漏測試工作流程",
+        "CI/CD 完整:presubmit、release-please、自動發佈至 npm 與 MCP registry"
       ],
       "use_cases": [
-        "讓 AI agent 自動化網頁 UI 測試、表單填寫與互動流程驗證",
-        "在開發過程中請 AI 分析網頁效能瓶頸、Lighthouse 稽核結果與網路請求",
-        "除錯瀏覽器 Console 錯誤、記憶體洩漏(heap snapshot 比較)",
-        "開發或除錯 Chrome 擴充功能與 WebMCP/PWA 應用"
+        "讓 AI 編碼代理自動開啟頁面、重現前端 bug 並讀取主控台與網路錯誤",
+        "請代理錄製效能 trace 並依 DevTools 洞察提出 LCP/CLS 等優化建議",
+        "以 CLI 在終端機或腳本中操控瀏覽器、截圖與自動化測試",
+        "代理輔助的 Lighthouse 稽核、記憶體洩漏與 PWA 檢查"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件非常完整(README、docs/ 下多份專項文件、CLI 選項皆自動產生同步),測試覆蓋率高且分類清楚(單元測試、e2e、記憶體洩漏測試皆有),CI 設定齊全(presubmit、release-please、npm/MCP registry 發布)。程式碼風格一致,大量使用 zod schema 驗證工具參數,並以自訂 eslint 規則強制執行授權標頭與第三方引用規範,工程成熟度高。"
+        "comment": "文件齊全(README、工具參考、CLI、設定、疑難排解、設計原則、AGENTS.md),測試涵蓋面廣,自訂 ESLint 規則與嚴格型別檢查,最近一次推送為 2026-11-13,維護非常活躍。建置使用 GN/ninja 與 devtools-frontend submodule,對貢獻者有一定門檻,但一般使用者以 npx 即可使用。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "evaluate_script 等工具設計上允許在受控瀏覽器分頁中執行任意 JavaScript,這是 DevTools/自動化功能的必要能力,但代表 MCP 客戶端可讀寫瀏覽器內任何資料,README 已明確揭露此風險並建議勿在敏感網站上開啟",
-          "預設會蒐集使用量統計(工具呼叫成功率、延遲、環境資訊)並回傳 Google,雖預設開啟但提供 --no-usage-statistics 旗標與環境變數可關閉,且文件中清楚說明",
-          "透過 --browser-url 連線既有 Chrome 遠端除錯埠時,README 主動警告該埠開啟後同機任何程式皆可連線控制瀏覽器,屬合理的使用警示而非程式碼缺陷"
+          "README 說明預設會收集使用統計(工具呼叫成功率、延遲、環境資訊)並傳送給 Google,可用 --no-usage-statistics 旗標,或設定 CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS 或 CI 環境變數關閉。",
+          "效能工具可能將 trace 的 URL 傳送至 Google CrUX API 取得真實使用者資料,可用 --no-performance-crux 停用。",
+          "伺服器預設會定期檢查 npm registry 是否有新版本,可用 CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS 停用。",
+          "package.json 含 prepare 生命週期腳本(scripts/prepare.ts),會以 git 從 github.com/ChromeDevTools/devtools-frontend 複製 sparse checkout 的 submodule,並修改 node_modules 內一個型別宣告檔;此腳本在開發者安裝本倉庫時執行。npm 發佈套件的 files 僅包含編譯後輸出、LICENSE 與 skills。",
+          "README 揭露:此工具會把瀏覽器內容暴露給 MCP 用戶端,允許檢視、除錯與修改瀏覽器或 DevTools 中的任何資料,使用時應避免讓代理接觸敏感或個人資訊。",
+          "package.json 的 allowScripts 僅允許 puppeteer 執行安裝腳本(用於下載瀏覽器),其餘相依套件的安裝腳本皆關閉。"
         ]
       },
       "star_rating": 5,
-      "verdict": "官方出品、工程品質扎實、生態整合廣泛,是目前 AI coding agent 搭配瀏覽器除錯與效能分析的標竿工具,值得立即關注與導入。",
+      "verdict": "Google 官方、功能完整且維護活躍,是讓 AI 代理做前端除錯與效能分析的首選工具之一,值得立即關注並試用;使用前請留意預設開啟的使用統計與 CrUX 查詢設定。",
       "_mode": "full"
     }
   },
@@ -7609,10 +7635,10 @@
   },
   "ZhuLinsen/daily_stock_analysis": {
     "first_seen": "2026-08-10",
-    "last_seen": "2026-11-12",
+    "last_seen": "2026-11-14",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-10": [
         61192,
@@ -7639,6 +7665,13 @@
         70253,
         278,
         2,
+        "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "Python"
+      ],
+      "2026-11-14": [
+        71598,
+        256,
+        4,
         "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
         "Python"
       ]
@@ -15164,10 +15197,10 @@
   },
   "tailscale/tailcat": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-08-30",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-29": [
         2708,
@@ -15182,39 +15215,51 @@
         4,
         "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
         "Go"
+      ],
+      "2026-11-14": [
+        9458,
+        256,
+        10,
+        "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-08-29",
+    "last_analyzed": "2026-11-14",
     "analysis": {
-      "one_liner": "由 Tailscale 官方推出的輕量工具,像 netcat 一樣簡單,但透過 Tailscale 的資料層(WireGuard + DERP + NAT 穿透)建立端到端加密連線,完全不需要 Tailscale 帳號或控制平面。",
-      "summary": "Tailcat 重組了 Tailscale 開源元件中的資料層(magicsock、userspace WireGuard、gVisor netstack、DERP relay),讓兩台機器不需登入 Tailscale 帳號、不需 root 權限、不改動路由表或 DNS,就能建立點對點加密通道。使用情境包含 stdin/stdout 管道傳輸、本地連接埠轉發、免驗證 SSH、SOCKS5 代理與 exit-node 模式,連線資訊(token)完全由使用者自行帶外交換。",
+      "one_liner": "Tailscale 官方出品的 netcat 替代品:沿用 Tailscale 資料平面(WireGuard + magicsock + DERP),不需帳號、不需 root、不依賴控制平面。",
+      "summary": "Tailcat 是用 Go 撰寫的 CLI 與函式庫,把 Tailscale 的開源元件(userspace WireGuard、magicsock、gVisor netstack、DERP)重組成類似 netcat 的點對點工具。伺服端啟動後會印出一串短位址(tc…),客戶端用該位址連線;連線中繼資料改由帶外方式交換,先經 DERP 引導,再嘗試 NAT 打洞升級為直連。解決的是在不註冊帳號、不改路由、不需管理員權限下,讓兩台機器安全互連的問題。",
       "category": "cli",
       "highlights": [
-        "由 Tailscale 官方維護,重用其久經實戰的 magicsock、WireGuard、DERP、netstack 元件,而非從零造輪子",
-        "README 極為詳盡,清楚說明連線 token 結構、金鑰管理(ephemeral vs saved key)與完整連線流程(meow 握手、disco NAT 穿透)",
-        "CLI 功能豐富:管道傳輸、連接埠轉發、免驗證 SSH、SOCKS5 代理、exit-node、ping 偵測直連/中繼路徑等",
-        "支援自架 DERP relay,不強制依賴 Tailscale 的公開中繼伺服器",
-        "同時提供 Go library 介面與瀏覽器 WebAssembly demo,涵蓋多種使用型態",
-        "作者在文件中明確聲明無 API/CLI 穩定性承諾,且公開 DERP relay 無 SLA 保證"
+        "功能涵蓋 stdin/stdout 管線、serve 連接埠轉發、forward、browse、內建 SSH 伺服器(支援 authorized_keys 與 GitHub 公鑰)、SFTP 檔案分享/收件匣、iperf 式 perf、SOCKS5、exit-node",
+        "純 userspace 運作,不需 root、不動路由與 DNS;預設啟用 WireGuard 預共享金鑰,具後量子保護,位址本身即為秘密憑證",
+        "可自架 DERP 中繼,也提供 Go 函式庫(TCP/UDP)、libtailcat C 共享函式庫與 WebAssembly 瀏覽器版範例",
+        "檔案服務以 Go 的 os.Root 限制路徑,收件匣為唯寫並由伺服端決定檔名,SECURITY.md 列出已修復的外部回報",
+        "跨平台 CI(Linux/macOS/Windows、BSD 交叉編譯、無頭瀏覽器測試),Actions 以 commit SHA 固定版本"
       ],
       "use_cases": [
-        "兩台機器間臨時、免帳號的檔案或資料傳輸(netcat 替代品)",
-        "無需公網 IP 或連接埠轉發,即可對外提供本地服務(如本地開發伺服器)",
-        "透過 DNS TXT 紀錄發佈固定位址,建立無需開放連接埠、由 WireGuard 金鑰驗證的免密碼 SSH 存取",
-        "需要簡易 NAT 穿透與端到端加密通道的實驗性或個人工具,而不想部署完整 Tailscale 控制平面"
+        "在 NAT 後的兩台機器間臨時傳檔、傳文字或管線資料,不必設定 VPN",
+        "不開放入站連接埠,以 DNS TXT 搭配 --allow 白名單提供受保護的 SSH 存取",
+        "把內網服務(如 adb、資料庫、網頁)暫時轉發到本機,用於除錯或遠端協作",
+        "在 Go 程式中嵌入點對點加密通道,或用 perf 量測兩端直連的吞吐量與延遲"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "README 文件品質極高,涵蓋原理、範例、金鑰管理與已知限制;9 個測試檔涵蓋 CLI、SSH、SOCKS 解析、wire 格式與 WASM,CI 有 build/test/vet 三道關卡外加 headless 瀏覽器測試;剛開源(2026年8月 TailscaleUp 大會)且作者明言無穩定性承諾,屬早期但維護積極的專案。"
+        "comment": "README 非常完整,涵蓋用法、金鑰管理、運作原理與安全警語,另有 INSTALL、SECURITY、CHANGELOG、RELEASING 等文件。測試豐富,cmd/tailcat 有大量單元與 e2e 測試(ssh、cp、forward、perf、socks 等),CI 在三大平台執行 go test、go vet、tidy 檢查與 wasm 無頭瀏覽器測試。最後推送為 2026-11-05,維護積極。注意:作者自述 API、CLI 與線路格式不保證穩定,威脅模型尚未涵蓋互不信任的雙方。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "功能本身具備高權限能力:`serve no-auth-ssh` 不需客戶端驗證,任何取得位址者即可取得執行該程序之使用者的 shell;`serve exec` 會對每個連線執行指令;`serve exit-node` 可讓客戶端存取伺服端所在網路。README 與 SECURITY.md 均有明確警告,使用者應僅在信任對象間分享位址。",
+          "tailcat 位址是帶有預共享金鑰的承載憑證;若發佈於公開 DNS TXT,需搭配 --allow 或 --ssh-authorized-keys,否則任何人皆可連線。使用 genkey 儲存金鑰後,先前分享過位址的人仍可連到後續啟動的伺服器。",
+          "預設的 DERP 對應表來自 https://tailcat.dev/derpmap.json,並使用 Tailscale 營運的公用中繼(有速率限制,不保證可用性);`--ssh-authorized-keys=user@github` 會從 github.com 擷取公鑰。",
+          "SECURITY.md 自述威脅模型原本以「同一人操作兩端」為前提,尚未針對互不信任的雙方完整強化,且 API 與線路格式可能變動。",
+          "文件與建置腳本中未發現 curl|bash、iwr|iex 等安裝即執行外部內容的模式;Makefile 僅有 go mod tidy;未見混淆程式碼或內嵌的長 base64 載荷;依賴皆為 Tailscale 官方模組與知名 Go 套件。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "出自 Tailscale 官方之手、程式碼與文件品質俱佳的實用小工具,適合想要輕量 P2P 加密通道又不想引入完整 Tailscale 控制平面的開發者關注,但需留意目前無穩定性保證且公開中繼伺服器無 SLA。",
+      "verdict": "Tailscale 官方出品、文件與測試扎實的點對點連線工具,對常需跨 NAT 臨時互連的工程師很實用;但屬早期實驗版本且含高權限功能,建議只在信任對象間使用。",
       "_mode": "full"
     }
   },
@@ -32376,10 +32421,10 @@
   },
   "we-promise/sure": {
     "first_seen": "2026-11-11",
-    "last_seen": "2026-11-13",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-14",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-11": [
         11958,
@@ -32398,6 +32443,13 @@
       "2026-11-13": [
         13920,
         967,
+        5,
+        "The personal finance app for everyone (by everyone)",
+        "Ruby"
+      ],
+      "2026-11-14": [
+        14745,
+        925,
         5,
         "The personal finance app for everyone (by everyone)",
         "Ruby"
@@ -32497,10 +32549,10 @@
   },
   "GoogleChrome/modern-web-guidance-src": {
     "first_seen": "2026-11-12",
-    "last_seen": "2026-11-13",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-14",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-12": [
         1755,
@@ -32513,6 +32565,13 @@
         2953,
         739,
         1,
+        "Keep your coding agent up to date with the latest web best practices",
+        "TypeScript"
+      ],
+      "2026-11-14": [
+        4859,
+        1925,
+        2,
         "Keep your coding agent up to date with the latest web best practices",
         "TypeScript"
       ]
@@ -32605,10 +32664,10 @@
   },
   "openai/codex-security": {
     "first_seen": "2026-11-12",
-    "last_seen": "2026-11-13",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-14",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-12": [
         11734,
@@ -32621,6 +32680,13 @@
         12427,
         643,
         2,
+        "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm:https://www.npmjs.com/package/@openai/codex-security",
+        "TypeScript"
+      ],
+      "2026-11-14": [
+        13136,
+        751,
+        3,
         "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm:https://www.npmjs.com/package/@openai/codex-security",
         "TypeScript"
       ]
@@ -32774,6 +32840,220 @@
         "LLM inference in C/C++",
         "C++"
       ]
+    }
+  },
+  "backnotprop/plannotator": {
+    "first_seen": "2026-11-14",
+    "last_seen": "2026-11-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-14": [
+        10460,
+        108,
+        6,
+        "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-14",
+    "analysis": {
+      "one_liner": "為 AI 編碼代理打造的本機瀏覽器審閱介面:標註計畫、文件、HTML 與程式碼 diff,一鍵把回饋送回代理。",
+      "summary": "Plannotator 是本機運行的瀏覽器式審閱工具,透過外掛、hook 與指令接入 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Pi 等多種代理。代理提出計畫或完成工作時會自動開啟介面,讓使用者標註、評論並把回饋直接送回代理。另提供 Inbox 統一收件匣、程式碼審閱(Git/jj/p4/GitHub/GitLab)與終端機版 Herdr Annotate。",
+      "category": "devtool",
+      "highlights": [
+        "支援極多代理:Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi 等",
+        "Inbox 作為多代理工作的審閱層,代理不必佔住 session 等待回覆,另可經 MCP 接入其他代理",
+        "程式碼審閱涵蓋 Git、GitButler、Jujutsu、Perforce、GitHub PR 與 GitLab MR,並內建 AI 問答與審閱",
+        "預設本機運作、無遙測;隱私與網路行為在 README 中說明得很詳細",
+        "可標註 Markdown、URL、HTML 產物,並提供終端機 TUI 版本"
+      ],
+      "use_cases": [
+        "在 Claude Code 或 Codex 的 plan mode 中以視覺化方式標註並退回計畫",
+        "審閱本機未提交變更或 GitHub/GitLab PR,並把評論回饋給代理",
+        "同時管理多個代理的提問與決策,集中於 Inbox 處理",
+        "團隊分享計畫並匯入同事的標註回饋"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋指令、隱私、分享機制與加密模型,並附示範與文件連結。最後推送為 2026-11-14,星數逾萬且今日上榜,活躍度高。測試情況僅依 README 評估,無法確認。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "僅依 README 評估,未進行原始碼層級審查。",
+          "README 說明每次載入介面會向 GitHub 檢查最新版本(目前無關閉選項),不傳送計畫或審閱內容。",
+          "README 說明 Ask AI、URL 標註(預設經 Jina Reader)與分享功能會在使用時將相關內容送往外部服務;連結分享的內容任何持有完整連結者皆可讀取。",
+          "本機 Git 審閱可能對 origin 執行 git ls-remote,可用 --no-git-remote-check 或環境變數關閉。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "若你日常使用 Claude Code、Codex 等編碼代理,這是補足「人機審閱迴圈」的成熟工具,支援面廣、文件完整,值得試用。",
+      "_mode": "light"
+    }
+  },
+  "louislam/uptime-kuma": {
+    "first_seen": "2026-11-14",
+    "last_seen": "2026-11-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-14": [
+        93865,
+        71,
+        7,
+        "A fancy self-hosted monitoring tool",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-11-14",
+    "analysis": {
+      "one_liner": "自架式、介面精美的服務監控工具,支援 HTTP/TCP/Ping/DNS/Docker 等多種監控與 90+ 種通知管道。",
+      "summary": "Uptime Kuma 是以 Node.js + Vue 單頁應用(SPA)與 Socket.io 打造的自架監控平台,可監控網站、連接埠、DNS、Push、Docker 容器、遊戲伺服器等狀態,並在異常時透過 Telegram、Discord、Slack、Email 等管道通知。它提供多個狀態頁、自訂網域對應、憑證資訊、2FA 與多語系,解決自行維運時需要輕量、易部署的 uptime 監控需求。",
+      "category": "infra",
+      "highlights": [
+        "支援 HTTP(s)/TCP/關鍵字/JSON Query/WebSocket/Ping/DNS/Push/Docker 與資料庫、MQTT、gRPC 等大量監控類型",
+        "內建 90+ 種通知服務,另有多個狀態頁、網域對應、維護排程與憑證資訊",
+        "Docker Compose 一鍵部署,也支援 Node.js + PM2 的非 Docker 安裝;資料庫以 knex migration 管理",
+        "測試完整:backend 測試涵蓋各監控類型與通知供應商,另有 Playwright e2e 測試",
+        "CI 完備(CodeQL、自動測試、Docker 建置、PR 檢查),專案活躍,星數逾 9.3 萬"
+      ],
+      "use_cases": [
+        "個人或小型團隊自架網站/API 可用性監控",
+        "對外發布公開狀態頁(Status Page)給客戶",
+        "監控內網服務、Docker 容器、資料庫與 MQTT 等基礎設施並串接即時通知",
+        "作為學習 Node.js、Socket.io、Vue 全端專案的參考範例"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 提供清楚的功能、Docker 與非 Docker 安裝說明,進階內容放在 Wiki。test 目錄含大量 backend 測試(各監控類型、通知、uptime 計算、migration)與 Playwright e2e,.github/workflows 有 20 多個工作流程(CodeQL、auto-test、Docker 建置等)。最近仍持續推送,目前版本為 3.0.0-beta.0,維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "package.json 中未發現 preinstall / postinstall / prepare 等安裝時自動執行的生命週期腳本。",
+          "README 的 `npm run setup` 會執行 `git checkout 2.5.11`、`npm ci --omit dev`,並呼叫 extra/download-dist.js 從該專案 GitHub Releases 下載 dist.tar.gz 並解壓縮到本機;此步驟需使用者主動執行,下載來源為專案自身的 GitHub 倉庫。",
+          "README 的 Docker Compose 安裝步驟以 curl 從 raw.githubusercontent.com 下載 compose.yaml,僅下載設定檔,未見 curl | bash 形式。",
+          "此為網路監控工具,依 README 說明預設監聽所有網路介面(3001 埠),部署時建議置於反向代理後方或限制為 127.0.0.1,並啟用強密碼與 2FA。",
+          "若將 docker.sock 掛載給容器以使用 Docker 監控功能,會授予較高權限,使用者宜留意。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "成熟、活躍且測試完備的自架監控首選,值得持續關注;3.0 beta 版可留意升級變動。",
+      "_mode": "full"
+    }
+  },
+  "tradermonty/claude-trading-skills": {
+    "first_seen": "2026-11-14",
+    "last_seen": "2026-11-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-14": [
+        4173,
+        69,
+        9,
+        "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-14",
+    "analysis": {
+      "one_liner": "專為個人投資人與交易者打造的 Claude Skills 工具箱,涵蓋市場廣度分析、篩選器、風險控管、交易日誌與回顧的完整工作流程。",
+      "summary": "這是一個以 Claude Skills 為基礎的交易流程工具集,skills/ 底下有上百個技能資料夾,涵蓋市場體質判斷、VCP/CANSLIM 等篩選器、部位大小計算、交易記憶與事後檢討。它的目標不是把買賣決策交給 AI,而是把市場檢視、風險管理、交易計畫與日誌結構化。專案提供機器可讀的 workflows/*.yaml 與 skills-index.yaml,並附有不需付費 API 的入門路徑。",
+      "category": "ai-ml",
+      "highlights": [
+        "以 skills-index.yaml 與 workflows/*.yaml 作為權威索引,並由驗證器強制檢查,結構嚴謹",
+        "提供「免 API Key」五技能入門路徑(市場廣度、上升趨勢、部位計算、本地 YAML 日誌、事後檢討)",
+        "強調人工決策關卡與風險優先,明確聲明非訊號服務、非自動下單",
+        "CI 完整:10 個 workflow,包含相容性夜間測試、FMP/公開 CSV 契約探測、文件漂移檢查與發布流程",
+        "支援 Claude Web(.skill 套件)與 Claude Code(複製資料夾)兩種安裝方式,並有英日文件站"
+      ],
+      "use_cases": [
+        "每日 15 分鐘市場體質檢查,決定當日曝險上限",
+        "在風險允許時以 VCP 等篩選器尋找波段交易候選標的",
+        "用本地 YAML 記錄每筆交易論點並做月度績效回顧",
+        "作為撰寫自家 Claude Skills 的結構與品質參考範本"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極為完整(README、願景文件、日文版、Jekyll 文件站、CHANGELOG、FAQ)。多數技能附有 scripts/tests,根目錄有 conftest.py、pre-commit、ruff、bandit、detect-secrets 與 pip-audit 設定。最近仍有推送,10 個 CI workflow 運作,維護強度高。規模龐大,各技能的成熟度可能不一。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "skills/trader-memory-core/scripts/thesis_store.py 在第 170 行使用 exec(compile(...)) 載入同目錄 thesis_store_parts 下固定清單的程式片段;程式註解說明只執行該套件自己的檔案,並已標註 bandit nosec B102。",
+          "pyproject.toml 與各技能的 requirements.txt 安裝時會拉取 yfinance、requests、scipy 等第三方套件;在 scripts 目錄中未發現 curl|bash、iwr|iex 或 base64 解碼執行的樣式。",
+          "部分技能需要 FMP、FINVIZ、Alpaca 等外部服務的 API Key,使用者應自行妥善保管金鑰。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "交易領域 Claude Skills 中工程紀律相當高的專案,文件、測試與 CI 都很完整,值得收藏;使用時請留意其僅供教育研究用途,並非投資建議。",
+      "_mode": "full"
+    }
+  },
+  "Likely7/Veyra-NRVideo": {
+    "first_seen": "2026-11-14",
+    "last_seen": "2026-11-14",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-14": [
+        1617,
+        256,
+        11,
+        "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-11-14",
+    "analysis": {
+      "one_liner": "Windows 11 專用的 GPU 即時影像增強播放器與擷取工具,整合 DLSS/FSR/RTX Video 超解析、AI 降噪、HDR 與補幀,支援擷取卡、PS5/Xbox/PC 串流。",
+      "summary": "Veyra 是以 C++、DirectX 12 與 Qt/QML 開發的 Windows 影像增強工具。它能把本機影片、擷取卡、PS5 Remote Play、Moonlight/Sunshine 與螢幕擷取等來源,送進同一條即時 GPU 管線,依序處理超解析、降噪、色彩、抗鋸齒和補幀。專案支援 NVIDIA 與 AMD 兩種封裝,也提供離線匯出與節點式處理鏈編輯。README 標題提到 DLSS 5,但內文也說明這是社群執行環境,不是官方完整的 DLSS 5 整合。",
+      "category": "app",
+      "highlights": [
+        "統一的 EnhanceGraph 管線串接 SR、多層 NR、色彩、HDR 與最終補幀,並提供 List 與 Node 兩種編輯模式",
+        "來源涵蓋擷取卡、PS5 Remote Play(整合 Chiaki)、Moonlight/Sunshine、實驗性 Xbox 串流與螢幕擷取",
+        "同時支援 NVIDIA(RTX Video SR、DLSS、NVOF)與 AMD(FSR、HIP NR)後端,並有 DLSS/XeSS/FSR 多種補幀選項",
+        "UI 用 QML,影像用原生 D3D12 繪製;匯出佇列支援 MP4/MKV、剪輯與多音軌",
+        "README 稱累計下載約 7.9 萬次,今日 +256 星,社群活躍(Discord、Patreon)"
+      ],
+      "use_cases": [
+        "用擷取卡擷取 PS5 或遊戲主機畫面,即時做超解析與補幀以提升觀感",
+        "對本機舊影片或低解析度影片套用 AI 降噪與超解析,再離線匯出",
+        "學習 D3D12、NGX/DLSS、FSR 與 FFmpeg 整合的大型 Windows C++ 影像管線",
+        "搭配 Sunshine/Moonlight 把 PC 串流畫面做即時畫質強化"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 3,
+        "activity": 5,
+        "comment": "文件完整,有多語 README、版本說明、架構與建置文件,但 README 冗長且混有大量歷史版本資訊。專案有大量 C++ 測試(tests/ 下 200 多個檔案,CMake 中有許多 test 可執行檔)和 Python/PowerShell 驗收腳本,但多數需要實體 GPU 或擷取硬體,不易自動化,.github/workflows 只有星數圖表產生工作流,沒有 CI 建置或測試。近期推送頻繁,版本快速迭代到 2.1.x。專案不含專有執行環境與模型,需另行取得發行封裝才能完整運作。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "原始碼中包含 NvapiArchSpoof、AdaMfgUnlock、AmpereMfgUnlock 等模組,用來讓 DLSS 補幀在官方未支援的 GPU 上運作。這類做法依賴非公開行為,可能受驅動更新影響,使用者宜留意相容性與風險。",
+          "README 說明原始碼 Git 不含專有執行環境與模型,完整功能需下載 Release 的可攜式封裝(內含 Qt 與執行時 DLL)。使用者宜從官方 Release 取得,並自行核對來源與校驗碼。",
+          "專案實作 PSN OAuth 與 Xbox 裝置碼登入流程,會處理帳號憑證與 token(src/remoteplay/PsnAuth.cpp、src/xbox/Account.cpp);程式內網址皆指向 Sony、Microsoft、GitHub 等官方網域。使用前宜自行評估帳號授權風險。",
+          "根目錄 Veyra.cmd 以 -ExecutionPolicy Bypass 呼叫 scripts/start-veyra.ps1,該腳本只是啟動本機建置出的 veyra.exe,未見下載或遠端執行行為。",
+          "GitHub Actions 的 star-history.yml 使用第三方 action kitswas/generate-star-history@v1 並具備 contents: write 權限,僅用於更新星數圖表。",
+          "本次檢視未發現 curl|bash、混淆程式碼、內嵌長 base64 載荷或安裝期生命週期腳本。"
+        ]
+      },
+      "star_rating": 3,
+      "verdict": "對 GPU 影像增強、DLSS/FSR 整合或擷取卡玩家有參考價值,功能完整且迭代積極;但僅限 Windows 與特定 GPU,完整功能依賴封閉執行環境,適合有硬體需求或想研究管線設計的人,不是人人必看。",
+      "_mode": "full"
     }
   }
 }
