@@ -1225,8 +1225,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1299,6 +1299,13 @@
         1,
         "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-11-15": [
+        51444,
+        893,
+        5,
+        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
     "last_analyzed": "2026-11-14",
@@ -1338,8 +1345,8 @@
       "verdict": "架構設計務實、工程品質與文件都相當完整的 AI code review 工具,對有 CI 審查或 Agent 整合需求的團隊值得優先試用;效能數據為官方自述,建議自行以內部程式碼驗證。",
       "_mode": "full"
     },
-    "total_days_on_trending": 12,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 13,
+    "consecutive_days_on_trending": 2
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -3937,8 +3944,8 @@
   },
   "ChromeDevTools/chrome-devtools-mcp": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-30": [
         47885,
@@ -3971,10 +3978,17 @@
         12,
         "Chrome DevTools for coding agents",
         "TypeScript"
+      ],
+      "2026-11-15": [
+        56311,
+        664,
+        4,
+        "Chrome DevTools for coding agents",
+        "TypeScript"
       ]
     },
-    "total_days_on_trending": 5,
-    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 6,
+    "consecutive_days_on_trending": 2,
     "last_analyzed": "2026-11-14",
     "analysis": {
       "one_liner": "Google 官方出品的 MCP 伺服器與 CLI,讓 AI 程式碼代理能控制並檢視真實的 Chrome 瀏覽器,進行除錯、自動化與效能分析。",
@@ -12119,10 +12133,10 @@
   },
   "JuliusBrussee/caveman": {
     "first_seen": "2026-08-21",
-    "last_seen": "2026-10-16",
+    "last_seen": "2026-11-15",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 7,
+    "total_days_on_trending": 8,
     "stars_history": {
       "2026-08-21": [
         99638,
@@ -12172,43 +12186,51 @@
         4,
         "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
         "Go"
+      ],
+      "2026-11-15": [
+        120079,
+        227,
+        10,
+        "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+        "Go"
       ]
     },
-    "last_analyzed": "2026-10-03",
+    "last_analyzed": "2026-11-15",
     "analysis": {
-      "one_liner": "讓 AI 編碼代理用「原始人口吻」講話並壓縮工具輸出,宣稱可省下約 65% token 的 Skill + 本機 proxy + middleware 組合。",
-      "summary": "Caveman 起初是讓 Claude Code 等代理以極簡口吻回答的規則檔(skill),後來擴充為三層:skill 縮短代理「說」的內容、Go 寫成的本機 proxy/engine 壓縮代理「讀」的 log、測試輸出、JSON、diff,以及可嵌入 LangChain、Vercel AI SDK、OpenAI、Anthropic 呼叫的 TypeScript/Python middleware。壓縮前的原文會備份在本機,代理可隨時取回。支援 30+ 代理,並有 10 種原生 wrap profile。",
+      "one_liner": "讓 AI 程式代理用「穴居人語氣」少說話、少讀資料,以技能加本機代理省下 token,支援 30 多種代理。",
+      "summary": "Caveman 最初是讓 Claude Code 等代理簡短回答的 skill。4.x 版擴充為六個模組:精簡語氣、先壓縮日誌/JSON/測試輸出再給模型讀、依任務自動選模型與推理強度、可重複執行的腳本區塊、維持 prompt cache 熱度,以及網頁壓縮。核心以 Go 撰寫本機代理(proxy/engine/browse),另有 Node 安裝器與 CLI(@caveman-ai/cli),支援 Claude、Codex、Gemini、OpenCode 等 30 多種代理。",
       "category": "devtool",
       "highlights": [
-        "三層架構:skill(少說)、proxy(少讀)、middleware(嵌入自家應用),可疊加使用",
-        "Go 實作的壓縮引擎含 log、JSON、HTML、程式碼、axtree、TOON 等多種壓縮器,另有 CCR 備份與取回機制",
-        "附 caveman learn、caveman trial A/B 試驗與 stats,讓使用者能在自己的工作流上實測節省量",
-        "一行安裝 npx skills add JuliusBrussee/caveman -g,相容 Claude Code、Codex、Gemini、Cursor 等 30+ 代理",
-        "README 引用第三方數據(JetBrains 測試、Adobe Research 論文)並標明來源,同時揭露數字較差的項目"
+        "把「少說」與「少讀」分開處理:語氣規則只改輸出,Go 壓縮引擎負責壓縮工具輸出(日誌、JSON、表格、程式碼、HTML、測試報告)。",
+        "README 引用 Adobe Research、JetBrains、Elastic 的外部評測,也公開 HONEST-NUMBERS 文件列出不划算的情況,例如依請求計費的 Copilot 省不到錢。",
+        "一行 npx 指令即可安裝,會自動偵測已安裝的代理與登入狀態,支援 Mac、Linux、Windows。",
+        "Go 引擎與代理測試密集,約 440 個測試檔,涵蓋壓縮器不變量、對抗性探測、SQLite 儲存競態與權限。",
+        "Dockerfile 以 digest 固定基底映像並用 distroless nonroot 執行;CI 有 CodeQL、Scorecard、supply-chain 等工作流程。"
       ],
       "use_cases": [
-        "在 Claude Code/Codex 日常開發中降低輸出與工具讀取的 token 成本",
-        "對長時間跑測試、讀大量 log 的代理工作流做輸入端壓縮",
-        "在自建 agent 應用中以 middleware 縮短工具結果並保留原文可取回",
-        "用 trial 功能量測 token 壓縮對自己任務的實際效益"
+        "在 Claude Code、Codex 等代理上降低長時間 session 的 token 成本",
+        "在本機自架壓縮代理,縮減日誌與測試輸出後再送給 LLM",
+        "研究 prompt 壓縮與 prompt cache 策略的工程實作與評測方法",
+        "為多種 AI 編碼代理統一部署精簡回答的 skill 與 hook"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "專案規模大且工程化程度高:Go 測試檔超過 300 個(涵蓋 engine、ccr、pixel、compressors、mcp、mem、proxy,並含對抗性與競態測試),CI 有十餘個 workflow(CodeQL、Scorecard、supply-chain、conformance、release),另有 SECURITY.md、INSTALL.md、CONTRIBUTING 與 dependabot。README 行銷色彩濃,但資料來源標示清楚。最近仍持續推送。本次分析未實際執行程式,節省比例為專案自行宣稱。"
+        "comment": "文件齊全(README、INSTALL、SECURITY、CONTRIBUTING、評測 harness、誠實數字文件)。測試覆蓋廣,CI 工作流程超過 15 條。最近一次 push 為 2026-11-14,版本迭代快。專案規模龐大(近 1900 個檔案),README 同時推銷商業產品 Caveman Code 與 Cloud,閱讀時要分辨開源部分和商業部分。效益數字多為作者自行測量。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供 `curl -fsSL .../install.sh | bash` 與 `irm .../install.ps1 | iex` 安裝方式(固定在 v3.1.0 tag),執行前建議先檢視腳本內容",
-          "完整安裝器會修改 Claude Code hooks、statusline 及各代理設定檔,並可透過 `npx -y github:JuliusBrussee/caveman` 直接從 GitHub 執行;根目錄 package.json 未發現 preinstall/postinstall/prepare 等生命週期腳本",
-          "proxy 位於代理與模型供應商之間,轉送的請求內容與供應商憑證都會經過它;SECURITY.md 說明本機模式的原文備份保存在本機 CCR 儲存",
-          "SECURITY.md 揭露 CLI 預設啟用(可退出)的去識別化使用量遙測,會連同 IP 傳送至 Caveman,可用 `caveman telemetry off` 或 `DO_NOT_TRACK=1` 關閉;另有選用的託管 gateway 模式,請求會經過 Caveman Cloud,並會附帶 repo 名稱與分支名稱標籤"
+          "README 與 INSTALL.md 提供 `curl -fsSL https://raw.githubusercontent.com/.../v4.1.0/install.sh | bash` 與 `irm .../install.ps1 | iex` 安裝方式,網址固定在版本標籤,文件也另附不用 curl|bash 的手動安裝方式。",
+          "主要安裝方式 `npx @caveman-ai/cli@latest` 會從 npm 下載並執行套件;install.sh 也會委派 Node 安裝器(installer/install.js),可能再透過 npx 取得 GitHub 上的程式碼。使用前建議先用 `--dry-run` 檢視。",
+          "安裝器會偵測並修改多種代理的設定(hooks、plugin、statusline),並在本機執行代理來轉發請求;README 說明使用使用者自己的金鑰與 Claude Pro/Max 登入,因此代理會接觸這些憑證與 API 流量,使用者應了解其權限範圍。",
+          "根目錄 package.json 沒有 preinstall/postinstall/prepare 生命週期腳本;Dockerfile 使用 digest 固定映像,並以非 root 執行。",
+          "Auto 模組需要帳號,且有 Caveman Cloud 連線程式碼(proxy/internal/cloudlink),使用雲端功能時請求資料可能會送到外部服務,啟用前應確認資料範圍。"
         ]
       },
       "star_rating": 4,
-      "verdict": "以玩笑起家但已發展成工程完整、測試與文件紮實的 token 優化工具鏈,值得 AI 開發者關注並實測;安裝時留意遙測預設開啟與 proxy 經手憑證這兩點即可。",
+      "verdict": "工程品質高、評測相對誠實,對重度使用編碼代理又在意 token 成本的人值得關注;安裝時請留意它會修改代理設定並作為本機代理轉發流量。",
       "_mode": "full"
     }
   },
@@ -23361,10 +23383,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-09-30",
-    "days_on_trending": 8,
-    "consecutive_days_on_trending": 8,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -23421,37 +23443,45 @@
         13,
         "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
         "TypeScript"
+      ],
+      "2026-11-15": [
+        24501,
+        495,
+        7,
+        "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-23",
+    "last_analyzed": "2026-11-15",
     "analysis": {
-      "one_liner": "開源 Office SDK,可在瀏覽器與 Node.js 中嵌入試算表、文件、簡報等辦公應用,並專為 AI Agent 操作設計。",
-      "summary": "Univer 是一套以外掛架構打造的 Office 生產力 SDK,提供 Canvas 渲染引擎、公式引擎與統一的 Facade API,讓開發者能在自家產品中嵌入試算表、文件、簡報等編輯體驗,同時支援瀏覽器與 Headless Node.js 執行環境。此開源版本鎖定核心編輯能力,協作、匯入匯出、圖表等進階功能則屬於商業版 Univer Pro。",
+      "one_liner": "開源的 Office SDK 核心,以 TypeScript 提供試算表與文件的編輯、公式計算和協作架構,可嵌入自家產品或接上 AI 代理。",
+      "summary": "Univer 是 DreamNum 維護的 Office SDK。本倉庫以 Apache-2.0 釋出 Web SDK 的核心,包括內容模型、外掛與依賴注入、命令系統、公式與渲染引擎、Facade API,以及 Sheets 與 Docs 的編輯功能。它處理的是在自家產品中嵌入 Excel/Word 類功能的問題,也能讓 AI 代理透過同一套 API 操作文件。商業外掛、Server SDK 與商業 AI SDK 另行授權,不在本倉庫內。",
       "category": "framework",
       "highlights": [
-        "Plugin-first 架構,功能可依需求組合、替換或延遲載入,並提供 Preset Mode 快速上手",
-        "Isomorphic 設計,同一套邏輯可在瀏覽器 UI 與 Node.js Headless 環境執行,便於伺服器端自動化處理",
-        "明確區分 OSS 與 Pro 商業層,README 清楚列出功能邊界(協作、匯入匯出、圖表等屬付費 Pro)",
-        "測試覆蓋相當扎實,單是 packages/core 就有 167+ 個 .spec.ts 測試檔,CI 以 4 個 shard 分散跑測試並回報 Codecov",
-        "另設有 Semgrep 資安掃描工作流程(security-semgrep.yml)與正式 Security Policy"
+        "採 Command / Mutation / Operation 三層命令架構,所有資料修改都經由命令執行,方便實作 undo/redo 與協作衝突解決",
+        "以外掛加 preset 的組合式設計,並提供 Facade API 與事件,供應用程式與 AI 代理操作內容",
+        "Monorepo(pnpm + turbo)結構,僅 packages/core 就有 170 個以上 spec 測試檔,涵蓋文件模型、服務與 facade",
+        "CI 完整:build、品質檢查、Semgrep 安全掃描、Codecov、dependabot,另有 commitlint 與 husky",
+        "README 提供 8 種語言(含繁體中文),並附 API 參考與文件站"
       ],
       "use_cases": [
-        "在 SaaS 產品、內部工具或 BI 系統中嵌入可客製化的試算表/文件編輯功能",
-        "建置 AI Agent 可程式化讀寫、驗證的辦公文件工作流程(如自動化報表生成、文件審閱)",
-        "在 Node.js 伺服器端進行無 UI 的公式運算與工作表批次處理"
+        "在 SaaS 或內部系統中嵌入可編輯的線上試算表或文件編輯器",
+        "讓 AI 代理透過 Facade API 讀寫、計算 Office 內容",
+        "在無介面(headless)環境重用公式引擎與內容模型做資料處理",
+        "自建協作式辦公應用,再接上商業 Server SDK 做即時協作"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "文件詳盡(多語系 README、架構筆記、API 穩定性政策、貢獻指南),測試數量龐大且 CI 涵蓋 lint、typecheck、分片測試與覆蓋率回報,commit 與 release 節奏頻繁(近期每日皆有更新),整體工程成熟度高,是大型、長期維運的 monorepo。抽樣核心程式碼(command.service.ts 等)註解完整、型別定義清晰,程式碼品質良好。"
+        "comment": "文件完整且支援多語系,程式碼有清楚的 JSDoc 與統一授權標頭。僅 packages/core 就有 170 個以上測試檔,CI、型別檢查與 lint 俱全,最近仍持續推送。需注意:簡報、PDF、伺服器協作等進階功能屬商業版,開源版範圍以 Sheets 與 Docs 為主。"
       },
       "security": {
         "risk_level": "none",
         "findings": []
       },
-      "star_rating": 5,
-      "verdict": "工程品質與文件完整度俱佳的成熟 Office SDK,若有嵌入式文件編輯或 AI Agent 操作辦公文件的需求,非常值得深入評估。",
+      "star_rating": 4,
+      "verdict": "成熟度高、架構紮實的開源 Office SDK。想嵌入試算表或文件編輯,或讓 AI 代理操作 Office 內容的團隊值得關注,但要先確認所需功能是否屬於商業授權範圍。",
       "_mode": "full"
     }
   },
@@ -32421,10 +32451,10 @@
   },
   "we-promise/sure": {
     "first_seen": "2026-11-11",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-11-11": [
         11958,
@@ -32451,6 +32481,13 @@
         14745,
         925,
         5,
+        "The personal finance app for everyone (by everyone)",
+        "Ruby"
+      ],
+      "2026-11-15": [
+        15314,
+        659,
+        12,
         "The personal finance app for everyone (by everyone)",
         "Ruby"
       ]
@@ -32549,10 +32586,10 @@
   },
   "GoogleChrome/modern-web-guidance-src": {
     "first_seen": "2026-11-12",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-12": [
         1755,
@@ -32571,6 +32608,13 @@
       "2026-11-14": [
         4859,
         1925,
+        2,
+        "Keep your coding agent up to date with the latest web best practices",
+        "TypeScript"
+      ],
+      "2026-11-15": [
+        6063,
+        1231,
         2,
         "Keep your coding agent up to date with the latest web best practices",
         "TypeScript"
@@ -32796,10 +32840,10 @@
   },
   "QwenLM/qwen-code": {
     "first_seen": "2026-11-13",
-    "last_seen": "2026-11-13",
+    "last_seen": "2026-11-15",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-13": [
         29812,
@@ -32807,15 +32851,58 @@
         6,
         "An open-source AI coding agent that lives in your terminal.",
         "TypeScript"
+      ],
+      "2026-11-15": [
+        30350,
+        64,
+        6,
+        "An open-source AI coding agent that lives in your terminal.",
+        "TypeScript"
       ]
+    },
+    "last_analyzed": "2026-11-15",
+    "analysis": {
+      "one_liner": "阿里通義團隊開源的終端機 AI 程式碼代理,支援多協議模型,並延伸到 IDE、桌面、網頁與聊天工具。",
+      "summary": "Qwen Code 是以 TypeScript 開發的開源 AI coding agent,主要在終端機執行(`qwen`),同時提供桌面 App、Web UI、VS Code/Zed/JetBrains 外掛,以及 Telegram、釘釘、微信、飛書等聊天整合。支援 OpenAI、Anthropic、Gemini、Qwen 協議及 Ollama/vLLM 本地模型,內建 Skills、SubAgents、MCP、Auto-Memory 等代理能力,定位類似 Claude Code / Gemini CLI 的開源替代方案。",
+      "category": "ai-ml",
+      "highlights": [
+        "多協議支援:OpenAI、Anthropic、Gemini、Qwen API,並可接 Ollama / vLLM 本地模型,執行時可切換",
+        "內建 Skills、SubAgents、MCP、Auto-Memory,另有 Agent Teams、Agent Arena 等實驗或選用功能",
+        "介面涵蓋終端機、桌面、Web、IDE 外掛與多種聊天平台(含釘釘、微信、飛書)",
+        "提供 TypeScript、Python、Java SDK 與 headless 模式(`qwen -p`),方便 CI/CD 整合",
+        "Apache-2.0 授權,約 3 萬星,並推出 1.0 Preview(整合 Qoder 的 agent harness)"
+      ],
+      "use_cases": [
+        "在終端機以開源 coding agent 取代或對照 Claude Code / Gemini CLI",
+        "搭配自架或本地模型(Ollama、vLLM)進行不外傳程式碼的開發輔助",
+        "透過 headless 模式與 SDK 將 AI 代理整合進 CI/CD 或批次自動化",
+        "把代理接入企業聊天工具(飛書、釘釘等)作為團隊助理"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清晰,有安裝、快速上手、多介面入口及多語系文件;測試僅憑 README 無法評估。最近一次推送為 2026-11-15,專案持續活躍,star 數高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 `curl ... | bash` 與 `irm ... | iex` 一鍵安裝方式,腳本託管於阿里雲 OSS;此類安裝方式建議先檢視腳本內容,或改用 npm / Homebrew 安裝。",
+          "本評估僅依據 README,未進行原始碼層級審查。",
+          "代理具備執行指令與修改檔案的能力,並可連接外部聊天平台與 MCP,使用時建議留意權限與沙箱設定。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、迭代快速的開源終端機 coding agent,對想要多模型彈性或本地部署的工程師值得關注與試用。",
+      "_mode": "light"
     }
   },
   "ashhart/TensorFold": {
     "first_seen": "2026-11-13",
-    "last_seen": "2026-11-13",
+    "last_seen": "2026-11-15",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-13": [
         1938,
@@ -32823,7 +32910,53 @@
         7,
         "LLM Inference Engine for Metal, CUDA and Vulkan.",
         "Zig"
+      ],
+      "2026-11-15": [
+        2165,
+        37,
+        9,
+        "LLM Inference Engine for Metal, CUDA and Vulkan.",
+        "Zig"
       ]
+    },
+    "last_analyzed": "2026-11-15",
+    "analysis": {
+      "one_liner": "以 Zig 撰寫的原生 LLM 推論引擎,直接在 Apple Silicon(Metal)與 NVIDIA(CUDA)上跑模型,服務端不需要 Python 或 MLX。",
+      "summary": "TensorFold 是用 Zig 寫成的 LLM 推論伺服器。它自行讀取 checkpoint、做 tokenize,並直接執行 Metal/CUDA kernel(建置檔另有 HIP、Vulkan 目標),對外提供 OpenAI 相容、Responses 與 Anthropic Messages API。倉庫同時包含 Electron 桌面 App、Web UI、企業版 Starlight 的對接說明,以及實驗性的 Living Weights(執行中把新事實寫入模型權重)功能。",
+      "category": "ai-ml",
+      "highlights": [
+        "純 Zig 原生二進位:服務端不依賴 Python 或 MLX,直接跑 Metal/CUDA kernel,並提供 OpenAI、Responses、Anthropic Messages 三種 API",
+        "支援模型與硬體範圍廣:Qwen3.5/3.6/3.8、Nemotron 3.5、GLM-5.3、LFM2.5 等,涵蓋單機 Mac、GB10、RTX,以及雙機 TP 與 Thunderbolt 組網",
+        "README 的模型表附有 pin 住的 revision、實測硬體與已知限制,沒有誇大支援範圍",
+        "發佈流程重視供應鏈驗證:Dockerfile 會驗 sha256 與 ed25519 簽章,安裝文件也提供 sha256 檢查步驟",
+        "Living Weights 可在服務執行中把新事實寫進模型權重,屬實驗功能,文件有誠實列出已知問題"
+      ],
+      "use_cases": [
+        "在 Apple Silicon Mac 或 DGX Spark(GB10)上自架本地 LLM 服務,取代 Python 推論堆疊",
+        "評估或 benchmark 原生 Metal/CUDA 推論效能,以及 MTP、drafter 等推測解碼方案",
+        "研究 Zig 實作的 GPU kernel、KV 分頁池與多卡/多機推論架構",
+        "為團隊建置統一的 OpenAI/Anthropic 相容內網端點(搭配 Starlight)"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "文件非常完整:有 README、RUNBOOK、CHANGELOG、SECURITY、各模型 recipe 與 evaluating 文件。CI 有 8 個 workflow,包含夜間從零建置的 No GPU 測試、zig-fmt 與 Web/App 檢查,action 以 commit SHA 固定版本,權限最小化。zig/tests 下有大量測試,Electron 與 Web 端也有各自的測試;但 GPU 實測仍須自備硬體。倉庫規模龐大(上萬個檔案),專案很新(在 trending 第 1 天),最近推送頻繁。本次只讀了 build.zig 與 CI/Dockerfile,沒有深入逐一審閱 kernel 原始碼。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的 Linux 安裝流程是下載 release 壓縮檔並附 sha256 檢查,沒有直接 curl|bash;但 Web UI 與診斷文件中提示使用者執行 `curl -fsSL https://tensorfold.dev/install.sh | sh`,屬常見的下載後直接執行模式,建議先檢視腳本內容再執行",
+          "app/package.json 有 preinstall(node scripts/check-package-manager.mjs),app/mobile/package.json 有 postinstall(node scripts/sanitize-lock.mjs),安裝 npm 依賴時會執行這些本地腳本,建議事先檢視",
+          "README 的貢獻流程建議以 `npm install -g github:ashhart/ATC` 全域安裝另一個 GitHub 倉庫的工具,並會對公開看板送出匿名 check-in,屬選用流程,使用者應知悉",
+          "`tensorfold web` 在互動式 release 版中,經使用者同意後會透過 uv 安裝對應版本的 Web 套件",
+          "Living Weights(--slide)會改寫 checkpoint 資料夾內的檔案,文件要求使用 API key 並建議只對複本操作;SECURITY.md 說明了 API key 範圍、Host/Origin 檢查等邊界",
+          "web/tensorfold_web/ui_dist 內有已打包的前端 JS(屬建置產物),未見其他可疑的混淆程式碼或內嵌 base64 載荷"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "技術完整度與文件品質都很高,想在 Mac/GB10 上跑原生推論引擎的人值得關注;不過專案很新、規模龐大,上線前建議先看 docs/evaluating.md 並固定版本。",
+      "_mode": "full"
     }
   },
   "ggml-org/llama.cpp": {
@@ -32844,15 +32977,22 @@
   },
   "backnotprop/plannotator": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-14": [
         10460,
         108,
         6,
+        "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+        "TypeScript"
+      ],
+      "2026-11-15": [
+        11134,
+        408,
+        1,
         "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "TypeScript"
       ]
@@ -32897,15 +33037,22 @@
   },
   "louislam/uptime-kuma": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-14": [
         93865,
         71,
         7,
+        "A fancy self-hosted monitoring tool",
+        "JavaScript"
+      ],
+      "2026-11-15": [
+        94242,
+        430,
+        11,
         "A fancy self-hosted monitoring tool",
         "JavaScript"
       ]
@@ -32951,15 +33098,22 @@
   },
   "tradermonty/claude-trading-skills": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-14": [
         4173,
         69,
         9,
+        "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+        "Python"
+      ],
+      "2026-11-15": [
+        4820,
+        553,
+        3,
         "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
         "Python"
       ]
@@ -33003,15 +33157,22 @@
   },
   "Likely7/Veyra-NRVideo": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-14",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-15",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-14": [
         1617,
         256,
         11,
+        "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+        "C++"
+      ],
+      "2026-11-15": [
+        2270,
+        420,
+        14,
         "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
         "C++"
       ]
@@ -33053,6 +33214,166 @@
       },
       "star_rating": 3,
       "verdict": "對 GPU 影像增強、DLSS/FSR 整合或擷取卡玩家有參考價值,功能完整且迭代積極;但僅限 Windows 與特定 GPU,完整功能依賴封閉執行環境,適合有硬體需求或想研究管線設計的人,不是人人必看。",
+      "_mode": "full"
+    }
+  },
+  "ag-ui-protocol/ag-ui": {
+    "first_seen": "2026-11-15",
+    "last_seen": "2026-11-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-15": [
+        17371,
+        9,
+        8,
+        "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-15",
+    "analysis": {
+      "one_liner": "AG-UI 是開放、輕量、以事件為基礎的 Agent–使用者互動協定,讓 AI Agent 後端能標準化地接入前端應用。",
+      "summary": "AG-UI 定義約 16 種標準事件類型,讓 Agent 後端透過 SSE、WebSocket 等任意傳輸層,把串流對話、狀態同步、前端工具呼叫、Generative UI 與 human-in-the-loop 推送到前端。它與 MCP(給 Agent 工具)、A2A(Agent 對 Agent)互補,專注於「Agent 進入使用者介面」。倉庫是大型 monorepo,包含 TypeScript 核心 SDK,以及 Python、Go、Java、Kotlin、.NET、Dart、Ruby、Swift、Rust 等多語言 SDK,並整合 LangGraph、CrewAI、Google ADK、Mastra、Pydantic AI、Microsoft Agent Framework 等框架。",
+      "category": "framework",
+      "highlights": [
+        "事件導向協定,與傳輸層無關(SSE、WebSocket、webhook 皆可),並提供中介層(middleware)機制",
+        "多語言 SDK 涵蓋 TS、Python、Go、Java、Kotlin、.NET、Dart、Ruby、Swift、Rust,各語言皆有 CI 工作流程",
+        "整合生態廣:LangGraph、CrewAI、Google ADK、AWS Strands、Mastra、Pydantic AI、Agno、LlamaIndex、AG2 等",
+        "提供 Dojo 範例站與 npx create-ag-ui-app 腳手架,上手快",
+        "TypeScript client 測試密集,涵蓋協定版本向後相容、SSE/proto 傳輸一致性與 schema 強制驗證"
+      ],
+      "use_cases": [
+        "在前端應用中串接不同 Agent 框架,以統一事件格式呈現串流對話與工具呼叫",
+        "實作 Agent 與 UI 的雙向共享狀態與 human-in-the-loop 審核流程",
+        "為自家 Agent 框架開發 AG-UI 整合或新語言 SDK",
+        "搭配 CopilotKit 快速打造具 Generative UI 的 AI 應用"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 清楚說明協定定位、整合清單與入門指令,另有獨立文件站與 Dojo。倉庫內有數十個 GitHub Actions 工作流程(各語言單元測試、Dojo E2E、發佈流程、zizmor 與 actionlint 靜態檢查),TS client 有上百個測試檔。近期持續推送,維護積極,工程紀律良好。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "apps/dojo/e2e/package.json 含 postinstall 腳本 `playwright install chromium`,在該子套件安裝依賴時會下載瀏覽器二進位檔,屬 Playwright 測試的常見做法,且該套件標示為 private。",
+          "倉庫含 .mcp.json、.claude/settings.json 與 .claude-plugin 等 AI 工具設定檔,使用 Claude Code 等工具開啟此倉庫前,建議先檢視其內容。",
+          "CI 設有 binaries 檢查、LFS pointer 檢查、lockfile 不變檢查與 fork PR 安全警示等工作流程;未在所分析的檔案中發現混淆程式碼或 curl|bash 安裝模式。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "做 Agent 前端整合的人值得持續關注:協定定位清楚、生態廣、工程品質與測試覆蓋都很紮實,是 Agent UI 事實標準的有力候選。",
+      "_mode": "full"
+    }
+  },
+  "Tencent/LoopForge": {
+    "first_seen": "2026-11-15",
+    "last_seen": "2026-11-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-15": [
+        913,
+        33,
+        13,
+        "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+        "Go"
+      ]
+    },
+    "last_analyzed": "2026-11-15",
+    "analysis": {
+      "one_liner": "騰訊開源的自架式 coding agent 交付平台,以 SOP 工作流串接 CodeBuddy、Codex、Claude Code 等 CLI,並內建人工審批關卡。",
+      "summary": "LoopForge 是以 Go 撰寫的自架平台,團隊可在 Docker 沙盒中與 Main Bot 對話,或執行可重複的 SOP(Agent、Script、人工關卡、子 SOP 節點),由 coding agent 完成從需求到 PR 的交付。它整合十種 agent CLI,並提供角色分工、檢查點、歷史紀錄與成本報表,解決 agent 交付結果不穩定、缺乏審核流程的問題。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援 CodeBuddy、Codex、Claude Code、OpenCode、Cursor CLI 等十種執行器,每個 SOP 角色可獨立指定執行器與模型",
+        "SOP 引擎含 Agent、Script、人工審批、子 SOP 節點,可退回指定步驟、從任一節點重跑",
+        "./start.sh 一鍵以 Docker Compose 部署,附免 API key 的腳本加審批 demo",
+        "測試完整:超過 800 個 Go 測試檔,CI 含真實 Chromium 測試與覆蓋率門檻,並有 gitleaks 設定",
+        "提供 Local 版本與 execution machine 綁定,可讓本機 CLI 登入狀態參與執行"
+      ],
+      "use_cases": [
+        "團隊建立標準化的 AI 輔助開發流程(設計、實作、審查、測試、驗收)",
+        "為 coding agent 加入人工審批與可追溯紀錄,導入 human-on-the-loop",
+        "在自有基礎設施上統一管理多種 agent CLI 與成本",
+        "需求到 PR 的自動化交付與重複性 bug 修復流程"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(中英 README、部署、安全、貢獻指南,附流程圖),測試檔超過 800 個,CI 有 5 個 workflow 含覆蓋率門檻與 E2E,Dependabot 已啟用,最近仍在推送。專案才上榜第一天,長期維護狀況尚待觀察。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "預設 Compose 部署透過主機 Docker socket 啟動沙盒容器,文件說明這等同於取得主機 Docker daemon 控制權,僅適用於受信任團隊,不適合不受信任的多租戶環境",
+          "服務預設監聽 0.0.0.0:8090,首位註冊帳號成為管理員,且預設開放註冊(可用 AGENTFLOW_ALLOW_SIGNUP=false 關閉);對外暴露前需自行限制存取",
+          "deploy/bind-cli.sh 與 local/install.sh 文件示範 curl -fsSL <平台網址>/runners/install.sh | bash 的安裝方式,會從自架平台下載並執行腳本,使用前建議先檢視內容",
+          "Dockerfile 以 npm 全域安裝 codex、codebuddy-code 等 CLI(固定版本),並下載 python-build-standalone 且以 SHA-256 驗證;部分執行器(Claude Code、OpenCode 等)於首次使用時才從 npm 安裝",
+          "未發現混淆程式碼、內嵌 base64 payload 或 npm 生命週期腳本等異常"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "工程品質高、文件與測試完整的 agent 工作流平台,對想把 coding agent 納入團隊 SDLC 的人值得關注;部署前請留意 Docker socket 與預設開放註冊的信任邊界。",
+      "_mode": "full"
+    }
+  },
+  "martin-olivier/airgorah": {
+    "first_seen": "2026-11-15",
+    "last_seen": "2026-11-15",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-15": [
+        5868,
+        270,
+        15,
+        "A WiFi security auditing software",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-15",
+    "analysis": {
+      "one_liner": "以 Rust 與 GTK4 撰寫的 Linux WiFi 安全稽核工具,支援封包擷取、客戶端探索、解除認證、握手/PMKID 擷取與密碼破解。",
+      "summary": "Airgorah 是一套 Linux 專用的 WiFi 安全稽核軟體,提供 GTK4 圖形介面,可掃描附近 AP 與客戶端、執行 deauth 攻擊、擷取 handshake 與 PMKID,並搭配 aircrack-ng 破解密碼。專案採用 GUI(一般使用者)與特權 agent(經 polkit 提權)分離的架構,降低以 root 執行整個 GUI 的風險。",
+      "category": "security",
+      "highlights": [
+        "GUI 與特權 agent 分離:GUI 以一般使用者執行,需要提權時才透過 polkit/pkexec 啟動 airgorah-agent,同時相容 X11 與 Wayland",
+        "agent 透過 Unix socket 通訊,並以 SO_PEERCRED 檢查對端 uid,拒絕其他本機使用者操控",
+        "跨越特權邊界的參數(介面名稱、MAC、頻道過濾)在 agent 端重新驗證,降低命令注入風險",
+        "deauth 以原生 raw socket 在 Rust 內偽造 802.11 frame,並限制發送速率(1–1000 輪/秒)",
+        "提供 deb、rpm、pacman 打包,支援 x86_64 與 aarch64,CI 含 clippy 與 rustfmt 檢查"
+      ],
+      "use_cases": [
+        "在自己擁有或已獲授權的網路上做 WiFi 滲透測試與弱密碼稽核",
+        "資安教學與 CTF 中示範 WPA handshake / PMKID 擷取流程",
+        "研究 Rust 如何設計特權分離的 Linux 桌面安全工具",
+        "在 Kali 等發行版上以圖形化介面取代指令列 aircrack-ng 流程"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 3,
+        "activity": 4,
+        "comment": "README 簡潔,詳細安裝與使用說明放在 GitHub Wiki,倉庫內文件偏少。程式碼結構清楚(agent / common / gui 三個 crate),模組註解完整,輸入驗證意識良好。單元測試約 43 個,集中在 common、sniffer、pmkid、deauth 等核心邏輯,GUI 層無測試。CI 有 clippy、fmt、雙架構建置與打包,並使用 dependabot,但 CI 不執行 cargo test。最近仍有推送,維護活躍。"
+      },
+      "security": {
+        "risk_level": "medium",
+        "findings": [
+          "此工具的功能本身屬於攻擊性無線測試:包含發送偽造的 deauth/disassoc 封包、擷取 handshake 與 PMKID、破解密碼。README 已明確聲明僅可用於自己擁有的網路,未經授權使用在多數國家違法。",
+          "安裝後會透過 polkit(package/.policy)讓 /usr/bin/airgorah-agent 以 root 權限執行,需 auth_admin 驗證;使用者應知道此 agent 具備 root 權限、可操作網卡與啟動子程序。",
+          "agent 以 Unix socket 接收請求,並檢查 peer uid;介面名稱與 MAC 位址在 agent 端另行驗證,屬正面的防護設計。",
+          "Dockerfile 與 CI 僅用於建置:以 gem install fpm 安裝打包工具、apt 安裝相依套件,未見 curl|bash 或下載後執行的安裝模式。",
+          "未在檢視的檔案中發現混淆程式碼、內嵌 base64 payload 或可疑相依套件;repo 中的二進位檔僅有 PNG 圖示與 vendors.csv 資料檔。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對資安從業者與 Rust 開發者而言是品質不錯、架構考究(特權分離)的 WiFi 稽核工具,值得關注;但使用時務必僅限已獲授權的網路,並留意 agent 具 root 權限。",
       "_mode": "full"
     }
   }

@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-15",
+    "analyzed": 7,
+    "cached": 8,
+    "deferred": 0,
+    "top_name": "ag-ui-protocol/ag-ui",
+    "top_rating": 5
+  },
+  {
     "date": "2026-11-14",
     "analyzed": 8,
     "cached": 4,
