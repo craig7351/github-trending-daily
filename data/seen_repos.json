@@ -1225,8 +1225,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1306,6 +1306,13 @@
         5,
         "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-11-16": [
+        52101,
+        691,
+        6,
+        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
     "last_analyzed": "2026-11-14",
@@ -1345,8 +1352,8 @@
       "verdict": "架構設計務實、工程品質與文件都相當完整的 AI code review 工具,對有 CI 審查或 Agent 整合需求的團隊值得優先試用;效能數據為官方自述,建議自行以內部程式碼驗證。",
       "_mode": "full"
     },
-    "total_days_on_trending": 13,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 14,
+    "consecutive_days_on_trending": 3
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -3944,8 +3951,8 @@
   },
   "ChromeDevTools/chrome-devtools-mcp": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-30": [
         47885,
@@ -3985,10 +3992,17 @@
         4,
         "Chrome DevTools for coding agents",
         "TypeScript"
+      ],
+      "2026-11-16": [
+        56933,
+        717,
+        5,
+        "Chrome DevTools for coding agents",
+        "TypeScript"
       ]
     },
-    "total_days_on_trending": 6,
-    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 7,
+    "consecutive_days_on_trending": 3,
     "last_analyzed": "2026-11-14",
     "analysis": {
       "one_liner": "Google 官方出品的 MCP 伺服器與 CLI,讓 AI 程式碼代理能控制並檢視真實的 Chrome 瀏覽器,進行除錯、自動化與效能分析。",
@@ -23383,10 +23397,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -23448,6 +23462,13 @@
         24501,
         495,
         7,
+        "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+        "TypeScript"
+      ],
+      "2026-11-16": [
+        25719,
+        988,
+        1,
         "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
         "TypeScript"
       ]
@@ -32586,10 +32607,10 @@
   },
   "GoogleChrome/modern-web-guidance-src": {
     "first_seen": "2026-11-12",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-11-12": [
         1755,
@@ -32616,6 +32637,13 @@
         6063,
         1231,
         2,
+        "Keep your coding agent up to date with the latest web best practices",
+        "TypeScript"
+      ],
+      "2026-11-16": [
+        7171,
+        1219,
+        10,
         "Keep your coding agent up to date with the latest web best practices",
         "TypeScript"
       ]
@@ -32977,10 +33005,10 @@
   },
   "backnotprop/plannotator": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-14": [
         10460,
@@ -32993,6 +33021,13 @@
         11134,
         408,
         1,
+        "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+        "TypeScript"
+      ],
+      "2026-11-16": [
+        11839,
+        866,
+        4,
         "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "TypeScript"
       ]
@@ -33098,10 +33133,10 @@
   },
   "tradermonty/claude-trading-skills": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-14": [
         4173,
@@ -33114,6 +33149,13 @@
         4820,
         553,
         3,
+        "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+        "Python"
+      ],
+      "2026-11-16": [
+        5560,
+        706,
+        11,
         "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
         "Python"
       ]
@@ -33219,15 +33261,22 @@
   },
   "ag-ui-protocol/ag-ui": {
     "first_seen": "2026-11-15",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-15": [
         17371,
         9,
         8,
+        "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+        "TypeScript"
+      ],
+      "2026-11-16": [
+        17867,
+        355,
+        2,
         "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
         "TypeScript"
       ]
@@ -33271,15 +33320,22 @@
   },
   "Tencent/LoopForge": {
     "first_seen": "2026-11-15",
-    "last_seen": "2026-11-15",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-16",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-15": [
         913,
         33,
         13,
+        "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+        "Go"
+      ],
+      "2026-11-16": [
+        1490,
+        423,
+        7,
         "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
         "Go"
       ]
@@ -33374,6 +33430,215 @@
       },
       "star_rating": 4,
       "verdict": "對資安從業者與 Rust 開發者而言是品質不錯、架構考究(特權分離)的 WiFi 稽核工具,值得關注;但使用時務必僅限已獲授權的網路,並留意 agent 具 root 權限。",
+      "_mode": "full"
+    }
+  },
+  "google-labs-code/stitch-skills": {
+    "first_seen": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-16": [
+        9300,
+        247,
+        3,
+        "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-16",
+    "analysis": {
+      "one_liner": "Google Labs 官方出品的 Stitch MCP Agent Skills 集合,涵蓋設計生成、設計轉程式碼、DESIGN.md 擷取等工作流程。",
+      "summary": "這是一個遵循 Agent Skills 開放標準的技能與外掛庫,搭配 Google Stitch MCP 伺服器使用。內容分為 stitch-design、stitch-build、stitch-utilities 三個外掛,可把 Stitch 畫面轉成 React、React Native、Remotion 影片,也能把前端程式碼反向上傳成 Stitch 設計。支援 Codex、Claude Code、Cursor、Gemini CLI、OpenCode 等 coding agent。",
+      "category": "ai-ml",
+      "highlights": [
+        "三個外掛共約 15 個技能,每個技能依 SKILL.md、scripts、resources、examples 的標準結構組織",
+        "支援雙向流程:Stitch 轉 React / React Native / Remotion,以及程式碼轉 Stitch 設計(extract-static-html、upload-to-stitch)",
+        "跨 agent 相容,提供 Codex marketplace、npx plugins、npx skills 與 OpenCode 手動安裝方式",
+        "upload_to_stitch.py 在註解中說明為何繞過模型直接送出 base64(避開輸出 token 上限),設計考量清楚",
+        "CI 會用 gold-standard 範例驗證 react-components 與 react-native 的 validate.js"
+      ],
+      "use_cases": [
+        "在 Claude Code 或 Cursor 中,把 Stitch 設計稿轉成 React 元件系統",
+        "把既有前端專案擷取成 DESIGN.md 與靜態 HTML,再上傳到 Stitch 進行改版",
+        "用 Stitch 專案自動產生 Remotion 產品導覽影片",
+        "作為撰寫自家 Agent Skills(SKILL.md 結構、驗證腳本)的參考範本"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 4,
+        "comment": "README 清楚,有安裝說明、技能清單與範例提示,另附 CONTRIBUTING 與 SECURITY。未找到獨立的測試檔,CI 只對兩個技能的 gold-standard 範例跑驗證腳本。Python 上傳腳本有注入 urlopen 的可測試設計,但倉庫內未見對應測試。最近有推送、結構完整,但專案聲明非 Google 官方支援產品。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "react-components 的 package.json 未見 preinstall / postinstall / prepare 等生命週期腳本,僅有 validate 與 fetch 兩個需手動執行的 script",
+          "scripts/fetch-stitch.sh 會用 curl 從呼叫者提供的 URL 下載內容並寫入指定路徑,來源 URL 由使用者傳入,使用時需留意",
+          "upload_to_stitch.py 會讀取本機檔案、以 base64 編碼後連同 API key(以 --api-key 命令列參數傳入)送往 stitch.googleapis.com,API key 出現在命令列可能留在 shell 歷史紀錄中",
+          "README 的安裝方式使用 npx plugins add 與 npx skills add,會從 npm 下載並執行外部套件,屬常見做法,使用者可自行評估",
+          "技能內容(SKILL.md)會指示 agent 呼叫 MCP 與執行腳本,建議安裝前先檢閱要啟用的技能"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想用 coding agent 串接 Stitch 設計流程的人值得關注;技能結構也可當作撰寫 Agent Skills 的參考範本。",
+      "_mode": "full"
+    }
+  },
+  "ggml-org/ggml": {
+    "first_seen": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-16": [
+        15908,
+        43,
+        8,
+        "Tensor library for machine learning",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-11-16",
+    "analysis": {
+      "one_liner": "llama.cpp 與 whisper.cpp 背後的底層 C/C++ 張量函式庫,主打零相依、跨平台、量化推論",
+      "summary": "ggml 是 ggml-org 維護的機器學習張量函式庫,以純 C/C++ 實作且無外部相依。它支援 CPU、GPU、NPU 與瀏覽器等多種後端,也支援多種 SIMD 指令集與 2 到 8 位元量化(含 MXFP4、NVFP4)。專案同時定義 GGUF 模型檔格式,是 llama.cpp 等本機 LLM 推論專案的核心基礎。",
+      "category": "library",
+      "highlights": [
+        "純 C/C++ 實作、無外部相依,以 CMake 建置,上手門檻低",
+        "涵蓋 x86、ARM、RISC-V、LoongArch、PowerPC、s390x、WebAssembly,後端涵蓋 CPU/GPU/NPU/瀏覽器",
+        "支援 2 到 8 位元整數量化,以及 MXFP4、NVFP4 微縮放格式",
+        "執行期零記憶體配置的設計,src 內有 ggml-alloc、ggml-backend、ggml-opt 等模組",
+        "附 GGUF 格式文件與 gpt-2、gpt-j、mnist、magika 等範例,方便學習與移植"
+      ],
+      "use_cases": [
+        "在邊緣裝置或沒有 Python 環境的設備上做本機 LLM / 模型推論",
+        "研究量化格式與後端(backend)抽象設計,作為自製推論引擎的參考",
+        "為 llama.cpp、whisper.cpp 等下游專案貢獻或除錯時,了解底層張量運算",
+        "將模型移植到 WebAssembly 或非主流 CPU 架構"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 簡短,但附 GGUF 規格文件與有註解的 simple 範例,程式碼風格一致。tests/ 有大量算子測試(含 test-backend-ops、量化、卷積、優化器),CI 在 GitHub Actions 與自架 runner 上運作。最近仍有推送,維護活躍。官方建議核心變更改到 llama.cpp 提 PR。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "想了解或自建本機推論堆疊的工程師值得深入研讀,多數人則是間接透過 llama.cpp 使用它。",
+      "_mode": "full"
+    }
+  },
+  "elementalsouls/Claude-BugHunter": {
+    "first_seen": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-16": [
+        6448,
+        98,
+        9,
+        "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-16",
+    "analysis": {
+      "one_liner": "為 Claude Code 打造的賞金獵人與外部紅隊技能包,內含 83 項技能、15 個斜線指令與 681 筆已揭露報告模式。",
+      "summary": "claude-bughunter 是一組可直接安裝的 Claude Code 技能包,涵蓋方法論、58 個 hunt-* 網頁漏洞技能、企業身分與邊界平台攻擊鏈(M365/Entra、Okta、vCenter、VPN 設備),以及報告與證據衛生。技能依主題自動載入,並提供 7 問題驗證閘門、範圍檢查、Burp MCP 整合與 engagement 腳手架。也可跨 OpenCode、Codex CLI、Hermes、AntiGravity 等 harness 使用。",
+      "category": "security",
+      "highlights": [
+        "83 項技能依主題自動觸發,無須手動指定名稱,涵蓋 XSS、SQLi、SSRF、IDOR 等 24 類核心漏洞",
+        "681 筆 HackerOne 已揭露報告模式,其中 433 筆有個別引用可稽核",
+        "含企業邊界攻擊鏈(M365/Entra、Okta、vCenter、SSL VPN)與雲端 IAM 後續升級",
+        "7 問題驗證閘門、VRT 嚴重度對應、OOS 反駁與 PII 遮蔽,涵蓋從偵察到報告的完整流程",
+        "支援 Claude Code 外掛市集安裝,技能亦可移植到 5 種 agent harness,另有 cbh CLI 與 Burp MCP"
+      ],
+      "use_cases": [
+        "在已授權的 bug bounty 專案中,讓 Claude 輔助偵察、排序攻擊面與撰寫報告",
+        "外部紅隊演練中針對企業邊界設備與身分系統做初始存取研究",
+        "研究如何將資安領域知識封裝為 Claude Skills,作為 AI 資安應用的參考",
+        "在 DVWA、Juice Shop 等訓練平台上練習滲透測試流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,範圍與不涵蓋項目交代明確,並附安裝、使用、架構等延伸文件連結。僅依 README 評估,未檢視程式碼與測試。最近推送為 2026-11-15,趨勢熱度高。README 內技能數字(描述 82 與內文 83)略有不一致。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 提供 install.sh / install.ps1 腳本,會將技能與指令複製到 ~/.claude/ 等目錄,並可選擇設定 Burp MCP;建議執行前先閱讀腳本內容。",
+          "另提供 pipx 直接從 GitHub 安裝 cbh CLI 的方式。",
+          "本工具屬攻擊性資安用途,README 聲明僅限已授權目標。",
+          "本評估僅依 README,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對從事授權滲透或 bug bounty 的工程師而言,是內容完整、值得關注的 Claude Skills 資安合集;安裝前建議先審閱腳本。",
+      "_mode": "light"
+    }
+  },
+  "NVIDIA/SkillEvaluator": {
+    "first_seen": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-16": [
+        1685,
+        122,
+        12,
+        "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-16",
+    "analysis": {
+      "one_liner": "NVIDIA 推出的 AI Agent Skill 多層評估框架,涵蓋品質閘門、語意重複偵測、合成評測資料集與真實 Agent 前後對照評測。",
+      "summary": "SkillEvaluator 是符合 Agent Skills 規範的評估 CLI(PyPI 套件 skillevaluator),分三層:Tier 1 靜態驗證與安全掃描(可免 API key、確定性評分)、Tier 2 語意去重與跨 skill 相似度、Tier 3 透過 Harbor 沙箱做「有/無 skill」的 live Agent 評測。可單機執行、用 `skillevaluator ci init` 接進 GitHub/GitLab CI,或當作 skill 裝進 Claude Code/Codex。",
+      "category": "devtool",
+      "highlights": [
+        "三層管線設計清楚:靜態品質/安全 → 語意重複 → 真實 Agent 前後對照,各層可獨立執行並可設定是否擋 gate",
+        "Tier 1 免 API key、免 Docker 即可得到確定性品質分數(範例 86.2/100),上手門檻低",
+        "整合 SkillSpector、Gitleaks、Bandit 等掃描器,並提供 GitHub/GitLab CI 範本與 PR 留言報告",
+        "支援 NVIDIA Build、Anthropic、OpenAI、Bedrock 等多種 LLM 供應商,附 arXiv 論文與 NVIDIA 官方文件",
+        "測試檔案數量龐大(約 470 多個)、14 個 CI workflow,含 DCO、gitleaks 與供應鏈驗證設定"
+      ],
+      "use_cases": [
+        "在 Skill 儲存庫的 PR 上自動做品質與安全檢查",
+        "量化某個 skill 是否真的提升 Claude Code/Codex 的任務成功率",
+        "清理企業內部 skill 目錄中重複或重疊的指引",
+        "替 skill 自動產生合成評測資料集並建立基準報告"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(README、docs 站、CHANGELOG、GOVERNANCE、SECURITY、RELEASING、論文與部落格),測試約 470 多個檔案,涵蓋 CLI、嵌入、報告、CI 與 golden 測試。CI 有 14 個 workflow,最近推送為 2026-11-16,版本 0.9.0 持續迭代。程式碼有 SPDX 標頭與型別註記,並對報告做憑證遮蔽與來源驗證,工程品質高。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "pyproject.toml 未發現 setup.py 或安裝時執行的 lifecycle script,建置後端為 setuptools。",
+          "README 說明 Tier 1 在掃描器缺少時會下載「已固定版本並驗證」的 SkillSpector 與 Gitleaks 發行版,使用者需知悉會有網路下載行為。",
+          "Tier 3 會啟動 Docker 沙箱與 Agent 並呼叫外部 LLM 服務;rubric-eval 會把 skill 文件送到所選模型,需自行管理 API key 與費用。",
+          "倉庫內 ci/bundles 含預先打包的 zip 與 SHA256SUMS、verification-receipt,屬於 CI 導入包,使用前可自行比對雜湊。",
+          "未發現 curl|bash、混淆程式碼或內嵌長 base64 payload;相關關鍵字僅出現在測試資料(安全掃描規則的測試案例)中。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "想系統化評估 Agent Skill 品質與實際成效的團隊值得關注;文件、測試與 CI 都相當成熟,Tier 1 可免費快速試用。",
       "_mode": "full"
     }
   }
