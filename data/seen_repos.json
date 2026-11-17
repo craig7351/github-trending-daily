@@ -1225,8 +1225,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 3,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1313,6 +1313,13 @@
         6,
         "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-11-17": [
+        52933,
+        951,
+        10,
+        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
     "last_analyzed": "2026-11-14",
@@ -1352,8 +1359,8 @@
       "verdict": "架構設計務實、工程品質與文件都相當完整的 AI code review 工具,對有 CI 審查或 Agent 整合需求的團隊值得優先試用;效能數據為官方自述,建議自行以內部程式碼驗證。",
       "_mode": "full"
     },
-    "total_days_on_trending": 14,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 15,
+    "consecutive_days_on_trending": 4
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -2868,7 +2875,7 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-08-31",
+    "last_seen": "2026-11-17",
     "days_on_trending": 1,
     "stars_history": {
       "2026-07-28": [
@@ -2904,6 +2911,13 @@
         60504,
         230,
         7,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
+      ],
+      "2026-11-17": [
+        68130,
+        135,
+        8,
         "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "Python"
       ]
@@ -2943,7 +2957,7 @@
       "verdict": "工程品質與文件完整度在 GitHub trending 專案中相當突出,若你需要在 agent 工作流中快速彙整社群輿情與市場資訊,值得立即嘗試。",
       "_mode": "full"
     },
-    "total_days_on_trending": 6,
+    "total_days_on_trending": 7,
     "consecutive_days_on_trending": 1
   },
   "ocornut/imgui": {
@@ -3951,8 +3965,8 @@
   },
   "ChromeDevTools/chrome-devtools-mcp": {
     "first_seen": "2026-07-30",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 3,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-30": [
         47885,
@@ -3999,10 +4013,17 @@
         5,
         "Chrome DevTools for coding agents",
         "TypeScript"
+      ],
+      "2026-11-17": [
+        57687,
+        841,
+        12,
+        "Chrome DevTools for coding agents",
+        "TypeScript"
       ]
     },
-    "total_days_on_trending": 7,
-    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 8,
+    "consecutive_days_on_trending": 4,
     "last_analyzed": "2026-11-14",
     "analysis": {
       "one_liner": "Google 官方出品的 MCP 伺服器與 CLI,讓 AI 程式碼代理能控制並檢視真實的 Chrome 瀏覽器,進行除錯、自動化與效能分析。",
@@ -23397,10 +23418,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -23469,6 +23490,13 @@
         25719,
         988,
         1,
+        "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+        "TypeScript"
+      ],
+      "2026-11-17": [
+        27783,
+        1828,
+        3,
         "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
         "TypeScript"
       ]
@@ -33005,10 +33033,10 @@
   },
   "backnotprop/plannotator": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-14": [
         10460,
@@ -33028,6 +33056,13 @@
         11839,
         866,
         4,
+        "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+        "TypeScript"
+      ],
+      "2026-11-17": [
+        12567,
+        696,
+        2,
         "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "TypeScript"
       ]
@@ -33133,10 +33168,10 @@
   },
   "tradermonty/claude-trading-skills": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-14": [
         4173,
@@ -33156,6 +33191,13 @@
         5560,
         706,
         11,
+        "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+        "Python"
+      ],
+      "2026-11-17": [
+        6317,
+        837,
+        4,
         "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
         "Python"
       ]
@@ -33261,10 +33303,10 @@
   },
   "ag-ui-protocol/ag-ui": {
     "first_seen": "2026-11-15",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-15": [
         17371,
@@ -33277,6 +33319,13 @@
         17867,
         355,
         2,
+        "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+        "TypeScript"
+      ],
+      "2026-11-17": [
+        18992,
+        791,
+        1,
         "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
         "TypeScript"
       ]
@@ -33435,15 +33484,22 @@
   },
   "google-labs-code/stitch-skills": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-16": [
         9300,
         247,
         3,
+        "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "TypeScript"
+      ],
+      "2026-11-17": [
+        9738,
+        529,
+        7,
         "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "TypeScript"
       ]
@@ -33590,16 +33646,23 @@
   },
   "NVIDIA/SkillEvaluator": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-17",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-16": [
         1685,
         122,
         12,
         "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+        "Python"
+      ],
+      "2026-11-17": [
+        2697,
+        873,
+        9,
+        "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
         "Python"
       ]
     },
@@ -33640,6 +33703,86 @@
       "star_rating": 4,
       "verdict": "想系統化評估 Agent Skill 品質與實際成效的團隊值得關注;文件、測試與 CI 都相當成熟,Tier 1 可免費快速試用。",
       "_mode": "full"
+    }
+  },
+  "getarcaneapp/arcane": {
+    "first_seen": "2026-11-17",
+    "last_seen": "2026-11-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-17": [
+        8729,
+        46,
+        5,
+        "Modern Docker Management, Designed for Everyone",
+        "Go"
+      ]
+    }
+  },
+  "DeanChensj/jiangshan-map": {
+    "first_seen": "2026-11-17",
+    "last_seen": "2026-11-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-17": [
+        6723,
+        288,
+        6,
+        "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+        "JavaScript"
+      ]
+    }
+  },
+  "google-research/paper-orchestra": {
+    "first_seen": "2026-11-17",
+    "last_seen": "2026-11-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-17": [
+        1522,
+        313,
+        11,
+        "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+        "Python"
+      ]
+    }
+  },
+  "sveltejs/svelte": {
+    "first_seen": "2026-11-17",
+    "last_seen": "2026-11-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-17": [
+        88994,
+        115,
+        13,
+        "web development for the rest of us",
+        "JavaScript"
+      ]
+    }
+  },
+  "kajisho5/ffmpeg-skill": {
+    "first_seen": "2026-11-17",
+    "last_seen": "2026-11-17",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-17": [
+        6729,
+        367,
+        14,
+        "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+        "Python"
+      ]
     }
   }
 }
