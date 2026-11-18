@@ -1225,8 +1225,8 @@
   },
   "alibaba/open-code-review": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 4,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-26": [
         12965,
@@ -1320,6 +1320,13 @@
         10,
         "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
         "Go"
+      ],
+      "2026-11-18": [
+        53726,
+        763,
+        3,
+        "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "Go"
       ]
     },
     "last_analyzed": "2026-11-14",
@@ -1359,8 +1366,8 @@
       "verdict": "架構設計務實、工程品質與文件都相當完整的 AI code review 工具,對有 CI 審查或 Agent 整合需求的團隊值得優先試用;效能數據為官方自述,建議自行以內部程式碼驗證。",
       "_mode": "full"
     },
-    "total_days_on_trending": 15,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 16,
+    "consecutive_days_on_trending": 5
   },
   "anthropics/claude-cookbooks": {
     "first_seen": "2026-07-26",
@@ -1413,8 +1420,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-01",
-    "days_on_trending": 5,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1591,48 +1598,54 @@
         8,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-11-18": [
+        319332,
+        1917,
+        9,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-10-30",
+    "last_analyzed": "2026-11-18",
     "analysis": {
-      "one_liner": "跨 16 種以上程式代理(Claude Code、Codex、Cursor、Gemini CLI 等)通用的可組合技能框架與軟體開發方法論,涵蓋腦力激盪、計畫、TDD、子代理開發與審查。",
-      "summary": "Superpowers 是一套給 coding agent 使用的技能(skills)庫,加上開機時注入的引導指令。它要求代理在動手寫程式前先釐清需求、產出設計與計畫,再以 TDD 與子代理逐任務執行並審查。專案以外掛、擴充套件或 marketplace 形式支援多個代理平台,用來解決代理跳過規劃與測試、輸出品質不穩的問題。",
+      "one_liner": "跨多種 coding agent 的技能框架與軟體開發方法論,以可組合的 skills 讓代理先釐清需求、寫計畫、做 TDD,再由子代理逐項執行與審查。",
+      "summary": "Superpowers 是以 Markdown skills 為核心的開發方法論,搭配 SessionStart hook 把 using-superpowers 技能注入對話,讓代理自動走「需求釐清 → 設計 → 實作計畫 → 子代理驅動開發 → 審查」流程。它提供 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Pi、Hermes 等十餘種平台的外掛清單與安裝方式,處理代理直接跳去寫程式、缺乏紀律的問題。",
       "category": "devtool",
       "highlights": [
-        "完整工作流程:brainstorming → git worktree → writing-plans → subagent-driven-development → TDD → code review → 收尾分支,技能會自動觸發",
-        "平台覆蓋廣:Claude Code、Codex、Cursor、Gemini、Copilot CLI、OpenCode、Pi、Hermes、Muse、Kimi、Devin 等,皆有各自的外掛 manifest",
-        "SessionStart hook 會把 using-superpowers 技能注入上下文,並依 Cursor、Claude Code、Copilot、Muse 輸出不同的 JSON 格式",
-        "附有 diagnosing-superpowers 診斷技能,可讀取 session transcript 並產生已去識別的 bug 回報包",
-        "docs/superpowers/specs 保存大量設計文件,顯示專案以自身方法論進行開發"
+        "支援 Claude Code、Codex、Cursor、Gemini CLI、Kimi、OpenCode、Pi、Hermes、Muse 等十餘種 harness,各有獨立 plugin manifest",
+        "核心流程完整:需求釐清、分段設計確認、強調 red/green TDD、YAGNI、DRY 的實作計畫,以及 subagent-driven-development",
+        "hooks/session-start 處理細緻,考量 Windows Git Bash、PATH 損壞、EPIPE 與各平台輸出格式差異",
+        "docs/superpowers/specs 留有大量設計文件與評測結果,方法論演進過程透明",
+        "測試涵蓋 brainstorm server、各平台外掛、hooks、skill 大小與版本升級腳本,並有 skill 壓力情境測試"
       ],
       "use_cases": [
-        "讓 Claude Code 或 Codex 等代理在長任務中遵循規劃、TDD 與審查流程",
-        "團隊想統一多種 AI 編碼工具的開發紀律與工作流程",
-        "參考其 SKILL.md 寫法與跨平台外掛打包方式,自行設計技能或外掛",
-        "需要子代理逐任務實作並兩階段審查的大型功能開發"
+        "為 Claude Code 或 Codex 等 coding agent 加上一致的開發紀律與工作流程",
+        "讓代理長時間自主執行多步驟任務,並由子代理逐項審查",
+        "研究或設計自己的 agent skills 與跨平台外掛打包方式",
+        "團隊想統一多種 AI 編碼工具的工作方法"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 完整,各平台安裝步驟清楚,另有移植到新 harness 的指南、測試文件與大量設計規格。tests/ 涵蓋各平台外掛 manifest、hooks、brainstorm server、OpenCode、Hermes(pytest)、skill 大小與 shell lint 等。本次檢視的 .github/ 內只有 issue 與 PR 範本,沒有 workflows,CI 可能在別處,這裡看不到。最後推送為 2026-10-29,維護非常活躍。"
+        "comment": "README 涵蓋各平台安裝、流程與哲學,另有移植新 harness 指南、測試說明與大量設計規格。tests 目錄涵蓋範圍廣,但多數為 shell 腳本,部分需實際呼叫 agent。本地檔案中未找到 .github/workflows,CI 狀況無法由此確認。最後推送為 2026-11-03,版本迭代頻繁,維護活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 的 Visual companion telemetry 章節說明:brainstorming 的選用視覺輔助功能預設會從 primeradiant.com 載入 logo,請求中含 Superpowers 版本;可用環境變數 SUPERPOWERS_DISABLE_TELEMETRY 關閉,也會遵循 DISABLE_TELEMETRY 與 CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC。skills/brainstorming/scripts/server.cjs 內可見對應的 logo URL。",
-          "hooks/session-start 是 bash 腳本,會讀取本地 skills/using-superpowers/SKILL.md 並以 JSON 注入代理上下文,未見下載或執行外部內容的行為。",
-          "根目錄 package.json 沒有 preinstall、postinstall、prepare 等生命週期腳本,也沒有任何相依套件。",
-          "OpenCode 安裝方式是請代理擷取並依照遠端 INSTALL.md 的指示操作,使用者應先檢視該檔案內容。",
-          "本次抽樣未發現混淆程式碼、長 base64 payload 或已提交的二進位執行檔,assets/ 內僅有圖片。"
+          "hooks/session-start 會在每次工作階段開始時,將 using-superpowers 技能全文以 EXTREMELY_IMPORTANT 區塊注入代理的上下文;這是專案的設計用途,使用者應知悉其會影響代理行為",
+          "README 說明視覺化腦力激盪功能預設會從 primeradiant.com 載入 logo,網址帶有 Superpowers 版本資訊(server.cjs 中可見該 URL);可用環境變數 SUPERPOWERS_DISABLE_TELEMETRY 關閉,亦遵循 DISABLE_TELEMETRY 與 CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC",
+          "brainstorming 技能附帶 server.cjs 本機伺服器,專案有針對其認證加固的設計文件;使用該功能時需留意本機連接埠的開啟",
+          "package.json 未發現 preinstall/postinstall/prepare 等安裝期腳本,檢視範圍內也未發現混淆程式碼或內嵌 base64 載荷"
         ]
       },
       "star_rating": 4,
-      "verdict": "用 AI 編碼代理做正式開發的人值得關注與試用;其技能設計與跨平台打包也很適合當參考範本。",
+      "verdict": "若你日常使用 Claude Code、Codex 等 coding agent,這是目前成熟且支援平台廣的技能與工作流程框架,值得安裝試用,也值得參考其 skill 設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 26,
-    "consecutive_days_on_trending": 5
+    "total_days_on_trending": 27,
+    "consecutive_days_on_trending": 1
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1842,8 +1855,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-10-28",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 1,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -2017,48 +2030,55 @@
         8,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-11-18": [
+        305507,
+        883,
+        13,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
-    "last_analyzed": "2026-10-18",
+    "last_analyzed": "2026-11-18",
     "analysis": {
-      "one_liner": "跨 Claude Code、Codex、OpenCode、Cursor 等多種 agent harness 的技能、hooks、規則與記憶系統套件。",
-      "summary": "ECC(npm 套件 ecc-universal)是一個 agent harness 作業系統,提供數百個 skills、agents、commands、hooks、rules 與 MCP 設定。它附有 CLI(ecc、ecc-install、ecc-control-pane 等),可把這些內容安裝到不同的 AI 編碼工具。它想解決跨工具重複設定的問題,也想讓 TDD、安全審查、先研究再開發、持續學習與記憶等流程保持一致。",
+      "one_liner": "跨 Claude Code、Codex、Cursor、OpenCode 等多種 agent harness 的工程化工具箱,內含 72 個 agent、327 個 skills、hooks、規則、記憶與安全掃描。",
+      "summary": "ECC(npm 套件 ecc-universal)把「計畫→測試→實作→審查→驗證→記憶→改進」的流程,包裝成可安裝的 agents、skills、legacy command shims、hooks、rules 與 MCP 設定。主要支援 Claude Code,另有 Codex、Qoder 的原生外掛路徑,以及 Cursor、OpenCode、Gemini、Zed、Copilot 等能力受限的轉接層。它想解決的是不必在每個 prompt 裡重建同一套工程流程,並用持續學習與記憶累積可重用的工作流。",
       "category": "ai-ml",
       "highlights": [
-        "涵蓋 7 種以上 harness(Claude Code、Codex、OpenCode、Cursor、Gemini、Qoder 等)的統一安裝與設定",
-        "skills 範圍極廣,包含各語言與框架的 patterns、testing、security、continuous-learning、memory、eval-harness 等",
-        "內建多個 CI 驗證腳本(validate-skills、validate-hooks、供應鏈 IOC 掃描),並設有 80% 覆蓋率門檻",
-        "提供多國語言文件,包含繁體中文 README(docs/zh-TW)",
-        "MIT 授權,近期持續推送,有 13 個 GitHub Actions 工作流程"
+        "規模龐大:README 標示 72 agents、327 skills、98 個 legacy command shims,涵蓋 TDD、研究、安全、文件、前端、資料、ML 與維運",
+        "多 harness 支援:同一套內容分發到 .claude-plugin、.codex、.cursor、.opencode、.gemini 等目錄,並附支援狀態矩陣說明各平台差異",
+        "內建 hooks、持續學習(continuous learning)、記憶 vault 與 AgentShield 安全掃描(另有獨立 npm 套件 ecc-agentshield)",
+        "多語系文件:zh-TW、zh-CN、ja-JP、ko-KR 等十餘種語言 README",
+        "CI 完整:15 個 GitHub workflows,含 supply-chain-watch、npmscan、validate-workflow-security 等供應鏈檢查"
       ],
       "use_cases": [
-        "為 Claude Code 或 Codex 快速導入一套成熟的 skills、hooks 與規則",
-        "在團隊中統一多種 AI 編碼工具的開發流程與安全審查規範",
-        "參考其 skill、hook 與記憶設計,打造自己的 agent harness",
-        "用 harness-audit、skills-health 等腳本評估 agent 設定的健康度"
+        "為 Claude Code 或 Codex 快速套上一整套 TDD、code review、build-fix 與安全審查的 agent/skill 流程",
+        "團隊跨多種 AI 編碼工具時,統一規則、hooks 與 MCP 設定",
+        "參考其 skills / agents / hooks 的撰寫方式,設計自家的 agent harness",
+        "研究 agent 的持續學習、記憶與 context 優化模式"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "文件豐富且多語系,專案規模龐大(超過 4600 個檔案)。tests/ 下有多個 *.test.js 與 run-all.js,npm test 串接大量驗證器,並設有 c8 80% 覆蓋率門檻,CI 工作流程完整。主要缺點是內容龐雜、skills 數量多,品質需逐項挑選。本次分析只讀了 package.json、README 與目錄結構,沒有逐一審閱原始碼。"
+        "comment": "文件豐富且多語系;tests 目錄含約 500 個測試檔,涵蓋 ci、hooks、commands、docs、docker 等,另有 15 個 CI workflows。近乎每日提交,最後推送 2026-11-17,維護非常活躍。缺點是範圍極廣(約 4900 個檔案),內容品質不一,且主要由單一維護者推動。本次僅做靜態閱讀,未執行測試。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "package.json 沒有 preinstall、postinstall 或 prepare 生命週期腳本。只有 prepack 會執行 build:opencode,屬於發佈端行為。welcome 腳本只是 echo 訊息。",
-          "在 README、install.sh、install.ps1 與 scripts/*.js 中,沒有找到 curl|bash 或 iwr|iex 之類的下載即執行模式。install.sh 內也沒有外部網址。",
-          "套件會把大量 hooks、MCP 設定與 skills 寫入使用者的 Claude Code、Codex 等工具設定。這些 hooks 會在 agent 工作階段中執行,安裝前建議先檢視 hooks/ 與 mcp-configs/ 的內容。",
-          "安裝內容包含贊助商與 ECC Pro 的連結和說明,另有選用的 `ecc ito find` 橋接功能,會呼叫外部 CLI 並提交需驗證的 RFQ。README 與 welcome 訊息已說明這是選用功能。",
-          "依賴只有 4 個(@iarna/toml、ajv、js-yaml、sql.js),版本固定且名稱正常。README 提醒只應從官方管道安裝。"
+          "package.json 只有 prepack(npm run build:opencode)這個生命週期腳本,沒有 preinstall / postinstall / prepare,安裝套件時不會自動執行額外指令",
+          "專案附有 install.sh 與 install.ps1 安裝腳本,且會安裝 hooks 與 MCP 設定到使用者的 agent 環境。這類 hooks 會在 agent 執行過程中觸發,安裝前建議先檢視內容",
+          "在 skills、文件與 build-pi-core.js 中找到的 `curl | sh` 字串,都是作為禁止或偵測規則的範例,未看到把它當安裝方式使用",
+          "README 提醒只從官方管道(GitHub、npm ecc-universal / ecc-agentshield、ecc.tools)安裝,並說明第三方鏡像未經審查",
+          "未發現混淆程式碼或內嵌的長 base64 / hex payload;專案另有 ECC Pro 付費託管 GitHub App 的商業連結,屬可選項目"
         ]
       },
       "star_rating": 4,
-      "verdict": "想系統化管理 Claude Code、Codex 等 agent 設定的工程師值得關注。內容龐大,建議只挑需要的 skills 與 hooks 安裝,並先審閱 hooks。",
+      "verdict": "想系統化強化 Claude Code / Codex 工作流的人值得關注,內容龐大且維護活躍。建議先挑選需要的 skills 與 hooks,不要一次全部安裝。",
       "_mode": "full"
     },
-    "total_days_on_trending": 26,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 27,
+    "consecutive_days_on_trending": 1
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -2875,8 +2895,8 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-28": [
         54252,
@@ -2920,45 +2940,55 @@
         8,
         "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "Python"
+      ],
+      "2026-11-18": [
+        69065,
+        696,
+        2,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-08-31",
+    "last_analyzed": "2026-11-18",
     "analysis": {
+      "one_liner": "跨 Reddit、X、YouTube、HN、Polymarket 等 20 多個來源的「最近 30 天」研究型 AI Agent Skill,以社群互動與真實資金訊號排序後合成報告。",
+      "summary": "last30days 是可安裝於 Claude Code、Codex、Cursor、Gemini CLI 等 Agent Skills 主機的研究技能。它並行搜尋多個社群與資料來源,依 upvote、按讚、預測市場賠率等真實互動訊號打分,再由 agent 合成有出處的摘要。v4 另加入專利申請與公司職缺頁的「Secret Signals」、Yahoo Finance 股價線等功能。",
       "category": "ai-ml",
-      "one_liner": "一個 AI agent skill,能同時搜尋 Reddit、X、YouTube、HN、Polymarket 等十多個平台,彙整成一份有引用來源的「近 30 天」研究簡報。",
-      "summary": "last30days-skill 是給 Claude Code、Codex、Gemini CLI 等 agent 平台使用的技能套件,輸入一個主題(人物、公司、產品、比較題)後,會平行查詢十幾個社群/市場資料源(Reddit 留言與讚數、X 貼文、YouTube 逐字稿、Polymarket 賠率、GitHub 動態等),依真實互動量排序去重,再由 agent 綜合成一份附引用來源的簡報。核心賣點是解決「Google 只收錄編輯內容、抓不到社群即時討論」的痛點,讓使用者在會議、銷售拜訪或市場調查前快速掌握最新輿情。",
       "highlights": [
-        "零設定即可用 Reddit、HN、Polymarket、GitHub 四個免費來源,其餘來源可自帶 API key 或瀏覽器 cookie 解鎖",
-        "測試量體龐大(repo 內超過 200 個 test_*.py 檔,README 聲稱 2,700+ 測試),並在 pyproject.toml 設定 84% 覆蓋率門檻",
-        "CI/CD 相當成熟:TruffleHog 密鑰掃描、Semgrep SAST、OSV/uv 依賴稽核、OpenSSF Scorecard、zizmor 檢查 GitHub Actions 設定,且 Action 全部 pin 到 commit SHA",
-        "核心引擎純 Python 標準庫實作(pyproject.toml dependencies 為空),大幅降低供應鏈風險",
-        "支援 50+ agent host(Claude Code、Codex、Cursor、Copilot、Gemini CLI、OpenClaw 等),同一套引擎可跨平台安裝"
+        "來源廣:Reddit、HN、Polymarket、GitHub 免設定即可用,可再接 X、YouTube、TikTok、Bluesky、arXiv、Perplexity 等",
+        "以互動量與真金白銀(Polymarket 賠率)排序,而非 SEO 相關度,適合掌握最新社群共識",
+        "支援多種主機:Claude Code marketplace、npx skills、Grok、OpenClaw,並提供 MCP 伺服器",
+        "pyproject 的 dependencies 為空,以標準函式庫為主;tests 目錄有 358 個以上測試檔,覆蓋率門檻 81%",
+        "SECURITY.md 詳列各來源的網路請求、瀏覽器 cookie 同意機制與可關閉的開關,透明度高"
       ],
       "use_cases": [
-        "會議或銷售拜訪前,快速掌握對方公司/人物近 30 天的社群動態與新聞",
-        "產品或技術選型時做多工具比較(如 A vs B vs C),取得含互動數據佐證的評比",
-        "內容創作者用來蒐集 Reddit/X/YouTube 上關於某主題的第一手熱門觀點,取代人工逐一搜尋",
-        "長期趨勢監控:搭配 --store 寫入 SQLite,用 watchlist.py 排程比對並透過 Slack/webhook 通知新發現"
+        "會議或業務拜訪前,快速掌握某人或某公司最近 30 天的動態",
+        "追蹤 AI 工具與社群討論,比較工具並找出新興話題(discovery 模式)",
+        "新產品開發前,觀察社群實際遇到的問題與需求",
+        "以專利、職缺、股價與預測市場觀察公司尚未公開的動向"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "文件非常完整(多語系 README、CONFIGURATION.md、CONCEPTS.md、docs/solutions 內大量記錄設計決策與踩坑過程),程式碼模組化清晰(lib/ 下依來源拆分,pipeline.py 統一編排)。測試覆蓋率門檻設在 84% 並有專門 CI 檢查,GitHub Actions 全數 pin 到 commit SHA 且涵蓋 SAST、密鑰掃描、依賴稽核,工程成熟度在同類專案中屬上乘。近期(2026-08-30)仍持續高頻更新,活躍度高。"
+        "comment": "文件完整:README 提供 10 種語言版本,另有 CONFIGURATION、SECURITY、CONCEPTS、CHANGELOG 等文件。tests/ 下有 358 個以上測試檔,pyproject 設有覆蓋率下限 81%。CI 涵蓋 validate、osv-scanner、scorecard、zizmor、security 掃描與 release 自動化,並用 towncrier 管理變更紀錄。最後推送為 2026-11-17,維護積極。本次未逐行審閱核心原始碼,品質判斷主要依據結構、測試與設定檔。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "文件中的疑難排解訊息裡出現一個 curl | bash 安裝指令(用於安裝第三方 Grok CLI:curl -fsSL https://x.ai/cli/install.sh | bash),這是給使用者參考的建議指令而非程式自動執行的內容,使用前應自行評估該第三方安裝腳本",
-          "此技能會依需求讀取瀏覽器 cookie(如 X/Twitter 登入狀態)、macOS Keychain 或 .env 中的 API 金鑰以存取各平台,屬功能所需的正常設計,但涉及憑證存取,使用者應了解金鑰/cookie 的儲存與使用範圍(README 有說明儲存於本機、無遙測)"
+          "未發現 npm 生命週期腳本(preinstall/postinstall 等);vendor 的 bird-search/package.json 中沒有這類腳本,在 skills 目錄中也未搜尋到 curl|bash 或 base64 解碼後執行的樣式",
+          "依 SECURITY.md,使用者的研究主題會送往所有啟用的來源與網搜後端;若設定 Gemini/OpenAI/xAI/OpenRouter 金鑰,主題與候選內容也會送往該供應商做重排",
+          "依 SECURITY.md,引擎可在使用者同意後讀取瀏覽器 cookie(僅限 X 的 auth_token、ct0 與 Truth Social 的 _session_id),預設關閉;MCP 伺服器預設停用此功能",
+          "執行時可能呼叫 node、yt-dlp、gh、brightdata 及 Printing Press 等外部 CLI;首次設定可能安裝這些 CLI,建議先看設定精靈要做什麼",
+          "公司類主題會自動向 Wikidata、USPTO 及公司官網職缺頁發出請求,且依文件,對少數公司即使 robots.txt 不允許也會讀取其職缺清單(可用 LAST30DAYS_JOBS_RESPECT_ROBOTS=1 改為遵守);--publish-html 會把報告上傳至 api.ht-ml.app,僅在使用者明確加旗標時執行"
         ]
       },
-      "star_rating": 5,
-      "verdict": "工程品質與文件完整度在 GitHub trending 專案中相當突出,若你需要在 agent 工作流中快速彙整社群輿情與市場資訊,值得立即嘗試。",
+      "star_rating": 4,
+      "verdict": "做研究型 agent skill 值得關注:來源整合廣、測試與 CI 完整、安全文件透明。使用前建議先讀 SECURITY.md,留意主題外送與 cookie 讀取的設定。",
       "_mode": "full"
     },
-    "total_days_on_trending": 7,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 8,
+    "consecutive_days_on_trending": 2
   },
   "ocornut/imgui": {
     "first_seen": "2026-07-28",
@@ -10148,10 +10178,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-10-19",
+    "last_seen": "2026-11-18",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 9,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -10215,43 +10245,50 @@
         4,
         "Cursor plugin specification and official plugins",
         "TypeScript"
+      ],
+      "2026-11-18": [
+        16901,
+        201,
+        8,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-10-17",
+    "last_analyzed": "2026-11-18",
     "analysis": {
-      "one_liner": "Cursor 官方的外掛規格與 marketplace 倉庫,收錄約 100 個 Agent 外掛(skills、hooks、rules、MCP 整合)。",
-      "summary": "這是 Cursor 官方維護的多外掛 marketplace 倉庫,根目錄的 .cursor-plugin/marketplace.json 列出所有外掛,每個外掛都有獨立的 plugin.json 清單。內容包含 Cursor 自家的開發工作流外掛(advisor、continual-learning、orchestrate、pstack、create-plugin 等),以及大量 third_party 的 SaaS/MCP 整合(Gmail、Salesforce、GitHub、Playwright 等)。它同時是外掛規格的實際範例,可作為開發 Cursor 外掛的參考。",
+      "one_liner": "Cursor 官方外掛規格與外掛市集倉庫,收錄 100 多個外掛(技能、規則、hooks、MCP 連接器)。",
+      "summary": "這是 Cursor 的多外掛市集倉庫。根目錄的 marketplace.json 列出所有外掛,每個外掛在 `.cursor-plugin/plugin.json` 宣告自己的 manifest,內容包含 skills(SKILL.md)、rules(.mdc)、agents、hooks 與 MCP 設定。內建外掛涵蓋開發工作流(advisor、continual-learning、pstack、orchestrate、cursor-sdk)與大量 SaaS 連接器(Gmail、Salesforce、GitHub、Playwright 等 third_party 項目)。",
       "category": "framework",
       "highlights": [
-        "官方外掛規格的參照實作:plugin.json、skills/SKILL.md、rules/*.mdc、hooks、mcp.json 的目錄結構一目了然",
-        "內含 advisor(結束前諮詢更強模型)、continual-learning(自動更新 AGENTS.md 記憶)、orchestrate(平行雲端 Agent 編排)等高價值工作流範例",
-        "hooks 寫法具參考性:stop hook 以 followup_message 驅動 Agent 續跑,並含節流、狀態檔與防重複處理",
-        "同時提供 .claude-plugin/marketplace.json,與 Claude Code 外掛格式相容",
-        "有 PR 驗證 CI(ajv schema 驗證 plugin.json 與 marketplace),orchestrate、pstack 另有大量單元測試"
+        "定義了 Cursor 外掛的目錄規格:manifest、skills、rules、hooks、mcp.json,同時附有 .claude-plugin/marketplace.json,方便跨工具對照",
+        "官方維護 100 多個外掛,其中 third_party 下的 SaaS 與金融類連接器占大宗",
+        "開發類外掛設計有參考價值,例如 advisor(完成前請更強模型複審)、continual-learning(用 stop hook 增量更新 AGENTS.md)、ralph-loop、orchestrate(平行雲端 agent)",
+        "hook 範例寫得乾淨:continual-learning-stop.ts 有型別、狀態容錯與環境變數設定,advisor 的 stop-hook.sh 使用 set -euo pipefail",
+        "CI 會用 JSON schema 驗證所有 plugin.json,並檢查 pstack harness 產生的檔案樹是否與來源一致"
       ],
       "use_cases": [
-        "學習如何撰寫 Cursor/Claude Code 外掛、skills 與 hooks",
-        "直接安裝官方外掛,把 Gmail、GitHub、Playwright 等 MCP 整合接入 Cursor",
-        "參考 orchestrate/pstack 設計多 Agent 平行協作與驗證流程",
-        "為團隊建立自家外掛 marketplace 時作為範本"
+        "撰寫自己的 Cursor 外掛或團隊內部外掛市集時,拿來當結構與 manifest 的參考",
+        "研究 hooks 如何控制 agent 行為,例如 stop hook 注入 followup_message",
+        "直接安裝官方外掛,把 Gmail、GitHub、Playwright 等工具接入 Cursor",
+        "參考 agent 工作流的技能與子代理提示詞設計"
       ],
       "quality": {
         "docs": 4,
         "tests": 3,
         "activity": 5,
-        "comment": "根 README 有完整外掛清單與結構說明,各外掛有獨立 README/CHANGELOG/LICENSE。CI 僅在 PR 時驗證 schema 與 pstack 產出樹;單元測試集中在 orchestrate 與 pstack 的腳本,多數外掛(以 markdown 為主)沒有測試。抽樣的 continual-learning-stop.ts 型別完整、錯誤處理保守(失敗時回傳空物件);advisor 的 stop-hook.sh 用 set -euo pipefail 且邏輯清楚。推送頻繁、維護積極。GitHub 未標示授權,但 README 與各外掛 LICENSE 為 MIT。"
+        "comment": "根 README 的外掛總表完整,並說明了倉庫結構;多數外掛各自有 README、CHANGELOG 與 LICENSE。CI 只在 PR 修改特定路徑時觸發,內容是 schema 驗證、pstack 樹一致性檢查,以及 pstack 內 statechart 與 watch-pr 的 node 測試。測試只涵蓋 pstack,其他外掛主要是 markdown 與 JSON 設定,沒有執行層測試。最近推送時間是 2026-11-17,提交頻繁。GitHub 側欄未標示授權,但 README 寫 MIT,各外掛目錄也有 LICENSE 檔。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "未發現 npm preinstall/postinstall 等安裝時腳本,也未見 curl|bash 或 iwr|iex 模式;全倉庫的敏感關鍵字搜尋僅命中 3 個檔案(orchestrate 的 util.ts 與兩份 check-plan.mjs)",
-          "外掛含 hooks(shell 與 TypeScript/Bun),安裝後會在 Agent 事件(如 stop)時於本機執行,並讀寫 .cursor/hooks/state 下的狀態檔與對話 transcript,使用者安裝前宜先檢視",
-          "third_party 外掛會連接外部 SaaS/MCP 服務(含金融與交易類,如 Robinhood、Coinbase),授權範圍與權限需使用者自行確認",
-          "CI 在 PR 時執行 npm install --no-save ajv ajv-formats,屬常見的驗證用依賴安裝"
+          "部分外掛含 hooks(例如 advisor 的 shell 腳本、continual-learning 的 TypeScript 腳本),安裝後會在 agent 的 stop 等事件自動執行,並讀寫專案內 .cursor/hooks/state 等狀態檔,啟用前建議先閱讀內容",
+          "continual-learning 的 hook 會讀取對話 transcript 的修改時間,並透過 followup_message 讓 agent 更新 AGENTS.md,等於會持續處理對話紀錄,啟用前請留意",
+          "third_party 目錄下的外掛多數會連接外部 SaaS(信箱、金融帳戶、交易、付款等),實際權限取決於 OAuth 授權範圍,授權前應確認可讀寫的資料",
+          "在 package.json 中未發現 preinstall、postinstall、prepare 等生命週期腳本,也未發現 curl|bash 或 iwr|iex 的安裝寫法;CI 以 npm install --no-save 安裝 ajv 等驗證用套件"
         ]
       },
       "star_rating": 4,
-      "verdict": "想開發或理解 Cursor/Claude Code 外掛生態的人值得關注;官方範例與工作流外掛品質高,安裝第三方外掛前記得檢視其 hooks 與 MCP 權限。",
+      "verdict": "想了解或開發 Cursor 外掛生態的人值得關注:規格完整、官方維護且更新頻繁;一般使用者可挑需要的外掛安裝,並先看過 hooks 與授權範圍。",
       "_mode": "full"
     }
   },
@@ -16466,10 +16503,10 @@
   },
   "jingyaogong/minimind": {
     "first_seen": "2026-09-01",
-    "last_seen": "2026-09-02",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-01": [
         56115,
@@ -16484,40 +16521,51 @@
         5,
         "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
         "Python"
+      ],
+      "2026-11-18": [
+        65968,
+        192,
+        14,
+        "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-01",
+    "last_analyzed": "2026-11-18",
     "analysis": {
       "category": "ai-ml",
-      "one_liner": "從零開始、以極低成本（約3元人民幣、2小時)在單張3090上訓練出一個64M參數LLM的教學型專案。",
-      "summary": "MiniMind 提供從 Tokenizer 訓練、Pretrain、SFT、LoRA、DPO/RLHF、PPO/GRPO/CISPO 等 RLAIF 演算法，到 Agentic RL 與 Tool Use 的完整 LLM 訓練管線，且核心演算法皆以 PyTorch 原生實作、不依賴 transformers/trl/peft 等高階封裝。目標是降低一般人理解與親手訓練 LLM 的門檻，同時相容 llama.cpp、vllm、ollama 等主流推理生態。",
+      "one_liner": "從零開始、約 2 小時與 3 元人民幣就能訓練出 64M 參數小型 LLM 的完整開源流程。",
+      "summary": "MiniMind 是一個以原生 PyTorch 實作的極小型語言模型專案,涵蓋 Dense 與 MoE 架構(對齊 Qwen3 生態)、tokenizer 訓練、預訓練、SFT、LoRA、DPO、PPO/GRPO/CISPO、Tool Use、Agentic RL 與蒸餾等全流程。目標是降低 LLM 學習門檻,讓人在一般個人 GPU(如單張 3090)上實際跑完整個訓練管線,而非只做推論或微調現成大模型。",
       "highlights": [
-        "模型結構與訓練配置對齊 Qwen3/Qwen3-MoE 生態，方便直接轉換到 transformers/llama.cpp/vllm/ollama",
-        "涵蓋 Pretrain→SFT→LoRA→DPO→RLAIF(PPO/GRPO/CISPO)→Agentic RL 的完整訓練鏈路，且都是從0原生實現，教學價值高",
-        "支援斷點續訓、多卡 DDP/DeepSpeed、wandb/SwanLab 可視化，工程細節較完整",
-        "README 非常詳盡，附訓練成本估算、loss 曲線、架構圖與資料集說明",
-        "作者持續維護，2026-04-01 有大版本更新(對齊 Qwen3、新增 Agentic RL 等)"
+        "核心演算法(預訓練、SFT、LoRA、DPO、PPO、GRPO 等)以原生 PyTorch 自行實作,不依賴 trl/peft 等高階封裝,適合學習原理",
+        "模型程式碼精簡易讀:含 RMSNorm、RoPE + YaRN 外推、GQA、q/k norm、MoE 等現代 LLM 元件,並相容 transformers 生態",
+        "提供各階段開源資料集、OpenAI 相容 API 伺服器與 Streamlit 聊天 WebUI,支援 reasoning_content 與 tool_calls",
+        "支援單機單卡與多卡訓練(DDP、DeepSpeed)、wandb/swanlab 視覺化、斷點續訓,並可轉換給 llama.cpp、vllm、ollama 使用",
+        "持續更新:2026 年發布 minimind-3 與 MoE 版本,並擴充 Agentic RL、自適應思考、擴散語言模型與線性注意力等實驗"
       ],
       "use_cases": [
-        "個人或教學場景下快速上手、理解 LLM 訓練全流程(而非只做推理微調)",
-        "低成本驗證 Pretrain/SFT/RLHF/RLAIF 各階段演算法實作細節",
-        "作為理解 Qwen3 系列結構、MoE、YaRN 長文本外推等技術的簡化參考實作",
-        "串接 llama.cpp/vllm/ollama 或 OpenAI 相容 API 做小型模型部署實驗"
+        "學習並動手重現 LLM 從預訓練到強化學習的完整訓練管線",
+        "在有限算力下做小模型實驗,例如驗證新訓練演算法、資料配方或架構變體",
+        "作為教學或內訓教材,講解 Transformer、MoE、RLHF/RLAIF 的實作細節",
+        "快速建立可本機部署的輕量對話或 Tool Call 原型"
       ],
       "quality": {
         "docs": 5,
         "tests": 1,
-        "activity": 5,
-        "comment": "README 撰寫非常詳盡專業，涵蓋原理說明、資料格式、訓練成本與架構圖；核心模型程式碼(model_minimind.py)風格緊湊、邏輯清晰，可讀性佳。但整個 repo 未見任何單元測試目錄或 CI workflow，程式正確性主要仰賴作者手動驗證與訓練 loss 曲線，工程化測試覆蓋率偏低。最近一次 push 為 2026-08-31，屬活躍維護專案。"
+        "activity": 4,
+        "comment": "文件相當完整,有中英文 README、更新日誌、資料集說明與訓練曲線圖,程式碼風格緊湊且註解清楚。但專案內沒有 tests 目錄與 .github/workflows CI 設定,品質主要靠作者自行驗證與社群回饋。最近一次推送為 2026-10-27,維護活躍;累計約 6.6 萬星,社群採用度高。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "scripts/web_demo.py 中的 execute_tool 函式對 'calculate_math' 工具呼叫直接使用 Python 內建 eval() 執行模型產生的 expression 字串(第128行)，若此 Demo 被串接到會接受不受信任輸入的服務，存在任意程式碼執行風險；此為 Streamlit demo 範例程式碼，非核心訓練/推理程式。"
+          "未發現 setup.py、pyproject.toml、package.json 等安裝期腳本,也未發現 curl|bash 類安裝指令;依賴僅列在 requirements.txt,版本皆已固定,套件名稱皆為常見知名套件",
+          "eval_llm.py、scripts/serve_openai_api.py、scripts/web_demo.py、trainer/trainer_utils.py 等多處以 trust_remote_code=True 載入模型;若使用者改載入來源不明的模型路徑,會執行該模型庫中的程式碼,建議只載入可信來源",
+          "scripts/serve_openai_api.py 以 host=0.0.0.0 啟動 API 伺服器(port 8998),預設會對區網開放;在不受信任網路中使用時建議自行加上防火牆或存取控制",
+          "模型生成的數學表達式不是直接 eval,而是透過 trainer_utils.py 的 safe_math_eval 以 AST 白名單(僅允許算術運算與 math 函式,並限制長度與冪運算大小)求值,屬於較安全的作法",
+          "程式碼中未見混淆內容、內嵌長 base64 payload 或寫死的可疑網址;倉庫內的二進位檔主要為說明用圖片與 tokenizer 檔案"
         ]
       },
-      "star_rating": 4,
-      "verdict": "對想要真正理解並動手訓練 LLM 全流程的工程師或學生來說，是目前中文社群裡數一數二完整且持續更新的教學型專案，值得收藏學習；但缺乏自動化測試，直接用於生產環境需自行把關。",
+      "star_rating": 5,
+      "verdict": "想理解並實際動手訓練 LLM 全流程的工程師,這是目前最值得收藏與跑一遍的教學級專案;唯一缺點是沒有自動化測試與 CI。",
       "_mode": "full"
     }
   },
@@ -23418,10 +23466,10 @@
   },
   "dream-num/univer": {
     "first_seen": "2026-09-23",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 11,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 12,
     "stars_history": {
       "2026-09-23": [
         15403,
@@ -23497,6 +23545,13 @@
         27783,
         1828,
         3,
+        "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+        "TypeScript"
+      ],
+      "2026-11-18": [
+        28900,
+        1774,
+        5,
         "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
         "TypeScript"
       ]
@@ -33033,10 +33088,10 @@
   },
   "backnotprop/plannotator": {
     "first_seen": "2026-11-14",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-11-14": [
         10460,
@@ -33063,6 +33118,13 @@
         12567,
         696,
         2,
+        "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+        "TypeScript"
+      ],
+      "2026-11-18": [
+        13068,
+        691,
+        11,
         "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
         "TypeScript"
       ]
@@ -33303,10 +33365,10 @@
   },
   "ag-ui-protocol/ag-ui": {
     "first_seen": "2026-11-15",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-15": [
         17371,
@@ -33326,6 +33388,13 @@
         18992,
         791,
         1,
+        "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+        "TypeScript"
+      ],
+      "2026-11-18": [
+        19999,
+        1445,
+        10,
         "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
         "TypeScript"
       ]
@@ -33369,10 +33438,10 @@
   },
   "Tencent/LoopForge": {
     "first_seen": "2026-11-15",
-    "last_seen": "2026-11-16",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-15": [
         913,
@@ -33385,6 +33454,13 @@
         1490,
         423,
         7,
+        "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+        "Go"
+      ],
+      "2026-11-18": [
+        3146,
+        591,
+        4,
         "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
         "Go"
       ]
@@ -33484,10 +33560,10 @@
   },
   "google-labs-code/stitch-skills": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-16": [
         9300,
@@ -33499,6 +33575,13 @@
       "2026-11-17": [
         9738,
         529,
+        7,
+        "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "TypeScript"
+      ],
+      "2026-11-18": [
+        10105,
+        350,
         7,
         "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "TypeScript"
@@ -33593,15 +33676,22 @@
   },
   "elementalsouls/Claude-BugHunter": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-16",
+    "last_seen": "2026-11-18",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-16": [
         6448,
         98,
         9,
+        "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+        "Python"
+      ],
+      "2026-11-18": [
+        9302,
+        1005,
+        1,
         "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "Python"
       ]
@@ -33707,10 +33797,10 @@
   },
   "getarcaneapp/arcane": {
     "first_seen": "2026-11-17",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-17": [
         8729,
@@ -33718,7 +33808,51 @@
         5,
         "Modern Docker Management, Designed for Everyone",
         "Go"
+      ],
+      "2026-11-18": [
+        9329,
+        618,
+        6,
+        "Modern Docker Management, Designed for Everyone",
+        "Go"
       ]
+    },
+    "last_analyzed": "2026-11-18",
+    "analysis": {
+      "one_liner": "Arcane 是以 Go 後端搭配 SvelteKit 前端打造的自架式 Docker/Compose 管理介面,主打現代化且人人易用。",
+      "summary": "Arcane 是一個自架的 Docker 管理平台,提供網頁介面來管理容器、映像、網路、Compose 專案與多環境(含 agent 模式)。main 分支為 v3 版,後端使用 Go(Echo),前端使用 SvelteKit/TypeScript,並支援 Podman、GitOps、OIDC/LDAP/Passkey 等功能。專案以 BSD-3-Clause 授權,文件放在獨立網站 getarcane.app。",
+      "category": "infra",
+      "highlights": [
+        "功能面廣:容器、映像、Compose 專案、GitOps 同步、映像更新監控、自動修復、備份、Podman/Quadlet 支援",
+        "驗證機制完整:OIDC、LDAP、Passkey、API Key、MFA、角色權限、CSRF 與速率限制中介層",
+        "支援多環境與 agent 模式,可用 WebSocket 即時串流日誌、狀態與容器 exec",
+        "後端測試檔超過 270 個,並有 CI、CodeQL、Trivy、golangci-lint 與 Dependabot",
+        "提供 SBOM、多語系(Crowdin)與 compose、Podman、Quadlet、OTEL 等部署範例"
+      ],
+      "use_cases": [
+        "homelab 或小型團隊以網頁介面集中管理多台主機的 Docker/Compose",
+        "以 Git 倉庫驅動 Compose 專案部署(GitOps)並自動更新映像",
+        "取代 Portainer 類工具,需要 OIDC/LDAP 單一登入的自架環境",
+        "同時管理 Docker 與 Podman 的混合環境"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 很精簡,詳細文件放在外部網站。另有 CONTRIBUTING、SECURITY、AGENTS 與 AI_POLICY。後端測試覆蓋大多數服務模組,CI 流程完整(CI、CodeQL、Trivy、release),近期持續推送,活躍度高。目前以 v3 為 main,仍屬快速演進期。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "範例 compose 會把 /var/run/docker.sock 掛載進容器,Arcane 因此可控制主機上的 Docker daemon,這是 Docker 管理工具的常見做法,部署時應注意存取控制與網路暴露範圍",
+          "範例使用 getarcaneapp/manager:latest 浮動標籤,以及佔位用的 ARCANE_ENCRYPTION_KEY,正式部署時建議固定版本並自行產生隨機金鑰",
+          "CONTRIBUTING.md 的開發環境說明提到以 curl -fsSL https://vite.plus | bash 安裝 Vite+ 工具,僅出現在貢獻者文件,屬常見的安裝方式,執行前建議先檢視腳本",
+          "在掃描範圍內未發現混淆程式碼、內嵌的 base64 payload 或可疑的相依套件名稱"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、工程紀律良好的自架 Docker 管理平台,是 Portainer 的有力替代選項,想自架容器管理工具的人值得關注。使用時請留意 docker.sock 的權限風險。",
+      "_mode": "full"
     }
   },
   "DeanChensj/jiangshan-map": {
@@ -33739,10 +33873,10 @@
   },
   "google-research/paper-orchestra": {
     "first_seen": "2026-11-17",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-17": [
         1522,
@@ -33750,15 +33884,58 @@
         11,
         "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
         "Python"
+      ],
+      "2026-11-18": [
+        3004,
+        1072,
+        15,
+        "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+        "Python"
       ]
+    },
+    "last_analyzed": "2026-11-18",
+    "analysis": {
+      "one_liner": "Google Cloud AI Research 推出的多代理框架,把想法與實驗紀錄自動轉成可投稿的 LaTeX 論文。",
+      "summary": "PaperOrchestra 是對應 arXiv 論文的官方實作,由大綱、文獻回顧、章節撰寫、內容反思精修與繪圖等多個代理串接而成。輸入未結構化的 idea 與 experimental log,輸出符合 CVPR / ICLR 範本的 LaTeX 稿件與 PDF,並附 Streamlit 互動展示與自動評分器。專案聲明並非 Google 官方支援的產品。",
+      "category": "ai-ml",
+      "highlights": [
+        "五階段管線:Outline → Literature Review(Semantic Scholar)→ Section Writing → Content Refinement(最多 3 輪反思)→ Plotting,流程清楚",
+        "同時支援 Gemini(Vertex AI / API key)與 OpenAI 後端,預設模型為 gemini-3.1-pro-preview",
+        "內建 CVPR 2025、ICLR 2025 LaTeX 範本與 guidelines,可自行新增範本資料夾",
+        "附 autoraters/(引用 F1、文獻回顧品質、論文 side-by-side 比較、agent review)可重現論文評估",
+        "提供 Streamlit 前端 Demo,可在生成完成後寄信通知"
+      ],
+      "use_cases": [
+        "研究者將實驗紀錄與想法快速轉成論文初稿,節省排版與文獻整理時間",
+        "研究多代理寫作流程、反思式精修與自動評分方法的學術參考實作",
+        "改造範本與提示詞,套用到其他會議或期刊格式的稿件生成"
+      ],
+      "quality": {
+        "docs": 3,
+        "tests": 1,
+        "activity": 3,
+        "comment": "README 涵蓋安裝、參數與專案結構,但資料集尚未釋出,示範腳本 paper_writing_cli.sh 引用的 datasets/ 路徑目前無法直接重現。倉庫沒有 tests/ 目錄,也沒有 .github/workflows CI。核心程式碼(如 methods/paper_writer.py)結構清楚、有 Apache-2.0 標頭、具重試(3 次)與批次續跑機制;依賴未鎖定版本。專案剛上線,屬研究釋出型,後續維護頻率有待觀察。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "utils/paper_banana_utils.py 的 execute_plot_code_worker 會用 exec() 執行 LLM 產生的 Python 繪圖程式碼,未見沙箱隔離;執行時建議在隔離環境中進行。",
+          "frontend/app.py 使用 subprocess.Popen 啟動生成流程;frontend/frontend_utils.py 透過 smtp.gmail.com 以 SMTP_PASSWORD 環境變數寄送結果,屬於可選功能,需自行提供憑證。",
+          "專案需在 .env 中放置 OpenAI、Gemini、Semantic Scholar 等 API 金鑰,並會把使用者的研究材料送往外部 LLM 服務,使用未公開研究內容時需留意資料外送。",
+          "未發現 setup.py/postinstall 腳本、curl|bash 安裝、混淆程式碼或內嵌二進位檔;requirements.txt 的依賴皆為常見套件。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "對關注 AI 自動化科研寫作與多代理設計的工程師值得一看;程式碼清楚但缺測試與資料集,適合當參考實作而非直接投產。",
+      "_mode": "full"
     }
   },
   "sveltejs/svelte": {
     "first_seen": "2026-11-17",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-18",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-17": [
         88994,
@@ -33766,7 +33943,46 @@
         13,
         "web development for the rest of us",
         "JavaScript"
+      ],
+      "2026-11-18": [
+        89598,
+        477,
+        12,
+        "web development for the rest of us",
+        "JavaScript"
       ]
+    },
+    "last_analyzed": "2026-11-18",
+    "analysis": {
+      "category": "framework",
+      "one_liner": "Svelte 是以編譯器為核心的前端框架,將宣告式元件編譯成直接更新 DOM 的高效 JavaScript,並以 Runes 提供細粒度響應式。",
+      "summary": "Svelte 是一套 MIT 授權的 UI 框架,把 .svelte 元件在建置階段編譯成精簡的原生 JavaScript,而不是在執行期依賴大型虛擬 DOM。此 monorepo 包含編譯器(parse、analyze、transform 三階段)、client/server 執行期與基準測試,目前版本為 5.57.3,採用 Runes 響應式系統。",
+      "highlights": [
+        "編譯器採 parse → analyze → transform 三階段架構,結構清晰,並公開 compile、compileModule、parse、preprocess、print 等 API",
+        "Svelte 5 的 Runes 響應式系統,附有 kairo、mol 等響應式基準測試,效能有量化追蹤",
+        "monorepo 使用 pnpm 與 changesets 管理版本,並提供 AGENTS.md 與 performance-investigation 技能檔供 AI 輔助開發",
+        "CI 在 Windows、macOS、Linux 與 Node 20/22/24 矩陣上以 vitest 搭配 Playwright 測試,另有無 async 模式的獨立測試任務",
+        "GitHub Actions 的第三方 action 以 commit SHA 固定版本,並限制最小權限"
+      ],
+      "use_cases": [
+        "建立效能敏感、打包體積小的 Web 應用或互動式前端",
+        "搭配 SvelteKit 開發全端網站與 AI 應用的前端介面",
+        "研究前端編譯器與細粒度響應式(signals)的實作",
+        "將元件編譯為 custom element,嵌入既有網站"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "此倉庫 README 很精簡,詳細文件放在 svelte.dev,但 CONTRIBUTING、AGENTS.md、型別註解(JSDoc)與 changeset 流程完整。測試以 vitest 為主,跨平台、跨 Node 版本執行。最近有推送,CI 完整(autofix、release、ecosystem-ci),維護相當活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 5,
+      "verdict": "成熟且活躍的主流前端框架,程式碼品質與測試完整,值得前端或 AI 應用介面開發者持續關注與採用。",
+      "_mode": "full"
     }
   },
   "kajisho5/ffmpeg-skill": {

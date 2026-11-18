@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-18",
+    "analyzed": 8,
+    "cached": 7,
+    "deferred": 0,
+    "top_name": "sveltejs/svelte",
+    "top_rating": 5
+  },
+  {
     "date": "2026-11-17",
     "analyzed": 0,
     "cached": 8,
