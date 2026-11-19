@@ -1420,8 +1420,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1605,6 +1605,13 @@
         9,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-11-19": [
+        321323,
+        822,
+        14,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-11-18",
@@ -1644,8 +1651,8 @@
       "verdict": "若你日常使用 Claude Code、Codex 等 coding agent,這是目前成熟且支援平台廣的技能與工作流程框架,值得安裝試用,也值得參考其 skill 設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 27,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 28,
+    "consecutive_days_on_trending": 2
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -1855,8 +1862,8 @@
   },
   "affaan-m/ECC": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 1,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 2,
     "stars_history": {
       "2026-07-26": [
         233308,
@@ -2037,6 +2044,13 @@
         13,
         "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "JavaScript"
+      ],
+      "2026-11-19": [
+        306515,
+        1108,
+        15,
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "JavaScript"
       ]
     },
     "last_analyzed": "2026-11-18",
@@ -2077,8 +2091,8 @@
       "verdict": "想系統化強化 Claude Code / Codex 工作流的人值得關注,內容龐大且維護活躍。建議先挑選需要的 skills 與 hooks,不要一次全部安裝。",
       "_mode": "full"
     },
-    "total_days_on_trending": 27,
-    "consecutive_days_on_trending": 1
+    "total_days_on_trending": 28,
+    "consecutive_days_on_trending": 2
   },
   "pingdotgg/t3code": {
     "first_seen": "2026-07-27",
@@ -2895,8 +2909,8 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-28": [
         54252,
@@ -2947,6 +2961,13 @@
         2,
         "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "Python"
+      ],
+      "2026-11-19": [
+        70012,
+        1059,
+        3,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
       ]
     },
     "last_analyzed": "2026-11-18",
@@ -2987,8 +3008,8 @@
       "verdict": "做研究型 agent skill 值得關注:來源整合廣、測試與 CI 完整、安全文件透明。使用前建議先讀 SECURITY.md,留意主題外送與 cookie 讀取的設定。",
       "_mode": "full"
     },
-    "total_days_on_trending": 8,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 9,
+    "consecutive_days_on_trending": 3
   },
   "ocornut/imgui": {
     "first_seen": "2026-07-28",
@@ -8280,10 +8301,10 @@
   },
   "nvm-sh/nvm": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-11-13",
+    "last_seen": "2026-11-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-08-12": [
         94488,
@@ -8312,41 +8333,50 @@
         3,
         "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
         "Shell"
+      ],
+      "2026-11-19": [
+        96148,
+        237,
+        6,
+        "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+        "Shell"
       ]
     },
-    "last_analyzed": "2026-09-06",
+    "last_analyzed": "2026-11-19",
     "analysis": {
-      "one_liner": "nvm 是業界標準的 POSIX shell node.js 版本管理工具,讓開發者能在同一台機器上安裝並切換多個 Node.js 版本。",
-      "summary": "nvm(Node Version Manager)透過純 shell 函式(nvm.sh)實作,無需編譯,支援 bash/zsh/dash/ksh 等 POSIX-compliant shell。它解決了多專案間 Node.js 版本不一致的痛點,是 Node.js 生態圈中使用最廣泛的版本管理工具之一,長期維持每日星數成長。",
-      "category": "devtool",
+      "one_liner": "以純 POSIX shell 撰寫的 Node.js 版本管理器,可在 bash/zsh/sh/dash 下安裝並切換多個 Node 版本。",
+      "summary": "nvm 是 Node.js 生態系最廣為人知的版本管理工具,核心是單一 nvm.sh 腳本,透過 source 載入後提供 nvm install/use/alias 等指令,並支援 .nvmrc 與 LTS 別名。讓開發者在同一台機器上依專案切換不同 Node 與 io.js 版本。專案成熟(v0.41.0),有龐大測試套件、多組 CI 與完整的安全治理文件。",
+      "category": "cli",
       "highlights": [
-        "由 nvm-sh 官方團隊長期維護,GitHub Star 數近 9.5 萬,是 Node.js 生態圈的標準工具",
-        "測試涵蓋極廣:test/fast、test/slow、install_script、installation、sourcing 等多套測試,案例數達數百個,並在 CI 中對 bash/sh/dash/zsh/ksh 多種 shell 矩陣測試",
-        "具備正式的資安治理文件,包含 THREAT_MODEL.md、SECURITY.md、INCIDENT_RESPONSE_PLAN.md,顯示專案對供應鏈安全的重視",
-        "CI 使用 shellcheck 對 nvm.sh、install.sh、bash_completion、nvm-exec 進行多 shell 靜態檢查,並搭配 CodeQL 分析",
-        "install.sh 對於非官方 repo(NVM_INSTALL_GITHUB_REPO 被改寫)會主動印出警告提示使用者留意,展現良好的安全意識設計"
+        "純 POSIX shell 實作,無需 Node 即可運作,相容 bash、zsh、dash、sh",
+        "支援 .nvmrc、LTS 別名、自訂 alias 與 nvm-exec,切換專案版本很方便",
+        "test 目錄含數百個測試檔(fast/slow/installation/sourcing 等套件),Makefile 針對 sh/bash/dash/zsh 分別執行",
+        "CI 完整:shellcheck、lint、CodeQL、Alpine/Xenial、Windows 與安裝測試等 17 個 workflow",
+        "附有 SECURITY.md、THREAT_MODEL.md、INCIDENT_RESPONSE_PLAN.md、GOVERNANCE 等治理文件"
       ],
       "use_cases": [
-        "前端/後端工程師需要在多個專案間切換不同 Node.js 版本進行開發或測試",
-        "CI/CD pipeline 或 Docker 映像檔中安裝指定版本的 Node.js",
-        "團隊透過 .nvmrc 統一專案指定的 Node.js 版本,避免環境差異造成的問題"
+        "在多個專案需要不同 Node 版本時快速切換",
+        "用 .nvmrc 統一團隊與 CI 的 Node 版本",
+        "在 Dockerfile 或開發環境中安裝並固定 Node 版本",
+        "在 AI/前端工具鏈中測試多版本 Node 相容性"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "README 詳盡且結構化(含自動生成的目錄),涵蓋安裝、Docker、Alpine、WSL 等多種情境的疑難排解;測試框架成熟且多層次;近期仍持續有 commit 與每日發布報告(last pushed 2026-09-04),CI workflow 數量多且涵蓋面廣,屬於維護活躍度極高的專案。程式碼本身雖有大量版本判斷的重複邏輯(逐版本比對 Node LTS 分界),但註解清楚、shellcheck 通過,整體品質穩健。"
+        "comment": "README 詳盡,另附威脅模型與事件應變文件。測試以 urchin 框架跑大量 shell 測試,涵蓋多種 shell。CI 涵蓋 lint、shellcheck、CodeQL 與多平台。最後推送為 2026-11-18,維護活躍。本次僅檢視檔案結構、package.json、Makefile 與 install.sh 的部分內容,未深讀 nvm.sh 本體。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 與安裝流程使用傳統的『curl 下載後直接 pipe 給 bash 執行』模式(curl | bash),這是此類工具常見的安裝方式,腳本本身有版本鎖定(v0.40.7)與可讀原始碼,使用者可自行下載檢視後再執行",
-          "install.sh 會依偵測結果自動修改使用者的 shell 設定檔(如 ~/.bashrc、~/.zshrc)以加入 nvm 載入指令,此為工具運作所需的正常行為,並提供 PROFILE=/dev/null 可關閉此行為",
-          "package.json 未使用 preinstall/postinstall/prepare 等 npm 生命週期腳本,降低透過 npm 安裝鏈觸發非預期程式碼執行的風險"
+          "README 建議的安裝方式為 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash`(亦有 wget 版本),會從外部網址下載並直接執行腳本,屬常見安裝慣例,使用者可先下載檢視再執行。",
+          "install.sh 會透過 git clone(depth=1)或 curl/wget 取得 nvm 原始碼,並預設修改 shell 設定檔(如 .bashrc);README 說明可用 PROFILE=/dev/null 避免修改。",
+          "package.json 未發現 preinstall/postinstall/prepare 等生命週期腳本,僅有測試與 lint 用的 scripts 及 devDependencies,依賴名稱皆為知名套件。",
+          "nvm 運作時會從 nodejs.org 下載 Node 二進位檔並載入執行,這是其核心功能。"
         ]
       },
-      "star_rating": 5,
-      "verdict": "nvm 是 Node.js 生態圈中歷經長期考驗、文件與測試都非常完整的標準工具,值得持續關注與信賴使用。",
+      "star_rating": 4,
+      "verdict": "成熟、維護良好且治理完善的 Node 版本管理標準工具,日常開發值得熟悉;今日只是上榜,並非新技術。",
       "_mode": "full"
     }
   },
@@ -10178,10 +10208,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -10250,6 +10280,13 @@
         16901,
         201,
         8,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ],
+      "2026-11-19": [
+        17205,
+        314,
+        1,
         "Cursor plugin specification and official plugins",
         "TypeScript"
       ]
@@ -10720,10 +10757,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-10-20",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 8,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 9,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -10780,43 +10817,51 @@
         10,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
+      ],
+      "2026-11-19": [
+        59742,
+        389,
+        2,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-10-15",
+    "last_analyzed": "2026-11-19",
     "analysis": {
-      "one_liner": "以 Claude Code 等 agent 為對象、把任意軟體包成 CLI harness 的框架,並附 CLI-Hub 社群註冊中心。",
-      "summary": "CLI-Anything 提供一套方法(HARNESS.md、/cli-anything 指令與 SKILL.md 產生器),讓 AI agent 為既有軟體(Blender、QGIS、FreeCAD、Obsidian、n8n 等)產生以 Click 為基礎、支援 JSON 輸出與 REPL 的命令列介面。倉庫內已有大量社群貢獻的 harness,並有 cli-anything-hub 套件(PyPI)可用 `cli-hub install` 搜尋、安裝與更新這些 CLI。目標是解決 agent 難以直接操作 GUI 軟體的問題。",
-      "category": "ai-ml",
+      "one_liner": "以統一的 CLI harness 與 SKILL.md,讓各類桌面與服務軟體都能被 AI Agent 呼叫的社群 CLI 集合,並附 CLI-Hub 套件管理器。",
+      "summary": "CLI-Anything 提供一套方法(HARNESS.md)與大量社群貢獻的 Python/Click CLI 包裝(Blender、QGIS、3MF、Obsidian、n8n 等),每個都附 SKILL.md、REPL 與測試。另有 cli-hub(PyPI 套件 cli-anything-hub)負責搜尋、安裝與更新這些 CLI,並支援 Claude Code、Cursor、Pi 等 Agent 的 plugin 與 skill 安裝。它想解決的問題是:多數軟體沒有對 Agent 友善的程式化介面,這個專案用統一的 CLI 與 JSON 輸出補上這一層。",
+      "category": "devtool",
       "highlights": [
-        "統一的 harness 規範(HARNESS.md、guides/、SKILL.md),可套用到幾乎任何軟體並產生 agent 可探索的技能描述",
-        "倉庫內已有數十個社群貢獻的 CLI(3MF、QGIS、Calibre、Rekordbox、Obsidian、Godot 等),各自附單元測試與 E2E 測試",
-        "CLI-Hub 套件管理器支援 pip、npm、brew 等多種安裝來源,並以 GitHub Actions 自動發佈到 PyPI(trusted publishing)",
-        "支援 Claude Code、Cursor、Pi、Codex 等多種 agent 平台的外掛與 marketplace 設定",
-        "近期有以 defusedxml 處理不受信任 XML、修補路徑穿越等安全強化紀錄"
+        "以統一的 harness 規範與 SKILL.md 產生 Agent 可用的 CLI,涵蓋 CAD、GIS、影音、筆記、自動化等數十種軟體",
+        "cli-hub 套件管理器支援 pip、npm、brew 與系統工具多種安裝來源,並提供 meta-skill 讓 Agent 自行探索與安裝 CLI",
+        "同時支援 Claude Code、Cursor、Pi 等多種 Agent 生態(.claude-plugin、.cursor-plugin、.pi-extension)",
+        "社群貢獻機制完整:issue 範本、PR labeler、registry 日期自動更新與根目錄 skill 驗證 CI",
+        "README 宣稱 2,461 個測試通過,多數 harness 附單元測試與 E2E 測試"
       ],
       "use_cases": [
-        "讓 Claude Code 或 Cursor 等 agent 以指令列操作 CAD、GIS、影音編輯等專業軟體",
-        "為公司內部使用的桌面或服務軟體快速產生 agent 友善的 CLI 與 SKILL.md",
-        "透過 CLI-Hub 搜尋並安裝社群已建好的 CLI,供 agent 自主發現工具",
-        "研究 agent-native 軟體介面的設計模式與 harness 方法論"
+        "讓 Claude Code 或 Cursor 等 Agent 透過 CLI 操控 Blender、QGIS、LibreOffice 等原本只有 GUI 的軟體",
+        "為自家軟體依 HARNESS.md 流程產生 Agent 可呼叫的 CLI 與 SKILL.md",
+        "用 cli-hub 統一搜尋、安裝與管理社群 CLI",
+        "研究 Agent-native 軟體介面設計與 skill 打包的做法"
       ],
       "quality": {
         "docs": 5,
         "tests": 4,
         "activity": 5,
-        "comment": "README 內容詳盡(含多語系、新聞紀錄、貢獻指南與技術報告連結)。各 harness 多附 test_core.py 與 E2E 測試,cli-hub 另有測試;根目錄 CI 主要檢查技能檔、外掛與 PR 標籤,各 harness 的測試是否在 CI 執行未逐一確認。更新頻繁且社群貢獻者多。單一 harness 程式碼風格一致,屬於結構清晰的 Click 實作;各 harness 品質仍取決於個別貢獻者。"
+        "comment": "文件豐富,有多語 README、CONTRIBUTING、HARNESS 指南,以及每個 harness 的 README 與 SKILL.md。多數 harness 附 test_core 與 E2E 測試,另有 pr-labeler 與 registry 腳本的測試。CI 有 7 個 workflow,涵蓋 skill 驗證、Pages 部署與 PyPI 自動發佈。近期持續有提交,社群貢獻活躍。各 harness 由不同貢獻者撰寫,品質不一;例如 3MF 的 setup.py 把授權標成 MIT,與倉庫的 Apache-2.0 不一致。本次未實際執行測試,測試數量取自 README 宣稱。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "cli-hub 套件(cli_hub/analytics.py)預設啟用使用統計,透過 PostHog(us.i.posthog.com)回報;可用環境變數 CLI_HUB_NO_ANALYTICS=1 關閉。程式碼會檢查環境變數與 Linux 上的父行程命令列(/proc)以判斷呼叫端是否為 agent 工具,並在 ~/.cli-hub 寫入匿名識別檔。使用前建議自行確認並視需求關閉。",
-          "cli-hub 的 installer.py 會呼叫 subprocess 執行 registry 中定義的安裝指令(pip、npm、brew 等),且在指令含管線或 && 等運算子時使用 shell=True。實際安裝內容取決於社群提交的 registry 項目,安裝第三方 CLI 前宜先檢視其來源。",
-          ".pi-extension/cli-anything/install.sh 僅從本機倉庫複製檔案到 ~/.pi/agent/extensions,未見從外部網址下載或 curl|bash 的行為。",
-          "已檢視的檔案中未見混淆程式碼、內嵌的大型 base64 負載或可疑相依套件名稱;PostHog 專案 token 為寫在原始碼中的公開型金鑰。本次僅抽樣檢視,未涵蓋倉庫內全部 harness。"
+          "cli-hub 的 installer.py 在安裝指令含管道等 shell 運算子時會使用 shell=True 執行,註解說明是為了支援 `curl … | bash` 類型的腳本安裝。實際執行內容取決於 registry 中各 CLI 的安裝指令,建議使用者安裝前先檢視。",
+          "cli-hub 的 analytics.py 內建匿名使用統計,預設使用 PostHog,原始碼內含專案 token 與 Umami website ID。內容包含偵測是否由 Claude Code、Cursor 等 Agent 環境或父行程呼叫。可用環境變數 CLI_HUB_NO_ANALYTICS=1 關閉。",
+          "installer.py 的錯誤提示文字中出現 `curl -LsSf https://astral.sh/uv/install.sh | sh` 與 NodeSource 的 `curl … | sudo -E bash -` 等常見安裝指令,屬於提示使用者自行安裝 uv 或 Node.js 的說明。",
+          "Pi 擴充套件的 install.sh 只會把倉庫內檔案複製到 ~/.pi/agent/extensions/cli-anything,未見從外部網址下載內容;解除安裝時會對該目錄執行 rm -rf。",
+          "各 harness 的 setup.py 為一般 setuptools 設定,未見安裝時執行任意程式碼;相依套件為 click、numpy、scipy、trimesh 等常見套件。未發現混淆程式碼或內嵌大型 base64 payload。"
         ]
       },
       "star_rating": 4,
-      "verdict": "想讓 agent 操作各類軟體的人值得關注:方法論完整、社群活躍、生態成長快;採用 CLI-Hub 安裝第三方 CLI 時,請留意預設啟用的使用統計與社群提交的安裝指令。",
+      "verdict": "想讓 Agent 操控各種軟體的人值得關注:架構清楚、生態完整、更新頻繁。安裝 CLI 前請留意 cli-hub 會執行 registry 內的安裝指令,並注意預設開啟的匿名統計。",
       "_mode": "full"
     }
   },
@@ -16130,10 +16175,10 @@
   },
   "punkpeye/awesome-mcp-servers": {
     "first_seen": "2026-08-31",
-    "last_seen": "2026-08-31",
+    "last_seen": "2026-11-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-31": [
         93322,
@@ -16141,40 +16186,48 @@
         9,
         "A collection of MCP servers.",
         ""
+      ],
+      "2026-11-19": [
+        98029,
+        53,
+        19,
+        "A collection of MCP servers.",
+        ""
       ]
     },
-    "last_analyzed": "2026-08-31",
+    "last_analyzed": "2026-11-19",
     "analysis": {
+      "one_liner": "最知名的 MCP(Model Context Protocol)伺服器精選清單,依領域分類收錄數千個社群與官方實作。",
+      "summary": "punkpeye/awesome-mcp-servers 是一份以 Markdown 維護的 MCP 伺服器目錄,依聚合器、瀏覽器自動化、資料庫、開發工具、金融等數十個類別整理,並用圖示標註程式語言、本地/雲端與作業系統。與 glama.ai 的網頁目錄同步,並提供多語系 README,讓開發者快速找到可用的 MCP 伺服器。",
       "category": "learning-resource",
-      "one_liner": "一份持續更新的 Model Context Protocol (MCP) 伺服器實作總覽清單。",
-      "summary": "這是由 punkpeye 維護的 awesome-list,收錄各種 MCP 伺服器實作,依領域(資料庫、瀏覽器自動化、雲端平台、開發工具等)分類,並用圖示標示程式語言與部署範圍。目的是幫助開發者快速找到可整合進 AI Agent/Claude 等用戶端的現成 MCP 伺服器,並附有官方 web 目錄(glama.ai)同步。",
       "highlights": [
-        "近 93,322 顆星、單日 +96,目前是 GitHub trending 熱門清單",
-        "以圖示系統標示程式語言(🐍📇🏎️🦀等)、部署範圍(☁️🏠📟)與作業系統支援,查找方便",
-        "支援多國語言 README(泰、英、繁中、簡中、日、韓、葡)",
-        "分類極細,涵蓋 40+ 領域,從資料庫、法律、太空到靈性玄學都有對應區塊",
-        "與 glama.ai/mcp/servers 官方網頁目錄同步,並有 Discord/Reddit 社群連結"
+        "累積約 9.8 萬星,是 MCP 生態系最具代表性的索引之一",
+        "分類細緻(超過 40 類),並以 Emoji 圖例標示語言、本地/雲端、OS 與官方實作",
+        "與 glama.ai 網頁目錄同步,並附品質分數徽章",
+        "提供繁中、簡中、日、韓、泰、葡等多語系版本",
+        "連結相關清單:awesome-mcp-clients、awesome-remote-mcp-servers"
       ],
       "use_cases": [
-        "尋找特定領域(如資料庫、瀏覽器自動化、監控)的現成 MCP 伺服器可直接整合進 Claude Desktop 等用戶端",
-        "研究 MCP 生態系目前有哪些實作模式與服務類型",
-        "作為建置自己 MCP 伺服器時的參考範例來源"
+        "尋找特定領域(資料庫、瀏覽器、雲端)的現成 MCP 伺服器",
+        "調研 MCP 生態系與各類整合的現況",
+        "為自家 MCP 伺服器尋求曝光並對照同類專案",
+        "為 Claude Desktop 等客戶端挑選工具擴充"
       ],
       "quality": {
         "docs": 4,
         "tests": 1,
         "activity": 5,
-        "comment": "資源彙整類,測試不適用。README 結構清晰、分類完整且有圖例說明,但條目大量且部分描述像是廠商自我推銷文案(尤其 Aggregators 分類中多筆 x402 加密貨幣微支付相關服務),品質參差不齊,建議使用前自行評估各條目連結的實際專案品質。"
+        "comment": "資源彙整類,測試不適用。結構清楚、圖例完整、多語系支援佳,近期仍持續推送更新;但條目由社群提交,品質參差,部分項目帶有廣告或付費服務性質。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 本身不含可直接執行的 curl|bash 安裝指令,多數條目使用 npx/pip install 等常見套件管理工具安裝方式",
-          "清單中部分伺服器(如涉及 USDC/加密貨幣微支付、無需 API key 的第三方遠端服務)屬第三方維護內容,安裝前應自行檢視對應專案原始碼與權限需求,本評估未對個別子專案做原始碼審查"
+          "此為連結清單,本身無可安裝內容;僅依 README 判斷,未做原始碼審查。",
+          "清單中收錄的第三方 MCP 伺服器各自獨立,使用前應自行檢視其來源、權限與付費/金流相關行為。"
         ]
       },
       "star_rating": 4,
-      "verdict": "若需要快速找 MCP 伺服器實作參考,這份清單廣度足夠值得加入書籤,但條目品質不一,實際採用前仍需自行把關。",
+      "verdict": "做 MCP 相關開發或選型時值得收藏,當作入口索引很實用,但個別條目仍需自行評估品質與安全性。",
       "_mode": "light"
     }
   },
@@ -22340,10 +22393,10 @@
   },
   "n8n-io/n8n": {
     "first_seen": "2026-09-18",
-    "last_seen": "2026-09-18",
+    "last_seen": "2026-11-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-18": [
         204994,
@@ -22351,42 +22404,49 @@
         20,
         "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
         "TypeScript"
+      ],
+      "2026-11-19": [
+        211072,
+        325,
+        17,
+        "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-09-18",
+    "last_analyzed": "2026-11-19",
     "analysis": {
-      "one_liner": "n8n 是一套結合視覺化畫布與程式碼彈性的 AI 工作流程自動化平台。",
-      "summary": "n8n 讓使用者透過拖拉式節點畫布搭配自訂 JavaScript/Python 程式碼建立自動化流程與 AI 代理,可自架或使用雲端服務,並提供 1500+ 整合套件與 9000+ 現成範本,鎖定從原型開發到正式上線的完整 AI 自動化情境。",
-      "category": "devtool",
+      "one_liner": "具備原生 AI 能力的 fair-code 工作流程自動化平台,結合視覺化畫布與自訂程式碼,可自架或使用雲端。",
+      "summary": "n8n 是以 TypeScript 開發的工作流程自動化與 AI Agent 平台,提供視覺化節點畫布,並可嵌入 JavaScript、Python 與 npm 套件。它支援 OpenAI、Anthropic、Google 與開源模型,擁有 1500+ 整合與 9,000+ 範本,可從原型走到正式環境。採 Sustainable Use License(fair-code),原始碼公開且可自架。",
+      "category": "framework",
       "highlights": [
-        "AI 原生設計,支援 OpenAI、Anthropic、Google 等多家模型供應商,可自由切換不鎖定單一廠商",
-        "視覺化節點編輯與程式碼混合開發,適合從簡單流程到多步驟 AI 代理的漸進式建置",
-        "提供企業級功能如角色權限控管與稽核紀錄,支援自架部署處理敏感資料",
-        "生態系龐大,擁有 1500+ 整合與 9000+ 社群範本,降低重複造輪子的成本",
-        "目前在 GitHub trending 上榜(第 20 名,20 萬+ 星數,單日新增 281 顆星),社群活躍度高"
+        "視覺化畫布結合自訂程式碼(JS/Python/npm),兼顧低程式碼與彈性",
+        "原生 AI 能力,支援多步驟 Agent、工具呼叫、人工審核與可觀測性",
+        "模型不鎖定,可切換 OpenAI、Anthropic、Google 或開源模型",
+        "1500+ 整合與 9,000+ 社群範本,可快速串接既有系統",
+        "支援 Docker 自架,具備角色權限與稽核記錄等企業功能,topics 亦含 MCP client/server"
       ],
       "use_cases": [
-        "企業內部系統整合與跨平台資料流自動化(如 CRM、通知、報表串接)",
-        "建置具備工具呼叫與人工審核節點的多步驟 AI 代理工作流程",
-        "需要自架、注重資料隱私與合規性的自動化平台導入",
-        "作為低程式碼/無程式碼平台的教學或 PoC 快速驗證工具"
+        "建立企業內部 AI Agent 與 RAG 自動化流程",
+        "串接 SaaS、API 與資料庫的跨系統資料整合",
+        "自架處理敏感資料的自動化與通知流程",
+        "快速原型驗證 LLM 工作流並推向正式環境"
       ],
       "quality": {
-        "docs": 5,
+        "docs": 4,
         "tests": 2,
         "activity": 5,
-        "comment": "README 結構完整,涵蓋快速上手、資源連結、授權說明與貢獻指南,對新使用者相當友善;測試品質部分僅能依 README 判斷,無法從中評估實際程式碼測試涵蓋率。專案本身推送紀錄顯示持續高頻更新,且正登上 GitHub trending,活躍度極高。"
+        "comment": "README 結構清楚,快速上手、資源連結與授權說明完整,細節則交由官方文件。測試品質僅依 README 評估,無法看到程式碼。最近仍有推送,且持續登上 trending,專案非常活躍。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "README 提供 curl -fsSL https://get.n8n.io | sh 的一鍵安裝腳本,執行前建議先檢視腳本內容,避免不熟悉來源就直接管道執行",
-          "官方也提供標準 Docker 部署方式作為替代選項,風險相對較低且來源透明",
-          "未進行原始碼層級的安全審查,僅根據 README 內容評估"
+          "README 提供 `curl -fsSL https://get.n8n.io | sh` 的一行安裝方式,執行前建議先檢視腳本內容,或改用文件中的手動 Docker 指令。",
+          "手動安裝使用官方 Docker 映像 docker.n8n.io/n8nio/n8n,並將資料掛載至 volume。",
+          "本評估僅根據 README,未進行原始碼層級的審查。"
         ]
       },
       "star_rating": 5,
-      "verdict": "n8n 是成熟且社群活躍的 AI 自動化平台,功能完整且持續快速迭代,值得加入自動化與 AI 代理開發的工具清單中。",
+      "verdict": "成熟且活躍的 AI 工作流程自動化平台,值得 AI 研發工程師關注並試用。注意授權為 fair-code,並非 OSI 開源授權。",
       "_mode": "light"
     }
   },
@@ -33560,10 +33620,10 @@
   },
   "google-labs-code/stitch-skills": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-16": [
         9300,
@@ -33583,6 +33643,13 @@
         10105,
         350,
         7,
+        "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "TypeScript"
+      ],
+      "2026-11-19": [
+        10403,
+        365,
+        9,
         "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "TypeScript"
       ]
@@ -33736,10 +33803,10 @@
   },
   "NVIDIA/SkillEvaluator": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-17",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-16": [
         1685,
@@ -33752,6 +33819,13 @@
         2697,
         873,
         9,
+        "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+        "Python"
+      ],
+      "2026-11-19": [
+        3723,
+        312,
+        5,
         "Multi-tier framework for evaluating AI agent skills and plugins with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
         "Python"
       ]
@@ -33797,10 +33871,10 @@
   },
   "getarcaneapp/arcane": {
     "first_seen": "2026-11-17",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-17": [
         8729,
@@ -33813,6 +33887,13 @@
         9329,
         618,
         6,
+        "Modern Docker Management, Designed for Everyone",
+        "Go"
+      ],
+      "2026-11-19": [
+        9805,
+        547,
+        4,
         "Modern Docker Management, Designed for Everyone",
         "Go"
       ]
@@ -33857,10 +33938,10 @@
   },
   "DeanChensj/jiangshan-map": {
     "first_seen": "2026-11-17",
-    "last_seen": "2026-11-17",
+    "last_seen": "2026-11-19",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-17": [
         6723,
@@ -33868,15 +33949,60 @@
         6,
         "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
         "JavaScript"
+      ],
+      "2026-11-19": [
+        7936,
+        218,
+        16,
+        "江山时序 · 中国历史交互地图时间轴 (403 BCE – Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+        "JavaScript"
       ]
+    },
+    "last_analyzed": "2026-11-19",
+    "analysis": {
+      "one_liner": "江山時序:涵蓋戰國至今 18 個朝代、198 張疆域快照的中國歷史互動地圖時間軸,純前端、免安裝即可瀏覽。",
+      "summary": "這是一個純靜態的中國歷史互動地圖網站,可拖曳時間軸(403 BCE 至今),觀看各政權疆域、州郡與河流湖泊的演變。另有古今地名沿革卡片、人物行跡(李白、蘇軾、玄奘等)、事件故事線與地圖定位小測驗。資料以 GeoJSON 為主,並有 CI 驗證資料完整性,在數位人文領域中完成度很高。",
+      "category": "web",
+      "highlights": [
+        "198 張疆域快照涵蓋 18 個朝代,並以虛線「幽靈邊界差異」呈現前後期領土增減",
+        "古今地名沿革卡片、人物行跡與事件故事線,把時間、疆域、年號與史料詩詞同步串在一起",
+        "純前端靜態網站(原生 JS + GeoJSON),Dockerfile 僅用 nginx:alpine 即可部署",
+        "CI 完整:拓撲邊界、州郡層、資料引用、首屏 gzip 預算、版面幾何重疊檢查",
+        "附 MCP server 腳本與 GeoJSON 匯出工具,可供其他應用或 AI 工具重用資料;提供簡繁英日四語 README"
+      ],
+      "use_cases": [
+        "歷史教學或自學時,對照各朝代疆域與地名沿革",
+        "研究古典詩詞與人物行跡的地理脈絡",
+        "數位人文、GIS 專案取用歷史疆域 GeoJSON 資料",
+        "參考大型純前端地圖應用的資料驗證與效能預算做法"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 詳盡,功能附線上展示連結與截圖,另有貢獻指南與資料錯誤回報範本。scripts/tests 下有多組測試套件,CI 涵蓋資料完整性、拓撲稽核、效能預算與版面稽核。最近一次推送在今天,維護相當活躍。受限於純前端與資料密集的性質,測試以資料與行為檢查為主。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "js/atlas_track.js 內建匿名使用統計:僅在 deanchen.me 網域執行,遵守 Do Not Track / GPC,以 sendBeacon 將按鈕點擊與功能使用次數傳到 https://stats.deanchen.me/e;原始碼註解說明不收集 cookie、搜尋文字或座標。自行架設於其他網域時不會啟用。",
+          "未發現 npm 生命週期腳本(preinstall/postinstall);scripts/search-pinyin/package.json 只有一個固定版本的 devDependency(pinyin-pro 3.29.5),CI 以 --ignore-scripts 安裝。",
+          "未發現 curl|bash 類安裝流程、內嵌的長 base64 負載或可疑的硬編碼 IP。",
+          "倉庫含大量 GeoJSON 資料與 webp、mp3 靜態資產,屬於地圖應用的預期內容。",
+          "授權為 GPL-3.0,若要改作並散佈需留意其 copyleft 條款。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "資料與工程品質都高的數位人文專案,線上就能直接體驗,也可作為歷史疆域資料來源,值得歷史愛好者與地圖前端開發者關注。",
+      "_mode": "full"
     }
   },
   "google-research/paper-orchestra": {
     "first_seen": "2026-11-17",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-17": [
         1522,
@@ -33889,6 +34015,13 @@
         3004,
         1072,
         15,
+        "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+        "Python"
+      ],
+      "2026-11-19": [
+        4287,
+        1524,
+        8,
         "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
         "Python"
       ]
@@ -33932,10 +34065,10 @@
   },
   "sveltejs/svelte": {
     "first_seen": "2026-11-17",
-    "last_seen": "2026-11-18",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-19",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-17": [
         88994,
@@ -33948,6 +34081,13 @@
         89598,
         477,
         12,
+        "web development for the rest of us",
+        "JavaScript"
+      ],
+      "2026-11-19": [
+        89617,
+        692,
+        10,
         "web development for the rest of us",
         "JavaScript"
       ]
@@ -33999,6 +34139,261 @@
         "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
         "Python"
       ]
+    }
+  },
+  "astral-sh/uv": {
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-19": [
+        92220,
+        258,
+        7,
+        "An extremely fast Python package and project manager, written in Rust.",
+        "Rust"
+      ]
+    },
+    "last_analyzed": "2026-11-19",
+    "analysis": {
+      "one_liner": "以 Rust 撰寫、速度極快的 Python 套件與專案管理工具,可取代 pip、poetry、pyenv、pipx 等多種工具。",
+      "summary": "uv 是 Astral 開發的 Python 套件與專案管理器,整合依賴解析、虛擬環境、Python 版本管理、工具執行與專案鎖定檔等功能。以 Rust 實作,README 宣稱比 pip 快 10 至 100 倍,並提供 pip 相容介面,方便既有專案遷移。",
+      "category": "devtool",
+      "highlights": [
+        "Rust 實作,解析與安裝速度遠快於傳統 pip/poetry",
+        "單一工具涵蓋套件、專案、Python 版本、腳本與全域工具管理",
+        "提供 uv pip 相容介面,降低遷移成本",
+        "支援 workspace、跨平台 lockfile 與 Docker 映像",
+        "CI 完整:多平台測試、基準測試、zizmor 工作流程安全檢查、發佈簽章"
+      ],
+      "use_cases": [
+        "取代 pip/venv/pyenv 加速日常 Python 開發",
+        "在 CI 與 Docker 中快速安裝依賴以縮短建置時間",
+        "管理 AI/ML 專案的可重現環境與 lockfile",
+        "用 uvx 臨時執行 Python 命令列工具"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件完整(官方文件站、貢獻指南、議題範本),工作流程涵蓋 lint、格式、多平台整合測試、smoke test、基準測試與供應鏈檢查(cargo-deny、zizmor、cargo cooldown),最近仍持續推送,維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 的安裝說明提供 `curl -LsSf https://astral.sh/uv/install.sh | sh` 與 `irm https://astral.sh/uv/install.ps1 | iex` 方式,會從外部網址下載並執行腳本,這是常見的安裝方式,建議使用者自行檢視腳本,或改用 pip、Homebrew、WinGet 等套件管理員安裝。",
+          "本次僅檢視 README、目錄結構及 CI 設定,未逐一審查原始碼;專案採用 cargo-deny 與 zizmor 等供應鏈與工作流程安全檢查。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "Python 開發者必看的現代化工具,品質與維護度皆屬頂尖,值得立即採用與關注。",
+      "_mode": "full"
+    }
+  },
+  "jquery/jquery": {
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-19": [
+        60008,
+        266,
+        11,
+        "jQuery JavaScript Library",
+        "JavaScript"
+      ]
+    },
+    "last_analyzed": "2026-11-19",
+    "analysis": {
+      "one_liner": "jQuery 是歷史最悠久、使用最廣泛的 JavaScript DOM 操作與 AJAX 函式庫,目前主線為 4.x 版。",
+      "summary": "jQuery 提供跨瀏覽器的 DOM 選取與操作、事件處理、AJAX、動畫與 Deferred 等 API,簡化前端開發。此儲存庫為官方 main 分支(package.json 版本 4.1.0),以 ES module 原始碼搭配 Rollup 建置,並輸出 UMD、ESM、slim 等多種發行版本。README 說明 4.0.0 已於 2026 年 1 月發布,3.x 僅接受重大修補。",
+      "category": "library",
+      "highlights": [
+        "全球最廣泛部署的前端函式庫之一,API 穩定且生態系龐大",
+        "4.x 以 ES module 原始碼組織,並提供 full、slim、module、factory 等多種發行形式",
+        "建置流程完整:Rollup、ESLint、commitplease 提交規範,以及 release-it 發版流程",
+        "測試涵蓋 ajax、css、event、manipulation、selector 等模組,並有 Promises/A+ 一致性測試",
+        "由 OpenJS Foundation 維護,採 MIT 授權,另有 SECURITY.md、CODE_OF_CONDUCT 與 CodeQL 掃描"
+      ],
+      "use_cases": [
+        "維護既有以 jQuery 為基礎的舊系統或外掛(如 Bootstrap 4 以前的專案)",
+        "需要輕量 DOM/AJAX 工具、不想引入大型框架的簡單網頁",
+        "研究成熟 JavaScript 函式庫的架構、跨瀏覽器相容處理與測試實務",
+        "評估或規劃從 3.x 升級至 4.x"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "程式碼風格一致且註解清楚,src/core.js 採模組化拆分。測試目錄 test/unit 覆蓋所有核心模組,CI 設有瀏覽器測試、BrowserStack、CodeQL 與發版驗證等多個工作流程。最後推送時間為 2026-11-17,維護活躍。README 偏重貢獻與建置說明,API 文件則放在外部網站。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 3,
+      "verdict": "jQuery 品質與維護狀態都很好,但屬於成熟的老牌專案,今日上榜的新意有限。需要維護舊系統或評估 4.x 升級時值得參考,新專案則不必優先考慮。",
+      "_mode": "full"
+    }
+  },
+  "appwrite/appwrite": {
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-19": [
+        58227,
+        232,
+        12,
+        "The open-source cloud for agents & devs. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime, WAF and more",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-19",
+    "analysis": {
+      "one_liner": "開源的 Agent 與開發者雲端後端平台,整合 Auth、資料庫、儲存、Functions、Messaging、Hosting 與內建 MCP,可雲端或自架。",
+      "summary": "Appwrite 是 Firebase/Supabase 的開源替代方案,提供認證、資料庫、檔案儲存、Serverless Functions、Sites 託管、訊息推播、防火牆與 Realtime 等模組化後端服務。近期主打 MCP 與 agent-first,讓 Cursor、Claude Code、Codex 等 AI 代理可透過託管 MCP 伺服器(OAuth)直接操作專案,並提供 agent skills 與 AGENTS.md 產生工具。可使用 Appwrite Cloud,或以單一 Docker 指令自架。",
+      "category": "framework",
+      "highlights": [
+        "一站式後端:Auth、Databases(含託管 PostgreSQL/MySQL)、Storage、Functions、Sites、Messaging、Realtime、Firewall",
+        "內建託管 MCP 伺服器(OAuth,免管理 API key),自架版有本地 MCP,對 AI 代理友善",
+        "提供 agent skills(npx skills add appwrite/agent-skills)與 AGENTS.md 產生,讓模型產出正確 SDK 呼叫",
+        "Docker 一行指令自架,安裝精靈僅綁定 localhost 並使用一次性 installer secret",
+        "涵蓋 Web、行動端等多種快速入門,並支援 DigitalOcean、AWS 等一鍵部署;BSD-3-Clause 授權"
+      ],
+      "use_cases": [
+        "為 AI 應用或 agent 快速建立後端(認證、資料、儲存)",
+        "以自架方式取代 Firebase/Supabase,掌控資料與基礎設施",
+        "讓 Cursor、Claude Code 等編碼代理直接操作並管理後端專案",
+        "行動與 Web 全端專案的原型到正式上線"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋產品、自架、升級、疑難排解(Docker API 版本不符)、SDK 與 agent 整合。測試品質僅憑 README 無法評估。最近一次 push 為 2026-11-18,專案維護活躍,星數已逾 5.8 萬,今日仍在趨勢榜上。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "自架指令需將 /var/run/docker.sock 掛載進容器,等同授予容器對主機 Docker 的高權限,屬 Docker 安裝工具的常見做法,建議在受控環境執行。",
+          "README 說明安裝精靈僅發佈於 127.0.0.1:20080,並使用一次性 installer secret;遠端主機建議以 SSH 通道存取。",
+          "本次僅依 README 評估,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 5,
+      "verdict": "成熟且活躍的開源 BaaS,並積極擁抱 MCP 與 agent 工作流;需要自架後端或 AI agent 後端的工程師很值得關注。",
+      "_mode": "light"
+    }
+  },
+  "openvinotoolkit/openvino": {
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-19": [
+        11327,
+        24,
+        13,
+        "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+        "C++"
+      ]
+    },
+    "last_analyzed": "2026-11-19",
+    "analysis": {
+      "one_liner": "Intel 主導的開源 AI 推論最佳化與部署工具包,支援 CPU、GPU、NPU,涵蓋電腦視覺到 LLM 與生成式 AI。",
+      "summary": "OpenVINO 是以 C++ 開發的推論最佳化與部署工具包,可轉換 PyTorch、TensorFlow、ONNX、PaddlePaddle、JAX/Flax 等模型,並在 Intel CPU/GPU/NPU 與 ARM CPU 上執行。提供 C++、Python、C、NodeJS API,並透過 GenAI 子專案支援 LLM、擴散模型與語音辨識。生態系包含 NNCF 量化、Model Server、Optimum Intel 等。",
+      "category": "ai-ml",
+      "highlights": [
+        "支援多種框架模型轉換,轉換後可脫離原框架部署",
+        "涵蓋 x86/ARM CPU、Intel 內顯/獨顯 GPU 與 NPU,適合邊緣到雲端",
+        "生態系完整:NNCF 量化、OpenVINO GenAI、Model Server、Tokenizers",
+        "整合 Hugging Face Optimum Intel、vLLM、ONNX Runtime、LangChain、LlamaIndex、Keras 3",
+        "pip install openvino 即可上手,並有豐富 Notebooks 與範例"
+      ],
+      "use_cases": [
+        "在 Intel 筆電或 AI PC(含 NPU)上部署 LLM 或視覺模型",
+        "邊緣裝置上的 YOLO 等電腦視覺推論加速",
+        "以 NNCF 對模型做量化以降低資源需求",
+        "透過 Model Server 提供企業內部模型服務"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,涵蓋安裝、範例、生態系與文件連結;測試部分僅依 README 評估,未檢視程式碼。專案近日仍持續推送,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 安裝方式為 pip install -U openvino,屬一般套件管理器安裝,未見 curl | bash 之類的做法。",
+          "README 說明會蒐集軟體效能與使用資料(含 Google Analytics 4),並提供 opt_in_out --opt_out 指令可關閉。",
+          "僅依 README 評估,未進行原始碼層級審查。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟且持續維護的 Intel 推論部署工具,若要在 Intel 硬體上跑 LLM 或視覺模型,值得納入工具箱。",
+      "_mode": "light"
+    }
+  },
+  "solidjs/solid": {
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-19": [
+        36583,
+        40,
+        18,
+        "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-19",
+    "analysis": {
+      "category": "framework",
+      "one_liner": "以細粒度響應式取代 Virtual DOM 的 JSX 前端框架 Solid,目前主幹進行 2.0 版重構(含 Rust 編譯器)。",
+      "summary": "Solid 是宣告式的 JavaScript UI 函式庫,將 JSX 範本編譯成真實 DOM 操作,並以 signal 為基礎的細粒度響應式更新,元件函式只執行一次、不需 Virtual DOM diff。此 monorepo 目前為 2.0 開發版,包含 signals 核心、web 渲染、universal 自訂渲染器、Babel 外掛與 Rust 原生編譯器,並新增一等公民的非同步(Loading 邊界)、樂觀更新與 action 等原語。",
+      "highlights": [
+        "元件只執行一次,響應式以表達式為單位更新真實 DOM,無 Virtual DOM 開銷",
+        "2.0 新增一等公民非同步計算、<Loading> 邊界、createOptimistic / createOptimisticStore 與 action 變更模型",
+        "更新於 microtask 批次處理,可用 flush() 同步互通;effect 分為 compute 與 apply 兩階段",
+        "monorepo 含 signals、web、universal、element、babel-plugin 及 Rust 編譯器(napi),並支援串流 SSR 與漸進式水合",
+        "測試極為密集:signals 套件單獨就有 470 多個測試檔,CI 另含 Babel 8 相容、lowered-show 矩陣、codspeed 效能與 size 檢查"
+      ],
+      "use_cases": [
+        "需要高效能、低開銷的 Web 前端或儀表板,偏好 JSX 開發體驗",
+        "研究細粒度響應式、signals 與非同步排程設計的工程師",
+        "以 @solidjs/universal 為非 DOM 平台撰寫自訂渲染器",
+        "評估從 React 類框架遷移到無 Virtual DOM 方案"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 5,
+        "activity": 5,
+        "comment": "README 簡潔且附編譯輸出說明,原始碼 JSDoc 詳盡,另有大量設計文件、計畫與 AGENTS.md / Cursor 規則。測試覆蓋極廣(以 issue 編號命名的回歸測試),CI 涵蓋建置、覆蓋率、Babel 8、效能基準與套件體積。最後推送為 2026-11-19,並使用 changesets 管理發佈,維護非常活躍。目前主幹為 2.0 開發版,API 可能仍在變動。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": [
+          "根目錄 package.json 有 preinstall(npx only-allow pnpm,強制使用 pnpm)與 postinstall(simple-git-hooks,註冊 pre-commit 掛鉤)兩個生命週期腳本,屬常見的開發流程設定;preinstall 會透過 npx 取得 only-allow 套件,貢獻者可留意。",
+          "release.yml 具備 contents/id-token/pull-requests 寫入權限並發佈至 npm,僅在 main 分支推送時觸發,為 changesets 標準發佈流程。",
+          "未發現 curl | bash、混淆程式碼、內嵌 base64 載荷或可疑相依套件名稱。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟且極為活躍的前端框架,2.0 的非同步與樂觀更新設計值得前端與響應式系統工程師持續關注,但目前為開發中版本,正式專案宜等穩定版再採用。",
+      "_mode": "full"
     }
   }
 }
