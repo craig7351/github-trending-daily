@@ -1420,8 +1420,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-19",
-    "days_on_trending": 2,
+    "last_seen": "2026-11-20",
+    "days_on_trending": 3,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1612,6 +1612,13 @@
         14,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-11-20": [
+        322084,
+        2028,
+        2,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-11-18",
@@ -1651,8 +1658,8 @@
       "verdict": "若你日常使用 Claude Code、Codex 等 coding agent,這是目前成熟且支援平台廣的技能與工作流程框架,值得安裝試用,也值得參考其 skill 設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 28,
-    "consecutive_days_on_trending": 2
+    "total_days_on_trending": 29,
+    "consecutive_days_on_trending": 3
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -2909,8 +2916,8 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-11-19",
-    "days_on_trending": 3,
+    "last_seen": "2026-11-20",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-28": [
         54252,
@@ -2968,6 +2975,13 @@
         3,
         "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "Python"
+      ],
+      "2026-11-20": [
+        70799,
+        954,
+        10,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
       ]
     },
     "last_analyzed": "2026-11-18",
@@ -3008,8 +3022,8 @@
       "verdict": "做研究型 agent skill 值得關注:來源整合廣、測試與 CI 完整、安全文件透明。使用前建議先讀 SECURITY.md,留意主題外送與 cookie 讀取的設定。",
       "_mode": "full"
     },
-    "total_days_on_trending": 9,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 10,
+    "consecutive_days_on_trending": 4
   },
   "ocornut/imgui": {
     "first_seen": "2026-07-28",
@@ -8201,10 +8215,10 @@
   },
   "firecrawl/firecrawl": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-11",
+    "last_seen": "2026-11-20",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-08-11": [
         165074,
@@ -8212,38 +8226,52 @@
         10,
         "The context API to search, scrape, and interact with the web at scale. 🔥",
         "TypeScript"
+      ],
+      "2026-11-20": [
+        204232,
+        825,
+        6,
+        "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
+        "TypeScript"
       ]
     },
-    "last_analyzed": "2026-08-11",
+    "last_analyzed": "2026-11-20",
     "analysis": {
-      "one_liner": "開源版「網頁轉 LLM 情境」API,一鍵把任意網站轉成乾淨 Markdown 或結構化 JSON,並提供 AI Agent 自動搜尋擷取能力。",
-      "summary": "Firecrawl 是一套以 TypeScript 為主、輔以 Go 與 Rust 元件的網頁擷取服務,提供 Search、Scrape、Crawl、Map、Agent 等端點,把整個網站轉換成適合餵給 LLM 的乾淨 Markdown 或結構化資料。專案採 monorepo 架構(pnpm workspace),核心 API 服務(apps/api)搭配多語言 SDK(Python、Node、Go、Java、Rust、Ruby、.NET、PHP、Elixir),可自架(self-host)或使用官方雲端服務。",
+      "one_liner": "Firecrawl:把網站轉成 LLM 可用的 Markdown 與結構化資料的爬取與搜尋 API,提供雲端、自架與單一執行檔本機版三種用法。",
+      "summary": "Firecrawl 是為 AI Agent 提供網頁資料的基礎設施,涵蓋 scrape、crawl、map、batch scrape、search,以及 Alexandria 資料供應商整合。此 repo 包含自架伺服器(apps/api,TypeScript)、Rust 單一執行檔 Firecrawl Local(apps/local),以及多語言 SDK(JS、Python、Go、Java、Rust、Ruby、PHP、.NET、Elixir)。授權為 AGPL-3.0,部分進階功能(Interact、Agent、Monitor)僅限雲端版。",
       "category": "infra",
       "highlights": [
-        "單一 API 涵蓋 Search / Scrape / Crawl / Map / Interact / Agent 六大情境,對 AI Agent 與 RAG 應用相當友善",
-        "官方支援 9 種語言 SDK,並提供 MCP server 與 CLI skill,方便直接整合進 Claude Code、OpenCode 等 Agent 工具鏈",
-        "測試涵蓋廣泛,apps/api 底下有 150+ 支測試檔(單元、e2e、snips 整合測試),CI workflow 齊全(每個 SDK 都有獨立 test/publish workflow)",
-        "架構上結合 TypeScript(API 主體)、Go(html-to-markdown 共享函式庫)與 Rust(native 模組),並用 FoundationDB、ClickHouse、Redis 等基礎設施支援大規模擷取",
-        "核心程式碼品質高,控制器內建 OpenTelemetry tracing、威脅防護(threat protection)、權限檢查、速率限制等企業級考量"
+        "三種部署形態:雲端 API、自架完整伺服器(佇列、worker、資料庫)、`cargo install firecrawl-local` 單一執行檔,本機版也能在 3002 埠提供相容的 v2 API",
+        "`firecrawl-local init` 可自動把 MCP server 加入 Claude Code、Cursor、Windsurf、Gemini CLI、Codex 等工具,並先備份設定檔",
+        "SDK 涵蓋 9 種語言,各自有獨立的測試與發佈 CI workflow",
+        "apps/api 內含大量測試(僅 src 下就有 450 多個 *.test.ts),涵蓋路由、帳務、nuq 佇列、PDF 解析、品牌擷取等",
+        "repo 內含 AGENTS.md 與 CLAUDE.md,並有 npm-audit 與弱點掃描的 CI 流程,工程化程度高"
       ],
       "use_cases": [
-        "幫 LLM/RAG 應用建立即時網頁知識來源,將任意網址轉成乾淨 Markdown 餵給模型",
-        "建置 AI Agent 的網頁瀏覽/資料蒐集能力(透過 Agent、Interact、MCP 端點)",
-        "大量網站爬取與結構化資料擷取(電商比價、市場調查、內容聚合等)",
-        "自架私有化的網頁擷取服務,滿足資料合規或內網隔離需求"
+        "為 RAG 或 AI Agent 把網站批次轉成乾淨的 Markdown 或 JSON",
+        "在內部基礎設施自架爬蟲服務,避免資料流出到第三方",
+        "透過 MCP 讓 Claude Code 或 Cursor 具備網頁擷取與搜尋能力",
+        "以 SDK 把網頁資料管線整合進既有多語言後端"
       ],
       "quality": {
         "docs": 5,
         "tests": 5,
         "activity": 5,
-        "comment": "README 完整詳盡,涵蓋各語言 SDK 範例與 API 說明;測試檔案數量龐大且分層清楚(unit/e2e/snips);GitHub Actions workflow 涵蓋所有子專案的 build/test/publish 流程,近日仍持續推送更新,活躍度高。"
+        "comment": "README 結構清楚,另有 SELF_HOST.md、CONTRIBUTING.md 與各 SDK 的 README。測試數量龐大,CI workflow 涵蓋伺服器、各語言 SDK 與發佈流程。最後推送時間為 2026-11-20,維護非常活躍。monorepo 規模大,自架需要 Redis、Postgres 等多個元件,上手成本不低。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "apps/api/package.json 有 `prepare` 腳本(husky),安裝依賴時會設定 git hooks,屬常見做法",
+          "apps/api/native/package.json 有 `install` 腳本(`pnpm build`),安裝時會在本機編譯原生模組,需要對應工具鏈",
+          "apps/java-sdk/README.md 的文件示範以 `curl -s https://get.sdkman.io | bash` 安裝 SDKMAN,這是第三方工具的官方安裝方式,不是專案本身的安裝流程",
+          "README 的 `npx -y firecrawl-cli@latest` 與 `cargo install firecrawl-local` 會從 npm、crates.io 下載並執行套件,建議先確認來源與版本",
+          "Firecrawl Local 預設在單頁抓取失敗時會改走 Firecrawl Cloud,目標網址會送到雲端服務,可用 `FIRECRAWL_CLOUD=off` 關閉",
+          "本次未發現混淆程式碼、內嵌的長 base64 或十六進位內容、可疑的相依套件名稱,也未發現提交的二進位檔"
+        ]
       },
       "star_rating": 5,
-      "verdict": "功能完整、測試扎實、且緊貼 AI Agent 生態系需求,是目前開源網頁擷取/LLM 情境 API 的標竿專案,值得立即關注與嘗試。",
+      "verdict": "AI Agent 網頁資料層中成熟度與熱度都很高的專案,測試與文件完整,值得優先關注。選用時請留意 AGPL-3.0 授權,以及進階功能僅限雲端版。",
       "_mode": "full"
     }
   },
@@ -9011,10 +9039,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-10-14",
-    "days_on_trending": 8,
-    "consecutive_days_on_trending": 8,
-    "total_days_on_trending": 18,
+    "last_seen": "2026-11-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 19,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -9141,44 +9169,51 @@
         5,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
+      ],
+      "2026-11-20": [
+        68631,
+        271,
+        9,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
       ]
     },
-    "last_analyzed": "2026-10-07",
+    "last_analyzed": "2026-11-20",
     "analysis": {
-      "category": "devtool",
-      "one_liner": "為 Claude Code、Codex、Copilot 等 AI 代理打造的編輯級圖表技能包:42 種圖表類型,輸出自包含 HTML + SVG。",
-      "summary": "diagram-design 是一組代理技能(Agent Skill / 外掛),讓 AI 編輯器產出風格一致、無陰影、不落俗套的 HTML+SVG 圖表,涵蓋架構、流程、序列、Sankey、Wardley、熱圖等 42 種類型。它也能把 draw.io、Mermaid、Excalidraw 來源重繪成統一風格,並可讀取網站自動套用品牌色與字體。解決的是 AI 生成圖表千篇一律的「圓角方塊」問題。",
+      "one_liner": "為 Claude Code、Codex、Copilot、Cursor 等 AI 代理打造的圖表設計技能,產出單一 HTML+SVG 檔案,涵蓋 50 餘種圖表類型。",
+      "summary": "diagram-design 是一套 Agent Skill / 外掛,讓 AI 代理依使用者描述挑選圖表類型,並輸出可雙擊開啟的自包含 HTML 加內嵌 SVG 檔案,風格為編輯式設計(無陰影、不走 Mermaid 預設風)。支援品牌入門流程(從網站、本機資料夾或 token 擷取配色與字型),也能匯入 draw.io、Mermaid、Excalidraw、PlantUML,並匯出 PNG/SVG。倉庫同時提供 Claude、Codex、Factory、Qoder 等多種外掛清單,並可用 npx skills add 安裝到各種代理。",
+      "category": "ai-ml",
       "highlights": [
-        "42 種圖表類型,每種皆有淺色、深色與完整編輯版三種靜態變體,可直接用瀏覽器開啟,無需建置、JS 或外部圖片",
-        "支援 Claude Code、Codex、Factory Droid、Pi、Copilot 等多個宿主,並提供各自的 plugin/marketplace manifest",
-        "可匯入 draw.io、Mermaid、Excalidraw 並重繪,另有 doctor、profile、export-diagram 等指令",
-        "有大量腳本式驗證器(Sankey 流量守恆、treemap 面積比例、標籤幾何、a11y、Playwright 像素渲染檢查),重視圖表數值正確性",
-        "附 ADR 設計決策文件,預設靜態輸出,動態僅限受控的 reveal 動畫"
+        "README 與 SKILL.md 涵蓋 51 種圖表類型(架構、流程、序列、Sankey、甘特、軸測爆炸圖等),並以語意模式先選型再選版面",
+        "跨代理分發:Claude Code、Codex、GitHub Copilot、Factory Droid、Qoder,以及透過 npx skills add 安裝到 Cursor、Gemini CLI 等",
+        "首次使用有品牌樣式閘門,可由網址、資料夾或 token 建立並儲存設計檔案(profile)",
+        "支援 draw.io、Mermaid、Excalidraw、PlantUML 匯入,以及 PNG/SVG 匯出",
+        "scripts/ 內有大量 verify 與 test 腳本檢查各圖表類型的幾何、對比度、動態與無障礙,CI 具備版本閘門"
       ],
       "use_cases": [
-        "讓 AI 代理為技術文章、部落格或簡報產生風格統一的架構圖與流程圖",
-        "把既有 Mermaid / draw.io / Excalidraw 圖表轉成符合品牌風格的 SVG",
-        "資料平台、IT 現況盤點、資料庫 schema、部署拓樸等企業文件圖表",
-        "在團隊內以外掛形式統一多個 AI 編碼工具的圖表輸出規範"
+        "讓 AI 代理為專案產出符合品牌風格的架構圖、序列圖、資料流圖",
+        "把既有 Mermaid、draw.io、PlantUML 圖表重繪成統一美感的 HTML/SVG",
+        "製作技術文件、簡報或部落格用的資料視覺化(長條、熱圖、Sankey 等)",
+        "研究如何設計跨多個 AI 代理平台通用的 skill/plugin 套件"
       ],
       "quality": {
         "docs": 5,
-        "tests": 5,
+        "tests": 4,
         "activity": 5,
-        "comment": "文件完整(README、PRIVACY、SECURITY、CONTRIBUTING、ADR、各類型參考文件)。scripts/ 下有數十組 test-* 與 verify-* 腳本,CI 在 Linux/Windows/macOS 與多個 Python 版本上執行,並含 Playwright 渲染檢查與版本閘門。版本號已到 2.6.x,近期仍持續推送,維護積極。"
+        "comment": "文件完整:有 README、CHANGELOG、PRIVACY、CONTRIBUTING、AGENTS/CLAUDE.md、issue 與 PR 範本。測試以 scripts/ 下近百支 Python 驗證與 test 腳本為主,CI 工作流釘選 action commit SHA、使用最小權限,並有 zizmor 設定與 dependabot。最近推送為 2026-11-19,更新頻繁。範例以大量 HTML(亮、暗、完整版)作為資產,README 與 SKILL 中的類型數量(45/50/51)略有不一致。"
       },
       "security": {
         "risk_level": "low",
         "findings": [
-          "未發現 package.json 或 preinstall/postinstall 等安裝時生命週期腳本;安裝方式為各宿主的 plugin marketplace 指令",
-          "產生的 HTML/SVG 預設會從 Google Fonts(fonts.googleapis.com、fonts.gstatic.com)載入字型,瀏覽器開啟時會對 Google 發出請求;PRIVACY.md 對此有明確說明,且可移除連結改用系統字型",
-          "品牌導入功能在使用者要求時,會由代理抓取指定網站頁面;PRIVACY.md 說明未要求時不會抓取",
-          "CI 使用 npx 下載指定版本的 @anthropic-ai/claude-code,並以 pip 安裝固定版本的 playwright、Pillow,屬於維護者端的 CI 流程,版本皆已固定",
-          "scripts/vendor/ 內含第三方 SVG 圖示(Tabler、Simple Icons、Devicon 等),並附 THIRD_PARTY_LICENSES.md"
+          "未發現 npm 生命週期腳本;.github/ci/node/package.json 僅為 CI 用,devDependencies 為 @anthropic-ai/claude-code 並固定版本",
+          "安裝方式為 npx skills add 與各代理的 plugin marketplace 指令,會從 GitHub 取得並安裝技能內容,使用者可先檢視內容",
+          "生成的 HTML 與範本會在瀏覽器開啟時從 Google Fonts 載入字型(PRIVACY.md 已說明),會向 Google 發出請求",
+          "品牌入門功能會讓代理依使用者指示抓取指定網站頁面;PRIVACY.md 表示未指示時不會抓取",
+          "倉庫含大量 Python 腳本(建置、匯出、截圖),屬開發與驗證用途;本次僅閱讀,未執行"
         ]
       },
       "star_rating": 4,
-      "verdict": "若你常讓 AI 代理畫架構圖或資料圖表,這是目前少見工程化程度高的圖表技能包,值得安裝試用;主要限制是需要相容的代理宿主,且輸出偏向特定的編輯風格。",
+      "verdict": "若你常用 AI 代理產圖或需要統一風格的技術圖表,這個專案完成度高、文件與驗證腳本紮實,值得關注並試用。",
       "_mode": "full"
     }
   },
@@ -10208,10 +10243,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-11-19",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 11,
+    "last_seen": "2026-11-20",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 12,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -10287,6 +10322,13 @@
         17205,
         314,
         1,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ],
+      "2026-11-20": [
+        17559,
+        384,
+        5,
         "Cursor plugin specification and official plugins",
         "TypeScript"
       ]
@@ -10757,10 +10799,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-11-19",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 9,
+    "last_seen": "2026-11-20",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 10,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -10822,6 +10864,13 @@
         59742,
         389,
         2,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ],
+      "2026-11-20": [
+        60560,
+        898,
+        3,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
       ]
@@ -16556,10 +16605,10 @@
   },
   "jingyaogong/minimind": {
     "first_seen": "2026-09-01",
-    "last_seen": "2026-11-18",
+    "last_seen": "2026-11-20",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-09-01": [
         56115,
@@ -16580,6 +16629,13 @@
         192,
         14,
         "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+        "Python"
+      ],
+      "2026-11-20": [
+        66865,
+        238,
+        4,
+        "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
         "Python"
       ]
     },
@@ -23479,10 +23535,10 @@
   },
   "zhouxiaoka/autoclip": {
     "first_seen": "2026-09-22",
-    "last_seen": "2026-09-22",
+    "last_seen": "2026-11-20",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-09-22": [
         8235,
@@ -23490,37 +23546,52 @@
         9,
         "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
         "Python"
+      ],
+      "2026-11-20": [
+        11227,
+        126,
+        16,
+        "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+        "Python"
       ]
     },
-    "last_analyzed": "2026-09-22",
+    "last_analyzed": "2026-11-20",
     "analysis": {
+      "one_liner": "開源 AI 長影片自動剪輯桌面工具,貼上連結就能產出短影音、字幕、封面與發佈文案,同時提供 CLI 與 MCP 入口。",
+      "summary": "AutoClip 把播客、訪談、課程等長影片自動剪成適合抖音、小紅書、TikTok、Reels、Shorts、B 站的短影片,並生成字幕、封面和發佈文案。它以 Tauri 桌面版為主,後端是 FastAPI + Celery,另外提供 autoclip CLI 與 autoclip-mcp MCP server(PyPI 套件名 autoclip-mcp)。軟體本身免費,LLM、ASR 等雲端模型由使用者自備 API Key 按量計費。",
       "category": "ai-ml",
-      "one_liner": "用 AI 分析長影片字幕、自動找出高光片段並剪出成片的開源二創工具,支援桌面版、Docker 與 CLI/MCP 三種形態。",
-      "summary": "AutoClip 針對訪談、播客、課程等內容,透過 LLM 分析字幕產生大綱、時間線與精彩度評分,自動剪出片段和合集,並提供抖音/小紅書/YouTube Shorts 等平台的匯出預設。支援通義千問、OpenAI 相容介面、Gemini、硅基流動以及 Ollama/LM Studio 本地模型,可作為桌面應用、Docker Web 服務或 CLI/MCP 工具使用。",
       "highlights": [
-        "前後端分離架構(FastAPI + React + Tauri 桌面殼),pipeline 拆成 6 個明確步驟(大綱/時間線/評分/標題/聚類/剪輯),模組化程度高",
-        "同時支援雲端多家 LLM 供應商與本地 Ollama/LM Studio,且有針對桌面/Docker/CLI 三種部署路徑的完整文件",
-        "CI 涵蓋後端 pytest + ruff lint、前端 lint/typecheck/build,還有一個少見的 Docker Compose 端到端 smoke test(針對 issue #88 修復後補上的回歸測試)",
-        "程式碼註解會記錄「為什麼」而非「做什麼」,例如解釋設定頁參數過去沒被 pipeline 讀取的歷史 bug,顯示維護者對真實問題有追蹤與修復",
-        "README 提供八種語言版本,文件量豐富(安裝指南、FAQ、隱私說明、CLI/MCP 指南等)"
+        "一鍵流程:貼連結(yt-dlp 下載)→ASR 轉錄→AI 選出亮點→剪輯、人物取景、燒錄字幕→輸出封面與發佈文案",
+        "支援多家 LLM 供應商(OpenAI、Gemini、DashScope、DeepSeek 等)與本地模型,並有重試預算、費用防護與降級機制",
+        "同時提供桌面 App、CLI 與 MCP server,可接入 AI agent 工作流",
+        "工程紀律完整:依賴版本全部固定,有 15 個 CI workflow(Windows 安裝煙霧測試、桌面建置、nightly smoke、發佈驗收等)",
+        "備有 7 種語言 README、真實成片案例庫,以及 CHANGELOG、ROADMAP、SECURITY 等文件"
       ],
       "use_cases": [
-        "把訪談、播客或直播回放批次剪成短影音精華,發布到抖音/小紅書/YouTube Shorts/B站",
-        "作為 CLI 或 MCP 工具接入既有自動化流程或 AI agent,批次處理多支影片",
-        "自架 Docker Web 服務,搭配本地 Ollama 模型做內容分析,避免把字幕傳到雲端"
+        "內容創作者或行銷團隊把長訪談、播客批次剪成多平台短影音",
+        "AI 研發者研究如何用 LLM 做影片亮點挑選、字幕分行與自動取景",
+        "透過 MCP 把影片剪輯能力接進 Claude 等 agent 工作流",
+        "作為 FastAPI + Tauri 桌面 App 結合多雲端模型供應商的架構參考"
       ],
       "quality": {
         "docs": 5,
-        "tests": 4,
+        "tests": 5,
         "activity": 5,
-        "comment": "文件完整度高(多國語言 README、安裝/FAQ/隱私/CLI 指南齊全),測試涵蓋後端多個模組與前端契約測試,CI 有 lint/typecheck/單元測試外加少見的 Docker Compose 端到端煙霧測試,顯示對真實部署路徑的重視。近期提交頻繁(最後推送於 2026-09-21),issue 修復有對應回歸測試(如 #88、#11、#45),屬於維護積極的專案。抽查的核心程式碼(scoring pipeline、LLM manager)結構清晰、有防禦性處理與有意義的註解,但作者自述為個人業餘維護,不提供即時支援。"
+        "comment": "文件豐富,多語系 README 之外還有 BUILD_GUIDE、DOCKER、RELEASE_CHECKLIST 等。backend/tests 約有 295 個 Python 檔,涵蓋字幕排版、LLM 重試、隱私日誌、下載復原等細項,另有 redline 回歸測試。CI 達 15 個 workflow,最後推送為 2026-11-19,更新頻繁。所讀的 llm_retry.py、sentry_setup.py 註解與邊界處理細緻,可讀性不差。需留意:程式規模龐大,倉庫內有 artifacts/ 等大量非核心檔案(Glob 顯示超過 1900 個檔案),上手成本偏高。"
       },
       "security": {
-        "risk_level": "none",
-        "findings": []
+        "risk_level": "low",
+        "findings": [
+          "setup.py 的自訂 build_py 只在打包時把 docs/analytics/event_catalog.json 複製進 wheel,沒有網路存取或任意程式碼執行。",
+          "排除 .git 與 artifacts 後搜尋,未發現 npm preinstall/postinstall/prepare 腳本,也沒有 curl|bash 或 iwr|iex 的安裝指令。唯一的 curl|bash 出現在 Dockerfile.dev(從 deb.nodesource.com 安裝 Node 18),屬開發用映像檔,是常見做法。",
+          "backend/core/sentry_setup.py 含 Sentry 崩潰回報:僅在打包的桌面正式版、已設定 SENTRY_DSN 且使用者未關閉崩潰報告時才啟用。程式碼設定 send_default_pii=False、不收 request body、不收區域變數,並以 before_send 過濾。使用者仍應知道有這項可選的遙測機制。",
+          "專案需要使用者填入 LLM 與雲端 ASR 的 API Key,影片內容或字幕會送往所選的雲端供應商,使用前應留意隱私與費用。",
+          "SECURITY.md 說明預設 Docker 與桌面版僅適合本機或可信網路;公網部署需自行加認證與 TLS,不要直接暴露 Redis 或 Flower。",
+          "依賴版本皆以 == 固定,未看到疑似 typosquat 的套件名。倉庫內含 .onnx 模型、字體與 outro mp4 等隨套件發佈的二進位資產,並列於 package-data。"
+        ]
       },
       "star_rating": 4,
-      "verdict": "文件、測試與 CI 三方面都做得比一般個人專案扎實,是值得關注的實用二創剪輯工具,適合想批次做短影音精華或串接 AI agent 流程的開發者。",
+      "verdict": "功能完整、測試與 CI 紮實、更新活躍的 AI 影片剪輯工具,CLI/MCP 入口對 agent 工作流特別有價值,值得關注;使用前留意雲端模型的費用與資料外送。",
       "_mode": "full"
     }
   },
@@ -33620,10 +33691,10 @@
   },
   "google-labs-code/stitch-skills": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-19",
-    "days_on_trending": 4,
-    "consecutive_days_on_trending": 4,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-20",
+    "days_on_trending": 5,
+    "consecutive_days_on_trending": 5,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-11-16": [
         9300,
@@ -33650,6 +33721,13 @@
         10403,
         365,
         9,
+        "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "TypeScript"
+      ],
+      "2026-11-20": [
+        10719,
+        302,
+        11,
         "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "TypeScript"
       ]
@@ -33743,10 +33821,10 @@
   },
   "elementalsouls/Claude-BugHunter": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-18",
+    "last_seen": "2026-11-20",
     "days_on_trending": 1,
     "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-16": [
         6448,
@@ -33758,6 +33836,13 @@
       "2026-11-18": [
         9302,
         1005,
+        1,
+        "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+        "Python"
+      ],
+      "2026-11-20": [
+        12532,
+        1349,
         1,
         "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "Python"
@@ -34294,15 +34379,22 @@
   },
   "openvinotoolkit/openvino": {
     "first_seen": "2026-11-19",
-    "last_seen": "2026-11-19",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-20",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-19": [
         11327,
         24,
         13,
+        "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+        "C++"
+      ],
+      "2026-11-20": [
+        11563,
+        246,
+        8,
         "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
         "C++"
       ]
@@ -34393,6 +34485,266 @@
       },
       "star_rating": 4,
       "verdict": "成熟且極為活躍的前端框架,2.0 的非同步與樂觀更新設計值得前端與響應式系統工程師持續關注,但目前為開發中版本,正式專案宜等穩定版再採用。",
+      "_mode": "full"
+    }
+  },
+  "nginx/nginx": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-20": [
+        32335,
+        73,
+        7,
+        "The official NGINX Open Source repository.",
+        "C"
+      ]
+    },
+    "last_analyzed": "2026-11-20",
+    "analysis": {
+      "one_liner": "NGINX 官方開源儲存庫:以 C 撰寫的高效能 Web 伺服器、反向代理、負載平衡與內容快取,支援 HTTP/2、HTTP/3(QUIC)與 TCP/UDP/郵件代理。",
+      "summary": "這是 NGINX Open Source 的官方原始碼,採事件驅動的 master/worker 多行程架構,並以共享記憶體同步狀態,以模組化方式提供 HTTP、stream、mail 等功能,可編譯為靜態或動態模組。它解決高併發下的靜態服務、反向代理、TLS 終結、負載平衡、限流與快取等需求,是網路基礎設施中使用最廣的元件之一。",
+      "category": "infra",
+      "highlights": [
+        "事件驅動的 master/worker 多行程架構,以共享記憶體區同步限流、快取等狀態",
+        "模組化設計,支援靜態與動態模組(如 njs),可透過 auto/configure 裁剪功能",
+        "支援 HTTP/2、HTTP/3(QUIC)、TLS、TCP/UDP stream 與郵件代理",
+        "核心程式碼風格一致,例如 ngx_palloc.c 的記憶體池設計簡潔嚴謹",
+        "BSD-2-Clause 授權,具備 SECURITY.md、CONTRIBUTING.md、PR 範本與 commit 訊息檢查等治理流程"
+      ],
+      "use_cases": [
+        "作為生產環境的反向代理、API 閘道與 TLS 終結點",
+        "為 AI 推論服務或 LLM API 做負載平衡、限流與快取",
+        "研讀 C 語言事件驅動網路伺服器與記憶體池設計",
+        "依需求自行編譯並裁剪模組,或開發自訂 NGINX 模組"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構清楚,涵蓋安裝、建置與入門,並連到 nginx.org 完整文件。此儲存庫內沒有 tests 目錄,我推測測試放在獨立的 nginx-tests 儲存庫,但這點未在本地驗證。CI 方面,buildbot 工作流程只是轉呼叫 nginx/ci-self-hosted,另有 commit 訊息、空白字元、版本號與 CLA 的檢查,所以測試分數偏低。最近推送為 2026-11-18,維護非常活躍。"
+      },
+      "security": {
+        "risk_level": "none",
+        "findings": []
+      },
+      "star_rating": 4,
+      "verdict": "這是業界標準級的基礎設施軟體,值得熟悉與長期關注;這次上榜屬於常青專案,不是新興專案。",
+      "_mode": "full"
+    }
+  },
+  "mjmirza/app-store-compliance": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-20": [
+        1842,
+        377,
+        12,
+        "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+        "Shell"
+      ]
+    },
+    "last_analyzed": "2026-11-20",
+    "analysis": {
+      "one_liner": "App Store 與 Google Play 上架被拒的開源防呆手冊,附 117 種駁回模式、法規期限資料庫,以及可掛進各家 AI 程式工具的提交前守門 hook。",
+      "summary": "這是一套以 Shell 與 Python 實作的合規知識庫與提交前掃描器:整理 117 種駁回模式與修法、95 項法規期限(EU AI Act、DSA、COPPA 等),並提供 guard 腳本掃描 iOS/Android 專案(隱私清單、Data safety、權限等)。安裝器可把 hook 與 skill 寫入 Claude Code、Codex、Gemini CLI、Cursor、Copilot 等十多種工具,在提交指令前自動攔截高風險。",
+      "category": "devtool",
+      "highlights": [
+        "117 種駁回模式對應準則編號與修法,資料以 JSON 結構化,並有引用驗證腳本",
+        "guard.sh 在 AI 代理執行提交指令(fastlane、eas submit 等)前自動攔截,輸出 BLOCKED / CLEAR / NOT CHECKED",
+        "一鍵安裝器支援 12 種 AI 程式工具,安裝後會餵測試 payload 驗證 hook 確實生效",
+        "95 項法規期限追蹤與 deadline-checker,涵蓋 EU AI Act、DSA、COPPA、各國年齡法",
+        "CI 涵蓋大量測試套件,並檢查文件中的連結、路徑與指令是否真實存在"
+      ],
+      "use_cases": [
+        "上架 iOS/Android App 前做 2 分鐘的本機預檢",
+        "在 Claude Code 等 AI 代理中把合規檢查設為提交前強制關卡",
+        "已被拒審時查詢對應模式與申訴流程",
+        "追蹤歐盟與各國隱私、年齡、AI 法規生效日期"
+      ],
+      "quality": {
+        "docs": 5,
+        "tests": 5,
+        "activity": 5,
+        "comment": "文件極完整(README、20 餘份 docs、CHANGELOG、貢獻與安全政策),幾乎每支腳本都有對應 *-test.sh,CI 串接多套測試與文件一致性檢查,每日都有更新。授權為自訂條款(OpenRoots ORA),商用前宜先閱讀。上線第一天即暴增星數,內容品質需持續觀察。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "install.sh 會修改使用者家目錄下各工具設定(如 ~/.claude/settings.json、~/.codex/hooks.json、~/.cursor/hooks.json),新增會攔截指令的 hook;README 說明會先備份且可 uninstall,建議安裝前先閱讀腳本。",
+          "README 提供「貼給 AI 代理自動安裝」的提示詞,會讓代理 clone 儲存庫並執行安裝腳本;文中要求先閱讀內容。",
+          "guard.sh 與各 monitor 腳本主要為本機靜態掃描;monitor 類腳本可能連網抓取政策頁面,實際行為建議使用前自行檢視。",
+          "未發現 curl | bash、混淆程式碼、內嵌 base64 載荷或 npm 生命週期腳本。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "做行動 App 上架或在 AI 代理流程中想加合規關卡的人值得收藏;資料與測試紮實,但安裝器會改動個人工具設定,宜先檢視。",
+      "_mode": "full"
+    }
+  },
+  "Tracer-Cloud/opensre": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-20": [
+        13125,
+        38,
+        13,
+        "The open-source agent for CI/CD reliability.",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-20",
+    "analysis": {
+      "one_liner": "開源的 CI/CD 可靠性 CLI 代理:讀取失敗的 CI 執行、追查根因並推送修復供人審核,可自架並使用自己的模型。",
+      "summary": "OpenSRE 是以 Python 撰寫的 CLI 代理。CI 失敗或告警觸發時,它會抓取 CI 日誌、近期 commit 與部署,以及相關的日誌、指標與追蹤,再以工具呼叫迴圈驗證假設,區分 CI 造成與程式碼造成的失敗。它可把修復推送到 PR 分支供人審核,並將摘要發到 Slack、PagerDuty 或 Telegram。專案宣稱整合 60 多種工具,支援 Anthropic、OpenAI、Ollama 等 LLM,目前為 public alpha。",
+      "category": "devtool",
+      "highlights": [
+        "整合面廣:Grafana、Datadog、CloudWatch、Kubernetes、GitHub/GitLab、PagerDuty、Slack 等 60 多種服務",
+        "支援多家 LLM 供應商(含 Ollama 本地模型),可自架,並可在送出外部 LLM 呼叫前選擇性遮罩敏感識別碼",
+        "提供互動式 REPL、headless CLI(opensre ask)與 Python 內嵌 API 三種使用方式",
+        "工程流程完整:多個 GitHub workflow、CodeQL、import 週期檢查、安裝程式 canary 測試",
+        "部署選項多元:託管 gateway、AWS AMI+systemd、Docker(Railway/ECS/Vercel)"
+      ],
+      "use_cases": [
+        "CI 紅燈時自動分析日誌並產生修復 PR",
+        "SRE 值班時以自然語言調查事故,串接可觀測性平台做根因分析",
+        "評估團隊 CI 可靠性,例如失敗率與 main 紅燈時間",
+        "把事故回應代理嵌入內部 Python 服務與自動化流程"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 結構完整,並附 AGENTS.md、SETUP.md、DEPLOYMENT.md、docs 目錄與貢獻指南。專案規模龐大(逾 4000 個檔案),有 tests/e2e 分層、十多個 workflow 與 pre-push 檢查腳本。近期仍持續推送,維護活躍;但 README 自述為 public alpha,API 與整合可能變動。本次只抽查了 README、檔案清單與 pyproject,未深入核心原始碼。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 建議的安裝方式為 curl -fsSL https://install.opensre.com | bash(Windows 為 irm 取得腳本後以 scriptblock 執行),會從外部網址下載並執行腳本,建議先檢視腳本內容再執行。",
+          "產品分析與 Sentry 錯誤回報預設為 opt-out(預設啟用),可用環境變數 OPENSRE_NO_TELEMETRY=1 關閉;相依套件包含 sentry-sdk 與 OpenTelemetry。",
+          "README 提到首次啟動需登入並啟用託管模型,使用前建議確認哪些資料會送往外部服務。",
+          "工具會連接 CI、雲端與事故管理系統,並可推送修復或執行修復動作,使用時應審慎授予權限並保留人工審核。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "方向切中痛點、整合與工程流程都相當成熟,值得 SRE 與 DevOps 團隊關注試用;但仍是 alpha,且預設遙測與 curl|bash 安裝需先留意。",
+      "_mode": "full"
+    }
+  },
+  "toeverything/AFFiNE": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-20": [
+        75170,
+        182,
+        14,
+        "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+        "TypeScript"
+      ]
+    },
+    "last_analyzed": "2026-11-20",
+    "analysis": {
+      "one_liner": "AFFiNE 是開源、本地優先的 Notion 與 Miro 替代方案,將文件、白板與資料表融合在同一個無限畫布中。",
+      "summary": "AFFiNE 是以 TypeScript 與 Rust 打造的開源知識庫與工作空間,把文件、白板(edgeless 畫布)與多視圖資料表合併,並內建多模態 AI 協作功能。主打隱私優先、本地優先與即時協作,同時支援自架。底層以 BlockSuite 編輯器與 y-octo(Rust 實作的 YJS CRDT)為核心。",
+      "category": "app",
+      "highlights": [
+        "文件、白板、資料庫在同一無限畫布融合,可放置富文字、便利貼、嵌入網頁、投影片等",
+        "本地優先加 CRDT 即時同步,資料自主掌控,支援網頁與跨平台客戶端",
+        "內建 AFFiNE AI,可將大綱轉成投影片、整理成心智圖等",
+        "支援自架與自行 fork 建置,底層為 BlockSuite、y-octo(Rust)、OctoBase",
+        "75k+ stars,持續登上 trending,社群與文件資源完整"
+      ],
+      "use_cases": [
+        "個人或團隊自架隱私導向的知識庫與維基",
+        "取代 Notion 與 Miro 做筆記、腦力激盪與專案規劃",
+        "研究 CRDT、本地優先架構與區塊編輯器的實作",
+        "作為團隊內部文件加白板協作平台"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 2,
+        "activity": 5,
+        "comment": "README 結構完整,涵蓋功能、貢獻流程、生態系與上游專案,但後半偏行銷內容(範本與部落格連結),技術安裝說明較少。測試僅依 README 判斷,無法評估程式碼。最近一次推送為 2026-11-19,維護活躍。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "README 未提供 curl | bash 之類的安裝指令,主要引導至官方下載頁與自架文件。",
+          "授權標示為「Other」,使用前請自行確認授權條款;貢獻者需簽署 CLA。",
+          "僅依 README 評估,未進行原始碼層級審查;自架部署請依官方文件並留意資料與權限設定。"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "成熟且活躍的開源 Notion/Miro 替代品,想自架知識庫或研究本地優先與 CRDT 架構的人值得關注。",
+      "_mode": "light"
+    }
+  },
+  "XiaoYouChR/Ghost-Downloader-3": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "days_on_trending": 1,
+    "consecutive_days_on_trending": 1,
+    "total_days_on_trending": 1,
+    "stars_history": {
+      "2026-11-20": [
+        12718,
+        341,
+        15,
+        "The only downloader you need. 下载器的集大成者。",
+        "Python"
+      ]
+    },
+    "last_analyzed": "2026-11-20",
+    "analysis": {
+      "one_liner": "跨平台全能下載器:以 Python/PySide6 打造,整合 HTTP、BT/磁力、FTP、M3U8、eD2k、YouTube、Bilibili 等協定與來源。",
+      "summary": "Ghost-Downloader-3 是一款使用 Python 與 PySide6(Fluent 風格 UI)開發的下載管理器,支援 Windows、macOS、Linux 與 Android。它把 HTTP 分塊下載、BitTorrent、FTP、串流媒體、YouTube/Bilibili、GitHub/HuggingFace 加速等整合為單一應用,並提供瀏覽器擴充、aria2 相容 RPC 與命令列工具 ghd,以 Feature Packs 形式擴充功能。",
+      "category": "app",
+      "highlights": [
+        "單一應用涵蓋 HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k 及 YouTube/Bilibili 等多種協定與來源",
+        "智慧分塊下載且不需合併檔案,並可在下載中途更換 URL、標頭或代理而不遺失進度",
+        "提供 aria2 相容 RPC、命令列工具 ghd 與瀏覽器擴充,方便整合第三方工具",
+        "Feature Packs 外掛式架構,各功能包(bili、bittorrent、ed2k、m3u8 等)皆有對應測試",
+        "支援四個平台(含 Android 背景下載與直播 M3U8 錄製),並透過 Crowdin 管理多語系"
+      ],
+      "use_cases": [
+        "取代多款下載工具,統一管理 HTTP、BT、串流影片下載",
+        "透過瀏覽器擴充嗅探網頁影音並交給桌面端下載",
+        "以 aria2 RPC 或 ghd CLI 整合自動化腳本與第三方前端",
+        "下載 HuggingFace 模型或 GitHub 發行檔時使用鏡像加速"
+      ],
+      "quality": {
+        "docs": 4,
+        "tests": 4,
+        "activity": 5,
+        "comment": "README 雙語且附官方文件網站;tests/ 目錄涵蓋各 pack 與核心服務(任務、代理、CLI、BT、aria2 RPC 等),CI 於 Windows/macOS/Linux 執行 pytest 並含 Android 測試,使用 uv 鎖定相依。最後推送為 2026-11-19,維護活躍;架構分層清楚(app、features、tests)。"
+      },
+      "security": {
+        "risk_level": "low",
+        "findings": [
+          "倉庫內含已打包的瀏覽器擴充檔 app/assets/chrome_extension.crx(二進位檔),使用者安裝前可自行比對來源與內容",
+          "update_service.py 具備自動更新功能,會下載更新並以 subprocess 啟動新程序,屬下載器常見的自我更新機制,使用者應留意更新來源",
+          "應用內提供安裝命令列工具 ghd 的功能(app/platform/cli_install.py),會修改系統環境,安裝前可先檢視",
+          "README 內含第三方代理服務(Swiftproxy)的推廣內容,屬廣告性質",
+          "未發現 curl|bash、混淆程式碼或超長 base64 內嵌載荷等模式"
+        ]
+      },
+      "star_rating": 4,
+      "verdict": "功能完整、工程品質與測試紀律良好且維護活躍的開源下載器,值得下載試用並關注其 Feature Packs 與 RPC 整合能力。",
       "_mode": "full"
     }
   }
