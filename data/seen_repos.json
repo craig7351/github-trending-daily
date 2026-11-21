@@ -1420,8 +1420,8 @@
   },
   "obra/superpowers": {
     "first_seen": "2026-07-26",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 3,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 4,
     "stars_history": {
       "2026-07-26": [
         261097,
@@ -1619,6 +1619,13 @@
         2,
         "An agentic skills framework & software development methodology that works.",
         "Shell"
+      ],
+      "2026-11-21": [
+        322998,
+        890,
+        2,
+        "An agentic skills framework & software development methodology that works.",
+        "Shell"
       ]
     },
     "last_analyzed": "2026-11-18",
@@ -1658,8 +1665,8 @@
       "verdict": "若你日常使用 Claude Code、Codex 等 coding agent,這是目前成熟且支援平台廣的技能與工作流程框架,值得安裝試用,也值得參考其 skill 設計。",
       "_mode": "full"
     },
-    "total_days_on_trending": 29,
-    "consecutive_days_on_trending": 3
+    "total_days_on_trending": 30,
+    "consecutive_days_on_trending": 4
   },
   "permissionlesstech/bitchat": {
     "first_seen": "2026-07-26",
@@ -2916,8 +2923,8 @@
   },
   "mvanhorn/last30days-skill": {
     "first_seen": "2026-07-28",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 4,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 5,
     "stars_history": {
       "2026-07-28": [
         54252,
@@ -2982,6 +2989,13 @@
         10,
         "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
         "Python"
+      ],
+      "2026-11-21": [
+        71586,
+        681,
+        10,
+        "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "Python"
       ]
     },
     "last_analyzed": "2026-11-18",
@@ -3022,8 +3036,8 @@
       "verdict": "做研究型 agent skill 值得關注:來源整合廣、測試與 CI 完整、安全文件透明。使用前建議先讀 SECURITY.md,留意主題外送與 cookie 讀取的設定。",
       "_mode": "full"
     },
-    "total_days_on_trending": 10,
-    "consecutive_days_on_trending": 4
+    "total_days_on_trending": 11,
+    "consecutive_days_on_trending": 5
   },
   "ocornut/imgui": {
     "first_seen": "2026-07-28",
@@ -8215,10 +8229,10 @@
   },
   "firecrawl/firecrawl": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-08-11": [
         165074,
@@ -8232,6 +8246,13 @@
         825,
         6,
         "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
+        "TypeScript"
+      ],
+      "2026-11-21": [
+        205520,
+        1241,
+        6,
+        "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
         "TypeScript"
       ]
     },
@@ -9039,10 +9060,10 @@
   },
   "cathrynlavery/diagram-design": {
     "first_seen": "2026-08-13",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 19,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 20,
     "stars_history": {
       "2026-08-13": [
         10414,
@@ -9173,6 +9194,13 @@
       "2026-11-20": [
         68631,
         271,
+        9,
+        "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "HTML"
+      ],
+      "2026-11-21": [
+        69438,
+        636,
         9,
         "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
         "HTML"
@@ -10243,10 +10271,10 @@
   },
   "cursor/plugins": {
     "first_seen": "2026-08-15",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 3,
-    "consecutive_days_on_trending": 3,
-    "total_days_on_trending": 12,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 4,
+    "consecutive_days_on_trending": 4,
+    "total_days_on_trending": 13,
     "stars_history": {
       "2026-08-15": [
         2811,
@@ -10328,6 +10356,13 @@
       "2026-11-20": [
         17559,
         384,
+        5,
+        "Cursor plugin specification and official plugins",
+        "TypeScript"
+      ],
+      "2026-11-21": [
+        17913,
+        299,
         5,
         "Cursor plugin specification and official plugins",
         "TypeScript"
@@ -10799,10 +10834,10 @@
   },
   "HKUDS/CLI-Anything": {
     "first_seen": "2026-08-16",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 10,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 11,
     "stars_history": {
       "2026-08-16": [
         47355,
@@ -10870,6 +10905,13 @@
       "2026-11-20": [
         60560,
         898,
+        3,
+        "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+        "Python"
+      ],
+      "2026-11-21": [
+        61572,
+        773,
         3,
         "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
         "Python"
@@ -16605,10 +16647,10 @@
   },
   "jingyaogong/minimind": {
     "first_seen": "2026-09-01",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 4,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 5,
     "stars_history": {
       "2026-09-01": [
         56115,
@@ -16634,6 +16676,13 @@
       "2026-11-20": [
         66865,
         238,
+        4,
+        "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+        "Python"
+      ],
+      "2026-11-21": [
+        67826,
+        847,
         4,
         "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
         "Python"
@@ -23535,10 +23584,10 @@
   },
   "zhouxiaoka/autoclip": {
     "first_seen": "2026-09-22",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-09-22": [
         8235,
@@ -23550,6 +23599,13 @@
       "2026-11-20": [
         11227,
         126,
+        16,
+        "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+        "Python"
+      ],
+      "2026-11-21": [
+        12368,
+        979,
         16,
         "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
         "Python"
@@ -33691,10 +33747,10 @@
   },
   "google-labs-code/stitch-skills": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 5,
-    "consecutive_days_on_trending": 5,
-    "total_days_on_trending": 5,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 6,
+    "consecutive_days_on_trending": 6,
+    "total_days_on_trending": 6,
     "stars_history": {
       "2026-11-16": [
         9300,
@@ -33727,6 +33783,13 @@
       "2026-11-20": [
         10719,
         302,
+        11,
+        "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "TypeScript"
+      ],
+      "2026-11-21": [
+        11132,
+        315,
         11,
         "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
         "TypeScript"
@@ -33821,10 +33884,10 @@
   },
   "elementalsouls/Claude-BugHunter": {
     "first_seen": "2026-11-16",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 3,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 4,
     "stars_history": {
       "2026-11-16": [
         6448,
@@ -33843,6 +33906,13 @@
       "2026-11-20": [
         12532,
         1349,
+        1,
+        "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+        "Python"
+      ],
+      "2026-11-21": [
+        14718,
+        1622,
         1,
         "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
         "Python"
@@ -34379,10 +34449,10 @@
   },
   "openvinotoolkit/openvino": {
     "first_seen": "2026-11-19",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 2,
-    "consecutive_days_on_trending": 2,
-    "total_days_on_trending": 2,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 3,
+    "consecutive_days_on_trending": 3,
+    "total_days_on_trending": 3,
     "stars_history": {
       "2026-11-19": [
         11327,
@@ -34394,6 +34464,13 @@
       "2026-11-20": [
         11563,
         246,
+        8,
+        "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+        "C++"
+      ],
+      "2026-11-21": [
+        11834,
+        217,
         8,
         "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
         "C++"
@@ -34490,14 +34567,21 @@
   },
   "nginx/nginx": {
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-20": [
         32335,
         73,
+        7,
+        "The official NGINX Open Source repository.",
+        "C"
+      ],
+      "2026-11-21": [
+        32620,
+        246,
         7,
         "The official NGINX Open Source repository.",
         "C"
@@ -34538,14 +34622,21 @@
   },
   "mjmirza/app-store-compliance": {
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-20": [
         1842,
         377,
+        12,
+        "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+        "Shell"
+      ],
+      "2026-11-21": [
+        2915,
+        869,
         12,
         "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
         "Shell"
@@ -34591,14 +34682,21 @@
   },
   "Tracer-Cloud/opensre": {
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-20": [
         13125,
         38,
+        13,
+        "The open-source agent for CI/CD reliability.",
+        "Python"
+      ],
+      "2026-11-21": [
+        13714,
+        466,
         13,
         "The open-source agent for CI/CD reliability.",
         "Python"
@@ -34644,14 +34742,21 @@
   },
   "toeverything/AFFiNE": {
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-20": [
         75170,
         182,
+        14,
+        "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+        "TypeScript"
+      ],
+      "2026-11-21": [
+        75930,
+        676,
         14,
         "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
         "TypeScript"
@@ -34696,14 +34801,21 @@
   },
   "XiaoYouChR/Ghost-Downloader-3": {
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
-    "days_on_trending": 1,
-    "consecutive_days_on_trending": 1,
-    "total_days_on_trending": 1,
+    "last_seen": "2026-11-21",
+    "days_on_trending": 2,
+    "consecutive_days_on_trending": 2,
+    "total_days_on_trending": 2,
     "stars_history": {
       "2026-11-20": [
         12718,
         341,
+        15,
+        "The only downloader you need. 下载器的集大成者。",
+        "Python"
+      ],
+      "2026-11-21": [
+        13941,
+        1082,
         15,
         "The only downloader you need. 下载器的集大成者。",
         "Python"
